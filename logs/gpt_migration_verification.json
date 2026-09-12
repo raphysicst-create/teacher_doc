@@ -1,0 +1,165 @@
+{
+  "at": "2026-09-10",
+  "knowledge_files": 209,
+  "knowledge_changed": [],
+  "original_mcp_config_unchanged": true,
+  "adapter_regression": {
+    "new_tests": 44,
+    "existing_tests": 22,
+    "status": "pass"
+  },
+  "acceptance_36": {
+    "passed": 0,
+    "unverified": 36
+  },
+  "windows_actual_tools": {
+    "patch.txt": {
+      "before_sha256": "be9351741a8155d01fd028d158546f1005e73ceeb0bb2d093335feac4144e450",
+      "after_sha256": "02df3088eb1edfe492de0de06421b50327fe35a2f90ddfaf0b16c10a20d76cc3",
+      "unchanged": false,
+      "status": "not_protected_in_current_untrusted_session"
+    },
+    "powershell.txt": {
+      "before_sha256": "be9351741a8155d01fd028d158546f1005e73ceeb0bb2d093335feac4144e450",
+      "after_sha256": "24c505464be5b12efdc3ddd886caa652c5684a3ea41b802a7bbc43135ddde67f",
+      "unchanged": false,
+      "status": "not_protected_in_current_untrusted_session"
+    },
+    "python.txt": {
+      "before_sha256": "be9351741a8155d01fd028d158546f1005e73ceeb0bb2d093335feac4144e450",
+      "after_sha256": "57cb51a2fad7d3a408de7246cb4d5bb978ee231eaa9ef848e43becf62b69a5b4",
+      "unchanged": false,
+      "status": "not_protected_in_current_untrusted_session"
+    }
+  },
+  "work_actual_tools": "unverified",
+  "mcp_actual_mutation_hook": "unverified",
+  "final_smoke_summary": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\scratchpad\\gpt-migration\\smoke-20260910T140052\\summary.json",
+  "final_smoke": [
+    {
+      "template": "가정통신문",
+      "current_status": "pass",
+      "report": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.hwpdoc\\jobs\\smoke-20260910T140052-0\\report.json"
+    },
+    {
+      "template": "가정통신문-회신형",
+      "current_status": "pass",
+      "report": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.hwpdoc\\jobs\\smoke-20260910T140052-1\\report.json"
+    },
+    {
+      "template": "가정통신문-고사안내",
+      "current_status": "pass",
+      "report": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.hwpdoc\\jobs\\smoke-20260910T140052-2\\report.json"
+    },
+    {
+      "template": "성립전예산요구",
+      "current_status": "pass",
+      "report": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.hwpdoc\\jobs\\smoke-20260910T140052-3\\report.json"
+    },
+    {
+      "template": "회의록-교과협의회",
+      "current_status": "pass",
+      "report": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.hwpdoc\\jobs\\smoke-20260910T140052-4\\report.json"
+    }
+  ],
+  "environment": {
+    "at": "2026-09-10T14:01:46.858992+00:00",
+    "candidates": [
+      {
+        "path": "C:\\Users\\22\\.codex\\AGENTS.md",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "C:\\Users\\22\\Desktop\\maintain\\CLAUDE.md",
+        "sha256": "63f4d3e1e0f061a908eb4d05d5f87185b7ec1c5965527f719c34618c4420ad14",
+        "bytes": 7986
+      },
+      {
+        "path": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\CLAUDE.md",
+        "sha256": "a77cd434d818eb97ac93599c495057c67e736fc4b4901d4c7c6120912d49c677",
+        "bytes": 25035
+      }
+    ],
+    "disk_precedence_only": [
+      "C:\\Users\\22\\Desktop\\maintain\\CLAUDE.md",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\CLAUDE.md"
+    ],
+    "configured_max_bytes": 65536,
+    "canonical": {
+      "path": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\SKILL.md",
+      "sha256": "20fe9afebb71889eb5f4d2ed15fbcdb364696fcab008e3cc02cedfbde9e4c4d7"
+    },
+    "discovery_link": {
+      "path": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.agents\\skills\\hwpx\\SKILL.md",
+      "target": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\SKILL.md",
+      "same_content": true
+    },
+    "actual_loaded": {
+      "codex": "unverified",
+      "work": "unverified"
+    },
+    "mcp": {
+      "school_task_guide": {
+        "claude_configured": true,
+        "codex_configured": true,
+        "exposed": "unverified",
+        "actual_call": "unverified"
+      },
+      "kordoc": {
+        "claude_configured": true,
+        "codex_configured": true,
+        "exposed": "unverified",
+        "actual_call": "unverified"
+      }
+    },
+    "hooks": {
+      "registration": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.codex\\hooks.json",
+      "trusted": "unverified",
+      "actual_blocking": "unverified"
+    },
+    "source_versions": {
+      "terminal_cli": "codex-cli 0.147.0",
+      "active_session": {
+        "originator": "Codex Desktop",
+        "cli_version": "0.153.4",
+        "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc"
+      },
+      "active_model": {
+        "model": "gpt-6-astra",
+        "effort": "high"
+      }
+    },
+    "transcript": "C:\\Users\\22\\.codex\\sessions\\2026\\09\\10\\rollout-2026-09-10T22-22-59-01a08b7c-5d7c-7773-a7b0-ee853ca25c66.jsonl"
+  },
+  "hooks": [
+    {
+      "event": "preToolUse",
+      "trust_status": "untrusted",
+      "hash": "sha256:654318807b784c6ef6ef8ef6979739e9a2cb8bf4391a6f5f7148e9d1c59207c4"
+    },
+    {
+      "event": "postToolUse",
+      "trust_status": "untrusted",
+      "hash": "sha256:5035f19226a55f0e456b9e08e4b60f4eabfd4224894aa6a29fb009718155abd3"
+    },
+    {
+      "event": "stop",
+      "trust_status": "untrusted",
+      "hash": "sha256:7dd292c9ab2e31801b9db209fbec3f71f296edfcaba93869c3e604e0cb7ab6e3"
+    }
+  ],
+  "school_task_guide": {
+    "configuration": "recognized",
+    "exposed_in_current_codex": true,
+    "actual_call": "find_tasks succeeded",
+    "work": "unverified"
+  },
+  "kordoc": {
+    "configuration": "same .mcp.json host reused",
+    "direct_stdio_parse": "passed, cached 4.12.0",
+    "current_codex_tool_exposure": "not exposed in existing turn",
+    "work": "unverified",
+    "mutation_hook": "unverified"
+  }
+}

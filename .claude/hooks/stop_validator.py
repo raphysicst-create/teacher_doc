@@ -11,6 +11,7 @@ import json
 import os
 import subprocess
 import sys
+from pathlib import Path
 
 MAX_BLOCKS = 2
 
@@ -20,12 +21,13 @@ def main():
     # 무한 루프 방지 1차: 이미 Stop 훅 때문에 계속된 턴이면 재차 강하게 막지 않는다
     stop_hook_active = data.get("stop_hook_active", False)
 
-    project_dir = os.environ.get("CLAUDE_PROJECT_DIR", data.get("cwd", "."))
+    project_dir = str(Path(__file__).resolve().parents[2])
     validator = os.path.join(project_dir, "scripts", "validate_pipeline.py")
     counter_file = os.path.join(project_dir, "logs", ".stop_attempts")
 
     # Phase 1: 검증 스크립트가 없으면 훅은 투명하게 통과
     if not os.path.exists(validator):
+        print(json.dumps({'systemMessage': '빠른 종료 검증기 없음 — 전체 검증 미확인'}))
         sys.exit(0)
 
     # 시도 횟수 확인 (세션별)
@@ -40,16 +42,20 @@ def main():
     count = attempts.get(session, 0)
 
     # 검증 실행
-    result = subprocess.run(
-        [sys.executable, validator],
-        capture_output=True, text=True, encoding="utf-8", errors="replace",
-        timeout=90, cwd=project_dir,
-    )
+    try:
+        result = subprocess.run(
+            [r'C:\Users\22\AppData\Local\Programs\Python\Python312\python.exe', '-X', 'utf8', validator],
+            capture_output=True, text=True, encoding="utf-8", errors="replace",
+            timeout=90, cwd=project_dir,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        result = subprocess.CompletedProcess([], 1, stdout='종료 검증 미확인: ' + str(exc), stderr='')
 
     if result.returncode == 0:
         # 통과 → 카운터 초기화 후 정상 종료 허용
         attempts[session] = 0
         _save(counter_file, attempts)
+        print('{}')
         sys.exit(0)
 
     reason = (result.stdout or result.stderr or "검증 실패").strip()[:1500]

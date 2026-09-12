@@ -2,7 +2,23 @@
   "mcpServers": {
     "kordoc": {
       "command": "npx",
-      "args": ["-y", "kordoc", "mcp"]
+      "args": [
+        "-y",
+        "kordoc",
+        "mcp"
+      ]
+    },
+    "school_task_guide": {
+      "command": "C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe",
+      "args": [
+        "-I",
+        "-S",
+        "-B",
+        "-X",
+        "utf8",
+        "C:/Users/22/Desktop/develop/school task guide/mcp/school_task_guide/bootstrap.py",
+        "serve"
+      ]
     }
   }
 }

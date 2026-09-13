@@ -1,0 +1,10 @@
+{
+  "observer": "implementation agent",
+  "app": "Codex bundled CLI 0.153.4",
+  "method": "Normal TUI /hooks; inspected generated pre/post/stop commands and trusted three local sources",
+  "workspace": "tmp/followup-20260913/codex-host-v4",
+  "hook_definition_sha256": "66173ade8bf843bd6bf1784e16b125e1007f7967a9b2e5d9b5f5424b59bc6581",
+  "bypass_flags_used": false,
+  "normal_trust_records_may_persist": true,
+  "warning_preference_restoration": "tui-warning-preference-restored.json"
+}

@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"registered\",\n  \"path\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-codex\\\\.codex\\\\hooks.json\",\n  \"backup\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-codex\\\\.hwpdoc\\\\hooks-history\\\\codex-0e27d873db9044ae95a71abe4f679ea8.json\",\n  \"ownership_record\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-codex\\\\.hwpdoc\\\\hooks-codex-owned.json\",\n  \"trust\": \"unverified\",\n  \"actual_blocking\": \"unverified\",\n  \"actual_tool_names\": [],\n  \"next_action\": \"설정/등록/신뢰/실제 차단을 각각 확인하세요. 실제 도구명과 이벤트는 설치한 앱에서 확인해야 합니다.\"\n}\n",
+  "stderr": "",
+  "at": "2026-09-13T13:06:56.305723+00:00",
+  "seconds": 0.8899999999994179,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\codex-config\\plugins\\cache\\teacher-doc-lifecycle-20260913\\teacher_doc\\0.1.0\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-codex",
+    "setup-hooks",
+    "--app",
+    "codex",
+    "--apply"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-codex",
+  "configuration_scope": "disposable child-process config only"
+}

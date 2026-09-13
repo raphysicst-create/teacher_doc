@@ -1,0 +1,29 @@
+{
+  "exit_code": 2,
+  "stdout": "{\n  \"status\": \"unconfirmed\",\n  \"manifest\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\registered\\\\.hwpdoc\\\\prepared\\\\registered-2\\\\manifest.json\",\n  \"missing\": [\n    \"유사/수신 원문과 양식 선택 근거\",\n    \"초안 전 업무 근거 조건·예외·최신판 확인\",\n    \"초안 문안과 실제 사용자 확인 기록\",\n    \"예산명·관련번호·시간표 적용 여부\",\n    \"복사 잔재 이름·날짜와 forbid\",\n    \"붙임 목록·미확인 사항 검토\",\n    \"값 미입력: 문서번호\",\n    \"값 미입력: 제목\",\n    \"값 미입력: 인사말\",\n    \"값 미입력: 도입본문과회신기한\",\n    \"값 미입력: 일시\",\n    \"값 미입력: 장소\",\n    \"값 미입력: 대상\",\n    \"값 미입력: 인솔\",\n    \"값 미입력: 동의서제목\",\n    \"값 미입력: 회신표학년도\",\n    \"값 미입력: 회신표행사명\",\n    \"값 미입력: 배부일\",\n    \"값 미입력: 발신명의\",\n    \"값 미입력: 일정1_시간\",\n    \"값 미입력: 일정1_활동내용\",\n    \"값 미입력: 일정1_비고\",\n    \"값 미입력: 일정2_시간\",\n    \"값 미입력: 일정2_활동내용\",\n    \"값 미입력: 일정2_비고\",\n    \"값 미입력: 일정3_시간\",\n    \"값 미입력: 일정3_활동내용\",\n    \"값 미입력: 일정3_비고\",\n    \"값 미입력: 일정4_시간\",\n    \"값 미입력: 일정4_활동내용\",\n    \"값 미입력: 일정4_비고\",\n    \"값 미입력: 일정5_시간\",\n    \"값 미입력: 일정5_활동내용\",\n    \"값 미입력: 일정5_비고\"\n  ],\n  \"next_action\": \"미확인 항목을 묶어 확인하고 문안 제시 후 실제 사용자 확인을 기록하세요\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hwpdoc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\registered",
+    "prepare",
+    "--job",
+    "registered-2",
+    "--document-type",
+    "가정통신문-회신형",
+    "--template",
+    "가정통신문-회신형",
+    "--version",
+    "legacy-1",
+    "--source",
+    "source.txt"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 1.7976295948028564,
+  "recorded_at": "2026-09-13T02:12:30.862659+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

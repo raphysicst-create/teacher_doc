@@ -1,0 +1,8 @@
+{
+  "knowledge/probe.txt": "42ab333cd685aa4fb3764d5fbd97a74aaec85ff05073a91cee10242814006e17",
+  "docs/probe.txt": "f9588a6f1b233556f306fdde4cd8f86c65b2b33b518e17e9d83117fbbcc802a0",
+  "output/stop-limit.hwpx": "66a746cdbbcfa33d3b0fd75b2f5a4cf846b0b7d60f3f1a7e4e95325e6e581855",
+  "logs/.stop_attempts": "7a1a01f6068f33477d20a448d06d9c0edaa445adbbc1109410d9a9e09522e976",
+  "logs/.validate_state.json": "d8b1801d470e853d163f900e690f82436b2889eb4a183e05a80f1524ddad25a8",
+  "logs/audit.jsonl": "27cb0babf74f6fff592549cdeffbb5adafe6471c6c579b589d340781216eebaa"
+}

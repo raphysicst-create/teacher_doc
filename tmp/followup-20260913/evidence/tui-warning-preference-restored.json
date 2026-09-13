@@ -1,0 +1,8 @@
+{
+  "change": "Restore warning display after test TUI selection unintentionally hid it",
+  "before_sha256": "e635cdb80f9a0a11c7dae0f4995c56d0094bcc72e23d41fb7c918f2f2218c5b5",
+  "after_sha256": "572e20d650c744fd6bb2d4814067e87ce361d389430df10bfab9d9644d033914",
+  "only_changed_key": "notice.hide_world_writable_warning",
+  "value": false,
+  "unrelated_settings_preserved": true
+}

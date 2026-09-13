@@ -1,0 +1,24 @@
+{
+  "context": "Current Codex Desktop implementation session, real MCP tools and PreToolUse hook; not isolated release install",
+  "trials": [
+    {
+      "tool": "mcp__kordoc__patch_document",
+      "output": "mcp-host/knowledge/patch.hwpx",
+      "response": "Tool call blocked by PreToolUse hook: 기존 원본 보호"
+    },
+    {
+      "tool": "mcp__kordoc__fill_form",
+      "output": "mcp-host/knowledge/fill.hwpx",
+      "response": "Tool call blocked by PreToolUse hook: 기존 원본 보호"
+    }
+  ],
+  "before": {
+    "fill.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "patch.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb"
+  },
+  "after": {
+    "fill.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "patch.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb"
+  },
+  "unchanged": true
+}

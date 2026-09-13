@@ -1,0 +1,83 @@
+{
+  "job_id": "eval-01-3-2",
+  "workflow": "W1",
+  "document_type": "software-smoke",
+  "template": "성립전예산요구",
+  "shared_values": {
+    "test_label": "연결 시험"
+  },
+  "slots": {
+    "template_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "values": {
+      "p:1": {
+        "shared": "test_label"
+      }
+    }
+  },
+  "sources": [
+    {
+      "path": "knowledge/templates/성립전예산요구/양식.hwpx"
+    }
+  ],
+  "evidence": {
+    "record": "eval-inputs/evidence.json"
+  },
+  "attachments": [
+    {
+      "path": "eval-inputs/3-attachment.txt",
+      "title": "성립전 예산 요구 신청서(농어촌 유학 거주비 지원금)"
+    }
+  ],
+  "attachment_mentions": [
+    "성립전 예산 요구 신청서(농어촌 유학 거주비 지원금)"
+  ],
+  "draft": {
+    "path": "eval-inputs/draft.md",
+    "sha256": "8cdfc17a84b093ab5700ab198f201b3d9a7b5ddd5cbf9621ce7d04d26916239b",
+    "created_at": "2026-09-10T02:00:00+00:00"
+  },
+  "content_rules": {
+    "forbid": [
+      "SYNTHETIC_TOKEN_MUST_NOT_APPEAR"
+    ]
+  },
+  "checks": {
+    "budget_names": {
+      "applicable": false,
+      "reason": "SYNTHETIC_TEST_NOT_USER; software plumbing only"
+    },
+    "related": {
+      "applicable": false,
+      "reason": "SYNTHETIC_TEST_NOT_USER; software plumbing only"
+    },
+    "timetable": {
+      "applicable": false,
+      "reason": "SYNTHETIC_TEST_NOT_USER; software plumbing only"
+    }
+  },
+  "environment": {
+    "app": "cli-software-evaluation",
+    "model": "none",
+    "hancom": "real COM"
+  },
+  "unresolved": [],
+  "exploration": {
+    "record": "read-only copy of existing template for CLI test"
+  },
+  "reuse_review": {
+    "record": "preserve original prose for plumbing only",
+    "names": [
+      "SYNTHETIC_TOKEN_MUST_NOT_APPEAR"
+    ],
+    "dates": [],
+    "dates_empty_reason": "keep original prose in synthetic fixture"
+  },
+  "base_provenance": "native",
+  "draft_approval": {
+    "confirmed": true,
+    "by": "SYNTHETIC_TEST_NOT_USER",
+    "at": "2026-09-10T03:00:00+00:00",
+    "record": "CLI-only synthetic fixture; not actual human response",
+    "input_sha256": "39c8d4121fd581ceeed53e3d9b1aedb864178fc619a9c02356d7e16986c414de"
+  }
+}

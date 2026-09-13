@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "source": "knowledge\\templates\\성립전예산요구\\양식.hwpx",
+  "budget_unit": "non_whitespace_characters",
+  "slots": [
+    {
+      "kind": "paragraph",
+      "key": "p:1",
+      "text_len": 5,
+      "text_len_nospace": 5,
+      "max_chars": 5,
+      "text_preview": "화동중학교",
+      "meta": {
+        "paraPrIDRef": "20",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:2",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:3",
+      "text_len": 8,
+      "text_len_nospace": 6,
+      "max_chars": 6,
+      "text_preview": "수신  내부결재",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:4",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "(경유)",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:5",
+      "text_len": 39,
+      "text_len_nospace": 30,
+      "max_chars": 30,
+      "text_preview": "제목  2026학년도 1학기 농어촌유학 거주비 지원금 성립전 예산 요구",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:6",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:7",
+      "text_len": 31,
+      "text_len_nospace": 27,
+      "max_chars": 27,
+      "text_preview": "1. 관련: 정책기획과-3100(2025. 3. 19.)",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:8",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:9",
+      "text_len": 68,
+      "text_len_nospace": 54,
+      "max_chars": 54,
+      "text_preview": "2. 2026학년도 1학기 농어촌유학 거주비 지원금 교부와 관련하여 붙임...",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:10",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:11",
+      "text_len": 41,
+      "text_len_nospace": 30,
+      "max_chars": 30,
+      "text_preview": "붙임  성립전 예산 요구 신청서(농어촌 유학 거주비 지원금) 1부.  끝...",
+      "meta": {
+        "paraPrIDRef": "0",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    }
+  ]
+}

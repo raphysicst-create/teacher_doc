@@ -1,0 +1,25 @@
+{
+  "status": "unsupported",
+  "steps": [],
+  "conditions": [
+    "폐기용 로컬 기능 시험. 실제 학교 업무·시스템 접속·발송 없음.",
+    "W2 system 분기, 가상교육지원청-200, 2026. 10. 1. 시행, 2026. 10. 8. 기한, 1학년 20명."
+  ],
+  "exceptions": [
+    "학교 업무지침 MCP 조회 대상이 아닌 가상 시험; 실제 원문 조회 성공으로 기록하지 않음."
+  ],
+  "pending_items": [],
+  "reviewed_at": "2026-09-13T07:05:56.899934+00:00",
+  "freshness": "verified",
+  "freshness_scope": "Frozen fixture and user-approved test text only; no statement about current school regulations.",
+  "fallback_sources": [
+    {
+      "path": "inputs/approved-workflow/w2-source.json",
+      "sha256": "9901a75dcb786a993d5afbc49e9e0d428abfa6326825ed786b652c7c5aa43be9"
+    },
+    {
+      "path": "inputs/workflow-drafts.md",
+      "sha256": "dba5f9fa243c09a25ee3a1e26996c633502a36b6a4a47c7b3f47ba5980098979"
+    }
+  ]
+}

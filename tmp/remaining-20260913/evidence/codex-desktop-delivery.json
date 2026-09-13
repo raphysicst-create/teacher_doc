@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "('validate', '--job', 'eval-01-0-1') 0\n('deliver', '--job', 'eval-01-0-1') 1\n('deliver', '--job', 'eval-01-0-1') 0\n('build', '--manifest', 'eval-inputs/1-1.json') 0\n('validate', '--job', 'eval-01-1-1') 0\n('deliver', '--job', 'eval-01-1-1') 1\n('deliver', '--job', 'eval-01-1-1') 1\n('deliver', '--job', 'eval-01-1-1') 2\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\delivery_trial.py"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked",
+  "seconds": 64.03349256515503,
+  "at": "2026-09-13T04:49:48.381597+00:00"
+}

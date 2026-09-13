@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "files": {},
+  "dependencies": {},
+  "status": "pending",
+  "source_review": {
+    "checked_date": "2026-09-13",
+    "report": "docs/배포-라이선스-원문확인-2026-09-13.md",
+    "evidence": "distribution/license-evidence-2026-09-13/index.json",
+    "upstream_license_request": "https://github.com/Canine89/hwpxskill/issues/4",
+    "upstream_issue_comments_observed": 0,
+    "release_approval": false
+  },
+  "notes": [
+    "2026-09-13 Canine89/hwpxskill GitHub API license=null. Root contents also have no LICENSE. Redistribution permission is unconfirmed.",
+    "Project-authored additions need an explicit publisher license and current-file review.",
+    "PyMuPDF 1.28.0 metadata declares AGPL-3.0 or Artifex commercial licensing. Conditions review is pending.",
+    "Native school templates and operational logs are excluded. Do not populate this record with invented permissions.",
+    "All included XML, preview, metadata and images require a current hash-bound privacy review."
+  ]
+}

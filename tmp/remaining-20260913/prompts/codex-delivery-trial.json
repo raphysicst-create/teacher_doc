@@ -1,0 +1,5 @@
+{
+  "prompt": "Run a local copy-failure regression using historical software-only fixtures. All approval records are labeled SYNTHETIC_TEST_NOT_USER and must never be described as human approvals. Read C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/delivery_trial.py and execute it once using PowerShell: & \"C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe\" -B -X utf8 \"C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/delivery_trial.py\". It builds two unchanged synthetic fixtures, exercises missing-copy-folder recovery and two collision failures followed by the retry limit. The copy destination is only fake-copy inside this disposable workspace. Do not rerun after failure, alter code/configuration/approval records, use actual OneDrive, or spawn agents. Read output/delivery-trial.json and report actual exit codes and assertion results. It is a delivery subflow test, not new W1/W2 document acceptance.",
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked",
+  "scope": "actual CLI, disposable local fixture; not human workflow acceptance"
+}

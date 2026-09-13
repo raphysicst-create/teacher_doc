@@ -1,0 +1,30 @@
+[
+  {
+    "step": "validate",
+    "exit": 0
+  },
+  {
+    "step": "fix_namespaces",
+    "exit": 0
+  },
+  {
+    "step": "finalize",
+    "exit": 0
+  },
+  {
+    "step": "layout",
+    "exit": 0
+  },
+  {
+    "step": "page_guard",
+    "exit": 0
+  },
+  {
+    "step": "content_guard",
+    "exit": 0
+  },
+  {
+    "step": "gonmun_lint",
+    "exit": 2
+  }
+]

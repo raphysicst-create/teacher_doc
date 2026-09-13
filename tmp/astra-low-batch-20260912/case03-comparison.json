@@ -1,0 +1,145 @@
+{
+  "case": "case03",
+  "baseline": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_1회고사_가통배부_기안문.hwpx",
+  "candidate": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case03\\case03_2026학년도_2학기_1회고사_가정통신문_배부_검토초안.hwpx",
+  "candidate_sha256": "f5ae7c2fab1958ff97b4bdf86f62c8b9423a83163f0926e885450f8b92a2abd3",
+  "table_geometry_equal": true,
+  "table_counts": [
+    0,
+    0
+  ],
+  "paragraph_counts": [
+    7,
+    7
+  ],
+  "styles_before": [
+    [
+      "1200",
+      "굴림",
+      "False"
+    ],
+    [
+      "1200",
+      "굴림",
+      "True"
+    ],
+    [
+      "2200",
+      "굴림",
+      "True"
+    ]
+  ],
+  "styles_after": [
+    [
+      "1200",
+      "굴림",
+      "False"
+    ],
+    [
+      "2200",
+      "굴림",
+      "True"
+    ]
+  ],
+  "text_diff": [
+    "--- baseline",
+    "+++ candidate",
+    "@@ -1,7 +1,7 @@",
+    " 화동중학교",
+    "-수신  내부결재",
+    "+수신 내부결재",
+    " (경유)",
+    " 제목 2026학년도 2학기 1회고사 가정통신문 배부",
+    "-1. 관련: 화동중학교-○○○○(확인 후 기재)",
+    "-2. 화동중학교 2026학년도 2학기 1회고사 가정통신문을 배부하고자 합니다.",
+    "-붙임  2026학년도 2학기 1회고사 관련 가정통신문 1부.  끝.",
+    "+1. 관련: 화동중학교-[[문서번호 확인 후 기재]]([[시행일 확인 후 기재]])",
+    "+2. 화동중학교 2026학년도 2학기 1회고사 안내 가정통신문을 배부하고자 합니다.",
+    "+붙임  2026학년도 2학기 1회고사 관련 가정통신문 1부. 끝."
+  ],
+  "candidate_profile": {
+    "path": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case03\\case03_2026학년도_2학기_1회고사_가정통신문_배부_검토초안.hwpx",
+    "sha256": "f5ae7c2fab1958ff97b4bdf86f62c8b9423a83163f0926e885450f8b92a2abd3",
+    "paragraphs": [
+      {
+        "runs": [
+          {
+            "text": "화동중학교",
+            "height": "2200",
+            "bold": true,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "화동중학교"
+      },
+      {
+        "runs": [
+          {
+            "text": "수신 내부결재",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "수신 내부결재"
+      },
+      {
+        "runs": [
+          {
+            "text": "(경유)",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "(경유)"
+      },
+      {
+        "runs": [
+          {
+            "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부"
+      },
+      {
+        "runs": [
+          {
+            "text": "1. 관련: 화동중학교-[[문서번호 확인 후 기재]]([[시행일 확인 후 기재]])",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "1. 관련: 화동중학교-[[문서번호 확인 후 기재]]([[시행일 확인 후 기재]])"
+      },
+      {
+        "runs": [
+          {
+            "text": "2. 화동중학교 2026학년도 2학기 1회고사 안내 가정통신문을 배부하고자 합니다.",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "2. 화동중학교 2026학년도 2학기 1회고사 안내 가정통신문을 배부하고자 합니다."
+      },
+      {
+        "runs": [
+          {
+            "text": "붙임  2026학년도 2학기 1회고사 관련 가정통신문 1부. 끝.",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "붙임  2026학년도 2학기 1회고사 관련 가정통신문 1부. 끝."
+      }
+    ],
+    "tables": []
+  },
+  "meaning": "Exact differences, not an automatic quality verdict; placeholder and wording changes need human/model review."
+}

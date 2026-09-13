@@ -1,0 +1,37 @@
+{
+  "unique_rows": 176,
+  "initial_verdicts_unchanged": true,
+  "current_count_sum": 176,
+  "active_followup_rows": 55,
+  "status_changes": 6,
+  "new_independent_pass_promotions": 0,
+  "all_report_links_exist": true,
+  "previous_snapshot_preserved": true,
+  "source_changes_documented": [
+    {
+      "path": "distribution/pymupdf-agpl-decision-2026-09-13.json",
+      "previous_sha256": "60a176af48eb9da5fcf3b81002e521d6c77f9757c3caf7be7427f8c277ac6f74",
+      "current_sha256": "155718f38e8a99ab2a75cec18a45cdc30b7cedca1ac48850965070bf8f472ea3",
+      "reason": "Authorized current-package dependency migration/review or report update; historical snapshots preserved"
+    },
+    {
+      "path": "distribution/release-files.json",
+      "previous_sha256": "2827fc93b3176ebd674dd76df292d2035eba00fec269b377326b7aaed824ad5f",
+      "current_sha256": "ddd1d351d84bfebab72b53ff3e8e3a1c81502aad5d1d6e5b002c83775d3f142e",
+      "reason": "Authorized current-package dependency migration/review or report update; historical snapshots preserved"
+    },
+    {
+      "path": "distribution/rights.pending.json",
+      "previous_sha256": "52f454f3be409f3644ff9f0046f5aa3df56898ae8bab5001402723ccb52bc322",
+      "current_sha256": "10f40abdcbbe7d482f0a01cce8ce2e492d76cad67c21a9ed218dcd151a32a8ca",
+      "reason": "Authorized current-package dependency migration/review or report update; historical snapshots preserved"
+    },
+    {
+      "path": "distribution/source-bundle.json",
+      "previous_sha256": "e795e430add628b0d3b5e11b49a2407ccd89cf025e2f5a11227b994f940c13e8",
+      "current_sha256": "318f62cbdf7ef1268a8d008740eacef7308d7cc5ff3ce8bea6e8d8b5fbc313c7",
+      "reason": "Authorized current-package dependency migration/review or report update; historical snapshots preserved"
+    }
+  ],
+  "report_sha256": "771683019025b8788d82226e3e8f487d5a755622ca651fb735410d0a3c64cef3"
+}

@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"proposal\",\n  \"path\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-claude\\\\.hwpdoc\\\\setup-claude-hooks.json\",\n  \"backup\": null,\n  \"ownership_record\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-claude\\\\.hwpdoc\\\\hooks-claude-owned.json\",\n  \"trust\": \"unverified\",\n  \"actual_blocking\": \"unverified\",\n  \"actual_tool_names\": [],\n  \"next_action\": \"설정/등록/신뢰/실제 차단을 각각 확인하세요. 실제 도구명과 이벤트는 설치한 앱에서 확인해야 합니다.\"\n}\n",
+  "stderr": "",
+  "at": "2026-09-13T13:11:00.964140+00:00",
+  "seconds": 0.9530000000013388,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\claude-config\\plugins\\cache\\teacher-doc-lifecycle-20260913\\teacher_doc\\0.1.0\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-claude",
+    "setup-hooks",
+    "--app",
+    "claude"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-claude",
+  "configuration_scope": "disposable child-process config only"
+}

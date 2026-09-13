@@ -1,0 +1,46 @@
+{
+  "reference": {
+    "paragraph_count": 10,
+    "page_break_count": 0,
+    "column_break_count": 0,
+    "table_count": 0,
+    "table_shapes": [],
+    "text_char_total": 172,
+    "text_char_total_nospace": 142,
+    "paragraph_text_lengths": [
+      5,
+      7,
+      4,
+      28,
+      0,
+      46,
+      0,
+      46,
+      0,
+      36
+    ]
+  },
+  "output": {
+    "paragraph_count": 10,
+    "page_break_count": 0,
+    "column_break_count": 0,
+    "table_count": 0,
+    "table_shapes": [],
+    "text_char_total": 172,
+    "text_char_total_nospace": 142,
+    "paragraph_text_lengths": [
+      5,
+      7,
+      4,
+      28,
+      0,
+      46,
+      0,
+      46,
+      0,
+      36
+    ]
+  }
+}
+PASS: page-guard
+  paragraph/table/pageBreak 구조와 텍스트 길이 편차가 허용 범위 내입니다.

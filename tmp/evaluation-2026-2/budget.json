@@ -1,0 +1,4625 @@
+{
+  "version": 1,
+  "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\evaluation-2026-2\\reference-finalized.hwpx",
+  "budget_unit": "non_whitespace_characters",
+  "slots": [
+    {
+      "kind": "paragraph",
+      "key": "p:2",
+      "text_len": 6,
+      "text_len_nospace": 5,
+      "max_chars": 5,
+      "text_preview": " 가정통신문",
+      "meta": {
+        "paraPrIDRef": "13",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:3",
+      "text_len": 13,
+      "text_len_nospace": 12,
+      "max_chars": 12,
+      "text_preview": "화동중 제2026-20호",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:4",
+      "text_len": 14,
+      "text_len_nospace": 12,
+      "max_chars": 12,
+      "text_preview": "☎ 교무실 562-2032",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:5",
+      "text_len": 14,
+      "text_len_nospace": 12,
+      "max_chars": 12,
+      "text_preview": "☎ 행정실 562-2031",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:6",
+      "text_len": 26,
+      "text_len_nospace": 26,
+      "max_chars": 26,
+      "text_preview": "http://k-hwadong.gwe.ms.kr",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:7",
+      "text_len": 9,
+      "text_len_nospace": 7,
+      "max_chars": 7,
+      "text_preview": "우)26116  ",
+      "meta": {
+        "paraPrIDRef": "14",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:8",
+      "text_len": 19,
+      "text_len_nospace": 16,
+      "max_chars": 16,
+      "text_preview": "강원도 정선군 화암면 그림바위길50",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:9",
+      "text_len": 5,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "교   훈",
+      "meta": {
+        "paraPrIDRef": "15",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:10",
+      "text_len": 8,
+      "text_len_nospace": 8,
+      "max_chars": 8,
+      "text_preview": "성실.근면.개척",
+      "meta": {
+        "paraPrIDRef": "15",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:11",
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "max_chars": 17,
+      "text_preview": "실력과 인성을 겸비한 사람을 기르는 학교",
+      "meta": {
+        "paraPrIDRef": "13",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:12",
+      "text_len": 23,
+      "text_len_nospace": 19,
+      "max_chars": 19,
+      "text_preview": "2026학년도 1학기 과목별 평가계획 안내",
+      "meta": {
+        "paraPrIDRef": "20",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:13",
+      "text_len": 9,
+      "text_len_nospace": 7,
+      "max_chars": 7,
+      "text_preview": "  안녕하십니까?",
+      "meta": {
+        "paraPrIDRef": "29",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:14",
+      "text_len": 192,
+      "text_len_nospace": 149,
+      "max_chars": 149,
+      "text_preview": "  항상 본교의 교육 활동에 많은 관심과 사랑을 보내주시는 가정에 감사의...",
+      "meta": {
+        "paraPrIDRef": "29",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:15",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "29",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:17",
+      "text_len": 33,
+      "text_len_nospace": 28,
+      "max_chars": 28,
+      "text_preview": "1학기 1회고사 일정 : 2026.04.28.~04.29. ",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:18",
+      "text_len": 32,
+      "text_len_nospace": 28,
+      "max_chars": 28,
+      "text_preview": "1학기 2회고사 일정 : 2026.06.30.~07.02.",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:19",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "23",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:20",
+      "text_len": 14,
+      "text_len_nospace": 11,
+      "max_chars": 11,
+      "text_preview": "<과목별 평가 반영 비율>",
+      "meta": {
+        "paraPrIDRef": "23",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:22",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "구 분",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:23",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학기",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:24",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "1회고사",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:25",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "2회고사",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:26",
+      "text_len": 2,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "수행",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:27",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "국 어",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:28",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:29",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:30",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:31",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:32",
+      "text_len": 24,
+      "text_len_nospace": 19,
+      "max_chars": 19,
+      "text_preview": "독후 활동 보고서 15%, 포트폴리오 15%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:33",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:34",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:35",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:36",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:37",
+      "text_len": 24,
+      "text_len_nospace": 19,
+      "max_chars": 19,
+      "text_preview": "독후 활동 보고서 15%, 포트폴리오 15%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:38",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "영 어",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:39",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:40",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:41",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:42",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:43",
+      "text_len": 29,
+      "text_len_nospace": 24,
+      "max_chars": 24,
+      "text_preview": "프로젝트 (발표) 15%, 말하기 (구술평가) 15%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:44",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:45",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:46",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:47",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:48",
+      "text_len": 29,
+      "text_len_nospace": 24,
+      "max_chars": 24,
+      "text_preview": "프로젝트 (발표) 15%, 말하기 (구술평가) 15%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:49",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "수 학",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:50",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:51",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:52",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:53",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:54",
+      "text_len": 26,
+      "text_len_nospace": 20,
+      "max_chars": 20,
+      "text_preview": "교과서의 문제해결 과정서술 및 발표 평가 20%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:55",
+      "text_len": 12,
+      "text_len_nospace": 10,
+      "max_chars": 10,
+      "text_preview": "서·논술형 평가 20%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:56",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:57",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:58",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:59",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:60",
+      "text_len": 23,
+      "text_len_nospace": 19,
+      "max_chars": 19,
+      "text_preview": "서·논술형 평가 20%, 포트폴리오 10%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:61",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "사 회",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:62",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:63",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:64",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:65",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:66",
+      "text_len": 12,
+      "text_len_nospace": 10,
+      "max_chars": 10,
+      "text_preview": "자료해석 글쓰기 30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:67",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "역 사",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:68",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:69",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:70",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:71",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:72",
+      "text_len": 12,
+      "text_len_nospace": 10,
+      "max_chars": 10,
+      "text_preview": "사료해석 글쓰기 30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:73",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "과 학",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:74",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:75",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:76",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:77",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:78",
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "max_chars": 17,
+      "text_preview": "비열실험 15%, 부력 측정 실험 15%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:79",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:80",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:81",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:82",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:83",
+      "text_len": 34,
+      "text_len_nospace": 25,
+      "max_chars": 25,
+      "text_preview": "소리의 성질 탐구 실험 15%, 이온의 이동 관찰 실험 15%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:84",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "음 악",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:85",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:86",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:87",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:88",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:89",
+      "text_len": 32,
+      "text_len_nospace": 25,
+      "max_chars": 25,
+      "text_preview": "가창 30%, 지휘 30%, 작곡가 음악신문 만들기 40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:90",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:91",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:92",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:93",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:94",
+      "text_len": 32,
+      "text_len_nospace": 25,
+      "max_chars": 25,
+      "text_preview": "가창 30%, 지휘 30%, 작곡가 음악신문 만들기 40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:95",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "미 술",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:96",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:97",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:98",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:99",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:100",
+      "text_len": 24,
+      "text_len_nospace": 19,
+      "max_chars": 19,
+      "text_preview": "자화상 20%, 풍경화 40%, 조소 40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:101",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:102",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:103",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:104",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:105",
+      "text_len": 33,
+      "text_len_nospace": 27,
+      "max_chars": 27,
+      "text_preview": "전각 40%, 채색화 40%, 작가탐구(포트폴리오) 20% ",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:106",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "체 육",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:107",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:108",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:109",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:110",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:111",
+      "text_len": 28,
+      "text_len_nospace": 25,
+      "max_chars": 25,
+      "text_preview": "줄넘기(1분뛰기) 25%, 줄넘기(X자뛰기) 25%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:112",
+      "text_len": 30,
+      "text_len_nospace": 27,
+      "max_chars": 27,
+      "text_preview": "줄넘기(엇갈아뛰기) 25%, 배드민턴(숏서비스) 25%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:113",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:114",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:115",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:116",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:117",
+      "text_len": 28,
+      "text_len_nospace": 25,
+      "max_chars": 25,
+      "text_preview": "줄넘기(1분뛰기) 25%, 줄넘기(X자뛰기) 25%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:118",
+      "text_len": 30,
+      "text_len_nospace": 27,
+      "max_chars": 27,
+      "text_preview": "배드민턴(숏서비스) 25%, 배드민턴(롱서비스) 25%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:119",
+      "text_len": 5,
+      "text_len_nospace": 5,
+      "max_chars": 5,
+      "text_preview": "기술·가정",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:120",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:121",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:122",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:123",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:124",
+      "text_len": 33,
+      "text_len_nospace": 26,
+      "max_chars": 26,
+      "text_preview": "청소년의 발달 안내책 제작 30%, 픽토그램 제작하기 30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:125",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:126",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:127",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:128",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:129",
+      "text_len": 27,
+      "text_len_nospace": 21,
+      "max_chars": 21,
+      "text_preview": "더블 클립카 제작 30%, 기술 포트폴리오 30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:130",
+      "text_len": 2,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "도덕",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:131",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:132",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:133",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:134",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:135",
+      "text_len": 27,
+      "text_len_nospace": 20,
+      "max_chars": 20,
+      "text_preview": "올바른 자아 이해 및 자아 개선 프로젝트 30%,",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:136",
+      "text_len": 17,
+      "text_len_nospace": 14,
+      "max_chars": 14,
+      "text_preview": "세얼간이와 우정 프로젝트 30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:137",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:138",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:139",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:140",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:141",
+      "text_len": 19,
+      "text_len_nospace": 15,
+      "max_chars": 15,
+      "text_preview": "도덕적 추론과 비판적 사고 30%,",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:142",
+      "text_len": 28,
+      "text_len_nospace": 20,
+      "max_chars": 20,
+      "text_preview": "일상생활 속 폭력에 관한 네 컷 만화 그리기 30%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:143",
+      "text_len": 5,
+      "text_len_nospace": 5,
+      "max_chars": 5,
+      "text_preview": "진로와직업",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:144",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:145",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:146",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:147",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:148",
+      "text_len": 17,
+      "text_len_nospace": 14,
+      "max_chars": 14,
+      "text_preview": "구술발표 50%, 논술형 50%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:149",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "정 보",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:150",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:151",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:152",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 1,
+      "text_preview": "-",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:153",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:154",
+      "text_len": 19,
+      "text_len_nospace": 15,
+      "max_chars": 15,
+      "text_preview": "피지컬 컴퓨팅 프로그래밍 35%, ",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:155",
+      "text_len": 25,
+      "text_len_nospace": 21,
+      "max_chars": 21,
+      "text_preview": "프로그래밍 프로젝트 40%, 포트폴리오 25%",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "21",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:156",
+      "text_len": 60,
+      "text_len_nospace": 43,
+      "max_chars": 43,
+      "text_preview": "※ 원활한 학사 일정 진행 및 학습에 필요하다고 생각될 경우 본 일정 및...",
+      "meta": {
+        "paraPrIDRef": "28",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:157",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "19",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:158",
+      "text_len": 11,
+      "text_len_nospace": 9,
+      "max_chars": 9,
+      "text_preview": "2026. 4. 9.",
+      "meta": {
+        "paraPrIDRef": "19",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:159",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "21",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:0:0:0",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 10,
+      "text_preview": "",
+      "meta": {
+        "table": 0,
+        "row": "0",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 10,
+        "char_height": 1200,
+        "borderFillIDRef": "7"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:0:1:0",
+      "text_len": 6,
+      "text_len_nospace": 5,
+      "max_chars": 7,
+      "text_preview": " 가정통신문",
+      "meta": {
+        "table": 0,
+        "row": "0",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 7,
+        "char_height": 2900,
+        "borderFillIDRef": "8"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:0:2:0",
+      "text_len": 95,
+      "text_len_nospace": 85,
+      "max_chars": 85,
+      "text_preview": "화동중 제2026-20호☎ 교무실 562-2032☎ 행정실 562-203...",
+      "meta": {
+        "table": 0,
+        "row": "0",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 56,
+        "char_height": 1000,
+        "borderFillIDRef": "7"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:1:0:0",
+      "text_len": 13,
+      "text_len_nospace": 10,
+      "max_chars": 10,
+      "text_preview": "교   훈성실.근면.개척",
+      "meta": {
+        "table": 0,
+        "row": "1",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 9,
+        "char_height": 1300,
+        "borderFillIDRef": "7"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:1:1:0",
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "max_chars": 18,
+      "text_preview": "실력과 인성을 겸비한 사람을 기르는 학교",
+      "meta": {
+        "table": 0,
+        "row": "1",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 18,
+        "char_height": 1200,
+        "borderFillIDRef": "9"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:1:0:0:0",
+      "text_len": 65,
+      "text_len_nospace": 56,
+      "max_chars": 56,
+      "text_preview": "1학기 1회고사 일정 : 2026.04.28.~04.29. 1학기 2회고...",
+      "meta": {
+        "table": 1,
+        "row": "0",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 49,
+        "char_height": 1000,
+        "borderFillIDRef": "3"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:0:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 6,
+      "text_preview": "구 분",
+      "meta": {
+        "table": 2,
+        "row": "0",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 6,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:0:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 40,
+      "text_preview": "1학기",
+      "meta": {
+        "table": 2,
+        "row": "0",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 40,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:1:2:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "1회고사",
+      "meta": {
+        "table": 2,
+        "row": "1",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:1:3:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "2회고사",
+      "meta": {
+        "table": 2,
+        "row": "1",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:1:4:0",
+      "text_len": 2,
+      "text_len_nospace": 2,
+      "max_chars": 30,
+      "text_preview": "수행",
+      "meta": {
+        "table": 2,
+        "row": "1",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 30,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:2:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "국 어",
+      "meta": {
+        "table": 2,
+        "row": "2",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:2:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "2",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:2:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "2",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:2:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "2",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:2:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "2",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:2:5:0",
+      "text_len": 24,
+      "text_len_nospace": 19,
+      "max_chars": 26,
+      "text_preview": "독후 활동 보고서 15%, 포트폴리오 15%",
+      "meta": {
+        "table": 2,
+        "row": "2",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:3:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "3",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:3:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "3",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:3:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "3",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:3:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "3",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:3:5:0",
+      "text_len": 24,
+      "text_len_nospace": 19,
+      "max_chars": 26,
+      "text_preview": "독후 활동 보고서 15%, 포트폴리오 15%",
+      "meta": {
+        "table": 2,
+        "row": "3",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:4:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "영 어",
+      "meta": {
+        "table": 2,
+        "row": "4",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:4:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "4",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:4:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "4",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:4:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "4",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:4:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "4",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:4:5:0",
+      "text_len": 29,
+      "text_len_nospace": 24,
+      "max_chars": 26,
+      "text_preview": "프로젝트 (발표) 15%, 말하기 (구술평가) 15%",
+      "meta": {
+        "table": 2,
+        "row": "4",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:5:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "5",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:5:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "5",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:5:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "5",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:5:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "5",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:5:5:0",
+      "text_len": 29,
+      "text_len_nospace": 24,
+      "max_chars": 26,
+      "text_preview": "프로젝트 (발표) 15%, 말하기 (구술평가) 15%",
+      "meta": {
+        "table": 2,
+        "row": "5",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:6:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "수 학",
+      "meta": {
+        "table": 2,
+        "row": "6",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:6:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "6",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:6:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "6",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:6:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "6",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:6:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "table": 2,
+        "row": "6",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:6:5:0",
+      "text_len": 38,
+      "text_len_nospace": 30,
+      "max_chars": 30,
+      "text_preview": "교과서의 문제해결 과정서술 및 발표 평가 20%서·논술형 평가 20%",
+      "meta": {
+        "table": 2,
+        "row": "6",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:7:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "7",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:7:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "7",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:7:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "7",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:7:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "7",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:7:5:0",
+      "text_len": 23,
+      "text_len_nospace": 19,
+      "max_chars": 26,
+      "text_preview": "서·논술형 평가 20%, 포트폴리오 10%",
+      "meta": {
+        "table": 2,
+        "row": "7",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:8:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "사 회",
+      "meta": {
+        "table": 2,
+        "row": "8",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:8:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "8",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:8:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "8",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:8:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "8",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:8:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "8",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:8:5:0",
+      "text_len": 12,
+      "text_len_nospace": 10,
+      "max_chars": 26,
+      "text_preview": "자료해석 글쓰기 30%",
+      "meta": {
+        "table": 2,
+        "row": "8",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:9:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "역 사",
+      "meta": {
+        "table": 2,
+        "row": "9",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:9:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "9",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:9:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "9",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:9:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "9",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:9:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "9",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:9:5:0",
+      "text_len": 12,
+      "text_len_nospace": 10,
+      "max_chars": 26,
+      "text_preview": "사료해석 글쓰기 30%",
+      "meta": {
+        "table": 2,
+        "row": "9",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:10:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "과 학",
+      "meta": {
+        "table": 2,
+        "row": "10",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:10:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "10",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:10:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "10",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:10:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "10",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:10:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "10",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:10:5:0",
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "max_chars": 26,
+      "text_preview": "비열실험 15%, 부력 측정 실험 15%",
+      "meta": {
+        "table": 2,
+        "row": "10",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:11:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "11",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:11:2:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "11",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:11:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "35%",
+      "meta": {
+        "table": 2,
+        "row": "11",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:11:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "30%",
+      "meta": {
+        "table": 2,
+        "row": "11",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:11:5:0",
+      "text_len": 34,
+      "text_len_nospace": 25,
+      "max_chars": 26,
+      "text_preview": "소리의 성질 탐구 실험 15%, 이온의 이동 관찰 실험 15%",
+      "meta": {
+        "table": 2,
+        "row": "11",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:12:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "음 악",
+      "meta": {
+        "table": 2,
+        "row": "12",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:12:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "12",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:12:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "12",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:12:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "12",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:12:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "12",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:12:5:0",
+      "text_len": 32,
+      "text_len_nospace": 25,
+      "max_chars": 26,
+      "text_preview": "가창 30%, 지휘 30%, 작곡가 음악신문 만들기 40%",
+      "meta": {
+        "table": 2,
+        "row": "12",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:13:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "13",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:13:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "13",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:13:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "13",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:13:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "13",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:13:5:0",
+      "text_len": 32,
+      "text_len_nospace": 25,
+      "max_chars": 26,
+      "text_preview": "가창 30%, 지휘 30%, 작곡가 음악신문 만들기 40%",
+      "meta": {
+        "table": 2,
+        "row": "13",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:14:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "미 술",
+      "meta": {
+        "table": 2,
+        "row": "14",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:14:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "14",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:14:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "14",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:14:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "14",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:14:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "14",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:14:5:0",
+      "text_len": 24,
+      "text_len_nospace": 19,
+      "max_chars": 26,
+      "text_preview": "자화상 20%, 풍경화 40%, 조소 40%",
+      "meta": {
+        "table": 2,
+        "row": "14",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:15:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "15",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:15:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "15",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:15:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "15",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:15:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "15",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:15:5:0",
+      "text_len": 33,
+      "text_len_nospace": 27,
+      "max_chars": 27,
+      "text_preview": "전각 40%, 채색화 40%, 작가탐구(포트폴리오) 20% ",
+      "meta": {
+        "table": 2,
+        "row": "15",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:16:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 4,
+      "text_preview": "체 육",
+      "meta": {
+        "table": 2,
+        "row": "16",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 4,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:16:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "16",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:16:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "16",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:16:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "16",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:16:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "16",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:16:5:0",
+      "text_len": 58,
+      "text_len_nospace": 52,
+      "max_chars": 52,
+      "text_preview": "줄넘기(1분뛰기) 25%, 줄넘기(X자뛰기) 25%줄넘기(엇갈아뛰기) 2...",
+      "meta": {
+        "table": 2,
+        "row": "16",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:17:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "17",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:17:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "17",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:17:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "17",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:17:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "17",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:17:5:0",
+      "text_len": 58,
+      "text_len_nospace": 52,
+      "max_chars": 52,
+      "text_preview": "줄넘기(1분뛰기) 25%, 줄넘기(X자뛰기) 25%배드민턴(숏서비스) 2...",
+      "meta": {
+        "table": 2,
+        "row": "17",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:18:0:0",
+      "text_len": 5,
+      "text_len_nospace": 5,
+      "max_chars": 5,
+      "text_preview": "기술·가정",
+      "meta": {
+        "table": 2,
+        "row": "18",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:18:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "18",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:18:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "18",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:18:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "table": 2,
+        "row": "18",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:18:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "table": 2,
+        "row": "18",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:18:5:0",
+      "text_len": 33,
+      "text_len_nospace": 26,
+      "max_chars": 26,
+      "text_preview": "청소년의 발달 안내책 제작 30%, 픽토그램 제작하기 30%",
+      "meta": {
+        "table": 2,
+        "row": "18",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:19:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "19",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:19:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "19",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:19:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "table": 2,
+        "row": "19",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:19:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "table": 2,
+        "row": "19",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:19:5:0",
+      "text_len": 27,
+      "text_len_nospace": 21,
+      "max_chars": 26,
+      "text_preview": "더블 클립카 제작 30%, 기술 포트폴리오 30%",
+      "meta": {
+        "table": 2,
+        "row": "19",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:20:0:0",
+      "text_len": 2,
+      "text_len_nospace": 2,
+      "max_chars": 4,
+      "text_preview": "도덕",
+      "meta": {
+        "table": 2,
+        "row": "20",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 4,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:20:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "20",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:20:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "20",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:20:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "table": 2,
+        "row": "20",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:20:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "table": 2,
+        "row": "20",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:20:5:0",
+      "text_len": 44,
+      "text_len_nospace": 34,
+      "max_chars": 34,
+      "text_preview": "올바른 자아 이해 및 자아 개선 프로젝트 30%,세얼간이와 우정 프로젝트...",
+      "meta": {
+        "table": 2,
+        "row": "20",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:21:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "21",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:21:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "21",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:21:3:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "40%",
+      "meta": {
+        "table": 2,
+        "row": "21",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:21:4:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "60%",
+      "meta": {
+        "table": 2,
+        "row": "21",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:21:5:0",
+      "text_len": 47,
+      "text_len_nospace": 35,
+      "max_chars": 35,
+      "text_preview": "도덕적 추론과 비판적 사고 30%,일상생활 속 폭력에 관한 네 컷 만화 ...",
+      "meta": {
+        "table": 2,
+        "row": "21",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:22:0:0",
+      "text_len": 5,
+      "text_len_nospace": 5,
+      "max_chars": 5,
+      "text_preview": "진로와직업",
+      "meta": {
+        "table": 2,
+        "row": "22",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:22:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "1학년",
+      "meta": {
+        "table": 2,
+        "row": "22",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:22:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "22",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:22:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "22",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:22:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "22",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:22:5:0",
+      "text_len": 17,
+      "text_len_nospace": 14,
+      "max_chars": 26,
+      "text_preview": "구술발표 50%, 논술형 50%",
+      "meta": {
+        "table": 2,
+        "row": "22",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:23:0:0",
+      "text_len": 3,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "정 보",
+      "meta": {
+        "table": 2,
+        "row": "23",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 2,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:23:1:0",
+      "text_len": 3,
+      "text_len_nospace": 3,
+      "max_chars": 3,
+      "text_preview": "2학년",
+      "meta": {
+        "table": 2,
+        "row": "23",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:23:2:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "23",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:23:3:0",
+      "text_len": 1,
+      "text_len_nospace": 1,
+      "max_chars": 3,
+      "text_preview": "-",
+      "meta": {
+        "table": 2,
+        "row": "23",
+        "col": "3",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:23:4:0",
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "max_chars": 4,
+      "text_preview": "100%",
+      "meta": {
+        "table": 2,
+        "row": "23",
+        "col": "4",
+        "occurrence": 0,
+        "estimated_capacity": 3,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:2:23:5:0",
+      "text_len": 44,
+      "text_len_nospace": 36,
+      "max_chars": 36,
+      "text_preview": "피지컬 컴퓨팅 프로그래밍 35%, 프로그래밍 프로젝트 40%, 포트폴리오...",
+      "meta": {
+        "table": 2,
+        "row": "23",
+        "col": "5",
+        "occurrence": 0,
+        "estimated_capacity": 26,
+        "char_height": 1000,
+        "borderFillIDRef": "10"
+      }
+    }
+  ]
+}

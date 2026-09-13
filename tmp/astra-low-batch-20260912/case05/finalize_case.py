@@ -1,0 +1,20 @@
+from build_case import *
+import fitz
+v['p:82']=''
+(T/'values.json').write_text(json.dumps(v,ensure_ascii=False,indent=2),encoding='utf-8')
+(T/'visual-review.md').write_text('원본 reference-1.png와 preview-1.png 직접 판독. 1쪽, 제목 강조·헤더·시간표·출제범위 표·하단 명의 배치 유지. 날짜 2026. 11. 24. 한 줄로 잘림 없음. 날짜 11/10자 초과를 실제 판독 후 허용. 1학년 수학 문항수 셀의 미실시 중복은 p:82를 빈 텍스트로 교정. 최종 파일은 다시 렌더한다.',encoding='utf-8')
+run('edit-final',S/'edit_hwpx.py',B,'-o',O,'--slot-json',T/'values.json','--allow-over-budget','--verified-by-render')
+run('validate-final',S/'validate.py',O)
+run('fix_namespaces-final',S/'fix_namespaces.py',O)
+run('finalize-final',S/'finalize_hwpx.py',O,'--strip-linesegarray')
+run('layout-final',S/'validate.py',O,'--layout')
+run('page_guard-final',S/'page_guard.py','--reference',T/'reference-finalized.hwpx','--output',O,'--budget-profile',T/'budget.json','--structure-profile',T/'structure.json','--no-strict-paragraph-budget','--skip-text-drift','--allow-empty-fill')
+run('hancom-final',S/'finalize_hwpx.py',O,'--hancom')
+run('render-final',R/'scripts/render_check.py',O,'--reference',B,'--keep-pdf',T/'final.pdf')
+d=fitz.open(T/'final.pdf')
+for i,p in enumerate(d):p.get_pixmap(matrix=fitz.Matrix(1.5,1.5)).save(T/f'final-{i+1}.png')
+run('gonmun_lint-final',S/'gonmun_lint.py',O)
+run('content_guard-final',S/'content_guard.py',O,'--rules',T/'rules.json')
+run('text-final',S/'text_extract.py',O,'--format','markdown','-o',T/'final.md')
+p=json.loads((T/'provenance.json').read_text(encoding='utf-8'));p.update(values_sha256=sha(T/'values.json'),final_sha256=sha(O),date_over_budget_render_verified=True)
+(T/'provenance.json').write_text(json.dumps(p,ensure_ascii=False,indent=2),encoding='utf-8')

@@ -1,0 +1,18 @@
+{
+  "fixture_only": true,
+  "school": "가람중학교",
+  "preferences": {
+    "body_font": "굴림",
+    "body_size_pt": 12,
+    "reply_days_before": 4,
+    "staff_names": "직책과 인원수",
+    "empty_cell_validator": false,
+    "grade_row_deletion": "교사 직접",
+    "operational_metadata_update": false,
+    "precedent_layout": "보존"
+  },
+  "decision_notes": [
+    "일반 공통 법규라고 주장하지 말고 이 가상학교 시험 설정으로 적용한다.",
+    "실제 공통 법규의 최신성은 별도 원문 확인 대상이다."
+  ]
+}

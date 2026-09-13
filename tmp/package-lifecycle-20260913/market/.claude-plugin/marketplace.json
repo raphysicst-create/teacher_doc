@@ -1,0 +1,14 @@
+{
+  "name": "teacher-doc-lifecycle-20260913",
+  "owner": {
+    "name": "teacher_doc local acceptance"
+  },
+  "plugins": [
+    {
+      "name": "teacher_doc",
+      "source": "./plugins/teacher_doc",
+      "description": "Disposable local lifecycle test",
+      "version": "0.1.0+codex.20260913131114"
+    }
+  ]
+}

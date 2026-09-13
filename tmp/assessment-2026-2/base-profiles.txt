@@ -1,0 +1,4 @@
+WROTE: C:\Users\22\Desktop\maintain\Hwp_doc\tmp\assessment-2026-2\base-budget.json
+  slots: 290
+WROTE: C:\Users\22\Desktop\maintain\Hwp_doc\tmp\assessment-2026-2\base-structure.json
+  entries: 9

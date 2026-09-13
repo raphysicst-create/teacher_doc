@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-13T09:56:06.866213+00:00",
+  "app": "Claude Desktop",
+  "version": "1.52386.3.0",
+  "package_status": "Ok",
+  "attempts": [
+    {
+      "method": "sky.launch_app installed app ID",
+      "result": "tool_timeout; no desktop window"
+    },
+    {
+      "method": "sky.launch_app manifest executable path",
+      "result": "tool_timeout; no desktop window"
+    }
+  ],
+  "observed_running_claude": "VS Code extension only",
+  "com_status": "not_run",
+  "reason": "No targetable Claude Desktop window; awaiting user opening the app",
+  "app_crash_proven": false,
+  "settings_changed": false
+}

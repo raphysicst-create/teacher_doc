@@ -1,0 +1,86 @@
+[
+  {
+    "step": "edit",
+    "exit_code": 0,
+    "log": "WARNING: 예산 초과를 렌더 확인 후 묵인했습니다 (11건) — 보고에 반드시 명시하십시오:\n  - 셀 입력값 글자 수 초과: table=2, row=2, col=4, max=3, input=4, text='100%'\n  - 셀 입력값 글자 수 초과: table=2, row=4, col=4, max=3, input=4, text='100%'\n  - 셀 입력값 글자 수 초과: table=2, row=8, col=4, max=3, input=4, text='100%'\n  - 셀 입력값 글자 수 초과: table=2, row=10, col=4, max=3, input=4, text='100%'\n  - 셀 입력값 글자 수 초과: table=2, row=12, col=5, max=26, input=27, text='피아노 코드 반주·몸타 리듬 창작 각 35%, 극음악 감상 30%'\n  - 셀 입력값 글자 수 초과: table=2, row=13, col=5, max=26, input=28, text='피아노 연주(음계·코드 25%, 악곡 40%), 랩 창작 35%'\n  - 셀 입력값 글자 수 초과: table=2, row=18, col=4, max=3, input=4, text='100%'\n  - 셀 입력값 글자 수 초과: table=2, row=18, col=5, max=26, input=27, text='옷차림 분석·소비자 문제 해결방안 각 30%, 도면 표현 40%'\n  - 셀 입력값 글자 수 초과: table=2, row=20, col=4, max=3, input=4, text='100%'\n  - 셀 입력값 글자 수 초과: table=2, row=20, col=5, max=34, input=37, text='가상공간 성찰일기 30%, 다문화사회 포스터·생명보호 기념일 홍보/연설 각 35%'\n  - 문단 입력값 글자 수 초과: index=14, max=149, input=150, text='본교의 교육 활동에 관심을 보내주시는 가정에 감사드립니다. 2026학년도 2학기 과목별 평가계획을 안내하오니 학생들의 자기주도적 학습에 많은 관심 부탁드립니다. 1학년은 자유학기로 지필고사 없이 과정중심평가(표의 과정형)를 실시하며, 성취도 대신 학습 과정과 성장을 기록합니다. 1학년 평가 비율은 계획에 명시된 경우만 표시하였습니다.'\nEDITED: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_평가계획_가정통신문.hwpx\n  text replacements applied: 0\n  cells updated: 89\n  paragraphs updated: 8\n  original package entries, header.xml, content.hpf, and BinData were preserved\n",
+    "sha256": "3831b22dd228a9b6437c95dd41e984978449a59fde2f100f62425b1d8a201586"
+  },
+  {
+    "step": "validate",
+    "exit_code": 0,
+    "log": "VALID: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_평가계획_가정통신문.hwpx\n  All structural checks passed.\n",
+    "sha256": "3831b22dd228a9b6437c95dd41e984978449a59fde2f100f62425b1d8a201586"
+  },
+  {
+    "step": "namespaces",
+    "exit_code": 0,
+    "log": "Fixed namespaces: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_평가계획_가정통신문.hwpx (0 XML entries changed)\n",
+    "sha256": "3831b22dd228a9b6437c95dd41e984978449a59fde2f100f62425b1d8a201586"
+  },
+  {
+    "step": "finalize",
+    "exit_code": 0,
+    "log": "HWPX FINALIZE: PASS\n  action: {'strip_linesegarray_removed': 58, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\output\\\\2026_2학기_평가계획_가정통신문.hwpx'}\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "layout",
+    "exit_code": 0,
+    "log": "VALID: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_평가계획_가정통신문.hwpx\n  All structural checks passed.\n  Layout warnings: 1\n  - body_paragraph_without_visible_indent: 제목 다음 본문 문단에 눈에 보이는 들여쓰기나 목록 표지가 없습니다.\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "reference_finalize",
+    "exit_code": 0,
+    "log": "HWPX FINALIZE: PASS\n  action: {'strip_linesegarray_removed': 161, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\evaluation-2026-2\\\\reference-finalized.hwpx'}\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "profiles",
+    "exit_code": 0,
+    "log": "WROTE: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\evaluation-2026-2\\budget.json\n  slots: 290\nWROTE: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\evaluation-2026-2\\structure.json\n  entries: 12\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "page_guard",
+    "exit_code": 1,
+    "log": "FAIL: page-guard\n - p:14 글자 예산 초과: max=149, out=150, text='본교의 교육 활동에 관심을 보내주시는 가정에 감사드립니다. 2026학년도...'\n - cell:2:2:4:0 글자 예산 초과: max=3, out=4, text='100%'\n - cell:2:4:4:0 글자 예산 초과: max=3, out=4, text='100%'\n - cell:2:8:4:0 글자 예산 초과: max=3, out=4, text='100%'\n - cell:2:10:4:0 글자 예산 초과: max=3, out=4, text='100%'\n - cell:2:12:5:0 글자 예산 초과: max=26, out=27, text='피아노 코드 반주·몸타 리듬 창작 각 35%, 극음악 감상 30%'\n - cell:2:13:5:0 글자 예산 초과: max=26, out=28, text='피아노 연주(음계·코드 25%, 악곡 40%), 랩 창작 35%'\n - cell:2:18:4:0 글자 예산 초과: max=3, out=4, text='100%'\n - cell:2:18:5:0 글자 예산 초과: max=26, out=27, text='옷차림 분석·소비자 문제 해결방안 각 30%, 도면 표현 40%'\n - cell:2:20:4:0 글자 예산 초과: max=3, out=4, text='100%'\n - cell:2:20:5:0 글자 예산 초과: max=34, out=37, text='가상공간 성찰일기 30%, 다문화사회 포스터·생명보호 기념일 홍보/연설 ...'\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "hancom",
+    "exit_code": 0,
+    "log": "HWPX FINALIZE: PASS\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "render",
+    "exit_code": 0,
+    "log": "{\n \"output\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\output\\\\2026_2학기_평가계획_가정통신문.hwpx\",\n \"checks\": {\n  \"pages_output\": 1,\n  \"pages_reference\": 1,\n  \"anchors_total\": 39,\n  \"anchors_found_ratio\": 1.0,\n  \"order_lis_ratio\": 0.923\n },\n \"fails\": [],\n \"warnings\": [],\n \"result\": \"PASS\"\n}\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "content",
+    "exit_code": 1,
+    "log": "FAIL: content-guard C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_평가계획_가정통신문.hwpx\n  - placeholder '\\\\.\\\\s*\\\\.\\\\s*\\\\.' at line 149: 2026. . .\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "lint",
+    "exit_code": 2,
+    "log": "usage: gonmun_lint.py [-h] [--hwpx HWPX] [--file FILE] [--format {json,text}]\ngonmun_lint.py: error: unrecognized arguments: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_평가계획_가정통신문.hwpx\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "extract_final",
+    "exit_code": 0,
+    "log": "Extracted to: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\evaluation-2026-2\\final.md\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  },
+  {
+    "step": "extract_original",
+    "exit_code": 0,
+    "log": "Extracted to: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\evaluation-2026-2\\original.md\n",
+    "sha256": "dd08b74ff1f82b6ab49ba5cfaed4350e88ee65a845487c0caa53895741f5006a"
+  }
+]

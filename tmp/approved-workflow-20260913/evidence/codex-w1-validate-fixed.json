@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"job_id\": \"approved-w1-20260913\",\n  \"status\": \"pass\",\n  \"report\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\remaining-20260913\\\\codex-marked\\\\.hwpdoc\\\\jobs\\\\approved-w1-20260913\\\\report.json\",\n  \"changed_files\": [],\n  \"copy\": null,\n  \"next_action\": \"사람 최종 검토; 발송 전 한글로 열어 확인해주세요\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked",
+    "validate",
+    "--job",
+    "approved-w1-20260913"
+  ],
+  "at": "2026-09-13T07:08:34.780530+00:00",
+  "seconds": 37.11701774597168,
+  "app": "codex"
+}

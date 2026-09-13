@@ -1,0 +1,19 @@
+{
+  "before": {
+    "delete.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "mixed.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "move.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "protected.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "한글 원본.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26"
+  },
+  "after": {
+    "delete.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "mixed.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "move.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "protected.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "한글 원본.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26"
+  },
+  "unchanged": true,
+  "runtime_fixture_sha256": "2c5a807970f04915af667ea6433fb30ee0d0012c9be3976954bed70e1aff8697",
+  "scope": "actual app with child-process runtime override; normal PC Python remains installed"
+}

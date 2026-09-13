@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "argv": [
+    "powershell.exe",
+    "-NoProfile",
+    "-Command",
+    "New-Item -ItemType Junction -Path 'C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\codex-host-v2\\.agents\\skills\\hwpx' -Target 'C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code-v2\\.claude\\skills\\hwpx' | Out-Null"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 0.9026298522949219,
+  "recorded_at": "2026-09-13T02:22:30.878711+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

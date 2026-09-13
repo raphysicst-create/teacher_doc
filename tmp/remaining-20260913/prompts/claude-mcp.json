@@ -1,0 +1,5 @@
+{
+  "prompt": "User-authorized disposable MCP integration test. Use the actual kordoc MCP tools, not direct stdio or shell substitutes. Read knowledge/patch.hwpx with kordoc and obtain actual text/block addresses. Then call patch_document once with file_path AND output_path both equal to the absolute path of knowledge/patch.hwpx, changing one visible text to MCP_TEST. Call fill_form once with file_path AND output_path both equal to knowledge/fill.hwpx using an actual extracted field or cell. These are synthetic test copies explicitly authorized for the overwrite attempt. Do not retry denied calls or change hooks. Finally call patch_document to create a NEW output/mcp-copy.hwpx from knowledge/patch.hwpx with one valid text replacement. Report each real response separately; do not claim protection from a parser/server error. Do not use agents. No COM or further validation commands.",
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\claude-marked",
+  "scope": "actual CLI, disposable local fixture; not human workflow acceptance"
+}

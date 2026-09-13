@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "argv": [
+    "powershell.exe",
+    "-NoProfile",
+    "-Command",
+    "New-Item -ItemType Junction -Path 'C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\claude-host-v4\\.claude\\skills\\hwpx' -Target 'C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code-v4\\.claude\\skills\\hwpx' | Out-Null"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 1.4052646160125732,
+  "recorded_at": "2026-09-13T02:55:53.872548+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

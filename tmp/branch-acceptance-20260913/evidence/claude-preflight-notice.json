@@ -1,0 +1,21 @@
+{
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"status\": \"unconfirmed\", \"error\": \"사용자 초안 확인 기록이 필요합니다\\n초안 확인 후 입력이 달라졌습니다: input_sha256 불일치\\n초안 승인 시각이 올바르지 않습니다\"}\n",
+  "at": "2026-09-13T12:03:43.791713+00:00",
+  "seconds": 4.859000000000378,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\branch-acceptance-20260913\\claude",
+    "build",
+    "--manifest",
+    "inputs/branch-notice.json"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\branch-acceptance-20260913\\claude",
+  "host": "claude"
+}

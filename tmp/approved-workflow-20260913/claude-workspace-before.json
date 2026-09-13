@@ -1,0 +1,21 @@
+{
+  "kind": "hwpdoc-workspace",
+  "version": 1,
+  "app": "claude",
+  "skill_name": "hwpx",
+  "school": {
+    "name": null,
+    "document_prefix": null,
+    "academic_year": null
+  },
+  "delivery": {
+    "external_copy": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\claude-marked\\fake-copy"
+  },
+  "references": {},
+  "timetable_mapping": {},
+  "preferences": {},
+  "connections": {
+    "school_task_guide": "unconfirmed",
+    "kordoc": "unconfirmed"
+  }
+}

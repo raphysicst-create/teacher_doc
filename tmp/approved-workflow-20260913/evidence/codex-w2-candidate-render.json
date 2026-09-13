@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "stdout": "PASS: render-check w2-unverified-candidate.hwpx\n  pages_output: 1\n  pages_reference: 1\n  anchors_total: 5\n  anchors_found_ratio: 1.0\n  order_lis_ratio: 1.0\n  object_residue: {'inherited': {}, 'unexpected': {}}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\render_check.py",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked\\inputs\\approved-workflow\\w2-unverified-candidate.hwpx",
+    "--reference",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked\\.hwpdoc\\templates\\trial-gianmun\\1\\template.hwpx",
+    "--keep-pdf",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked\\inputs\\approved-workflow\\w2-candidate.pdf"
+  ],
+  "at": "2026-09-13T07:11:29.645171+00:00",
+  "seconds": 15.049687385559082,
+  "app": "codex"
+}

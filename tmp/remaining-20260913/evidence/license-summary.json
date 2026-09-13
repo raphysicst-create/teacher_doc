@@ -1,0 +1,25 @@
+{
+  "license": null,
+  "issue4": {
+    "state": "open",
+    "comments": 0,
+    "html_url": "https://github.com/Canine89/hwpxskill/issues/4",
+    "updated_at": "2026-08-25T15:47:12Z"
+  },
+  "tree": {
+    "sha": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+    "truncated": false,
+    "license_files": []
+  },
+  "release": {
+    "ready": false,
+    "status": "blocked",
+    "issue_counts": {
+      "rights_unconfirmed": 70,
+      "privacy_unconfirmed": 70,
+      "dependency_license_unconfirmed": 8
+    }
+  },
+  "at": "2026-09-13T04:40:46.001146+00:00",
+  "approvals_created": false
+}

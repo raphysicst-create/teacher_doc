@@ -1,0 +1,179 @@
+{
+  "case": "case01",
+  "baseline": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_1회고사_출제연수_기안문.hwpx",
+  "candidate": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case01\\2026_2학기_1회고사_출제연수_기안문.hwpx",
+  "candidate_sha256": "2f03ebc0c9e4a78e92c23ef7f7453b6506ea74abbdf220f79bddcbbcfcbee78b",
+  "table_geometry_equal": true,
+  "table_counts": [
+    0,
+    0
+  ],
+  "paragraph_counts": [
+    10,
+    10
+  ],
+  "styles_before": [
+    [
+      "1200",
+      "굴림",
+      "False"
+    ],
+    [
+      "1200",
+      "굴림",
+      "True"
+    ],
+    [
+      "2200",
+      "굴림",
+      "True"
+    ]
+  ],
+  "styles_after": [
+    [
+      "1200",
+      "굴림",
+      "False"
+    ],
+    [
+      "2200",
+      "굴림",
+      "True"
+    ]
+  ],
+  "text_diff": [
+    "--- baseline",
+    "+++ candidate",
+    "@@ -1,10 +1,10 @@",
+    " 화동중학교",
+    "-수신  내부결재",
+    "+수신 내부결재",
+    " (경유)",
+    " 제목  2026학년도 2학기 1회고사 출제 관련 연수",
+    " 1. 관련: 화동중학교-2058(2026. 3. 17.)",
+    " 2. 2026학년도 2학기 1회고사 출제 관련 연수를 다음과 같이 실시하고자 합니다.",
+    "-  가. 일시: 2026. 10. 8.(목) 13:00",
+    "+  가. 일시: 2026. 10. 8. 13:00",
+    "   나. 장소: 교무실",
+    "   다. 대상: 전 교원",
+    " 붙임  2026학년도 2학기 시험출제 관련 연수 자료 1부.  끝."
+  ],
+  "candidate_profile": {
+    "path": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case01\\2026_2학기_1회고사_출제연수_기안문.hwpx",
+    "sha256": "2f03ebc0c9e4a78e92c23ef7f7453b6506ea74abbdf220f79bddcbbcfcbee78b",
+    "paragraphs": [
+      {
+        "runs": [
+          {
+            "text": "화동중학교",
+            "height": "2200",
+            "bold": true,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "화동중학교"
+      },
+      {
+        "runs": [
+          {
+            "text": "수신 내부결재",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "수신 내부결재"
+      },
+      {
+        "runs": [
+          {
+            "text": "(경유)",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "(경유)"
+      },
+      {
+        "runs": [
+          {
+            "text": "제목  2026학년도 2학기 1회고사 출제 관련 연수",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "제목  2026학년도 2학기 1회고사 출제 관련 연수"
+      },
+      {
+        "runs": [
+          {
+            "text": "1. 관련: 화동중학교-2058(2026. 3. 17.)",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "1. 관련: 화동중학교-2058(2026. 3. 17.)"
+      },
+      {
+        "runs": [
+          {
+            "text": "2. 2026학년도 2학기 1회고사 출제 관련 연수를 다음과 같이 실시하고자 합니다.",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "2. 2026학년도 2학기 1회고사 출제 관련 연수를 다음과 같이 실시하고자 합니다."
+      },
+      {
+        "runs": [
+          {
+            "text": "  가. 일시: 2026. 10. 8. 13:00",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "  가. 일시: 2026. 10. 8. 13:00"
+      },
+      {
+        "runs": [
+          {
+            "text": "  나. 장소: 교무실",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "  나. 장소: 교무실"
+      },
+      {
+        "runs": [
+          {
+            "text": "  다. 대상: 전 교원",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "  다. 대상: 전 교원"
+      },
+      {
+        "runs": [
+          {
+            "text": "붙임  2026학년도 2학기 시험출제 관련 연수 자료 1부.  끝.",
+            "height": "1200",
+            "bold": false,
+            "hangul_font": "굴림"
+          }
+        ],
+        "text": "붙임  2026학년도 2학기 시험출제 관련 연수 자료 1부.  끝."
+      }
+    ],
+    "tables": []
+  },
+  "meaning": "Exact differences, not an automatic quality verdict; placeholder and wording changes need human/model review."
+}

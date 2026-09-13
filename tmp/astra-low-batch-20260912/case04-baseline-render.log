@@ -1,0 +1,12 @@
+{
+ "output": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_2회고사_교과협의회_기안문.hwpx",
+ "checks": {
+  "pages_output": 1,
+  "anchors_total": 5,
+  "anchors_found_ratio": 1.0,
+  "order_lis_ratio": 1.0
+ },
+ "fails": [],
+ "warnings": [],
+ "result": "PASS"
+}

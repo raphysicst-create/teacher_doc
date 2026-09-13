@@ -1,0 +1,30 @@
+{
+  "unique_rows": 176,
+  "active_followup_rows": 57,
+  "current_count_sum": 176,
+  "initial_verdicts_unchanged": true,
+  "previous_snapshot_preserved": true,
+  "source_updates_documented": [
+    {
+      "path": "distribution/pymupdf-agpl-decision-2026-09-13.json",
+      "previous_sha256": "b7f129119bc2e26f38ba7779c69fe8de920fb038a6efc0bdbb29d195edf82391",
+      "current_sha256": "60a176af48eb9da5fcf3b81002e521d6c77f9757c3caf7be7427f8c277ac6f74",
+      "reason": "authorized distribution review updates; prior snapshot preserved"
+    },
+    {
+      "path": "distribution/rights.pending.json",
+      "previous_sha256": "d111c8cf1b73d17a9c4c74d6ac6ede4fbc4ffffdc61787eab34704de587e6e7f",
+      "current_sha256": "2609cec017e6519f3588ef87291f55ec3aa413326221d908cc3ee2aac2c2bd98",
+      "reason": "authorized distribution review updates; prior snapshot preserved"
+    },
+    {
+      "path": "distribution/source-bundle.json",
+      "previous_sha256": "dc678a661ce5656f7f0a24694fe6fafdae4a5f274ffd3f4ec1e245ee7e995d94",
+      "current_sha256": "e795e430add628b0d3b5e11b49a2407ccd89cf025e2f5a11227b994f940c13e8",
+      "reason": "authorized distribution review updates; prior snapshot preserved"
+    }
+  ],
+  "new_app_tests_run": false,
+  "release_gate_rechecked": true,
+  "report_sha256": "a38f1bcb529a36ea80b292ddd394eb7ae19fd0adfdfa81a885832d509ce322c0"
+}

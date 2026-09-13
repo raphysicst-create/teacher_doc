@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n \"output\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\materials-followup-20260913\\\\sources\\\\conversion-native.hwpx\",\n \"checks\": {\n  \"pages_output\": 7,\n  \"pages_reference\": 7,\n  \"anchors_total\": 80,\n  \"anchors_found_ratio\": 1.0,\n  \"order_lis_ratio\": 0.938,\n  \"object_residue\": {\n   \"inherited\": {\n    \"◯\": {\n     \"output\": 1,\n     \"reference\": 1\n    }\n   },\n   \"unexpected\": {}\n  }\n },\n \"fails\": [],\n \"warnings\": [\n  \"원본에도 렌더된 원문자(개수 증가 없음, 위치·의미는 육안 확인): {\\\"◯\\\": {\\\"output\\\": 1, \\\"reference\\\": 1}}\"\n ],\n \"result\": \"PASS\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\scripts\\render_check.py",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\materials-followup-20260913\\sources\\conversion-native.hwpx",
+    "--reference",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\materials-followup-20260913\\sources\\conversion-original.hwp",
+    "--json",
+    "--keep-pdf",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\conversion-checked.pdf"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc",
+  "seconds": 44.8975031375885,
+  "at": "2026-09-13T04:18:34.575211+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "command": "Python312 -B -X utf8 -m unittest discover -s tests -p test_distribution_runtime.py",
+  "scope": "developer regression after UTF-8 bootstrap fix",
+  "chunk_id": "72ae5f",
+  "wall_time_seconds": 0.0000028,
+  "exit_code": 0,
+  "original_token_count": 34,
+  "output": ".............................\r\n----------------------------------------------------------------------\r\nRan 36 tests in 25.926s\r\n\r\nOK\r\n"
+}

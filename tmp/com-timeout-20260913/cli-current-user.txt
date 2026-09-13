@@ -1,0 +1,7 @@
+{"stage": "environment", "seconds": 0.438, "user": "22", "desktop": "CodexSandboxDesktop-a5dccac748c19ee3f3545acdae2c09fe"}
+
+{"stage": "module", "seconds": 0.453, "path": "C:\\Users\\22\\AppData\\Local\\HwpAutomation\\FilePathCheckerModule.dll", "exists": true}
+
+{"stage": "dispatch-start", "seconds": 0.453}
+
+{"stage": "worker-exit", "seconds": 25.203, "code": 124}

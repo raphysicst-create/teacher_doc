@@ -1,0 +1,131 @@
+{
+  "version": 2,
+  "job_id": "branch-notice-20260913",
+  "workflow": "W1",
+  "document_type": "가정통신문",
+  "template": {
+    "id": "가정통신문",
+    "version": "legacy-1",
+    "sha256": "7bf45bf9de49fb6e4cc3bf31ffec04f9f80982e0ad50204555656211d4a6c8bb"
+  },
+  "slots": {
+    "template_sha256": "7bf45bf9de49fb6e4cc3bf31ffec04f9f80982e0ad50204555656211d4a6c8bb",
+    "values": {
+      "p:3": "[[문서번호]]",
+      "p:4": "교무실: 미확인",
+      "p:5": "행정실: 미확인",
+      "p:6": "누리집: 미확인",
+      "p:7": "주소",
+      "p:8": "미확인",
+      "p:9": "안 내",
+      "p:10": "검토용 시험",
+      "p:11": "가람중학교 가상 시험 문서",
+      "p:13": "과학 독서 나눔 안내",
+      "p:14": "학부모님, 안녕하십니까?",
+      "p:15": "과학 독서 나눔 활동을 다음과 같이 안내합니다. 이 문서는 가람중학교의 가상 기능 시험용 검토 초안입니다.",
+      "p:16": "감사합니다.",
+      "p:19": "과학 독서 나눔 안내",
+      "p:21": "1. 활동 안내",
+      "p:22": "가. 기간: 2026. 10. 12.~10. 16.",
+      "p:23": "나. 장소: 과학실",
+      "p:24": "다. 대상: 1학년 20명",
+      "p:29": "2. 확인 사항",
+      "p:30": "문서번호와 학교 연락처는 확인 후 입력합니다. 실제 발송하지 않습니다.",
+      "p:34": "3. 참고 사항",
+      "p:35": "가상 시험 자료로 작성한 검토 초안입니다.",
+      "p:40": "2026. 10. 5.",
+      "p:42": "가람중학교장[직인생략]",
+      "p:25": "",
+      "p:26": "",
+      "p:27": "",
+      "p:31": "",
+      "p:32": "",
+      "p:36": "",
+      "p:37": ""
+    }
+  },
+  "shared_values": {},
+  "sources": [
+    {
+      "path": "inputs/branch-sources/notice.hwpx",
+      "sha256": "8c55daa60601b5ab0d063ae623ca93569fa9e401c49fba6f65c291b4c2c17aef"
+    },
+    {
+      "path": "inputs/branch-sources/w2_sources.json",
+      "sha256": "60e908086ef0562865f7bb7fb4f50b65e6c608c15b79c34452fe06a5df19e97c"
+    }
+  ],
+  "evidence": {
+    "record": "inputs/branch-evidence.json",
+    "sha256": "e457c704a93f98bb8c06e4e73472768794bafac16309a424f681855c6142fa7d"
+  },
+  "draft": {
+    "path": "inputs/branch-drafts.md",
+    "sha256": "a946f68cf986eb1a15c70e7ccc8d1c8dc666203a427034c112e970f282e44db3",
+    "created_at": "2026-09-13T12:00:37.650927+00:00"
+  },
+  "attachments": [],
+  "attachment_mentions": [],
+  "content_rules": {
+    "require": [
+      "가람중학교",
+      "과학 독서 나눔 안내"
+    ],
+    "forbid": [
+      "화동",
+      "기출문제",
+      "사교육비",
+      "저작권",
+      "2025. 3. 25."
+    ]
+  },
+  "reuse_review": {
+    "record": "Frozen native template slots read before drafting; visible old names/dates replaced, structure retained.",
+    "names": [
+      "화동",
+      "기출문제",
+      "사교육비",
+      "저작권"
+    ],
+    "dates": [
+      "2025. 3. 25."
+    ]
+  },
+  "checks": {
+    "budget_names": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    },
+    "related": {
+      "applicable": false,
+      "reason": "W1 시험 계획에 관련번호 인용 없음"
+    },
+    "timetable": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    }
+  },
+  "base_provenance": "unconfirmed",
+  "over_budget_cells": [],
+  "environment": {
+    "app": "Codex Desktop",
+    "scope": "Synthetic branch acceptance; execution host must be verified separately"
+  },
+  "unresolved": [
+    "문서번호",
+    "교무실 연락처",
+    "행정실 연락처",
+    "누리집",
+    "주소"
+  ],
+  "exploration": {
+    "record": "Current native five-template original and extracted slot addresses read; repeated layout, five separate activity rows and signature/date position retained."
+  },
+  "draft_approval": {
+    "confirmed": false,
+    "by": null,
+    "at": null,
+    "record": "New branch drafts awaiting actual user confirmation",
+    "input_sha256": null
+  }
+}

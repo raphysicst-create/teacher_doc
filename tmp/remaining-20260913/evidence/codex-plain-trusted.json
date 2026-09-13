@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"type\":\"thread.started\",\"thread_id\":\"01a09906-6122-79f3-a2e2-57459a52054f\"}\n{\"type\":\"turn.started\"}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_0\",\"type\":\"agent_message\",\"text\":\"I’ll use `apply_patch` once to change `docs/probe.txt`, then read the file and report the actual result.\"}}\n{\"type\":\"item.started\",\"item\":{\"id\":\"item_1\",\"type\":\"file_change\",\"changes\":[{\"path\":\"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-plain\\\\docs\\\\probe.txt\",\"kind\":\"update\"}],\"status\":\"in_progress\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_1\",\"type\":\"file_change\",\"changes\":[{\"path\":\"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-plain\\\\docs\\\\probe.txt\",\"kind\":\"update\"}],\"status\":\"completed\"}}\n{\"type\":\"item.started\",\"item\":{\"id\":\"item_2\",\"type\":\"command_execution\",\"command\":\"\\\"C:\\\\\\\\Users\\\\\\\\22\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\native\\\\\\\\powershell\\\\\\\\pwsh.exe\\\" -Command \\\"Get-Content -LiteralPath 'docs/probe.txt'\\\"\",\"aggregated_output\":\"\",\"exit_code\":null,\"status\":\"in_progress\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_2\",\"type\":\"command_execution\",\"command\":\"\\\"C:\\\\\\\\Users\\\\\\\\22\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\native\\\\\\\\powershell\\\\\\\\pwsh.exe\\\" -Command \\\"Get-Content -LiteralPath 'docs/probe.txt'\\\"\",\"aggregated_output\":\"TRUSTED_PLAIN_CHANGED\\r\\n\",\"exit_code\":0,\"status\":\"completed\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_3\",\"type\":\"agent_message\",\"text\":\"Used `apply_patch` once. Reading `docs/probe.txt` succeeded and confirmed:\\n\\n```text\\nTRUSTED_PLAIN_CHANGED\\n```\\n\\nNo hooks altered, fallbacks used, or agents spawned.\"}}\n{\"type\":\"turn.completed\",\"usage\":{\"input_tokens\":57672,\"cached_input_tokens\":45184,\"cache_write_input_tokens\":0,\"output_tokens\":189,\"reasoning_output_tokens\":0}}\n",
+  "stderr": "Reading additional input from stdin...\n2026-09-13T04:28:47.521738Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/\n2026-09-13T04:28:47.521832Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/\n2026-09-13T04:28:47.805793Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell\n2026-09-13T04:28:47.912128Z  WARN codex_skills::interface: ignoring interface.default_prompt: exceeds maximum length of 1024 characters\n2026-09-13T04:28:48.309909Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/\n2026-09-13T04:28:48.310014Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/\n2026-09-13T04:28:48.553241Z  WARN codex_skills::interface: ignoring interface.default_prompt: exceeds maximum length of 1024 characters\n",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\OpenAI\\Codex\\bin\\7ac07f4ce733f89a\\codex.exe",
+    "-C",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-plain",
+    "-s",
+    "workspace-write",
+    "-a",
+    "never",
+    "-c",
+    "project_root_markers=['.git']",
+    "exec",
+    "--json",
+    "Disposable no-marker cwd test after normal review/trust of the three project hooks. Use apply_patch once to change docs/probe.txt from PLAIN_CHANGED to TRUSTED_PLAIN_CHANGED. Then read it and report actual results. Do not alter hooks or use fallbacks; no agents."
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-plain",
+  "seconds": 43.40068078041077,
+  "at": "2026-09-13T04:29:30.339249+00:00"
+}

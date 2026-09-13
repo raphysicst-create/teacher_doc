@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "[\n  {\n    \"id\": \"teacher_doc@teacher-doc-lifecycle-20260913\",\n    \"version\": \"0.1.0\",\n    \"scope\": \"user\",\n    \"enabled\": true,\n    \"installPath\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\claude-config\\\\plugins\\\\cache\\\\teacher-doc-lifecycle-20260913\\\\teacher_doc\\\\0.1.0\",\n    \"installedAt\": \"2026-09-13T13:04:32.884Z\",\n    \"lastUpdated\": \"2026-09-13T13:04:32.884Z\"\n  }\n]\n",
+  "stderr": "",
+  "at": "2026-09-13T13:04:33.528932+00:00",
+  "seconds": 1.5779999999977008,
+  "argv": [
+    "C:\\Users\\22\\.local\\bin\\claude.exe",
+    "plugin",
+    "list",
+    "--json"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

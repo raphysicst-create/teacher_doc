@@ -1,0 +1,13 @@
+{
+ "output": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+ "checks": {
+  "pages_output": 1,
+  "pages_reference": 1,
+  "anchors_total": 37,
+  "anchors_found_ratio": 1.0,
+  "order_lis_ratio": 0.946
+ },
+ "fails": [],
+ "warnings": [],
+ "result": "PASS"
+}

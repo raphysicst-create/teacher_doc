@@ -1,0 +1,10 @@
+{
+  "unique_rows": 176,
+  "initial_blocked_rows": 115,
+  "material_rows": 34,
+  "total_current_counts": 176,
+  "all_report_links_exist": true,
+  "all_evidence_hashes_match": true,
+  "source_documents_unchanged": true,
+  "report_sha256": "53428d03eb83378cf6f5b621818e97761eaf900e3a6909b174f60aecb210b1f1"
+}

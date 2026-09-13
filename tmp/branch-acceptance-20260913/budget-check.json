@@ -1,0 +1,45 @@
+{
+  "notice": [],
+  "reply": [
+    {
+      "slot": "p:26",
+      "text": "학교 출발",
+      "length": 4,
+      "budget": 2
+    },
+    {
+      "slot": "p:29",
+      "text": "천체 관측 체험",
+      "length": 6,
+      "budget": 4
+    },
+    {
+      "slot": "p:32",
+      "text": "로봇 조종 체험",
+      "length": 6,
+      "budget": 2
+    }
+  ],
+  "official_reply": [
+    {
+      "slot": "p:3",
+      "text": "수신 가상교육지원청",
+      "length": 9,
+      "budget": 6
+    },
+    {
+      "slot": "p:7",
+      "text": "1. 관련: 가상교육지원청-200(2026. 10. 1.)",
+      "length": 28,
+      "budget": 27
+    }
+  ],
+  "email": [
+    {
+      "slot": "p:7",
+      "text": "1. 관련: 가상교육지원청-200(2026. 10. 1.)",
+      "length": 28,
+      "budget": 27
+    }
+  ]
+}

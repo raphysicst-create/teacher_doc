@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "Removed plugin `teacher_doc` from marketplace `teacher-doc-lifecycle-20260913`.\n",
+  "stderr": "",
+  "at": "2026-09-13T13:16:09.980569+00:00",
+  "seconds": 0.5940000000009604,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+    "plugin",
+    "remove",
+    "teacher_doc@teacher-doc-lifecycle-20260913"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

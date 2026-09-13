@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "...................................\n----------------------------------------------------------------------\nRan 35 tests in 19.469s\n\nOK\n",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_distribution_runtime.py"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc",
+  "seconds": 20.40187978744507,
+  "recorded_at": "2026-09-13T02:58:12.271747+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

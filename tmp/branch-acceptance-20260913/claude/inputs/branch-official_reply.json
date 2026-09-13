@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "job_id": "branch-official_reply-20260913",
+  "workflow": "W2",
+  "document_type": "W2",
+  "template": {
+    "id": "trial-gianmun",
+    "version": "1",
+    "sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb"
+  },
+  "slots": {
+    "template_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "values": {
+      "p:1": "가람중학교",
+      "p:3": "수신 가상교육지원청",
+      "p:4": "(경유)",
+      "p:5": "제목 과학 체험 참여 현황 제출",
+      "p:7": "1. 관련: 가상교육지원청-200(2026. 10. 1.)",
+      "p:9": "2. 과학 체험 참여 현황을 제출합니다. 가람중학교 1학년 참여 학생은 20명입니다.",
+      "p:11": "3. 제출 기한: 2026. 10. 8. 끝."
+    }
+  },
+  "shared_values": {},
+  "sources": [
+    {
+      "path": "inputs/branch-sources/gianmun.hwpx",
+      "sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb"
+    },
+    {
+      "path": "inputs/branch-sources/w2_sources.json",
+      "sha256": "60e908086ef0562865f7bb7fb4f50b65e6c608c15b79c34452fe06a5df19e97c"
+    }
+  ],
+  "evidence": {
+    "record": "inputs/branch-evidence.json",
+    "sha256": "18f0ba7e54a0200281c90681df5f32e971ffb3c2247495a26494074c03b85503"
+  },
+  "draft": {
+    "path": "inputs/branch-drafts.md",
+    "sha256": "a946f68cf986eb1a15c70e7ccc8d1c8dc666203a427034c112e970f282e44db3",
+    "created_at": "2026-09-13T12:00:50.468817+00:00"
+  },
+  "attachments": [],
+  "attachment_mentions": [],
+  "content_rules": {
+    "require": [
+      "가람중학교",
+      "과학 체험 참여 현황 제출"
+    ],
+    "forbid": [
+      "화동중학교",
+      "농어촌유학",
+      "농어촌 유학",
+      "정책기획과",
+      "거주비",
+      "지원금",
+      "성립전",
+      "2025. 3. 19.",
+      "2026학년도",
+      "1학기"
+    ]
+  },
+  "reuse_review": {
+    "record": "Original template text was compared with approved slots; all seven visible paragraphs replaced, structure unchanged.",
+    "names": [
+      "화동중학교",
+      "농어촌유학",
+      "농어촌 유학",
+      "정책기획과",
+      "거주비",
+      "지원금",
+      "성립전"
+    ],
+    "dates": [
+      "2025. 3. 19.",
+      "2026학년도",
+      "1학기"
+    ]
+  },
+  "checks": {
+    "budget_names": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    },
+    "related": {
+      "applicable": true,
+      "numbers": [
+        "가상교육지원청-200"
+      ]
+    },
+    "timetable": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    }
+  },
+  "base_provenance": "unconfirmed",
+  "over_budget_cells": [],
+  "environment": {
+    "app": "Claude Code CLI",
+    "scope": "Synthetic branch acceptance; execution host must be verified separately"
+  },
+  "unresolved": [],
+  "exploration": {
+    "record": "Prepared draft selected common gianmun layout after comparison with 8 previously approved documents; current slot map verified."
+  },
+  "received": {
+    "summary": "평가용 과학 체험 참여 현황 제출",
+    "requirements": [
+      "학교명",
+      "참여 학년",
+      "학생 수"
+    ],
+    "deadline": "2026. 10. 8.",
+    "issue_date": "2026. 10. 1.",
+    "document_number": "가상교육지원청-200",
+    "submission_method": "official_reply",
+    "source_quote": "2026. 10. 8.까지 가상교육지원청으로 공문 회신해 주시기 바랍니다."
+  },
+  "draft_approval": {
+    "confirmed": false,
+    "by": null,
+    "at": null,
+    "record": "New branch drafts awaiting actual user confirmation",
+    "input_sha256": null
+  }
+}

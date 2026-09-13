@@ -1,0 +1,20 @@
+{
+  "status": "unsupported",
+  "steps": [],
+  "conditions": [
+    "가상 시험 전용 자료. 실제 학교 업무·외부 전송 없음."
+  ],
+  "exceptions": [
+    "업무지침 MCP 원문 조회 성공을 주장하지 않음."
+  ],
+  "pending_items": [],
+  "reviewed_at": "2026-09-13T12:00:50.113887+00:00",
+  "freshness": "verified",
+  "freshness_scope": "Frozen fixture only",
+  "fallback_sources": [
+    {
+      "path": "inputs/branch-sources/w2_sources.json",
+      "sha256": "60e908086ef0562865f7bb7fb4f50b65e6c608c15b79c34452fe06a5df19e97c"
+    }
+  ]
+}

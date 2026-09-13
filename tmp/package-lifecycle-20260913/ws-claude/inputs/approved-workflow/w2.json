@@ -1,0 +1,135 @@
+{
+  "version": 2,
+  "job_id": "approved-w2-20260913",
+  "workflow": "W2",
+  "document_type": "W2",
+  "template": {
+    "id": "trial-gianmun",
+    "version": "1",
+    "sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb"
+  },
+  "slots": {
+    "template_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "values": {
+      "p:1": "가람중학교",
+      "p:3": "수신 내부결재",
+      "p:4": "(경유)",
+      "p:5": "제목 과학 체험 참여 현황 제출",
+      "p:7": "1. 관련: 가상교육지원청-200(2026. 10. 1.)",
+      "p:9": "2. 과학 체험 참여 현황(1학년 20명)을 평가용 시스템에 제출하고자 합니다.",
+      "p:11": "3. 제출 기한: 2026. 10. 8. 끝."
+    }
+  },
+  "shared_values": {},
+  "sources": [
+    {
+      "path": "inputs/form.hwpx",
+      "sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb"
+    },
+    {
+      "path": "inputs/approved-workflow/w2-source.json",
+      "sha256": "9901a75dcb786a993d5afbc49e9e0d428abfa6326825ed786b652c7c5aa43be9"
+    }
+  ],
+  "evidence": {
+    "record": "inputs/approved-workflow/evidence.json",
+    "sha256": "42022973efcbd3647e2311a4773c6c0e5d83ca44219aa4da8289eca1ce28e169"
+  },
+  "draft": {
+    "path": "inputs/approved-workflow/draft.md",
+    "sha256": "b83c60731668ca6a052fdac3cff21000938c77910f037cc000b6be466a7b96d1",
+    "created_at": "2026-09-13T07:05:56.745734+00:00",
+    "note": "Unchanged approved draft copied after fresh fixture review; original draft retained."
+  },
+  "attachments": [],
+  "attachment_mentions": [],
+  "content_rules": {
+    "require": [
+      "가람중학교",
+      "과학 체험 참여 현황 제출"
+    ],
+    "forbid": [
+      "화동중학교",
+      "농어촌유학",
+      "농어촌 유학",
+      "정책기획과",
+      "거주비",
+      "지원금",
+      "성립전",
+      "2025. 3. 19.",
+      "2026학년도",
+      "1학기"
+    ]
+  },
+  "reuse_review": {
+    "record": "Original template text was compared with approved slots; all seven visible paragraphs replaced, structure unchanged.",
+    "names": [
+      "화동중학교",
+      "농어촌유학",
+      "농어촌 유학",
+      "정책기획과",
+      "거주비",
+      "지원금",
+      "성립전"
+    ],
+    "dates": [
+      "2025. 3. 19.",
+      "2026학년도",
+      "1학기"
+    ]
+  },
+  "checks": {
+    "budget_names": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    },
+    "related": {
+      "applicable": true,
+      "numbers": [
+        "가상교육지원청-200"
+      ]
+    },
+    "timetable": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    }
+  },
+  "base_provenance": "unconfirmed",
+  "over_budget_cells": [],
+  "environment": {
+    "app": "Codex Desktop",
+    "app_version": "unconfirmed",
+    "model": "unconfirmed",
+    "scope": "User-approved synthetic W1/W2 workflow on current PC"
+  },
+  "unresolved": [],
+  "exploration": {
+    "record": "Prepared draft selected common gianmun layout after comparison with 8 previously approved documents; current slot map verified."
+  },
+  "received": {
+    "summary": "평가용 과학 체험 참여 현황 제출",
+    "requirements": [
+      "학교명",
+      "참여 학년",
+      "학생 수"
+    ],
+    "deadline": "2026. 10. 8.",
+    "issue_date": "2026. 10. 1.",
+    "document_number": "가상교육지원청-200",
+    "submission_method": "system",
+    "source_quote": "2026. 10. 8.까지 평가용 시스템에 입력해 주시기 바랍니다."
+  },
+  "draft_approval": {
+    "confirmed": true,
+    "by": "user (current conversation)",
+    "at": "2026-09-13T07:05:56.814108+00:00",
+    "record": "Codex가 준비해 둔 W1·W2 시험 초안 확인: 확인해 주면 두 앱에서 전체 흐름(작성 → 검증 → 전달) 시험을 마저 합니다.  -> 진행해; inputs/approved-workflow/user-approval.json",
+    "input_sha256": "6f3dddcb5e07dcbff0e7a57343bd6faf75f120e8458b228ce48f7704901f81de"
+  },
+  "source": "inputs/approved-workflow/w2-generated.hwpx",
+  "source_sha256": "b3fcd66dc855b3a9df459d74bf77dd39194850c00da0a95edb66e4b141758ec7",
+  "reference": ".hwpdoc/templates/trial-gianmun/1/template.hwpx",
+  "reference_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+  "generation_record": "Existing paragraph-edit path after actual candidate render observation; 28 non-space characters versus old paragraph budget 27. Approved wording and structure unchanged. Full reference render required. No cells changed; WARNING retained.",
+  "paragraph_visual_record": "inputs/approved-workflow/w2-candidate-visual.json"
+}

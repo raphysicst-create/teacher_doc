@@ -1,0 +1,679 @@
+{
+  "version": 1,
+  "source": "knowledge\\examples\\(화동중학교-2348 (첨부)) 가정통신문(기출문제 공개 안내).hwpx",
+  "budget_unit": "non_whitespace_characters",
+  "slots": [
+    {
+      "kind": "paragraph",
+      "key": "p:2",
+      "text_len": 6,
+      "text_len_nospace": 5,
+      "max_chars": 5,
+      "text_preview": " 가정통신문",
+      "meta": {
+        "paraPrIDRef": "13",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:3",
+      "text_len": 13,
+      "text_len_nospace": 12,
+      "max_chars": 12,
+      "text_preview": "화동중 제2025-17호",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:4",
+      "text_len": 14,
+      "text_len_nospace": 12,
+      "max_chars": 12,
+      "text_preview": "☎ 교무실 562-2032",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:5",
+      "text_len": 14,
+      "text_len_nospace": 12,
+      "max_chars": 12,
+      "text_preview": "☎ 행정실 562-2031",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:6",
+      "text_len": 26,
+      "text_len_nospace": 26,
+      "max_chars": 26,
+      "text_preview": "http://k-hwadong.gwe.ms.kr",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:7",
+      "text_len": 9,
+      "text_len_nospace": 7,
+      "max_chars": 7,
+      "text_preview": "우)26116  ",
+      "meta": {
+        "paraPrIDRef": "14",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:8",
+      "text_len": 19,
+      "text_len_nospace": 16,
+      "max_chars": 16,
+      "text_preview": "강원도 정선군 화암면 그림바위길50",
+      "meta": {
+        "paraPrIDRef": "12",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:9",
+      "text_len": 5,
+      "text_len_nospace": 2,
+      "max_chars": 2,
+      "text_preview": "교   훈",
+      "meta": {
+        "paraPrIDRef": "15",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:10",
+      "text_len": 8,
+      "text_len_nospace": 8,
+      "max_chars": 8,
+      "text_preview": "성실.근면.개척",
+      "meta": {
+        "paraPrIDRef": "15",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:11",
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "max_chars": 17,
+      "text_preview": "실력과 인성을 겸비한 사람을 기르는 학교",
+      "meta": {
+        "paraPrIDRef": "13",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:12",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "20",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:13",
+      "text_len": 10,
+      "text_len_nospace": 8,
+      "max_chars": 8,
+      "text_preview": "기출문제 공개 안내",
+      "meta": {
+        "paraPrIDRef": "20",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:14",
+      "text_len": 44,
+      "text_len_nospace": 34,
+      "max_chars": 34,
+      "text_preview": "  학부모님, 안녕하십니까? 항상 가정에 건강과 행복이 가득하시길 기원합...",
+      "meta": {
+        "paraPrIDRef": "22",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:15",
+      "text_len": 116,
+      "text_len_nospace": 90,
+      "max_chars": 90,
+      "text_preview": "본교에서는 공교육 경쟁력 향상을 위한 사교육비 경감 대책의 일환으로 기출...",
+      "meta": {
+        "paraPrIDRef": "25",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:16",
+      "text_len": 6,
+      "text_len_nospace": 6,
+      "max_chars": 6,
+      "text_preview": "감사합니다.",
+      "meta": {
+        "paraPrIDRef": "25",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:19",
+      "text_len": 19,
+      "text_len_nospace": 15,
+      "max_chars": 15,
+      "text_preview": " 2025학년도 기출문제 공개 안내",
+      "meta": {
+        "paraPrIDRef": "24",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:20",
+      "text_len": 1,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": " ",
+      "meta": {
+        "paraPrIDRef": "26",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:21",
+      "text_len": 9,
+      "text_len_nospace": 6,
+      "max_chars": 6,
+      "text_preview": " 1. 공개 원칙",
+      "meta": {
+        "paraPrIDRef": "26",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:22",
+      "text_len": 54,
+      "text_len_nospace": 43,
+      "max_chars": 43,
+      "text_preview": "  1) 공개 해당 고사: 2022~2024학년도 1,3학년 기출문제(직...",
+      "meta": {
+        "paraPrIDRef": "26",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:23",
+      "text_len": 15,
+      "text_len_nospace": 10,
+      "max_chars": 10,
+      "text_preview": "  2) 장소: 본교 교무실",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:24",
+      "text_len": 20,
+      "text_len_nospace": 13,
+      "max_chars": 13,
+      "text_preview": "  3) 내용: 출제 원안지 및 정답",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:25",
+      "text_len": 36,
+      "text_len_nospace": 27,
+      "max_chars": 27,
+      "text_preview": "  4) 공개기간: 해당 고사 3일 전부터 3일간 진행(주말제외)",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:26",
+      "text_len": 30,
+      "text_len_nospace": 21,
+      "max_chars": 21,
+      "text_preview": "  5) 공개대상: 본교 재학생 중 신청자 본인만 가능",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:27",
+      "text_len": 44,
+      "text_len_nospace": 32,
+      "max_chars": 32,
+      "text_preview": "  6) 제공방법: 열람만 가능, 촬영 및 복사는 금지, 복사물 제공하지...",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:28",
+      "text_len": 2,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "  ",
+      "meta": {
+        "paraPrIDRef": "28",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:29",
+      "text_len": 8,
+      "text_len_nospace": 6,
+      "max_chars": 6,
+      "text_preview": " 2. 주의사항",
+      "meta": {
+        "paraPrIDRef": "28",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:30",
+      "text_len": 75,
+      "text_len_nospace": 56,
+      "max_chars": 56,
+      "text_preview": "    기출 문제는 저작권법에 의하여 보호되는 저작물로 저작권자의 동의 ...",
+      "meta": {
+        "paraPrIDRef": "29",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:31",
+      "text_len": 37,
+      "text_len_nospace": 24,
+      "max_chars": 24,
+      "text_preview": "     - 학교 기출문제를 학원, 인터넷 업체 등에 판매하는 행위",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:32",
+      "text_len": 38,
+      "text_len_nospace": 25,
+      "max_chars": 25,
+      "text_preview": "     - 학원, 인터넷 업체 등에서 학교 기출문제를 판매하는 행위",
+      "meta": {
+        "paraPrIDRef": "27",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:33",
+      "text_len": 1,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": " ",
+      "meta": {
+        "paraPrIDRef": "30",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:34",
+      "text_len": 9,
+      "text_len_nospace": 6,
+      "max_chars": 6,
+      "text_preview": " 3. 기대 효과",
+      "meta": {
+        "paraPrIDRef": "30",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:35",
+      "text_len": 45,
+      "text_len_nospace": 34,
+      "max_chars": 34,
+      "text_preview": "  1) 재학생 대상으로 기출문제를 제공함으로써 사교육비 경감에 기여할 ...",
+      "meta": {
+        "paraPrIDRef": "30",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:36",
+      "text_len": 54,
+      "text_len_nospace": 41,
+      "max_chars": 41,
+      "text_preview": "  2) 학생 및 학부모의 알권리를 충족시키고 불법적인 방법으로 기출문제...",
+      "meta": {
+        "paraPrIDRef": "31",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:37",
+      "text_len": 50,
+      "text_len_nospace": 38,
+      "max_chars": 38,
+      "text_preview": "  3) 기출문제를 공개하여 학생들의 성적 불평등을 해소하고 균형적인 학...",
+      "meta": {
+        "paraPrIDRef": "30",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:38",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "30",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": true
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:39",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "19",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:40",
+      "text_len": 12,
+      "text_len_nospace": 10,
+      "max_chars": 10,
+      "text_preview": "2025. 3. 25.",
+      "meta": {
+        "paraPrIDRef": "19",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "paragraph",
+      "key": "p:41",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 0,
+      "text_preview": "",
+      "meta": {
+        "paraPrIDRef": "21",
+        "styleIDRef": "0",
+        "pageBreak": "0",
+        "columnBreak": "0",
+        "inside_cell": false
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:0:0:0",
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "max_chars": 10,
+      "text_preview": "",
+      "meta": {
+        "table": 0,
+        "row": "0",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 10,
+        "char_height": 1200,
+        "borderFillIDRef": "7"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:0:1:0",
+      "text_len": 6,
+      "text_len_nospace": 5,
+      "max_chars": 7,
+      "text_preview": " 가정통신문",
+      "meta": {
+        "table": 0,
+        "row": "0",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 7,
+        "char_height": 2900,
+        "borderFillIDRef": "8"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:0:2:0",
+      "text_len": 95,
+      "text_len_nospace": 85,
+      "max_chars": 85,
+      "text_preview": "화동중 제2025-17호☎ 교무실 562-2032☎ 행정실 562-203...",
+      "meta": {
+        "table": 0,
+        "row": "0",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 56,
+        "char_height": 1000,
+        "borderFillIDRef": "7"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:1:0:0",
+      "text_len": 13,
+      "text_len_nospace": 10,
+      "max_chars": 10,
+      "text_preview": "교   훈성실.근면.개척",
+      "meta": {
+        "table": 0,
+        "row": "1",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 9,
+        "char_height": 1300,
+        "borderFillIDRef": "7"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:0:1:1:0",
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "max_chars": 18,
+      "text_preview": "실력과 인성을 겸비한 사람을 기르는 학교",
+      "meta": {
+        "table": 0,
+        "row": "1",
+        "col": "1",
+        "occurrence": 0,
+        "estimated_capacity": 18,
+        "char_height": 1200,
+        "borderFillIDRef": "9"
+      }
+    },
+    {
+      "kind": "cell",
+      "key": "cell:1:0:0:0",
+      "text_len": 548,
+      "text_len_nospace": 397,
+      "max_chars": 544,
+      "text_preview": "  2025학년도 기출문제 공개 안내  1. 공개 원칙  1) 공개 해당...",
+      "meta": {
+        "table": 1,
+        "row": "0",
+        "col": "0",
+        "occurrence": 0,
+        "estimated_capacity": 544,
+        "char_height": 1500,
+        "borderFillIDRef": "10"
+      }
+    }
+  ]
+}

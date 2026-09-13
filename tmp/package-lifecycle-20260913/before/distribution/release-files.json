@@ -1,0 +1,421 @@
+{
+  "version": 1,
+  "plugin_version": "0.1.0",
+  "files": [
+    {
+      "source": "scripts/teacher_doc.py",
+      "destination": "scripts/teacher_doc.py"
+    },
+    {
+      "source": "scripts/teacher_doc.ps1",
+      "destination": "scripts/teacher_doc.ps1"
+    },
+    {
+      "source": "scripts/hwpdoc.py",
+      "destination": "scripts/hwpdoc.py"
+    },
+    {
+      "source": "scripts/hwpdoc.ps1",
+      "destination": "scripts/hwpdoc.ps1"
+    },
+    {
+      "source": "scripts/hwpdoc_config.py",
+      "destination": "scripts/hwpdoc_config.py"
+    },
+    {
+      "source": "scripts/hwpdoc_runtime.py",
+      "destination": "scripts/hwpdoc_runtime.py"
+    },
+    {
+      "source": "scripts/hwpdoc_templates.py",
+      "destination": "scripts/hwpdoc_templates.py"
+    },
+    {
+      "source": "scripts/hwpdoc_workspace.py",
+      "destination": "scripts/hwpdoc_workspace.py"
+    },
+    {
+      "source": "scripts/hwpdoc_setup.py",
+      "destination": "scripts/hwpdoc_setup.py"
+    },
+    {
+      "source": "scripts/hwpdoc_preview.py",
+      "destination": "scripts/hwpdoc_preview.py"
+    },
+    {
+      "source": "scripts/runtime.ps1",
+      "destination": "scripts/runtime.ps1"
+    },
+    {
+      "source": "scripts/hook.ps1",
+      "destination": "scripts/hook.ps1"
+    },
+    {
+      "source": "scripts/install-dependencies.ps1",
+      "destination": "scripts/install-dependencies.ps1"
+    },
+    {
+      "source": "scripts/hwpdoc_com_probe.py",
+      "destination": "scripts/hwpdoc_com_probe.py"
+    },
+    {
+      "source": "scripts/render_check.py",
+      "destination": "scripts/render_check.py"
+    },
+    {
+      "source": "scripts/fusion_timetable.py",
+      "destination": "scripts/fusion_timetable.py"
+    },
+    {
+      "source": "scripts/budget_name_check.py",
+      "destination": "scripts/budget_name_check.py"
+    },
+    {
+      "source": "scripts/related_lookup.py",
+      "destination": "scripts/related_lookup.py"
+    },
+    {
+      "source": "scripts/refresh_reference.py",
+      "destination": "scripts/refresh_reference.py"
+    },
+    {
+      "source": "scripts/validate_pipeline.py",
+      "destination": "scripts/validate_pipeline.py"
+    },
+    {
+      "source": "scripts/log_review.py",
+      "destination": "scripts/log_review.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/validate.py",
+      "destination": "skills/hwpx/scripts/validate.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/text_extract.py",
+      "destination": "skills/hwpx/scripts/text_extract.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/page_guard.py",
+      "destination": "skills/hwpx/scripts/page_guard.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/edit_hwpx.py",
+      "destination": "skills/hwpx/scripts/edit_hwpx.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/content_guard.py",
+      "destination": "skills/hwpx/scripts/content_guard.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/build_hwpx.py",
+      "destination": "skills/hwpx/scripts/build_hwpx.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/create_document.py",
+      "destination": "skills/hwpx/scripts/create_document.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/analyze_template.py",
+      "destination": "skills/hwpx/scripts/analyze_template.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/fix_namespaces.py",
+      "destination": "skills/hwpx/scripts/fix_namespaces.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/finalize_hwpx.py",
+      "destination": "skills/hwpx/scripts/finalize_hwpx.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/hancom_com.py",
+      "destination": "skills/hwpx/scripts/hancom_com.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/gonmun_lint.py",
+      "destination": "skills/hwpx/scripts/gonmun_lint.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/hwpx_slots.py",
+      "destination": "skills/hwpx/scripts/hwpx_slots.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/office/pack.py",
+      "destination": "skills/hwpx/scripts/office/pack.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/office/unpack.py",
+      "destination": "skills/hwpx/scripts/office/unpack.py"
+    },
+    {
+      "source": ".claude/hooks/protect_files.py",
+      "destination": ".claude/hooks/protect_files.py"
+    },
+    {
+      "source": ".claude/hooks/event_adapter.py",
+      "destination": ".claude/hooks/event_adapter.py"
+    },
+    {
+      "source": ".claude/hooks/audit_log.py",
+      "destination": ".claude/hooks/audit_log.py"
+    },
+    {
+      "source": ".claude/hooks/stop_validator.py",
+      "destination": ".claude/hooks/stop_validator.py"
+    },
+    {
+      "source": ".claude/skills/hwpx/SKILL.md",
+      "destination": "skills/hwpx/SKILL.md"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/workflow.md",
+      "destination": "skills/hwpx/references/workflow.md"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/editing-details.md",
+      "destination": "skills/hwpx/references/editing-details.md"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/xml-authoring.md",
+      "destination": "skills/hwpx/references/xml-authoring.md"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/hwpx-format.md",
+      "destination": "skills/hwpx/references/hwpx-format.md"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/jkf87-hwpx-skill-comparison.md",
+      "destination": "skills/hwpx/references/jkf87-hwpx-skill-comparison.md"
+    },
+    {
+      "source": "distribution/requirements-base.txt",
+      "destination": "distribution/requirements-base.txt"
+    },
+    {
+      "source": "distribution/requirements-windows.txt",
+      "destination": "distribution/requirements-windows.txt"
+    },
+    {
+      "source": "distribution/requirements-school-data.txt",
+      "destination": "distribution/requirements-school-data.txt"
+    },
+    {
+      "source": "distribution/requirements-visual.txt",
+      "destination": "distribution/requirements-visual.txt"
+    },
+    {
+      "source": "distribution/README.md",
+      "destination": "distribution/README.md"
+    },
+    {
+      "source": "distribution/CHANGELOG.md",
+      "destination": "distribution/CHANGELOG.md"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/report/header.xml",
+      "destination": "skills/hwpx/templates/report/header.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/report/section0.xml",
+      "destination": "skills/hwpx/templates/report/section0.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/proposal/header.xml",
+      "destination": "skills/hwpx/templates/proposal/header.xml"
+    },
+    {
+      "source": "distribution/assets/templates/proposal/section0.xml",
+      "destination": "skills/hwpx/templates/proposal/section0.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/gonmun/header.xml",
+      "destination": "skills/hwpx/templates/gonmun/header.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/gonmun/section0.xml",
+      "destination": "skills/hwpx/templates/gonmun/section0.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/minutes/header.xml",
+      "destination": "skills/hwpx/templates/minutes/header.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/minutes/section0.xml",
+      "destination": "skills/hwpx/templates/minutes/section0.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/version.xml",
+      "destination": "skills/hwpx/templates/base/version.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/settings.xml",
+      "destination": "skills/hwpx/templates/base/settings.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/META-INF/manifest.xml",
+      "destination": "skills/hwpx/templates/base/META-INF/manifest.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/META-INF/container.xml",
+      "destination": "skills/hwpx/templates/base/META-INF/container.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/META-INF/container.rdf",
+      "destination": "skills/hwpx/templates/base/META-INF/container.rdf"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/mimetype",
+      "destination": "skills/hwpx/templates/base/mimetype"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Contents/section0.xml",
+      "destination": "skills/hwpx/templates/base/Contents/section0.xml"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Contents/header.xml",
+      "destination": "skills/hwpx/templates/base/Contents/header.xml"
+    },
+    {
+      "source": "distribution/assets/templates/base/Contents/content.hpf",
+      "destination": "skills/hwpx/templates/base/Contents/content.hpf"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Preview/PrvText.txt",
+      "destination": "skills/hwpx/templates/base/Preview/PrvText.txt"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Preview/PrvImage.png",
+      "destination": "skills/hwpx/templates/base/Preview/PrvImage.png"
+    },
+    {
+      "source": "distribution/codex-plugin.json",
+      "destination": ".codex-plugin/plugin.json"
+    },
+    {
+      "source": "distribution/claude-plugin.json",
+      "destination": ".claude-plugin/plugin.json"
+    },
+    {
+      "source": "distribution/legal/AGPL-3.0.txt",
+      "destination": "LICENSE"
+    },
+    {
+      "source": "distribution/legal/Canine89-MIT.txt",
+      "destination": "licenses/Canine89-MIT.txt"
+    },
+    {
+      "source": "distribution/legal/CHANGES.md",
+      "destination": "CHANGES.md"
+    },
+    {
+      "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.python"
+    },
+    {
+      "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.rst",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.rst"
+    },
+    {
+      "source": "distribution/legal/dependencies/lxml/licenses/LICENSE.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSE.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/lxml/licenses/LICENSES.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSES.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/openpyxl/LICENCE.rst",
+      "destination": "licenses/dependencies/openpyxl/LICENCE.rst"
+    },
+    {
+      "source": "distribution/legal/dependencies/PyMuPDF/COPYING",
+      "destination": "licenses/dependencies/PyMuPDF/COPYING"
+    },
+    {
+      "source": "distribution/legal/dependencies/pypdf/licenses/LICENSE",
+      "destination": "licenses/dependencies/pypdf/licenses/LICENSE"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-hwpx/licenses/LICENSE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/LICENSE"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-hwpx/licenses/NOTICE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/NOTICE"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/adodbapi/license.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/com/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/com/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+      "destination": "licenses/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/isapi/README.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/win32/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/win32/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/xlrd/LICENSE",
+      "destination": "licenses/dependencies/xlrd/LICENSE"
+    },
+    {
+      "source": "distribution/legal/GPL-3.0-only.txt",
+      "destination": "licenses/GPL-3.0-only.txt"
+    },
+    {
+      "source": "distribution/legal/MuPDF-README.txt",
+      "destination": "licenses/MuPDF-README.txt"
+    },
+    {
+      "source": "distribution/legal/NOTICE.md",
+      "destination": "NOTICE.md"
+    },
+    {
+      "source": "distribution/legal/SOURCE.md",
+      "destination": "SOURCE.md"
+    },
+    {
+      "source": "distribution/sources/pymupdf-1.28.0.tar.gz",
+      "destination": "sources/pymupdf-1.28.0.tar.gz"
+    },
+    {
+      "source": "distribution/sources/mupdf-1.28.0-source.tar.gz",
+      "destination": "sources/mupdf-1.28.0-source.tar.gz"
+    },
+    {
+      "source": "distribution/source-bundle.json",
+      "destination": "SOURCE-BUNDLE.json"
+    }
+  ],
+  "dependency_reviews": [
+    "lxml==5.4.0",
+    "python-hwpx==2.23.0",
+    "pypdf==6.14.2",
+    "pywin32==312",
+    "openpyxl==3.1.5",
+    "et-xmlfile==2.0.0",
+    "xlrd==2.0.2",
+    "PyMuPDF==1.28.0"
+  ],
+  "source_bundle": "distribution/source-bundle.json"
+}

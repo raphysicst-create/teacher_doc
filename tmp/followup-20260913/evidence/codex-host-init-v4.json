@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"initialized\",\n  \"workspace\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\codex-host-v4\",\n  \"instructions\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\codex-host-v4\\\\AGENTS.md\",\n  \"mode\": \"created\",\n  \"hooks\": \"unregistered\",\n  \"actual_skill_loaded\": \"unverified\",\n  \"next_action\": \"doctor 실행; 앱 스킬 본문 실제 로딩 및 훅 등록·신뢰·차단을 별도 확인하세요\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code-v4\\scripts\\hwpdoc.py",
+    "init",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\codex-host-v4",
+    "--app",
+    "codex",
+    "--skill-name",
+    "hwpx"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 0.8804574012756348,
+  "recorded_at": "2026-09-13T02:55:47.158497+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

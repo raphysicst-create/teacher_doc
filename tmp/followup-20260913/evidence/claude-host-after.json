@@ -1,0 +1,8 @@
+{
+  "files": {
+    "knowledge/protected.txt": "961d56425e6fc680aa9e125e1a63cc9c44e120aed8093be85775b5514ece963b",
+    "docs/protected.txt": "ae342aa102b3cdf791808eb5ef5fadecb774bb187b3e80c8c1cbddfb588f8052"
+  },
+  "allowed_exists": true,
+  "audit": "{\"ts\": \"2026-09-13T02:12:46.850057+00:00\", \"agent\": \"hwpdoc\", \"action\": \"init\", \"target\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\claude-host\\\\.hwpdoc\\\\workspace.json\", \"result\": \"pass\", \"detail\": {\"app\": \"claude\", \"instructions\": \"created\", \"actual_skill_loaded\": \"unverified\"}}\n{\"ts\": \"2026-09-13T02:12:49.666042+00:00\", \"agent\": \"hwpdoc\", \"action\": \"setup_hooks\", \"target\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\claude-host\\\\.claude\\\\settings.json\", \"result\": \"pass\", \"detail\": {\"backup\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\claude-host\\\\.hwpdoc\\\\hooks-history\\\\claude-9744e2846d674330bd46162aa46f9722.json\", \"actual_blocking\": \"unverified\"}}\n"
+}

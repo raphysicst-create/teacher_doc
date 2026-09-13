@@ -1,0 +1,5 @@
+[
+  "& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -B -X utf8 'C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/code/scripts/hwpdoc.py' --workspace 'C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/claude-marked' add-template --id trial-gianmun --version 1 --source inputs/form.hwpx --purpose W1 --purpose W2 --provenance unconfirmed",
+  "& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -B -X utf8 'C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/code/scripts/hwpdoc.py' --workspace 'C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/claude-marked' add-template --id trial-gianmun --version 1 --mapping inputs/mapping.json",
+  "& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -B -X utf8 'C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/code/scripts/hwpdoc.py' --workspace 'C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/claude-marked' add-template --id trial-gianmun --version 1 --review-draft"
+]

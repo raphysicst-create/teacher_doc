@@ -1,0 +1,3819 @@
+[
+  {
+    "source": "scripts/teacher_doc.py",
+    "destination": "scripts/teacher_doc.py",
+    "bytes": 166,
+    "sha256": "c9abc4918f4c16d0838d6fad5a3c26bbdedc419d133d620677b02ed9bacd3851",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "hwpdoc"
+    ],
+    "docstring": "teacher_doc CLI. Keep the existing engine and stored record format compatible.",
+    "git_additions": [
+      "f799630428c3bfccbf98dfa33c67814c89c28dfc chore: rename project to teacher_doc"
+    ]
+  },
+  {
+    "source": "scripts/teacher_doc.ps1",
+    "destination": "scripts/teacher_doc.ps1",
+    "bytes": 275,
+    "sha256": "dec1f464b041a39536dc5d5e79516b78308e05164daeb77953e30dc6b03879c8",
+    "suffix": ".ps1",
+    "matches": {},
+    "text_scanned": true,
+    "git_additions": [
+      "f799630428c3bfccbf98dfa33c67814c89c28dfc chore: rename project to teacher_doc"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc.py",
+    "destination": "scripts/hwpdoc.py",
+    "bytes": 47343,
+    "sha256": "baa743ec67051732853a29448e720867805bef293daf2f03b5f76db69082318b",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "contextlib",
+      "copy",
+      "datetime",
+      "difflib",
+      "fcntl",
+      "hashlib",
+      "hwpdoc_config",
+      "hwpdoc_runtime",
+      "hwpdoc_setup",
+      "hwpdoc_templates",
+      "hwpdoc_workspace",
+      "hwpx_slots",
+      "importlib.util",
+      "json",
+      "msvcrt",
+      "os",
+      "pathlib",
+      "re",
+      "shutil",
+      "subprocess",
+      "sys",
+      "text_extract",
+      "time"
+    ],
+    "docstring": "Ordered, hash-bound HWPX workflow. Existing tool CLIs remain authoritative.\n\nNo document prose, approvals or evidence are invented here. An unfinished job\ncan be delivered only with --draft, visibly marked as unverified.",
+    "git_additions": [
+      "9f3baca6c919b0abb7ab9da77b8e4328bc58818e chore: GPT 환경 연동 및 HWPX 실행기 정비"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc.ps1",
+    "destination": "scripts/hwpdoc.ps1",
+    "bytes": 193,
+    "sha256": "ec3d52109e00eded29c3bf1f2d63ece6343af2e8d031e5238813bc05299fe261",
+    "suffix": ".ps1",
+    "matches": {},
+    "text_scanned": true,
+    "git_additions": [
+      "9f3baca6c919b0abb7ab9da77b8e4328bc58818e chore: GPT 환경 연동 및 HWPX 실행기 정비"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc_config.py",
+    "destination": "scripts/hwpdoc_config.py",
+    "bytes": 6288,
+    "sha256": "6c91f91a7d27e594734b2c2bdebea867e70dde92ad4f0711734db924244d32ce",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "dataclasses",
+      "json",
+      "os",
+      "pathlib",
+      "sys"
+    ],
+    "docstring": "Versioned workspace/host paths. Importing this module never writes settings.",
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc_runtime.py",
+    "destination": "scripts/hwpdoc_runtime.py",
+    "bytes": 2268,
+    "sha256": "7041649d9d0f78509df7cd8e330e1769acc38fa7efcc2e2094ed32baf2793cb7",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "importlib",
+      "pathlib",
+      "platform",
+      "re",
+      "sys"
+    ],
+    "docstring": "Observe the active interpreter and installed distributions without installing.",
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc_templates.py",
+    "destination": "scripts/hwpdoc_templates.py",
+    "bytes": 18164,
+    "sha256": "e19db83de8b7ab48bd1d6212abaa206899b5f0ccc939aff0f2bdc56d7126c971",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "hwpdoc",
+      "hwpx_slots",
+      "lxml.etree",
+      "pathlib",
+      "re",
+      "shutil",
+      "sys",
+      "types",
+      "zipfile"
+    ],
+    "docstring": "Workspace-owned, hash-bound template registration; no implicit human approval.",
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc_workspace.py",
+    "destination": "scripts/hwpdoc_workspace.py",
+    "bytes": 11235,
+    "sha256": "7b55b202291e57f90f502fce53580feed03354cede365e93977a9d5f6f6c1d1f",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "hwpdoc",
+      "hwpdoc_config",
+      "hwpdoc_templates",
+      "json",
+      "os",
+      "pathlib",
+      "shutil",
+      "sys"
+    ],
+    "docstring": "Initialization and mechanical preparation for the shared workflow CLI.",
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc_setup.py",
+    "destination": "scripts/hwpdoc_setup.py",
+    "bytes": 8349,
+    "sha256": "d36120aed7a8058965d46eba092445ed45c602d8abcbb3aec8c032e696e84781",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "base64",
+      "copy",
+      "hwpdoc",
+      "json",
+      "pathlib",
+      "subprocess",
+      "sys",
+      "uuid"
+    ],
+    "docstring": "Generate reviewable app hook registration without trusting hooks implicitly.",
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc_preview.py",
+    "destination": "scripts/hwpdoc_preview.py",
+    "bytes": 2583,
+    "sha256": "8cc24ab6e62e50a6e26960b136daafdc6172fffa27381357aaa8e52020989a23",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "fitz",
+      "hashlib",
+      "hwpdoc_config",
+      "json",
+      "pathlib"
+    ],
+    "docstring": "Render all PDF pages for review; no visual approval is inferred.",
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/runtime.ps1",
+    "destination": "scripts/runtime.ps1",
+    "bytes": 1547,
+    "sha256": "36b663489591d351256be425e9e5adbe0c1cb01e68b60bc7c8fa210605361201",
+    "suffix": ".ps1",
+    "matches": {},
+    "text_scanned": true,
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/hook.ps1",
+    "destination": "scripts/hook.ps1",
+    "bytes": 992,
+    "sha256": "4e9317e60d17ba01219b2f10edc16887689f77f2d1a60b299262e3bd7f6f73fb",
+    "suffix": ".ps1",
+    "matches": {},
+    "text_scanned": true,
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/install-dependencies.ps1",
+    "destination": "scripts/install-dependencies.ps1",
+    "bytes": 2414,
+    "sha256": "8e79c8742c1095b1bf25fc05af000c4ee7c401ae8e7e5423335b96a6004bdd0f",
+    "suffix": ".ps1",
+    "matches": {},
+    "text_scanned": true,
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": "scripts/hwpdoc_com_probe.py",
+    "destination": "scripts/hwpdoc_com_probe.py",
+    "bytes": 639,
+    "sha256": "e7214a1754931feadf956ad405bfb2bc3ae4601510c0a9d020a6c780031aba9d",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "hancom_com",
+      "hwpdoc_config",
+      "json",
+      "sys"
+    ],
+    "docstring": "Isolated COM availability probe, called under the runner's cross-process lock.",
+    "git_additions": [
+      "9f3baca6c919b0abb7ab9da77b8e4328bc58818e chore: GPT 환경 연동 및 HWPX 실행기 정비"
+    ]
+  },
+  {
+    "source": "scripts/render_check.py",
+    "destination": "scripts/render_check.py",
+    "bytes": 11734,
+    "sha256": "5086c73d4f56a5f696d75c65ce55fde4fb78331742068c3339bca85eb5214274",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "bisect",
+      "collections",
+      "hancom_com",
+      "hwpdoc_config",
+      "json",
+      "pathlib",
+      "pypdf",
+      "re",
+      "sys",
+      "tempfile",
+      "xml.etree",
+      "zipfile"
+    ],
+    "docstring": "render_check.py — HWPX 렌더링 검증 (LLM 미개입 기계 검사)\n\n변환본(.hwp→hwpx)·재패키징(unpack/pack) 베이스를 편집한 산출물이 한글에서\n\"올바르게 보이는지\"를 검사한다. 텍스트 계층 검증(validate·page_guard·content_guard)은\n렌더링 붕괴를 잡지 못한다 — 근거: 2026. 7. 17. 교육경비 정산서식 사례\n(pyhwp 변환본의 캡션 역순·표 순서 붕괴가 검증 7겹을 통과하고 사용자 육안으로 발견됨).\n\n검사 항목:\n  1. 쪽수 대조     — 한글 COM으로 결과물·레퍼런스를 각각 열어 PageCount 비교\n  2. 순서 정합     — COM으로 PDF 내보내기 → PDF 추출 텍스트에서 논리 텍스트 앵커들의\n                     출현 순서가 유지되는지 (최장증가부분수열 비율로 판정)\n  3. 역순 문자열   — PDF에 없는 앵커의 뒤집힌 문자열이 PDF에 있으면 역순 렌더링으로 판정\n  4. 개체 잔재     — 논리 텍스트에 없는 원문자(①㉮◯류)가 PDF에 보이면 compose 등\n                     비텍스트 개체 잔재로 판정\n\n사용법:\n    python scripts/render_check.py 결과.hwpx --reference 베이스.hwpx [--json] [--keep-pdf 경로]\n\n종료 코드: 0=PASS, 1=FAIL, 3=검사 불가(COM/PDF 추출 실패 — 결과 보고에 명시할 것)\n의존성: pywin32(한글 설치 필요), pypdf",
+    "git_additions": [
+      "f7d63133763b8787d59100a1d0d2c83a16e77e9a feat: 렌더링 검증 환류 — 정산서식 실패 사례(2026. 7. 17.) 반영"
+    ]
+  },
+  {
+    "source": "scripts/fusion_timetable.py",
+    "destination": "scripts/fusion_timetable.py",
+    "bytes": 6047,
+    "sha256": "1f75d991057b57fbf95cc26c04e580e8a1c9e1df1a22325c8c670e1186412781",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "collections",
+      "datetime",
+      "hwpdoc_config",
+      "json",
+      "pathlib",
+      "re",
+      "sys"
+    ],
+    "docstring": "융합교과 산출기 — 활동 날짜·교시에서 대체되는 과목을 기계적으로 계산한다.\n\n요일은 Python datetime으로 계산(LLM 암산 금지 원칙과 동일 취지, DATE_WEEKDAY와 짝).\n시간표 데이터는 knowledge/reference/기초시간표-*.json (refresh_reference.py 산출물).\n\n사용 예:\n  python scripts/fusion_timetable.py 2026-09-16 --periods 1-4\n  python scripts/fusion_timetable.py \"2026. 9. 16.\" \"2026. 9. 17.\" --periods 5,6 --grades 1\n  python scripts/fusion_timetable.py 2026-09-16 --periods 1-4 --json\n\n종료 코드: 0 정상 / 2 입력 오류(주말·형식 등)",
+    "git_additions": [
+      "8a13ff0658fbd07af986317421c1c6037afdb32b feat: 기계화 도구 5종 도입, MVP 기준 개정(검토 동의+5점 평가), 인코딩 env 설정"
+    ]
+  },
+  {
+    "source": "scripts/budget_name_check.py",
+    "destination": "scripts/budget_name_check.py",
+    "bytes": 4147,
+    "sha256": "930fe1b63d56757eea79644d6535dd10ecc7db9b95eda7c9b4c85dd3382c97af",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "difflib",
+      "hwpdoc_config",
+      "json",
+      "pathlib",
+      "re",
+      "sys"
+    ],
+    "docstring": "예산과목 이름 검증기 — 계획서에 쓴 예산 항목명이 사업관리카드에 실존하는지 기계 대조.\n\n이름만 검증한다(금액은 검증 대상 아님 — 2026. 7. 15. 사용자 확인).\n데이터: knowledge/reference/예산과목-*.json (refresh_reference.py 산출물).\n\n사용 예:\n  python scripts/budget_name_check.py --check \"수학탐구 활동운영 학생식비\"\n  python scripts/budget_name_check.py --check 이름1 --check 이름2\n  python scripts/budget_name_check.py --search 천체\n  python scripts/budget_name_check.py --list\n\n종료 코드: 0 전부 실존 / 1 미실존 항목 있음",
+    "git_additions": [
+      "8a13ff0658fbd07af986317421c1c6037afdb32b feat: 기계화 도구 5종 도입, MVP 기준 개정(검토 동의+5점 평가), 인코딩 env 설정"
+    ]
+  },
+  {
+    "source": "scripts/related_lookup.py",
+    "destination": "scripts/related_lookup.py",
+    "bytes": 6128,
+    "sha256": "9147eb1dd4d2a7be0ccd3b92631a11763a0df1e379779307932527739a3e1472",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "hwpdoc_config",
+      "pathlib",
+      "re",
+      "sys"
+    ],
+    "docstring": "관련번호 인용 조회기 — knowledge/examples/md/*.md의 frontmatter를 파싱해\n문서번호·제목·결재일(또는 시행일)·관련 인용을 그래프로 만들고 조회한다.\n\n목적: \"1. 관련: 기관-번호(YYYY. M. D.)\"를 LLM이 암기·추정으로 채우지 않도록,\n실존 문서에서 확인된 값만 기계적으로 뽑아 보여준다 (CLAUDE.md Validator §7 관련번호 대조 규칙).\n\n사용 예:\n  python scripts/related_lookup.py --doc 5458                 # 이 문서가 인용한 관련 공문 + 이 문서를 인용한 후속 공문\n  python scripts/related_lookup.py --search 농어촌유학          # 제목 키워드로 검색\n  python scripts/related_lookup.py --chain 3268                # 전체 인용 체인(상류+하류) 출력\n  python scripts/related_lookup.py --list                      # 전체 문서 목록\n\n종료 코드: 0 정상 / 1 조회 결과 없음",
+    "git_additions": [
+      "8a13ff0658fbd07af986317421c1c6037afdb32b feat: 기계화 도구 5종 도입, MVP 기준 개정(검토 동의+5점 평가), 인코딩 env 설정"
+    ]
+  },
+  {
+    "source": "scripts/refresh_reference.py",
+    "destination": "scripts/refresh_reference.py",
+    "bytes": 8793,
+    "sha256": "13ebe31c7fa19ea5d856e4e402f4cfe4c3b420b168b4c19c8e9bb87f9add9727",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "datetime",
+      "hwpdoc_config",
+      "json",
+      "openpyxl",
+      "pathlib",
+      "re",
+      "sys",
+      "xlrd"
+    ],
+    "docstring": "knowledge/reference/ 원본(xlsx/xls)에서 파생 데이터(JSON·MD)를 재생성한다.\n\nLLM 개입 없는 결정적 변환. 새 학기 시간표나 갱신된 사업관리카드를 받으면\nknowledge/reference/의 원본 파일을 교체한 뒤 이 스크립트만 다시 실행한다.\n\n생성물:\n  - 기초시간표-<이름>.json / .md   (주제선택 표기 (주)·㈜·(원) 제거)\n  - 예산과목-<연도>.json           (세부사업 > 세부항목 > 비목·산출내역 이름 목록)\n\n사용: python scripts/refresh_reference.py\n의존: openpyxl(xlsx), xlrd(구형 xls)",
+    "git_additions": [
+      "8a13ff0658fbd07af986317421c1c6037afdb32b feat: 기계화 도구 5종 도입, MVP 기준 개정(검토 동의+5점 평가), 인코딩 env 설정"
+    ]
+  },
+  {
+    "source": "scripts/validate_pipeline.py",
+    "destination": "scripts/validate_pipeline.py",
+    "bytes": 5492,
+    "sha256": "0a02086680ab5540528e75e038bea88b59fed92e75940ca659773de40e1e980d",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "hwpdoc_config",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "sys",
+      "time"
+    ],
+    "docstring": "Stop 훅용 산출물 검증기 — stop_validator.py가 턴 종료 전에 실행한다.\n\n계약(.claude/hooks/stop_validator.py): exit 0 = 통과 / exit 1 = 실패(사유 stdout).\nsubprocess timeout 90초 안에 끝나야 하므로 빠른 검사만 수행한다:\n  1. validate.py        — HWPX 구조(스키마) 검증\n  2. gonmun_lint.py     — 공문 작성법 검수 (error 심각도만 실패, DATE_WEEKDAY 포함 사본)\nCOM 실열림·render_check 등 느린 검사는 여기서 하지 않는다 (대화 중 파이프라인 담당).\n\n동작 원칙:\n- 기존 운영 저장소의 최초 실행만 기존 output/*.hwpx의 미검사 기준선을 기록.\n- 새 작업 폴더는 최초 실행부터 검사한다. 기준선도 전체 검증 완료를 뜻하지 않는다.\n- 이후 실행: 기준선 이후 새로 생기거나 변경된 파일만 검사한다.\n- 이번 실행에서 검사한 파일의 실패만 exit 1로 보고한다. 이미 보고된 실패 파일이\n  변경 없이 남아 있으면 다시 막지 않는다 (매 턴 재차단 방지 — 2회 초과 시\n  stop_validator가 사용자 보고로 전환하는 설계와 맞물림).\n- 시간 예산(70초) 초과 시 남은 파일은 기록하지 않고 다음 Stop에서 재검사.\n- 검증기 자체 오류(스캔 실패 등)는 턴을 막지 않는다 — 경고 출력 후 exit 0.\n\n테스트용 env: HWPDOC_OUTPUT_DIR(기본 output/), HWPDOC_STATE_FILE(기본 logs/.val",
+    "git_additions": [
+      "22643ff515b15dd1cddfc1eb29bc40676bd87a9b feat: MVP 기준 완화(W1 단독) + 자동화 승격 — Stop 검증 루프 활성화·/w1·/w2 스킬"
+    ]
+  },
+  {
+    "source": "scripts/log_review.py",
+    "destination": "scripts/log_review.py",
+    "bytes": 4244,
+    "sha256": "d21209b42229fd661f05660d2f09783451cf3d6e9bd202c9c0df7e1787270f02",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "datetime",
+      "hwpdoc_config",
+      "json",
+      "pathlib",
+      "sys"
+    ],
+    "docstring": "검토 결과 기록기 — 발송 여부가 아니라 사용자 동의(approved) + 5점 평가로 성공을 판단한다.\n\nMVP 성공 기준(CLAUDE.md, 2026. 7. 24. 재개정): W1 5건에 대해 사용자가 검토 후\n동의(approved) + 5점 만점 평가를 남기면 MVP 달성. W2는 실수신 공문 빈도가 낮아 기준에서\n제외 — 기록·집계는 계속하되 MVP 판단에는 반영하지 않는다. 실제 온나라 발송\n여부와는 무관 — 발송은 항상 사람이 하고 에이전트는 관여하지 않는다(CLAUDE.md 금지 규칙 2).\n\n사용 예:\n  python scripts/log_review.py --file output/2026_농어촌유학_수리과학체험_기안문.hwpx       --type W1 --approved yes --score 4 --note \"붙임 표기만 수정\"\n  python scripts/log_review.py --summary",
+    "git_additions": [
+      "8a13ff0658fbd07af986317421c1c6037afdb32b feat: 기계화 도구 5종 도입, MVP 기준 개정(검토 동의+5점 평가), 인코딩 env 설정"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/validate.py",
+    "destination": "skills/hwpx/scripts/validate.py",
+    "bytes": 6243,
+    "sha256": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 46,
+          "text": "    \"opf\": \"http://www.idpf.org/2007/opf/\","
+        },
+        {
+          "line": 47,
+          "text": "    \"hc\": \"http://www.hancom.co.kr/hwpml/2011/core\","
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/validate.py",
+      "blob_sha1": "f6a8ef93d59950b23f6b8a933803dddbf1574952",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "finalize_hwpx",
+      "lxml",
+      "pathlib",
+      "sys",
+      "zipfile"
+    ],
+    "docstring": "Validate the structural integrity of an HWPX file.\n\nChecks:\n  - Valid ZIP archive\n  - Required files present (HWPX 최소 패키지 11개 — REQUIRED_FILES 참고)\n  - mimetype content is correct\n  - mimetype is the first ZIP entry and stored without compression\n  - All XML files are well-formed\n  - content.hpf manifest hrefs exist in the package\n  - section image references point to manifest items\n\nUsage:\n    python validate.py document.hwpx",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/text_extract.py",
+    "destination": "skills/hwpx/scripts/text_extract.py",
+    "bytes": 4842,
+    "sha256": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 21,
+          "text": "    \"hp\": \"http://www.hancom.co.kr/hwpml/2011/paragraph\","
+        },
+        {
+          "line": 22,
+          "text": "    \"hs\": \"http://www.hancom.co.kr/hwpml/2011/section\","
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/text_extract.py",
+      "blob_sha1": "f78bf38decb5df986e72e56cc545c23120bd150f",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "io",
+      "lxml",
+      "pathlib",
+      "sys",
+      "zipfile"
+    ],
+    "docstring": "Extract text from an HWPX document by reading OWPML XML directly.\n\nUsage:\n    python3 scripts/text_extract.py document.hwpx\n    python3 scripts/text_extract.py document.hwpx --format markdown\n    python3 scripts/text_extract.py document.hwpx --include-tables",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/page_guard.py",
+    "destination": "skills/hwpx/scripts/page_guard.py",
+    "bytes": 30160,
+    "sha256": "e5e6141dafd5fed454ff909a92bcc4e05f037df9a822a0eaeef7169d59711474",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 36,
+          "text": "    \"hp\": \"http://www.hancom.co.kr/hwpml/2011/paragraph\","
+        },
+        {
+          "line": 37,
+          "text": "    \"hs\": \"http://www.hancom.co.kr/hwpml/2011/section\","
+        },
+        {
+          "line": 193,
+          "text": "    for char_pr in header_root.xpath(\".//hh:charPr\", namespaces={**NS, \"hh\": \"http://www.hancom.co.kr/hwpml/2011/head\"}):"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/page_guard.py",
+      "blob_sha1": "3410ad4ea99c78e88b9116baa52ce94eec9bef22",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "dataclasses",
+      "hashlib",
+      "io",
+      "json",
+      "lxml",
+      "pathlib",
+      "re",
+      "sys",
+      "typing",
+      "zipfile"
+    ],
+    "docstring": "page_guard.py - HWPX 레퍼런스 대비 페이지 드리프트 위험 검사\n\n목표:\n- 실제 렌더러의 쪽수 계산을 대체할 수는 없지만,\n  쪽수 변화로 이어지기 쉬운 구조 변경을 사전에 차단한다.\n- 원본 양식의 문단/셀별 글자 예산을 저장하고 결과물이 예산을 넘지\n  않는지 검사한다.\n\n검사 항목:\n- 문단 수 / 표 수 / 표 구조(rowCnt, colCnt, width, height) 동일성\n- 명시적 pageBreak / columnBreak 수 동일성\n- 전체 텍스트 길이 편차(기본 15%) 한도\n- 문단별 텍스트 길이 급변(기본 25%) 감지\n- 선택: 문단/셀별 글자 예산 프로파일 생성 및 엄격 검사\n- 구조 fingerprint에서는 hp:linesegarray 줄 배치 캐시를 제외",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/edit_hwpx.py",
+    "destination": "skills/hwpx/scripts/edit_hwpx.py",
+    "bytes": 41724,
+    "sha256": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 37,
+          "text": "    \"hp\": \"http://www.hancom.co.kr/hwpml/2011/paragraph\","
+        },
+        {
+          "line": 38,
+          "text": "    \"hs\": \"http://www.hancom.co.kr/hwpml/2011/section\","
+        },
+        {
+          "line": 39,
+          "text": "    \"hh\": \"http://www.hancom.co.kr/hwpml/2011/head\","
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/edit_hwpx.py",
+      "blob_sha1": "78eb656de0960a110057278c702ab7b63a850066",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "binascii",
+      "dataclasses",
+      "io",
+      "json",
+      "lxml",
+      "page_guard",
+      "pathlib",
+      "re",
+      "struct",
+      "sys",
+      "typing",
+      "zipfile",
+      "zlib"
+    ],
+    "docstring": "Edit an existing HWPX while preserving its package and layout structure.\n\nThis script is intended for reference-form workflows: keep the original HWPX\narchive, header.xml, content.hpf, BinData, table geometry, and style references\nintact, then change only requested text nodes in Contents/section0.xml.\n\nExamples:\n    python3 scripts/edit_hwpx.py form.hwpx -o filled.hwpx       --replace \"성명=홍길동\"       --cell \"0,2,1=서울특별시\"\n\n    python3 scripts/edit_hwpx.py form.hwpx -o filled.hwpx       --replace-json values.json",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/content_guard.py",
+    "destination": "skills/hwpx/scripts/content_guard.py",
+    "bytes": 8525,
+    "sha256": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97",
+    "suffix": ".py",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/content_guard.py",
+      "blob_sha1": "8921a096c52c90fe3696d03b4f544200e91e9f8b",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "dataclasses",
+      "json",
+      "pathlib",
+      "re",
+      "sys",
+      "text_extract"
+    ],
+    "docstring": "Check whether an edited HWPX is semantically complete enough to deliver.\n\nStructural validation can pass while old organization names, placeholders, or\nold contact blocks remain in the document. This guard scans extracted text for\nthat class of failure.",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/build_hwpx.py",
+    "destination": "skills/hwpx/scripts/build_hwpx.py",
+    "bytes": 8796,
+    "sha256": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 63,
+          "text": "    ns = {\"opf\": \"http://www.idpf.org/2007/opf/\"}"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/build_hwpx.py",
+      "blob_sha1": "58cb6405a09797a1a593fcb800f0a023cb839cc8",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "datetime",
+      "lxml",
+      "pathlib",
+      "shutil",
+      "sys",
+      "tempfile",
+      "zipfile"
+    ],
+    "docstring": "Build an HWPX document from templates and XML overrides.\n\nAssembles a valid HWPX file by:\n1. Copying the base template\n2. Optionally overlaying a document-type template (gonmun, report, minutes)\n3. Optionally overriding header.xml and/or section0.xml with custom files\n4. Optionally setting metadata (title, creator)\n5. Validating XML well-formedness\n6. Packaging as HWPX (ZIP with mimetype first, ZIP_STORED)\n\nUsage:\n    # Empty document from base template\n    python build_hwpx.py --output result.hwpx\n\n    # Using a document-type template\n    python build_hwpx.py --template gonmun --output result.hwpx\n\n    # Custom section XML override\n    python build_hwpx.py --template gonmun --section my_section0.xml --output result.hwpx\n\n    # Custom header and section\n    python build_hwpx.py --header my",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/create_document.py",
+    "destination": "skills/hwpx/scripts/create_document.py",
+    "bytes": 7083,
+    "sha256": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9",
+    "suffix": ".py",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/create_document.py",
+      "blob_sha1": "8eb30da2348d5ce22c7aeca2e46d46e53f73da30",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "hwpx",
+      "json",
+      "pathlib",
+      "re",
+      "sys"
+    ],
+    "docstring": "Create an HWPX document from Markdown or JSON input.\n\nSupports:\n  - Paragraphs (plain text lines)\n  - Tables (Markdown pipe tables or JSON array-of-arrays)\n  - Headers/footers (via JSON metadata)\n\nUsage:\n    python create_document.py --input content.md --output result.hwpx\n    python create_document.py --input content.json --output result.hwpx\n    echo \"Hello World\" | python create_document.py --output result.hwpx",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/analyze_template.py",
+    "destination": "skills/hwpx/scripts/analyze_template.py",
+    "bytes": 15934,
+    "sha256": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 23,
+          "text": "    'hp': 'http://www.hancom.co.kr/hwpml/2011/paragraph',"
+        },
+        {
+          "line": 24,
+          "text": "    'hs': 'http://www.hancom.co.kr/hwpml/2011/section',"
+        },
+        {
+          "line": 25,
+          "text": "    'hc': 'http://www.hancom.co.kr/hwpml/2011/core',"
+        },
+        {
+          "line": 26,
+          "text": "    'hh': 'http://www.hancom.co.kr/hwpml/2011/head',"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/analyze_template.py",
+      "blob_sha1": "70a5f2edbc892551bab06b83d50e42ddc7bc961e",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "lxml",
+      "os",
+      "shutil",
+      "sys",
+      "tempfile",
+      "zipfile"
+    ],
+    "docstring": "analyze_template.py — HWPX 문서 구조 심층 분석\n\nHWPX 파일을 분석하여 문서의 전체 구조, 스타일 정의, 테이블 레이아웃,\n셀 병합, 내용 등을 상세하게 출력한다.\n레퍼런스 기반 문서 생성의 청사진으로 사용.\n\nUsage:\n    python3 analyze_template.py <input.hwpx>\n    python3 analyze_template.py <input.hwpx> --extract-header /tmp/ref_header.xml",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/fix_namespaces.py",
+    "destination": "skills/hwpx/scripts/fix_namespaces.py",
+    "bytes": 3417,
+    "sha256": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 23,
+          "text": "    \"http://www.hancom.co.kr/hwpml/2011/head\": \"hh\","
+        },
+        {
+          "line": 24,
+          "text": "    \"http://www.hancom.co.kr/hwpml/2011/core\": \"hc\","
+        },
+        {
+          "line": 25,
+          "text": "    \"http://www.hancom.co.kr/hwpml/2011/paragraph\": \"hp\","
+        },
+        {
+          "line": 26,
+          "text": "    \"http://www.hancom.co.kr/hwpml/2011/section\": \"hs\","
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/fix_namespaces.py",
+      "blob_sha1": "bbc6503baff32d6e2474c04214a7e543f8432e97",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "edit_hwpx",
+      "pathlib",
+      "re",
+      "sys",
+      "zipfile"
+    ],
+    "docstring": "Normalize HWPX namespace prefixes and header itemCnt values.\n\nSome generators serialize OWPML XML with automatic prefixes such as ns0/ns1.\nHancom usually accepts namespace URIs, but standard hh/hc/hp/hs prefixes are\nmore compatible with viewers and make diffs easier to inspect.",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/finalize_hwpx.py",
+    "destination": "skills/hwpx/scripts/finalize_hwpx.py",
+    "bytes": 11079,
+    "sha256": "c21dce23bc11918951ce55e8e11e02d938cbc37c5829357b5dd8c7439b9ed8dc",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 30,
+          "text": "    \"hp\": \"http://www.hancom.co.kr/hwpml/2011/paragraph\","
+        },
+        {
+          "line": 31,
+          "text": "    \"hs\": \"http://www.hancom.co.kr/hwpml/2011/section\","
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/finalize_hwpx.py",
+      "blob_sha1": "5ad5ffd54762641698e4f875e6a70bad501afb3e",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "edit_hwpx",
+      "hancom_com",
+      "json",
+      "lxml",
+      "math",
+      "os",
+      "pathlib",
+      "re",
+      "sys",
+      "typing",
+      "win32com.client",
+      "zipfile"
+    ],
+    "docstring": "Finalize and quality-check an HWPX file after XML-level editing.\n\nThis tool intentionally reuses edit_hwpx.write_raw_preserving_zip() so unchanged\nZIP entries keep their original local headers and compressed payloads. That is\nimportant for form-preserving edits where a normal ZipFile rewrite can change\nmetadata that Hancom is sensitive to.",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/hancom_com.py",
+    "destination": "skills/hwpx/scripts/hancom_com.py",
+    "bytes": 2455,
+    "sha256": "6298aaad66e2ae94ec0ff22254699e66e3faac3b4d307face06498b23a38aa9a",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "contextlib",
+      "os",
+      "pathlib",
+      "win32api",
+      "win32com.client",
+      "win32security",
+      "win32service",
+      "winreg"
+    ],
+    "docstring": "Hancom COM preflight and ownership; never changes Windows/Codex permissions.",
+    "git_additions": []
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/gonmun_lint.py",
+    "destination": "skills/hwpx/scripts/gonmun_lint.py",
+    "bytes": 7437,
+    "sha256": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b",
+    "suffix": ".py",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/gonmun_lint.py",
+      "blob_sha1": "69bb5e5c47c153b95c3a0be94922266c92dc25b8",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "datetime",
+      "html",
+      "json",
+      "pathlib",
+      "re",
+      "sys",
+      "zipfile"
+    ],
+    "docstring": "공문서 작성법 자동 검수기.\n\n날짜, 시간, 금액, 붙임, 외국어 병기처럼 오탐이 비교적 적은 표기 규칙만\n정규식으로 점검한다. .hwpx 입력은 XML에서 텍스트를 추출해 검사한다.",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/hwpx_slots.py",
+    "destination": "skills/hwpx/scripts/hwpx_slots.py",
+    "bytes": 5777,
+    "sha256": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d",
+    "suffix": ".py",
+    "matches": {
+      "external_url": [
+        {
+          "line": 21,
+          "text": "    \"hp\": \"http://www.hancom.co.kr/hwpml/2011/paragraph\","
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/hwpx_slots.py",
+      "blob_sha1": "5cb744917aea152622030479ac97b4b9d8c83dc1",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "argparse",
+      "io",
+      "json",
+      "lxml",
+      "pathlib",
+      "typing",
+      "zipfile"
+    ],
+    "docstring": "List editable text slots in a HWPX template.\n\nThe output is intended to be filled back with scripts/edit_hwpx.py --slot-json.\nIt deliberately excludes container paragraphs that only wrap tables, pictures,\nor text boxes, because editing them creates overlapping text.",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/office/pack.py",
+    "destination": "skills/hwpx/scripts/office/pack.py",
+    "bytes": 2022,
+    "sha256": "07f20d46723bf7451d8088bf680daab67c02cffa2d0e6c5b8a5c79dca25580cf",
+    "suffix": ".py",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/office/pack.py",
+      "blob_sha1": "adbbaa5fb2d888d0c9884beebeb36f8b609ee188",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "os",
+      "pathlib",
+      "sys",
+      "zipfile"
+    ],
+    "docstring": "Pack a directory back into an HWPX (ZIP) file.\n\nThe mimetype file is stored as the first entry with ZIP_STORED (no compression),\nper OPC packaging conventions.\n\nUsage:\n    python pack.py input_dir/ output.hwpx",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/scripts/office/unpack.py",
+    "destination": "skills/hwpx/scripts/office/unpack.py",
+    "bytes": 2413,
+    "sha256": "13888a894d52ce2b8fdc72432bce1e3e8d78efeb214cbd5f4b87719ed40ef4e7",
+    "suffix": ".py",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "scripts/office/unpack.py",
+      "blob_sha1": "0e4c4c88c47291a51c4c08414b9de42e3e19d7b6",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "imports": [
+      "argparse",
+      "lxml",
+      "os",
+      "pathlib",
+      "sys",
+      "zipfile"
+    ],
+    "docstring": "Unpack an HWPX file into a directory.\n\nUsage:\n    python unpack.py input.hwpx output_dir/",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/hooks/protect_files.py",
+    "destination": ".claude/hooks/protect_files.py",
+    "bytes": 2383,
+    "sha256": "34def077dc67ea6f88fdab5d191e183bae4d2da7c1cc366b212087c57368632c",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "event_adapter",
+      "hwpdoc_config",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "sys"
+    ],
+    "docstring": "PreToolUse 훅: CLAUDE.md 금지 규칙을 강제한다.\n- knowledge/, docs/ 폴더의 기존 파일 덮어쓰기 차단 (원본 보존)\n- 신규 파일 생성은 허용 (파생물: md 변환본·index·템플릿 — 2026. 7. 8. 사용자 승인)\n- 파생물 화이트리스트(.md 한정)는 기존 파일이라도 갱신 허용 (2026. 7. 24. 사용자 승인)\n- 위험한 셸 명령 차단\nexit 0 = 허용, exit 2 = 차단 (stderr 메시지가 Claude에게 전달됨)",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/hooks/event_adapter.py",
+    "destination": ".claude/hooks/event_adapter.py",
+    "bytes": 10464,
+    "sha256": "805a1c0e714c0897aee0ca73640a48c096f5d334a7789269013414c0bdce2980",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "__future__",
+      "hwpdoc_config",
+      "json",
+      "ntpath",
+      "os",
+      "pathlib",
+      "protect_files",
+      "re",
+      "sys"
+    ],
+    "docstring": "Claude/Codex event decoding. No shell evaluation; malformed patches fail closed.\n\nThis is a tool policy adapter, not a filesystem security boundary.",
+    "git_additions": [
+      "9f3baca6c919b0abb7ab9da77b8e4328bc58818e chore: GPT 환경 연동 및 HWPX 실행기 정비"
+    ]
+  },
+  {
+    "source": ".claude/hooks/audit_log.py",
+    "destination": ".claude/hooks/audit_log.py",
+    "bytes": 1837,
+    "sha256": "64b176a7e86511af111865becf815d4565260211c39987f9600367ad0fef269a",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "datetime",
+      "event_adapter",
+      "hwpdoc_config",
+      "json",
+      "os",
+      "pathlib",
+      "sys"
+    ],
+    "docstring": "PostToolUse 훅: 파일 생성/수정을 logs/audit.jsonl 에 자동 기록.\nLLM에게 기록을 맡기지 않고 훅이 결정적으로 남긴다.",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/hooks/stop_validator.py",
+    "destination": ".claude/hooks/stop_validator.py",
+    "bytes": 4019,
+    "sha256": "28d76cde710c3b2dc43bb4e44d707291419db11150ec3200f3c205ed69cf73fa",
+    "suffix": ".py",
+    "matches": {},
+    "text_scanned": true,
+    "imports": [
+      "hwpdoc_config",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "sys"
+    ],
+    "docstring": "Stop 훅: Claude가 턴을 끝내기 전에 Validator 파이프라인을 실행한다.\n- 검증 실패 → 차단(block)하여 Claude가 스스로 고치게 함 (Self-Correction 루프)\n- 같은 세션에서 2회 차단했으면 → 더 이상 막지 않고 사용자 보고로 전환 (CLAUDE.md 원칙)\n- 검증기 부재/시간 초과/미검사 상태는 미확인으로 보고한다.\n\nvalidate_pipeline.py 계약: output/ 최신 HWPX를 검사하고\n  exit 0 = 통과 / exit 1 = 실패(사유를 stdout에 출력)",
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/SKILL.md",
+    "destination": "skills/hwpx/SKILL.md",
+    "bytes": 8021,
+    "sha256": "7a58ee571b3ac81fcb4b9d4d33821a197b663375ce2c8fb9e5f1c5366d4cc656",
+    "suffix": ".md",
+    "matches": {
+      "attribution": [
+        {
+          "line": 17,
+          "text": "5. `.hwp` 원본 읽기·변환과 `hwpx-fallback` 진입 조건은 프로젝트 지침을 따른다. `.hwp` 결과물을 생성하거나 원본을 덮어쓰지 않는다. 폴백 비교가 필요한 경우에만 [기능 비교](references/jkf87-hwpx-skill-comparison.md)를 읽는다."
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "SKILL.md",
+      "blob_sha1": "2264f38aeaa6fa5fd54bfb118bf03eb4e6283944",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/references/workflow.md",
+    "destination": "skills/hwpx/references/workflow.md",
+    "bytes": 10381,
+    "sha256": "a6a7bed8c411b81d80ba5549f35b5b03752903bc1704a0bdfde96dd272abf359",
+    "suffix": ".md",
+    "matches": {},
+    "text_scanned": true,
+    "git_additions": [
+      "61d54021c59243d485fefbfecff66cd42e4161d6 feat: plugin distribution workflow and runtime"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/references/editing-details.md",
+    "destination": "skills/hwpx/references/editing-details.md",
+    "bytes": 10383,
+    "sha256": "74530af631b48bde49c94fcd10591bb7be090d93683cf3fd482f82996dae5808",
+    "suffix": ".md",
+    "matches": {},
+    "text_scanned": true,
+    "git_additions": [
+      "9f3baca6c919b0abb7ab9da77b8e4328bc58818e chore: GPT 환경 연동 및 HWPX 실행기 정비"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/references/xml-authoring.md",
+    "destination": "skills/hwpx/references/xml-authoring.md",
+    "bytes": 18164,
+    "sha256": "e854be907e5c3ff1cd6b000107e4fb597e94f9e58a8dcd7d58366dbd89380a5e",
+    "suffix": ".md",
+    "matches": {
+      "external_url": [
+        {
+          "line": 55,
+          "text": "<hs:sec xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\""
+        },
+        {
+          "line": 56,
+          "text": "        xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\">"
+        }
+      ]
+    },
+    "text_scanned": true,
+    "git_additions": [
+      "9f3baca6c919b0abb7ab9da77b8e4328bc58818e chore: GPT 환경 연동 및 HWPX 실행기 정비"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/references/hwpx-format.md",
+    "destination": "skills/hwpx/references/hwpx-format.md",
+    "bytes": 11424,
+    "sha256": "b0b16ca23ace219bb371b170546dfcfa435ce3714a909e7932ba62e5fa30dcf9",
+    "suffix": ".md",
+    "matches": {
+      "external_url": [
+        {
+          "line": 40,
+          "text": "| `hp` | `http://www.hancom.co.kr/hwpml/2011/paragraph` | 문단, 런, 텍스트, 표, 컨트롤 |"
+        },
+        {
+          "line": 41,
+          "text": "| `hs` | `http://www.hancom.co.kr/hwpml/2011/section` | 섹션 루트 |"
+        },
+        {
+          "line": 42,
+          "text": "| `hc` | `http://www.hancom.co.kr/hwpml/2011/core` | 핵심 데이터 타입 |"
+        },
+        {
+          "line": 43,
+          "text": "| `hh` | `http://www.hancom.co.kr/hwpml/2011/head` | 헤더 (스타일/속성 정의) |"
+        },
+        {
+          "line": 44,
+          "text": "| `ha` | `http://www.hancom.co.kr/hwpml/2011/app` | 앱 메타데이터 |"
+        },
+        {
+          "line": 45,
+          "text": "| `hp10` | `http://www.hancom.co.kr/hwpml/2016/paragraph` | 확장 문단 요소 |"
+        },
+        {
+          "line": 46,
+          "text": "| `hpf` | `http://www.hancom.co.kr/schema/2011/hpf` | 매니페스트 (content.hpf) |"
+        },
+        {
+          "line": 47,
+          "text": "| `opf` | `http://www.idpf.org/2007/opf/` | OPF 패키지 |"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "references/hwpx-format.md",
+      "blob_sha1": "36fda27b6b41348c2e0a22071ab48f7e880882b2",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/references/jkf87-hwpx-skill-comparison.md",
+    "destination": "skills/hwpx/references/jkf87-hwpx-skill-comparison.md",
+    "bytes": 2159,
+    "sha256": "3fb06fb7cfc74a1ba5b515af776b475aa93c58c1b67e32fb9416089ccfeb4da5",
+    "suffix": ".md",
+    "matches": {
+      "external_url": [
+        {
+          "line": 3,
+          "text": "비교 대상: `https://github.com/jkf87/hwpx-skill` main, `389dd7b`"
+        }
+      ],
+      "attribution": [
+        {
+          "line": 1,
+          "text": "# jkf87/hwpx-skill 비교 메모"
+        },
+        {
+          "line": 3,
+          "text": "비교 대상: `https://github.com/jkf87/hwpx-skill` main, `389dd7b`"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "references/jkf87-hwpx-skill-comparison.md",
+      "blob_sha1": "e40f442baa129c719e9e3947b244f76d876b7686",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": "distribution/requirements-base.txt",
+    "destination": "distribution/requirements-base.txt",
+    "bytes": 111,
+    "sha256": "7f5da33ac3970bb285f212352cba8b68c6277054d35b887b09ec4f6ed145d80c",
+    "suffix": ".txt",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/requirements-windows.txt",
+    "destination": "distribution/requirements-windows.txt",
+    "bytes": 38,
+    "sha256": "db57dac3ec46d6427bd3cb53f03487aef1a0f94b165e5c719f48c16f852a651e",
+    "suffix": ".txt",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/requirements-school-data.txt",
+    "destination": "distribution/requirements-school-data.txt",
+    "bytes": 46,
+    "sha256": "79cbedd0af55d9ebdef87c8869e9d98e6302257a53b6ed2498843cb09beb67d9",
+    "suffix": ".txt",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/requirements-visual.txt",
+    "destination": "distribution/requirements-visual.txt",
+    "bytes": 227,
+    "sha256": "0f4923868042f1e21413935641e67953270cdc4631123f1728ca9ee99126283d",
+    "suffix": ".txt",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/README.md",
+    "destination": "distribution/README.md",
+    "bytes": 14703,
+    "sha256": "6fd9e18dcf4d4d552a234db52dd2cc1e507020049bbc3460f2caaa4fa3cd5b1d",
+    "suffix": ".md",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/CHANGELOG.md",
+    "destination": "distribution/CHANGELOG.md",
+    "bytes": 2026,
+    "sha256": "d0e8aa1a082a2e7fa948c1a93fd5465dd70d802af34c5d57694bcb790ea044a2",
+    "suffix": ".md",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/report/header.xml",
+    "destination": "skills/hwpx/templates/report/header.xml",
+    "bytes": 76187,
+    "sha256": "8a69a1a16ea758b0f9d2392f64ce53d4bb986326fb8b80d4ef597d0282222e59",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hh:head xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hp10=\"http://www.hancom.co.kr/hwpml/2016/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hhs=\"http://www.hancom.co.kr/hwpml/2011/history\" xmlns:hm=\"http://www.hancom.co.kr/hwpml/2011/master-page\" xmlns:hp"
+        },
+        {
+          "line": 340,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 369,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 398,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 427,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 456,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 485,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 514,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 543,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 572,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 601,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 630,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 659,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 688,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 717,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 746,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 775,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 801,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 811,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 837,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 847,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 873,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 883,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 912,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 941,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 970,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 999,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 1028,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 1057,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 1086,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 1115,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 1144,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/report/header.xml",
+      "blob_sha1": "d7938285f6ee4cd238d227e42afa10d8c82cf400",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "^1.",
+      "^2.",
+      "^3)",
+      "^4)",
+      "(^5)",
+      "(^6)",
+      "^7",
+      "^8",
+      "{\"name\":\"\"}"
+    ],
+    "xml_attributes": [
+      "face=함초롬돋움",
+      "face=함초롬바탕",
+      "name=각주",
+      "name=개요 1",
+      "name=개요 10",
+      "name=개요 2",
+      "name=개요 3",
+      "name=개요 4",
+      "name=개요 5",
+      "name=개요 6",
+      "name=개요 7",
+      "name=개요 8",
+      "name=개요 9",
+      "name=머리말",
+      "name=메모",
+      "name=미주",
+      "name=바탕글",
+      "name=본문",
+      "name=줄 번호",
+      "name=쪽 번호",
+      "name=차례 1",
+      "name=차례 2",
+      "name=차례 3",
+      "name=차례 제목",
+      "name=캡션",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/HwpUnitChar",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/paragraph"
+    ],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/report/section0.xml",
+    "destination": "skills/hwpx/templates/report/section0.xml",
+    "bytes": 10871,
+    "sha256": "84398f74aad8b5e8a244b906f73a5865fc8414c3c3dbfcd527b623bf0bd4d791",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hs:sec xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\" xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:hp10=\"http://www.hancom.co.kr/hwpml/2016/paragraph\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hhs=\"http://www.hancom.co.kr/hwpml/2011/history\" xmlns:hm=\"http://www.hancom.co.kr/hwpml/2011/master-page\" xmlns:hpf"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/report/section0.xml",
+      "blob_sha1": "3b5e5692cf859268d9c758d2526c304938305b9b",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "{{보고서 제목}}",
+      "{{작성일: YYYY년 MM월 DD일}}",
+      "{{작성자/부서}}",
+      "1. {{섹션 제목}}",
+      "{{본문 내용}}",
+      "2. {{섹션 제목}}",
+      "{{본문 내용}}",
+      "{{표 삽입 위치}}",
+      "3. {{결론}}",
+      "{{결론 내용}}"
+    ],
+    "xml_attributes": [],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/proposal/header.xml",
+    "destination": "skills/hwpx/templates/proposal/header.xml",
+    "bytes": 66427,
+    "sha256": "df9697fedc90023f72cdd4ae0422f32689d113bb3aff120a8dfd8e51e4d40280",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hh:head xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hp10=\"http://www.hancom.co.kr/hwpml/2016/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hhs=\"http://www.hancom.co.kr/hwpml/2011/history\" xmlns:hm=\"http://www.hancom.co.kr/hwpml/2011/master-page\" xmlns:hp"
+        },
+        {
+          "line": 323,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 352,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 381,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 410,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 439,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 468,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 497,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 526,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 555,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 584,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 613,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 642,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 671,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 700,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 729,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 758,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 784,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 794,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 820,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 830,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 856,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 866,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 895,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 924,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 953,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 982,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/proposal/header.xml",
+      "blob_sha1": "71d5b743c0ee627aae50b704474d2597ded91825",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "^1.",
+      "^2.",
+      "^3)",
+      "^4)",
+      "(^5)",
+      "(^6)",
+      "^7",
+      "^8",
+      "{\"name\":\"\"}"
+    ],
+    "xml_attributes": [
+      "face=함초롬돋움",
+      "face=함초롬바탕",
+      "name=각주",
+      "name=개요 1",
+      "name=개요 10",
+      "name=개요 2",
+      "name=개요 3",
+      "name=개요 4",
+      "name=개요 5",
+      "name=개요 6",
+      "name=개요 7",
+      "name=개요 8",
+      "name=개요 9",
+      "name=머리말",
+      "name=메모",
+      "name=미주",
+      "name=바탕글",
+      "name=본문",
+      "name=줄 번호",
+      "name=쪽 번호",
+      "name=차례 1",
+      "name=차례 2",
+      "name=차례 3",
+      "name=차례 제목",
+      "name=캡션",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/HwpUnitChar",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/paragraph"
+    ],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": "distribution/assets/templates/proposal/section0.xml",
+    "destination": "skills/hwpx/templates/proposal/section0.xml",
+    "bytes": 17588,
+    "sha256": "6f0106960eed89d31f41c2ea69943e53e6cfb71600bc4a64c98b38fa65e85d41",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hs:sec xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/proposal/section0.xml",
+      "blob_sha1": "7dc599762d581efd6e7bbd4178342cc0a06f8ab5",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "Ⅰ",
+      "사업 개요",
+      "1",
+      "사업명",
+      "○ 사업명: {{사업명}}",
+      "○ 사업기간: {{사업기간}}",
+      "- {{단계별 사업기간}}",
+      "○ 소요예산: {{소요예산}}",
+      "○ 계약방법: {{계약방법}}",
+      "2",
+      "추진 배경",
+      "○ {{추진 배경 1}}",
+      "○ {{추진 배경 2}}",
+      "○ {{추진 배경 3}}",
+      "○ {{추진 배경 4}}",
+      "3",
+      "추진 근거",
+      "○ {{추진 근거 1}}",
+      "○ {{추진 근거 2}}",
+      "○ {{추진 근거 3}}",
+      "○ {{추진 근거 4}}",
+      "○ {{추진 근거 5}}",
+      "○ {{추진 근거 6}}",
+      "○ {{추진 근거 7}}",
+      "- 1 -"
+    ],
+    "xml_attributes": []
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/gonmun/header.xml",
+    "destination": "skills/hwpx/templates/gonmun/header.xml",
+    "bytes": 61551,
+    "sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hh:head xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" version=\"1.5\" secCnt=\"1\">"
+        },
+        {
+          "line": 259,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 288,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 317,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 346,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 375,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 404,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 433,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 462,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 491,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 520,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 549,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 578,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 607,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 636,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 665,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 694,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 720,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 730,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 756,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 766,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 792,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 802,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 831,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 860,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 889,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 918,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/gonmun/header.xml",
+      "blob_sha1": "8d6fa0bae1ef531c95c60c618e1047d81168c42c",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "^1.",
+      "^2.",
+      "^3)",
+      "^4)",
+      "(^5)",
+      "(^6)",
+      "^7",
+      "^8",
+      "{\"name\":\"\"}"
+    ],
+    "xml_attributes": [
+      "face=함초롬돋움",
+      "face=함초롬바탕",
+      "name=각주",
+      "name=개요 1",
+      "name=개요 10",
+      "name=개요 2",
+      "name=개요 3",
+      "name=개요 4",
+      "name=개요 5",
+      "name=개요 6",
+      "name=개요 7",
+      "name=개요 8",
+      "name=개요 9",
+      "name=머리말",
+      "name=메모",
+      "name=미주",
+      "name=바탕글",
+      "name=본문",
+      "name=줄 번호",
+      "name=쪽 번호",
+      "name=차례 1",
+      "name=차례 2",
+      "name=차례 3",
+      "name=차례 제목",
+      "name=캡션",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/HwpUnitChar",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/paragraph"
+    ],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/gonmun/section0.xml",
+    "destination": "skills/hwpx/templates/gonmun/section0.xml",
+    "bytes": 8851,
+    "sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hs:sec xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/gonmun/section0.xml",
+      "blob_sha1": "ac1f3685389f4326696d7edb64f62fb677d16826",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "{{기관명}}",
+      "수 신 : {{수신자}}",
+      "(경유)   {{경유}}",
+      "제 목   {{제목}}",
+      "1.  {{본문1}}",
+      "2.  {{본문2}}",
+      "- 아 래 -",
+      "{{표 또는 상세내용}}",
+      "끝.",
+      "{{직위 성명}}",
+      "────────────────────────────────────────────────",
+      "담당                                              협조 :",
+      "시행 : {{시행번호}} ( {{시행일자}} )        접수 (          )",
+      "우 {{우편번호}} / 주소  {{주소}}  /  {{홈페이지}}",
+      "전화 {{전화번호}}      전송 {{팩스번호}}  /  {{이메일}}  /  공개"
+    ],
+    "xml_attributes": [],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/minutes/header.xml",
+    "destination": "skills/hwpx/templates/minutes/header.xml",
+    "bytes": 61297,
+    "sha256": "792ebf5d6c15a2f0b77f59f7e93dd38e137fa5540d374e1d08948edab22a6ebe",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hh:head xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hp10=\"http://www.hancom.co.kr/hwpml/2016/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hhs=\"http://www.hancom.co.kr/hwpml/2011/history\" xmlns:hm=\"http://www.hancom.co.kr/hwpml/2011/master-page\" xmlns:hp"
+        },
+        {
+          "line": 248,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 277,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 306,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 335,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 364,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 393,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 422,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 451,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 480,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 509,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 538,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 567,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 596,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 625,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 654,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 683,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 709,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 719,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 745,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 755,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 781,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 791,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 820,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 849,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 878,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 907,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/minutes/header.xml",
+      "blob_sha1": "0127923e8b512858cc9370a5adfaa9671e0e6391",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "^1.",
+      "^2.",
+      "^3)",
+      "^4)",
+      "(^5)",
+      "(^6)",
+      "^7",
+      "^8",
+      "{\"name\":\"\"}"
+    ],
+    "xml_attributes": [
+      "face=함초롬돋움",
+      "face=함초롬바탕",
+      "name=각주",
+      "name=개요 1",
+      "name=개요 10",
+      "name=개요 2",
+      "name=개요 3",
+      "name=개요 4",
+      "name=개요 5",
+      "name=개요 6",
+      "name=개요 7",
+      "name=개요 8",
+      "name=개요 9",
+      "name=머리말",
+      "name=메모",
+      "name=미주",
+      "name=바탕글",
+      "name=본문",
+      "name=줄 번호",
+      "name=쪽 번호",
+      "name=차례 1",
+      "name=차례 2",
+      "name=차례 3",
+      "name=차례 제목",
+      "name=캡션",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/HwpUnitChar",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/paragraph"
+    ],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/minutes/section0.xml",
+    "destination": "skills/hwpx/templates/minutes/section0.xml",
+    "bytes": 19551,
+    "sha256": "8551285931f934c0651fcd2ea9248cb70fd73f604116f6682a188c9184ae9fd6",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hs:sec xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:hp10=\"http://www.hancom.co.kr/hwpml/2016/paragraph\" xmlns:hhs=\"http://www.hancom.co.kr/hwpml/2011/history\" xmlns:hm=\"http://www.hancom.co.kr/hwpml/2011/master-page\" xmlns:hpf"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/minutes/section0.xml",
+      "blob_sha1": "1f2302e77cfcbb18eda96cdfe4c0e1eba10bcb56",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "{{회의록 제목}}",
+      "일시",
+      "{{YYYY년 MM월 DD일 HH:MM}}",
+      "장소",
+      "{{장소}}",
+      "참석자",
+      "{{참석자 목록}}",
+      "작성자",
+      "{{작성자}}",
+      "안건",
+      "{{안건 내용}}",
+      "논의 내용",
+      "{{논의 내용}}",
+      "결정 사항",
+      "{{결정 사항}}",
+      "향후 조치",
+      "{{향후 조치 사항}}"
+    ],
+    "xml_attributes": [],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/version.xml",
+    "destination": "skills/hwpx/templates/base/version.xml",
+    "bytes": 296,
+    "sha256": "4b65fc55a5bd8689fb70181ffe48d81823d49111148a49eb920e04c41317927f",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hv:HCFVersion xmlns:hv=\"http://www.hancom.co.kr/hwpml/2011/version\" tagetApplication=\"WORDPROCESSOR\" major=\"5\" minor=\"1\" micro=\"1\" buildNumber=\"0\" os=\"1\" xmlVersion=\"1.5\" application=\"Hancom Office Hangul\" appVersion=\"13, 0, 0, 1408 WIN32LEWindows_10\"/>"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/version.xml",
+      "blob_sha1": "dec9b2856dfe7ba4a7bb5b0f3c726beb526bfd9c",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [],
+    "xml_attributes": [],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/settings.xml",
+    "destination": "skills/hwpx/templates/base/settings.xml",
+    "bytes": 271,
+    "sha256": "f90d391be2730e1c1dbb4f6e439fbeb72ac4e8d47d8fb482ce82e2d152948adc",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<ha:HWPApplicationSetting xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:config=\"urn:oasis:names:tc:opendocument:xmlns:config:1.0\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/settings.xml",
+      "blob_sha1": "785c70a05d9f898b94e926955a066626c382a938",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [],
+    "xml_attributes": [],
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/META-INF/manifest.xml",
+    "destination": "skills/hwpx/templates/base/META-INF/manifest.xml",
+    "bytes": 134,
+    "sha256": "2b4b155c1bb6a9ccc212fef113c4831d2f558e67cf1260eb314ce54f26fd32ea",
+    "suffix": ".xml",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/META-INF/manifest.xml",
+      "blob_sha1": "614e8716d9e60b6ff9a80790920b19c03e8df98e",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "xml_text": [],
+    "xml_attributes": [],
+    "git_additions": [
+      "1f9e1d8bc410b406f031e978c218ce4f6fce0cd1 fix(hwpx): 베이스 템플릿 11개 파일 완비"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/META-INF/container.xml",
+    "destination": "skills/hwpx/templates/base/META-INF/container.xml",
+    "bytes": 475,
+    "sha256": "5109d3a9249ec1058177fedab574c5d9616058aa92ebefcd33249ebb36a20f61",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 1,
+          "text": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?><ocf:container xmlns:ocf=\"urn:oasis:names:tc:opendocument:xmlns:container\" xmlns:hpf=\"http://www.hancom.co.kr/schema/2011/hpf\"><ocf:rootfiles><ocf:rootfile full-path=\"Contents/content.hpf\" media-type=\"application/hwpml-package+xml\"/><ocf:rootfile full-path=\"Preview/PrvText.txt\" media-type=\"text/plain\"/><ocf:rootfile full-path=\"META-INF/container.rdf\" media-type=\"application/rdf+xml\"/></ocf:r"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/META-INF/container.xml",
+      "blob_sha1": "eab3d58b87a3104e4636508c0447c88ab137e98d",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "xml_text": [],
+    "xml_attributes": [],
+    "git_additions": [
+      "1f9e1d8bc410b406f031e978c218ce4f6fce0cd1 fix(hwpx): 베이스 템플릿 11개 파일 완비"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/META-INF/container.rdf",
+    "destination": "skills/hwpx/templates/base/META-INF/container.rdf",
+    "bytes": 867,
+    "sha256": "0cfd814c20595c841e48e62fbf7591829f13c177fa92af634c8199f85ecf3a89",
+    "suffix": ".rdf",
+    "matches": {
+      "external_url": [
+        {
+          "line": 1,
+          "text": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?><rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:Description rdf:about=\"\"><ns0:hasPart xmlns:ns0=\"http://www.hancom.co.kr/hwpml/2016/meta/pkg#\" rdf:resource=\"Contents/header.xml\"/></rdf:Description><rdf:Description rdf:about=\"Contents/header.xml\"><rdf:type rdf:resource=\"http://www.hancom.co.kr/hwpml/2016/meta/pkg#HeaderFile\"/></rdf:Description><rdf:Description rdf:about="
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/META-INF/container.rdf",
+      "blob_sha1": "8df472d4c4d1e5c76908efaf4628bf14346bd271",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "xml_text": [],
+    "xml_attributes": [
+      "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource=http://www.hancom.co.kr/hwpml/2016/meta/pkg#Document",
+      "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource=http://www.hancom.co.kr/hwpml/2016/meta/pkg#HeaderFile",
+      "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource=http://www.hancom.co.kr/hwpml/2016/meta/pkg#SectionFile"
+    ],
+    "git_additions": [
+      "1f9e1d8bc410b406f031e978c218ce4f6fce0cd1 fix(hwpx): 베이스 템플릿 11개 파일 완비"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/mimetype",
+    "destination": "skills/hwpx/templates/base/mimetype",
+    "bytes": 19,
+    "sha256": "5ab5230b5af04f78947736bf8dd1a269aa684e234f7f4a392efb85289d1655c2",
+    "suffix": "",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/mimetype",
+      "blob_sha1": "24e7ded4031f4a792987c3f953d41777191620e0",
+      "same_lf_blob": true
+    },
+    "text_scanned": true,
+    "git_additions": [
+      "2d2e1d7b0da4bb1e56db9159d4044647a1df0c4e init: git 저장소 초기화 — 스킬·지식베이스·산출물 버전 관리 시작"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/Contents/section0.xml",
+    "destination": "skills/hwpx/templates/base/Contents/section0.xml",
+    "bytes": 8851,
+    "sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hs:sec xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/Contents/section0.xml",
+      "blob_sha1": "e49afd10be0f21a96c8ed7283e23d1c966494069",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "{{기관명}}",
+      "수 신 : {{수신자}}",
+      "(경유)   {{경유}}",
+      "제 목   {{제목}}",
+      "1.  {{본문1}}",
+      "2.  {{본문2}}",
+      "- 아 래 -",
+      "{{표 또는 상세내용}}",
+      "끝.",
+      "{{직위 성명}}",
+      "────────────────────────────────────────────────",
+      "담당                                              협조 :",
+      "시행 : {{시행번호}} ( {{시행일자}} )        접수 (          )",
+      "우 {{우편번호}} / 주소  {{주소}}  /  {{홈페이지}}",
+      "전화 {{전화번호}}      전송 {{팩스번호}}  /  {{이메일}}  /  공개"
+    ],
+    "xml_attributes": [],
+    "git_additions": [
+      "1f9e1d8bc410b406f031e978c218ce4f6fce0cd1 fix(hwpx): 베이스 템플릿 11개 파일 완비"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/Contents/header.xml",
+    "destination": "skills/hwpx/templates/base/Contents/header.xml",
+    "bytes": 61551,
+    "sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919",
+    "suffix": ".xml",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<hh:head xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" version=\"1.5\" secCnt=\"1\">"
+        },
+        {
+          "line": 259,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 288,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 317,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 346,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 375,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 404,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 433,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 462,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 491,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 520,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 549,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 578,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 607,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 636,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 665,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 694,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 720,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 730,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 756,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 766,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 792,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/paragraph\">"
+        },
+        {
+          "line": 802,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 831,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 860,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 889,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        },
+        {
+          "line": 918,
+          "text": "          <hp:case hp:required-namespace=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\">"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/Contents/header.xml",
+      "blob_sha1": "242cc5968a5740fd988eba6dcaab34e66e67286c",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "^1.",
+      "^2.",
+      "^3)",
+      "^4)",
+      "(^5)",
+      "(^6)",
+      "^7",
+      "^8",
+      "{\"name\":\"\"}"
+    ],
+    "xml_attributes": [
+      "face=함초롬돋움",
+      "face=함초롬바탕",
+      "name=각주",
+      "name=개요 1",
+      "name=개요 10",
+      "name=개요 2",
+      "name=개요 3",
+      "name=개요 4",
+      "name=개요 5",
+      "name=개요 6",
+      "name=개요 7",
+      "name=개요 8",
+      "name=개요 9",
+      "name=머리말",
+      "name=메모",
+      "name=미주",
+      "name=바탕글",
+      "name=본문",
+      "name=줄 번호",
+      "name=쪽 번호",
+      "name=차례 1",
+      "name=차례 2",
+      "name=차례 3",
+      "name=차례 제목",
+      "name=캡션",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/HwpUnitChar",
+      "{http://www.hancom.co.kr/hwpml/2011/paragraph}required-namespace=http://www.hancom.co.kr/hwpml/2016/paragraph"
+    ],
+    "git_additions": [
+      "1f9e1d8bc410b406f031e978c218ce4f6fce0cd1 fix(hwpx): 베이스 템플릿 11개 파일 완비"
+    ]
+  },
+  {
+    "source": "distribution/assets/templates/base/Contents/content.hpf",
+    "destination": "skills/hwpx/templates/base/Contents/content.hpf",
+    "bytes": 1700,
+    "sha256": "cfa774ab3c0f6701d13b7fcf3f4f44a903e4c57afc5a12165ee3dfff8a4f1665",
+    "suffix": ".hpf",
+    "matches": {
+      "external_url": [
+        {
+          "line": 2,
+          "text": "<opf:package xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:hp10=\"http://www.hancom.co.kr/hwpml/2016/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hhs=\"http://www.hancom.co.kr/hwpml/2011/history\" xmlns:hm=\"http://www.hancom.co.kr/hwpml/2011/master-page\" xmln"
+        }
+      ]
+    },
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/Contents/content.hpf",
+      "blob_sha1": "9c5c09fd73de6e5244faa71277fae03fe7405b9a",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "xml_text": [
+      "ko"
+    ],
+    "xml_attributes": []
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/Preview/PrvText.txt",
+    "destination": "skills/hwpx/templates/base/Preview/PrvText.txt",
+    "bytes": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "suffix": ".txt",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/Preview/PrvText.txt",
+      "blob_sha1": "d3f5a12faa99758192ecc4ed3fc22c9249232e86",
+      "same_lf_blob": false
+    },
+    "text_scanned": true,
+    "git_additions": [
+      "1f9e1d8bc410b406f031e978c218ce4f6fce0cd1 fix(hwpx): 베이스 템플릿 11개 파일 완비"
+    ]
+  },
+  {
+    "source": ".claude/skills/hwpx/templates/base/Preview/PrvImage.png",
+    "destination": "skills/hwpx/templates/base/Preview/PrvImage.png",
+    "bytes": 4485,
+    "sha256": "199421054da7920d8bf8974afad536a799efdb85bc64b33aaaaed35223b90efd",
+    "suffix": ".png",
+    "matches": {},
+    "upstream": {
+      "tree": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "path": "templates/base/Preview/PrvImage.png",
+      "blob_sha1": "b07d86f219ae23a7e1faac41d3e92c0edfef9602",
+      "same_lf_blob": false
+    },
+    "png_chunks": [
+      "IHDR",
+      "sRGB",
+      "gAMA",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "git_additions": [
+      "1f9e1d8bc410b406f031e978c218ce4f6fce0cd1 fix(hwpx): 베이스 템플릿 11개 파일 완비"
+    ]
+  },
+  {
+    "source": "distribution/codex-plugin.json",
+    "destination": ".codex-plugin/plugin.json",
+    "bytes": 828,
+    "sha256": "f4db0eb34044a2ae877cbe442faaa7ca91d837293e19410f09bb691b972aed43",
+    "suffix": ".json",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/claude-plugin.json",
+    "destination": ".claude-plugin/plugin.json",
+    "bytes": 177,
+    "sha256": "c389828ebe8c40d4f1e10edfd754199dbc06502b006c9c033ee8b0ce087906f6",
+    "suffix": ".json",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/AGPL-3.0.txt",
+    "destination": "LICENSE",
+    "bytes": 34520,
+    "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6",
+    "suffix": ".txt",
+    "matches": {
+      "external_url": [
+        {
+          "line": 4,
+          "text": " Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>"
+        },
+        {
+          "line": 646,
+          "text": "    along with this program.  If not, see <http://www.gnu.org/licenses/>."
+        },
+        {
+          "line": 661,
+          "text": "<http://www.gnu.org/licenses/>."
+        }
+      ],
+      "attribution": [
+        {
+          "line": 4,
+          "text": " Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>"
+        },
+        {
+          "line": 28,
+          "text": "with two steps: (1) assert copyright on the software, and (2) offer"
+        },
+        {
+          "line": 65,
+          "text": "  \"Copyright\" also means copyright-like laws that apply to other kinds of"
+        },
+        {
+          "line": 68,
+          "text": "  \"The Program\" refers to any copyrightable work licensed under this"
+        },
+        {
+          "line": 73,
+          "text": "in a fashion requiring copyright permission, other than the making of an"
+        },
+        {
+          "line": 82,
+          "text": "infringement under applicable copyright law, except executing it on a"
+        },
+        {
+          "line": 93,
+          "text": "feature that (1) displays an appropriate copyright notice, and (2)"
+        },
+        {
+          "line": 145,
+          "text": "copyright on the Program, and are irrevocable provided the stated"
+        },
+        {
+          "line": 150,
+          "text": "rights of fair use or other equivalent, as provided by copyright law."
+        },
+        {
+          "line": 158,
+          "text": "not control copyright.  Those thus making or running the covered works"
+        },
+        {
+          "line": 161,
+          "text": "your copyrighted material outside their relationship with you."
+        },
+        {
+          "line": 171,
+          "text": "11 of the WIPO copyright treaty adopted on 20 December 1996, or"
+        },
+        {
+          "line": 187,
+          "text": "appropriately publish on each copy an appropriate copyright notice;"
+        },
+        {
+          "line": 227,
+          "text": "\"aggregate\" if the compilation and its resulting copyright are not"
+        },
+        {
+          "line": 347,
+          "text": "for which you have or can give appropriate copyright permission."
+        },
+        {
+          "line": 350,
+          "text": "add to a covered work, you may (if authorized by the copyright holders of"
+        },
+        {
+          "line": 404,
+          "text": "license from a particular copyright holder is reinstated (a)"
+        },
+        {
+          "line": 405,
+          "text": "provisionally, unless and until the copyright holder explicitly and"
+        },
+        {
+          "line": 406,
+          "text": "finally terminates your license, and (b) permanently, if the copyright"
+        },
+        {
+          "line": 410,
+          "text": "  Moreover, your license from a particular copyright holder is"
+        },
+        {
+          "line": 411,
+          "text": "reinstated permanently if the copyright holder notifies you of the"
+        },
+        {
+          "line": 414,
+          "text": "copyright holder, and you cure the violation prior to 30 days after"
+        },
+        {
+          "line": 430,
+          "text": "modify any covered work.  These actions infringe copyright if you do"
+        },
+        {
+          "line": 461,
+          "text": "  A \"contributor\" is a copyright holder who authorizes use under this"
+        },
+        {
+          "line": 584,
+          "text": "author or copyright holder as a result of your choosing to follow a"
+        },
+        {
+          "line": 590,
+          "text": "APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT"
+        },
+        {
+          "line": 601,
+          "text": "WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS"
+        },
+        {
+          "line": 630,
+          "text": "the \"copyright\" line and a pointer to where the full notice is found."
+        },
+        {
+          "line": 633,
+          "text": "    Copyright (C) <year>  <name of author>"
+        },
+        {
+          "line": 659,
+          "text": "if any, to sign a \"copyright disclaimer\" for the program, if necessary."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/Canine89-MIT.txt",
+    "destination": "licenses/Canine89-MIT.txt",
+    "bytes": 1078,
+    "sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 3,
+          "text": "Copyright (c) Canine89"
+        },
+        {
+          "line": 11,
+          "text": "The above copyright notice and this permission notice shall be included in all copies or substantial"
+        },
+        {
+          "line": 16,
+          "text": "EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/CHANGES.md",
+    "destination": "CHANGES.md",
+    "bytes": 1071,
+    "sha256": "23c7a5df8845483d5e231a6b4650a2c0d3134ec0825f7f1d3615a84ddc89969a",
+    "suffix": ".md",
+    "matches": {
+      "attribution": [
+        {
+          "line": 5,
+          "text": "이 배포는 Canine89/hwpxskill 상류 원본 그대로가 아닌 teacher_doc용 수정·통합본이다. 원래 파일의 저작권 고지는 유지한다."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
+    "destination": "licenses/dependencies/et-xmlfile/LICENCE.python",
+    "bytes": 14688,
+    "sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2",
+    "suffix": ".python",
+    "matches": {
+      "external_url": [
+        {
+          "line": 26,
+          "text": "Mathematisch Centrum (CWI, see https://www.cwi.nl) in the Netherlands"
+        },
+        {
+          "line": 31,
+          "text": "National Research Initiatives (CNRI, see https://www.cnri.reston.va.us)"
+        },
+        {
+          "line": 39,
+          "text": "https://www.python.org/psf/) was formed, a non-profit organization"
+        },
+        {
+          "line": 43,
+          "text": "All Python releases are Open Source (see https://opensource.org for"
+        },
+        {
+          "line": 184,
+          "text": "http://www.pythonlabs.com/logos.html may be used according to the"
+        },
+        {
+          "line": 216,
+          "text": "using the following URL: http://hdl.handle.net/1895.22/1013\"."
+        }
+      ],
+      "attribution": [
+        {
+          "line": 1,
+          "text": "et_xml is licensed under the MIT license; see the file LICENCE for details."
+        },
+        {
+          "line": 3,
+          "text": "et_xml includes code from the Python standard library, which is licensed under"
+        },
+        {
+          "line": 4,
+          "text": "the Python license, a permissive open source license. The copyright and license"
+        },
+        {
+          "line": 20,
+          "text": "Copyright (c) 2001-present Python Software Foundation; All Rights Reserved"
+        },
+        {
+          "line": 83,
+          "text": "Python software and documentation are licensed under the"
+        },
+        {
+          "line": 87,
+          "text": "the documentation are dual licensed under the PSF License Version 2"
+        },
+        {
+          "line": 106,
+          "text": "provided, however, that PSF's License Agreement and PSF's notice of copyright,"
+        },
+        {
+          "line": 107,
+          "text": "i.e., \"Copyright (c) 2001-2024 Python Software Foundation; All Rights Reserved\""
+        },
+        {
+          "line": 206,
+          "text": "License Agreement and CNRI's notice of copyright, i.e., \"Copyright (c)"
+        },
+        {
+          "line": 241,
+          "text": "limitation the federal copyright law, and, to the extent such"
+        },
+        {
+          "line": 266,
+          "text": "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,"
+        },
+        {
+          "line": 267,
+          "text": "The Netherlands.  All rights reserved."
+        },
+        {
+          "line": 271,
+          "text": "provided that the above copyright notice appear in all copies and that"
+        },
+        {
+          "line": 272,
+          "text": "both that copyright notice and this permission notice appear in"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.rst",
+    "destination": "licenses/dependencies/et-xmlfile/LICENCE.rst",
+    "bytes": 1131,
+    "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+    "suffix": ".rst",
+    "matches": {
+      "attribution": [
+        {
+          "line": 4,
+          "text": "Copyright (c) 2010 openpyxl"
+        },
+        {
+          "line": 14,
+          "text": "The above copyright notice and this permission notice shall be included"
+        },
+        {
+          "line": 20,
+          "text": "IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/lxml/licenses/LICENSE.txt",
+    "destination": "licenses/dependencies/lxml/licenses/LICENSE.txt",
+    "bytes": 1517,
+    "sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 1,
+          "text": "Copyright (c) 2004 Infrae. All rights reserved."
+        },
+        {
+          "line": 7,
+          "text": "  1. Redistributions of source code must retain the above copyright"
+        },
+        {
+          "line": 10,
+          "text": "  2. Redistributions in binary form must reproduce the above copyright"
+        },
+        {
+          "line": 19,
+          "text": "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/lxml/licenses/LICENSES.txt",
+    "destination": "licenses/dependencies/lxml/licenses/LICENSES.txt",
+    "bytes": 1543,
+    "sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 1,
+          "text": "lxml is copyright Infrae and distributed under the BSD license (see"
+        },
+        {
+          "line": 8,
+          "text": "lxml.cssselect and lxml.html are copyright Ian Bicking and distributed"
+        },
+        {
+          "line": 11,
+          "text": "test.py, the test-runner script, is GPL and copyright Shuttleworth"
+        },
+        {
+          "line": 18,
+          "text": " * The (XML syntax) RelaxNG schema for schematron, copyright International"
+        },
+        {
+          "line": 23,
+          "text": "   xsl stylesheets, copyright Rick Jelliffe and Academia Sinica Computing"
+        },
+        {
+          "line": 27,
+          "text": "   and copyright the respective authors as noted (see "
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/openpyxl/LICENCE.rst",
+    "destination": "licenses/dependencies/openpyxl/LICENCE.rst",
+    "bytes": 1131,
+    "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+    "suffix": ".rst",
+    "matches": {
+      "attribution": [
+        {
+          "line": 4,
+          "text": "Copyright (c) 2010 openpyxl"
+        },
+        {
+          "line": 14,
+          "text": "The above copyright notice and this permission notice shall be included"
+        },
+        {
+          "line": 20,
+          "text": "IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/PyMuPDF/COPYING",
+    "destination": "licenses/dependencies/PyMuPDF/COPYING",
+    "bytes": 64,
+    "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b",
+    "suffix": "",
+    "matches": {},
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pypdf/licenses/LICENSE",
+    "destination": "licenses/dependencies/pypdf/licenses/LICENSE",
+    "bytes": 1605,
+    "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+    "suffix": "",
+    "matches": {
+      "email": [
+        {
+          "line": 2,
+          "text": "Some contributions copyright (c) 2007, Ashish Kulkarni <kulkarni.ashish@gmail.com>"
+        },
+        {
+          "line": 3,
+          "text": "Some contributions copyright (c) 2014, Steve Witham <switham_github@mac-guyver.com>"
+        }
+      ],
+      "attribution": [
+        {
+          "line": 1,
+          "text": "Copyright (c) 2006-2008, Mathieu Fenniak"
+        },
+        {
+          "line": 2,
+          "text": "Some contributions copyright (c) 2007, Ashish Kulkarni <kulkarni.ashish@gmail.com>"
+        },
+        {
+          "line": 3,
+          "text": "Some contributions copyright (c) 2014, Steve Witham <switham_github@mac-guyver.com>"
+        },
+        {
+          "line": 5,
+          "text": "All rights reserved."
+        },
+        {
+          "line": 11,
+          "text": "* Redistributions of source code must retain the above copyright notice,"
+        },
+        {
+          "line": 13,
+          "text": "* Redistributions in binary form must reproduce the above copyright notice,"
+        },
+        {
+          "line": 19,
+          "text": "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\""
+        },
+        {
+          "line": 22,
+          "text": "ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/python-hwpx/licenses/LICENSE",
+    "destination": "licenses/dependencies/python-hwpx/licenses/LICENSE",
+    "bytes": 9688,
+    "sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875",
+    "suffix": "",
+    "matches": {
+      "external_url": [
+        {
+          "line": 5,
+          "text": "http://www.apache.org/licenses/"
+        }
+      ],
+      "attribution": [
+        {
+          "line": 1,
+          "text": "Copyright 2025-2026 airmang (Dr. Wily)"
+        },
+        {
+          "line": 14,
+          "text": "   \"Licensor\" shall mean the copyright owner or entity authorized by"
+        },
+        {
+          "line": 15,
+          "text": "   the copyright owner that is granting the License."
+        },
+        {
+          "line": 39,
+          "text": "   copyright notice that is included in or attached to the work"
+        },
+        {
+          "line": 53,
+          "text": "   submitted to Licensor for inclusion in the Work by the copyright owner"
+        },
+        {
+          "line": 55,
+          "text": "   the copyright owner. For the purposes of this definition, \"submitted\""
+        },
+        {
+          "line": 62,
+          "text": "   designated in writing by the copyright owner as \"Not a Contribution.\""
+        },
+        {
+          "line": 68,
+          "text": "2. Grant of Copyright License. Subject to the terms and conditions of"
+        },
+        {
+          "line": 71,
+          "text": "   copyright license to reproduce, prepare Derivative Works of,"
+        },
+        {
+          "line": 103,
+          "text": "       that You distribute, all copyright, patent, trademark, and"
+        },
+        {
+          "line": 125,
+          "text": "   You may add Your own copyright statement to Your modifications and"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/python-hwpx/licenses/NOTICE",
+    "destination": "licenses/dependencies/python-hwpx/licenses/NOTICE",
+    "bytes": 2473,
+    "sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8",
+    "suffix": "",
+    "matches": {
+      "external_url": [
+        {
+          "line": 39,
+          "text": "neolord0/hwpxlib (https://github.com/neolord0/hwpxlib), licensed Apache-2.0."
+        }
+      ],
+      "attribution": [
+        {
+          "line": 2,
+          "text": "Copyright 2025-2026 airmang"
+        },
+        {
+          "line": 5,
+          "text": "Licensed under the Apache License, Version 2.0."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt",
+    "destination": "licenses/dependencies/pywin32/licenses/adodbapi/license.txt",
+    "bytes": 26925,
+    "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 4,
+          "text": " Copyright (C) 1991, 1999 Free Software Foundation, Inc."
+        },
+        {
+          "line": 48,
+          "text": "  We protect your rights with a two-step method: (1) we copyright the"
+        },
+        {
+          "line": 123,
+          "text": "program which contains a notice placed by the copyright holder or"
+        },
+        {
+          "line": 135,
+          "text": "copyright law: that is to say, a work containing the Library or a"
+        },
+        {
+          "line": 157,
+          "text": "appropriate copyright notice and disclaimer of warranty; keep intact"
+        },
+        {
+          "line": 284,
+          "text": "during execution displays copyright notices, you must include the"
+        },
+        {
+          "line": 285,
+          "text": "copyright notice for the Library among them, as well as a reference"
+        },
+        {
+          "line": 409,
+          "text": "certain countries either by patents or by copyrighted interfaces, the"
+        },
+        {
+          "line": 410,
+          "text": "original copyright holder who places the Library under this License may add"
+        },
+        {
+          "line": 432,
+          "text": "copyrighted by the Free Software Foundation, write to the Free"
+        },
+        {
+          "line": 442,
+          "text": "EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR"
+        },
+        {
+          "line": 451,
+          "text": "WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY"
+        },
+        {
+          "line": 474,
+          "text": "\"copyright\" line and a pointer to where the full notice is found."
+        },
+        {
+          "line": 477,
+          "text": "    Copyright (C) <year>  <name of author>"
+        },
+        {
+          "line": 496,
+          "text": "school, if any, to sign a \"copyright disclaimer\" for the library, if"
+        },
+        {
+          "line": 499,
+          "text": "  Yoyodyne, Inc., hereby disclaims all copyright interest in the"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/com/License.txt",
+    "destination": "licenses/dependencies/pywin32/licenses/com/License.txt",
+    "bytes": 1570,
+    "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 2,
+          "text": "Copyright (c) 1996-2008, Greg Stein and Mark Hammond."
+        },
+        {
+          "line": 3,
+          "text": "All rights reserved."
+        },
+        {
+          "line": 9,
+          "text": "Redistributions of source code must retain the above copyright notice,"
+        },
+        {
+          "line": 12,
+          "text": "Redistributions in binary form must reproduce the above copyright"
+        },
+        {
+          "line": 20,
+          "text": "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+    "destination": "licenses/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+    "bytes": 1087,
+    "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+    "suffix": "",
+    "matches": {
+      "attribution": [
+        {
+          "line": 3,
+          "text": "Copyright (c) 2018 Microsoft"
+        },
+        {
+          "line": 12,
+          "text": "The above copyright notice and this permission notice shall be included in all"
+        },
+        {
+          "line": 18,
+          "text": "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt",
+    "destination": "licenses/dependencies/pywin32/licenses/isapi/README.txt",
+    "bytes": 330,
+    "sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 2,
+          "text": "Copyright 2002-2003 by Blackdog Software Pty Ltd."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt",
+    "destination": "licenses/dependencies/pywin32/licenses/pythonwin/License.txt",
+    "bytes": 1541,
+    "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 2,
+          "text": "Copyright (c) 1994-2008, Mark Hammond"
+        },
+        {
+          "line": 3,
+          "text": "All rights reserved."
+        },
+        {
+          "line": 9,
+          "text": "Redistributions of source code must retain the above copyright notice,"
+        },
+        {
+          "line": 12,
+          "text": "Redistributions in binary form must reproduce the above copyright"
+        },
+        {
+          "line": 20,
+          "text": "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+    "destination": "licenses/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+    "bytes": 12540,
+    "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+    "suffix": ".txt",
+    "matches": {
+      "external_url": [
+        {
+          "line": 5,
+          "text": "Mathematisch Centrum (CWI, see http://www.cwi.nl) in the Netherlands"
+        },
+        {
+          "line": 10,
+          "text": "National Research Initiatives (CNRI, see http://www.cnri.reston.va.us)"
+        },
+        {
+          "line": 17,
+          "text": "http://www.digicool.com).  In 2001, the Python Software Foundation"
+        },
+        {
+          "line": 18,
+          "text": "(PSF, see http://www.python.org/psf/) was formed, a non-profit"
+        },
+        {
+          "line": 22,
+          "text": "All Python releases are Open Source (see http://www.opensource.org for"
+        },
+        {
+          "line": 146,
+          "text": "http://www.pythonlabs.com/logos.html may be used according to the"
+        },
+        {
+          "line": 178,
+          "text": "using the following URL: http://hdl.handle.net/1895.22/1013\"."
+        }
+      ],
+      "attribution": [
+        {
+          "line": 68,
+          "text": "License Agreement and PSF's notice of copyright, i.e., \"Copyright (c)"
+        },
+        {
+          "line": 69,
+          "text": "2001 Python Software Foundation; All Rights Reserved\" are retained in"
+        },
+        {
+          "line": 168,
+          "text": "License Agreement and CNRI's notice of copyright, i.e., \"Copyright (c)"
+        },
+        {
+          "line": 203,
+          "text": "limitation the federal copyright law, and, to the extent such"
+        },
+        {
+          "line": 228,
+          "text": "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,"
+        },
+        {
+          "line": 229,
+          "text": "The Netherlands.  All rights reserved."
+        },
+        {
+          "line": 233,
+          "text": "provided that the above copyright notice appear in all copies and that"
+        },
+        {
+          "line": 234,
+          "text": "both that copyright notice and this permission notice appear in"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+    "destination": "licenses/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+    "bytes": 873,
+    "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+    "suffix": ".txt",
+    "matches": {
+      "email": [
+        {
+          "line": 3,
+          "text": "Copyright 1998-2003 by Neil Hodgson <neilh@scintilla.org>"
+        }
+      ],
+      "attribution": [
+        {
+          "line": 3,
+          "text": "Copyright 1998-2003 by Neil Hodgson <neilh@scintilla.org>"
+        },
+        {
+          "line": 5,
+          "text": "All Rights Reserved"
+        },
+        {
+          "line": 9,
+          "text": "provided that the above copyright notice appear in all copies and that"
+        },
+        {
+          "line": 10,
+          "text": "both that copyright notice and this permission notice appear in"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/pywin32/licenses/win32/License.txt",
+    "destination": "licenses/dependencies/pywin32/licenses/win32/License.txt",
+    "bytes": 1541,
+    "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+    "suffix": ".txt",
+    "matches": {
+      "attribution": [
+        {
+          "line": 2,
+          "text": "Copyright (c) 1994-2008, Mark Hammond"
+        },
+        {
+          "line": 3,
+          "text": "All rights reserved."
+        },
+        {
+          "line": 9,
+          "text": "Redistributions of source code must retain the above copyright notice,"
+        },
+        {
+          "line": 12,
+          "text": "Redistributions in binary form must reproduce the above copyright"
+        },
+        {
+          "line": 20,
+          "text": "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/dependencies/xlrd/LICENSE",
+    "destination": "licenses/dependencies/xlrd/LICENSE",
+    "bytes": 3771,
+    "sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815",
+    "suffix": "",
+    "matches": {
+      "email": [
+        {
+          "line": 57,
+          "text": "     *     David Giffin <david@giffin.org>.\""
+        },
+        {
+          "line": 62,
+          "text": "     *     David Giffin <david@giffin.org>.\""
+        }
+      ],
+      "attribution": [
+        {
+          "line": 4,
+          "text": "    Portions copyright © 2005-2009, Stephen John Machin, Lingfo Pty Ltd"
+        },
+        {
+          "line": 5,
+          "text": "    All rights reserved."
+        },
+        {
+          "line": 10,
+          "text": "    1. Redistributions of source code must retain the above copyright notice,"
+        },
+        {
+          "line": 13,
+          "text": "    2. Redistributions in binary form must reproduce the above copyright notice,"
+        },
+        {
+          "line": 21,
+          "text": "    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\""
+        },
+        {
+          "line": 24,
+          "text": "    PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS"
+        },
+        {
+          "line": 36,
+          "text": "     * Copyright (c) 2001 David Giffin."
+        },
+        {
+          "line": 37,
+          "text": "     * All rights reserved."
+        },
+        {
+          "line": 39,
+          "text": "     * Based on the the Java version: Andrew Khan Copyright (c) 2000."
+        },
+        {
+          "line": 46,
+          "text": "     * 1. Redistributions of source code must retain the above copyright"
+        },
+        {
+          "line": 49,
+          "text": "     * 2. Redistributions in binary form must reproduce the above copyright"
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/GPL-3.0-only.txt",
+    "destination": "licenses/GPL-3.0-only.txt",
+    "bytes": 34674,
+    "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+    "suffix": ".txt",
+    "matches": {
+      "external_url": [
+        {
+          "line": 4,
+          "text": "Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>"
+        },
+        {
+          "line": 218,
+          "text": "     You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>."
+        },
+        {
+          "line": 230,
+          "text": "You should also get your employer (if you work as a programmer) or school, if any, to sign a “copyright disclaimer” for the program, if necessary. For more information on this, and how to apply and follow the GNU GPL, see <https://www.gnu.org/licenses/>."
+        },
+        {
+          "line": 232,
+          "text": "The GNU General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License. But first, please read <https://www.gnu.org/philosophy/why-not-lgpl.html>."
+        }
+      ],
+      "attribution": [
+        {
+          "line": 4,
+          "text": "Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>"
+        },
+        {
+          "line": 20,
+          "text": "Developers that use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you this License giving you legal permission to copy, distribute and/or modify it."
+        },
+        {
+          "line": 36,
+          "text": "“Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks."
+        },
+        {
+          "line": 38,
+          "text": "“The Program” refers to any copyrightable work licensed under this License. Each licensee is addressed as “you”. “Licensees” and “recipients” may be individuals or organizations."
+        },
+        {
+          "line": 40,
+          "text": "To “modify” a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a “modified version” of the earlier work or a work “based on” the earlier work."
+        },
+        {
+          "line": 44,
+          "text": "To “propagate” a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well."
+        },
+        {
+          "line": 48,
+          "text": "An interactive user interface displays “Appropriate Legal Notices” to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user comma"
+        },
+        {
+          "line": 64,
+          "text": "All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as pr"
+        },
+        {
+          "line": 66,
+          "text": "You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus makin"
+        },
+        {
+          "line": 71,
+          "text": "No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures."
+        },
+        {
+          "line": 76,
+          "text": "You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Progr"
+        },
+        {
+          "line": 91,
+          "text": "A compilation of a covered work with other separate and independent works, which are not by their nature extensions of the covered work, and which are not combined with it such as to form a larger program, in or on a volume of a storage or distribution medium, is called an “aggregate” if the compilation and its resulting copyright are not used to limit the access or legal rights of the compilation's users beyond what the individual works permit. "
+        },
+        {
+          "line": 121,
+          "text": "When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission."
+        },
+        {
+          "line": 123,
+          "text": "Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:"
+        },
+        {
+          "line": 146,
+          "text": "However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation."
+        },
+        {
+          "line": 148,
+          "text": "Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice."
+        },
+        {
+          "line": 153,
+          "text": "You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modif"
+        },
+        {
+          "line": 163,
+          "text": "A “contributor” is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor's “contributor version”."
+        },
+        {
+          "line": 183,
+          "text": "Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction throug"
+        },
+        {
+          "line": 192,
+          "text": "Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version."
+        },
+        {
+          "line": 195,
+          "text": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE"
+        },
+        {
+          "line": 198,
+          "text": "IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES "
+        },
+        {
+          "line": 209,
+          "text": "To do so, attach the following notices to the program. It is safest to attach them to the start of each source file to most effectively state the exclusion of warranty; and each file should have at least the “copyright” line and a pointer to where the full notice is found."
+        },
+        {
+          "line": 212,
+          "text": "     Copyright (C) <year>  <name of author>"
+        },
+        {
+          "line": 224,
+          "text": "     <program>  Copyright (C) <year>  <name of author>"
+        },
+        {
+          "line": 230,
+          "text": "You should also get your employer (if you work as a programmer) or school, if any, to sign a “copyright disclaimer” for the program, if necessary. For more information on this, and how to apply and follow the GNU GPL, see <https://www.gnu.org/licenses/>."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/MuPDF-README.txt",
+    "destination": "licenses/MuPDF-README.txt",
+    "bytes": 1405,
+    "sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5",
+    "suffix": ".txt",
+    "matches": {
+      "email": [
+        {
+          "line": 31,
+          "text": "please contact sales@artifex.com."
+        }
+      ],
+      "external_url": [
+        {
+          "line": 8,
+          "text": "\thttps://mupdf.readthedocs.io/en/latest/"
+        },
+        {
+          "line": 12,
+          "text": "\thttps://mupdf.readthedocs.io/en/latest/guide/install.html"
+        },
+        {
+          "line": 28,
+          "text": "with this program. If not, see <http://www.gnu.org/licenses/>."
+        },
+        {
+          "line": 37,
+          "text": "\thttps://artifex.com/discord/artifex"
+        },
+        {
+          "line": 41,
+          "text": "\thttps://bugs.ghostscript.com/"
+        }
+      ],
+      "attribution": [
+        {
+          "line": 16,
+          "text": "MuPDF is Copyright (c) 2006-2026 Artifex Software, Inc."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/NOTICE.md",
+    "destination": "NOTICE.md",
+    "bytes": 2955,
+    "sha256": "36d6797a8edb0d34544c6b1971f6cfb78c18a04ecc7c2f2caa8299e126677b49",
+    "suffix": ".md",
+    "matches": {
+      "external_url": [
+        {
+          "line": 7,
+          "text": "- 저작자: Canine89. 출처: https://github.com/Canine89/hwpxskill"
+        },
+        {
+          "line": 14,
+          "text": "- PyMuPDF: https://github.com/pymupdf/PyMuPDF — Artifex Software, Inc. 및 원래 기여자."
+        }
+      ],
+      "attribution": [
+        {
+          "line": 5,
+          "text": "## Canine89/hwpxskill"
+        },
+        {
+          "line": 7,
+          "text": "- 저작자: Canine89. 출처: https://github.com/Canine89/hwpxskill"
+        },
+        {
+          "line": 8,
+          "text": "- MIT 허락: 배포자가 저작자에게 직접 연락해 허락을 받았다고 2026. 9. 13. 확인했다. `licenses/Canine89-MIT.txt`는 이 허락에 따라 배포자가 붙인 표준 MIT 고지이며, 개인 허락 원문을 재현한 문서가 아니다."
+        },
+        {
+          "line": 15,
+          "text": "- MuPDF: Copyright (c) 2006-2026 Artifex Software, Inc. 원래 고지는 `licenses/MuPDF-README.txt`에 있다."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/legal/SOURCE.md",
+    "destination": "SOURCE.md",
+    "bytes": 3036,
+    "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424",
+    "suffix": ".md",
+    "matches": {
+      "external_url": [
+        {
+          "line": 17,
+          "text": "PyMuPDF를 직접 빌드하려면 두 소스 압축본을 별도 작업 폴더에 풀고, C/C++ 개발 도구를 준비한다. 상류 설치 안내는 https://pymupdf.readthedocs.io/en/latest/installation.html 이며 이 고정 버전의 구체적인 빌드 동작은 소스의 `setup.py`가 기준이다. 필요한 Python 빌드 의존성은 `pyproject.toml`에 있다. Windows 예시는 다음과 같다. `$taskPython`은 준비한 가상환경의 Python 실행 파일이다."
+        }
+      ]
+    },
+    "text_scanned": true
+  },
+  {
+    "source": "distribution/sources/pymupdf-1.28.0.tar.gz",
+    "destination": "sources/pymupdf-1.28.0.tar.gz",
+    "bytes": 87637751,
+    "sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d",
+    "suffix": ".gz",
+    "matches": {}
+  },
+  {
+    "source": "distribution/sources/mupdf-1.28.0-source.tar.gz",
+    "destination": "sources/mupdf-1.28.0-source.tar.gz",
+    "bytes": 68923736,
+    "sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2",
+    "suffix": ".gz",
+    "matches": {}
+  },
+  {
+    "source": "distribution/source-bundle.json",
+    "destination": "SOURCE-BUNDLE.json",
+    "bytes": 5613,
+    "sha256": "dc678a661ce5656f7f0a24694fe6fafdae4a5f274ffd3f4ec1e245ee7e995d94",
+    "suffix": ".json",
+    "matches": {
+      "external_url": [
+        {
+          "line": 114,
+          "text": "      \"url\": \"https://files.pythonhosted.org/packages/8e/e9/6d6c5d6c0a3551bffd47681a6240caf941727f195b45593cf20ab36f018f/pymupdf-1.28.0.tar.gz\","
+        },
+        {
+          "line": 122,
+          "text": "      \"url\": \"https://mupdf.com/downloads/archive/mupdf-1.28.0-source.tar.gz\","
+        },
+        {
+          "line": 134,
+          "text": "    \"licenses/GPL-3.0-only.txt\": \"https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt\","
+        }
+      ],
+      "attribution": [
+        {
+          "line": 12,
+          "text": "      \"destination\": \"licenses/Canine89-MIT.txt\","
+        },
+        {
+          "line": 134,
+          "text": "    \"licenses/GPL-3.0-only.txt\": \"https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt\","
+        },
+        {
+          "line": 135,
+          "text": "    \"licenses/Canine89-MIT.txt\": \"Standard MIT text with author attribution; publisher applied following user-confirmed direct MIT permission.\""
+        }
+      ]
+    },
+    "text_scanned": true
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "host": "Windows local",
+  "external_PC": "excluded by user",
+  "working_tree_diff": " .claude/hooks/audit_log.py                |   6 +-\n .claude/hooks/event_adapter.py            |  15 +-\n .claude/hooks/protect_files.py            |   6 +-\n .claude/hooks/stop_validator.py           |  24 +-\n .claude/skills/hwpx/SKILL.md              |  16 +-\n .claude/skills/hwpx/scripts/page_guard.py |  11 +-\n CLAUDE.md                                 |   4 +\n logs/audit.jsonl                          | 456 ++++++++++++++++++++++++++++++\n scripts/budget_name_check.py              |  10 +-\n scripts/fusion_timetable.py               |  25 +-\n scripts/hwpdoc.ps1                        |   6 +-\n scripts/hwpdoc.py                         | 295 +++++++++++++++----\n scripts/log_review.py                     |   3 +-\n scripts/refresh_reference.py              | 115 ++++----\n scripts/related_lookup.py                 |  19 +-\n scripts/render_check.py                   |   9 +-\n scripts/validate_pipeline.py              |  17 +-\n tests/test_hook_adapter.py                |   2 +\n tests/test_hook_lifecycle.py              |   3 +\n 19 files changed, 880 insertions(+), 162 deletions(-)\n"
+}

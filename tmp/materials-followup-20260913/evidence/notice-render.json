@@ -1,0 +1,16 @@
+{
+  "returncode": 0,
+  "stdout": "{\n \"output\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\materials-followup-20260913\\\\sources\\\\notice.hwpx\",\n \"checks\": {\n  \"pages_output\": 1,\n  \"anchors_total\": 30,\n  \"anchors_found_ratio\": 1.0,\n  \"order_lis_ratio\": 1.0\n },\n \"fails\": [],\n \"warnings\": [],\n \"result\": \"PASS\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\scripts\\render_check.py",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\materials-followup-20260913\\sources\\notice.hwpx",
+    "--json",
+    "--keep-pdf",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\materials-followup-20260913\\renders\\notice.pdf"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"pdf\": {\"path\": \".hwpdoc/jobs/approved-w1-20260913/render.pdf\", \"sha256\": \"fb7f4fbbe345022fae5ee241f93188f28e2ac7c9899f26206fe584e9efa7ce2c\"}, \"images\": [{\"path\": \".hwpdoc/jobs/approved-w1-20260913/final-preview/page-001.png\", \"sha256\": \"ef0b90316d179f2499c9db0efa698f44985f1121f6debe19b615979fe7908c6e\", \"page\": 1}], \"visual_review\": \"unconfirmed\"}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\hwpdoc_preview.py",
+    "--pdf",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\render.pdf",
+    "--output-dir",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\final-preview"
+  ],
+  "at": "2026-09-13T07:27:00.498998+00:00",
+  "seconds": 0.6684601306915283,
+  "app": "claude"
+}

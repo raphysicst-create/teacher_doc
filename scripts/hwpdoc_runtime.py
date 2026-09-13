@@ -10,7 +10,7 @@ PACKAGES = {
     'lxml': ('lxml', False), 'hwpx': ('python-hwpx', False),
     'win32com': ('pywin32', False), 'pypdf': ('pypdf', False),
     'fitz': ('PyMuPDF', True), 'openpyxl': ('openpyxl', True),
-    'et_xmlfile': ('et-xmlfile', True), 'xlrd': ('xlrd', True),
+    'et_xmlfile': ('et-xmlfile', True), 'python_calamine': ('python-calamine', True),
 }
 
 

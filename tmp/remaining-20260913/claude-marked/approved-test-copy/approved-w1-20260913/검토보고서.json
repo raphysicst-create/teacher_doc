@@ -1,0 +1,812 @@
+{
+  "version": 1,
+  "job_id": "approved-w1-20260913",
+  "workflow": "W1",
+  "manifest_file": "workspace:inputs/approved-workflow/w1.json",
+  "manifest_sha256": "f04b6e1109c767be3b5a5f026df9ee10ee69ee6a1b0edda055f7340a905b7b16",
+  "work_file": "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+  "dependencies": {
+    "workspace:inputs/approved-workflow/draft.md": "b83c60731668ca6a052fdac3cff21000938c77910f037cc000b6be466a7b96d1",
+    "workspace:inputs/approved-workflow/evidence.json": "22304f8b6d6158b053a2df7d15948c2b29e1d0b70dd897bcecef3184827a99a2",
+    "workspace:inputs/form.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "workspace:inputs/approved-workflow/w2-source.json": "9901a75dcb786a993d5afbc49e9e0d428abfa6326825ed786b652c7c5aa43be9",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/budget.json": "8a03b05434582a616ab61b67f825452a167c5eebd3a83329518442e8be83048a",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/mapping.json": "9b6a54b8ad8e4acde2b035a85e49a3fe667c9d864b49a1cad6d9aa3dce3892ec",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/original.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/registration.json": "4b3af97e164c7deb4c037385d9faf8b17596625d278ab230001ba480b51c32db",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/review.draft.json": "9be3edc79df5b126a73accc92249adaff7caae601470e2df9dd1f72097add534",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/review.json": "3803a6fe46e415d8289072e89860a26b91ca07917b432eb893413ddeb5818725",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/review.pdf": "2a24c9eb695b669765edb34e98c951a629783f1b3cfeaaad10c926d81fee17db",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/slots.json": "00e851b45836946af7a209bdf12efb62ef5fbb29214ceba50a529e2a4160322c",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/slots.raw.json": "c9c2ea2093a069a7ec8f6ccb908b0631a0ff9dea05484dc5f2e3f3c6b2311e88",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/structure.json": "6a4e671372cc9f3d422402a40f357a5884f2ad6c97daa366feb90852b56da598",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/template.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "workspace:.hwpdoc/templates/trial-gianmun/1/preview/page-001.png": "63ff4c4e9e94c048307032d67911301ee0112925cf69080ca57e0ff02bacee64",
+    "workspace:CLAUDE.md": "4791acd0d87ae51a04503e398bbe2a48b93aef3770443c2fed6b7e2592306a3c",
+    "workspace:AGENTS.md": "d9e94f22fc3d06c6ede04d632338a696ddf9c9a9597306945e0087d79a4c73d7",
+    "workspace:.hwpdoc/workspace.json": "b904d6b9237f22716d7628deb755a404924f7380adfa15b86db19a8fd4b9e9d0",
+    "plugin:config/legacy-workspace.json": "8149101b51ca14131b012b11578fc384e0ef0c0d8923b8ff7ecf70a5d61f6a87",
+    "plugin:.claude/skills/hwpx/scripts/analyze_template.py": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d",
+    "plugin:.claude/skills/hwpx/scripts/build_hwpx.py": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c",
+    "plugin:.claude/skills/hwpx/scripts/content_guard.py": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97",
+    "plugin:.claude/skills/hwpx/scripts/create_document.py": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9",
+    "plugin:.claude/skills/hwpx/scripts/edit_hwpx.py": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584",
+    "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py": "1832768cc6c0e3167bb4771d3582bba68982f9cff8c12dfa1fe1de52e216a0db",
+    "plugin:.claude/skills/hwpx/scripts/fix_namespaces.py": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a",
+    "plugin:.claude/skills/hwpx/scripts/gonmun_lint.py": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b",
+    "plugin:.claude/skills/hwpx/scripts/hwpx_slots.py": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d",
+    "plugin:.claude/skills/hwpx/scripts/page_guard.py": "e5e6141dafd5fed454ff909a92bcc4e05f037df9a822a0eaeef7169d59711474",
+    "plugin:.claude/skills/hwpx/scripts/text_extract.py": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568",
+    "plugin:.claude/skills/hwpx/scripts/validate.py": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32",
+    "plugin:scripts/teacher_doc.py": "c9abc4918f4c16d0838d6fad5a3c26bbdedc419d133d620677b02ed9bacd3851",
+    "plugin:scripts/teacher_doc.ps1": "dec1f464b041a39536dc5d5e79516b78308e05164daeb77953e30dc6b03879c8",
+    "plugin:scripts/hwpdoc.py": "19274878da1fb7aa530d6041840470e07f21c54815ee9977ca65c866e9f1c7e1",
+    "plugin:scripts/hwpdoc_config.py": "6c91f91a7d27e594734b2c2bdebea867e70dde92ad4f0711734db924244d32ce",
+    "plugin:scripts/hwpdoc_templates.py": "e19db83de8b7ab48bd1d6212abaa206899b5f0ccc939aff0f2bdc56d7126c971",
+    "plugin:scripts/render_check.py": "2ec2ea9fba9cca34f10ec98a4ad4a907b66d8b3744513cfb82cfe1334d36272a",
+    "plugin:scripts/budget_name_check.py": "930fe1b63d56757eea79644d6535dd10ecc7db9b95eda7c9b4c85dd3382c97af",
+    "plugin:scripts/related_lookup.py": "9147eb1dd4d2a7be0ccd3b92631a11763a0df1e379779307932527739a3e1472",
+    "plugin:scripts/fusion_timetable.py": "1f75d991057b57fbf95cc26c04e580e8a1c9e1df1a22325c8c670e1186412781",
+    "plugin:scripts/hwpdoc_runtime.py": "7041649d9d0f78509df7cd8e330e1769acc38fa7efcc2e2094ed32baf2793cb7",
+    "plugin:.claude/skills/hwpx/SKILL.md": "7a58ee571b3ac81fcb4b9d4d33821a197b663375ce2c8fb9e5f1c5366d4cc656",
+    "plugin:.claude/skills/hwpx/references/workflow.md": "fbfdc39344666aa883729c0d20df5b9db6734449b6465f753fc6a2dfbf2aa44f",
+    "plugin:distribution/requirements-base.txt": "7f5da33ac3970bb285f212352cba8b68c6277054d35b887b09ec4f6ed145d80c",
+    "plugin:distribution/requirements-school-data.txt": "79cbedd0af55d9ebdef87c8869e9d98e6302257a53b6ed2498843cb09beb67d9",
+    "plugin:distribution/requirements-visual.txt": "0f4923868042f1e21413935641e67953270cdc4631123f1728ca9ee99126283d",
+    "plugin:distribution/requirements-windows.txt": "db57dac3ec46d6427bd3cb53f03487aef1a0f94b165e5c719f48c16f852a651e"
+  },
+  "tool_dependencies": {
+    "plugin:.claude/skills/hwpx/scripts/analyze_template.py": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d",
+    "plugin:.claude/skills/hwpx/scripts/build_hwpx.py": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c",
+    "plugin:.claude/skills/hwpx/scripts/content_guard.py": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97",
+    "plugin:.claude/skills/hwpx/scripts/create_document.py": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9",
+    "plugin:.claude/skills/hwpx/scripts/edit_hwpx.py": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584",
+    "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py": "1832768cc6c0e3167bb4771d3582bba68982f9cff8c12dfa1fe1de52e216a0db",
+    "plugin:.claude/skills/hwpx/scripts/fix_namespaces.py": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a",
+    "plugin:.claude/skills/hwpx/scripts/gonmun_lint.py": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b",
+    "plugin:.claude/skills/hwpx/scripts/hwpx_slots.py": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d",
+    "plugin:.claude/skills/hwpx/scripts/page_guard.py": "e5e6141dafd5fed454ff909a92bcc4e05f037df9a822a0eaeef7169d59711474",
+    "plugin:.claude/skills/hwpx/scripts/text_extract.py": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568",
+    "plugin:.claude/skills/hwpx/scripts/validate.py": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32",
+    "plugin:scripts/teacher_doc.py": "c9abc4918f4c16d0838d6fad5a3c26bbdedc419d133d620677b02ed9bacd3851",
+    "plugin:scripts/teacher_doc.ps1": "dec1f464b041a39536dc5d5e79516b78308e05164daeb77953e30dc6b03879c8",
+    "plugin:scripts/hwpdoc.py": "19274878da1fb7aa530d6041840470e07f21c54815ee9977ca65c866e9f1c7e1",
+    "plugin:scripts/hwpdoc_config.py": "6c91f91a7d27e594734b2c2bdebea867e70dde92ad4f0711734db924244d32ce",
+    "plugin:scripts/hwpdoc_templates.py": "e19db83de8b7ab48bd1d6212abaa206899b5f0ccc939aff0f2bdc56d7126c971",
+    "plugin:scripts/render_check.py": "2ec2ea9fba9cca34f10ec98a4ad4a907b66d8b3744513cfb82cfe1334d36272a",
+    "plugin:scripts/budget_name_check.py": "930fe1b63d56757eea79644d6535dd10ecc7db9b95eda7c9b4c85dd3382c97af",
+    "plugin:scripts/related_lookup.py": "9147eb1dd4d2a7be0ccd3b92631a11763a0df1e379779307932527739a3e1472",
+    "plugin:scripts/fusion_timetable.py": "1f75d991057b57fbf95cc26c04e580e8a1c9e1df1a22325c8c670e1186412781",
+    "plugin:scripts/hwpdoc_runtime.py": "7041649d9d0f78509df7cd8e330e1769acc38fa7efcc2e2094ed32baf2793cb7",
+    "plugin:.claude/skills/hwpx/SKILL.md": "7a58ee571b3ac81fcb4b9d4d33821a197b663375ce2c8fb9e5f1c5366d4cc656",
+    "plugin:.claude/skills/hwpx/references/workflow.md": "fbfdc39344666aa883729c0d20df5b9db6734449b6465f753fc6a2dfbf2aa44f",
+    "plugin:distribution/requirements-base.txt": "7f5da33ac3970bb285f212352cba8b68c6277054d35b887b09ec4f6ed145d80c",
+    "plugin:distribution/requirements-school-data.txt": "79cbedd0af55d9ebdef87c8869e9d98e6302257a53b6ed2498843cb09beb67d9",
+    "plugin:distribution/requirements-visual.txt": "0f4923868042f1e21413935641e67953270cdc4631123f1728ca9ee99126283d",
+    "plugin:distribution/requirements-windows.txt": "db57dac3ec46d6427bd3cb53f03487aef1a0f94b165e5c719f48c16f852a651e"
+  },
+  "runtime": {
+    "python": "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "version": "3.12.10",
+    "implementation": "CPython",
+    "machine": "AMD64",
+    "packages": {
+      "lxml": "5.4.0",
+      "python-hwpx": "2.23.0",
+      "pywin32": "312",
+      "pypdf": "6.14.2",
+      "PyMuPDF": "1.28.0",
+      "openpyxl": "3.1.5",
+      "et-xmlfile": "2.0.0",
+      "xlrd": "2.0.2"
+    }
+  },
+  "stages": {
+    "build": {
+      "status": "pass",
+      "reason": "EDITED: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n  text replacements applied: 0\n  cells updated: 0\n  paragraphs updated: 7\n  original package entries, header.xml, content.hpf, and BinData were preserved\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:25:54.048475+00:00",
+      "elapsed_seconds": 0.453,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/edit_hwpx.py",
+        "workspace:.hwpdoc/templates/trial-gianmun/1/template.hwpx",
+        "-o",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--slot-json",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/values.json"
+      ],
+      "warnings": []
+    },
+    "structure": {
+      "status": "pass",
+      "reason": "VALID: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n  All structural checks passed.\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:12.514444+00:00",
+      "elapsed_seconds": 0.344,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/validate.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx"
+      ],
+      "warnings": []
+    },
+    "namespaces": {
+      "status": "pass",
+      "reason": "Fixed namespaces: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx (0 XML entries changed)\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:13.082839+00:00",
+      "elapsed_seconds": 0.438,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/fix_namespaces.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx"
+      ],
+      "warnings": []
+    },
+    "finalize": {
+      "status": "pass",
+      "reason": "HWPX FINALIZE: PASS\n  action: {'strip_linesegarray_removed': 0, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\remaining-20260913\\\\claude-marked\\\\.hwpdoc\\\\jobs\\\\approved-w1-20260913\\\\work.hwpx'}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:13.885871+00:00",
+      "elapsed_seconds": 0.578,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--strip-linesegarray",
+        "--layout"
+      ],
+      "warnings": []
+    },
+    "layout": {
+      "status": "pass",
+      "reason": "VALID: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n  All structural checks passed.\n  Layout warnings: 0\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:14.523599+00:00",
+      "elapsed_seconds": 0.484,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/validate.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--layout"
+      ],
+      "warnings": [
+        "  Layout warnings: 0"
+      ]
+    },
+    "page_guard": {
+      "status": "pass",
+      "reason": "PASS: page-guard\n  구조 fingerprint와 문단/셀별 글자 예산 검사를 통과했습니다.\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:17.579956+00:00",
+      "elapsed_seconds": 0.656,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/page_guard.py",
+        "--reference",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx",
+        "--output",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--budget-profile",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/budget.json",
+        "--structure-profile",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/structure.json",
+        "--no-strict-paragraph-budget",
+        "--skip-text-drift",
+        "--allow-empty-fill"
+      ],
+      "warnings": []
+    },
+    "hancom": {
+      "status": "pass",
+      "reason": "HWPX FINALIZE: PASS\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:23.612313+00:00",
+      "elapsed_seconds": 5.828,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--hancom"
+      ],
+      "warnings": []
+    },
+    "render": {
+      "status": "pass",
+      "reason": "PASS: render-check work.hwpx\n  pages_output: 1\n  pages_reference: 1\n  anchors_total: 5\n  anchors_found_ratio: 1.0\n  order_lis_ratio: 1.0\n  object_residue: {'inherited': {}, 'unexpected': {}}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:38.969341+00:00",
+      "elapsed_seconds": 15.0,
+      "command": [
+        "plugin:scripts/render_check.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--reference",
+        "workspace:.hwpdoc/templates/trial-gianmun/1/template.hwpx",
+        "--keep-pdf",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/render.pdf"
+      ],
+      "warnings": []
+    },
+    "visual_review": {
+      "status": "not_applicable",
+      "reason": "신고된/자동 편집 예산 초과 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:39.156306+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    "content": {
+      "status": "pass",
+      "reason": "PASS: content-guard C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:39.849517+00:00",
+      "elapsed_seconds": 0.515,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/content_guard.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--rules",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/content.rules.json"
+      ],
+      "warnings": []
+    },
+    "values": {
+      "status": "pass",
+      "reason": "승인 슬롯값 대조: 일치",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:40.233455+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    "gonmun": {
+      "status": "pass",
+      "reason": "{\n  \"findings\": [],\n  \"summary\": {\n    \"total\": 0,\n    \"ok\": true\n  }\n}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:40.894683+00:00",
+      "elapsed_seconds": 0.39,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/gonmun_lint.py",
+        "--hwpx",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--format",
+        "json"
+      ],
+      "warnings": []
+    },
+    "budget_names": {
+      "status": "not_applicable",
+      "reason": "시험 문안에 예산·수업 대체 내용 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.131984+00:00",
+      "elapsed_seconds": 0.016,
+      "command": null,
+      "warnings": []
+    },
+    "related": {
+      "status": "not_applicable",
+      "reason": "W1 시험 계획에 관련번호 인용 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.348338+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    "timetable": {
+      "status": "not_applicable",
+      "reason": "시험 문안에 예산·수업 대체 내용 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.639778+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    "attachments": {
+      "status": "pass",
+      "reason": "본문 붙임 제목·실제 첨부 목록 대조 통과",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.957405+00:00",
+      "elapsed_seconds": 0.016,
+      "command": null,
+      "warnings": []
+    },
+    "compare": {
+      "status": "pass",
+      "reason": "kordoc 미사용(실행기 프로세스에 MCP 세션 미연결): text_extract 신구대조 compare.diff 생성",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:42.181828+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    "reference_namespaces": {
+      "status": "pass",
+      "reason": "Fixed namespaces: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\reference.finalized.hwpx (0 XML entries changed)\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:15.208229+00:00",
+      "elapsed_seconds": 0.516,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/fix_namespaces.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx"
+      ],
+      "warnings": []
+    },
+    "reference_finalize": {
+      "status": "pass",
+      "reason": "HWPX FINALIZE: PASS\n  action: {'strip_linesegarray_removed': 0, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\remaining-20260913\\\\claude-marked\\\\.hwpdoc\\\\jobs\\\\approved-w1-20260913\\\\reference.finalized.hwpx'}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:15.848127+00:00",
+      "elapsed_seconds": 0.437,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx",
+        "--strip-linesegarray"
+      ],
+      "warnings": []
+    },
+    "reference_profiles": {
+      "status": "pass",
+      "reason": "WROTE: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\budget.json\n  slots: 11\nWROTE: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\structure.json\n  entries: 11\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:16.576587+00:00",
+      "elapsed_seconds": 0.562,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/page_guard.py",
+        "--reference",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx",
+        "--write-budget",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/budget.json",
+        "--write-structure",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/structure.json"
+      ],
+      "warnings": []
+    }
+  },
+  "history": [
+    {
+      "stage": "build",
+      "status": "pass",
+      "reason": "EDITED: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n  text replacements applied: 0\n  cells updated: 0\n  paragraphs updated: 7\n  original package entries, header.xml, content.hpf, and BinData were preserved\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:25:54.048475+00:00",
+      "elapsed_seconds": 0.453,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/edit_hwpx.py",
+        "workspace:.hwpdoc/templates/trial-gianmun/1/template.hwpx",
+        "-o",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--slot-json",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/values.json"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "structure",
+      "status": "pass",
+      "reason": "VALID: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n  All structural checks passed.\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:12.514444+00:00",
+      "elapsed_seconds": 0.344,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/validate.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "namespaces",
+      "status": "pass",
+      "reason": "Fixed namespaces: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx (0 XML entries changed)\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:13.082839+00:00",
+      "elapsed_seconds": 0.438,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/fix_namespaces.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "finalize",
+      "status": "pass",
+      "reason": "HWPX FINALIZE: PASS\n  action: {'strip_linesegarray_removed': 0, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\remaining-20260913\\\\claude-marked\\\\.hwpdoc\\\\jobs\\\\approved-w1-20260913\\\\work.hwpx'}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:13.885871+00:00",
+      "elapsed_seconds": 0.578,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--strip-linesegarray",
+        "--layout"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "layout",
+      "status": "pass",
+      "reason": "VALID: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n  All structural checks passed.\n  Layout warnings: 0\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:14.523599+00:00",
+      "elapsed_seconds": 0.484,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/validate.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--layout"
+      ],
+      "warnings": [
+        "  Layout warnings: 0"
+      ]
+    },
+    {
+      "stage": "reference_namespaces",
+      "status": "pass",
+      "reason": "Fixed namespaces: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\reference.finalized.hwpx (0 XML entries changed)\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:15.208229+00:00",
+      "elapsed_seconds": 0.516,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/fix_namespaces.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "reference_finalize",
+      "status": "pass",
+      "reason": "HWPX FINALIZE: PASS\n  action: {'strip_linesegarray_removed': 0, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\remaining-20260913\\\\claude-marked\\\\.hwpdoc\\\\jobs\\\\approved-w1-20260913\\\\reference.finalized.hwpx'}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:15.848127+00:00",
+      "elapsed_seconds": 0.437,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx",
+        "--strip-linesegarray"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "reference_profiles",
+      "status": "pass",
+      "reason": "WROTE: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\budget.json\n  slots: 11\nWROTE: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\structure.json\n  entries: 11\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:16.576587+00:00",
+      "elapsed_seconds": 0.562,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/page_guard.py",
+        "--reference",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx",
+        "--write-budget",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/budget.json",
+        "--write-structure",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/structure.json"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "page_guard",
+      "status": "pass",
+      "reason": "PASS: page-guard\n  구조 fingerprint와 문단/셀별 글자 예산 검사를 통과했습니다.\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:17.579956+00:00",
+      "elapsed_seconds": 0.656,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/page_guard.py",
+        "--reference",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/reference.finalized.hwpx",
+        "--output",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--budget-profile",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/budget.json",
+        "--structure-profile",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/structure.json",
+        "--no-strict-paragraph-budget",
+        "--skip-text-drift",
+        "--allow-empty-fill"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "hancom",
+      "status": "pass",
+      "reason": "HWPX FINALIZE: PASS\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:23.612313+00:00",
+      "elapsed_seconds": 5.828,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/finalize_hwpx.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--hancom"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "render",
+      "status": "pass",
+      "reason": "PASS: render-check work.hwpx\n  pages_output: 1\n  pages_reference: 1\n  anchors_total: 5\n  anchors_found_ratio: 1.0\n  order_lis_ratio: 1.0\n  object_residue: {'inherited': {}, 'unexpected': {}}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:38.969341+00:00",
+      "elapsed_seconds": 15.0,
+      "command": [
+        "plugin:scripts/render_check.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--reference",
+        "workspace:.hwpdoc/templates/trial-gianmun/1/template.hwpx",
+        "--keep-pdf",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/render.pdf"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "visual_review",
+      "status": "not_applicable",
+      "reason": "신고된/자동 편집 예산 초과 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:39.156306+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    {
+      "stage": "content",
+      "status": "pass",
+      "reason": "PASS: content-guard C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked\\.hwpdoc\\jobs\\approved-w1-20260913\\work.hwpx\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:39.849517+00:00",
+      "elapsed_seconds": 0.515,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/content_guard.py",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--rules",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/content.rules.json"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "values",
+      "status": "pass",
+      "reason": "승인 슬롯값 대조: 일치",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:40.233455+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    {
+      "stage": "gonmun",
+      "status": "pass",
+      "reason": "{\n  \"findings\": [],\n  \"summary\": {\n    \"total\": 0,\n    \"ok\": true\n  }\n}\n",
+      "failures": 0,
+      "exit_code": 0,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:40.894683+00:00",
+      "elapsed_seconds": 0.39,
+      "command": [
+        "plugin:.claude/skills/hwpx/scripts/gonmun_lint.py",
+        "--hwpx",
+        "workspace:.hwpdoc/jobs/approved-w1-20260913/work.hwpx",
+        "--format",
+        "json"
+      ],
+      "warnings": []
+    },
+    {
+      "stage": "budget_names",
+      "status": "not_applicable",
+      "reason": "시험 문안에 예산·수업 대체 내용 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.131984+00:00",
+      "elapsed_seconds": 0.016,
+      "command": null,
+      "warnings": []
+    },
+    {
+      "stage": "related",
+      "status": "not_applicable",
+      "reason": "W1 시험 계획에 관련번호 인용 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.348338+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    {
+      "stage": "timetable",
+      "status": "not_applicable",
+      "reason": "시험 문안에 예산·수업 대체 내용 없음",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.639778+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    },
+    {
+      "stage": "attachments",
+      "status": "pass",
+      "reason": "본문 붙임 제목·실제 첨부 목록 대조 통과",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:41.957405+00:00",
+      "elapsed_seconds": 0.016,
+      "command": null,
+      "warnings": []
+    },
+    {
+      "stage": "compare",
+      "status": "pass",
+      "reason": "kordoc 미사용(실행기 프로세스에 MCP 세션 미연결): text_extract 신구대조 compare.diff 생성",
+      "failures": 0,
+      "exit_code": null,
+      "before_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "after_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "at": "2026-09-13T07:26:42.181828+00:00",
+      "elapsed_seconds": 0.0,
+      "command": null,
+      "warnings": []
+    }
+  ],
+  "unresolved": [],
+  "environment": {
+    "app": "Claude Code CLI",
+    "app_version": "unconfirmed",
+    "model": "unconfirmed",
+    "scope": "User-approved synthetic W1/W2 workflow on current PC"
+  },
+  "created_at": "2026-09-13T07:25:53.379412+00:00",
+  "notice": "발송 전 한글로 열어 확인해주세요",
+  "semantic_evidence_assurance": false,
+  "evidence": {
+    "status": "unsupported",
+    "steps": [],
+    "conditions": [
+      "폐기용 로컬 기능 시험. 실제 학교 업무·시스템 접속·발송 없음.",
+      "W2 system 분기, 가상교육지원청-200, 2026. 10. 1. 시행, 2026. 10. 8. 기한, 1학년 20명."
+    ],
+    "exceptions": [
+      "학교 업무지침 MCP 조회 대상이 아닌 가상 시험; 실제 원문 조회 성공으로 기록하지 않음."
+    ],
+    "pending_items": [],
+    "reviewed_at": "2026-09-13T07:05:56.899934+00:00",
+    "freshness": "verified",
+    "freshness_scope": "Frozen fixture and user-approved test text only; no statement about current school regulations.",
+    "fallback_sources": [
+      {
+        "path": "inputs/approved-workflow/w2-source.json",
+        "sha256": "9901a75dcb786a993d5afbc49e9e0d428abfa6326825ed786b652c7c5aa43be9"
+      },
+      {
+        "path": "inputs/workflow-drafts.md",
+        "sha256": "dba5f9fa243c09a25ee3a1e26996c633502a36b6a4a47c7b3f47ba5980098979"
+      }
+    ]
+  },
+  "updated_at": "2026-09-13T07:27:38.903524+00:00",
+  "status": "pass",
+  "next_action": "사람 최종 검토; 발송 전 한글로 열어 확인해주세요",
+  "path_format": 2,
+  "base_provenance_notice": "원본 유래 미확인 유지; 현재 해시로 검토·등록된 동일 양식과 결과물 렌더 대조",
+  "validated_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+  "copy": {
+    "status": "pass",
+    "failures": 0,
+    "directory": "workspace:approved-test-copy/approved-w1-20260913",
+    "at": "2026-09-13T07:27:38.903524+00:00"
+  },
+  "delivery": {
+    "local": "workspace:output/approved-w1-20260913/검증완료_검토대기.hwpx",
+    "status": "pass",
+    "human_review": "pending",
+    "sent": false
+  },
+  "delivery_status": "pass",
+  "human_review": "pending",
+  "sent": false
+}

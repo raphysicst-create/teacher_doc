@@ -1,0 +1,370 @@
+[
+  {
+    "case": "case01",
+    "sha256": "2f03ebc0c9e4a78e92c23ef7f7453b6506ea74abbdf220f79bddcbbcfcbee78b",
+    "checks": [
+      {
+        "item": "화동중학교",
+        "pass": true
+      },
+      {
+        "item": "내부결재",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 2학기 1회고사 출제 관련 연수",
+        "pass": true
+      },
+      {
+        "item": "화동중학교-2058(2026. 3. 17.)",
+        "pass": true
+      },
+      {
+        "item": "2026. 10. 8.",
+        "pass": true
+      },
+      {
+        "item": "13:00",
+        "pass": true
+      },
+      {
+        "item": "교무실",
+        "pass": true
+      },
+      {
+        "item": "전 교원",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 2학기 시험출제 관련 연수 자료 1부",
+        "pass": true
+      }
+    ],
+    "all_pass": true
+  },
+  {
+    "case": "case02",
+    "sha256": "ff3b8c278aaf8383a9e820d2646ef919f8771920917ae0d254b4fd630fe68b70",
+    "checks": [
+      {
+        "item": "내부결재",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 화동중학교 2학기 교과별 평가계획 수립",
+        "pass": true
+      },
+      {
+        "item": "화동중학교-2058(2026. 3. 17.)",
+        "pass": true
+      },
+      {
+        "item": "수립하여 운영",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 화동중 1학년 2학기 교수학습 및 평가계획(전체) 1부",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 화동중 2학년 2학기 교수학습 및 평가계획(전체) 1부",
+        "pass": true
+      }
+    ],
+    "all_pass": true
+  },
+  {
+    "case": "case03",
+    "sha256": "f5ae7c2fab1958ff97b4bdf86f62c8b9423a83163f0926e885450f8b92a2abd3",
+    "checks": [
+      {
+        "item": "내부결재",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 2학기 1회고사 가정통신문 배부",
+        "pass": true
+      },
+      {
+        "item": "배부하고자",
+        "pass": true
+      },
+      {
+        "item": "확인 후 기재",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 2학기 1회고사 관련 가정통신문 1부",
+        "pass": true
+      },
+      {
+        "item": "새 자교 문서번호를 지어내지 않음",
+        "pass": true
+      }
+    ],
+    "all_pass": true
+  },
+  {
+    "case": "case04",
+    "sha256": "44f37cb6b8231bc2514d06d5be0bea055c6fcdf39b318726866c3aeff71bb93a",
+    "checks": [
+      {
+        "item": "내부결재",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 2학기 2회고사 교과협의회 회의록",
+        "pass": true
+      },
+      {
+        "item": "실시하여 보고",
+        "pass": true
+      },
+      {
+        "item": "계획 결재 후",
+        "pass": true
+      },
+      {
+        "item": "문서번호",
+        "pass": true
+      },
+      {
+        "item": "시행일",
+        "pass": true
+      },
+      {
+        "item": "2026학년도 2학기 2회고사 교과협의회 회의록 1부",
+        "pass": true
+      },
+      {
+        "item": "새 자교 문서번호를 지어내지 않음",
+        "pass": true
+      }
+    ],
+    "all_pass": true
+  },
+  {
+    "case": "case05",
+    "sha256": "a142e7ed072521757372fe29f9c75613e1fae801642304182d839c7f1459a3cc",
+    "checks": [
+      {
+        "item": "2026학년도 2학기 2회고사 실시 안내",
+        "pass": true
+      },
+      {
+        "item": "자유학기",
+        "pass": true
+      },
+      {
+        "item": "양일 정상수업",
+        "pass": true
+      },
+      {
+        "item": "중식 후 하교",
+        "pass": true
+      },
+      {
+        "item": "중식 후 정상수업",
+        "pass": true
+      },
+      {
+        "item": "2026. 12. 9.",
+        "pass": true
+      },
+      {
+        "item": "12. 12.",
+        "pass": true
+      },
+      {
+        "item": "2026. 11. 24.",
+        "pass": true
+      },
+      {
+        "item": "화 동 중 학 교 장",
+        "pass": true
+      },
+      {
+        "item": "샤프",
+        "pass": true
+      },
+      {
+        "item": "지우개",
+        "pass": true
+      },
+      {
+        "item": "컴퓨터용 수성싸인펜",
+        "pass": true
+      },
+      {
+        "item": "검은색 볼펜",
+        "pass": true
+      },
+      {
+        "item": "수정테이프",
+        "pass": true
+      },
+      {
+        "item": "즉시 공지",
+        "pass": true
+      },
+      {
+        "item": "미부여",
+        "pass": true
+      },
+      {
+        "item": "시간표 row1 2학년=국어",
+        "pass": true
+      },
+      {
+        "item": "시간표 row2 2학년=영어",
+        "pass": true
+      },
+      {
+        "item": "시간표 row3 2학년=자습",
+        "pass": true
+      },
+      {
+        "item": "시간표 row4 2학년=자습",
+        "pass": true
+      },
+      {
+        "item": "시간표 row6 2학년=수학",
+        "pass": true
+      },
+      {
+        "item": "시간표 row7 2학년=역사",
+        "pass": true
+      },
+      {
+        "item": "시간표 row8 2학년=자습",
+        "pass": true
+      },
+      {
+        "item": "시간표 row9 2학년=과학",
+        "pass": true
+      },
+      {
+        "item": "출제표 row4 col2=[3, 4]",
+        "pass": true,
+        "actual": [
+          3,
+          4
+        ]
+      },
+      {
+        "item": "출제표 row5 col2=[60, 40]",
+        "pass": true,
+        "actual": [
+          60,
+          40
+        ]
+      },
+      {
+        "item": "출제표 row6 col2=[16, 6]",
+        "pass": true,
+        "actual": [
+          16,
+          6
+        ]
+      },
+      {
+        "item": "출제표 row4 col3=[3, 4]",
+        "pass": true,
+        "actual": [
+          3,
+          4
+        ]
+      },
+      {
+        "item": "출제표 row5 col3=[84, 16]",
+        "pass": true,
+        "actual": [
+          84,
+          16
+        ]
+      },
+      {
+        "item": "출제표 row6 col3=[16, 4]",
+        "pass": true,
+        "actual": [
+          16,
+          4
+        ]
+      },
+      {
+        "item": "출제표 row4 col4=[3, 4, 1]",
+        "pass": true,
+        "actual": [
+          3,
+          4,
+          1
+        ]
+      },
+      {
+        "item": "출제표 row5 col4=[70, 30]",
+        "pass": true,
+        "actual": [
+          70,
+          30
+        ]
+      },
+      {
+        "item": "출제표 row6 col4=[18, 2]",
+        "pass": true,
+        "actual": [
+          18,
+          2
+        ]
+      },
+      {
+        "item": "출제표 row4 col5=[4, 6]",
+        "pass": true,
+        "actual": [
+          4,
+          6
+        ]
+      },
+      {
+        "item": "출제표 row5 col5=[85, 15]",
+        "pass": true,
+        "actual": [
+          85,
+          15
+        ]
+      },
+      {
+        "item": "출제표 row6 col5=[20, 2]",
+        "pass": true,
+        "actual": [
+          20,
+          2
+        ]
+      },
+      {
+        "item": "출제표 row4 col7=[4, 5]",
+        "pass": true,
+        "actual": [
+          4,
+          5
+        ]
+      },
+      {
+        "item": "출제표 row5 col7=[75, 25]",
+        "pass": true,
+        "actual": [
+          75,
+          25
+        ]
+      },
+      {
+        "item": "출제표 row6 col7=[20, 5]",
+        "pass": true,
+        "actual": [
+          20,
+          5
+        ]
+      }
+    ],
+    "all_pass": true
+  }
+]

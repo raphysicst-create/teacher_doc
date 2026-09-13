@@ -1,0 +1,64 @@
+---
+name: hwpx
+description: "HWPX 문서 읽기·슬롯/셀 편집·양식 보존·구조 및 레이아웃 검증. 기존 양식은 슬롯 편집 우선. .hwp 바이너리 결과물 생성은 지원하지 않는다."
+---
+
+# HWPX — 슬롯 편집과 원본 양식 보존
+
+정본은 `<프로젝트>/.claude/skills/hwpx/SKILL.md`다. 발견 경로가 링크이면 실제 대상을 확인한다.
+학교 업무 분기·근거 조회·문안 규정·초안 확인·검토/발송 정책은 프로젝트 `CLAUDE.md`가 담당한다. 이 스킬은 편집 방법과 문서 보존을 담당한다.
+
+## 경로 선택
+
+1. 기존 슬롯 템플릿 또는 HWPX 양식의 내용 교체: `hwpx_slots.py`로 슬롯을 추출하고 `edit_hwpx.py --slot-json`으로 새 파일을 만든다. 첨부 HWPX가 있어도 XML 재작성을 기본으로 삼지 않는다.
+2. 특정 문단·셀 수정: 프로젝트의 Reader/패치 도구를 우선하며 연결 불가 시 추출된 슬롯·셀 주소로 `edit_hwpx.py`를 사용한다. 마크다운 표를 보고 행/열 번호를 추정하지 않는다.
+3. 행·열·병합 등 구조 변경: 사용자 요청 범위와 원본 크기를 확인한 뒤 기존 재생성 경로로 처리한다. 필요한 경우에만 [XML 작성 참고](references/xml-authoring.md)를 읽는다. 자동 슬롯 실행기에 맡기지 않는다.
+4. 양식 없는 신규 문서: [XML 작성 참고](references/xml-authoring.md)의 `build_hwpx.py` 경로를 사용한다. 상세 요소는 [HWPX 형식](references/hwpx-format.md)을 필요한 부분만 읽는다.
+5. `.hwp` 원본 읽기·변환과 `hwpx-fallback` 진입 조건은 프로젝트 지침을 따른다. `.hwp` 결과물을 생성하거나 원본을 덮어쓰지 않는다. 폴백 비교가 필요한 경우에만 [기능 비교](references/jkf87-hwpx-skill-comparison.md)를 읽는다.
+
+## 기본 편집
+
+시스템 Python312의 절대 경로를 사용한다. 이 PC의 PATH `python`·`py`는 다른 프로젝트 venv이므로 COM 의존성이 없다.
+
+```powershell
+$taskPython = 'C:\Users\22\AppData\Local\Programs\Python\Python312\python.exe'
+$taskSkill = '.claude/skills/hwpx'
+& $taskPython -X utf8 "$taskSkill/scripts/hwpx_slots.py" reference.hwpx -o slots.json
+& $taskPython -X utf8 "$taskSkill/scripts/edit_hwpx.py" reference.hwpx -o result.hwpx --slot-json values.json
+```
+
+`values.json`은 추출된 슬롯 키(`p:12`, `cell:0:2:1`)와 새 문자열의 매핑이다. 기존 슬롯 프로파일은 현재 양식에서 추출한 주소와 해시를 확인한다. 작업 파일은 프로젝트 안의 작업용 디렉터리에만 둔다.
+
+- 표·그림·텍스트상자를 감싼 컨테이너 문단을 직접 편집하지 않는다. 추출기는 이 문단을 제외한다.
+- 원본의 주 런 서체·강조를 보존한다. 표 셀·본문을 다시 쪼개거나 띄어쓰기를 제거해 길이에 맞추지 않는다.
+- `hp:t`의 `hp:fwSpace`, `hp:lineBreak` 등 자식 컨트롤은 보존한다. 본문 변경 시 줄 배치 캐시(`hp:linesegarray`)를 제거한다.
+- `edit_hwpx.py`의 원시 ZIP 복사 방식을 유지한다. 변경하지 않은 엔트리·Preview·BinData·header·메타데이터를 일반 ZIP 재압축으로 바꾸지 않는다.
+- 서체·런·빈 셀·예산·fingerprint 문제를 해결할 때만 [편집 세부](references/editing-details.md)를 읽는다.
+
+## 구조·레이아웃
+
+문단 순서, 표의 행·열·병합·셀 폭/높이·여백, 페이지/섹션, 스타일 ID 참조를 보존한다. 사용자 요청 없는 문단/표 추가·삭제·분할·병합을 하지 않는다. 레퍼런스 쪽수를 유지하며 쪽수 증가가 필요하면 프로젝트의 승인된 구조 변경 절차를 따른다.
+
+내용 수가 양식 행 수보다 많거나 예산이 초과하면 **슬롯/셀 위치, 필요한 행 수, 현재 예산, 초과 사유**를 반환한다. 활동명 합치기·잘라내기·글자 크기 임의 변경으로 가드를 통과시키지 않는다. 값의 의미를 보존하는 문구 수정 또는 승인된 구조 변경으로 처리한다.
+
+`--allow-over-budget`은 셀 폭을 넓히지 않는다. `--verified-by-render`와 짝으로만 동작하고 실제 PDF→PNG 렌더를 판독한 뒤에만 사용한다. 초과 WARNING을 보고에 남긴다. 자동 실행기는 이 플래그를 주입하지 않는다.
+
+## 검증 도구
+
+전체 순서와 조건은 프로젝트 `CLAUDE.md`의 Validator 절을 따른다. 순서는 구조 검사 → 네임스페이스 보정 → finalize → layout → page_guard → COM·조건부 렌더 → 내용·공문 규칙 → 신구대조다. 프로젝트 실행기를 사용할 수 있으면 실행기가 이 순서를 호출한다.
+
+- `validate.py`: ZIP/11개 최소 패키지/XML 검사. 스키마 통과가 한글 실열림을 뜻하지 않는다.
+- `fix_namespaces.py`: 프리픽스·header itemCnt 보정.
+- `finalize_hwpx.py --strip-linesegarray --layout`: 캐시 제거와 밀도 경고. `--hancom`: 실제 COM 열기 검사.
+- `page_guard.py --budget-profile ... --structure-profile ...`: 텍스트 예산과 전체 패키지 구조 비교. 프로파일은 **finalize 완료 후 사본**에서 만든다. 승인되지 않은 출력으로 기준을 재설정하지 않는다.
+- `content_guard.py`: placeholder/원문 잔재/필수 값 검사. `gonmun_lint.py`: 날짜·요일 등 공문 규칙 검사. 주력 사본을 사용한다.
+- 프로젝트 `scripts/render_check.py`: COM 쪽수·PDF 텍스트 순서/역순·개체 잔재 검사. 예산 초과 셀의 육안 판독은 별도다.
+- `text_extract.py --format markdown`: Reader 연결 불가 시 텍스트 추출. 원본이 있으면 신구대조를 남긴다.
+
+실패를 고치거나 방어선의 근거가 필요할 때만 [실패 이력](references/failure-history.md)을 읽는다. 실패/미실행을 통과로 바꾸지 않는다. 재시도 한도와 폴백 재생성 후 검증은 프로젝트 지침을 따른다.
+
+## XML 작업 시 최소 불변 조건
+
+첫 문단 첫 run의 `secPr`·`colPr`, 첫 ZIP 엔트리의 `mimetype`/ZIP_STORED, 표준 네임스페이스, header itemCnt, charPr/paraPr 참조 정합을 지킨다. 빈 텍스트는 `<hp:t/>`를 쓴다. `unpack --pretty` 결과는 검사 전용이며 pack 입력으로 사용하지 않는다.
+
+`.claude/skills/hwpx/examples/*`는 읽기·복사에 사용하지 않는다. 프로젝트 `knowledge/examples/`는 프로젝트 지침에 따라 사용한다.

@@ -1,0 +1,13 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning": "low",
+  "hashes": {
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\request.md": "3926c044be899e52df02778b83b243117ef040c326542084e903bd6c587bfe1a",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\draft.md": "c9c7c4a48bb6907c225609755d357363f4bd0dd1f3ba9e18701e091e39c3a73c",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\values.json": "2ca77a6719dcb95943d1e5acd8ed1deed46b721d3d5a409a42f663c7a65a63d4"
+  },
+  "guide": "find_tasks timeout after 120s; later calls unexecuted; freshness unchecked",
+  "preview": "미검증 사본, 편집 세부 2단계 렌더 검사용. 최종 산출물 아님"
+}

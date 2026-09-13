@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -File C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hook.ps1 -Event pre",
+            "timeout": 10
+          }
+        ],
+        "matcher": ".*"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -File C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hook.ps1 -Event post",
+            "timeout": 10
+          }
+        ],
+        "matcher": ".*"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -NonInteractive -File C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hook.ps1 -Event stop",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

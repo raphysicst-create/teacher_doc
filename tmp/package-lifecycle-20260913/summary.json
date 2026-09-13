@@ -1,0 +1,119 @@
+{
+  "at": "2026-09-13T13:21:17.595861+00:00",
+  "task": "Actual distribution package lifecycle verification",
+  "package_cli_lifecycle": "pass",
+  "public_release_decision": "hold",
+  "public_release_reasons": [
+    "Fresh GUI/app-context acceptance is not replaced by CLI plugin-manager and direct installed-code execution",
+    "VS Code full workflow and general/reply notices plus W2 official/email branches remain incomplete",
+    "Five-location sentinel fault injection and colleague pilot remain unperformed"
+  ],
+  "scope": "Codex CLI 0.147.0 and Claude Code CLI 2.1.270, disposable profiles on current Windows PC; fixed Python312, Hancom COM serial; no new LLM session or desktop UI installation trial",
+  "package": {
+    "zip": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\distribution\\releases\\2026-09-13\\teacher_doc-0.1.0.zip",
+    "sha256": "d57e7131bca7a091e9dd48f1fdc88bc22ba9f2134e1967ef77b7db66204ef060",
+    "bytes": 156275711,
+    "allowlisted_files": 103,
+    "generated_inventory": 1,
+    "zip_crc_and_all_file_hashes_verified": true,
+    "extra_files": [],
+    "scope": "Archive identity to the actual installed A candidate; no new GUI acceptance"
+  },
+  "updated_fixture": {
+    "version": "0.1.0+codex.20260913131114",
+    "path": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\distribution\\lifecycle-test-updated\\teacher_doc",
+    "fixture_only": true,
+    "changes": [
+      "Codex helper cachebuster and matching Claude/source-bundle version",
+      "Nonfunctional hwpdoc.py comment to verify source freshness detection"
+    ],
+    "public_release_candidate": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\distribution\\releases\\2026-09-13\\teacher_doc"
+  },
+  "apps": {
+    "codex": {
+      "install": "pass",
+      "installed_code_build_validate_deliver": "pass",
+      "update": "pass",
+      "stale_validation_rejected": "pass",
+      "revalidation": "pass",
+      "uninstall": "pass",
+      "protected_entries": 42,
+      "custom_hooks_preserved": true,
+      "job_hwpx_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "manifest_sha256": "4d1283338bfed4abc26694ac31fec95aa98b6c0fddfbbf1fea56e7c692413865",
+      "trial_external_copy_matches": true,
+      "human_review": "pending",
+      "sent": false,
+      "update_detail": {
+        "at": "2026-09-13T13:15:29.826675+00:00",
+        "version": "0.1.0+codex.20260913131114",
+        "installed_files_verified": 103,
+        "old_validation_rejected": true,
+        "new_full_validation_passed": true,
+        "approval_input_preserved": true,
+        "user_files_preserved": 42
+      },
+      "uninstall_detail": {
+        "at": "2026-09-13T13:16:11.141548+00:00",
+        "plugin_uninstalled": true,
+        "custom_hooks_preserved": true,
+        "user_files_preserved": 42,
+        "pc_runtime_preserved": true,
+        "owned_hooks_removed_before_uninstall": true
+      }
+    },
+    "claude": {
+      "install": "pass",
+      "installed_code_build_validate_deliver": "pass",
+      "update": "pass",
+      "stale_validation_rejected": "pass",
+      "revalidation": "pass",
+      "uninstall": "pass",
+      "protected_entries": 42,
+      "custom_hooks_preserved": true,
+      "job_hwpx_sha256": "b89305c5baaaa9a47555fe7f89055c54b75cfa1d6d5932983487cabc00a8d92f",
+      "manifest_sha256": "4d1283338bfed4abc26694ac31fec95aa98b6c0fddfbbf1fea56e7c692413865",
+      "trial_external_copy_matches": true,
+      "human_review": "pending",
+      "sent": false,
+      "update_detail": {
+        "at": "2026-09-13T13:18:00.422495+00:00",
+        "version": "0.1.0+codex.20260913131114",
+        "installed_files_verified": 103,
+        "old_validation_rejected": true,
+        "new_full_validation_passed": true,
+        "approval_input_preserved": true,
+        "user_files_preserved": 42
+      },
+      "uninstall_detail": {
+        "at": "2026-09-13T13:18:37.397581+00:00",
+        "plugin_uninstalled": true,
+        "custom_hooks_preserved": true,
+        "user_files_preserved": 42,
+        "pc_runtime_preserved": true,
+        "owned_hooks_removed_before_uninstall": true
+      }
+    }
+  },
+  "original_files_checked": 460,
+  "original_files_changed": [],
+  "global_config_files_checked": 4,
+  "global_config_unchanged": true,
+  "gate_issues": [],
+  "gate_allowlisted_files": 103,
+  "regression_tests": {
+    "tests": 133,
+    "status": "passed",
+    "elapsed_seconds": 107.737,
+    "evidence": "Observed exec_command session 31772 output: Ran 133 tests in 107.737s; OK. New budget-reader regressions included."
+  },
+  "test_harness_correction": {
+    "failure": "Claude update installed successfully; test harness initially assumed version string equalled directory basename and raised AssertionError before validation",
+    "correction": "Use actual plugin list --json installPath (Claude changes + to - in its cache directory)",
+    "update_retried": false,
+    "continuation": "Resumed only remaining verification using installed path; original success receipts preserved"
+  },
+  "fixture_environment_note": "Unchanged historically approved manifest reports Codex Desktop. That is fixture provenance only; actual execution host/scope is recorded here and in subprocess receipts. No new approval fabricated.",
+  "kordoc": "Not connected to child executor; text_extract diff fallback used",
+  "actual_external_dispatch": false
+}

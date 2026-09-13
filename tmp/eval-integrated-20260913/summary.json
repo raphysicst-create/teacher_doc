@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-09-13T04:08:55.730693+00:00",
+  "scope": "Integrated follow-up table; original independent verdicts unchanged; no tests newly run by this consolidation",
+  "total_rows": 176,
+  "initial_verdict_counts": {
+    "pass": 56,
+    "fail": 3,
+    "blocked": 115,
+    "pending": 2
+  },
+  "current_counts": {
+    "historical_pass": 56,
+    "fixed_verified": 3,
+    "behavior_verified": 36,
+    "partial": 13,
+    "material_ready": 26,
+    "blocked": 29,
+    "pending": 4,
+    "excluded": 9
+  },
+  "initial_blocked_115_current_counts": {
+    "behavior_verified": 36,
+    "material_ready": 26,
+    "partial": 13,
+    "blocked": 29,
+    "pending": 2,
+    "excluded": 9
+  },
+  "material_34_current_counts": {
+    "material_ready": 26,
+    "partial": 4,
+    "behavior_verified": 4
+  },
+  "active_followup_rows": 72,
+  "new_independent_pass_promotions": 0,
+  "source_hashes": {
+    ".claude/scratchpad/plugin-distribution/run-01a097f3-20260913/matrix.json": "434d78d656e3b5e5f7516c99ee4247d918e26330e23ad3bea14b13164b7b0180",
+    "tmp/followup-20260913/classification/rows.json": "150f01c8ac67e445f4b2535facff60d4fd5263972c8608ea91bf6bb4df7585b1",
+    "tmp/followup-20260913/classification/summary.json": "271ac90ffc080c39c964bfb52b10b56428928ab9039879a9f378446405038b1e",
+    "docs/플러그인-보급-미충족분류-정정-2026-09-13.md": "3f999eb4a47ec1694b52ea2f2f6b6bdfbcf45f5f78443c63894d3ad43ab3b6d4",
+    "tmp/materials-followup-20260913/34-row-material-correction.json": "28cc6de0272b4f31bf4da3819706e175974cb150aae145c32b64509466e00e5f",
+    "tmp/materials-followup-20260913/summary.json": "141fd9f58e7835cd8ffbcd8e4c37c9e854d501694a806da498dcf3a0826702f7",
+    "tmp/materials-followup-20260913/fixtures-local.json": "f775d7f498bcf2233cc5a43d0737202faee4576e1ad126cc69d011b3067f1479",
+    "tmp/materials-followup-20260913/evidence/lineage-comparison.json": "416b4729a549be452603a2658706168b307b8b7e666b17f6c3df3da7d1cd2750",
+    "tmp/materials-followup-20260913/evidence/codex-local-finish.json": "39d219883e0cc90d042adb910570a5a64362657b1a0f879c83dfb755fe948dd5",
+    "tmp/materials-followup-20260913/evidence/claude-local-trial.json": "19406dfa6390598691894eec919cccac9a256f87b7bcfaf289840c0ac0ad5f21",
+    "tmp/materials-followup-20260913/app-artifacts/codex/local-materials-trial.md": "12a8acf89b0eb97c9fbf48a9ce859894a6390cf1733e977e282d2ac27844b456",
+    "tmp/materials-followup-20260913/app-artifacts/claude/local-materials-trial.md": "0dc24402412b29d38a02251464875586b216b81db67ba5d6a5250179cf18aa2f",
+    "tmp/materials-followup-20260913/evidence/conversion-native-render.json": "2adc8f92c22d6ee72140534c5252ff13370e2507e7ebd39f74b2dc8e97a1dce6",
+    "tmp/materials-followup-20260913/evidence/conversion-pixel-comparison.json": "d538074de4dad6d359e958ea01390ae34da9b08989030183281483c0c4a5d39f",
+    "tmp/followup-20260913/evidence/release-gate-final.json": "7545c7a8bc501b88d20aaf98020117a42b6c07d9358c3596f3e351c0f06c3439"
+  },
+  "source_documents_unchanged": true,
+  "evidence_hash_mismatches": [],
+  "additional_observations": {
+    "conversion_render_fail_retained": true,
+    "conversion_original_pixels_identical_pages": 7,
+    "codex_material_trial_timeout_retained": true,
+    "codex_same_session_report_continuation": true
+  },
+  "release_decision": "hold"
+}

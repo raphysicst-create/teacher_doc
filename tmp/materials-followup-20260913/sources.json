@@ -1,0 +1,188 @@
+[
+  {
+    "key": "lineage-01",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_평가계획수립_기안문.hwpx",
+    "copy": "sources/lineage-01.hwpx",
+    "sha256": "541b9abc633679d3e1272ebdf3be473d7ee6b4e4cba86ade905fad2a28a136b7",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:37",
+      "file": "output/2026_2학기_평가계획수립_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 5.0,
+      "note": "B 정기사이클 B1. 2학기 평가계획 수립(본문만, 첨부 생략 승인)"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "lineage-02",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_평가계획안내가통_기안문.hwpx",
+    "copy": "sources/lineage-02.hwpx",
+    "sha256": "f3bb0321756de2d065b0f8ed38b9350153d192bef66c1f1dd5d9a61d84ab5891",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:37",
+      "file": "output/2026_2학기_평가계획안내가통_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 5.0,
+      "note": "B2. 관련번호는 B1 결재 후 기재 placeholder(사용자 미제공 정보)"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "lineage-03",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_1회고사_교과협의회_기안문.hwpx",
+    "copy": "sources/lineage-03.hwpx",
+    "sha256": "6d45d5ab26398109737d8056cc9424bccac31697e913b86ca16ebd581e8fa558",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_1회고사_교과협의회_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B4. 1회고사 교과협의회(회의록 첨부 포함). 미응시 1학년 표 정리는 사용자 직접 처리"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "lineage-04",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+    "copy": "sources/lineage-04.hwpx",
+    "sha256": "eda247a9ef3ca1a0efcd4ec7b030d21a068de9624f1a06cfb8a3201b3d124de5",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B5. 1회고사 출제 관련 연수"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "lineage-05",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+    "copy": "sources/lineage-05.hwpx",
+    "sha256": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B6. 1회고사 가통배부(가정통신문 첨부 포함)"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "lineage-06",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+    "copy": "sources/lineage-06.hwpx",
+    "sha256": "b5c434cdd5647ee1859ee256cc9182cb0c86f559c7b97d125243fe785a99a115",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B7-a. 2회고사 교과협의회(회의록 첨부 포함)"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "lineage-07",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+    "copy": "sources/lineage-07.hwpx",
+    "sha256": "ea6a08693ee6861a5840e0a42734c4bab3954f04e2fdd3436404d26d38b23e5a",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B7-b. 2회고사 가통배부(가정통신문 첨부 포함)"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "lineage-08",
+    "kind": "approved_gianmun",
+    "source": "output/2026_2학기_기출문제공개안내_기안문.hwpx",
+    "copy": "sources/lineage-08.hwpx",
+    "sha256": "b1340c6b2676a905a04353cea677ebc5a54cd5cc7304715694f2c00b78e05fa3",
+    "approval_record": {
+      "ts": "2026-07-18T17:55:39",
+      "file": "output/2026_2학기_기출문제공개안내_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 5.0,
+      "note": "B7-c. 최초 3점(첨부 미반입 지적) → 첨부 반입·수정 후 5점 확정"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "notice",
+    "kind": "existing_template",
+    "source": "knowledge/templates/가정통신문/양식.hwpx",
+    "copy": "sources/notice.hwpx",
+    "sha256": "8c55daa60601b5ab0d063ae623ca93569fa9e401c49fba6f65c291b4c2c17aef",
+    "approval_record": {
+      "registration_review": ".hwpdoc/templates/가정통신문/legacy-1/review.json"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "reply",
+    "kind": "existing_template",
+    "source": "knowledge/templates/가정통신문-회신형/양식.hwpx",
+    "copy": "sources/reply.hwpx",
+    "sha256": "70071f99c3b7a9a6ae85ed668187c691b168d180f55c2ddcfec9e4e4e44d7cfb",
+    "approval_record": {
+      "registration_review": ".hwpdoc/templates/가정통신문-회신형/legacy-1/review.json"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "gianmun",
+    "kind": "existing_template",
+    "source": "knowledge/templates/성립전예산요구/양식.hwpx",
+    "copy": "sources/gianmun.hwpx",
+    "sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "approval_record": {
+      "registration_review": ".hwpdoc/templates/성립전예산요구/legacy-1/review.json"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "conversion-original",
+    "kind": "real_hwp",
+    "source": "knowledge/examples/강원특별자치도정선교육지원청 교육과_[붙임2] 실적보고서 및 정산보고서(변경서식).hwp",
+    "copy": "sources/conversion-original.hwp",
+    "sha256": "18c6c131750e95f89d697b5a3fa00367869525758718dcffd447fb5accb903b9",
+    "approval_record": null,
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  },
+  {
+    "key": "conversion-approved",
+    "kind": "approved_conversion_result",
+    "source": "output/2026_교육경비_과학그리기대회_실적정산보고서_v2.hwpx",
+    "copy": "sources/conversion-approved.hwpx",
+    "sha256": "9c9ce159c7611576260d92d895361880592b25688a2ce13e1426766b1487c97b",
+    "approval_record": {
+      "ts": "2026-07-17T20:38:00",
+      "file": "output/2026_교육경비_과학그리기대회_실적정산보고서_v2.hwpx",
+      "type": "W2",
+      "approved": true,
+      "score": 5.0,
+      "note": "교육경비 정산 서식 채움. 1차본 변환기 렌더링 붕괴(캡션 역순·표 순서)를 사용자 발견 → COM 네이티브 변환으로 재작업 후 5점 동의"
+    },
+    "use": "User requested use of existing output/examples for local tests; no distribution authorization"
+  }
+]

@@ -20,6 +20,55 @@ def read(p):
     return json.loads(p.read_text(encoding='utf-8-sig'))
 
 
+def check_source_bundle(manifest, entries):
+    """Require the reviewed notices and exact source archives in an AGPL release."""
+    pymupdf = [name for name in manifest.get('dependency_reviews', [])
+               if name.lower().startswith('pymupdf==')]
+    if not pymupdf and not manifest.get('source_bundle'):
+        return []
+    issues = []
+    by_source = {entry['source']: entry for entry in entries}
+    by_destination = {entry['destination']: entry for entry in entries}
+    entry = by_source.get(manifest.get('source_bundle'))
+    if not entry or entry['destination'] != 'SOURCE-BUNDLE.json':
+        return [{'reason': 'source_bundle_missing'}]
+    try:
+        bundle = read(ROOT / entry['source'])
+        if (bundle.get('version') != 1 or bundle.get('program_license') != 'AGPL-3.0-only'
+                or bundle.get('plugin_version') != manifest.get('plugin_version')):
+            raise ValueError('소스 고지 버전/라이선스 불일치')
+        documents, archives = bundle['documents'], bundle['archives']
+        if not isinstance(documents, list) or not isinstance(archives, list):
+            raise ValueError('소스 고지 목록 형식 오류')
+        required = {'LICENSE', 'NOTICE.md', 'SOURCE.md', 'CHANGES.md'}
+        if not required.issubset({item['destination'] for item in documents}):
+            raise ValueError('필수 고지 누락')
+        seen = set()
+        for item in documents + archives:
+            destination = item['destination']
+            if destination in seen:
+                raise ValueError('중복 소스/고지 경로')
+            seen.add(destination)
+            candidate = by_destination.get(destination)
+            if not candidate or candidate['sha256'] != item['sha256']:
+                issues.append({'file': destination, 'reason': 'source_bundle_file_missing_or_changed'})
+        for dependency in pymupdf:
+            sources = bundle['dependency_sources'].get(dependency, [])
+            archive_ids = {item['id'] for item in archives}
+            if (dependency not in sources or not any(name.startswith('MuPDF==') for name in sources)
+                    or not set(sources).issubset(archive_ids)):
+                issues.append({'dependency': dependency, 'reason': 'corresponding_source_version_missing'})
+            requirements = by_destination.get('distribution/requirements-visual.txt')
+            if (not requirements or dependency not in
+                    (ROOT / requirements['source']).read_text(encoding='utf-8-sig').splitlines()):
+                issues.append({'dependency': dependency, 'reason': 'source_requirements_version_mismatch'})
+        if any(Path(item['destination']).suffix.lower() in ('.whl', '.dll', '.exe', '.pyd') for item in entries):
+            issues.append({'reason': 'binary_bundle_requires_separate_source_review'})
+    except (ValueError, OSError, KeyError, TypeError, AttributeError) as exc:
+        issues.append({'reason': 'source_bundle_invalid', 'detail': str(exc)})
+    return issues
+
+
 def check_release(manifest, rights):
     issues, entries = [], []
     if manifest.get('version') != 1 or not isinstance(manifest.get('files'), list) or not manifest['files']:
@@ -63,6 +112,11 @@ def check_release(manifest, rights):
         review = rights.get('dependencies', {}).get(name, {})
         if not all(review.get(k) for k in ('license', 'source', 'conditions_review', 'reviewed_by')):
             issues.append({'dependency': name, 'reason': 'dependency_license_unconfirmed'})
+        elif name.lower().startswith('pymupdf=='):
+            bundle_entry = next((item for item in entries if item['source'] == manifest.get('source_bundle')), None)
+            if not bundle_entry or review.get('source_bundle_sha256') != bundle_entry['sha256']:
+                issues.append({'dependency': name, 'reason': 'dependency_source_review_stale'})
+    issues.extend(check_source_bundle(manifest, entries))
     return {'status': 'blocked' if issues else 'ready_to_package', 'issues': issues, 'files': entries,
             'release_ready': False, 'note': '포장 가능 여부만 검사합니다. 앱 인수·동료 교사 시범 사용은 별도 평가입니다.'}
 

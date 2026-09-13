@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "NeverMatchesLifecycle",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo USER_HOOK_SENTINEL"
+          }
+        ]
+      }
+    ]
+  },
+  "lifecycle_user_setting": "KEEP"
+}

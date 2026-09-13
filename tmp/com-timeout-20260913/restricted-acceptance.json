@@ -1,0 +1,20 @@
+[
+  {
+    "name": "probe",
+    "code": 1,
+    "seconds": 0.4219999999986612,
+    "detail": "HANCOM_RESTRICTED_CONTEXT: user=CodexSandboxOffline; desktop=CodexSandboxDesktop-61da5b14ada6fd5b498847cd5a30b43a; restricted=True. 이 Windows 제한 실행 환경에서는 한글 COM 생성이 멈출 수 있어 호출 전에 중단했습니다. 한글과 보안 모듈이 설치된 사용자 세션에서 검증하세요. Codex 권한은 자동 변경하지 않으며 이 결과는 검증 통과가 아닙니다.\n"
+  },
+  {
+    "name": "open",
+    "code": 1,
+    "seconds": 0.6720000000004802,
+    "detail": "HWPX FINALIZE: FAIL\n  error: Hancom COM open failed: HANCOM_RESTRICTED_CONTEXT: user=CodexSandboxOffline; desktop=CodexSandboxDesktop-61da5b14ada6fd5b498847cd5a30b43a; restricted=True. 이 Windows 제한 실행 환경에서는 한글 COM 생성이 멈출 수 있어 호출 전에 중단했습니다. 한글과 보안 모듈이 설치된 사용자 세션에서 검증하세요. Codex 권한은 자동 변경하지 않으며 이 결과는 검증 통과가 아닙니다.\n"
+  },
+  {
+    "name": "render",
+    "code": 3,
+    "seconds": 0.48400000000037835,
+    "detail": "검사 불가(COM): HANCOM_RESTRICTED_CONTEXT: user=CodexSandboxOffline; desktop=CodexSandboxDesktop-61da5b14ada6fd5b498847cd5a30b43a; restricted=True. 이 Windows 제한 실행 환경에서는 한글 COM 생성이 멈출 수 있어 호출 전에 중단했습니다. 한글과 보안 모듈이 설치된 사용자 세션에서 검증하세요. Codex 권한은 자동 변경하지 않으며 이 결과는 검증 통과가 아닙니다.\n"
+  }
+]

@@ -1,0 +1,5 @@
+PASS: render-check 양식.hwpx
+  pages_output: 1
+  anchors_total: 36
+  anchors_found_ratio: 1.0
+  order_lis_ratio: 0.917

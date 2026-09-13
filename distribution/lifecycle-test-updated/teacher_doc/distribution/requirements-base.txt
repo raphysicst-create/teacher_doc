@@ -1,0 +1,4 @@
+# Python 3.12; versions observed in the development environment.
+lxml==5.4.0
+python-hwpx==2.23.0
+pypdf==6.14.2

@@ -1,0 +1,35 @@
+{
+  "reference_pdf_sha256": "f58cca9f01f239398cf3a86c333f9951c5e899c9cf8016d7a0a4f6f5a120d211",
+  "output_pdf_sha256": "bc3b77b424764bace97f012a49c10c46c9fa103c94834748cdfca631c9fd7b77",
+  "pages": [
+    {
+      "page": 1,
+      "equal": true
+    },
+    {
+      "page": 2,
+      "equal": true
+    },
+    {
+      "page": 3,
+      "equal": true
+    },
+    {
+      "page": 4,
+      "equal": true
+    },
+    {
+      "page": 5,
+      "equal": true
+    },
+    {
+      "page": 6,
+      "equal": true
+    },
+    {
+      "page": 7,
+      "equal": true
+    }
+  ],
+  "scope": "current result versus previously exported unchanged original HWP"
+}

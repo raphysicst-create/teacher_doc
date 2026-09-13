@@ -1,0 +1,17 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "user_authorization": "이 실험 astra-light 수준으로 5건 정도 랜덤 배치로 돌려서 기존 ouput 폴더의 최종 산출물들처럼 나오는지 확인해줘",
+  "request_sha256": "7a90635edcd4ee70888281d4a522a85eb0465f5262e8b273863d0c91203f0168",
+  "values_sha256": "58e3a738d2e1f67bfd29c3b6f83e1df09fb5e7eb94f28421a02ac8424648daa1",
+  "draft_sha256": "2cb661fd3269d7a5869a32c26ecff83a6809c7e307c5b330b144b00b5d66fb59",
+  "base": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\knowledge\\templates\\가정통신문-고사안내\\양식.hwpx",
+  "base_sha256": "c3586a7b0364cc711951b0697837c70369462397ad58f2d25a7c066d7855dae1",
+  "instructions": {
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961"
+  },
+  "structure_change": false,
+  "final_sha256": "a142e7ed072521757372fe29f9c75613e1fae801642304182d839c7f1459a3cc",
+  "date_over_budget_render_verified": true
+}

@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "stdout": "[\n  {\n    \"id\": \"가정통신문\",\n    \"version\": \"legacy\",\n    \"status\": \"legacy_available\",\n    \"purposes\": [\n      \"가정통신문\"\n    ],\n    \"sha256\": \"8c55daa60601b5ab0d063ae623ca93569fa9e401c49fba6f65c291b4c2c17aef\",\n    \"note\": \"기존 선택 경로 유지; 새 등록의 사람 확인을 대체하지 않음\"\n  },\n  {\n    \"id\": \"가정통신문-회신형\",\n    \"version\": \"legacy\",\n    \"status\": \"legacy_available\",\n    \"purposes\": [\n      \"가정통신문-회신형\"\n    ],\n    \"sha256\": \"70071f99c3b7a9a6ae85ed668187c691b168d180f55c2ddcfec9e4e4e44d7cfb\",\n    \"note\": \"기존 선택 경로 유지; 새 등록의 사람 확인을 대체하지 않음\"\n  },\n  {\n    \"id\": \"가정통신문-고사안내\",\n    \"version\": \"legacy\",\n    \"status\": \"legacy_available\",\n    \"purposes\": [\n      \"가정통신문-고사안내\"\n    ],\n    \"sha256\": \"c3586a7b0364cc711951b0697837c70369462397ad58f2d25a7c066d7855dae1\",\n    \"note\": \"기존 선택 경로 유지; 새 등록의 사람 확인을 대체하지 않음\"\n  },\n  {\n    \"id\": \"성립전예산요구\",\n    \"version\": \"legacy\",\n    \"status\": \"legacy_available\",\n    \"purposes\": [\n      \"성립전예산요구\"\n    ],\n    \"sha256\": \"f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb\",\n    \"note\": \"기존 선택 경로 유지; 새 등록의 사람 확인을 대체하지 않음\"\n  },\n  {\n    \"id\": \"회의록-교과협의회\",\n    \"version\": \"legacy\",\n    \"status\": \"legacy_available\",\n    \"purposes\": [\n      \"회의록-교과협의회\"\n    ],\n    \"sha256\": \"a23dcda3349ccd981214c01b0d037b7499098ffbdc46a3a25884d03314af61ca\",\n    \"note\": \"기존 선택 경로 유지; 새 등록의 사람 확인을 대체하지 않음\"\n  },\n  {\n    \"id\": \"가정통신문\",\n    \"version\": \"legacy-1\",\n    \"status\": \"registered\",\n    \"issues\": [],\n    \"purposes\": [\n      \"가정통신문\"\n    ],\n    \"sha256\": \"7bf45bf9de49fb6e4cc3bf31ffec04f9f80982e0ad50204555656211d4a6c8bb\"\n  },\n  {\n    \"id\": \"가정통신문-고사안내\",\n    \"version\": \"legacy-1\",\n    \"status\": \"registered\",\n    \"issues\": [],\n    \"purposes\": [\n      \"가정통신문-고사안내\"\n    ],\n    \"sha256\": \"a44d99d6c8201d62246ccb2f324ab4de7caeeb76648ff90b8bcf676e0ed4f2d5\"\n  },\n  {\n    \"id\": \"가정통신문-회신형\",\n    \"version\": \"legacy-1\",\n    \"status\": \"registered\",\n    \"issues\": [],\n    \"purposes\": [\n      \"가정통신문-회신형\"\n    ],\n    \"sha256\": \"e42863a27bf3ff5b6399c0e14069f8b452025aedd631572d72a04d06f61ae50d\"\n  },\n  {\n    \"id\": \"성립전예산요구\",\n    \"version\": \"legacy-1\",\n    \"status\": \"registered\",\n    \"issues\": [],\n    \"purposes\": [\n      \"성립전예산요구\"\n    ],\n    \"sha256\": \"f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb\"\n  },\n  {\n    \"id\": \"회의록-교과협의회\",\n    \"version\": \"legacy-1\",\n    \"status\": \"registered\",\n    \"issues\": [],\n    \"purposes\": [\n      \"회의록-교과협의회\"\n    ],\n    \"sha256\": \"ce1e86e1a2fe7bb6791b476f2f962175ed9a69e4c64d5c26a7a413c50a8eec79\"\n  }\n]\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hwpdoc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\registered",
+    "list-templates"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 2.5522148609161377,
+  "recorded_at": "2026-09-13T02:12:26.183456+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

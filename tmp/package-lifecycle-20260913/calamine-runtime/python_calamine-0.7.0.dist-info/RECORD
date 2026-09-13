@@ -1,0 +1,12 @@
+python_calamine-0.7.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+python_calamine-0.7.0.dist-info/METADATA,sha256=LcnzG_bBup1mq7k-rq09y4JSbTwN-XXUUyoKpZFE8cw,3171
+python_calamine-0.7.0.dist-info/RECORD,,
+python_calamine-0.7.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_calamine-0.7.0.dist-info/WHEEL,sha256=8y15YC0Blar7Arpb3VTfDGXCD0949xYHg4kpJU-fYxE,97
+python_calamine-0.7.0.dist-info/licenses/LICENSE,sha256=cYURXgSnjCTOT2jQ_McTGn-AhDycRqzJa11QzR38Sn4,1086
+python_calamine-0.7.0.dist-info/sboms/python-calamine.cyclonedx.json,sha256=Gi_8qMxVyhB2i4QA7kIrl2UL9xIqt-OaPvYXGDgv7A4,48461
+python_calamine/__init__.py,sha256=4pM9mC8t_hkhb-FQ2frh1-eo2zzfa_zLlz9Wtc__XjQ,742
+python_calamine/__pycache__/__init__.cpython-312.pyc,,
+python_calamine/_python_calamine.cp312-win_amd64.pyd,sha256=2aWmk592PPynO7hPkcglkyR19nvjKBStmBkjxCYRNTk,1681408
+python_calamine/_python_calamine.pyi,sha256=Q70FZg4BMMZlG-8XZu1QpU4CglmaPM0g8HSGlQyKnMk,9053
+python_calamine/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0

@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "stdout": "HWPX FINALIZE: PASS\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\code\\.claude\\skills\\hwpx\\scripts\\finalize_hwpx.py",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked\\.hwpdoc\\jobs\\eval-01-0-1\\work.hwpx",
+    "--hancom"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc",
+  "seconds": 6.7659687995910645,
+  "at": "2026-09-13T04:44:17.816249+00:00"
+}

@@ -1,0 +1,5 @@
+PASS: render-check 2026_2학기_1회고사_출제연수_기안문.hwpx
+  pages_output: 1
+  anchors_total: 8
+  anchors_found_ratio: 1.0
+  order_lis_ratio: 1.0

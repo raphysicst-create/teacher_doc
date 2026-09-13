@@ -1,0 +1,19 @@
+{
+  "scope": "Reuse unchanged historical SYNTHETIC_TEST_NOT_USER fixtures only; no new approvals",
+  "manifests": {
+    "0-1.json": "70b77ab1310d3ad33a064969815ad9d1fe921ff055ac87738feea658dc484334",
+    "0-2.json": "beb9ebab9d00b47484e1cab4e50cb8dee51f885338443c1a11b8b6a767d22af8",
+    "1-1.json": "982339a69f7bf88e638e74052f978614880f811ff47ca52b6863746e4faf0481",
+    "1-2.json": "cb83f940942ed1979b7c4c82c7346ce7803f7f85603c83728c87ff08a534d9d2",
+    "2-1.json": "e5b4b684a0e8fbd6b11ef62cb86f8ff44c67ba4cc9355810903026c60bfd5e04",
+    "2-2.json": "cbec1ce7179721717425c9969b1fa27a3055a36980d8d4bc27f25a327de0c8c7",
+    "3-1.json": "c20d6b3aa31513d89f9662292785d4569e6f9a058a05029aba4c0c4b86e3525b",
+    "3-2.json": "604612ae2fb458f5c3c6565af80990deb81142b63a0bc0c5a0e03b0c2e396fc0",
+    "4-1.json": "b4957342dece5a129f93cf099f2e0d98bfcd31f1a16364dd7c69b0e41991c618",
+    "4-2.json": "292ac3b50c88a83c52683cb5f01e31d25c3e44a65a58acb14fd69d34fab50cd8",
+    "evidence.json": "c667edef24417ed40c6be4d5dbdc3d2d7f752ed2e7d4ad048b795fa21e38b5f7"
+  },
+  "delivery": {
+    "external_copy": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked\\fake-copy"
+  }
+}

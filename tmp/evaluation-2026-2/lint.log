@@ -1,0 +1,2 @@
+usage: gonmun_lint.py [-h] [--hwpx HWPX] [--file FILE] [--format {json,text}]
+gonmun_lint.py: error: unrecognized arguments: C:\Users\22\Desktop\maintain\Hwp_doc\output\2026_2학기_평가계획_가정통신문.hwpx

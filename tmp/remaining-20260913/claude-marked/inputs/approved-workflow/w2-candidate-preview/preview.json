@@ -1,0 +1,14 @@
+{
+  "pdf": {
+    "path": "inputs/approved-workflow/w2-candidate.pdf",
+    "sha256": "12c5f4f8a646f53008bb96f7f973b61aabb9f63dceef1088d18d9b27a83fc0cc"
+  },
+  "images": [
+    {
+      "path": "inputs/approved-workflow/w2-candidate-preview/page-001.png",
+      "sha256": "2ab3256508c935be9d0edcf6943d3d478e505fcdaa6293a359ea0720e0fab5a3",
+      "page": 1
+    }
+  ],
+  "visual_review": "unconfirmed"
+}

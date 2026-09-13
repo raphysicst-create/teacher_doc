@@ -1,0 +1,187 @@
+{
+  "checked_at": "2026-09-12T23:24:13.329997+00:00",
+  "status": "source_evidence_collected_not_release_approval",
+  "upstream": {
+    "repository": "https://github.com/Canine89/hwpxskill",
+    "tree_sha": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+    "tree_truncated": false,
+    "license_paths": [],
+    "api_license": null,
+    "license_request": "https://github.com/Canine89/hwpxskill/issues/4",
+    "issue_comments_observed": 0
+  },
+  "dependencies": [
+    {
+      "package": "lxml",
+      "version": "5.4.0",
+      "pypi_url": "https://pypi.org/project/lxml/5.4.0/",
+      "license_metadata": "BSD-3-Clause",
+      "artifacts": [
+        {
+          "path": "lxml/licenses/LICENSE.txt",
+          "sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c",
+          "bytes": 1517,
+          "installed_distribution_path": "lxml-5.4.0.dist-info/licenses/LICENSE.txt"
+        },
+        {
+          "path": "lxml/licenses/LICENSES.txt",
+          "sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9",
+          "bytes": 1543,
+          "installed_distribution_path": "lxml-5.4.0.dist-info/licenses/LICENSES.txt"
+        }
+      ]
+    },
+    {
+      "package": "python-hwpx",
+      "version": "2.23.0",
+      "pypi_url": "https://pypi.org/project/python-hwpx/2.23.0/",
+      "license_metadata": "Apache-2.0",
+      "artifacts": [
+        {
+          "path": "python-hwpx/licenses/LICENSE",
+          "sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875",
+          "bytes": 9688,
+          "installed_distribution_path": "python_hwpx-2.23.0.dist-info/licenses/LICENSE"
+        },
+        {
+          "path": "python-hwpx/licenses/NOTICE",
+          "sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8",
+          "bytes": 2473,
+          "installed_distribution_path": "python_hwpx-2.23.0.dist-info/licenses/NOTICE"
+        }
+      ]
+    },
+    {
+      "package": "pywin32",
+      "version": "312",
+      "pypi_url": "https://pypi.org/project/pywin32/312/",
+      "license_metadata": "PSF",
+      "artifacts": [
+        {
+          "path": "pywin32/licenses/adodbapi/license.txt",
+          "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+          "bytes": 26925,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/adodbapi/license.txt"
+        },
+        {
+          "path": "pywin32/licenses/com/License.txt",
+          "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+          "bytes": 1570,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/com/License.txt"
+        },
+        {
+          "path": "pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+          "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+          "bytes": 1087,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE"
+        },
+        {
+          "path": "pywin32/licenses/isapi/README.txt",
+          "sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303",
+          "bytes": 330,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/isapi/README.txt"
+        },
+        {
+          "path": "pywin32/licenses/pythonwin/License.txt",
+          "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+          "bytes": 1541,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/pythonwin/License.txt"
+        },
+        {
+          "path": "pywin32/licenses/pythonwin/Scintilla/License.txt",
+          "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+          "bytes": 873,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/pythonwin/Scintilla/License.txt"
+        },
+        {
+          "path": "pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+          "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+          "bytes": 12540,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/pythonwin/pywin/idle/LICENSE.txt"
+        },
+        {
+          "path": "pywin32/licenses/win32/License.txt",
+          "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+          "bytes": 1541,
+          "installed_distribution_path": "pywin32-312.dist-info/licenses/win32/License.txt"
+        }
+      ]
+    },
+    {
+      "package": "pypdf",
+      "version": "6.14.2",
+      "pypi_url": "https://pypi.org/project/pypdf/6.14.2/",
+      "license_metadata": "BSD-3-Clause",
+      "artifacts": [
+        {
+          "path": "pypdf/licenses/LICENSE",
+          "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+          "bytes": 1605,
+          "installed_distribution_path": "pypdf-6.14.2.dist-info/licenses/LICENSE"
+        }
+      ]
+    },
+    {
+      "package": "PyMuPDF",
+      "version": "1.28.0",
+      "pypi_url": "https://pypi.org/project/PyMuPDF/1.28.0/",
+      "license_metadata": "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License",
+      "artifacts": [
+        {
+          "path": "PyMuPDF/COPYING",
+          "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b",
+          "bytes": 64,
+          "installed_distribution_path": "pymupdf-1.28.0.dist-info/COPYING"
+        }
+      ]
+    },
+    {
+      "package": "openpyxl",
+      "version": "3.1.5",
+      "pypi_url": "https://pypi.org/project/openpyxl/3.1.5/",
+      "license_metadata": "MIT",
+      "artifacts": [
+        {
+          "path": "openpyxl/LICENCE.rst",
+          "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+          "bytes": 1131,
+          "installed_distribution_path": "openpyxl-3.1.5.dist-info/LICENCE.rst"
+        }
+      ]
+    },
+    {
+      "package": "et-xmlfile",
+      "version": "2.0.0",
+      "pypi_url": "https://pypi.org/project/et-xmlfile/2.0.0/",
+      "license_metadata": "MIT",
+      "artifacts": [
+        {
+          "path": "et-xmlfile/LICENCE.python",
+          "sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2",
+          "bytes": 14688,
+          "installed_distribution_path": "et_xmlfile-2.0.0.dist-info/LICENCE.python"
+        },
+        {
+          "path": "et-xmlfile/LICENCE.rst",
+          "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+          "bytes": 1131,
+          "installed_distribution_path": "et_xmlfile-2.0.0.dist-info/LICENCE.rst"
+        }
+      ]
+    },
+    {
+      "package": "xlrd",
+      "version": "2.0.2",
+      "pypi_url": "https://pypi.org/project/xlrd/2.0.2/",
+      "license_metadata": "BSD",
+      "artifacts": [
+        {
+          "path": "xlrd/LICENSE",
+          "sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815",
+          "bytes": 3771,
+          "installed_distribution_path": "xlrd-2.0.2.dist-info/LICENSE"
+        }
+      ]
+    }
+  ]
+}

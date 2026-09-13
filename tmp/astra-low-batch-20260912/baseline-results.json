@@ -1,0 +1,32 @@
+[
+  {
+    "case": "case01",
+    "exit_code": 0,
+    "original_unchanged": true,
+    "pages": 1
+  },
+  {
+    "case": "case02",
+    "exit_code": 0,
+    "original_unchanged": true,
+    "pages": 1
+  },
+  {
+    "case": "case03",
+    "exit_code": 0,
+    "original_unchanged": true,
+    "pages": 1
+  },
+  {
+    "case": "case04",
+    "exit_code": 0,
+    "original_unchanged": true,
+    "pages": 1
+  },
+  {
+    "case": "case05",
+    "exit_code": 0,
+    "original_unchanged": true,
+    "pages": 1
+  }
+]

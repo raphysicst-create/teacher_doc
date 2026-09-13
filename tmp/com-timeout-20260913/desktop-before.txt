@@ -1,0 +1,8 @@
+{"stage": "environment", "seconds": 0.265, "user": "22", "desktop": "Default"}
+{"stage": "module", "seconds": 0.281, "path": "C:\\Users\\22\\AppData\\Local\\HwpAutomation\\FilePathCheckerModule.dll", "exists": true}
+{"stage": "dispatch-start", "seconds": 0.281}
+{"stage": "dispatch-done", "seconds": 7.406}
+{"stage": "register", "seconds": 7.422, "result": true}
+{"stage": "version", "seconds": 7.422, "value": "13, 0, 0, 3903"}
+{"stage": "quit-start", "seconds": 7.422}
+{"stage": "quit-done", "seconds": 7.422}

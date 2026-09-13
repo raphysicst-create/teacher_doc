@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "recorded_date": "2026-09-13",
+  "component": "PyMuPDF",
+  "package_version": "1.28.0",
+  "selected_license": "AGPL-3.0",
+  "decision_status": "confirmed_by_user",
+  "user_statement": "무료 AGPL 이지 당연히",
+  "source": "user_message",
+  "official_license_information": "https://pymupdf.readthedocs.io/en/latest/about.html#license-and-copyright",
+  "distribution_preparation": {
+    "status": "prepared_and_verified",
+    "requirements": [
+      "배포본에 AGPL 라이선스 전문과 관련 저작권·변경 고지를 포함한다.",
+      "AGPL 적용 대상 결합 프로그램에 AGPL 조건을 적용하고 해당 배포 버전의 완전한 대응 소스와 필요한 설치·빌드 자료를 수령자에게 제공한다.",
+      "PyMuPDF/MuPDF 바이너리를 포함하는 경우 해당 버전의 대응 소스 제공 방식도 준비한다.",
+      "Canine89의 MIT 고지 및 다른 의존성의 라이선스 고지를 보존한다."
+    ],
+    "review_record": "distribution/agpl-review-2026-09-13.md",
+    "source_bundle_sha256": "318f62cbdf7ef1268a8d008740eacef7308d7cc5ff3ce8bea6e8d8b5fbc313c7",
+    "latest_scope_review": "distribution/calamine-review-2026-09-13.md"
+  },
+  "notes": [
+    "AGPL/상용 선택은 완료다. 사용자에게 같은 선택을 다시 요청하지 않는다.",
+    "배포 준비 상태는 소스 제공·고지의 실제 이행 상태이며 라이선스 선택 미완료를 뜻하지 않는다."
+  ]
+}

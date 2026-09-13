@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "Installing plugin \"teacher_doc@teacher-doc-lifecycle-20260913\"...√ Successfully installed plugin: teacher_doc@teacher-doc-lifecycle-20260913 (scope: user)\n",
+  "stderr": "",
+  "at": "2026-09-13T13:04:29.617174+00:00",
+  "seconds": 3.9059999999990396,
+  "argv": [
+    "C:\\Users\\22\\.local\\bin\\claude.exe",
+    "plugin",
+    "install",
+    "teacher_doc@teacher-doc-lifecycle-20260913"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

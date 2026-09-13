@@ -10,7 +10,7 @@ knowledge/reference/의 원본 파일을 교체한 뒤 이 스크립트만 다�
   - 예산과목-<연도>.json           (세부사업 > 세부항목 > 비목·산출내역 이름 목록)
 
 사용: python scripts/refresh_reference.py
-의존: openpyxl(xlsx), xlrd(구형 xls)
+의존: openpyxl(xlsx), python-calamine(구형 xls)
 """
 import datetime
 import json
@@ -116,26 +116,33 @@ def build_timetable():
     return data
 
 
+def read_budget_rows(path):
+    from python_calamine import CalamineWorkbook
+    with CalamineWorkbook.from_path(str(path)) as book:
+        # Header detection below uses original Excel row positions.
+        return book.get_sheet_by_index(0).to_python(skip_empty_area=False)
+
+
 def build_budget():
-    import xlrd
     if not BUDGET_XLS or not BUDGET_JSON:
         raise ValueError('사업관리카드 source/파생 경로 설정이 필요합니다')
     if BUDGET_JSON.suffix.lower() != '.json' or BUDGET_JSON.resolve() == BUDGET_XLS.resolve():
         raise ValueError('사업관리카드 원본과 파생 JSON은 서로 다른 파일이어야 합니다')
-    book = xlrd.open_workbook(str(BUDGET_XLS))
-    sheet = book.sheets()[0]
+    rows = read_budget_rows(BUDGET_XLS)
     snapshot = datetime.date.fromtimestamp(BUDGET_XLS.stat().st_mtime).isoformat()
     programs = []
     cur_prog = cur_item = None
-    for r in range(sheet.nrows):
-        raw = sheet.cell_value(r, 0)
+    for r, row in enumerate(rows):
+        raw = row[0] if row else ""
         if not isinstance(raw, str) or not raw.strip():
             continue
         name = raw.strip()
         indent = len(raw) - len(raw.lstrip())
-        detail = str(sheet.cell_value(r, 1)).strip() if sheet.ncols > 1 else ""
-        amount = sheet.cell_value(r, 2) if sheet.ncols > 2 else ""
-        amount = int(amount) if isinstance(amount, float) else None
+        detail = row[1] if len(row) > 1 else ""
+        # xlrd exposed numeric cells as floats; retain its string representation.
+        detail = str(float(detail) if type(detail) is int else int(detail) if type(detail) is bool else detail).strip()
+        amount = row[2] if len(row) > 2 else ""
+        amount = int(amount) if type(amount) in (int, float) else None
         if name in ("사업관리카드(예산)",) or "합 계" in name:
             continue
         if r <= 3:  # 헤더 행

@@ -1,0 +1,1 @@
+HANCOM_RESTRICTED_CONTEXT: user=CodexSandboxOffline; desktop=CodexSandboxDesktop-fa18eb17ed654978d64536ad2a2d5e12; restricted=True. 이 Windows 제한 실행 환경에서는 한글 COM 생성이 멈출 수 있어 호출 전에 중단했습니다. 한글과 보안 모듈이 설치된 사용자 세션에서 검증하세요. Codex 권한은 자동 변경하지 않으며 이 결과는 검증 통과가 아닙니다.

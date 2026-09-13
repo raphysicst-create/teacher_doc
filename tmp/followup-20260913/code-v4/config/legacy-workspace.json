@@ -1,0 +1,24 @@
+{
+  "kind": "hwpdoc-workspace",
+  "version": 1,
+  "school": {"name": "화동중학교", "document_prefix": "화동중학교-", "academic_year": 2026},
+  "delivery": {"external_copy": "profile:OneDrive - 화동중학교/작업 보고용"},
+  "references": {
+    "timetable": "knowledge/reference/기초시간표-2026-2학기.json",
+    "timetable_source": "knowledge/reference/기초시간표-2026-2학기.xlsx",
+    "budget": "knowledge/reference/예산과목-2026.json",
+    "budget_source": "knowledge/reference/사업관리카드-예산-2026.xls",
+    "related": "knowledge/examples/md"
+  },
+  "timetable_mapping": {
+    "format": "grade-columns-v1", "sheet": null,
+    "grades": {"1": "1학년", "2": "2학년"},
+    "day_columns": {"월": [2, 3], "화": [4, 5], "수": [6, 7], "목": [8, 9], "금": [10, 11]},
+    "period_rows": [5, 6, 7, 8, 9, 10, 11, 12],
+    "strip_pattern": "\\((주|원)\\)|㈜",
+    "subject_full": {"국": "국어", "수": "수학", "사": "사회", "역": "역사", "과": "과학", "영": "영어", "체": "체육", "미": "미술", "음": "음악", "기가": "기술·가정", "진": "진로", "도덕": "도덕", "정보": "정보"},
+    "non_subject": ["동아리", "스포츠클럽", "교과방과후", "피아노, 스포츠, 기초", "밴드, 기초"]
+  },
+  "preferences": {"body_font": "굴림", "body_pt": 12, "update_content_hpf": false, "auto_empty_cell_check": false, "delete_empty_grade_rows": "human"},
+  "connections": {"school_task_guide": "optional", "kordoc": "optional"}
+}

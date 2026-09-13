@@ -1,0 +1,13 @@
+{
+  "knowledge": {
+    "delete.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "mixed.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "move.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "protected.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26",
+    "한글 원본.txt": "b6db7a5827eadeba4c6ad1be6d194ff86b492b83e7898073d03ab1e6eff9ad26"
+  },
+  "output": {
+    "allowed.txt": "4bb50ff93b2a18a5f6d6f5feb36eb1b19ff21d6e4320ba96e35dd34007e555c9"
+  },
+  "plain_doc": "OTHER_SYNTHETIC_PROJECT"
+}

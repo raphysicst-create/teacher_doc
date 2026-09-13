@@ -1,0 +1,410 @@
+{
+  "sha": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+  "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59dcbf5e414cd8ca22b8941710a4f96c9752f739",
+      "size": 53,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/59dcbf5e414cd8ca22b8941710a4f96c9752f739"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e10909bf2030bef0410d7fc7f0f000db59b6e0e2",
+      "size": 13176,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/e10909bf2030bef0410d7fc7f0f000db59b6e0e2"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2264f38aeaa6fa5fd54bfb118bf03eb4e6283944",
+      "size": 38825,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/2264f38aeaa6fa5fd54bfb118bf03eb4e6283944"
+    },
+    {
+      "path": "references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e57ed48d4cb0ddc20dade7a21feb9ed20305466",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/6e57ed48d4cb0ddc20dade7a21feb9ed20305466"
+    },
+    {
+      "path": "references/hwpx-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36fda27b6b41348c2e0a22071ab48f7e880882b2",
+      "size": 11145,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/36fda27b6b41348c2e0a22071ab48f7e880882b2"
+    },
+    {
+      "path": "references/jkf87-hwpx-skill-comparison.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e40f442baa129c719e9e3947b244f76d876b7686",
+      "size": 2128,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/e40f442baa129c719e9e3947b244f76d876b7686"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4eaff693b1b93ce13e8208ed1ef85b775c0dec72",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/4eaff693b1b93ce13e8208ed1ef85b775c0dec72"
+    },
+    {
+      "path": "scripts/analyze_template.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70a5f2edbc892551bab06b83d50e42ddc7bc961e",
+      "size": 15498,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/70a5f2edbc892551bab06b83d50e42ddc7bc961e"
+    },
+    {
+      "path": "scripts/build_hwpx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58cb6405a09797a1a593fcb800f0a023cb839cc8",
+      "size": 8523,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/58cb6405a09797a1a593fcb800f0a023cb839cc8"
+    },
+    {
+      "path": "scripts/content_guard.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8921a096c52c90fe3696d03b4f544200e91e9f8b",
+      "size": 8277,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/8921a096c52c90fe3696d03b4f544200e91e9f8b"
+    },
+    {
+      "path": "scripts/create_document.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8eb30da2348d5ce22c7aeca2e46d46e53f73da30",
+      "size": 6851,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/8eb30da2348d5ce22c7aeca2e46d46e53f73da30"
+    },
+    {
+      "path": "scripts/edit_hwpx.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "78eb656de0960a110057278c702ab7b63a850066",
+      "size": 37507,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/78eb656de0960a110057278c702ab7b63a850066"
+    },
+    {
+      "path": "scripts/finalize_hwpx.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5ad5ffd54762641698e4f875e6a70bad501afb3e",
+      "size": 11156,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/5ad5ffd54762641698e4f875e6a70bad501afb3e"
+    },
+    {
+      "path": "scripts/fix_namespaces.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bbc6503baff32d6e2474c04214a7e543f8432e97",
+      "size": 3315,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/bbc6503baff32d6e2474c04214a7e543f8432e97"
+    },
+    {
+      "path": "scripts/gonmun_lint.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "69bb5e5c47c153b95c3a0be94922266c92dc25b8",
+      "size": 5431,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/69bb5e5c47c153b95c3a0be94922266c92dc25b8"
+    },
+    {
+      "path": "scripts/hwpx_slots.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cb744917aea152622030479ac97b4b9d8c83dc1",
+      "size": 5599,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/5cb744917aea152622030479ac97b4b9d8c83dc1"
+    },
+    {
+      "path": "scripts/office",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeee1245b49b9949e816f390b0e3469b2076373b",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/eeee1245b49b9949e816f390b0e3469b2076373b"
+    },
+    {
+      "path": "scripts/office/pack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adbbaa5fb2d888d0c9884beebeb36f8b609ee188",
+      "size": 1954,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/adbbaa5fb2d888d0c9884beebeb36f8b609ee188"
+    },
+    {
+      "path": "scripts/office/unpack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e4c4c88c47291a51c4c08414b9de42e3e19d7b6",
+      "size": 2332,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/0e4c4c88c47291a51c4c08414b9de42e3e19d7b6"
+    },
+    {
+      "path": "scripts/page_guard.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3410ad4ea99c78e88b9116baa52ce94eec9bef22",
+      "size": 26203,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/3410ad4ea99c78e88b9116baa52ce94eec9bef22"
+    },
+    {
+      "path": "scripts/text_extract.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f78bf38decb5df986e72e56cc545c23120bd150f",
+      "size": 4684,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/f78bf38decb5df986e72e56cc545c23120bd150f"
+    },
+    {
+      "path": "scripts/validate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6a8ef93d59950b23f6b8a933803dddbf1574952",
+      "size": 5439,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/f6a8ef93d59950b23f6b8a933803dddbf1574952"
+    },
+    {
+      "path": "templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc6176055c32987d87cb975349a3e26b668d2adf",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/bc6176055c32987d87cb975349a3e26b668d2adf"
+    },
+    {
+      "path": "templates/base",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3daf862b7d37b5ca1d11c603e160c38f38bc9dda",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/3daf862b7d37b5ca1d11c603e160c38f38bc9dda"
+    },
+    {
+      "path": "templates/base/Contents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ecbfcedef512118adac390098d9aad292ff34ea",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/6ecbfcedef512118adac390098d9aad292ff34ea"
+    },
+    {
+      "path": "templates/base/Contents/content.hpf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5c09fd73de6e5244faa71277fae03fe7405b9a",
+      "size": 1795,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/9c5c09fd73de6e5244faa71277fae03fe7405b9a"
+    },
+    {
+      "path": "templates/base/Contents/header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "242cc5968a5740fd988eba6dcaab34e66e67286c",
+      "size": 51572,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/242cc5968a5740fd988eba6dcaab34e66e67286c"
+    },
+    {
+      "path": "templates/base/Contents/section0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e49afd10be0f21a96c8ed7283e23d1c966494069",
+      "size": 3817,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/e49afd10be0f21a96c8ed7283e23d1c966494069"
+    },
+    {
+      "path": "templates/base/META-INF",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "176f7c15784ffb0915669eabf9f9055623ddbc8d",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/176f7c15784ffb0915669eabf9f9055623ddbc8d"
+    },
+    {
+      "path": "templates/base/META-INF/container.rdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8df472d4c4d1e5c76908efaf4628bf14346bd271",
+      "size": 867,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/8df472d4c4d1e5c76908efaf4628bf14346bd271"
+    },
+    {
+      "path": "templates/base/META-INF/container.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eab3d58b87a3104e4636508c0447c88ab137e98d",
+      "size": 481,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/eab3d58b87a3104e4636508c0447c88ab137e98d"
+    },
+    {
+      "path": "templates/base/META-INF/manifest.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "614e8716d9e60b6ff9a80790920b19c03e8df98e",
+      "size": 118,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/614e8716d9e60b6ff9a80790920b19c03e8df98e"
+    },
+    {
+      "path": "templates/base/Preview",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5370ffbc4b639eb2d9ab737cdc1369ab4bd9016",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/b5370ffbc4b639eb2d9ab737cdc1369ab4bd9016"
+    },
+    {
+      "path": "templates/base/Preview/PrvImage.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b07d86f219ae23a7e1faac41d3e92c0edfef9602",
+      "size": 4485,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/b07d86f219ae23a7e1faac41d3e92c0edfef9602"
+    },
+    {
+      "path": "templates/base/Preview/PrvText.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3f5a12faa99758192ecc4ed3fc22c9249232e86",
+      "size": 2,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/d3f5a12faa99758192ecc4ed3fc22c9249232e86"
+    },
+    {
+      "path": "templates/base/mimetype",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24e7ded4031f4a792987c3f953d41777191620e0",
+      "size": 19,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/24e7ded4031f4a792987c3f953d41777191620e0"
+    },
+    {
+      "path": "templates/base/settings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "785c70a05d9f898b94e926955a066626c382a938",
+      "size": 267,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/785c70a05d9f898b94e926955a066626c382a938"
+    },
+    {
+      "path": "templates/base/version.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dec9b2856dfe7ba4a7bb5b0f3c726beb526bfd9c",
+      "size": 294,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/dec9b2856dfe7ba4a7bb5b0f3c726beb526bfd9c"
+    },
+    {
+      "path": "templates/gonmun",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6cf8561f79f95c27149da69c39e594f3255b6c10",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/6cf8561f79f95c27149da69c39e594f3255b6c10"
+    },
+    {
+      "path": "templates/gonmun/header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d6fa0bae1ef531c95c60c618e1047d81168c42c",
+      "size": 60575,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/8d6fa0bae1ef531c95c60c618e1047d81168c42c"
+    },
+    {
+      "path": "templates/gonmun/section0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac1f3685389f4326696d7edb64f62fb677d16826",
+      "size": 8654,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/ac1f3685389f4326696d7edb64f62fb677d16826"
+    },
+    {
+      "path": "templates/minutes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8ae21cff14d60aad28e1ae5af36f46723300505",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/c8ae21cff14d60aad28e1ae5af36f46723300505"
+    },
+    {
+      "path": "templates/minutes/header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0127923e8b512858cc9370a5adfaa9671e0e6391",
+      "size": 60333,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/0127923e8b512858cc9370a5adfaa9671e0e6391"
+    },
+    {
+      "path": "templates/minutes/section0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f2302e77cfcbb18eda96cdfe4c0e1eba10bcb56",
+      "size": 19206,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/1f2302e77cfcbb18eda96cdfe4c0e1eba10bcb56"
+    },
+    {
+      "path": "templates/proposal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ab90f28d90966d18c4c2c0ccbe519d5d1349f55",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/1ab90f28d90966d18c4c2c0ccbe519d5d1349f55"
+    },
+    {
+      "path": "templates/proposal/header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71d5b743c0ee627aae50b704474d2597ded91825",
+      "size": 65387,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/71d5b743c0ee627aae50b704474d2597ded91825"
+    },
+    {
+      "path": "templates/proposal/section0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dc599762d581efd6e7bbd4178342cc0a06f8ab5",
+      "size": 18835,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/7dc599762d581efd6e7bbd4178342cc0a06f8ab5"
+    },
+    {
+      "path": "templates/report",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bafe83f51b075533f152d415ac5bd2327410327f",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/bafe83f51b075533f152d415ac5bd2327410327f"
+    },
+    {
+      "path": "templates/report/header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7938285f6ee4cd238d227e42afa10d8c82cf400",
+      "size": 74985,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/d7938285f6ee4cd238d227e42afa10d8c82cf400"
+    },
+    {
+      "path": "templates/report/section0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b5e5692cf859268d9c758d2526c304938305b9b",
+      "size": 10670,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/3b5e5692cf859268d9c758d2526c304938305b9b"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ec36c5d7469e22a848b660c773f763ab833837b",
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/trees/4ec36c5d7469e22a848b660c773f763ab833837b"
+    },
+    {
+      "path": "tests/test_hwpx_guards.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fb18eaef56ff67d4e25f479c066a3088d367e73",
+      "size": 16973,
+      "url": "https://api.github.com/repos/Canine89/hwpxskill/git/blobs/5fb18eaef56ff67d4e25f479c066a3088d367e73"
+    }
+  ],
+  "truncated": false
+}

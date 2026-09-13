@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"job_id\": \"approved-w1-20260913\",\n  \"status\": \"pass\",\n  \"report\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-codex\\\\.hwpdoc\\\\jobs\\\\approved-w1-20260913\\\\report.json\",\n  \"changed_files\": [],\n  \"copy\": null,\n  \"next_action\": \"사람 최종 검토; 발송 전 한글로 열어 확인해주세요\"\n}\n",
+  "stderr": "",
+  "at": "2026-09-13T13:07:20.806915+00:00",
+  "seconds": 80.28099999999904,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\codex-config\\plugins\\cache\\teacher-doc-lifecycle-20260913\\teacher_doc\\0.1.0\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-codex",
+    "validate",
+    "--job",
+    "approved-w1-20260913"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-codex",
+  "configuration_scope": "disposable child-process config only"
+}

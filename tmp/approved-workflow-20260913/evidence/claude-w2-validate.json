@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"job_id\": \"approved-w2-20260913\",\n  \"status\": \"pass\",\n  \"report\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\remaining-20260913\\\\claude-marked\\\\.hwpdoc\\\\jobs\\\\approved-w2-20260913\\\\report.json\",\n  \"changed_files\": [],\n  \"copy\": null,\n  \"next_action\": \"사람 최종 검토; 발송 전 한글로 열어 확인해주세요\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\claude-marked",
+    "validate",
+    "--manifest",
+    "inputs/approved-workflow/w2.json"
+  ],
+  "at": "2026-09-13T07:30:03.895039+00:00",
+  "seconds": 33.836692571640015,
+  "app": "claude"
+}

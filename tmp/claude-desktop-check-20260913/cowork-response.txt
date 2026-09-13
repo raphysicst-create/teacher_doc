@@ -1,0 +1,73 @@
+Claude 응답: 읽기 전용 점검 끝났습니다.
+로드된 도구, 메모리 2개 읽음, 메모리 2개 업데이트함
+로드된 도구, 메모리 2개 읽음, 메모리 2개 업데이트함
+읽기 전용 점검 끝났습니다. 결론부터: 이 세션에서 한글 COM을 직접 호출하는 건 현재 구성으로는 불가능합니다.
+1. 실행해서 확인한 사실
+클로드 코드가 실제로 도는 런타임 (클라우드 컨테이너)
+항목
+값
+OS
+Ubuntu 24.04.4 LTS (Noble)
+커널
+Linux 6.18.44-fc-v24, x86_64
+wine / wine64 / mono
+없음 (which 결과 공백)
+python win32com
+ModuleNotFoundError
+즉 제 셸은 리눅스이고, Windows COM을 흉내 낼 계층(wine)조차 없습니다.
+데스크톱 호스트 (get_device_info 실측)
+클립보드에 복사
+￼
+platform: win32        arch: x64
+deviceName: [device name omitted]
+appVersion: 1.52386.3 / Electron 44.2.0 / Node 24.20.0
+connectedFolders: []      ← 연결된 폴더 0개
+localMcpServers: []       ← 알려진 로컬 MCP 서버 0개
+device_bash 실행 시도 결과 — 실제로 uname -a를 던져봤고 다음 에러를 받았습니다:
+No folders are connected to this device for the current session.
+폴더가 하나도 연결돼 있지 않아 디바이스 셸 자체가 기동되지 않습니다.
+2. 도구 목록에 근거한 판단
+세션에 로드/지연 등록된 도구 전체를 windows COM automation powershell hwp hangul office로 검색했고, Windows 네이티브 셸·PowerShell·COM 브리지에 해당하는 도구는 하나도 없습니다. PC 쪽으로 나가는 경로는 세 갈래뿐입니다.
+• 파일 3종 (device_list_dir / device_stage_files / device_commit_files) — 파일 복사만. 프로세스 실행 능력 없음.
+• device_bash — 도구 설명상 PC 안의 격리된 리눅스 VM에서 돌고, 연결 폴더만 ~/mnt/에 마운트됩니다. Windows 프로세스 공간이 아니므로 pywin32 / Dispatch("HWPFrame.HwpObject") 경로가 원리적으로 닫혀 있습니다.
+• computer_* GUI 자동화 — Windows 화면을 마우스·키보드로 조작하는 계층. 현재 꺼져 있고, 켠다 해도 COM 호출이 아니라 한글 창을 눈으로 조작하는 방식입니다.
+localMcpServers: []라는 점도 중요합니다. 사용자가 직접 만든 HWP COM MCP 서버가 등록돼 있었다면 여기 잡혀야 하는데, 현재 아무것도 없습니다.
+3. 미검증 항목
+• 폴더 연결 후 device_bash가 실제로 리포트하는 OS — 도구 설명에만 근거했고, 폴더 미연결로 직접 확인 못 했습니다. 확률은 낮지만 "혹시 Windows 셸이더라"는 반증 가능성은 열려 있습니다.
+• PC에 한글이 실제로 설치돼 있는지, HWPFrame.HwpObject가 등록돼 있는지 — 레지스트리·파일 조회를 안 했으므로 미검증.
+• computer use를 켰을 때 실제로 한글 창을 잡을 수 있는지 — 설정 변경 금지 지시에 따라 computer_request_access를 호출하지 않았으므로 미검증.
+• ~/mineru-venv, ~/.codex 같은 홈 디렉터리 이름은 보이지만 내용은 안 봤습니다.
+4. 가능한 경로 (제안만, 실행 안 함)
+COM 실호출을 꼭 하려면 실질적으로 하나뿐입니다 — pywin32 기반 stdio MCP 서버를 PC에 직접 띄우고 Claude 데스크톱에 등록하는 것. 그러면 localMcpServers에 잡히고 도구로 노출돼 mcp__remote-devices__<서버>__* 형태로 제가 호출할 수 있습니다. computer use 경유 GUI 조작은 COM이 아니고 느리며, "실열림 검증"의 증거 강도도 떨어집니다.
+어느 쪽으로 갈지 정해주시면 그때 필요한 승인 절차부터 안내하겠습니다.
+복사
+￼
+소리 내어 읽기
+좋은 답변
+나쁜 답변
+1분 전
+￼
+￼
+￼
+￼
+￼
+￼
+￼
+￼
+파일, 커넥터 등 추가
+￼
+받아쓰기
+마이크
+폴더 추가
+수동
+Opus 5 엑스트라
+￼
+진행 상황
+출력
+컨텍스트
+폴더 추가
+이 작업에 사용된 도구와 참조된 파일을 추적합니다.
+￼
+￼
+￼
+Notifications

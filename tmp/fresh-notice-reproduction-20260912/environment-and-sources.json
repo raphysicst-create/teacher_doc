@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-09-12T13:28:41.816910+09:00",
+  "application": "Codex delegated agent via desktop root thread",
+  "app_version": "미확인",
+  "model": "GPT-6 (시스템 제공 계열 정보, 정확한 모델 ID 미확인)",
+  "reasoning_effort": "미확인",
+  "shell": "PowerShell",
+  "sandbox_mode": "danger-full-access",
+  "approval_policy": "never",
+  "protection": "PreToolUse hook blocked safe Copy-Item twice; actual protection boundary unverified",
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc",
+  "python": "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_hashes": {
+    "CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    ".claude/skills/hwpx/SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961",
+    ".agents/skills/hwpx/SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961",
+    "knowledge/examples/index.md": "9d86e46d06ac2fa9d9394da3116fe54925a39a9780d612df7b9dac33007a8f83",
+    "knowledge/templates/가정통신문-고사안내/README.md": "2d5603e15542199d80cda627911bc2d3ef61e173f05f00005879f6112dccde53",
+    "knowledge/templates/가정통신문-고사안내/양식.hwpx": "c3586a7b0364cc711951b0697837c70369462397ad58f2d25a7c066d7855dae1",
+    "knowledge/templates/가정통신문-고사안내/slots.json": "99ed4f81edaca95a66e7b7273c8999e33b58d67687f1e970dcc4ce7bbd9de922"
+  },
+  "skill_junction": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx",
+  "generation_authorization": {
+    "user_original": "새 세션에서 미리 작업했던 아무 공문 하나 골라집고 만들어달라고 해서 의도한대로 나오는지 확인해줘",
+    "scope": "기존 확정 사실 동일 업무 재작성 시험",
+    "parent_confirmation": "초안 확인 후 기존 범위 내 생성 진행 가능, 새 사용자 승인 문구 금지",
+    "new_user_approval_fabricated": false
+  },
+  "read_isolation": "기존 output, 다른 tmp 작업물, 과거 세션·메모리 및 evals 기대 판단 미열람",
+  "git_status_before": " M .claude/hooks/audit_log.py\n M .claude/hooks/protect_files.py\n M .claude/hooks/stop_validator.py\n M .claude/skills/hwpx/README.md\n M .claude/skills/hwpx/SKILL.md\n D .claude/skills/w1/SKILL.md\n D .claude/skills/w2/SKILL.md\n M .gitignore\n M .mcp.json\n M CLAUDE.md\n M logs/audit.jsonl\n M logs/review_log.jsonl\n?? .claude/hooks/event_adapter.py\n?? .claude/skills/hwpx/references/editing-details.md\n?? .claude/skills/hwpx/references/failure-history.md\n?? .claude/skills/hwpx/references/xml-authoring.md\n?? .codex/\n?? docs/GPT-Work-환경보호-인수검증-2026-09-10-01a08baa.md\n?? docs/GPT-Work-환경보호-재검증-2026-09-10-01a08baa.md\n?? docs/GPT-공통실행기.md\n?? docs/GPT-구현-검증결과-2026-09-10.md\n?? docs/GPT-스킬-요구사항대조.md\n?? docs/GPT-환경-인수검증.md\n?? docs/업무지침-MCP-연결.md\n?? docs/업무지침-조건예외-검토절차.md\n?? evals/\n?? logs/gpt_migration_verification.json\n?? logs/task_guide_review.jsonl\n?? scripts/gpt_environment.py\n?? scripts/hwpdoc.ps1\n?? scripts/hwpdoc.py\n?? scripts/hwpdoc_acceptance.py\n?? scripts/hwpdoc_com_probe.py\n?? scripts/setup-gpt.ps1\n?? tests/\n?? tmp/\n"
+}

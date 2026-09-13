@@ -1,0 +1,163 @@
+{
+  "version": 2,
+  "job_id": "branch-reply-20260913",
+  "workflow": "W1",
+  "document_type": "가정통신문-회신형",
+  "template": {
+    "id": "가정통신문-회신형",
+    "version": "legacy-1",
+    "sha256": "e42863a27bf3ff5b6399c0e14069f8b452025aedd631572d72a04d06f61ae50d"
+  },
+  "slots": {
+    "template_sha256": "e42863a27bf3ff5b6399c0e14069f8b452025aedd631572d72a04d06f61ae50d",
+    "values": {
+      "p:3": "[[문서번호]]",
+      "p:4": "교무실: 미확인",
+      "p:5": "행정실: 미확인",
+      "p:6": "누리집: 미확인",
+      "p:7": "주소",
+      "p:8": "미확인",
+      "p:9": "안 내",
+      "p:10": "검토용 시험",
+      "p:11": "가람중학교 가상 시험 문서",
+      "p:13": "가람과학관 체험 참가 안내",
+      "p:14": "학부모님 안녕하십니까?",
+      "p:15": "가람과학관 체험 참가 여부를 아래 회신란에 표시해 2026. 10. 12.까지 제출해 주시기 바랍니다. 제출처는 확인 후 안내합니다. 이 문서는 가상 기능 시험용 검토 초안입니다.",
+      "p:17": "○ 일 시: 2026. 10. 16. 09:00~13:00",
+      "p:18": "○ 장 소: 가람과학관",
+      "p:19": "○ 대 상: 미확인",
+      "p:20": "○ 인 솔: 미확인",
+      "p:42": "가람과학관 체험 참가 동의서",
+      "p:52": "2026학년도",
+      "p:53": "가람과학관 체험",
+      "p:56": "[[배부일]]",
+      "p:57": "가 람 중 학 교 장 [직인생략]",
+      "p:25": "09:00",
+      "p:26": "학교 출발",
+      "p:27": "",
+      "p:28": "10:00",
+      "p:29": "천체 관측 체험",
+      "p:30": "",
+      "p:31": "11:00",
+      "p:32": "로봇 조종 체험",
+      "p:33": "",
+      "p:34": "12:00",
+      "p:35": "점심 식사",
+      "p:36": "",
+      "p:37": "13:00",
+      "p:38": "학교 복귀",
+      "p:39": ""
+    }
+  },
+  "shared_values": {},
+  "sources": [
+    {
+      "path": "inputs/branch-sources/reply.hwpx",
+      "sha256": "70071f99c3b7a9a6ae85ed668187c691b168d180f55c2ddcfec9e4e4e44d7cfb"
+    },
+    {
+      "path": "inputs/branch-sources/w2_sources.json",
+      "sha256": "60e908086ef0562865f7bb7fb4f50b65e6c608c15b79c34452fe06a5df19e97c"
+    }
+  ],
+  "evidence": {
+    "record": "inputs/branch-evidence.json",
+    "sha256": "b2a07ed5058472d6d0197d50659b28c30de0ba0227da7d329eeed285edd1c770"
+  },
+  "draft": {
+    "path": "inputs/branch-drafts.md",
+    "sha256": "a946f68cf986eb1a15c70e7ccc8d1c8dc666203a427034c112e970f282e44db3",
+    "created_at": "2026-09-13T12:00:56.452855+00:00"
+  },
+  "attachments": [],
+  "attachment_mentions": [],
+  "content_rules": {
+    "require": [
+      "가람과학관",
+      "보호자"
+    ],
+    "forbid": [
+      "화동",
+      "농어촌",
+      "수리과학체험",
+      "동해",
+      "항해사",
+      "2026. 8. 28.",
+      "2026. 8. 20."
+    ]
+  },
+  "reuse_review": {
+    "record": "Frozen native template slots read before drafting; visible old names/dates replaced, structure retained.",
+    "names": [
+      "화동",
+      "농어촌",
+      "수리과학체험",
+      "동해",
+      "항해사"
+    ],
+    "dates": [
+      "2026. 8. 28.",
+      "2026. 8. 20."
+    ]
+  },
+  "checks": {
+    "budget_names": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    },
+    "related": {
+      "applicable": false,
+      "reason": "W1 시험 계획에 관련번호 인용 없음"
+    },
+    "timetable": {
+      "applicable": false,
+      "reason": "시험 문안에 예산·수업 대체 내용 없음"
+    }
+  },
+  "base_provenance": "unconfirmed",
+  "over_budget_cells": [],
+  "environment": {
+    "app": "VS Code Claude Code extension",
+    "scope": "Synthetic branch acceptance; execution host must be verified separately"
+  },
+  "unresolved": [
+    "문서번호",
+    "교무실 연락처",
+    "행정실 연락처",
+    "누리집",
+    "주소",
+    "배부일",
+    "대상",
+    "인솔 인원",
+    "회신 제출처"
+  ],
+  "exploration": {
+    "record": "Current native five-template original and extracted slot addresses read; repeated layout, five separate activity rows and signature/date position retained."
+  },
+  "draft_approval": {
+    "confirmed": false,
+    "by": null,
+    "at": null,
+    "record": "New branch drafts awaiting actual user confirmation",
+    "input_sha256": null
+  },
+  "activities": [
+    {
+      "location": "일정표 활동내용",
+      "items": [
+        "학교 출발",
+        "천체 관측 체험",
+        "로봇 조종 체험",
+        "점심 식사",
+        "학교 복귀"
+      ],
+      "slot_keys": [
+        "p:26",
+        "p:29",
+        "p:32",
+        "p:35",
+        "p:38"
+      ]
+    }
+  ]
+}

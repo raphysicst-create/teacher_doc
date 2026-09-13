@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"job_id\": \"approved-w1-20260913\",\n  \"status\": \"pass\",\n  \"report\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-claude\\\\.hwpdoc\\\\jobs\\\\approved-w1-20260913\\\\report.json\",\n  \"changed_files\": [],\n  \"copy\": {\n    \"status\": \"pass\",\n    \"failures\": 0,\n    \"directory\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-claude\\\\test-copy\\\\approved-w1-20260913\",\n    \"at\": \"2026-09-13T13:13:40.240590+00:00\"\n  },\n  \"next_action\": \"사람 최종 검토; 발송 전 한글로 열어 확인해주세요\"\n}\n",
+  "stderr": "",
+  "at": "2026-09-13T13:17:19.978588+00:00",
+  "seconds": 40.34400000000096,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\claude-config\\plugins\\cache\\teacher-doc-lifecycle-20260913\\teacher_doc\\0.1.0-codex.20260913131114\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-claude",
+    "validate",
+    "--job",
+    "approved-w1-20260913"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-claude",
+  "configuration_scope": "disposable child-process config only"
+}

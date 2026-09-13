@@ -1,0 +1,130 @@
+[
+  {
+    "key": "lineage-01",
+    "approval": {
+      "ts": "2026-07-18T17:55:37",
+      "file": "output/2026_2학기_평가계획수립_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 5.0,
+      "note": "B 정기사이클 B1. 2학기 평가계획 수립(본문만, 첨부 생략 승인)"
+    },
+    "source_sha256": "541b9abc633679d3e1272ebdf3be473d7ee6b4e4cba86ade905fad2a28a136b7",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  },
+  {
+    "key": "lineage-02",
+    "approval": {
+      "ts": "2026-07-18T17:55:37",
+      "file": "output/2026_2학기_평가계획안내가통_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 5.0,
+      "note": "B2. 관련번호는 B1 결재 후 기재 placeholder(사용자 미제공 정보)"
+    },
+    "source_sha256": "f3bb0321756de2d065b0f8ed38b9350153d192bef66c1f1dd5d9a61d84ab5891",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  },
+  {
+    "key": "lineage-03",
+    "approval": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_1회고사_교과협의회_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B4. 1회고사 교과협의회(회의록 첨부 포함). 미응시 1학년 표 정리는 사용자 직접 처리"
+    },
+    "source_sha256": "6d45d5ab26398109737d8056cc9424bccac31697e913b86ca16ebd581e8fa558",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  },
+  {
+    "key": "lineage-04",
+    "approval": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B5. 1회고사 출제 관련 연수"
+    },
+    "source_sha256": "eda247a9ef3ca1a0efcd4ec7b030d21a068de9624f1a06cfb8a3201b3d124de5",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  },
+  {
+    "key": "lineage-05",
+    "approval": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B6. 1회고사 가통배부(가정통신문 첨부 포함)"
+    },
+    "source_sha256": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  },
+  {
+    "key": "lineage-06",
+    "approval": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B7-a. 2회고사 교과협의회(회의록 첨부 포함)"
+    },
+    "source_sha256": "b5c434cdd5647ee1859ee256cc9182cb0c86f559c7b97d125243fe785a99a115",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  },
+  {
+    "key": "lineage-07",
+    "approval": {
+      "ts": "2026-07-18T17:55:38",
+      "file": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 4.5,
+      "note": "B7-b. 2회고사 가통배부(가정통신문 첨부 포함)"
+    },
+    "source_sha256": "ea6a08693ee6861a5840e0a42734c4bab3954f04e2fdd3436404d26d38b23e5a",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  },
+  {
+    "key": "lineage-08",
+    "approval": {
+      "ts": "2026-07-18T17:55:39",
+      "file": "output/2026_2학기_기출문제공개안내_기안문.hwpx",
+      "type": "W1",
+      "approved": true,
+      "score": 5.0,
+      "note": "B7-c. 최초 3점(첨부 미반입 지적) → 첨부 반입·수정 후 5점 확정"
+    },
+    "source_sha256": "b1340c6b2676a905a04353cea677ebc5a54cd5cc7304715694f2c00b78e05fa3",
+    "same_header": true,
+    "same_page_properties": true,
+    "same_title_style": true,
+    "pdf_pages": 1
+  }
+]

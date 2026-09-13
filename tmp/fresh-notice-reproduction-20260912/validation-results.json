@@ -1,0 +1,194 @@
+[
+  {
+    "step": "01_edit",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\edit_hwpx.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\reference.hwpx",
+      "-o",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--slot-json",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\edit-values.json",
+      "--replace-json",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\replacements.json",
+      "--allow-over-budget",
+      "--verified-by-render"
+    ],
+    "document_sha256_before": null,
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "WARNING: 예산 초과를 렌더 확인 후 묵인했습니다 (3건) — 보고에 반드시 명시하십시오:\n  - 치환값 글자 수 초과: '2026년 4월 28일(화) - 4월 29일(수) 2일간'(25) -> '2026. 10. 27.(화) ~ 10. 28.(수) 2일간'(27)\n  - 치환값 글자 수 초과: '2026년 4월 30일(목) - 5월 4일(월)'(21) -> '2026. 10. 29.(목) ~ 11. 2.(월)'(23)\n  - 문단 입력값 글자 수 초과: index=113, max=10, input=11, text='2026. 10. 14.'\nEDITED: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx\n  text replacements applied: 4\n  cells updated: 19\n  paragraphs updated: 37\n  original package entries, header.xml, content.hpf, and BinData were preserved\n",
+    "at": "2026-09-12T13:37:18.091529+09:00"
+  },
+  {
+    "step": "02_validate",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\validate.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "VALID: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx\n  All structural checks passed.\n",
+    "at": "2026-09-12T13:37:18.459717+09:00"
+  },
+  {
+    "step": "03_namespaces",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\fix_namespaces.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "Fixed namespaces: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx (0 XML entries changed)\n",
+    "at": "2026-09-12T13:37:19.043619+09:00"
+  },
+  {
+    "step": "04_finalize",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\finalize_hwpx.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--strip-linesegarray",
+      "--layout"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "HWPX FINALIZE: WARN\n  action: {'strip_linesegarray_removed': 0, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\output\\\\fresh-notice-reproduction-20260912\\\\2026학년도_2학기_1회고사_안내_검토초안.hwpx'}\n  warning: body_paragraph_without_visible_indent: 제목 다음 본문 문단에 눈에 보이는 들여쓰기나 목록 표지가 없습니다.\n",
+    "at": "2026-09-12T13:37:19.541410+09:00"
+  },
+  {
+    "step": "05_layout",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\validate.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--layout"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "VALID: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx\n  All structural checks passed.\n  Layout warnings: 1\n  - body_paragraph_without_visible_indent: 제목 다음 본문 문단에 눈에 보이는 들여쓰기나 목록 표지가 없습니다.\n",
+    "at": "2026-09-12T13:37:20.058690+09:00"
+  },
+  {
+    "step": "06_page_guard",
+    "returncode": 1,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\page_guard.py",
+      "--reference",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\reference.hwpx",
+      "--output",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--budget-profile",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\budget.json",
+      "--structure-profile",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\structure.json",
+      "--no-strict-paragraph-budget",
+      "--skip-text-drift",
+      "--allow-empty-fill"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "fail",
+    "output": "FAIL: page-guard\n - p:113 글자 예산 초과: max=10, out=11, text='2026. 10. 14.'\n",
+    "at": "2026-09-12T13:37:20.905652+09:00"
+  },
+  {
+    "step": "07_hancom",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\finalize_hwpx.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--hancom",
+      "--json",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\hancom.json"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "HWPX FINALIZE: PASS\n",
+    "at": "2026-09-12T13:37:27.931762+09:00"
+  },
+  {
+    "step": "08_render",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\scripts\\render_check.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--reference",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\reference.hwpx",
+      "--keep-pdf",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\final.pdf",
+      "--json"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "{\n \"output\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\output\\\\fresh-notice-reproduction-20260912\\\\2026학년도_2학기_1회고사_안내_검토초안.hwpx\",\n \"checks\": {\n  \"pages_output\": 1,\n  \"pages_reference\": 1,\n  \"anchors_total\": 37,\n  \"anchors_found_ratio\": 1.0,\n  \"order_lis_ratio\": 0.946\n },\n \"fails\": [],\n \"warnings\": [],\n \"result\": \"PASS\"\n}\n",
+    "at": "2026-09-12T13:37:44.645758+09:00"
+  },
+  {
+    "step": "09_content",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\content_guard.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--rules",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\content-rules.json",
+      "--json"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "{\n  \"ok\": true,\n  \"input\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\output\\\\fresh-notice-reproduction-20260912\\\\2026학년도_2학기_1회고사_안내_검토초안.hwpx\",\n  \"unchanged_line_ratio\": null,\n  \"findings\": []\n}\n",
+    "at": "2026-09-12T13:37:45.025295+09:00"
+  },
+  {
+    "step": "10_gonmun",
+    "returncode": 2,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\gonmun_lint.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "fail",
+    "output": "usage: gonmun_lint.py [-h] [--hwpx HWPX] [--file FILE] [--format {json,text}]\ngonmun_lint.py: error: unrecognized arguments: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx\n",
+    "at": "2026-09-12T13:37:45.343351+09:00"
+  },
+  {
+    "step": "11_final_extract",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\text_extract.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+      "--format",
+      "markdown"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "  가정통신문\n  통신문번호: 미부여☎ 교무실 562-2032☎ 행정실 562-2031http://k-hwadong.gwe.ms.kr우)26116  강원도 정선군 화암면 그림바위길50\n  교   훈성실.근면.개척\n  실력과 인성을 겸비한 사람을 기르는 학교\n2026학년도 2학기 1회고사 실시 안내\n안녕하십니까?\n각 가정에 건강과 행복이 가득하시길 기원합니다. 2026학년도 2학기 1회고사를 다음과 같이 안내합니다. 1학년은 자유학기로 지필고사에 응시하지 않고 양일 정상수업합니다. 학생들에게 관심과 격려를 부탁드립니다.\n1. 고사 일정 2026. 10. 27.(화) ~ 10. 28.(수) 2일간\n  학년일자\n  1학년\n  2학년\n  10/27(화)\n  1교시\n  정상수업\n  자습\n  2교시\n  정상수업\n  국어\n  3교시\n  정상수업\n  자습\n  4교시\n  정상수업\n  수학\n  2학년 중식 후 하교\n  10/28(수)\n  1교시\n  정상수업\n  자습\n  2교시\n  정상수업\n  영어\n  3교시\n  정상수업\n  과학\n  4교시\n  정상수업\n  역사\n  중식 후 정상수업\n2. 교과별/ 학년별 출제 범위와 기타 사항\n  국어\n  영어\n  수학\n  역사\n  사회\n  과학\n  1학년\n  출 제범 위\n  미응시\n  미응시\n  미응시\n  미응시\n  미응시\n  출 제 유 형\n  미응시\n  미응시\n  미응시\n  미응시\n  미응시\n  출 제문항수\n  미응시\n  미응시\n  미응시\n  미응시\n  미응시\n  2학년\n  출 제범 위\n  4-5단원\n  5-6과\n  3-4(1)단원\n  4-5단원\n  3-4단원\n  출 제 유 형\n  선택형 70%, 서·논술형 30%\n  선택형 85%, 서·논술형 15%\n  선택형 75%, 서·논술형 25%\n  선택형 85%, 서·논술형 15%\n  선택형 80%, 서·논술형 20%\n  출 제문항수\n  선택형 16, 서·논술형 4\n  선택형 17, 서·논술형 3\n  선택형 15,서·논술형 5\n  선택형 18, 서·논술형 2\n  선택형 17,서·논술형 3\n3. 이의 신청 기간 : 2026. 10. 29.(목) ~ 11. 2.(월)\n4. 학생 준비물 : 샤프, 지우개, 컴퓨터용 수성싸인펜, 검은색 볼펜, 수정테이프\n5. 불가피한 사항으로 학사일정 변경 시 즉시 공지 예정\n2026. 10. 14.\n화 동 중 학 교 장 [직인생략]\n",
+    "at": "2026-09-12T13:37:45.840505+09:00"
+  },
+  {
+    "step": "12_reference_extract",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\text_extract.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\fresh-notice-reproduction-20260912\\reference.hwpx",
+      "--format",
+      "markdown"
+    ],
+    "document_sha256_before": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "document_sha256_after": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+    "result": "pass",
+    "output": "  가정통신문\n  화동중 제2026-23호☎ 교무실 562-2032☎ 행정실 562-2031http://k-hwadong.gwe.ms.kr우)26116  강원도 정선군 화암면 그림바위길50\n  교   훈성실.근면.개척\n  실력과 인성을 겸비한 사람을 기르는 학교\n2026학년도 1학기 1회고사 실시 안내\n안녕하십니까?\n각 가정에 건강과 행복이 넘쳐나시길 기원합니다. 아울러, 2026학년도 1학기 1회고사 계획이 다음과 같이 시행됨을 알려드리오니 가정에서는 학생들이 원하는 목표를 달성할 수 있도록 관심과 격려를 부탁드립니다. 감사합니다.\n1. 1회고사 일정 2026년 4월 28일(화) - 4월 29일(수) 2일간\n  학년일자\n  1학년\n  2학년\n  4/28(화)\n  1교시\n  자습\n  자습\n  2교시\n  국어\n  국어\n  3교시\n  자습\n  자습\n  4교시\n  과학\n  수학\n  중식 후 하교\n  4/29(수)\n  1교시\n  자습\n  자습\n  2교시\n  영어\n  영어\n  3교시\n  수학\n  과학\n  4교시\n  사회\n  역사\n  중식 후 정상수업\n2. 교과별/ 학년별 출제 범위와 기타 사항\n  국어\n  영어\n  수학\n  역사\n  사회\n  과학\n  1학년\n  출 제범 위\n  1-2단원\n  1-2과\n  1-2단원\n  1-3단원\n  2-3단원\n  출 제 유 형\n  선택형 50%, 서·논술형 50%\n  선택형 88%, 서·논술형 12%\n  선택형 80%, 서·논술형 20%\n  선택형 90%, 서·논술형 10%\n  선택형 80%, 서·논술형 20%\n  출 제문항수\n  선택형 15, 서·논술형 8\n  선택형 15, 서·논술형 2\n  선택형 17,서·논술형 3\n  선택형 19, 서·논술형 1\n  선택형 18, 서·논술형 4\n  2학년\n  출 제범 위\n  1-2단원\n  1-2과\n  1-2(2)단원\n  1-3단원\n  1-2단원\n  출 제 유 형\n  선택형 50%, 서·논술형 50%\n  선택형 88%, 서·논술형 12%\n  선택형 60%, 서·논술형 40%\n  선택형 90%, 서·논술형 10%\n  선택형 80%, 서·논술형 20%\n  출 제문항수\n  선택형 15, 서·논술형 8\n  선택형 15, 서·논술형 2\n  선택형 14,서·논술형 8\n  선택형 19, 서·논술형 1\n  선택형 18,서·논술형 4\n3. 1회고사 이의 신청 기간 : 2026년 4월 30일(목) - 5월 4일(월)\n4. 학생 준비물 : 샤프, 지우개, 컴퓨터용 수성싸인펜, 검은색 볼펜, 수정테이프\n5. 불가피한 사항으로 학사일정 변경 시 즉시 공지 예정\n2026. 4. 21.\n화 동 중 학 교 장 [직인생략]\n",
+    "at": "2026-09-12T13:37:46.429398+09:00"
+  }
+]

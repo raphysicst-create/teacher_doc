@@ -1,0 +1,16 @@
+{
+  "task": "2026-09-07 과학 그리기 대회 학생 2명 인정조퇴",
+  "workflow": "W1, 초안 사용자 확인 대기",
+  "reader": "kordoc 미사용: 현재 도구 목록에 없음. 보관 PDF를 PyMuPDF로 추출하고 2쪽 모두 이미지 확인",
+  "reference": "knowledge/reference/의 화동중학교-2555 접수 PDF. 원문 시행번호: 교육과-6882(2026. 3. 30.). 접수번호와 구분함",
+  "find_tasks": "not_found: 미지원 업무이므로 get_task_guide 대상 task_id 없음, 원문 검색으로 진행",
+  "evidence": [
+    {"id":"ev:74fd40dcfc59244596970e1b06f9247bf3b0b3d112becaefb9c27b8c689f0750", "source":"2026학년도 강원 중학교 학적 업무 매뉴얼 PDF 18쪽(인쇄 12쪽)","finding":"학교장 허가를 받은 학교 등을 대표한 대회 참가 출석인정 사유"},
+    {"id":"ev:a49dfca29c5b6c8f9424dff7d87ab2c565c173f05e69380c3e7b24c0968f7deb", "source":"같은 매뉴얼 PDF 32~33쪽(인쇄 26~27쪽)","finding":"출석인정 사유의 조퇴는 횟수에 포함하지 않음. 구체적 기준과 절차는 학교 규정에 따라 학교장이 정함"}
+  ],
+  "guide_status": "partial; applicability unknown; 공식 출처·최신판·효력기간·조항별 범위·추출품질 검토 미완료; 설립구분 미입력",
+  "pending_items": ["학생 2명 학년·반·번호·성명", "대회 장소", "예미랩 대회 동일성 및 초안 확인", "학교장 허가와 학교 출결 규정 적용 검토"],
+  "validation": "gonmun_lint 초안 위반 0건. HWPX 미생성으로 Validator 패키지/레이아웃/COM 미실행",
+  "attempts": ["git status 최초 프로세스 시작 실패, 재시도 성공", "PDF 추출 최초 cp949 출력 인코딩 오류, 동일 Python312 -X utf8 재시도 성공"],
+  "review_status": "아직 사용자 평가 없음; log_review 미기록"
+}

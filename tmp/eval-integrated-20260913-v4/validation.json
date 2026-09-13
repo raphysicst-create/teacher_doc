@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-13T12:11:11.381809+00:00",
+  "unique_rows": 176,
+  "active_followup_rows": 57,
+  "current_count_sum": 176,
+  "initial_verdicts_unchanged": true,
+  "previous_snapshot_preserved": true,
+  "new_full_workflows_completed": 0,
+  "all_report_links_exist": true,
+  "report_sha256": "f0e5ddb2046d9d741ab594f24d537845afb64900d88ab73a9a1dc23d7f2ecd27",
+  "recovered_generation_error": "generation-error.json",
+  "vscode_read_calls": 4,
+  "actual_preflight_rejections": 10
+}

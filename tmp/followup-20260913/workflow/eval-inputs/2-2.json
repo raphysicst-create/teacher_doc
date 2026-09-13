@@ -1,0 +1,76 @@
+{
+  "job_id": "eval-01-2-2",
+  "workflow": "W1",
+  "document_type": "software-smoke",
+  "template": "가정통신문-고사안내",
+  "shared_values": {
+    "test_label": "연결 시험"
+  },
+  "slots": {
+    "template_sha256": "c3586a7b0364cc711951b0697837c70369462397ad58f2d25a7c066d7855dae1",
+    "values": {
+      "p:2": {
+        "shared": "test_label"
+      }
+    }
+  },
+  "sources": [
+    {
+      "path": "knowledge/templates/가정통신문-고사안내/양식.hwpx"
+    }
+  ],
+  "evidence": {
+    "record": "eval-inputs/evidence.json"
+  },
+  "attachments": [],
+  "attachment_mentions": [],
+  "draft": {
+    "path": "eval-inputs/draft.md",
+    "sha256": "8cdfc17a84b093ab5700ab198f201b3d9a7b5ddd5cbf9621ce7d04d26916239b",
+    "created_at": "2026-09-10T02:00:00+00:00"
+  },
+  "content_rules": {
+    "forbid": [
+      "SYNTHETIC_TOKEN_MUST_NOT_APPEAR"
+    ]
+  },
+  "checks": {
+    "budget_names": {
+      "applicable": false,
+      "reason": "SYNTHETIC_TEST_NOT_USER; software plumbing only"
+    },
+    "related": {
+      "applicable": false,
+      "reason": "SYNTHETIC_TEST_NOT_USER; software plumbing only"
+    },
+    "timetable": {
+      "applicable": false,
+      "reason": "SYNTHETIC_TEST_NOT_USER; software plumbing only"
+    }
+  },
+  "environment": {
+    "app": "cli-software-evaluation",
+    "model": "none",
+    "hancom": "real COM"
+  },
+  "unresolved": [],
+  "exploration": {
+    "record": "read-only copy of existing template for CLI test"
+  },
+  "reuse_review": {
+    "record": "preserve original prose for plumbing only",
+    "names": [
+      "SYNTHETIC_TOKEN_MUST_NOT_APPEAR"
+    ],
+    "dates": [],
+    "dates_empty_reason": "keep original prose in synthetic fixture"
+  },
+  "base_provenance": "native",
+  "draft_approval": {
+    "confirmed": true,
+    "by": "SYNTHETIC_TEST_NOT_USER",
+    "at": "2026-09-10T03:00:00+00:00",
+    "record": "CLI-only synthetic fixture; not actual human response",
+    "input_sha256": "27c37db108e369ac576c03b834794b5966f375421422ca37d87b14f01d071375"
+  }
+}

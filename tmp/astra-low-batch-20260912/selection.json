@@ -1,0 +1,304 @@
+{
+  "created_at": "2026-09-12T21:09:08.950024+09:00",
+  "seed": 4892315911425636379,
+  "method": "uniform sample without replacement from sorted approved-final pool; no redraw",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "requested_label": "astra-light",
+  "label_interpretation": "Astra with low reasoning; not a separately resolved model alias",
+  "pool": {
+    "output/2026_농어촌유학_수리과학체험_운영계획_v3.hwpx": {
+      "review": {
+        "ts": "2026-07-15T15:51:47",
+        "file": "output/2026_농어촌유학_수리과학체험_운영계획_v3.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "융합계획 문구 2줄 확장 확인, 동의"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_교육경비_과학그리기대회_실적정산보고서_v2.hwpx": {
+      "review": {
+        "ts": "2026-07-17T20:38:00",
+        "file": "output/2026_교육경비_과학그리기대회_실적정산보고서_v2.hwpx",
+        "type": "W2",
+        "approved": true,
+        "score": 5.0,
+        "note": "교육경비 정산 서식 채움. 1차본 변환기 렌더링 붕괴(캡션 역순·표 순서)를 사용자 발견 → COM 네이티브 변환으로 재작업 후 5점 동의"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_평가계획수립_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:37",
+        "file": "output/2026_2학기_평가계획수립_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "B 정기사이클 B1. 2학기 평가계획 수립(본문만, 첨부 생략 승인)"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_평가계획안내가통_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:37",
+        "file": "output/2026_2학기_평가계획안내가통_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "B2. 관련번호는 B1 결재 후 기재 placeholder(사용자 미제공 정보)"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_1회고사_교과협의회_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_교과협의회_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B4. 1회고사 교과협의회(회의록 첨부 포함). 미응시 1학년 표 정리는 사용자 직접 처리"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_1회고사_출제연수_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B5. 1회고사 출제 관련 연수"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_1회고사_가통배부_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B6. 1회고사 가통배부(가정통신문 첨부 포함)"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_2회고사_교과협의회_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-a. 2회고사 교과협의회(회의록 첨부 포함)"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_2회고사_가통배부_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-b. 2회고사 가통배부(가정통신문 첨부 포함)"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_기출문제공개안내_기안문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:39",
+        "file": "output/2026_2학기_기출문제공개안내_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "B7-c. 최초 3점(첨부 미반입 지적) → 첨부 반입·수정 후 5점 확정"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_기출문제공개안내_가정통신문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:40",
+        "file": "output/2026_2학기_기출문제공개안내_가정통신문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-c 첨부. 2891 재사용본, 본문 배부일 2026. 4. 7.→11. 25. 수정 후 평가"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026 화동중 1학년 2학기 교수학습 및 평가계획(과학).hwpx": {
+      "review": {
+        "ts": "2026-08-27T11:24:53",
+        "file": "output/2026 화동중 1학년 2학기 교수학습 및 평가계획(과학).hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "사용자 검토 5점 만점 동의 — 수정 요청 없음"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026 화동중 2학년 2학기 교수학습 및 평가계획(과학).hwpx": {
+      "review": {
+        "ts": "2026-08-27T11:24:53",
+        "file": "output/2026 화동중 2학년 2학기 교수학습 및 평가계획(과학).hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "사용자 검토 5점 만점 동의 — 수정 요청 없음"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026학년도 2학기 과목별 평가계획 안내 가정통신문.hwpx": {
+      "review": {
+        "ts": "2026-09-04T13:29:57",
+        "file": "output/2026학년도 2학기 과목별 평가계획 안내 가정통신문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "1학기 최종본 베이스, 1·2학년 2학기 평가계획 22행 주입. 1학년 자유학기 전환 반영. 파이프라인 8단계(신구대조) 누락"
+      },
+      "basis": "direct_review"
+    },
+    "output/2026_2학기_1회고사_교과협의회_회의록.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_교과협의회_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B4. 1회고사 교과협의회(회의록 첨부 포함). 미응시 1학년 표 정리는 사용자 직접 처리"
+      },
+      "basis": "approved_package_attachment_not_separate_score"
+    },
+    "output/2026_2학기_2회고사_교과협의회_회의록.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-a. 2회고사 교과협의회(회의록 첨부 포함)"
+      },
+      "basis": "approved_package_attachment_not_separate_score"
+    },
+    "output/2026_2학기_2회고사_가정통신문.hwpx": {
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-b. 2회고사 가통배부(가정통신문 첨부 포함)"
+      },
+      "basis": "approved_package_attachment_not_separate_score"
+    }
+  },
+  "excluded": "superseded v2, rejected revisions, unreviewed experiments, previous first-exam notice test",
+  "cases": [
+    {
+      "case": "case01",
+      "baseline": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+      "sha256": "eda247a9ef3ca1a0efcd4ec7b030d21a068de9624f1a06cfb8a3201b3d124de5",
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B5. 1회고사 출제 관련 연수"
+      },
+      "basis": "direct_review"
+    },
+    {
+      "case": "case02",
+      "baseline": "output/2026_2학기_평가계획수립_기안문.hwpx",
+      "sha256": "541b9abc633679d3e1272ebdf3be473d7ee6b4e4cba86ade905fad2a28a136b7",
+      "review": {
+        "ts": "2026-07-18T17:55:37",
+        "file": "output/2026_2학기_평가계획수립_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "B 정기사이클 B1. 2학기 평가계획 수립(본문만, 첨부 생략 승인)"
+      },
+      "basis": "direct_review"
+    },
+    {
+      "case": "case03",
+      "baseline": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+      "sha256": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B6. 1회고사 가통배부(가정통신문 첨부 포함)"
+      },
+      "basis": "direct_review"
+    },
+    {
+      "case": "case04",
+      "baseline": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+      "sha256": "b5c434cdd5647ee1859ee256cc9182cb0c86f559c7b97d125243fe785a99a115",
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-a. 2회고사 교과협의회(회의록 첨부 포함)"
+      },
+      "basis": "direct_review"
+    },
+    {
+      "case": "case05",
+      "baseline": "output/2026_2학기_2회고사_가정통신문.hwpx",
+      "sha256": "36382c4c63bb490d8b3324fd047faf14435a7e9289f2a09a675a8061cd64a05a",
+      "review": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-b. 2회고사 가통배부(가정통신문 첨부 포함)"
+      },
+      "basis": "approved_package_attachment_not_separate_score"
+    }
+  ],
+  "source_hashes": {
+    "CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    ".claude\\skills\\hwpx\\SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961",
+    ".claude\\hooks\\event_adapter.py": "80002e597fb56c91da7d0fe308f7d8ba3301e280a8c01912358aaf9d2b5dccfe",
+    ".claude\\skills\\hwpx\\scripts\\analyze_template.py": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d",
+    ".claude\\skills\\hwpx\\scripts\\build_hwpx.py": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c",
+    ".claude\\skills\\hwpx\\scripts\\content_guard.py": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97",
+    ".claude\\skills\\hwpx\\scripts\\create_document.py": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9",
+    ".claude\\skills\\hwpx\\scripts\\edit_hwpx.py": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584",
+    ".claude\\skills\\hwpx\\scripts\\finalize_hwpx.py": "1832768cc6c0e3167bb4771d3582bba68982f9cff8c12dfa1fe1de52e216a0db",
+    ".claude\\skills\\hwpx\\scripts\\fix_namespaces.py": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a",
+    ".claude\\skills\\hwpx\\scripts\\gonmun_lint.py": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b",
+    ".claude\\skills\\hwpx\\scripts\\hwpx_slots.py": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d",
+    ".claude\\skills\\hwpx\\scripts\\page_guard.py": "12039b1a5306575b44728fa61910d9e0e27ec88ae545eb1dd2734ca53ee2010e",
+    ".claude\\skills\\hwpx\\scripts\\text_extract.py": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568",
+    ".claude\\skills\\hwpx\\scripts\\validate.py": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32",
+    "scripts\\budget_name_check.py": "3fdf82195dd2ba59199906dee19657599ebc83cc5ac9e281dbda7f53601da32d",
+    "scripts\\fusion_timetable.py": "724ba3e68e089b55723984386c56f9f79bd7895cb332c5e1f5e3db3ac6a7c7f4",
+    "scripts\\gpt_environment.py": "788106d2dd3d1d992f1a0319add88fdcea9e701c871e7e43c34342e27f1e0822",
+    "scripts\\hwpdoc.py": "d61b760f5cbfa09a78f4a29df6a93664ab03bd625ca79648e7c92ac367e42337",
+    "scripts\\hwpdoc_acceptance.py": "6cc5a7aa5a25d5b29709414dba9a79faab1436af290efbef939cc6859a3a3b59",
+    "scripts\\hwpdoc_com_probe.py": "190bf7e9a416782e3350c936fbbc7fd76ac3349af8de63cf6e54170fd761e224",
+    "scripts\\log_review.py": "1b410f8bf8a055ac6f810599e2cb2ce441d39970ce7cde373f3dec0788649aba",
+    "scripts\\refresh_reference.py": "d49c591741c367c382dbd57074381770286547be2a4a93796cda71908a40bba8",
+    "scripts\\related_lookup.py": "422fdaf8e42acfda0450c51f392af14db830490ef13863f9f4bd126b4c57f526",
+    "scripts\\render_check.py": "ff7dc0905c2aa21e0a1c93c904def094d1d02679eed74533b2df288be7f6b0ad",
+    "scripts\\validate_pipeline.py": "ebb149e294e54701322bb82ec89f3960e8d9efdb3dad4cf2f04439ff292172d9",
+    "knowledge\\templates\\가정통신문\\양식.hwpx": "8c55daa60601b5ab0d063ae623ca93569fa9e401c49fba6f65c291b4c2c17aef",
+    "knowledge\\templates\\가정통신문-고사안내\\양식.hwpx": "c3586a7b0364cc711951b0697837c70369462397ad58f2d25a7c066d7855dae1",
+    "knowledge\\templates\\가정통신문-회신형\\양식.hwpx": "70071f99c3b7a9a6ae85ed668187c691b168d180f55c2ddcfec9e4e4e44d7cfb",
+    "knowledge\\templates\\성립전예산요구\\양식.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "knowledge\\templates\\회의록-교과협의회\\양식.hwpx": "a23dcda3349ccd981214c01b0d037b7499098ffbdc46a3a25884d03314af61ca"
+  }
+}

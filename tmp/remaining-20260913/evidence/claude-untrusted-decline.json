@@ -1,0 +1,9 @@
+{
+  "scope": "Actual Claude Code TUI; workspace trust declined; no model/tool turn started",
+  "workspace": "C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/claude-untrusted-exit",
+  "observed_choice": "No, exit",
+  "action": "Enter after observing selected No, exit",
+  "exit_code": 1,
+  "output": "\u001b[?1006l\u001b[?1003l\u001b[?1002l\u001b[?1000l\u001b[>4m\u001b[?2031l\u001b[?2004l\r\n\u001b]0;\u0007\u001b[?25h\u001b]0;C:\\Users\\22\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\u0007",
+  "first_trial": "Previous claude-untrusted TUI attempt did not establish declined trust and is not used as protection evidence."
+}

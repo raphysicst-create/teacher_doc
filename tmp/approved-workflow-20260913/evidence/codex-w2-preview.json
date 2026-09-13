@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"pdf\": {\"path\": \".hwpdoc/jobs/approved-w2-20260913/render.pdf\", \"sha256\": \"60723655fc994c99523761d93290d054aeee516db8ad05dcd0020a4e25487571\"}, \"images\": [{\"path\": \".hwpdoc/jobs/approved-w2-20260913/final-preview/page-001.png\", \"sha256\": \"2ab3256508c935be9d0edcf6943d3d478e505fcdaa6293a359ea0720e0fab5a3\", \"page\": 1}], \"visual_review\": \"unconfirmed\"}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\hwpdoc_preview.py",
+    "--pdf",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked\\.hwpdoc\\jobs\\approved-w2-20260913\\render.pdf",
+    "--output-dir",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked\\.hwpdoc\\jobs\\approved-w2-20260913\\final-preview"
+  ],
+  "at": "2026-09-13T07:21:02.714013+00:00",
+  "seconds": 0.6963193416595459,
+  "app": "codex"
+}

@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "Validating plugin manifest: C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\distribution\\releases\\2026-09-13\\teacher_doc\\.claude-plugin\\plugin.json\n\n‼ Found 2 warnings:\n\n  > name: Plugin name \"teacher_doc\" is not kebab-case. Claude Code accepts it, but the Claude.ai marketplace sync requires kebab-case (lowercase letters, digits, and hyphens only, e.g., \"my-plugin\").\n  > author: No author information provided. Consider adding author details for plugin attribution\n\n√ Validation passed with warnings\n",
+  "stderr": "",
+  "at": "2026-09-13T13:03:53.193554+00:00",
+  "seconds": 3.0309999999990396,
+  "argv": [
+    "C:\\Users\\22\\.local\\bin\\claude.exe",
+    "plugin",
+    "validate",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\distribution\\releases\\2026-09-13\\teacher_doc"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

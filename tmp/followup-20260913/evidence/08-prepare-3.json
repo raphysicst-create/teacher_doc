@@ -1,0 +1,29 @@
+{
+  "exit_code": 2,
+  "stdout": "{\n  \"status\": \"unconfirmed\",\n  \"manifest\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\registered\\\\.hwpdoc\\\\prepared\\\\registered-3\\\\manifest.json\",\n  \"missing\": [\n    \"유사/수신 원문과 양식 선택 근거\",\n    \"초안 전 업무 근거 조건·예외·최신판 확인\",\n    \"초안 문안과 실제 사용자 확인 기록\",\n    \"예산명·관련번호·시간표 적용 여부\",\n    \"복사 잔재 이름·날짜와 forbid\",\n    \"붙임 목록·미확인 사항 검토\",\n    \"값 미입력: 제목\",\n    \"값 미입력: 관련번호와시행일\",\n    \"값 미입력: 예산요구본문\",\n    \"값 미입력: 붙임\"\n  ],\n  \"next_action\": \"미확인 항목을 묶어 확인하고 문안 제시 후 실제 사용자 확인을 기록하세요\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hwpdoc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\registered",
+    "prepare",
+    "--job",
+    "registered-3",
+    "--document-type",
+    "성립전예산요구",
+    "--template",
+    "성립전예산요구",
+    "--version",
+    "legacy-1",
+    "--source",
+    "source.txt"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 2.6237833499908447,
+  "recorded_at": "2026-09-13T02:12:33.509244+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

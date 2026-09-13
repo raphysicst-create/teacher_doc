@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.003s\n\nOK\n",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_profile_comments.py"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc",
+  "seconds": 1.3381054401397705,
+  "recorded_at": "2026-09-13T02:15:43.107642+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

@@ -1,0 +1,92 @@
+{
+  "native_notice": {
+    "status": "ready_for_local_tests",
+    "files": [
+      "sources/notice.hwpx",
+      "sources/notice/slots.json",
+      "renders/notice.pdf",
+      "renders/notice-1.png"
+    ],
+    "human_history": "Existing promoted template; current five-template registration approval exists",
+    "file_hashes": {
+      "sources/notice.hwpx": "8c55daa60601b5ab0d063ae623ca93569fa9e401c49fba6f65c291b4c2c17aef",
+      "sources/notice/slots.json": "29a30d44ff9098dff2f6b7a6b1e1def4cd67c829779dc6f4ff98082af7aed94b",
+      "renders/notice.pdf": "a2b11a2e3811e02a1629bded2f59d1968dcedbd266d3b6c96c2333ecb6143db4",
+      "renders/notice-1.png": "92be16120720b624ae3806575729bfac37b3aeb4c9dff56cdd2705bb331fa530"
+    }
+  },
+  "native_reply": {
+    "status": "ready_for_local_tests",
+    "files": [
+      "sources/reply.hwpx",
+      "sources/reply/slots.json",
+      "renders/reply.pdf",
+      "renders/reply-1.png"
+    ],
+    "data_rows": 5,
+    "human_history": "User-saved final v4 promoted 2026-08-20; current registration approval exists",
+    "file_hashes": {
+      "sources/reply.hwpx": "70071f99c3b7a9a6ae85ed668187c691b168d180f55c2ddcfec9e4e4e44d7cfb",
+      "sources/reply/slots.json": "b0857d4ac8bf9b56d008d957b43ccc0a898dbcdbefff6242dd6c2fe82cf05464",
+      "renders/reply.pdf": "2820bad63564bcbb5ef155c8310f2b11fb2fa3e5af72b05cf953b0b4f96909f1",
+      "renders/reply-1.png": "427eef7abf084086459a9b50379ff4d52cabeff091406ee1990b8c39470c5efa"
+    }
+  },
+  "native_gianmun": {
+    "status": "ready_for_local_tests",
+    "files": [
+      "sources/gianmun.hwpx",
+      "renders/gianmun.pdf"
+    ],
+    "uses": [
+      "internal_approval",
+      "notice_dispatch"
+    ],
+    "file_hashes": {
+      "sources/gianmun.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+      "renders/gianmun.pdf": "bc1433930d81396b53046bd0f7664962103ccddd1b509731c1646683f43e3fc0"
+    }
+  },
+  "lineage_eight": {
+    "status": "ready_for_local_tests",
+    "files": [
+      "sources/lineage-01.hwpx",
+      "sources/lineage-02.hwpx",
+      "sources/lineage-03.hwpx",
+      "sources/lineage-04.hwpx",
+      "sources/lineage-05.hwpx",
+      "sources/lineage-06.hwpx",
+      "sources/lineage-07.hwpx",
+      "sources/lineage-08.hwpx",
+      "evidence/lineage-comparison.json"
+    ],
+    "history": "Eight actual 2026-07-18 approvals; current source hashes and matching header/title/page XML recorded",
+    "file_hashes": {
+      "sources/lineage-01.hwpx": "541b9abc633679d3e1272ebdf3be473d7ee6b4e4cba86ade905fad2a28a136b7",
+      "sources/lineage-02.hwpx": "f3bb0321756de2d065b0f8ed38b9350153d192bef66c1f1dd5d9a61d84ab5891",
+      "sources/lineage-03.hwpx": "6d45d5ab26398109737d8056cc9424bccac31697e913b86ca16ebd581e8fa558",
+      "sources/lineage-04.hwpx": "eda247a9ef3ca1a0efcd4ec7b030d21a068de9624f1a06cfb8a3201b3d124de5",
+      "sources/lineage-05.hwpx": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+      "sources/lineage-06.hwpx": "b5c434cdd5647ee1859ee256cc9182cb0c86f559c7b97d125243fe785a99a115",
+      "sources/lineage-07.hwpx": "ea6a08693ee6861a5840e0a42734c4bab3954f04e2fdd3436404d26d38b23e5a",
+      "sources/lineage-08.hwpx": "b1340c6b2676a905a04353cea677ebc5a54cd5cc7304715694f2c00b78e05fa3",
+      "evidence/lineage-comparison.json": "416b4729a549be452603a2658706168b307b8b7e666b17f6c3df3da7d1cd2750"
+    }
+  },
+  "converted_fixture": {
+    "status": "ready_with_observed_failure",
+    "files": [
+      "sources/conversion-original.hwp",
+      "sources/conversion-native.hwpx",
+      "sources/conversion-approved.hwpx",
+      "sources/repackaged-approved.hwpx"
+    ],
+    "failure": "New native conversion render check flags circle present in original PDF; FAIL retained. Approved/repackaged positive controls pass.",
+    "file_hashes": {
+      "sources/conversion-original.hwp": "18c6c131750e95f89d697b5a3fa00367869525758718dcffd447fb5accb903b9",
+      "sources/conversion-native.hwpx": "97bc9db3a7c4f91b87548412799840b255fc62530bfbe5e224b7f3b0f191eba8",
+      "sources/conversion-approved.hwpx": "9c9ce159c7611576260d92d895361880592b25688a2ce13e1426766b1487c97b",
+      "sources/repackaged-approved.hwpx": "3c40c50b7785a868ace4c8e1d7ad956dec9e1c53d89edbbab8cb7a6a8dff37ae"
+    }
+  }
+}

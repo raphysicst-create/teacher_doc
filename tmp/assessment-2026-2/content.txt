@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "input": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\assessment-2026-2\\final.hwpx",
+  "unchanged_line_ratio": null,
+  "findings": []
+}

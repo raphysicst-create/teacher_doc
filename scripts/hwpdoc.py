@@ -181,8 +181,10 @@ def run(argv, *, timeout=90, com=False):
                                capture_output=True, text=True, encoding='utf-8', errors='replace',
                                timeout=timeout, env=env)
             return r.returncode, r.stdout + r.stderr
-        except subprocess.TimeoutExpired:
-            return 124, '시간 초과. COM 잔존 프로세스 여부를 확인해야 합니다; 자동 강제 종료하지 않음.'
+        except subprocess.TimeoutExpired as exc:
+            def decode(value):
+                return value.decode('utf-8', errors='replace') if isinstance(value, bytes) else (value or '')
+            return 124, decode(exc.stdout) + decode(exc.stderr) + '\n시간 초과. COM 잔존 프로세스 여부를 확인해야 합니다; 자동 강제 종료하지 않음.'
         except OSError as exc:
             return 125, str(exc)
     if com:
@@ -559,16 +561,31 @@ def validate_document(report):
                                                   '--write-budget', folder / 'budget.json', '--write-structure', folder / 'structure.json'])]:
             if not stage(report, name, argv):
                 return report
-        page_ok = stage(report, 'page_guard', [SKILL / 'page_guard.py', '--reference', ref, '--output', f,
+        page_command = [SKILL / 'page_guard.py', '--reference', ref, '--output', f,
                   '--budget-profile', folder / 'budget.json', '--structure-profile', folder / 'structure.json',
-                  '--no-strict-paragraph-budget', '--skip-text-drift', '--allow-empty-fill'])
+                  '--no-strict-paragraph-budget', '--skip-text-drift', '--allow-empty-fill']
+        if m.get('paragraph_visual_record'):
+            receipt = workspace_path(m['paragraph_visual_record'])
+            page_command += ['--paragraph-render-review', receipt]
+        page_ok = stage(report, 'page_guard', page_command)
+        if page_ok and m.get('paragraph_visual_record'):
+            proof = read_json(receipt)
+            artifacts = [receipt, *[(receipt.parent / a['path']).resolve() for a in [proof['pdf'], *proof['images']]]]
+            report['dependencies'].update({str(p.resolve()): sha(p) for p in artifacts})
         if not page_ok:
             report['structure_next'] = '실패 위치를 검토하세요. 활동 병합·내용 축약·구조 프로파일 재승인·검증 플래그 우회는 자동 수행하지 않습니다.'
     else:
         stage(report, 'page_guard', reason='기준 문서/승인된 구조 프로파일 없음: 기존 경로로 기준 확인 필요')
     stage(report, 'hancom', [SKILL / 'finalize_hwpx.py', f, '--hancom'], com=True)
     provenance = m.get('base_provenance')
-    if provenance in ('converted', 'repackaged') or m.get('over_budget_cells'):
+    reviewed_unknown_base = False
+    if provenance == 'unconfirmed' and isinstance(m.get('template'), dict):
+        # Registration permits unknown origin only after current-hash review.
+        # Keep that origin unknown, and verify this output against that same base.
+        registered_base = template_file(m)
+        reviewed_unknown_base = reference is not None and reference.resolve() == registered_base.resolve()
+        report['base_provenance_notice'] = '원본 유래 미확인 유지; 현재 해시로 검토·등록된 동일 양식과 결과물 렌더 대조'
+    if provenance in ('converted', 'repackaged') or m.get('over_budget_cells') or reviewed_unknown_base:
         if not reference:
             stage(report, 'render', reason='조건부 렌더 기준 파일 누락')
         else:

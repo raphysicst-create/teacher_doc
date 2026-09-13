@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"command\":\"uninstall\",\"outcome\":\"ok\",\"plugin\":\"teacher_doc@teacher-doc-lifecycle-20260913\",\"pluginId\":\"teacher_doc@teacher-doc-lifecycle-20260913\",\"scope\":\"user\",\"keptData\":true,\"message\":\"Successfully uninstalled plugin: teacher_doc (scope: user)\"}\n",
+  "stderr": "",
+  "at": "2026-09-13T13:18:32.594336+00:00",
+  "seconds": 2.422000000002299,
+  "argv": [
+    "C:\\Users\\22\\.local\\bin\\claude.exe",
+    "plugin",
+    "uninstall",
+    "teacher_doc@teacher-doc-lifecycle-20260913",
+    "--keep-data",
+    "--json"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

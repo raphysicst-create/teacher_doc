@@ -1,0 +1,20 @@
+{
+  "exit_code": 1,
+  "stdout": "{\n  \"job_id\": \"approved-w2-20260913\",\n  \"status\": \"fail\",\n  \"report\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\remaining-20260913\\\\codex-marked\\\\.hwpdoc\\\\jobs\\\\approved-w2-20260913\\\\report.json\",\n  \"changed_files\": [],\n  \"copy\": null,\n  \"next_action\": \"실패/미확인 단계와 변경 파일 확인; 값을 지어내지 말고 질문 또는 기존 수동 경로 사용\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked",
+    "validate",
+    "--manifest",
+    "inputs/approved-workflow/w2.json"
+  ],
+  "at": "2026-09-13T07:12:24.490985+00:00",
+  "seconds": 33.73487830162048,
+  "app": "codex"
+}

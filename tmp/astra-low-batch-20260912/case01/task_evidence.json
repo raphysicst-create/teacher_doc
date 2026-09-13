@@ -1,0 +1,774 @@
+{
+  "guide": {
+    "content": [
+      {
+        "type": "text",
+        "text": "평가계획 수립: 확정 0개, 검토·조건 미확정 11개. 전체 안내 상태: partial."
+      }
+    ],
+    "structuredContent": {
+      "schema_version": 1,
+      "status": "partial",
+      "summary": "평가계획 수립: 확정 0개, 검토·조건 미확정 11개. 전체 안내 상태: partial.",
+      "effective_context": {
+        "task_facts": {},
+        "profile_id": "default",
+        "region": "gangwon",
+        "school_level": "middle",
+        "establishment_type": null,
+        "timezone": "Asia/Seoul",
+        "as_of": "2026-10-08",
+        "school_year": 2026,
+        "fiscal_year": null
+      },
+      "assumed_fields": [],
+      "coverage": {
+        "scope": "registered_sources",
+        "support_level": "detailed",
+        "source_version_ids": [
+          "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47"
+        ],
+        "core_items": [
+          {
+            "core_item_id": "assessment.plan.approval",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.approval.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.purpose",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.purpose.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.methods",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.methods.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.achievement",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.achievement.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.rubric",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.rubric.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.absence",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.absence.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.feedback",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.feedback.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.basic_score",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.basic_score.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.publication",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.publication.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.classroom",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.classroom.draft"
+            ]
+          },
+          {
+            "core_item_id": "assessment.plan.ai",
+            "state": "unverified",
+            "reason": "연결된 근거 또는 규칙 검토가 완료되지 않았습니다.",
+            "rule_ids": [
+              "assessment.plan.ai.draft"
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "code": "source_gap",
+            "message": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인"
+          }
+        ]
+      },
+      "data": {
+        "task_id": "assessment.plan",
+        "overview": "평가계획 수립: 기존 핵심 항목은 사용자 전체 검토 및 주석 수정을 반영했습니다. 적용 범위·효력기간·자료 상태와 신규 항목의 검토 상태는 개별 반환 사유를 확인하세요.",
+        "items": [],
+        "pending_items": [
+          {
+            "rule_id": "assessment.plan.absence.draft",
+            "instruction": "결시자·학적 변동자와 학업중단숙려제 참여 등 미응시자의 인정점 및 처리기준을 포함한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b",
+              "ev:ce10ea0299a85e8c698e52a646c57ca2ec16ec5b30262789726dca2d262369c1"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.achievement.draft",
+            "instruction": "교과목별 성취율·성취도와 학기 단위 성취수준을 포함한다. 학기 단위 성취수준의 2022 개정 교육과정 적용 학년 조건을 보존한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.ai.draft",
+            "instruction": "AI 도구 활용 시 교사가 직접 학생 활동을 관찰하고 독자적 사고가 평가에 반영되도록 하며 금지 행위·유의사항을 사전 안내한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:ce10ea0299a85e8c698e52a646c57ca2ec16ec5b30262789726dca2d262369c1"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.approval.draft",
+            "instruction": "교과(학년)협의회에서 학년별·교과목별 평가계획을 수립하고 학업성적관리위원회 심의 후 학교장이 최종 결정한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.basic_score.draft",
+            "instruction": "정기시험·수행평가 인정점 및 수행평가 기본점수 부여 여부를 정하고 관련 조건과 상한을 원문에서 확인한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b",
+              "ev:6344050a7a4d150e41f0bc4b91c5973a34dac7720141aa52e8a22b5aa0db4e1c"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.classroom.draft",
+            "instruction": "수행평가는 수업 중 실시 원칙과 과제형 평가 금지, 영어듣기평가 예외 및 과목 특성에 맞는 다양한 활동 조건을 확인한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:f15d2bc1d32f3ad648c8daa2b4cb95e29879509e8288a51f2b2a407d7e4c173c",
+              "ev:6344050a7a4d150e41f0bc4b91c5973a34dac7720141aa52e8a22b5aa0db4e1c"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.feedback.draft",
+            "instruction": "성적처리 방법과 평가결과 분석·활용방안을 포함한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.methods.draft",
+            "instruction": "학년·과목·학기별 정기시험·수행평가의 영역·방법·시기·횟수와 학기말 반영비율을 구체적으로 정하고 합계를 100%로 구성한다. 일반 성적 산출 시 수행평가는 학기 환산점100점의 30% 이상이며, 서·논술형은 정기시험·수행평가 환산점수 합계의 30% 이상으로 하고 정기시험마다 포함한다. 두 비율은 별도 기준이며 합산하여 최소60%로 만들지 않는다. 완성형·단답형은 서·논술형 비율에 넣지 않는다. 정기시험은 학기당 2회 원칙이며, 도덕·기술가정, 3학년2학기 교과 또는 제8조⑥ 대상 교과는 심의 후 학교장 결정으로 1회 실시할 수 있으나 반영비율은 40% 이하로 한다. 수행평가100%는 대안학교·대안교육특성화학교·특수학교 교과, 수업활동 연계 수행평가만 가능한 정보·선택·체육·예술·학교자율시간 과목, 주당1시수 과목에 대해 별도 심의를 거쳐 실시할 수 있다. 이 경우 서·논술형 반영 여부·비율은 교과(학년)협의회에서 정하고 심의한다. 자유학기는 정기시험과 교과별 성취도 산출을 하지 않는 별도 평가를 적용한다. 과목별 고정70:30 또는 교육과정별 차등비율을 임의로 만들지 않는다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b",
+              "ev:a0299e023b0beb909a2380fa1fb93c78ae3588e3c84f5545ba717eef7b8ee1dc",
+              "ev:6344050a7a4d150e41f0bc4b91c5973a34dac7720141aa52e8a22b5aa0db4e1c",
+              "ev:eee22ae0d2583218c7eaecf7e31eb0aa9b7f45c89ba143985d3df59e1d0c1145",
+              "ev:878c486de49c8f36908a151812585f233af83f1a78aefecacef784a9e0eee346"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.publication.draft",
+            "instruction": "학기 초 평가계획을 공개하고 평가 전 방법·채점기준을 안내한다. 변경 시 심의를 통해 확정하고 평가 전에 학생·학부모에게 안내한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:a0299e023b0beb909a2380fa1fb93c78ae3588e3c84f5545ba717eef7b8ee1dc",
+              "ev:5a2146473058ad81b138a945b4bded9bd25d9a01ad63a7a810cdd4f65b422cd9"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.purpose.draft",
+            "instruction": "평가의 목적·방향·방침·유의사항을 포함한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          },
+          {
+            "rule_id": "assessment.plan.rubric.draft",
+            "instruction": "수행평가 영역별 배점·학기말 반영비율·채점기준 등 세부기준을 명시하고 성취기준을 고려하여 영역이 중복되지 않도록 한다. 수행평가 1개 영역의 학기말 반영비율은 40% 이하로 한다. 영역별 점수는 가급적 100점 만점으로 하되, 권장 만점과 의무 상한을 구분한다.",
+            "reason": "HOLD-GW-ASSESS-SCOPE: 재개 지시 전 보류 항목; legacy.assessment.plan: establishment_types 적용 범위 미확인; sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인",
+            "missing_fields": [],
+            "evidence_ids": [
+              "ev:aa02f69f646412de22772d499676ec90289881dbcf635d264890c6fb15c0a74b",
+              "ev:f15d2bc1d32f3ad648c8daa2b4cb95e29879509e8288a51f2b2a407d7e4c173c",
+              "ev:6344050a7a4d150e41f0bc4b91c5973a34dac7720141aa52e8a22b5aa0db4e1c"
+            ],
+            "review_origin": "human_approved",
+            "hold_ids": [
+              "HOLD-GW-ASSESS-SCOPE"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source_version_id": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+            "document_id": "gangwon.assessment",
+            "title": "2026_강원_중학교_학업성적관리_시행지침",
+            "official_source": {
+              "kind": "url",
+              "reference": "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=50980&key=m2307211198550"
+            },
+            "acquired_at": null,
+            "freshness_checked_at": "2026-09-07",
+            "freshness_note": "2026-09-07 공식 게시물 첨부와 등록 파일 SHA-256 완전 일치 확인. 게시물·첨부 판본 확인이며 이후 별도 공문 전수 확인은 아님. 최초 사용자 파일 입수일은 미확인. 문안 의미 승인과 추출 품질·범위 확인은 구분한다. PDF 32쪽 부칙 제1조에서 2026-03-01 시행 확인; 종료일 명시 없음. PDF 3쪽 교육청 소속 학교 문구만으로 국립 포함 여부를 확정하지 않아 설립구분은 미확인 유지. 기존 텍스트 없음 페이지는 백지/재단선 확인 또는 연결 이미지 전사로 해소함. 전체 그림·표의 의미 검토 완료를 뜻하지 않음. 대조 기록: reviews/2026-09-07-source-followup/applied.json.",
+            "historical": false,
+            "archive_origin": null
+          }
+        ],
+        "page": {
+          "returned": 11,
+          "total": 11,
+          "has_more": false
+        }
+      },
+      "missing_context": [],
+      "conflicts": [],
+      "warnings": [
+        {
+          "code": "quality_unverified",
+          "message": "원문 추출 품질 검토가 끝나지 않은 근거가 있습니다.",
+          "source_version_ids": [
+            "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47"
+          ]
+        }
+      ],
+      "index_version": "idx-3b083f2b7c784adcae8aede34f91aa7b",
+      "next_cursor": null
+    },
+    "isError": false
+  },
+  "search": {
+    "content": [
+      {
+        "type": "text",
+        "text": "등록된 적용 범위의 관련 근거 32189개를 찾았습니다."
+      }
+    ],
+    "structuredContent": {
+      "schema_version": 1,
+      "status": "partial",
+      "summary": "등록된 적용 범위의 관련 근거 32189개를 찾았습니다.",
+      "effective_context": {
+        "task_facts": {},
+        "profile_id": "default",
+        "region": "gangwon",
+        "school_level": "middle",
+        "establishment_type": null,
+        "timezone": "Asia/Seoul",
+        "as_of": "2026-09-12",
+        "school_year": null,
+        "fiscal_year": null
+      },
+      "assumed_fields": [
+        {
+          "field": "region",
+          "source": "profile",
+          "reason": "저장된 프로필 적용"
+        },
+        {
+          "field": "school_level",
+          "source": "profile",
+          "reason": "저장된 프로필 적용"
+        },
+        {
+          "field": "as_of",
+          "source": "default",
+          "reason": "프로필 시간대의 오늘 날짜"
+        }
+      ],
+      "coverage": {
+        "scope": "registered_sources",
+        "support_level": "evidence_search",
+        "source_version_ids": [
+          "sha256:087eac70851488ca1cfdb3a6c914273d072ea8755ed1fba6233e20ffea092851",
+          "sha256:127eee4bd470f0519ef945a7f63fbf04b618f93469595c96cb6c2173a25eff9c",
+          "sha256:2c89b42a97e5a41e5dae75ee878b9af0cd5b4b9623fbe6e4f1ee8fe2a624010f",
+          "sha256:2f0496fecbf82f8c1b6557de61afc0d1ce734bc8ef1be926e0aed36f563ff6b0",
+          "sha256:302314d66f8404d43e71d91a7c9c3a300028a03fa234f46737cd81d7eb933380",
+          "sha256:30c90fd7d05b47a3b0639a180979309a95492c07029d026126ceff2f2214529e",
+          "sha256:34e2be0e6904b0ebd497ee9796be99ec0d7144ddaf2ce11226f796e49e2504d6",
+          "sha256:5343731dec637349597eaeff280765a1c223d23859c253cafc33becc358eead6",
+          "sha256:54c4c3a96060b579a2f59703aad4295558da492a9642d4020ea10713629cd843",
+          "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+          "sha256:6343fb6cf2a2c85730b0b6a83e776f0942e599ad29776f8ad9015eb1bb9415a7",
+          "sha256:742a1f3b8301bf4b38ad6382ebca183231440bd00ed6edf5d5495365a943aa0d",
+          "sha256:75f32cf596f300b8bf48ae65843abfd2ecd98853031990a88084127206d42da1",
+          "sha256:911d8acb12628069726f6b7f4700863a35066a0b093e6e952915fa1c230da59f",
+          "sha256:96a2e655500ff689454690170da648e7e77e25c0155eeb82d14c1b8cba4d9d30",
+          "sha256:9cde695dfccc26d585e0add9be0aba5cfc04267c14415cfb8d6212ee24eb7e68",
+          "sha256:aa4aa97e8789f125e5106aaa37689e72bfd19303ff1099c6a8c1f19cf9cabab8",
+          "sha256:b458a8513c9ea085a33376d9cc3695d0e799e48d98a370dd7992cf3c5a5f859c",
+          "sha256:b718e768d140661c5748aae2b7796939804814e41858523238e81d5bf619dbd1",
+          "sha256:cbcdeebddabd7e26a08748c4b492b32f6238e209059d1193a74e10cd47afebf6",
+          "sha256:cde963767691e3d5fe6bd966c8f32c42401c9ee92e968423ffdffa927f8ceb59",
+          "sha256:d25192490e34ee05c596b2b39c783560eba9a433e9e46fc3287d3373e2510f29",
+          "sha256:d88ac5c60cb2311a1e2dbcbba16e351356e26175462393d71fb814a2ba6a2a2c",
+          "sha256:dbcc7a1800d94eb7460e8c414ddf16b61f1003b2a503edfe59c118b948622034",
+          "sha256:e24a1d27ec47be8e44d390a7a125091cd733d1e4954aad150b358adbd1684edc",
+          "sha256:e33d7102e3e798f0c2adaad1483a568c93220c9fa3e1d3d941c8e6102a4b4587",
+          "sha256:e5ab1b685a816d8299cca3effb37848873988133d5afd7535be8dfcd56561a9c",
+          "sha256:f1cff08aae8ece3876e0d22fbd5f261efaa1a11f13149dc760100362ee492658",
+          "sha256:f3bd2b96e7f812750683abf43e5ac6d1684c757f67b34df551162c0076556119"
+        ],
+        "core_items": [],
+        "issues": [
+          {
+            "code": "source_gap",
+            "message": "sha256:127eee4bd470f0519ef945a7f63fbf04b618f93469595c96cb6c2173a25eff9c: school_levels 적용 범위 미확인; sha256:127eee4bd470f0519ef945a7f63fbf04b618f93469595c96cb6c2173a25eff9c: establishment_types 적용 범위 미확인; sha256:127eee4bd470f0519ef945a7f63fbf04b618f93469595c96cb6c2173a25eff9c: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:2c89b42a97e5a41e5dae75ee878b9af0cd5b4b9623fbe6e4f1ee8fe2a624010f: establishment_types 적용 범위 미확인; sha256:2c89b42a97e5a41e5dae75ee878b9af0cd5b4b9623fbe6e4f1ee8fe2a624010f: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:30c90fd7d05b47a3b0639a180979309a95492c07029d026126ceff2f2214529e: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:5343731dec637349597eaeff280765a1c223d23859c253cafc33becc358eead6: establishment_types 적용 범위 미확인; sha256:5343731dec637349597eaeff280765a1c223d23859c253cafc33becc358eead6: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:54c4c3a96060b579a2f59703aad4295558da492a9642d4020ea10713629cd843: school_levels 적용 범위 미확인; sha256:54c4c3a96060b579a2f59703aad4295558da492a9642d4020ea10713629cd843: establishment_types 적용 범위 미확인; sha256:54c4c3a96060b579a2f59703aad4295558da492a9642d4020ea10713629cd843: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47: establishment_types 적용 범위 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:742a1f3b8301bf4b38ad6382ebca183231440bd00ed6edf5d5495365a943aa0d: 원문 등록·추출 검토 미완료"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:911d8acb12628069726f6b7f4700863a35066a0b093e6e952915fa1c230da59f: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:b718e768d140661c5748aae2b7796939804814e41858523238e81d5bf619dbd1: school_levels 적용 범위 미확인; sha256:b718e768d140661c5748aae2b7796939804814e41858523238e81d5bf619dbd1: establishment_types 적용 범위 미확인; sha256:b718e768d140661c5748aae2b7796939804814e41858523238e81d5bf619dbd1: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:cbcdeebddabd7e26a08748c4b492b32f6238e209059d1193a74e10cd47afebf6: school_levels 적용 범위 미확인; sha256:cbcdeebddabd7e26a08748c4b492b32f6238e209059d1193a74e10cd47afebf6: establishment_types 적용 범위 미확인; sha256:cbcdeebddabd7e26a08748c4b492b32f6238e209059d1193a74e10cd47afebf6: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:cde963767691e3d5fe6bd966c8f32c42401c9ee92e968423ffdffa927f8ceb59: school_levels 적용 범위 미확인; sha256:cde963767691e3d5fe6bd966c8f32c42401c9ee92e968423ffdffa927f8ceb59: establishment_types 적용 범위 미확인; sha256:cde963767691e3d5fe6bd966c8f32c42401c9ee92e968423ffdffa927f8ceb59: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:d25192490e34ee05c596b2b39c783560eba9a433e9e46fc3287d3373e2510f29: school_levels 적용 범위 미확인; sha256:d25192490e34ee05c596b2b39c783560eba9a433e9e46fc3287d3373e2510f29: establishment_types 적용 범위 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:dbcc7a1800d94eb7460e8c414ddf16b61f1003b2a503edfe59c118b948622034: school_levels 적용 범위 미확인; sha256:dbcc7a1800d94eb7460e8c414ddf16b61f1003b2a503edfe59c118b948622034: establishment_types 적용 범위 미확인; sha256:dbcc7a1800d94eb7460e8c414ddf16b61f1003b2a503edfe59c118b948622034: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:e24a1d27ec47be8e44d390a7a125091cd733d1e4954aad150b358adbd1684edc: school_levels 적용 범위 미확인; sha256:e24a1d27ec47be8e44d390a7a125091cd733d1e4954aad150b358adbd1684edc: establishment_types 적용 범위 미확인; sha256:e24a1d27ec47be8e44d390a7a125091cd733d1e4954aad150b358adbd1684edc: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:e5ab1b685a816d8299cca3effb37848873988133d5afd7535be8dfcd56561a9c: regions 적용 범위 미확인; sha256:e5ab1b685a816d8299cca3effb37848873988133d5afd7535be8dfcd56561a9c: 지침 적용 기간 미확인"
+          },
+          {
+            "code": "source_gap",
+            "message": "sha256:f1cff08aae8ece3876e0d22fbd5f261efaa1a11f13149dc760100362ee492658: establishment_types 적용 범위 미확인; sha256:f1cff08aae8ece3876e0d22fbd5f261efaa1a11f13149dc760100362ee492658: 지침 적용 기간 미확인"
+          }
+        ]
+      },
+      "data": {
+        "hits": [
+          {
+            "evidence_id": "ev:bc49c6bf3ba2da81fcb98cfc8c711892ecfba6f1e4ad7cf1ef168d6f865d1e21",
+            "source": {
+              "source_version_id": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+              "document_id": "gangwon.assessment",
+              "title": "2026_강원_중학교_학업성적관리_시행지침",
+              "official_source": {
+                "kind": "url",
+                "reference": "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=50980&key=m2307211198550"
+              },
+              "acquired_at": null,
+              "freshness_checked_at": "2026-09-07",
+              "freshness_note": "2026-09-07 공식 게시물 첨부와 등록 파일 SHA-256 완전 일치 확인. 게시물·첨부 판본 확인이며 이후 별도 공문 전수 확인은 아님. 최초 사용자 파일 입수일은 미확인. 문안 의미 승인과 추출 품질·범위 확인은 구분한다. PDF 32쪽 부칙 제1조에서 2026-03-01 시행 확인; 종료일 명시 없음. PDF 3쪽 교육청 소속 학교 문구만으로 국립 포함 여부를 확정하지 않아 설립구분은 미확인 유지. 기존 텍스트 없음 페이지는 백지/재단선 확인 또는 연결 이미지 전사로 해소함. 전체 그림·표의 의미 검토 완료를 뜻하지 않음. 대조 기록: reviews/2026-09-07-source-followup/applied.json.",
+              "historical": false,
+              "archive_origin": null
+            },
+            "locator": {
+              "kind": "pdf",
+              "page": 15,
+              "printed_page": null,
+              "block_index": null,
+              "bbox": null
+            },
+            "heading_path": [],
+            "snippet": "제3\n장\n교과학습발달상황 평가 및 관리\nGangwon State Office of Education | 9\n시간, 출제 방법 등)은 교과(학년)협의회에서 정하고, 학업성적관리위원회의 \n심의를 거쳐 학교장의 결재를 받는다.\n⑦ 서·논술형 문항은 반드시 채점기준표를 작성하고, 채점기준표에는 인정 범위의 \n설정(모범답안, 인정답안, 예시답안 등), 풀이 과정에 따른 부분 점수, 단계별 \n점수 등을 제시한다.\n⑧ 출제 문제를 수업 시간이나 기타의 방법으로 정기시험 실시 전에 지도하거나 \n암시하는 일이 없도록 한다.\n⑨ 성적처리가 끝난 출제원안과 문항정보표는 성적 산출의 증빙자료로 5년간 당해 \n학교에 보관한다.\n⑩ 학업성적관리규정에 정기시험 관련 보안규정과 시험지 유출시 처리기준(학업\n성적관리위원회 개최, 학생·학",
+            "match_reason": "질문 검색어 일치: 관련, 관리, 교직원, 보안, 시험, 연수, 출제",
+            "applicability": "unknown"
+          },
+          {
+            "evidence_id": "ev:5b8094a7b078f012a770e10288c6aa7b3717852b61271fa72dcf6116123c0e5e",
+            "source": {
+              "source_version_id": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+              "document_id": "gangwon.assessment",
+              "title": "2026_강원_중학교_학업성적관리_시행지침",
+              "official_source": {
+                "kind": "url",
+                "reference": "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=50980&key=m2307211198550"
+              },
+              "acquired_at": null,
+              "freshness_checked_at": "2026-09-07",
+              "freshness_note": "2026-09-07 공식 게시물 첨부와 등록 파일 SHA-256 완전 일치 확인. 게시물·첨부 판본 확인이며 이후 별도 공문 전수 확인은 아님. 최초 사용자 파일 입수일은 미확인. 문안 의미 승인과 추출 품질·범위 확인은 구분한다. PDF 32쪽 부칙 제1조에서 2026-03-01 시행 확인; 종료일 명시 없음. PDF 3쪽 교육청 소속 학교 문구만으로 국립 포함 여부를 확정하지 않아 설립구분은 미확인 유지. 기존 텍스트 없음 페이지는 백지/재단선 확인 또는 연결 이미지 전사로 해소함. 전체 그림·표의 의미 검토 완료를 뜻하지 않음. 대조 기록: reviews/2026-09-07-source-followup/applied.json.",
+              "historical": false,
+              "archive_origin": null
+            },
+            "locator": {
+              "kind": "pdf",
+              "page": 16,
+              "printed_page": null,
+              "block_index": null,
+              "bbox": null
+            },
+            "heading_path": [],
+            "snippet": "2026학년도 중학교\n학업성적관리시행지침 \n10 | www.gwe.go.kr\n② 평가책임자(학교장)는 평가문제 인쇄기간 중 인쇄실을 통제구역으로 관리하고 \n고사기간 중 인쇄실 관리 담당자(교감 등)를 별도로 지정한다. \n  ※ 인쇄실 출입 시 평가 문제 촬영이 가능한 전자기기의 소지를 금지한다.\n③ 평가업무 담당교사는 출제 원안과 인쇄된 문제지를 인쇄실에서 인수한 후 출제\n교사에게 인계하여 검토하도록 한다. 출제교사는 인쇄된 문제지를 지정된 장소\n에서 검토한 후 포장·봉인하여 평가 원안 및 여분과 함께 평가업무 담당교사에게 \n인계하여 교감 및 평가업무 담당교사 책임 하에 평가관리실에 보관한다.\n  ※ 출제 원안지는 수령 당일 인쇄 및 반납을 원칙으로 한다. 부득이하게 당일 \n인쇄가 불가능한 경우 원안지를 평",
+            "match_reason": "질문 검색어 일치: 관련, 관리, 교직원, 보안, 시험, 연수, 출제",
+            "applicability": "unknown"
+          }
+        ],
+        "suggested_queries": [],
+        "page": {
+          "returned": 2,
+          "total": 32189,
+          "has_more": true
+        }
+      },
+      "missing_context": [
+        {
+          "field": "establishment_type",
+          "reason": "적용 여부를 결정하는 데 필요한 조건입니다.",
+          "affected_rule_ids": []
+        }
+      ],
+      "conflicts": [],
+      "warnings": [
+        {
+          "code": "quality_unverified",
+          "message": "원문 추출 품질 검토가 끝나지 않은 근거가 있습니다.",
+          "source_version_ids": [
+            "sha256:087eac70851488ca1cfdb3a6c914273d072ea8755ed1fba6233e20ffea092851",
+            "sha256:127eee4bd470f0519ef945a7f63fbf04b618f93469595c96cb6c2173a25eff9c",
+            "sha256:2c89b42a97e5a41e5dae75ee878b9af0cd5b4b9623fbe6e4f1ee8fe2a624010f",
+            "sha256:2f0496fecbf82f8c1b6557de61afc0d1ce734bc8ef1be926e0aed36f563ff6b0",
+            "sha256:302314d66f8404d43e71d91a7c9c3a300028a03fa234f46737cd81d7eb933380",
+            "sha256:30c90fd7d05b47a3b0639a180979309a95492c07029d026126ceff2f2214529e",
+            "sha256:34e2be0e6904b0ebd497ee9796be99ec0d7144ddaf2ce11226f796e49e2504d6",
+            "sha256:5343731dec637349597eaeff280765a1c223d23859c253cafc33becc358eead6",
+            "sha256:54c4c3a96060b579a2f59703aad4295558da492a9642d4020ea10713629cd843",
+            "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+            "sha256:6343fb6cf2a2c85730b0b6a83e776f0942e599ad29776f8ad9015eb1bb9415a7",
+            "sha256:742a1f3b8301bf4b38ad6382ebca183231440bd00ed6edf5d5495365a943aa0d",
+            "sha256:75f32cf596f300b8bf48ae65843abfd2ecd98853031990a88084127206d42da1",
+            "sha256:911d8acb12628069726f6b7f4700863a35066a0b093e6e952915fa1c230da59f",
+            "sha256:96a2e655500ff689454690170da648e7e77e25c0155eeb82d14c1b8cba4d9d30",
+            "sha256:9cde695dfccc26d585e0add9be0aba5cfc04267c14415cfb8d6212ee24eb7e68",
+            "sha256:aa4aa97e8789f125e5106aaa37689e72bfd19303ff1099c6a8c1f19cf9cabab8",
+            "sha256:b458a8513c9ea085a33376d9cc3695d0e799e48d98a370dd7992cf3c5a5f859c",
+            "sha256:b718e768d140661c5748aae2b7796939804814e41858523238e81d5bf619dbd1",
+            "sha256:cbcdeebddabd7e26a08748c4b492b32f6238e209059d1193a74e10cd47afebf6",
+            "sha256:cde963767691e3d5fe6bd966c8f32c42401c9ee92e968423ffdffa927f8ceb59",
+            "sha256:d25192490e34ee05c596b2b39c783560eba9a433e9e46fc3287d3373e2510f29",
+            "sha256:d88ac5c60cb2311a1e2dbcbba16e351356e26175462393d71fb814a2ba6a2a2c",
+            "sha256:dbcc7a1800d94eb7460e8c414ddf16b61f1003b2a503edfe59c118b948622034",
+            "sha256:e24a1d27ec47be8e44d390a7a125091cd733d1e4954aad150b358adbd1684edc",
+            "sha256:e33d7102e3e798f0c2adaad1483a568c93220c9fa3e1d3d941c8e6102a4b4587",
+            "sha256:e5ab1b685a816d8299cca3effb37848873988133d5afd7535be8dfcd56561a9c",
+            "sha256:f1cff08aae8ece3876e0d22fbd5f261efaa1a11f13149dc760100362ee492658",
+            "sha256:f3bd2b96e7f812750683abf43e5ac6d1684c757f67b34df551162c0076556119"
+          ]
+        }
+      ],
+      "index_version": "idx-3b083f2b7c784adcae8aede34f91aa7b",
+      "next_cursor": "v1.5252b555b105ea21de15ae91b325b1ab.27eabc5d44e0884f21b0640c2de248638bd16499febfdc2bd6d6b9dd9c9e231d"
+    },
+    "isError": false
+  },
+  "evidence": {
+    "content": [
+      {
+        "type": "text",
+        "text": "원문 4개입니다. 분할·문맥을 포함하며 필요한 경우 다음 페이지가 제공됩니다."
+      }
+    ],
+    "structuredContent": {
+      "schema_version": 1,
+      "status": "ok",
+      "summary": "원문 4개입니다. 분할·문맥을 포함하며 필요한 경우 다음 페이지가 제공됩니다.",
+      "effective_context": null,
+      "assumed_fields": [],
+      "coverage": {
+        "scope": "registered_sources",
+        "support_level": "evidence_search",
+        "source_version_ids": [
+          "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47"
+        ],
+        "core_items": [],
+        "issues": []
+      },
+      "data": {
+        "fragments": [
+          {
+            "evidence_id": "ev:bc49c6bf3ba2da81fcb98cfc8c711892ecfba6f1e4ad7cf1ef168d6f865d1e21",
+            "source": {
+              "source_version_id": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+              "document_id": "gangwon.assessment",
+              "title": "2026_강원_중학교_학업성적관리_시행지침",
+              "official_source": {
+                "kind": "url",
+                "reference": "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=50980&key=m2307211198550"
+              },
+              "acquired_at": null,
+              "freshness_checked_at": "2026-09-07",
+              "freshness_note": "2026-09-07 공식 게시물 첨부와 등록 파일 SHA-256 완전 일치 확인. 게시물·첨부 판본 확인이며 이후 별도 공문 전수 확인은 아님. 최초 사용자 파일 입수일은 미확인. 문안 의미 승인과 추출 품질·범위 확인은 구분한다. PDF 32쪽 부칙 제1조에서 2026-03-01 시행 확인; 종료일 명시 없음. PDF 3쪽 교육청 소속 학교 문구만으로 국립 포함 여부를 확정하지 않아 설립구분은 미확인 유지. 기존 텍스트 없음 페이지는 백지/재단선 확인 또는 연결 이미지 전사로 해소함. 전체 그림·표의 의미 검토 완료를 뜻하지 않음. 대조 기록: reviews/2026-09-07-source-followup/applied.json.",
+              "historical": false,
+              "archive_origin": null
+            },
+            "locator": {
+              "kind": "pdf",
+              "page": 15,
+              "printed_page": null,
+              "block_index": null,
+              "bbox": null
+            },
+            "heading_path": [],
+            "raw_text": "제3\n장\n교과학습발달상황 평가 및 관리\nGangwon State Office of Education | 9\n시간, 출제 방법 등)은 교과(학년)협의회에서 정하고, 학업성적관리위원회의 \n심의를 거쳐 학교장의 결재를 받는다.\n⑦ 서·논술형 문항은 반드시 채점기준표를 작성하고, 채점기준표에는 인정 범위의 \n설정(모범답안, 인정답안, 예시답안 등), 풀이 과정에 따른 부분 점수, 단계별 \n점수 등을 제시한다.\n⑧ 출제 문제를 수업 시간이나 기타의 방법으로 정기시험 실시 전에 지도하거나 \n암시하는 일이 없도록 한다.\n⑨ 성적처리가 끝난 출제원안과 문항정보표는 성적 산출의 증빙자료로 5년간 당해 \n학교에 보관한다.\n⑩ 학업성적관리규정에 정기시험 관련 보안규정과 시험지 유출시 처리기준(학업\n성적관리위원회 개최, 학생·학부모 공지, 대책 등)을 마련하고, 평가 문제는 \n출제·인쇄 및 전 과정에서 다음의 각 호에 따라 보안이 유지되도록 철저히 \n관리한다.\n  (1) 평가관리실은 학교의 규모, 여건 등을 고려하여 지정하고, 철저한 보안 장치13)가 \n마련되도록 한다.\n  (2) 평가관리실, 교무실 등 출제와 관련된 시설의 학생 출입을 제한하고, 평가지 \n보관장(캐비닛)은 두 개 이상의 잠금장치를 설치하며, 비밀번호형 자물쇠를 \n사용하는 경우 정기시험 때마다 비밀번호를 변경한다.\n  (3) 평가의 타당성·적정성·투명성·객관성을 확보하도록 평가 실시 전 교직원 연수\n(행정실직원 포함)를 실시한다.\n  (4) 출제원안, 서답형 채점기준표 등 평가 자료 파일에 비밀번호를 설정하고, \n이동식 저장장치(USB, 외장하드 등)를 이용하여 관리14)하며 네트워크 \n전송을 금지한다.\n  (5) 출제교사는 출제와 관련된 출력물 보안 관리를 철저히 한다.\n  (6) 기타 필요한 사항은 학업성적관리위원회의 심의를 거쳐 학업성적관리규정\n으로 정하여 평가와 관련한 비리, 민원 등이 발생하지 않도록 한다.\n제10조 (평가문제 인쇄 및 보안 관리) ① 평가업무 담당교사는 평가 원안의 결재, \n보관, 인쇄 및 문답지 보관 과정에서 보안 관리를 철저히 한다.\n13) CCTV, 무인경비 시스템, 동작 감지센서 등\n14) PC하드디스크 보관 금지\n",
+            "table": null,
+            "native_attributes": {},
+            "related_evidence_ids": [
+              "ev:5a2146473058ad81b138a945b4bded9bd25d9a01ad63a7a810cdd4f65b422cd9",
+              "ev:5b8094a7b078f012a770e10288c6aa7b3717852b61271fa72dcf6116123c0e5e"
+            ],
+            "role": "requested",
+            "part": 1,
+            "parts": 1,
+            "is_complete": true
+          },
+          {
+            "evidence_id": "ev:5b8094a7b078f012a770e10288c6aa7b3717852b61271fa72dcf6116123c0e5e",
+            "source": {
+              "source_version_id": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+              "document_id": "gangwon.assessment",
+              "title": "2026_강원_중학교_학업성적관리_시행지침",
+              "official_source": {
+                "kind": "url",
+                "reference": "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=50980&key=m2307211198550"
+              },
+              "acquired_at": null,
+              "freshness_checked_at": "2026-09-07",
+              "freshness_note": "2026-09-07 공식 게시물 첨부와 등록 파일 SHA-256 완전 일치 확인. 게시물·첨부 판본 확인이며 이후 별도 공문 전수 확인은 아님. 최초 사용자 파일 입수일은 미확인. 문안 의미 승인과 추출 품질·범위 확인은 구분한다. PDF 32쪽 부칙 제1조에서 2026-03-01 시행 확인; 종료일 명시 없음. PDF 3쪽 교육청 소속 학교 문구만으로 국립 포함 여부를 확정하지 않아 설립구분은 미확인 유지. 기존 텍스트 없음 페이지는 백지/재단선 확인 또는 연결 이미지 전사로 해소함. 전체 그림·표의 의미 검토 완료를 뜻하지 않음. 대조 기록: reviews/2026-09-07-source-followup/applied.json.",
+              "historical": false,
+              "archive_origin": null
+            },
+            "locator": {
+              "kind": "pdf",
+              "page": 16,
+              "printed_page": null,
+              "block_index": null,
+              "bbox": null
+            },
+            "heading_path": [],
+            "raw_text": "2026학년도 중학교\n학업성적관리시행지침 \n10 | www.gwe.go.kr\n② 평가책임자(학교장)는 평가문제 인쇄기간 중 인쇄실을 통제구역으로 관리하고 \n고사기간 중 인쇄실 관리 담당자(교감 등)를 별도로 지정한다. \n  ※ 인쇄실 출입 시 평가 문제 촬영이 가능한 전자기기의 소지를 금지한다.\n③ 평가업무 담당교사는 출제 원안과 인쇄된 문제지를 인쇄실에서 인수한 후 출제\n교사에게 인계하여 검토하도록 한다. 출제교사는 인쇄된 문제지를 지정된 장소\n에서 검토한 후 포장·봉인하여 평가 원안 및 여분과 함께 평가업무 담당교사에게 \n인계하여 교감 및 평가업무 담당교사 책임 하에 평가관리실에 보관한다.\n  ※ 출제 원안지는 수령 당일 인쇄 및 반납을 원칙으로 한다. 부득이하게 당일 \n인쇄가 불가능한 경우 원안지를 평가업무 담당교사에게 반납한다.\n④ 평가업무 담당교사는 원지 및 파지 등 시험관련 자료를 출제원안지와 함께 \n보관하고, 원지 및 파지 등은 평가 종료 후 파기하도록 한다.\n⑤ 평가 기간 중 평가관리실에 보관된 고사 원안 등을 열람할 경우 반드시 평가\n관리실 책임자 입회하에 이뤄져야 하며, 평가관리실 밖으로의 유출은 금지한다.\n⑥ 평가의 보안 강화를 위해 학업성적관리규정에 다음 각 호의 사항을 포함하여야 한다.\n1. (출제단계) 교직원 자녀 재학 시 평가 업무 배제, 평가 시행 전 보안 연수 실시 등\n2. (인쇄단계) 평가관리실 출입 통제, 인쇄실 내 전자기기 소지 금지, 평가관리시설 출입자 확인 장치\n(CCTV, 동작 감지 센서 등) 설치, 인쇄시 평가 담당자 입회, 인쇄 담당자 평가지 수령 \n당일 인쇄(1일 초과분 평가원안 보안 책임자 보관 등)\n3. (시행단계) 고사 당일 평가지 반출, 평가 종료 후 답안지 매수 확인 등\n4. (채점단계) 답안지 인수 후 매수 확인, 채점기간 중 학생 통제 등\n제11조 (평가시행 및 감독) ① 평가업무 담당교사는 매 평가마다 학생 변동 사항을 \n정리하여 평가 대상자를 확정한 후 교과 담당교사 및 성적 처리 담당교사에게 통보\n한다.\n② 평가 시간은 과목별 평가 유형을 고려하여 학업성적관리위원회 심의를 거쳐 \n조정할 수 있다.\n③ 학교장은 부정행위 예방을 위하여 학업성적관리위원회의 심의를 거쳐 분반, \n감독교사 증원 배치, 학부모 감독 위촉 등 평가의 시행 방법을 조정할 수 있다.\n④ 감독교사는 공정하고 형평에 맞도록 배정(감독교사 임의 교체를 금지하며 \n부득이한 교체 시 학교장 결재)하고, 학생이 사전에 감독교사를 예측할 수 \n없도록 한다.\n",
+            "table": null,
+            "native_attributes": {},
+            "related_evidence_ids": [
+              "ev:bc49c6bf3ba2da81fcb98cfc8c711892ecfba6f1e4ad7cf1ef168d6f865d1e21",
+              "ev:d875e62efd5b6bd72c5e153101ff51787deab56b9e29928c063b7d1766c6892e"
+            ],
+            "role": "requested",
+            "part": 1,
+            "parts": 1,
+            "is_complete": true
+          },
+          {
+            "evidence_id": "ev:5a2146473058ad81b138a945b4bded9bd25d9a01ad63a7a810cdd4f65b422cd9",
+            "source": {
+              "source_version_id": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+              "document_id": "gangwon.assessment",
+              "title": "2026_강원_중학교_학업성적관리_시행지침",
+              "official_source": {
+                "kind": "url",
+                "reference": "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=50980&key=m2307211198550"
+              },
+              "acquired_at": null,
+              "freshness_checked_at": "2026-09-07",
+              "freshness_note": "2026-09-07 공식 게시물 첨부와 등록 파일 SHA-256 완전 일치 확인. 게시물·첨부 판본 확인이며 이후 별도 공문 전수 확인은 아님. 최초 사용자 파일 입수일은 미확인. 문안 의미 승인과 추출 품질·범위 확인은 구분한다. PDF 32쪽 부칙 제1조에서 2026-03-01 시행 확인; 종료일 명시 없음. PDF 3쪽 교육청 소속 학교 문구만으로 국립 포함 여부를 확정하지 않아 설립구분은 미확인 유지. 기존 텍스트 없음 페이지는 백지/재단선 확인 또는 연결 이미지 전사로 해소함. 전체 그림·표의 의미 검토 완료를 뜻하지 않음. 대조 기록: reviews/2026-09-07-source-followup/applied.json.",
+              "historical": false,
+              "archive_origin": null
+            },
+            "locator": {
+              "kind": "pdf",
+              "page": 14,
+              "printed_page": null,
+              "block_index": null,
+              "bbox": null
+            },
+            "heading_path": [],
+            "raw_text": "2026학년도 중학교\n학업성적관리시행지침 \n8 | www.gwe.go.kr\n변경되는 경우 학업성적관리위원회의 심의를 통해 변경 사항을 확정하고, 평가 \n실시 전에 변경사항을 학생과 학부모에게 안내하여야 한다.\n  - 가정통신문, 학생 교육, 학부모 연수, 게시판, 학교 누리집, 문자 서비스 등 \n다양한 방법 활용\n⑫ 정기시험 기출문제(정답 포함)를 공개하되 공개 범위와 방법12)은 학업성적관리\n위원회를 통해 학교장이 정한다.\n⑬ 창의적 체험활동의 활동내용, 평가 방법 및 기준은 교육과정을 근거로 계획을 \n수립한다.\n   - 2026학년도 1·2학년의 경우 자율·자치활동, 동아리활동, 진로활동으로 편성\n   - 2026학년도 3학년의 경우 자율활동, 동아리활동, 봉사활동, 진로활동으로 편성\n제9조 (정기시험 문제 출제) ① 교과(학년)별 성취기준에 맞는 평가 계획에 따라 \n출제한다.\n② 정기시험 문제는 타당도, 신뢰도를 제고할 수 있도록 출제하고 내용 영역, 성취\n기준, 난이도 등을 포함한 문항정보표 등은 반드시 교육정보시스템을 활용하여 \n작성하며 동일 교과(목) 담당교사 간 공동 출제·검토·편집한다.\n③ 모든 출제 원안에는 총 문항수(선택형, 서·논술형 구분)와 문항별 배점을 표시\n하며, 특별한 사유가 없는 한 100점 만점으로 출제하고, 문항의 수준별 난이도의 \n배열에 유념한다. 난이도에 따른 역배점은 지양한다.\n④ 출제 문항 수는 주어진 시간 내에 풀 수 있는 적정량이어야 하며, 주어진 평가 \n시간은 교과(학년)협의회와 학업성적관리위원회의 심의를 거쳐 학교장이 조정할 수 \n있다.\n⑤ 평가 문항 출제 및 검토 시 다음과 같은 문항이 포함되지 않도록 유의한다.\n  - 시판되는 참고서 문항을 전재한 문항\n  - 최근 5년 이내에 출제된 문제\n  - 객관성의 결여로 정답에 대한 논란의 여지가 있는 문항\n  - 정답이 없는 문항\n  - 학교교육과정의 범위와 수준을 벗어난 문항\n⑥ 평가 문항 출제에 관한 사항(출제 범위, 평가 목표, 문항의 유형 및 형태, 시험 \n12) 학교 누리집 탑재, 교내 특정 장소 비치, 출력물 제공 등\n",
+            "table": null,
+            "native_attributes": {},
+            "related_evidence_ids": [
+              "ev:a0299e023b0beb909a2380fa1fb93c78ae3588e3c84f5545ba717eef7b8ee1dc",
+              "ev:bc49c6bf3ba2da81fcb98cfc8c711892ecfba6f1e4ad7cf1ef168d6f865d1e21"
+            ],
+            "role": "context",
+            "part": 1,
+            "parts": 1,
+            "is_complete": true
+          },
+          {
+            "evidence_id": "ev:d875e62efd5b6bd72c5e153101ff51787deab56b9e29928c063b7d1766c6892e",
+            "source": {
+              "source_version_id": "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47",
+              "document_id": "gangwon.assessment",
+              "title": "2026_강원_중학교_학업성적관리_시행지침",
+              "official_source": {
+                "kind": "url",
+                "reference": "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=50980&key=m2307211198550"
+              },
+              "acquired_at": null,
+              "freshness_checked_at": "2026-09-07",
+              "freshness_note": "2026-09-07 공식 게시물 첨부와 등록 파일 SHA-256 완전 일치 확인. 게시물·첨부 판본 확인이며 이후 별도 공문 전수 확인은 아님. 최초 사용자 파일 입수일은 미확인. 문안 의미 승인과 추출 품질·범위 확인은 구분한다. PDF 32쪽 부칙 제1조에서 2026-03-01 시행 확인; 종료일 명시 없음. PDF 3쪽 교육청 소속 학교 문구만으로 국립 포함 여부를 확정하지 않아 설립구분은 미확인 유지. 기존 텍스트 없음 페이지는 백지/재단선 확인 또는 연결 이미지 전사로 해소함. 전체 그림·표의 의미 검토 완료를 뜻하지 않음. 대조 기록: reviews/2026-09-07-source-followup/applied.json.",
+              "historical": false,
+              "archive_origin": null
+            },
+            "locator": {
+              "kind": "pdf",
+              "page": 17,
+              "printed_page": null,
+              "block_index": null,
+              "bbox": null
+            },
+            "heading_path": [],
+            "raw_text": "제3\n장\n교과학습발달상황 평가 및 관리\nGangwon State Office of Education | 11\n⑤ 평가 시행 전에 부정행위 방지를 위한 감독교사 연수를 실시한다.\n⑥ 휴대용 전화기, 웨어러블 기기, MP3, 전자 사전, 태블릿, 무선이어폰 등 전자\n기기는 반입하지 않도록 하되, 반입한 경우는 시험 전 제출하도록 지도하여 \n부정행위가 발생하지 않도록 철저하게 관리한다. 단, 1형 당뇨병으로 고사 시 \n혈당관리가 필요한 학생의 경우, 혈당 측정 및 인슐린 주입을 위한 의료지원 \n기기 반입을 교사 확인을 거쳐 허용한다.\n⑦ 감독교사는 시험지 배부 과정에서 학생에게 불이익이 발생하지 않도록 유의\n하고, 시험감독 중 정답의 단서가 될 만한 언행을 삼가며, 평가 시간을 준수\n하여 공정한 시험이 실시되도록 하여야 한다.\n⑧ 감독교사는 시험 시작 전, 학생 유의사항을 충분히 전달하여 부정행위를 미연에 \n방지할 수 있도록 만전을 기하고, 부정행위를 적발하였을 경우에는 규정에 따라 \n사후 조치하여, 이로 인한 문제가 확산되지 않도록 신속하고 엄정하게 처리한다.\n   ※ 부정행위 유형, 부정행위자(협조자 포함) 처리에 관한 사항을 학교 학업성적\n관리규정 및 학칙에 포함하고, 학업성적관리규정에 따라 엄정히 처리하되, \n반드시 사전에 이를 학생과 학부모에게 공지한다.\n⑨ 평가문제지는 평가 시행 전 학교 밖으로 반출할 수 없다. 단, 다음의 경우는 \n예외로 한다.\n  - 시험문제 미출제 소년보호기관 위탁 및 보호시설 위탁\n⑩ 학교에서는 본 시행지침15)에 따라 학교별 학업성적관리규정에 장애학생의 평가\n조정 규정을 정하여 시행한다. \n⑪ 담임교사와 감독교사는 답안 작성 요령과 지정된 필기도구 사용에 대한 사전 \n지도를 해야 하며, 답안 표기 내용 정정의 처리 기준을 제시하여야 한다.\n⑫ 감독교사는 답안지에 서명(날인)하고 매수를 확인한 후 표지에 필요한 사항\n(응시자, 결시자 등)을 기록, 서명하여 평가업무 담당교사에게 인계하고, 평가\n업무 담당교사는 답안지를 교과 담당교사에게 인계한다.\n제12조 (정답 공개) ① 정답은 평가 당일 공개를 원칙으로 하되, 방법과 내용은 \n당해 학교의 학업성적관리규정에 따라 달리 정할 수 있다. 단, 서·논술형 문항의 \n채점 기준은 유사정답 및 부분점수를 포함하여 공개한다.\n② 문항 오류 발생 시 교과(학년)협의회를 거쳐 학교 학업성적관리위원회 심의를 \n15) 제20조 참조\n",
+            "table": null,
+            "native_attributes": {},
+            "related_evidence_ids": [
+              "ev:5b8094a7b078f012a770e10288c6aa7b3717852b61271fa72dcf6116123c0e5e",
+              "ev:f15d2bc1d32f3ad648c8daa2b4cb95e29879509e8288a51f2b2a407d7e4c173c"
+            ],
+            "role": "context",
+            "part": 1,
+            "parts": 1,
+            "is_complete": true
+          }
+        ],
+        "not_found_ids": [],
+        "page": {
+          "returned": 4,
+          "total": 4,
+          "has_more": false
+        }
+      },
+      "missing_context": [],
+      "conflicts": [],
+      "warnings": [
+        {
+          "code": "quality_unverified",
+          "message": "원문 추출 품질 검토가 끝나지 않은 근거가 있습니다.",
+          "source_version_ids": [
+            "sha256:5914010a9f50d7213d4b2eff10d37c8d4975a909b4103bf5aded8fa63521eb47"
+          ]
+        }
+      ],
+      "index_version": "idx-3b083f2b7c784adcae8aede34f91aa7b",
+      "next_cursor": null
+    },
+    "isError": false
+  }
+}

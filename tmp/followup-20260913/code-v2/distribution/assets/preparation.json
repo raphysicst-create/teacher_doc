@@ -1,0 +1,18 @@
+{
+  "status": "candidates_prepared",
+  "redistribution_permission": "unconfirmed",
+  "files": [
+    {
+      "source": ".claude/skills/hwpx/templates/base/Contents/content.hpf",
+      "source_sha256": "c435c07a6f7cefedb7d8169be6deb4f4df38c18ed8898ba20cc436ed8c6c1f46",
+      "candidate": "distribution/assets/templates/base/Contents/content.hpf",
+      "candidate_sha256": "cfa774ab3c0f6701d13b7fcf3f4f44a903e4c57afc5a12165ee3dfff8a4f1665"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/proposal/section0.xml",
+      "source_sha256": "e99aadefc33aad70ea837f63fbace43d776b7b42229604ec4af0900f5c650c4b",
+      "candidate": "distribution/assets/templates/proposal/section0.xml",
+      "candidate_sha256": "6f0106960eed89d31f41c2ea69943e53e6cfb71600bc4a64c98b38fa65e85d41"
+    }
+  ]
+}

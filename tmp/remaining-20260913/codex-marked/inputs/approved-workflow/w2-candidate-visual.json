@@ -1,0 +1,22 @@
+{
+  "confirmed": true,
+  "observer": "Codex Desktop assistant",
+  "at": "2026-09-13T07:12:23.184740+00:00",
+  "document_sha256": "b3fcd66dc855b3a9df459d74bf77dd39194850c00da0a95edb66e4b141758ec7",
+  "image_sha256": "2ab3256508c935be9d0edcf6943d3d478e505fcdaa6293a359ea0720e0fab5a3",
+  "record": "Actually inspected full PNG: 1 page; related-number paragraph fits one line; no clipping, overlap, extra line break or font/layout change. Original heading/recipient/title/body placement preserved. 28 versus 27 paragraph chars, no cell changes. Not a human final review.",
+  "reference_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+  "paragraphs": [
+    "p:7"
+  ],
+  "pdf": {
+    "path": "w2-candidate.pdf",
+    "sha256": "cd88355eaab98b15dcc180ac33b0f2c4de9d345edd097e329865a2420ea457a6"
+  },
+  "images": [
+    {
+      "path": "w2-candidate-preview/page-001.png",
+      "sha256": "2ab3256508c935be9d0edcf6943d3d478e505fcdaa6293a359ea0720e0fab5a3"
+    }
+  ]
+}

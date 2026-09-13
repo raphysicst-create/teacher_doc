@@ -1,0 +1,36 @@
+[
+  {
+    "argv": [
+      "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\code\\scripts\\hwpdoc.py",
+      "--workspace",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked",
+      "build",
+      "--manifest",
+      "eval-inputs/0-1.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"job_id\": \"eval-01-0-1\",\n  \"status\": \"unconfirmed\",\n  \"report\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-marked\\\\.hwpdoc\\\\jobs\\\\eval-01-0-1\\\\report.json\",\n  \"changed_files\": [],\n  \"copy\": null,\n  \"next_action\": \"실패/미확인 단계와 변경 파일 확인; 값을 지어내지 말고 질문 또는 기존 수동 경로 사용\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\code\\scripts\\hwpdoc.py",
+      "--workspace",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked",
+      "deliver",
+      "--job",
+      "eval-01-0-1"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"unconfirmed\", \"error\": \"전체 검증 미통과. 미확인 검토 초안은 deliver --draft로만 저장할 수 있습니다\"}\n"
+  }
+]

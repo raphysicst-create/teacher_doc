@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"registered\",\n  \"path\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\이동 작업\\\\.claude\\\\settings.json\",\n  \"backup\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\이동 작업\\\\.hwpdoc\\\\hooks-history\\\\claude-05b6be705c0e41728e749945fb561fd9.json\",\n  \"ownership_record\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\이동 작업\\\\.hwpdoc\\\\hooks-claude-owned.json\",\n  \"trust\": \"unverified\",\n  \"actual_blocking\": \"unverified\",\n  \"actual_tool_names\": [],\n  \"next_action\": \"설정/등록/신뢰/실제 차단을 각각 확인하세요. 실제 도구명과 이벤트는 설치한 앱에서 확인해야 합니다.\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\설치 B\\scripts\\hwpdoc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\이동 작업",
+    "setup-hooks",
+    "--app",
+    "claude",
+    "--apply"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 4.492462396621704,
+  "recorded_at": "2026-09-13T02:25:03.529610+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

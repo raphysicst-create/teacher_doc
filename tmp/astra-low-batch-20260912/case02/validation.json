@@ -1,0 +1,123 @@
+[
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\edit_hwpx.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\knowledge\\templates\\성립전예산요구\\양식.hwpx",
+      "-o",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--slot-json",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\values.json",
+      "--allow-over-budget",
+      "--verified-by-render"
+    ],
+    "exit": 0,
+    "output": "WARNING: 예산 초과를 렌더 확인 후 묵인했습니다 (2건) — 보고에 반드시 명시하십시오:\n  - 문단 입력값 글자 수 초과: index=9, max=54, input=59, text='2. 화동중학교 학업성적관리 규정에 따른 2026학년도 2학기 교과별 교수학습 및 평가계획을 붙임과 같이 수립하여 운영하고자 합니다.'\n  - 문단 입력값 글자 수 초과: index=11, max=30, input=72, text='붙임  1. 2026학년도 화동중 1학년 2학기 교수학습 및 평가계획(전체) 1부.\\n2. 2026학년도 화동중 2학년 2학기 교수학습 및 평가계획(전체) 1부. 끝.'\nEDITED: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx\n  text replacements applied: 0\n  cells updated: 0\n  paragraphs updated: 4\n  original package entries, header.xml, content.hpf, and BinData were preserved\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\validate.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx"
+    ],
+    "exit": 0,
+    "output": "VALID: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx\n  All structural checks passed.\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\fix_namespaces.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx"
+    ],
+    "exit": 0,
+    "output": "Fixed namespaces: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx (0 XML entries changed)\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\finalize_hwpx.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--strip-linesegarray"
+    ],
+    "exit": 0,
+    "output": "HWPX FINALIZE: PASS\n  action: {'strip_linesegarray_removed': 0, 'output': 'C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\astra-low-batch-20260912\\\\case02\\\\result.hwpx'}\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\validate.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--layout"
+    ],
+    "exit": 0,
+    "output": "VALID: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx\n  All structural checks passed.\n  Layout warnings: 1\n  - body_paragraph_without_visible_indent: 제목 다음 본문 문단에 눈에 보이는 들여쓰기나 목록 표지가 없습니다.\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\page_guard.py",
+    "args": [
+      "--reference",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\knowledge\\templates\\성립전예산요구\\양식.hwpx",
+      "--output",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--budget-profile",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\knowledge\\templates\\성립전예산요구\\budget.json",
+      "--structure-profile",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\knowledge\\templates\\성립전예산요구\\structure.json",
+      "--no-strict-paragraph-budget",
+      "--skip-text-drift"
+    ],
+    "exit": 1,
+    "output": "FAIL: page-guard\n - p:9 글자 예산 초과: max=54, out=59, text='2. 화동중학교 학업성적관리 규정에 따른 2026학년도 2학기 교과별 교...'\n - p:11 글자 예산 초과: max=30, out=72, text='붙임  1. 2026학년도 화동중 1학년 2학기 교수학습 및 평가계획(전...'\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\finalize_hwpx.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--hancom"
+    ],
+    "exit": 0,
+    "output": "HWPX FINALIZE: PASS\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\scripts\\render_check.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--reference",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\knowledge\\templates\\성립전예산요구\\양식.hwpx",
+      "--keep-pdf",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\final.pdf"
+    ],
+    "exit": 0,
+    "output": "PASS: render-check result.hwpx\n  pages_output: 1\n  pages_reference: 1\n  anchors_total: 5\n  anchors_found_ratio: 1.0\n  order_lis_ratio: 1.0\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\content_guard.py",
+    "args": [
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--forbid",
+      "농어촌유학 거주비 지원금",
+      "--forbid",
+      "정책기획과-3100",
+      "--forbid",
+      "2025. 3. 19.",
+      "--forbid",
+      "1학기",
+      "--require",
+      "화동중학교-2058(2026. 3. 17.)",
+      "--require",
+      "2학기 교과별 교수학습 및 평가계획",
+      "--require",
+      "1학년",
+      "--require",
+      "2학년"
+    ],
+    "exit": 0,
+    "output": "PASS: content-guard C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx\n"
+  },
+  {
+    "script": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\gonmun_lint.py",
+    "args": [
+      "--hwpx",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\astra-low-batch-20260912\\case02\\result.hwpx",
+      "--format",
+      "text"
+    ],
+    "exit": 0,
+    "output": "검수 결과: 위반 0건 (error 0, warning 0)\n"
+  }
+]

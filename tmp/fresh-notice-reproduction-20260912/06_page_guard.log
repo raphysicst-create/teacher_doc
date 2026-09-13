@@ -1,0 +1,2 @@
+FAIL: page-guard
+ - p:113 글자 예산 초과: max=10, out=11, text='2026. 10. 14.'

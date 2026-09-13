@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-13T11:54:27.168484+00:00",
+  "draft_sha256": "21d6d97575ca9b10c8ae386adf057a984fb06ffa7cad7b583a55d4cd18761bfe",
+  "approval": "pending",
+  "fixture_only": true,
+  "sources": {
+    "activities.json": "41786eae5fc4e7e3e1132f327f2338a841d1154798c8dcc7717861e256692f8a",
+    "gianmun-slots.json": "211f67f927841dbf98d4833e4d5a87b8067a7850ddfc5e724e7413e00b2d37d6",
+    "gianmun.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "notice-slots.json": "9a0dfecf2db8214b5e1de68a2ec3418d25310e018f0031ca13ed103c917597b8",
+    "notice.hwpx": "8c55daa60601b5ab0d063ae623ca93569fa9e401c49fba6f65c291b4c2c17aef",
+    "policy.json": "65add6d4fc7c0246c33e964a2ef6f08ff70b818fc73accaf275509deb1c50f68",
+    "reply-slots.json": "afbabf4ef028929cfc5d6d06f7e916b7ac63088de787ab93375c0794be22ef59",
+    "reply.hwpx": "70071f99c3b7a9a6ae85ed668187c691b168d180f55c2ddcfec9e4e4e44d7cfb",
+    "school_alpha.json": "366507aec043e96b88d9f8393a58a32a7972b05d414632d363e6aa5c32b520d2",
+    "w2_sources.json": "60e908086ef0562865f7bb7fb4f50b65e6c608c15b79c34452fe06a5df19e97c"
+  }
+}

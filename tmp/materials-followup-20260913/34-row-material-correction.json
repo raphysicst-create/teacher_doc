@@ -1,0 +1,426 @@
+[
+  {
+    "id": "09--claude--default",
+    "previous_reason": "가상학교 native_notice 원본·의미 매핑·사람 판독 증거 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "09--codex--default",
+    "previous_reason": "가상학교 native_notice 원본·의미 매핑·사람 판독 증거 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "11--claude--internal_approval",
+    "previous_reason": "native_gianmun 및 실제 승인본 8건의 출처·사용 허용·기준 대응표 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "gianmun",
+      "lineage-01",
+      "lineage-02",
+      "lineage-03",
+      "lineage-04",
+      "lineage-05",
+      "lineage-06",
+      "lineage-07",
+      "lineage-08"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "11--claude--notice_dispatch",
+    "previous_reason": "native_gianmun 및 실제 승인본 8건의 출처·사용 허용·기준 대응표 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "gianmun",
+      "lineage-01",
+      "lineage-02",
+      "lineage-03",
+      "lineage-04",
+      "lineage-05",
+      "lineage-06",
+      "lineage-07",
+      "lineage-08"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "11--codex--internal_approval",
+    "previous_reason": "native_gianmun 및 실제 승인본 8건의 출처·사용 허용·기준 대응표 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "gianmun",
+      "lineage-01",
+      "lineage-02",
+      "lineage-03",
+      "lineage-04",
+      "lineage-05",
+      "lineage-06",
+      "lineage-07",
+      "lineage-08"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "11--codex--notice_dispatch",
+    "previous_reason": "native_gianmun 및 실제 승인본 8건의 출처·사용 허용·기준 대응표 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "gianmun",
+      "lineage-01",
+      "lineage-02",
+      "lineage-03",
+      "lineage-04",
+      "lineage-05",
+      "lineage-06",
+      "lineage-07",
+      "lineage-08"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--claude--precedent",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--claude--empty_cells",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--claude--grade_absent",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--claude--metadata",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--codex--precedent",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--codex--empty_cells",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--codex--grade_absent",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "14--codex--metadata",
+    "previous_reason": "policy_fixture는 있으나 native_notice 원본·판독 기록과 메모리 격리 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "23--claude--default",
+    "previous_reason": "school_alpha·가상 업무 근거는 있으나 native_notice 원본·판독·실제 초안/최종 응답 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "23--codex--default",
+    "previous_reason": "school_alpha·가상 업무 근거는 있으나 native_notice 원본·판독·실제 초안/최종 응답 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "notice"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "24--claude--default",
+    "previous_reason": "학교·가상 근거는 있으나 native_reply 5행/서명/명의 배치의 원본·판독 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "24--codex--default",
+    "previous_reason": "학교·가상 근거는 있으나 native_reply 5행/서명/명의 배치의 원본·판독 미확보.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "25--claude--no_structure_approval",
+    "previous_reason": "capacity_six 원문은 있으나 5행 native_reply 원본과 구조 대조 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "25--claude--approved_structure",
+    "previous_reason": "capacity_six 원문은 있으나 5행 native_reply 원본과 구조 대조 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "25--codex--no_structure_approval",
+    "previous_reason": "capacity_six 원문은 있으나 5행 native_reply 원본과 구조 대조 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "25--codex--approved_structure",
+    "previous_reason": "capacity_six 원문은 있으나 5행 native_reply 원본과 구조 대조 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "26--claude--no_visual",
+    "previous_reason": "native_reply 및 실제 슬롯 예산을 넘는 long_text·렌더/해시 연결 자료 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "26--claude--stale_visual",
+    "previous_reason": "native_reply 및 실제 슬롯 예산을 넘는 long_text·렌더/해시 연결 자료 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "26--claude--current_visual",
+    "previous_reason": "native_reply 및 실제 슬롯 예산을 넘는 long_text·렌더/해시 연결 자료 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "26--codex--no_visual",
+    "previous_reason": "native_reply 및 실제 슬롯 예산을 넘는 long_text·렌더/해시 연결 자료 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "26--codex--stale_visual",
+    "previous_reason": "native_reply 및 실제 슬롯 예산을 넘는 long_text·렌더/해시 연결 자료 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "26--codex--current_visual",
+    "previous_reason": "native_reply 및 실제 슬롯 예산을 넘는 long_text·렌더/해시 연결 자료 미준비.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "reply"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "32--claude--hwp_input",
+    "previous_reason": "사용 허용 .hwp 및 출처가 확인된 COM 변환/재패키징 비교 사본 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "conversion-original",
+      "conversion-approved",
+      "conversion-native",
+      "repackaged-approved"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "32--claude--repackaged",
+    "previous_reason": "사용 허용 .hwp 및 출처가 확인된 COM 변환/재패키징 비교 사본 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "conversion-original",
+      "conversion-approved",
+      "conversion-native",
+      "repackaged-approved"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "32--claude--fallback_absent",
+    "previous_reason": "사용 허용 .hwp 및 출처가 확인된 COM 변환/재패키징 비교 사본 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "conversion-original",
+      "conversion-approved",
+      "conversion-native",
+      "repackaged-approved"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "32--codex--hwp_input",
+    "previous_reason": "사용 허용 .hwp 및 출처가 확인된 COM 변환/재패키징 비교 사본 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "conversion-original",
+      "conversion-approved",
+      "conversion-native",
+      "repackaged-approved"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "32--codex--repackaged",
+    "previous_reason": "사용 허용 .hwp 및 출처가 확인된 COM 변환/재패키징 비교 사본 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "conversion-original",
+      "conversion-approved",
+      "conversion-native",
+      "repackaged-approved"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  },
+  {
+    "id": "32--codex--fallback_absent",
+    "previous_reason": "사용 허용 .hwp 및 출처가 확인된 COM 변환/재패키징 비교 사본 미결합.",
+    "current_material_status": "available_local_copies",
+    "sources": [
+      "conversion-original",
+      "conversion-approved",
+      "conversion-native",
+      "repackaged-approved"
+    ],
+    "next_requirement": "Actual app case/approval branch evidence; materials are no longer absent.",
+    "formal_verdict": "not_reassessed",
+    "scope_change": "Existing real-school copies authorized by user; original virtual-school fixtures not silently substituted."
+  }
+]

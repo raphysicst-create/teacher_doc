@@ -1,0 +1,20 @@
+{
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"status\": \"unconfirmed\", \"error\": \"'source'\"}\n",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\teacher_doc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked",
+    "validate",
+    "--manifest",
+    "inputs/approved-workflow/w2.json"
+  ],
+  "at": "2026-09-13T07:09:43.226274+00:00",
+  "seconds": 0.7872204780578613,
+  "app": "codex"
+}

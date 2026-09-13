@@ -1,0 +1,10 @@
+{
+  "version": "0.1.0+codex.20260913131114",
+  "path": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\distribution\\lifecycle-test-updated\\teacher_doc",
+  "fixture_only": true,
+  "changes": [
+    "Codex helper cachebuster and matching Claude/source-bundle version",
+    "Nonfunctional hwpdoc.py comment to verify source freshness detection"
+  ],
+  "public_release_candidate": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\distribution\\releases\\2026-09-13\\teacher_doc"
+}

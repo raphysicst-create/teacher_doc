@@ -1,0 +1,35 @@
+{
+  "confirmed": true,
+  "by": "user (current conversation)",
+  "at": "2026-09-13T07:05:56.891943+00:00",
+  "record": "Codex가 준비해 둔 W1·W2 시험 초안 확인: 확인해 주면 두 앱에서 전체 흐름(작성 → 검증 → 전달) 시험을 마저 합니다.  -> 진행해; inputs/approved-workflow/user-approval.json",
+  "hashes": {
+    "original.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "template.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "slots.json": "00e851b45836946af7a209bdf12efb62ef5fbb29214ceba50a529e2a4160322c",
+    "mapping.json": "9b6a54b8ad8e4acde2b035a85e49a3fe667c9d864b49a1cad6d9aa3dce3892ec",
+    "budget.json": "8a03b05434582a616ab61b67f825452a167c5eebd3a83329518442e8be83048a",
+    "structure.json": "6a4e671372cc9f3d422402a40f357a5884f2ad6c97daa366feb90852b56da598"
+  },
+  "purposes": [
+    "W1",
+    "W2"
+  ],
+  "provenance": "unconfirmed",
+  "prepared_at": "2026-09-13T04:34:19.418246+00:00",
+  "visual": {
+    "record": "Codex directly inspected the current one-page PNG; Claude preview has identical SHA256. Header, recipient/title/body placement and margins preserved. Visual observer is Codex; no human visual rating asserted.",
+    "document_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "pdf": {
+      "path": ".hwpdoc/templates/trial-gianmun/1/review.pdf",
+      "sha256": "2a24c9eb695b669765edb34e98c951a629783f1b3cfeaaad10c926d81fee17db"
+    },
+    "images": [
+      {
+        "path": ".hwpdoc/templates/trial-gianmun/1/preview/page-001.png",
+        "sha256": "63ff4c4e9e94c048307032d67911301ee0112925cf69080ca57e0ff02bacee64",
+        "page": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning": "low",
+  "approval_quote": "이 실험 astra-light 수준으로 5건 정도 랜덤 배치로 돌려서 기존 ouput 폴더의 최종 산출물들처럼 나오는지 확인해줘",
+  "approval_scope": "독립 재작성 실험의 기안문 본체 생성. 새 검토 점수나 발송 승인 없음",
+  "draft_sha256": "d1269a1bdc7a69014ddaefa76a4001841bb6cafe963cddf59898cc36428c5daa",
+  "request_sha256": "9f0b6231bd590f6339b6390bf595a2cfa05034fd3ae8ae95726524d38a407427",
+  "instructions": {
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961"
+  },
+  "base": "유사 본문 PDF 3206 + 본문-내부결재.md 실시형. 편집 가능한 동일 HWPX 없음, gonmun XML 신규 생성"
+}

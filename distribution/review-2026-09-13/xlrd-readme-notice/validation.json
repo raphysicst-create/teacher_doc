@@ -1,0 +1,14 @@
+{
+  "readme_previous_sha256": "649395fec7d08365102772b4fc5452a6d6cb6f0ebf1f5f12d2efa2427bda00ba",
+  "readme_current_sha256": "100ca637832fc26c52bf1b13762b11bad33f05670941d950e506bc7ae87c8ad2",
+  "exact_attribution_present": true,
+  "reviewed_files": 101,
+  "rights_and_privacy_issues": 0,
+  "remaining_gate_issues": [
+    {
+      "dependency": "xlrd==2.0.2",
+      "reason": "dependency_license_unconfirmed"
+    }
+  ],
+  "package_created": false
+}

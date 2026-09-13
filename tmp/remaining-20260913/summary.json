@@ -1,0 +1,450 @@
+{
+  "scope": "Implementation-led current-PC follow-up. CLI and current Desktop calls distinguished. Initial independent eval ledger unchanged.",
+  "protected_files": 460,
+  "protected_unchanged": true,
+  "regression_tests": 103,
+  "production_change": [
+    "scripts/render_check.py",
+    "tests/test_render_check.py"
+  ],
+  "render": {
+    "output": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\materials-followup-20260913\\sources\\conversion-native.hwpx",
+    "checks": {
+      "pages_output": 7,
+      "pages_reference": 7,
+      "anchors_total": 80,
+      "anchors_found_ratio": 1.0,
+      "order_lis_ratio": 0.938,
+      "object_residue": {
+        "inherited": {
+          "◯": {
+            "output": 1,
+            "reference": 1
+          }
+        },
+        "unexpected": {}
+      }
+    },
+    "fails": [],
+    "warnings": [
+      "원본에도 렌더된 원문자(개수 증가 없음, 위치·의미는 육안 확인): {\"◯\": {\"output\": 1, \"reference\": 1}}"
+    ],
+    "result": "PASS"
+  },
+  "pixel_check": {
+    "reference_pdf_sha256": "f58cca9f01f239398cf3a86c333f9951c5e899c9cf8016d7a0a4f6f5a120d211",
+    "output_pdf_sha256": "bc3b77b424764bace97f012a49c10c46c9fa103c94834748cdfca631c9fd7b77",
+    "pages": [
+      {
+        "page": 1,
+        "equal": true
+      },
+      {
+        "page": 2,
+        "equal": true
+      },
+      {
+        "page": 3,
+        "equal": true
+      },
+      {
+        "page": 4,
+        "equal": true
+      },
+      {
+        "page": 5,
+        "equal": true
+      },
+      {
+        "page": 6,
+        "equal": true
+      },
+      {
+        "page": 7,
+        "equal": true
+      }
+    ],
+    "scope": "current result versus previously exported unchanged original HWP"
+  },
+  "license": {
+    "license": null,
+    "issue4": {
+      "state": "open",
+      "comments": 0,
+      "html_url": "https://github.com/Canine89/hwpxskill/issues/4",
+      "updated_at": "2026-08-25T15:47:12Z"
+    },
+    "tree": {
+      "sha": "cb5f25b6557b47b0339398d3b5d45a57bdcb4b28",
+      "truncated": false,
+      "license_files": []
+    },
+    "release": {
+      "ready": false,
+      "status": "blocked",
+      "issue_counts": {
+        "rights_unconfirmed": 70,
+        "privacy_unconfirmed": 70,
+        "dependency_license_unconfirmed": 8
+      }
+    },
+    "at": "2026-09-13T04:40:46.001146+00:00",
+    "approvals_created": false
+  },
+  "apps": {
+    "claude": {
+      "stop_failure_state": {
+        "mtime": 1789273543.122112,
+        "size": 8,
+        "ok": false
+      },
+      "stop_final_text": "BROKEN_2",
+      "registration": {
+        "status": "awaiting_review",
+        "stages": {
+          "structure": "pass",
+          "namespaces": "pass",
+          "finalize": "pass",
+          "layout": "pass",
+          "profiles": "pass",
+          "hancom": "pass",
+          "review_render": "pass",
+          "review_images": "pass"
+        },
+        "hashes": {
+          "original.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+          "template.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+          "slots.json": "00e851b45836946af7a209bdf12efb62ef5fbb29214ceba50a529e2a4160322c",
+          "mapping.json": "9b6a54b8ad8e4acde2b035a85e49a3fe667c9d864b49a1cad6d9aa3dce3892ec",
+          "budget.json": "8a03b05434582a616ab61b67f825452a167c5eebd3a83329518442e8be83048a",
+          "structure.json": "6a4e671372cc9f3d422402a40f357a5884f2ad6c97daa366feb90852b56da598"
+        }
+      },
+      "delivery": [
+        {
+          "argv": [
+            "build",
+            "--manifest",
+            "eval-inputs/0-1.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "argv": [
+            "validate",
+            "--job",
+            "eval-01-0-1"
+          ],
+          "exit_code": 0
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-0-1"
+          ],
+          "exit_code": 1
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-0-1"
+          ],
+          "exit_code": 0
+        },
+        {
+          "job": "eval-01-0-1",
+          "assertions": "pass",
+          "history_unchanged": true,
+          "manifest_unchanged": true,
+          "copy": {
+            "status": "pass",
+            "failures": 1,
+            "directory": "workspace:fake-copy/eval-01-0-1",
+            "at": "2026-09-13T04:47:00.834455+00:00"
+          }
+        },
+        {
+          "argv": [
+            "build",
+            "--manifest",
+            "eval-inputs/1-1.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "argv": [
+            "validate",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 0
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 1
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 1
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 2
+        },
+        {
+          "job": "eval-01-1-1",
+          "assertions": "pass",
+          "history_unchanged": true,
+          "manifest_unchanged": true,
+          "copy": {
+            "status": "fail",
+            "failures": 2,
+            "reason": "OneDrive 기존 검토본 보호: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\claude-marked\\fake-copy\\eval-01-1-1\\검증완료_검토대기.hwpx",
+            "at": "2026-09-13T04:47:31.961021+00:00"
+          }
+        }
+      ]
+    },
+    "codex": {
+      "stop_failure_state": {
+        "mtime": 1789273960.1775026,
+        "size": 9,
+        "ok": false
+      },
+      "stop_final_text": "BROKEN_2\n",
+      "registration": {
+        "status": "awaiting_review",
+        "stages": {
+          "structure": "pass",
+          "namespaces": "pass",
+          "finalize": "pass",
+          "layout": "pass",
+          "profiles": "pass",
+          "hancom": "pass",
+          "review_render": "pass",
+          "review_images": "pass"
+        },
+        "hashes": {
+          "original.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+          "template.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+          "slots.json": "00e851b45836946af7a209bdf12efb62ef5fbb29214ceba50a529e2a4160322c",
+          "mapping.json": "9b6a54b8ad8e4acde2b035a85e49a3fe667c9d864b49a1cad6d9aa3dce3892ec",
+          "budget.json": "ab33840a841068685fc8d98ce806dd89ad92b24a78d007eb2ff649d8f66a2e80",
+          "structure.json": "74d3a1a159f03fb0f9560bc7e9f6ec709fd48987fc3f7ece31c269e72517ba86"
+        }
+      },
+      "delivery": [
+        {
+          "argv": [
+            "validate",
+            "--job",
+            "eval-01-0-1"
+          ],
+          "exit_code": 0
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-0-1"
+          ],
+          "exit_code": 1
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-0-1"
+          ],
+          "exit_code": 0
+        },
+        {
+          "job": "eval-01-0-1",
+          "assertions": "pass",
+          "history_unchanged": true,
+          "manifest_unchanged": true,
+          "copy": {
+            "status": "pass",
+            "failures": 1,
+            "directory": "workspace:fake-copy/eval-01-0-1",
+            "at": "2026-09-13T04:49:13.630086+00:00"
+          }
+        },
+        {
+          "argv": [
+            "build",
+            "--manifest",
+            "eval-inputs/1-1.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "argv": [
+            "validate",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 0
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 1
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 1
+        },
+        {
+          "argv": [
+            "deliver",
+            "--job",
+            "eval-01-1-1"
+          ],
+          "exit_code": 2
+        },
+        {
+          "job": "eval-01-1-1",
+          "assertions": "pass",
+          "history_unchanged": true,
+          "manifest_unchanged": true,
+          "copy": {
+            "status": "fail",
+            "failures": 2,
+            "reason": "OneDrive 기존 검토본 보호: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked\\fake-copy\\eval-01-1-1\\검증완료_검토대기.hwpx",
+            "at": "2026-09-13T04:49:44.947753+00:00"
+          }
+        }
+      ]
+    }
+  },
+  "human_document_approval": "pending; workflow-drafts.md was presented; no response recorded",
+  "release_lifecycle": "not executed: rights gate blocked",
+  "claude_untrusted_ui": {
+    "scope": "Actual Claude Code TUI; workspace trust declined; no model/tool turn started",
+    "workspace": "C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/claude-untrusted-exit",
+    "observed_choice": "No, exit",
+    "action": "Enter after observing selected No, exit",
+    "exit_code": 1,
+    "output": "\u001b[?1006l\u001b[?1003l\u001b[?1002l\u001b[?1000l\u001b[>4m\u001b[?2031l\u001b[?2004l\r\n\u001b]0;\u0007\u001b[?25h\u001b]0;C:\\Users\\22\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\u0007",
+    "first_trial": "Previous claude-untrusted TUI attempt did not establish declined trust and is not used as protection evidence.",
+    "fixture_unchanged": true
+  },
+  "interrupted_trial": "codex-registration-preparation controller was interrupted before registration.json creation to serialize COM; partial inputs retained.",
+  "claude_mcp_unchanged": {
+    "fill.hwpx": true,
+    "patch.hwpx": true
+  },
+  "registration_visual": {
+    "observer": "Codex, not human approval",
+    "codex_png_read": true,
+    "same_png_sha256": true
+  },
+  "actual_cli_outcomes": {
+    "claude-delivery-trial": 0,
+    "claude-marked-init": 0,
+    "claude-marked-setup": 0,
+    "claude-mcp-second": 0,
+    "claude-mcp": 124,
+    "claude-plain": 0,
+    "claude-registration-preparation": 124,
+    "claude-stop-limit": 0,
+    "claude-untrusted-init": 0,
+    "claude-untrusted-setup": 0,
+    "codex-delivery-continuation": 0,
+    "codex-delivery-trial": 0,
+    "codex-desktop-delivery": 0,
+    "codex-desktop-registration-1": 0,
+    "codex-desktop-registration-2": 0,
+    "codex-desktop-registration-3": 0,
+    "codex-hook-untrusted": 0,
+    "codex-marked-init": 0,
+    "codex-marked-setup": 0,
+    "codex-plain-trusted": 0,
+    "codex-plain": 0,
+    "codex-stop-limit": 0,
+    "codex-untrusted-init": 0,
+    "codex-untrusted-setup": 0,
+    "codex-untrusted": 0,
+    "codex-work-direct-com-diagnostic": 0,
+    "regressions": 0,
+    "release-gate": 2,
+    "render-real-reference": 0
+  },
+  "evidence_hashes": {
+    "evidence/claude-delivery-inputs.json": "b9e544efb0987c108d546b5d164424e6d9477eab9f8ae6e595fd9b8942181a1e",
+    "evidence/claude-delivery-trial-files.json": "ff304aaa87fe6b8e8fd91b24549e330c9345cbb738972614764945e110fe1757",
+    "evidence/claude-delivery-trial.json": "cbb67049927260fe0df156de03c9a31122f6c4e2b5e15c9432a94fde875654f9",
+    "evidence/claude-marked-init.json": "0726392199bfe49ef37611f1c471e5a1784a66aea654414e0b2e53e024226714",
+    "evidence/claude-marked-setup.json": "350882a2884ffdbcc3ca32ebca9c00ce7636a060766d1e486299c99255bc2a85",
+    "evidence/claude-mcp-files.json": "92560292d770a506fa6d77169709c3a9ef1fd07eb27c7c1c50ad2b6b4c7055f9",
+    "evidence/claude-mcp-second-files.json": "aa1459be82c765f4cdb0a116613a9dd507da7ec890a01e9321a0e1692a331a31",
+    "evidence/claude-mcp-second.json": "91c5c393a4bb84c56ab41b026e7c2de1ba18bf27055a9e076187d9a459f379d0",
+    "evidence/claude-mcp.json": "d1e922d3455431d2a5abccdbeca4ce18957bd2565e42b339b0a9d1dca429fcdf",
+    "evidence/claude-plain-files.json": "60f1df1080b762ba92374f430393382e142f1d1a7f97112c869e36fea85b845b",
+    "evidence/claude-plain.json": "0165c16d5104f97b153a76f9b9d6f10f4b28b3f30f58f7246fa264ef19c16cba",
+    "evidence/claude-registration-preparation-files.json": "0195bfec6e25da57c6b2cc0ab06e4dab0c22c18f474a026c99303bcdcf899f19",
+    "evidence/claude-registration-preparation.json": "bd2ec8a0f4d096b8a3897bb0e85681a0f9cd87a36a58dcca67ff1263a81ed5cd",
+    "evidence/claude-stop-limit-files.json": "5b169538bc6760180e0883938735aebd429b0225a35f610f8eed05e976e6f21b",
+    "evidence/claude-stop-limit.json": "bc1f5cfcc937e095878ddf27236f7b77c958bb1ff160fdb7a1e96f80d1697ec6",
+    "evidence/claude-untrusted-decline.json": "1bd6d4279c8010ee3f257eba41ef53821de1a75952662c19bb73d1e3efe04b25",
+    "evidence/claude-untrusted-init.json": "a16c957e35b285f4d0bcc21bf5dd73fca1dbf3d871cc2595fd1690f736ea533f",
+    "evidence/claude-untrusted-setup.json": "86ce45ff2987960c98ae323d5bf12a79a73732af3388cebcb7bac3fc92e9b2e4",
+    "evidence/codex-delivery-com-unconfirmed.json": "1215d349560b9b3d080f31051463b6e5bbb047fa9d7adff50dfe1183b7cdabf0",
+    "evidence/codex-delivery-continuation-files.json": "caf6184667619fc49c1686ba14b708fb4bee530b90695b2d333016e22280df05",
+    "evidence/codex-delivery-continuation.json": "2010915431b82710f4d8ebd1c8b3dd8ae11c0635f1934ff5f78e7cc541d43308",
+    "evidence/codex-delivery-inputs.json": "6e6567a77efc33bd216dd278b8f01e330955e38e6fcb251549409a14cfd3d0ba",
+    "evidence/codex-delivery-precondition-failure.json": "a01845434d39f569b01218714c54a8dd91f92ed51f61a5e452885ed66bd4fe4f",
+    "evidence/codex-delivery-trial-files.json": "08e2d7ec2ed3e6246649e6ff5e2f3f847b3fac6ac83428f3132289b21ca5b186",
+    "evidence/codex-delivery-trial.json": "66282d79d10516c2a36078bcafb2fb0b1c1421de85acdf2aa0035d9b03892bcc",
+    "evidence/codex-desktop-delivery.json": "e30555862e5611f56542984c199c59b8a086f9d2e2d73066acb5ea7e6a4f9ebc",
+    "evidence/codex-desktop-registration-1.json": "b97ebe68d2c559321902a9579a692bf414b8145feaa1c53ab257eda5676d24c2",
+    "evidence/codex-desktop-registration-2.json": "99e603cdbcdb3d6995f415116531d3d4760a50ba95a1a055f108e97a39a47553",
+    "evidence/codex-desktop-registration-3.json": "c569f124d67eb3cbaded5909f1fea8b02f4caae2b0d2e4776a469302535de8b2",
+    "evidence/codex-hook-untrusted-files.json": "bfafbf8edfff1652d8624d6a76984f827d67d6095c3e71017a653f32baf98692",
+    "evidence/codex-hook-untrusted.json": "f71ba5996bfbf3a36d78382282e2639eded87353da11838b8e9befe617429d03",
+    "evidence/codex-marked-init.json": "e7f35951a32740032493f3b9cc9a12b56789b00fb1278a0e202b8593b1df6419",
+    "evidence/codex-marked-setup.json": "347375a5fc23a7c8bb95cb873a611e2c3ea7b07dd73f1be6055c0d850610bdef",
+    "evidence/codex-plain-files.json": "4991b3d39714e658f3e05b52c18c603d470b9d710ce0efcfa1fb7f2dc9ee153b",
+    "evidence/codex-plain-trusted-files.json": "57f2919a074f1a4e7ddec377292d8a55245beee218ce10223644a0c17c2e9c4b",
+    "evidence/codex-plain-trusted.json": "ce6808298255b2054be8062c67d718a404d258120dd7606329713a6b83712775",
+    "evidence/codex-plain.json": "e4bfb0c659fb2f9e784c82eb96ba431a108c2b150438c7803db0957e8d209f3f",
+    "evidence/codex-stop-limit-files.json": "2931361ec2a14ea186087a7c962b0ce6b45812a087b538f036223a5fa1918fd2",
+    "evidence/codex-stop-limit.json": "f7e3da3bc457218c2e7487eb8816271b772b47ee8cc35b42d87d05c69d26d9d2",
+    "evidence/codex-untrusted-files.json": "999ca5be31f6c49d8694599ed4c66f8be115540cd4fb75e2e28cece3343c8dfe",
+    "evidence/codex-untrusted-init.json": "40a13142790a60f9e60efabcecd0fb471782a9c048c53ade3a468e2fa1b371c6",
+    "evidence/codex-untrusted-setup.json": "2b9000b7427f39a63084d2082b2e6169aa64616cdf2acd552d0e8bdc229f98fe",
+    "evidence/codex-untrusted.json": "3e8041afae26131bb5916377ea0f254ae62f13d03b69e82f16009b6a8ffa8702",
+    "evidence/codex-work-direct-com-diagnostic.json": "225592d9538fca4ad044343dd6faf4c1c5ea58ae4ac1a87851e89ecb640b152a",
+    "evidence/github-issue4.json": "ce30b5fa52fd0c997867ff45494211939dd8722672754ff3ef5dfbdff3bb731b",
+    "evidence/github-repo.json": "98bb77e9749f846ec32705987d0ed11d9ab3e867c9295f8a00953f8e3839bb3e",
+    "evidence/github-tree.json": "3aae2afede2fcc0f73e03c0052ed90ed2cb6c5d018e80e25cebab047ae62efc7",
+    "evidence/license-summary.json": "c4e1bd2e1cd798c726f3ed97f20bc070cdaf8082df666577c12f992d8ade885a",
+    "evidence/regressions.json": "f6074324f7555ed78dcf85ba32505400e755f629fbe1626b26454f0cd5d5b0ab",
+    "evidence/release-gate.json": "b3c4e289af8cea7e4fd707c22530dae2c6272b433637ca10b082693fad0afa9a",
+    "evidence/render-pixels.json": "f7aa36b8803624077d0a3fc124117d07774c2fe10a5ad810dbe42884a86057c6",
+    "evidence/render-real-reference.json": "e4713b50aba34d8d63d14ffb66bb8e5f2e5d315a510175e77c7076e1a1476fb4"
+  },
+  "at": "2026-09-13T04:53:15.427724+00:00"
+}

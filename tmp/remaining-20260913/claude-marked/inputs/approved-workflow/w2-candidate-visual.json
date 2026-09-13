@@ -1,0 +1,21 @@
+{
+  "confirmed": true,
+  "observer": "Claude Code CLI assistant",
+  "at": "2026-09-13T07:29:03Z",
+  "document_sha256": "b3fcd66dc855b3a9df459d74bf77dd39194850c00da0a95edb66e4b141758ec7",
+  "image_sha256": "2ab3256508c935be9d0edcf6943d3d478e505fcdaa6293a359ea0720e0fab5a3",
+  "reference_sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+  "paragraphs": ["p:7"],
+  "pdf": {
+    "path": "w2-candidate.pdf",
+    "sha256": "12c5f4f8a646f53008bb96f7f973b61aabb9f63dceef1088d18d9b27a83fc0cc"
+  },
+  "images": [
+    {
+      "path": "w2-candidate-preview/page-001.png",
+      "sha256": "2ab3256508c935be9d0edcf6943d3d478e505fcdaa6293a359ea0720e0fab5a3",
+      "page": 1
+    }
+  ],
+  "record": "Read page-001.png (w2-candidate-preview) at full resolution. One page, 가람중학교 header centered, 수신/(경유)/제목 block, then items 1-3. Item 1 (p:7, '1. 관련: 가상교육지원청-200(2026. 10. 1.)') is the only over-budget paragraph (28 non-space chars vs old budget 27) and renders on a single line, fully inside the body margin, no wrap, no clipping, no overlapping glyphs, no leftover placeholder or prior-document text. Font, size, line spacing and left margin match the W1 sibling render (same job family) and the registered trial-gianmun template preview. No structural elements (tables, boxes) present on this page to compare beyond the text block."
+}

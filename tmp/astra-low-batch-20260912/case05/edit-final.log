@@ -1,0 +1,7 @@
+WARNING: 예산 초과를 렌더 확인 후 묵인했습니다 (1건) — 보고에 반드시 명시하십시오:
+  - 문단 입력값 글자 수 초과: index=113, max=10, input=11, text='2026. 11. 24.'
+EDITED: C:\Users\22\Desktop\maintain\Hwp_doc\tmp\astra-low-batch-20260912\case05\case05.hwpx
+  text replacements applied: 0
+  cells updated: 0
+  paragraphs updated: 58
+  original package entries, header.xml, content.hpf, and BinData were preserved

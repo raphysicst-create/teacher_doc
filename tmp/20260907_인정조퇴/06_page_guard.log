@@ -1,0 +1,2 @@
+PASS: page-guard
+  구조 fingerprint와 문단/셀별 글자 예산 검사를 통과했습니다.

@@ -1,0 +1,7 @@
+{"stage": "environment", "seconds": 0.234, "user": "CodexSandboxOffline", "desktop": "CodexSandboxDesktop-422e3d9d4cb225e6af4145545452bdda"}
+
+{"stage": "module-error", "seconds": 0.234, "error": "[WinError 2] 지정된 파일을 찾을 수 없습니다"}
+
+{"stage": "dispatch-start", "seconds": 0.234}
+
+{"stage": "worker-exit", "seconds": 25.047, "code": 124}

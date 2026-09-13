@@ -1,0 +1,180 @@
+[
+  {
+    "dependency": "lxml==5.4.0",
+    "license": "BSD-3-Clause; component exceptions retained",
+    "source": "https://pypi.org/project/lxml/5.4.0/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "conditions_checked_current_scope",
+    "scope": "Uses etree, not isoschematron; no lxml binaries/source resources bundled. LICENSE and exception list retained. No approval for separately vendoring unlicensed XSL resources.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/lxml/licenses/LICENSE.txt": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c",
+      "distribution/legal/dependencies/lxml/licenses/LICENSES.txt": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9"
+    },
+    "installed_requires_dist": [
+      "Cython<3.1.0,>=3.0.11; extra == \"source\"",
+      "cssselect>=0.7; extra == \"cssselect\"",
+      "html5lib; extra == \"html5\"",
+      "BeautifulSoup4; extra == \"htmlsoup\"",
+      "lxml_html_clean; extra == \"html-clean\""
+    ],
+    "binaries_bundled": false
+  },
+  {
+    "dependency": "python-hwpx==2.23.0",
+    "license": "Apache-2.0",
+    "source": "https://pypi.org/project/python-hwpx/2.23.0/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "conditions_checked_current_scope",
+    "scope": "Unmodified external install; Apache license and NOTICE attribution retained. Mandatory lxml dependency pinned. No source edits or vendored sample corpus.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/python-hwpx/licenses/LICENSE": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875",
+      "distribution/legal/dependencies/python-hwpx/licenses/NOTICE": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8"
+    },
+    "installed_requires_dist": [
+      "lxml<6,>=4.9",
+      "pymupdf>=1.24; extra == \"visual\"",
+      "pillow>=10.0; extra == \"visual\"",
+      "numpy>=1.26; extra == \"visual\"",
+      "openpyxl>=3.1; extra == \"xlsx\"",
+      "build>=1.0; extra == \"dev\"",
+      "twine>=4.0; extra == \"dev\"",
+      "pytest>=7.4; extra == \"dev\"",
+      "build>=1.0; extra == \"test\"",
+      "pytest>=7.4; extra == \"test\"",
+      "pytest-cov>=5.0; extra == \"test\"",
+      "mypy>=1.10; extra == \"typecheck\"",
+      "pyright>=1.1.390; extra == \"typecheck\""
+    ],
+    "binaries_bundled": false
+  },
+  {
+    "dependency": "pypdf==6.14.2",
+    "license": "BSD-3-Clause",
+    "source": "https://pypi.org/project/pypdf/6.14.2/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "conditions_checked_current_scope",
+    "scope": "Unmodified external install; copyright, terms and disclaimer retained; no endorsement claims.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/pypdf/licenses/LICENSE": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+    },
+    "installed_requires_dist": [
+      "typing_extensions >= 4.0; python_version < '3.11'",
+      "cryptography>3.0 ; extra == \"crypto\"",
+      "PyCryptodome ; extra == \"cryptodome\"",
+      "flit ; extra == \"dev\"",
+      "pip-tools ; extra == \"dev\"",
+      "pre-commit ; extra == \"dev\"",
+      "pytest-cov ; extra == \"dev\"",
+      "pytest-socket ; extra == \"dev\"",
+      "pytest-timeout ; extra == \"dev\"",
+      "pytest-xdist ; extra == \"dev\"",
+      "wheel ; extra == \"dev\"",
+      "myst_parser ; extra == \"docs\"",
+      "sphinx ; extra == \"docs\"",
+      "sphinx_rtd_theme ; extra == \"docs\"",
+      "fonttools ; extra == \"fonts\"",
+      "cryptography>3.0 ; extra == \"full\"",
+      "fonttools ; extra == \"full\"",
+      "Pillow>=8.0.0 ; extra == \"full\"",
+      "Pillow>=8.0.0 ; extra == \"image\""
+    ],
+    "binaries_bundled": false
+  },
+  {
+    "dependency": "pywin32==312",
+    "license": "BSD-style Windows API/COM components; mixed component notices retained",
+    "source": "https://pypi.org/project/pywin32/312/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "conditions_checked_current_scope",
+    "scope": "Windows API/COM imports; original component notices retained. No binary/source redistribution of pywin32, adodbapi, MAPI or Scintilla.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+      "distribution/legal/dependencies/pywin32/licenses/com/License.txt": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+      "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+      "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303",
+      "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+      "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+      "distribution/legal/dependencies/pywin32/licenses/win32/License.txt": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    "installed_requires_dist": [],
+    "binaries_bundled": false
+  },
+  {
+    "dependency": "openpyxl==3.1.5",
+    "license": "MIT",
+    "source": "https://pypi.org/project/openpyxl/3.1.5/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "conditions_checked_current_scope",
+    "scope": "Unmodified external install; MIT copyright and permission retained; et-xmlfile pinned.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/openpyxl/LICENCE.rst": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    "installed_requires_dist": [
+      "et-xmlfile"
+    ],
+    "binaries_bundled": false
+  },
+  {
+    "dependency": "et-xmlfile==2.0.0",
+    "license": "MIT AND Python-derived-code notices",
+    "source": "https://pypi.org/project/et-xmlfile/2.0.0/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "conditions_checked_current_scope",
+    "scope": "MIT and Python-derived code notices both retained; no source edits.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/et-xmlfile/LICENCE.python": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2",
+      "distribution/legal/dependencies/et-xmlfile/LICENCE.rst": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    "installed_requires_dist": [],
+    "binaries_bundled": false
+  },
+  {
+    "dependency": "xlrd==2.0.2",
+    "license": "BSD-style main code AND legacy advertising-clause license",
+    "source": "https://pypi.org/project/xlrd/2.0.2/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "blocked_agpl_combination",
+    "scope": "Unresolved AGPL compatibility of legacy advertising condition. Direct imports in refresh_reference and doctor; external pip install is not treated as an exemption.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/xlrd/LICENSE": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815"
+    },
+    "installed_requires_dist": [
+      "wheel ; extra == 'build'",
+      "twine ; extra == 'build'",
+      "sphinx ; extra == 'docs'",
+      "pytest ; extra == 'test'",
+      "pytest-cov ; extra == 'test'"
+    ],
+    "binaries_bundled": false
+  },
+  {
+    "dependency": "PyMuPDF==1.28.0",
+    "license": "AGPL-3.0",
+    "source": "https://pypi.org/project/PyMuPDF/1.28.0/",
+    "reviewed_by": "Codex",
+    "reviewed_at": "2026-09-13",
+    "review_report": "distribution/release-review-2026-09-13.md",
+    "status": "conditions_checked_current_scope",
+    "scope": "Existing user-selected AGPL source/notice preparation rechecked with current bundle hash; complete unmodified PyMuPDF/MuPDF source archives preserved. Does not resolve xlrd compatibility.",
+    "notice_hashes": {
+      "distribution/legal/dependencies/PyMuPDF/COPYING": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b"
+    },
+    "installed_requires_dist": [],
+    "binaries_bundled": false
+  }
+]

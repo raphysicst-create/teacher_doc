@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "id": "hwpdoc-work-diagnostic-5-v1",
+  "target": "work_local",
+  "purpose": "가상 업무 5건의 실제 에이전트 실행 평가. 소프트웨어 시험은 실행 횟수에 포함하지 않는다.",
+  "cases": [
+    {"id": "01_notice", "title": "일반 가정통신문", "workflow": "W1", "prompt": "cases/01_notice.md", "expected_checkpoint": "draft_ready", "checks": ["normal_template", "new_values", "residue_removed"]},
+    {"id": "02_reply", "title": "참가 동의 회신형 가정통신문", "workflow": "W1", "prompt": "cases/02_reply.md", "expected_checkpoint": "draft_ready", "checks": ["reply_template", "reply_layout", "deadline_four_days"]},
+    {"id": "03_capacity", "title": "활동 6개와 양식 5행", "workflow": "W1", "prompt": "cases/03_capacity.md", "expected_checkpoint": "appropriate_hold", "checks": ["six_activities", "capacity_location", "no_guard_bypass"]},
+    {"id": "04_budget", "title": "존재하지 않는 예산 항목명", "workflow": "W1", "prompt": "cases/04_budget.md", "expected_checkpoint": "appropriate_question", "checks": ["budget_all_names", "invalid_name_question", "no_invented_reference"]},
+    {"id": "05_w2", "title": "제출 방법이 빠진 수신 공문", "workflow": "W2", "prompt": "cases/05_w2.md", "expected_checkpoint": "appropriate_question", "checks": ["w2_unknown_route", "w2_source_fields", "w2_followup_route"]}
+  ]
+}

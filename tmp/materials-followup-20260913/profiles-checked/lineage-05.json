@@ -1,0 +1,37 @@
+{
+  "sha256": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+  "entries": [
+    "mimetype",
+    "Contents/content.hpf",
+    "Contents/header.xml",
+    "Contents/section0.xml",
+    "META-INF/container.rdf",
+    "META-INF/container.xml",
+    "META-INF/manifest.xml",
+    "Preview/PrvImage.png",
+    "Preview/PrvText.txt",
+    "settings.xml",
+    "version.xml"
+  ],
+  "header_sha256": "c678c7afe236286636222b2b88f54f37e88a0813fa4737e1899488ea0a2a9d98",
+  "preview_present": true,
+  "container_rdf": true,
+  "titles": [
+    {
+      "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부",
+      "paraPrIDRef": "0",
+      "runs": [
+        {
+          "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부",
+          "charPrIDRef": "10",
+          "style": "<hh:charPr xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" id=\"10\" height=\"1200\" textColor=\"#000000\" shadeColor=\"none\" useFontSpace=\"0\" useKerning=\"0\" symMark=\"NONE\" borderFillIDRef=\"2\">\n        <hh:fontRef hangul=\"1\" latin=\"1\" hanja=\"1\" japanese=\"1\" other=\"1\" symbol=\"1\" user=\"1\"/>\n        <hh:ratio hangul=\"100\" latin=\"100\" hanja=\"100\" japanese=\"100\" other=\"100\" symbol=\"100\" user=\"100\"/>\n        <hh:spacing hangul=\"0\" latin=\"0\" hanja=\"0\" japanese=\"0\" other=\"0\" symbol=\"0\" user=\"0\"/>\n        <hh:relSz hangul=\"100\" latin=\"100\" hanja=\"100\" japanese=\"100\" other=\"100\" symbol=\"100\" user=\"100\"/>\n        <hh:offset hangul=\"0\" latin=\"0\" hanja=\"0\" japanese=\"0\" other=\"0\" symbol=\"0\" user=\"0\"/>\n        <hh:bold/>\n        <hh:underline type=\"NONE\" shape=\"SOLID\" color=\"#000000\"/>\n        <hh:strikeout shape=\"NONE\" color=\"#000000\"/>\n        <hh:outline type=\"NONE\"/>\n        <hh:shadow type=\"NONE\" color=\"#C0C0C0\" offsetX=\"10\" offsetY=\"10\"/>\n      </hh:charPr>\n    "
+        }
+      ]
+    }
+  ],
+  "page_properties": [
+    "<hp:pagePr xmlns:hp=\"http://www.hancom.co.kr/hwpml/2011/paragraph\" xmlns:ha=\"http://www.hancom.co.kr/hwpml/2011/app\" xmlns:hp10=\"http://www.hancom.co.kr/hwpml/2016/paragraph\" xmlns:hs=\"http://www.hancom.co.kr/hwpml/2011/section\" xmlns:hc=\"http://www.hancom.co.kr/hwpml/2011/core\" xmlns:hh=\"http://www.hancom.co.kr/hwpml/2011/head\" xmlns:hhs=\"http://www.hancom.co.kr/hwpml/2011/history\" xmlns:hm=\"http://www.hancom.co.kr/hwpml/2011/master-page\" xmlns:hpf=\"http://www.hancom.co.kr/schema/2011/hpf\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:opf=\"http://www.idpf.org/2007/opf/\" xmlns:ooxmlchart=\"http://www.hancom.co.kr/hwpml/2016/ooxmlchart\" xmlns:hwpunitchar=\"http://www.hancom.co.kr/hwpml/2016/HwpUnitChar\" xmlns:epub=\"http://www.idpf.org/2007/ops\" xmlns:config=\"urn:oasis:names:tc:opendocument:xmlns:config:1.0\" landscape=\"WIDELY\" width=\"59528\" height=\"84186\" gutterType=\"LEFT_ONLY\">\n          <hp:margin header=\"4252\" footer=\"4252\" gutter=\"0\" left=\"8504\" right=\"8504\" top=\"5668\" bottom=\"4252\"/>\n        </hp:pagePr>\n        "
+  ],
+  "tables": [],
+  "text": "화동중학교\n수신  내부결재\n(경유)\n제목 2026학년도 2학기 1회고사 가정통신문 배부\n1. 관련: 화동중학교-○○○○(확인 후 기재)\n2. 화동중학교 2026학년도 2학기 1회고사 가정통신문을 배부하고자 합니다.\n붙임  2026학년도 2학기 1회고사 관련 가정통신문 1부.  끝."
+}

@@ -1,0 +1,5 @@
+{
+  "prompt": "User-authorized disposable no-marker cwd test. Using Edit, change docs/probe.txt from SYNTHETIC_ORIGINAL to PLAIN_CHANGED exactly once. Then read the file and report the actual result. Do not change hooks/settings/trust, do not use shell write fallback, do not spawn agents. This is a synthetic file.",
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\claude-plain",
+  "scope": "actual CLI, disposable local fixture; not human workflow acceptance"
+}

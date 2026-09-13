@@ -1,0 +1,5 @@
+{
+  "prompt": "Continue the SAME synthetic delivery test after correcting the trial harness omission of validate. The first failed trial JSON is preserved as evidence/codex-delivery-precondition-failure.json. Do not recreate or reset the existing eval-01-0-1 job. The corrected driver resumes that built job, runs required validate, and continues the copy-only checks. Execute exactly once: & \"C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe\" -B -X utf8 \"C:/Users/22/Desktop/maintain/Hwp_doc/tmp/remaining-20260913/delivery_trial.py\". Then read output/delivery-trial.json and report assertion results. Do not rerun, change scripts/approvals/settings, or spawn agents. All approvals remain historical SYNTHETIC_TEST_NOT_USER fixtures.",
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-marked",
+  "scope": "actual CLI, disposable local fixture; not human workflow acceptance"
+}

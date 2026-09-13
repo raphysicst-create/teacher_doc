@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "stdout": "Checking for updates for plugin \"teacher_doc@teacher-doc-lifecycle-20260913\" at user scope…\n√ Plugin \"teacher_doc\" updated from 0.1.0 to 0.1.0+codex.20260913131114 for scope user. Restart to apply changes.\n",
+  "stderr": "",
+  "at": "2026-09-13T13:15:56.925572+00:00",
+  "seconds": 3.875,
+  "argv": [
+    "C:\\Users\\22\\.local\\bin\\claude.exe",
+    "plugin",
+    "update",
+    "teacher_doc@teacher-doc-lifecycle-20260913"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

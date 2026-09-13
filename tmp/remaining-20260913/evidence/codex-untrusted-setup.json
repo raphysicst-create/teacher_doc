@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"registered\",\n  \"path\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-untrusted\\\\.codex\\\\hooks.json\",\n  \"backup\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-untrusted\\\\.hwpdoc\\\\hooks-history\\\\codex-bf4c6aca9d6c4a9792e2d3aec4d6d8da.json\",\n  \"ownership_record\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-untrusted\\\\.hwpdoc\\\\hooks-codex-owned.json\",\n  \"trust\": \"unverified\",\n  \"actual_blocking\": \"unverified\",\n  \"actual_tool_names\": [],\n  \"next_action\": \"설정/등록/신뢰/실제 차단을 각각 확인하세요. 실제 도구명과 이벤트는 설치한 앱에서 확인해야 합니다.\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\code\\scripts\\hwpdoc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-untrusted",
+    "setup-hooks",
+    "--app",
+    "codex",
+    "--apply"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc",
+  "seconds": 1.3948559761047363,
+  "at": "2026-09-13T04:17:26.259834+00:00"
+}

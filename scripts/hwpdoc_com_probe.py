@@ -1,23 +1,20 @@
 """Isolated COM availability probe, called under the runner's cross-process lock."""
 import json
 import sys
+from hwpdoc_config import CODE_ROOT
+
+skill = CODE_ROOT / '.claude/skills/hwpx/scripts'
+sys.path.insert(0, str(skill if skill.is_dir() else CODE_ROOT / 'skills/hwpx/scripts'))
+from hancom_com import session
 
 def main():
-    app = None
     try:
-        import winreg
-        import win32com.client
-        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, r'Software\HNC\HwpAutomation\Modules') as key:
-            module, _ = winreg.QueryValueEx(key, 'FilePathCheckerModule')
-        app = win32com.client.DispatchEx('HWPFrame.HwpObject')
-        registered = bool(app.RegisterModule('FilePathCheckDLL', 'FilePathCheckerModule'))
-        print(json.dumps({'registered': registered, 'module': module, 'version': str(app.Version)}, ensure_ascii=False))
-        return 0 if registered else 1
+        with session() as (app, context):
+            result = dict(context, registered=True, version=str(app.Version))
+        print(json.dumps(result, ensure_ascii=False))
+        return 0
     except Exception as exc:
         print(str(exc)); return 1
-    finally:
-        if app is not None:
-            app.Quit()
 
 if __name__ == '__main__':
     sys.exit(main())

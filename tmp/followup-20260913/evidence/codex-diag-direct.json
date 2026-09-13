@@ -1,0 +1,6 @@
+{
+  "exit_code": 2,
+  "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"기존 원본 보호: c:\\\\users\\\\22\\\\desktop\\\\maintain\\\\hwp_doc\\\\tmp\\\\followup-20260913\\\\codex-host-v3\\\\knowledge\\\\diagnostic.txt — 수정본은 새 파일로 저장하세요.\"}}\n",
+  "stderr": "차단: 기존 원본 보호: c:\\users\\22\\desktop\\maintain\\hwp_doc\\tmp\\followup-20260913\\codex-host-v3\\knowledge\\diagnostic.txt — 수정본은 새 파일로 저장하세요.\n",
+  "scope": "Synthetic control: actual host trace follows"
+}

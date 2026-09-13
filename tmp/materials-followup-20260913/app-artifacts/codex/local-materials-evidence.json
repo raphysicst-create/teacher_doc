@@ -1,0 +1,1110 @@
+{
+  "lineage": [
+    {
+      "key": "gianmun",
+      "source": "knowledge/templates/성립전예산요구/양식.hwpx",
+      "sha256": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목  2026학년도 1학기 농어촌유학 거주비 지원금 성립전 예산 요구",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목  2026학년도 1학기 농어촌유학 거주비 지원금 성립전 예산 요구",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "registration_review": ".hwpdoc/templates/성립전예산요구/legacy-1/review.json"
+      }
+    },
+    {
+      "key": "lineage-01",
+      "source": "output/2026_2학기_평가계획수립_기안문.hwpx",
+      "sha256": "541b9abc633679d3e1272ebdf3be473d7ee6b4e4cba86ade905fad2a28a136b7",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목  2026학년도 화동중학교 2학기 교과별 평가계획 수립",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목  2026학년도 화동중학교 2학기 교과별 평가계획 수립",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:37",
+        "file": "output/2026_2학기_평가계획수립_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "B 정기사이클 B1. 2학기 평가계획 수립(본문만, 첨부 생략 승인)"
+      }
+    },
+    {
+      "key": "lineage-02",
+      "source": "output/2026_2학기_평가계획안내가통_기안문.hwpx",
+      "sha256": "f3bb0321756de2d065b0f8ed38b9350153d192bef66c1f1dd5d9a61d84ab5891",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목 2026학년도 2학기 과목별 평가계획 안내 가정통신문 발송",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목 2026학년도 2학기 과목별 평가계획 안내 가정통신문 발송",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:37",
+        "file": "output/2026_2학기_평가계획안내가통_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "B2. 관련번호는 B1 결재 후 기재 placeholder(사용자 미제공 정보)"
+      }
+    },
+    {
+      "key": "lineage-03",
+      "source": "output/2026_2학기_1회고사_교과협의회_기안문.hwpx",
+      "sha256": "6d45d5ab26398109737d8056cc9424bccac31697e913b86ca16ebd581e8fa558",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목 2026학년도 2학기 1회고사 교과협의회 회의록",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목 2026학년도 2학기 1회고사 교과협의회 회의록",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_교과협의회_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B4. 1회고사 교과협의회(회의록 첨부 포함). 미응시 1학년 표 정리는 사용자 직접 처리"
+      }
+    },
+    {
+      "key": "lineage-04",
+      "source": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+      "sha256": "eda247a9ef3ca1a0efcd4ec7b030d21a068de9624f1a06cfb8a3201b3d124de5",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목  2026학년도 2학기 1회고사 출제 관련 연수",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목  2026학년도 2학기 1회고사 출제 관련 연수",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_출제연수_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B5. 1회고사 출제 관련 연수"
+      }
+    },
+    {
+      "key": "lineage-05",
+      "source": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+      "sha256": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_1회고사_가통배부_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B6. 1회고사 가통배부(가정통신문 첨부 포함)"
+      }
+    },
+    {
+      "key": "lineage-06",
+      "source": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+      "sha256": "b5c434cdd5647ee1859ee256cc9182cb0c86f559c7b97d125243fe785a99a115",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목  2026학년도 2학기 2회고사 교과협의회 회의록",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목  2026학년도 2학기 2회고사 교과협의회 회의록",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_교과협의회_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-a. 2회고사 교과협의회(회의록 첨부 포함)"
+      }
+    },
+    {
+      "key": "lineage-07",
+      "source": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+      "sha256": "ea6a08693ee6861a5840e0a42734c4bab3954f04e2fdd3436404d26d38b23e5a",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목  2026학년도 2학기 2회고사 가정통신문 배부",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목  2026학년도 2학기 2회고사 가정통신문 배부",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:38",
+        "file": "output/2026_2학기_2회고사_가통배부_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 4.5,
+        "note": "B7-b. 2회고사 가통배부(가정통신문 첨부 포함)"
+      }
+    },
+    {
+      "key": "lineage-08",
+      "source": "output/2026_2학기_기출문제공개안내_기안문.hwpx",
+      "sha256": "b1340c6b2676a905a04353cea677ebc5a54cd5cc7304715694f2c00b78e05fa3",
+      "hash_matches": true,
+      "header_matches_profile": true,
+      "header_matches_base": true,
+      "title": [
+        {
+          "text": "제목 2026학년도 2학기 기출문제 공개 안내 가정통신문 발송",
+          "paraPrIDRef": "0",
+          "runs": [
+            {
+              "text": "제목 2026학년도 2학기 기출문제 공개 안내 가정통신문 발송",
+              "charPrIDRef": "10",
+              "height": "1200",
+              "bold": true,
+              "fonts": {
+                "hangul": "굴림",
+                "latin": "굴림",
+                "hanja": "굴림",
+                "japanese": "굴림",
+                "other": "굴림",
+                "symbol": "굴림",
+                "user": "굴림"
+              },
+              "profile_style_matches": true
+            }
+          ]
+        }
+      ],
+      "profile_title_matches": true,
+      "profile_styles_equal_base": true,
+      "margins": [
+        {
+          "header": "4252",
+          "footer": "4252",
+          "gutter": "0",
+          "left": "8504",
+          "right": "8504",
+          "top": "5668",
+          "bottom": "4252"
+        }
+      ],
+      "profile_page_equal_base": true,
+      "margin_matches_profile": true,
+      "approval_record": {
+        "ts": "2026-07-18T17:55:39",
+        "file": "output/2026_2학기_기출문제공개안내_기안문.hwpx",
+        "type": "W1",
+        "approved": true,
+        "score": 5.0,
+        "note": "B7-c. 최초 3점(첨부 미반입 지적) → 첨부 반입·수정 후 5점 확정"
+      }
+    }
+  ],
+  "reply_tables": [
+    {
+      "table": 0,
+      "rowCnt": "2",
+      "colCnt": "3",
+      "cells": [
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11865",
+            "height": "3860"
+          },
+          "text": ""
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "21805",
+            "height": "3860"
+          },
+          "text": " 가정통신문"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "2"
+          },
+          "size": {
+            "width": "13765",
+            "height": "7555"
+          },
+          "text": "화동중 제2026-호☎ 교무실 562-2032☎ 행정실 562-2031http://k-hwadong.gwe.ms.kr우)26116  강원도 정선군 화암면 그림바위길50"
+        },
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11865",
+            "height": "3695"
+          },
+          "text": "교   훈성실.근면.개척"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "21805",
+            "height": "3695"
+          },
+          "text": "실력과 인성을 겸비한 사람을 기르는 학교"
+        }
+      ]
+    },
+    {
+      "table": 1,
+      "rowCnt": "6",
+      "colCnt": "3",
+      "cells": [
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11940",
+            "height": "2730"
+          },
+          "text": "시간"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "9555",
+            "height": "2730"
+          },
+          "text": "활동내용"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "24145",
+            "height": "2730"
+          },
+          "text": "비고"
+        },
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11940",
+            "height": "2723"
+          },
+          "text": "08:20 ~ 10:00"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "9555",
+            "height": "2723"
+          },
+          "text": "이동"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "24145",
+            "height": "2723"
+          },
+          "text": " 08:20까지 등교 / 전세버스"
+        },
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "2"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11940",
+            "height": "2723"
+          },
+          "text": "10:00 ~ 12:00"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "2"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "9555",
+            "height": "2723"
+          },
+          "text": "로봇 체험"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "2"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "24145",
+            "height": "2723"
+          },
+          "text": "로봇을 활용한 다양한 체험"
+        },
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "3"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11940",
+            "height": "2730"
+          },
+          "text": "12:00 ~ 13:30"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "3"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "9555",
+            "height": "2730"
+          },
+          "text": "중식"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "3"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "24145",
+            "height": "2730"
+          },
+          "text": "학교에서 제공"
+        },
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "4"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11940",
+            "height": "2723"
+          },
+          "text": "13:30 ~ 15:30"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "4"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "9555",
+            "height": "2723"
+          },
+          "text": "도전, 항해사!"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "4"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "24145",
+            "height": "2723"
+          },
+          "text": "항로 설계·항해 시뮬레이션 체험"
+        },
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "5"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "11940",
+            "height": "2730"
+          },
+          "text": "    15:30 ~ 16:50"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "5"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "9555",
+            "height": "2730"
+          },
+          "text": "복귀·귀가 지도"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "5"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "24145",
+            "height": "2730"
+          },
+          "text": "*학교 도착 후 개별 귀가"
+        }
+      ]
+    },
+    {
+      "table": 2,
+      "rowCnt": "2",
+      "colCnt": "3",
+      "cells": [
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "16455",
+            "height": "2695"
+          },
+          "text": ""
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "15585",
+            "height": "2695"
+          },
+          "text": "참가 여부(○표)"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "0"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "15585",
+            "height": "2695"
+          },
+          "text": "특이사항(알레르기 등)"
+        },
+        {
+          "addr": {
+            "colAddr": "0",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "16455",
+            "height": "4115"
+          },
+          "text": "2026학년도 동해 수리과학체험센터 방문"
+        },
+        {
+          "addr": {
+            "colAddr": "1",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "15585",
+            "height": "4115"
+          },
+          "text": "참가 (   )   불참 (   )"
+        },
+        {
+          "addr": {
+            "colAddr": "2",
+            "rowAddr": "1"
+          },
+          "span": {
+            "colSpan": "1",
+            "rowSpan": "1"
+          },
+          "size": {
+            "width": "15585",
+            "height": "4115"
+          },
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "reply_paragraphs": [
+    "",
+    "",
+    " 가정통신문",
+    "화동중 제2026-호",
+    "☎ 교무실 562-2032",
+    "☎ 행정실 562-2031",
+    "http://k-hwadong.gwe.ms.kr",
+    "우)26116  ",
+    "강원도 정선군 화암면 그림바위길50",
+    "교   훈",
+    "성실.근면.개척",
+    "실력과 인성을 겸비한 사람을 기르는 학교",
+    "",
+    "수리과학체험 참가 동의서 안내",
+    "  학부모님 안녕하십니까?",
+    "  본교에서는 농어촌 유학 프로그램의 일환으로 수학·과학·정보 융합 탐구 기회를 제공하고자 「농어촌유학 수리과학체험」을 다음과 같이 운영합니다. 아래 참가 동의서를 작성하여 8월 24일(월)까지 담임교사에게 제출해 주시기 바랍니다.",
+    "",
+    "○ 일  시 : 2026. 8. 28.(금) 08:20 ~ 16:50",
+    "○ 장  소 : 제3수리과학정보체험센터(동해)",
+    "○ 대  상 : 본교 전교생 7명",
+    "○ 인  솔 : 담당교사 외 2인",
+    "",
+    "시간",
+    "활동내용",
+    "비고",
+    "08:20 ~ 10:00",
+    "이동",
+    " 08:20까지 등교 / 전세버스",
+    "10:00 ~ 12:00",
+    "로봇 체험",
+    "로봇을 활용한 다양한 체험",
+    "12:00 ~ 13:30",
+    "중식",
+    "학교에서 제공",
+    "13:30 ~ 15:30",
+    "도전, 항해사!",
+    "항로 설계·항해 시뮬레이션 체험",
+    "    15:30 ~ 16:50",
+    "복귀·귀가 지도",
+    "*학교 도착 후 개별 귀가",
+    "             ",
+    "---------------------------------------------------------------------------------------",
+    "2026학년도 수리과학체험 참가 동의서",
+    "",
+    "",
+    "                                        학년     반       번호        학  생 :               (서명)",
+    "                                                                   보호자 :               (서명)",
+    "                ",
+    "  ",
+    "",
+    "참가 여부(○표)",
+    "특이사항(알레르기 등)",
+    "2026학년도 ",
+    "동해 수리과학체험센터 방문",
+    "참가 (   )   불참 (   )",
+    "",
+    "2026. 8. 20.",
+    "화 동 중 학 교 장 [직인생략] "
+  ],
+  "source_hashes_match": true,
+  "inputs_unchanged": true,
+  "input_hashes": {
+    "activities.json": "41786eae5fc4e7e3e1132f327f2338a841d1154798c8dcc7717861e256692f8a",
+    "long_text.txt": "d47ef9d129e9c7db52876d1c6f5ffdaa04395c65dc72ddbcb012c324be0abbaf",
+    "sources.json": "88233e3bf3a56f2da3732f2aa8938858f55fe38aea13d99f6bdd54bfd526b453",
+    "profiles\\conversion-approved.json": "27c798ae18d07443f52bddcb128baee22a50b54688bf419f8761b53ff1f1d9d1",
+    "profiles\\gianmun.json": "713d54da76f2e23eab38898e6cd95d493bd9b33f993376146eb53e0a2565a876",
+    "profiles\\lineage-01.json": "86ca055013dfe56fd3c4e1e4341f81731358259e5904fa2818c4760e170832d2",
+    "profiles\\lineage-02.json": "512f1c73d08af0826ddcf4945537c601744a9a3c5e62c575da2efc432bfc0a1e",
+    "profiles\\lineage-03.json": "3736dec540e63c39a3e4137fc0d6e31bead68e835ef1c54f28d0d567cd8d9fa6",
+    "profiles\\lineage-04.json": "58eb720a6c55f9e50b3961bafe8df9822c86ea112615b752a0a12610dc2ed4a3",
+    "profiles\\lineage-05.json": "580c5f652ddc944530fa80a5faa789ad991b5687d51cf431019cfed616e23438",
+    "profiles\\lineage-06.json": "9f56c23621ffb861acb10ea9e9995658daf9fd619898b133fd10d3b8845f3782",
+    "profiles\\lineage-07.json": "6c4eab6f2fd4d95716f3414bce98577398c83fea1fbbbf3ba9203aa5e2e918f6",
+    "profiles\\lineage-08.json": "4286961cec37df4ccbe723f83dcc59339c191fd3d9896c92b7cc89325c797ba1",
+    "profiles\\notice.json": "bbb1f6e33f964c97701d63c7526c6eb01faa1660da5af8ad53fe5a9ec1b8faaf",
+    "profiles\\reply.json": "4a642fa1d6db339e6a57a5f9d5f386ccec1de878e294bb7dd5ebe8599674d3aa",
+    "sources\\conversion-approved.hwpx": "9c9ce159c7611576260d92d895361880592b25688a2ce13e1426766b1487c97b",
+    "sources\\conversion-original.hwp": "18c6c131750e95f89d697b5a3fa00367869525758718dcffd447fb5accb903b9",
+    "sources\\gianmun.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+    "sources\\lineage-01.hwpx": "541b9abc633679d3e1272ebdf3be473d7ee6b4e4cba86ade905fad2a28a136b7",
+    "sources\\lineage-02.hwpx": "f3bb0321756de2d065b0f8ed38b9350153d192bef66c1f1dd5d9a61d84ab5891",
+    "sources\\lineage-03.hwpx": "6d45d5ab26398109737d8056cc9424bccac31697e913b86ca16ebd581e8fa558",
+    "sources\\lineage-04.hwpx": "eda247a9ef3ca1a0efcd4ec7b030d21a068de9624f1a06cfb8a3201b3d124de5",
+    "sources\\lineage-05.hwpx": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+    "sources\\lineage-06.hwpx": "b5c434cdd5647ee1859ee256cc9182cb0c86f559c7b97d125243fe785a99a115",
+    "sources\\lineage-07.hwpx": "ea6a08693ee6861a5840e0a42734c4bab3954f04e2fdd3436404d26d38b23e5a",
+    "sources\\lineage-08.hwpx": "b1340c6b2676a905a04353cea677ebc5a54cd5cc7304715694f2c00b78e05fa3",
+    "sources\\notice.hwpx": "8c55daa60601b5ab0d063ae623ca93569fa9e401c49fba6f65c291b4c2c17aef",
+    "sources\\reply.hwpx": "70071f99c3b7a9a6ae85ed668187c691b168d180f55c2ddcfec9e4e4e44d7cfb",
+    "sources\\gianmun\\budget.json": "bb805e3b034057d83e3463733f84ab8ac804c48fb6e65323dd9fde0860616454",
+    "sources\\gianmun\\README.md": "16799d6db4920776a2cae86562d66242cbc202129a45cb1272ded8f92df5bec3",
+    "sources\\gianmun\\slots.json": "45695894c572aae3e692486f452975edd3ab93bef42acae9fdfa5e43e64384ff",
+    "sources\\gianmun\\structure.json": "9173f82643e08b5ba652b9d6a1d668f2cb68a48f5664d1b39066767b7a870a80",
+    "sources\\notice\\budget.json": "7eb7a257d9691c68ab8888e69de86b3a9f60fd2ddef66522506bae918236966d",
+    "sources\\notice\\README.md": "81860bd514cd62a2259bf327a426b1ff38eec97e2a5797ec0817d9d1eb207ce9",
+    "sources\\notice\\slots.json": "29a30d44ff9098dff2f6b7a6b1e1def4cd67c829779dc6f4ff98082af7aed94b",
+    "sources\\notice\\structure.json": "2ae31959ce7562cdfcb4416b1dd346d2d4c49a5eda660e5ab96724b9dcf27b49",
+    "sources\\reply\\budget.json": "85243af7887590c32eae6fc7a252339f2a3babf4d8bd72f028cb7727e13d6803",
+    "sources\\reply\\README.md": "9a971092d936ba7c9a3aba932952976ed20a2d195f5c2bf287b30f1b96921260",
+    "sources\\reply\\slots.json": "b0857d4ac8bf9b56d008d957b43ccc0a898dbcdbefff6242dd6c2fe82cf05464",
+    "sources\\reply\\structure.json": "ecf89294aee55438a035701f027b2183c306ff0b3af866a00243b6027442f3b8"
+  },
+  "trial": {
+    "command": [
+      "C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\edit_hwpx.py",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\codex-host-v4\\inputs\\local-materials\\sources\\reply.hwpx",
+      "-o",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\codex-host-v4\\output\\local-materials-long-attempt.hwpx",
+      "--slot-json",
+      "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\codex-host-v4\\output\\local-materials-long-values.json"
+    ],
+    "executions": 1,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "입력 전 글자수 예산 검사 실패:\n - 셀 입력값 글자 수 초과: table=1, row=2, col=2, max=24, input=161, text='평가용 활동 설명: 학생은 2인 1조로 관찰 장치를 설치하고, 안전 점검을 마친 뒤 10분 간격으로 3회 측정한다. 측정값마다 단위와 오차 원인을 기록하고 두 조의 결과를 비교한다. 장비 이상이 있으면 즉시 측정을 멈추고 담당교사에게 보고한다. 전체 활동 참여 학생 20명에게 동일하게 적용하며 활동명·대상·조 구성·측정 간격·횟수·중단 조건을 축약 과정에서 없애지 않는다.\\n'\n",
+    "output_exists": false,
+    "raw_chars": 210,
+    "sentence_chars": 209,
+    "nospace_chars": 161,
+    "target": "cell:1:2:2",
+    "stored_slot": {
+      "key": "cell:1:2:2",
+      "kind": "cell",
+      "table": 1,
+      "row": 2,
+      "col": 2,
+      "occurrence": 0,
+      "max_chars": 11,
+      "text_len": 14,
+      "text_len_nospace": 11,
+      "empty": false,
+      "preview": "로봇을 활용한 다양한 체험"
+    },
+    "actual_budget": {
+      "kind": "cell",
+      "key": "cell:1:2:2:0",
+      "text_len": 14,
+      "text_len_nospace": 11,
+      "max_chars": 24,
+      "text_preview": "로봇을 활용한 다양한 체험",
+      "meta": {
+        "table": 1,
+        "row": "2",
+        "col": "2",
+        "occurrence": 0,
+        "estimated_capacity": 24,
+        "char_height": 1000,
+        "borderFillIDRef": "17"
+      }
+    },
+    "long_text": "평가용 활동 설명: 학생은 2인 1조로 관찰 장치를 설치하고, 안전 점검을 마친 뒤 10분 간격으로 3회 측정한다. 측정값마다 단위와 오차 원인을 기록하고 두 조의 결과를 비교한다. 장비 이상이 있으면 즉시 측정을 멈추고 담당교사에게 보고한다. 전체 활동 참여 학생 20명에게 동일하게 적용하며 활동명·대상·조 구성·측정 간격·횟수·중단 조건을 축약 과정에서 없애지 않는다.\n"
+  }
+}

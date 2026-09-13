@@ -1,0 +1,14 @@
+[
+  {
+    "component": "test_harness",
+    "phase": "claude update path verification",
+    "observed_failure": "AssertionError: assumed +codex version directory; actual CLI installPath uses -codex",
+    "resolution": "Read actual installPath; no reinstall, resumed remaining checks successfully"
+  },
+  {
+    "component": "report_generator",
+    "phase": "summary assertions",
+    "observed_failure": "KeyError lint; actual report stage key is gonmun",
+    "resolution": "Read report stage keys and verify gonmun; report generated successfully on corrected run"
+  }
+]

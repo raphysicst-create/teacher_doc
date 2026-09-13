@@ -1,0 +1,2246 @@
+{
+  "info": {
+    "author": null,
+    "author_email": "Dmitriy <dimastbk@proton.me>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 4 - Beta",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Rust"
+    ],
+    "description": "# python-calamine\n[![PyPI - Version](https://img.shields.io/pypi/v/python-calamine)](https://pypi.org/project/python-calamine/)\n[![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-calamine.svg)](https://anaconda.org/conda-forge/python-calamine)\n![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fdimastbk%2Fpython-calamine%2Fmaster%2Fpyproject.toml)\n\n\nPython binding for beautiful Rust's library for reading excel and odf file - [calamine](https://github.com/tafia/calamine).\n\n### Is used\n* [calamine](https://github.com/tafia/calamine)\n* [pyo3](https://github.com/PyO3/pyo3)\n* [maturin](https://github.com/PyO3/maturin)\n\n### Installation\nPypi:\n```\npip install python-calamine\n```\nConda:\n```\nconda install -c conda-forge python-calamine\n```\n\n### Example\n```python\nfrom python_calamine import CalamineWorkbook\n\nworkbook = CalamineWorkbook.from_path(\"file.xlsx\")\nworkbook.sheet_names\n# [\"Sheet1\", \"Sheet2\"]\n\nworkbook.get_sheet_by_name(\"Sheet1\").to_python()\n# [\n# [\"1\",  \"2\",  \"3\",  \"4\",  \"5\",  \"6\",  \"7\"],\n# [\"1\",  \"2\",  \"3\",  \"4\",  \"5\",  \"6\",  \"7\"],\n# [\"1\",  \"2\",  \"3\",  \"4\",  \"5\",  \"6\",  \"7\"],\n# ]\n```\n\nBy default, calamine skips empty rows/cols before data. For suppress this behaviour, set `skip_empty_area` to `False`.\n```python\nfrom python_calamine import CalamineWorkbook\n\nworkbook = CalamineWorkbook.from_path(\"file.xlsx\").get_sheet_by_name(\"Sheet1\").to_python(skip_empty_area=False)\n# [\n# [\",  \",  \",  \",  \",  \",  \"],\n# [\"1\",  \"2\",  \"3\",  \"4\",  \"5\",  \"6\",  \"7\"],\n# [\"1\",  \"2\",  \"3\",  \"4\",  \"5\",  \"6\",  \"7\"],\n# [\"1\",  \"2\",  \"3\",  \"4\",  \"5\",  \"6\",  \"7\"],\n# ]\n```\n\nPandas 2.2 and above have built-in support of python-calamine.\n\nAlso, you can find additional examples in [tests](https://github.com/dimastbk/python-calamine/blob/master/tests/test_base.py).\n\n### Development\n\nYou'll need rust [installed](https://rustup.rs/).\n\n```shell\n# clone this repo or your fork\ngit clone git@github.com:dimastbk/python-calamine.git\ncd python-calamine\n# create a new virtual env\npython3 -m venv env\nsource env/bin/activate\n# install dev dependencies and install python-calamine\npip install --group dev -e .  # required pip 25.1 and above\n# lint code\npre-commit run --all-files\n# test code\npytest\n```\n\n",
+    "description_content_type": "text/markdown; charset=UTF-8; variant=GFM",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": "MIT",
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "python-calamine",
+    "package_url": "https://pypi.org/project/python-calamine/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/python-calamine/",
+    "project_urls": {
+      "homepage": "https://github.com/dimastbk/python-calamine",
+      "source": "https://github.com/dimastbk/python-calamine"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/python-calamine/0.7.0/",
+    "requires_dist": null,
+    "requires_python": ">=3.10",
+    "summary": "Python binding for Rust's library for reading excel and odf file - calamine",
+    "version": "0.7.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "last_serial": 38950300,
+  "ownership": {
+    "organization": null,
+    "roles": [
+      {
+        "role": "Owner",
+        "user": "dima_st_bk"
+      }
+    ]
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "a84b3a80e23e3dbae8102f33c913f869e9f16d504c2e25da146ae02d18a434ec",
+        "md5": "c5c7777a8930a690245fa5ebfae6d63e",
+        "sha256": "cc40c35db3843c0a44071d3dfa3fe441f3e3287d269a7c4b6fadcd31527ac930"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-macosx_10_12_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "c5c7777a8930a690245fa5ebfae6d63e",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 870049,
+      "upload_time": "2026-06-17T07:54:51",
+      "upload_time_iso_8601": "2026-06-17T07:54:51.305538Z",
+      "url": "https://files.pythonhosted.org/packages/a8/4b/3a80e23e3dbae8102f33c913f869e9f16d504c2e25da146ae02d18a434ec/python_calamine-0.7.0-cp310-cp310-macosx_10_12_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "9fefd9c05a0105167be613c61ce87a5e5d7867b6249468f684d96700b57a3256",
+        "md5": "9142ddd18c014db6693832a79ef9bb4b",
+        "sha256": "07f5f46993d989942d1996251bf6b03db0c9615462880a7014a07131137e7ab5"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "9142ddd18c014db6693832a79ef9bb4b",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 866033,
+      "upload_time": "2026-06-17T07:54:53",
+      "upload_time_iso_8601": "2026-06-17T07:54:53.176083Z",
+      "url": "https://files.pythonhosted.org/packages/9f/ef/d9c05a0105167be613c61ce87a5e5d7867b6249468f684d96700b57a3256/python_calamine-0.7.0-cp310-cp310-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "25d900bca3d7cce61ee178ad4e0e74035677de7634b84e5d08c9e0f904c78b50",
+        "md5": "aa1f97f697c669cb1d873429f02eecfa",
+        "sha256": "8365a5255fd9077513ae06e1776bb5e9da5f2d63d210009b8f8e458e962f1b71"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "aa1f97f697c669cb1d873429f02eecfa",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 936560,
+      "upload_time": "2026-06-17T07:54:55",
+      "upload_time_iso_8601": "2026-06-17T07:54:55.114322Z",
+      "url": "https://files.pythonhosted.org/packages/25/d9/00bca3d7cce61ee178ad4e0e74035677de7634b84e5d08c9e0f904c78b50/python_calamine-0.7.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "e84ebe53b02e39464637e4b58b3125c8fcac05e7a272f0e0cf531ca3feb1fb44",
+        "md5": "d7a8f32d859af88e08e0bb288c72ac9f",
+        "sha256": "6705caeae363c4150e05a5908e7c2ea6ab2461f4ab251a270da59b08531d73e4"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "d7a8f32d859af88e08e0bb288c72ac9f",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 915496,
+      "upload_time": "2026-06-17T07:54:56",
+      "upload_time_iso_8601": "2026-06-17T07:54:56.843905Z",
+      "url": "https://files.pythonhosted.org/packages/e8/4e/be53b02e39464637e4b58b3125c8fcac05e7a272f0e0cf531ca3feb1fb44/python_calamine-0.7.0-cp310-cp310-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "437aa246003f0713fe1a12bcae2d0eb540dd7c3bc19134edb86c6312cc4f5829",
+        "md5": "3001a4e371e0d88bf3cb65425f7498c1",
+        "sha256": "896d21d2eced9cbff0ce36855277d95b17da91a891166969eb2b4b9c9afe88ef"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "has_sig": false,
+      "md5_digest": "3001a4e371e0d88bf3cb65425f7498c1",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 1088487,
+      "upload_time": "2026-06-17T07:54:58",
+      "upload_time_iso_8601": "2026-06-17T07:54:58.315139Z",
+      "url": "https://files.pythonhosted.org/packages/43/7a/a246003f0713fe1a12bcae2d0eb540dd7c3bc19134edb86c6312cc4f5829/python_calamine-0.7.0-cp310-cp310-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "763d9d49b38292875e2009617e9639ed41e2195fadd3a7541eeabb1c083c3d10",
+        "md5": "dbc28603a986253f1758cfdff0cc033a",
+        "sha256": "420c52977597ea2ef41f8168869f2a2427ee3137a9320ffd61ca9892c86743a5"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "has_sig": false,
+      "md5_digest": "dbc28603a986253f1758cfdff0cc033a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 977149,
+      "upload_time": "2026-06-17T07:54:59",
+      "upload_time_iso_8601": "2026-06-17T07:54:59.876871Z",
+      "url": "https://files.pythonhosted.org/packages/76/3d/9d49b38292875e2009617e9639ed41e2195fadd3a7541eeabb1c083c3d10/python_calamine-0.7.0-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "da51fdd3173d45315c5425b6aee2266e128b44aaff1d9eda9c5ebb7903ef0b7a",
+        "md5": "84e5f8b195e2ad87d07c11641b486e09",
+        "sha256": "a77cfd746c11534586f64261e880330a000c1e0200b18b028bcf88cfa32be389"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "84e5f8b195e2ad87d07c11641b486e09",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 953906,
+      "upload_time": "2026-06-17T07:55:01",
+      "upload_time_iso_8601": "2026-06-17T07:55:01.709322Z",
+      "url": "https://files.pythonhosted.org/packages/da/51/fdd3173d45315c5425b6aee2266e128b44aaff1d9eda9c5ebb7903ef0b7a/python_calamine-0.7.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "9d9a88e9a2caf2c4f823420bb38fe41810d301ac575322afe875a75ac9c36b87",
+        "md5": "434b1a8d562d0323876d8146fb2f4cec",
+        "sha256": "d3e22925905a517e4f3a55c5a6016fa943b5552052f7229ddb385639316f2b3a"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.whl",
+      "has_sig": false,
+      "md5_digest": "434b1a8d562d0323876d8146fb2f4cec",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 1003445,
+      "upload_time": "2026-06-17T07:55:03",
+      "upload_time_iso_8601": "2026-06-17T07:55:03.356692Z",
+      "url": "https://files.pythonhosted.org/packages/9d/9a/88e9a2caf2c4f823420bb38fe41810d301ac575322afe875a75ac9c36b87/python_calamine-0.7.0-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "36739be91d0bf7c3673525e6f0b2f55c705d5e7b95cd5c4bede73be1e67328ad",
+        "md5": "e191ab9dff5c13b555476646a1422341",
+        "sha256": "bfb0092bf6dad96c741a36193f8ff85cdc5a5b5e7a06440ded14faf97f15ccf5"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-musllinux_1_1_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "e191ab9dff5c13b555476646a1422341",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 1111895,
+      "upload_time": "2026-06-17T07:55:05",
+      "upload_time_iso_8601": "2026-06-17T07:55:05.143006Z",
+      "url": "https://files.pythonhosted.org/packages/36/73/9be91d0bf7c3673525e6f0b2f55c705d5e7b95cd5c4bede73be1e67328ad/python_calamine-0.7.0-cp310-cp310-musllinux_1_1_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "68c14f90748429e77dfa960833d4be55bb79022f40d9a24992bb1f79f3cfd50c",
+        "md5": "86b283f0661d382fa52937644a3fdd48",
+        "sha256": "5d6421dc27d169226ec015ce1a40b932be65892cdb235c848560094d00ddcadb"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-musllinux_1_1_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "86b283f0661d382fa52937644a3fdd48",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 1189091,
+      "upload_time": "2026-06-17T07:55:06",
+      "upload_time_iso_8601": "2026-06-17T07:55:06.724544Z",
+      "url": "https://files.pythonhosted.org/packages/68/c1/4f90748429e77dfa960833d4be55bb79022f40d9a24992bb1f79f3cfd50c/python_calamine-0.7.0-cp310-cp310-musllinux_1_1_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "28954127894dc01db3d8141e0c26fd5102e0ee5699c2d8d02010056920dc4a0d",
+        "md5": "0ba460398f5bf4712c37b660efaa7c9d",
+        "sha256": "7dc65b8620a8f7c7febd695252b1ee3acd66341a37ed3ce511e36e55e3d0f886"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-musllinux_1_1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "0ba460398f5bf4712c37b660efaa7c9d",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 1165299,
+      "upload_time": "2026-06-17T07:55:08",
+      "upload_time_iso_8601": "2026-06-17T07:55:08.186819Z",
+      "url": "https://files.pythonhosted.org/packages/28/95/4127894dc01db3d8141e0c26fd5102e0ee5699c2d8d02010056920dc4a0d/python_calamine-0.7.0-cp310-cp310-musllinux_1_1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "106381cb6d74fb47ba31da9c6e0505b6e3181368f4a7cb387c271779cbfaf95f",
+        "md5": "5724a71cf107f8c2204379df282ebadc",
+        "sha256": "13e9702e064062dba824489af4652d195a6d570691f58411c1f8708fee335f73"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-win32.whl",
+      "has_sig": false,
+      "md5_digest": "5724a71cf107f8c2204379df282ebadc",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 724130,
+      "upload_time": "2026-06-17T07:55:09",
+      "upload_time_iso_8601": "2026-06-17T07:55:09.532386Z",
+      "url": "https://files.pythonhosted.org/packages/10/63/81cb6d74fb47ba31da9c6e0505b6e3181368f4a7cb387c271779cbfaf95f/python_calamine-0.7.0-cp310-cp310-win32.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "8708fc3d6fc74133c08b0c5f8a75e69c39acbbd57d08a7b18a48c28f91d40fba",
+        "md5": "3b2a59ebc75e89214fd30793f50c5fcd",
+        "sha256": "32e0508778aea02e7836b1f9d781a18c7c9e3fd1201c28b75476fc597e2b522e"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp310-cp310-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "3b2a59ebc75e89214fd30793f50c5fcd",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": ">=3.10",
+      "size": 772243,
+      "upload_time": "2026-06-17T07:55:11",
+      "upload_time_iso_8601": "2026-06-17T07:55:11.258840Z",
+      "url": "https://files.pythonhosted.org/packages/87/08/fc3d6fc74133c08b0c5f8a75e69c39acbbd57d08a7b18a48c28f91d40fba/python_calamine-0.7.0-cp310-cp310-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "e770d55c17e01828ad9bb4920e750b6cea3d246dc59f05c1a837ada69a6ee246",
+        "md5": "616791a1404966f784c33c1cde39a3ec",
+        "sha256": "b1a114954faddfc434143099234a8cbf25b0d2b55efc430326918b4b82abc824"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-macosx_10_12_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "616791a1404966f784c33c1cde39a3ec",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 870136,
+      "upload_time": "2026-06-17T07:55:13",
+      "upload_time_iso_8601": "2026-06-17T07:55:13.420265Z",
+      "url": "https://files.pythonhosted.org/packages/e7/70/d55c17e01828ad9bb4920e750b6cea3d246dc59f05c1a837ada69a6ee246/python_calamine-0.7.0-cp311-cp311-macosx_10_12_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "080d6a2df05578cb01892243228b1044ee74186f89663cd55fbf24bde1b22192",
+        "md5": "fe3a3acc9941008e71779b6e44997cab",
+        "sha256": "58e82b2185ee42cc11edd91f083f2d139e7c8c0540c439eb04a14e0701b3f622"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "fe3a3acc9941008e71779b6e44997cab",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 866402,
+      "upload_time": "2026-06-17T07:55:15",
+      "upload_time_iso_8601": "2026-06-17T07:55:15.296183Z",
+      "url": "https://files.pythonhosted.org/packages/08/0d/6a2df05578cb01892243228b1044ee74186f89663cd55fbf24bde1b22192/python_calamine-0.7.0-cp311-cp311-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "04656660ad1d5e08456fc6ab0adbe5b1553e69c5a97f04dcf7491af41ee2acfe",
+        "md5": "5a9014f8a32abfc99fff9b2ea7a5c49b",
+        "sha256": "870660854fd1a3d833e63dbf0ff969e3183fc63c9d14d8d02b4199dfecf7dd86"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "5a9014f8a32abfc99fff9b2ea7a5c49b",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 937297,
+      "upload_time": "2026-06-17T07:55:17",
+      "upload_time_iso_8601": "2026-06-17T07:55:17.117270Z",
+      "url": "https://files.pythonhosted.org/packages/04/65/6660ad1d5e08456fc6ab0adbe5b1553e69c5a97f04dcf7491af41ee2acfe/python_calamine-0.7.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "86a4df79b8e654bb52c94386add4fe66351f850ba75d0546bd7e62c10f78d7e8",
+        "md5": "e501b57b84d53d4b335fddaeb0695136",
+        "sha256": "5bd8d391bf8704c97b6c947da7676e9a5f7f22ee922affbed96338c7d0c02720"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "e501b57b84d53d4b335fddaeb0695136",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 915766,
+      "upload_time": "2026-06-17T07:55:18",
+      "upload_time_iso_8601": "2026-06-17T07:55:18.858901Z",
+      "url": "https://files.pythonhosted.org/packages/86/a4/df79b8e654bb52c94386add4fe66351f850ba75d0546bd7e62c10f78d7e8/python_calamine-0.7.0-cp311-cp311-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "cd825b2fbe58f82acfeaef3d9f9d3d6761d0dde8d06f992d3b319afd0d10dce6",
+        "md5": "8de503ed9af8df23b64358a867418a72",
+        "sha256": "52eb8b718d6ccabeb0479c39209e0b4594a8655bccdb7b501246db5c35b4962c"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "has_sig": false,
+      "md5_digest": "8de503ed9af8df23b64358a867418a72",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 1087419,
+      "upload_time": "2026-06-17T07:55:20",
+      "upload_time_iso_8601": "2026-06-17T07:55:20.604408Z",
+      "url": "https://files.pythonhosted.org/packages/cd/82/5b2fbe58f82acfeaef3d9f9d3d6761d0dde8d06f992d3b319afd0d10dce6/python_calamine-0.7.0-cp311-cp311-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "86dfe5586c34d1c681be7f9711870d63e42fb7eefb5d094933605698fe09fe2e",
+        "md5": "6a674af5df05cbc48dbe9d17645d03c5",
+        "sha256": "35b9fbabc208f1e49217621af0f7bc8b1644beada7978e841e6ad5bcf6e9454e"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "has_sig": false,
+      "md5_digest": "6a674af5df05cbc48dbe9d17645d03c5",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 977109,
+      "upload_time": "2026-06-17T07:55:22",
+      "upload_time_iso_8601": "2026-06-17T07:55:22.352359Z",
+      "url": "https://files.pythonhosted.org/packages/86/df/e5586c34d1c681be7f9711870d63e42fb7eefb5d094933605698fe09fe2e/python_calamine-0.7.0-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "fb4eca1e6eedf96724488411db710efc6e43766f9542ba52c544bead7d005f55",
+        "md5": "25266265d12ac6fa0ec1fe66f9af51d2",
+        "sha256": "3c475cbf8532b669677f002fbbf410dab6c1af981ed0a0227309492982f20a66"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "25266265d12ac6fa0ec1fe66f9af51d2",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 953975,
+      "upload_time": "2026-06-17T07:55:24",
+      "upload_time_iso_8601": "2026-06-17T07:55:24.133628Z",
+      "url": "https://files.pythonhosted.org/packages/fb/4e/ca1e6eedf96724488411db710efc6e43766f9542ba52c544bead7d005f55/python_calamine-0.7.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "4d9e7d59969812c77ee9e37e4f461e8990e6cb9778ee3bed25af3237e684c1a6",
+        "md5": "03b11eec5428c64f3b9b2bc572dea8e2",
+        "sha256": "6df6d7977a972d9946a5fd0d10771e2982e286c974c8fa744d20c9ff8f0e2765"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.whl",
+      "has_sig": false,
+      "md5_digest": "03b11eec5428c64f3b9b2bc572dea8e2",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 1003392,
+      "upload_time": "2026-06-17T07:55:25",
+      "upload_time_iso_8601": "2026-06-17T07:55:25.940008Z",
+      "url": "https://files.pythonhosted.org/packages/4d/9e/7d59969812c77ee9e37e4f461e8990e6cb9778ee3bed25af3237e684c1a6/python_calamine-0.7.0-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "9f422ba71e1dea01c8ef32ba8a06afcb71b9b5967574b74b8e442ae67c6ce937",
+        "md5": "87f75232100e1dbbbc957358a26ab14a",
+        "sha256": "8111ecc5f90ed2edf355829bcb0a5ac71d88611a043c0a0137bd19b3fa81383c"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-musllinux_1_1_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "87f75232100e1dbbbc957358a26ab14a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 1112531,
+      "upload_time": "2026-06-17T07:55:27",
+      "upload_time_iso_8601": "2026-06-17T07:55:27.644939Z",
+      "url": "https://files.pythonhosted.org/packages/9f/42/2ba71e1dea01c8ef32ba8a06afcb71b9b5967574b74b8e442ae67c6ce937/python_calamine-0.7.0-cp311-cp311-musllinux_1_1_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "c8064a8efc2b8f448e8765ab7ef876696ef39eb3028849cfb38bf0e87e35f15a",
+        "md5": "e9a8b069e5be0b57809cfcdfd5f124aa",
+        "sha256": "ede185f14ab993395e84735cf8fd274781118d93343213f377810199cd150cc2"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-musllinux_1_1_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "e9a8b069e5be0b57809cfcdfd5f124aa",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 1189174,
+      "upload_time": "2026-06-17T07:55:29",
+      "upload_time_iso_8601": "2026-06-17T07:55:29.632888Z",
+      "url": "https://files.pythonhosted.org/packages/c8/06/4a8efc2b8f448e8765ab7ef876696ef39eb3028849cfb38bf0e87e35f15a/python_calamine-0.7.0-cp311-cp311-musllinux_1_1_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "9551f48e98c4128d786102abb60c73e6eb7b5686cb946ffa38c6fc658fb99c91",
+        "md5": "ac71e6b7c18169c90ef608cd66b893f8",
+        "sha256": "3afa374133763d92121d4afa1063c0e661547d1ab9c3778b904fbad861cebfd0"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-musllinux_1_1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "ac71e6b7c18169c90ef608cd66b893f8",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 1165318,
+      "upload_time": "2026-06-17T07:55:31",
+      "upload_time_iso_8601": "2026-06-17T07:55:31.494023Z",
+      "url": "https://files.pythonhosted.org/packages/95/51/f48e98c4128d786102abb60c73e6eb7b5686cb946ffa38c6fc658fb99c91/python_calamine-0.7.0-cp311-cp311-musllinux_1_1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "dd6340d4d43c1d90282f461b4836a23fdbc758066979427e7ef38907287c39f3",
+        "md5": "b14c92945256d5954e5a277333658612",
+        "sha256": "6f3c80726947eb6e711b7719d17ef013703341dacbd0f396c2736d1155cba57f"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-win32.whl",
+      "has_sig": false,
+      "md5_digest": "b14c92945256d5954e5a277333658612",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 724380,
+      "upload_time": "2026-06-17T07:55:33",
+      "upload_time_iso_8601": "2026-06-17T07:55:33.055633Z",
+      "url": "https://files.pythonhosted.org/packages/dd/63/40d4d43c1d90282f461b4836a23fdbc758066979427e7ef38907287c39f3/python_calamine-0.7.0-cp311-cp311-win32.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "2b237a54465ae162fff7d48677f4fd05dece8d8a2b9e958ceea233c7499cead1",
+        "md5": "34f732cffa5c150fdb8aae2564b79d81",
+        "sha256": "be6c5091a21451f2b4de611756c5111609ccfbc40ec00d4d23c731e8b35b9196"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "34f732cffa5c150fdb8aae2564b79d81",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 772112,
+      "upload_time": "2026-06-17T07:55:34",
+      "upload_time_iso_8601": "2026-06-17T07:55:34.813673Z",
+      "url": "https://files.pythonhosted.org/packages/2b/23/7a54465ae162fff7d48677f4fd05dece8d8a2b9e958ceea233c7499cead1/python_calamine-0.7.0-cp311-cp311-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "ec654142f1e2a77e44c350146e2cb48fdb4790ad17d4d3d94f503d2cfc817e7a",
+        "md5": "034ea051df91ab0b9f73d1479c8b874a",
+        "sha256": "2ba4b799ed05dda20256a9241a745673ad6866f77f98498c0bbe83b0900c3b3c"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp311-cp311-win_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "034ea051df91ab0b9f73d1479c8b874a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": ">=3.10",
+      "size": 757333,
+      "upload_time": "2026-06-17T07:55:36",
+      "upload_time_iso_8601": "2026-06-17T07:55:36.491624Z",
+      "url": "https://files.pythonhosted.org/packages/ec/65/4142f1e2a77e44c350146e2cb48fdb4790ad17d4d3d94f503d2cfc817e7a/python_calamine-0.7.0-cp311-cp311-win_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "12ef9d5e11427d74f18ab276949500b9d1b684709383cefd74e5267b2766d006",
+        "md5": "8194b37cdd5481cce91c9bff356f3bea",
+        "sha256": "215a69348eb661bfca4a921fd2435f5114f317bcca4a376c708eb7a5432b8c80"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-macosx_10_12_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "8194b37cdd5481cce91c9bff356f3bea",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 873356,
+      "upload_time": "2026-06-17T07:55:38",
+      "upload_time_iso_8601": "2026-06-17T07:55:38.397615Z",
+      "url": "https://files.pythonhosted.org/packages/12/ef/9d5e11427d74f18ab276949500b9d1b684709383cefd74e5267b2766d006/python_calamine-0.7.0-cp312-cp312-macosx_10_12_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "58c48ec10f6cacd42eeadb046c9d1269f3dd9b8c539f2bbd57ccc53e1159c181",
+        "md5": "aa7e517b7a56a2ac4c2197baa9561d8d",
+        "sha256": "691beff5eb29350365e08dce786a0b234aab1ebcaa9f4e71ad80bfe20c555b4e"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "aa7e517b7a56a2ac4c2197baa9561d8d",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 861440,
+      "upload_time": "2026-06-17T07:55:40",
+      "upload_time_iso_8601": "2026-06-17T07:55:40.202268Z",
+      "url": "https://files.pythonhosted.org/packages/58/c4/8ec10f6cacd42eeadb046c9d1269f3dd9b8c539f2bbd57ccc53e1159c181/python_calamine-0.7.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "82f8d270e4463a60c038930e8db583e919f0a6bc795f67c40a8ea96de0b27212",
+        "md5": "486d172128be146826de0fb9dcdef748",
+        "sha256": "5428babe897ff1bd3663a1667a1730972f73db7781b6c3e1dd757f036c6d2569"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "486d172128be146826de0fb9dcdef748",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 929399,
+      "upload_time": "2026-06-17T07:55:42",
+      "upload_time_iso_8601": "2026-06-17T07:55:42.365382Z",
+      "url": "https://files.pythonhosted.org/packages/82/f8/d270e4463a60c038930e8db583e919f0a6bc795f67c40a8ea96de0b27212/python_calamine-0.7.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "9be2fc63eee397751d7d0174366d870f441b6a1f9089d2eb278046f6656132cc",
+        "md5": "a2acba2eadcf5dd089e73362c9d4c7a4",
+        "sha256": "30e77c1c6c96b9f19022de76d9b241fd1b0cf4a409ce8cdc59e84e66d3065d02"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "a2acba2eadcf5dd089e73362c9d4c7a4",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 913259,
+      "upload_time": "2026-06-17T07:55:44",
+      "upload_time_iso_8601": "2026-06-17T07:55:44.000690Z",
+      "url": "https://files.pythonhosted.org/packages/9b/e2/fc63eee397751d7d0174366d870f441b6a1f9089d2eb278046f6656132cc/python_calamine-0.7.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "29a1a2a294ab7cdd1b29fc04f47c2fb6d599357914002f6692f08a8b081a9499",
+        "md5": "1f57ef64ac6a7f3113e55cc90cb2114a",
+        "sha256": "a7c5791803c97826995fec968625dd9456918cdda969a77296c0f1ea2f87aa58"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "has_sig": false,
+      "md5_digest": "1f57ef64ac6a7f3113e55cc90cb2114a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 1084348,
+      "upload_time": "2026-06-17T07:55:45",
+      "upload_time_iso_8601": "2026-06-17T07:55:45.500786Z",
+      "url": "https://files.pythonhosted.org/packages/29/a1/a2a294ab7cdd1b29fc04f47c2fb6d599357914002f6692f08a8b081a9499/python_calamine-0.7.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "c7e6e5cc567b18947d554e52fb5f2ec540b1ec271d5a303b0185c32cac587eb0",
+        "md5": "cc09b4f2e9fbbf1196d927c708fe0f16",
+        "sha256": "b95bee4df16c35f4442db7c7d795a124a611ea9665beb7ea709beff26dff8eab"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "has_sig": false,
+      "md5_digest": "cc09b4f2e9fbbf1196d927c708fe0f16",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 975506,
+      "upload_time": "2026-06-17T07:55:47",
+      "upload_time_iso_8601": "2026-06-17T07:55:47.141129Z",
+      "url": "https://files.pythonhosted.org/packages/c7/e6/e5cc567b18947d554e52fb5f2ec540b1ec271d5a303b0185c32cac587eb0/python_calamine-0.7.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "b7c435b116c916b510bdfc2cf2b7a6ad511509a6de2e1f9630b86f0de8f816eb",
+        "md5": "4bf6ea954dc944b3382a339b85b91fbb",
+        "sha256": "581c3e7135bd30f689294efc174064bc5e6f2b580ac76541845678ffd8d7faf2"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "4bf6ea954dc944b3382a339b85b91fbb",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 952408,
+      "upload_time": "2026-06-17T07:55:48",
+      "upload_time_iso_8601": "2026-06-17T07:55:48.806719Z",
+      "url": "https://files.pythonhosted.org/packages/b7/c4/35b116c916b510bdfc2cf2b7a6ad511509a6de2e1f9630b86f0de8f816eb/python_calamine-0.7.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "7a3b378f720182a6d9dd9930db095afbc058fe2d8af59636205272fc49da9f24",
+        "md5": "e65f539e6c739fb3107dd95a12a94748",
+        "sha256": "98e141e7290f43e03583593ab0ad36723ec2460e8d3feaff430be3ba711526b3"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl",
+      "has_sig": false,
+      "md5_digest": "e65f539e6c739fb3107dd95a12a94748",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 997443,
+      "upload_time": "2026-06-17T07:55:50",
+      "upload_time_iso_8601": "2026-06-17T07:55:50.335020Z",
+      "url": "https://files.pythonhosted.org/packages/7a/3b/378f720182a6d9dd9930db095afbc058fe2d8af59636205272fc49da9f24/python_calamine-0.7.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "f0c11011e3b6661e06c69e27a5cd6bc9078dd45fdb1ab38dbc65960d8e0a53ef",
+        "md5": "c560ab8508c8cf174a1574f0e7b64f0e",
+        "sha256": "13e3ed1634c71b4b14fbb0778a5ac6ea703f9298578c03a85d7cc0c4287b8f79"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-musllinux_1_1_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "c560ab8508c8cf174a1574f0e7b64f0e",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 1105758,
+      "upload_time": "2026-06-17T07:55:52",
+      "upload_time_iso_8601": "2026-06-17T07:55:52.113777Z",
+      "url": "https://files.pythonhosted.org/packages/f0/c1/1011e3b6661e06c69e27a5cd6bc9078dd45fdb1ab38dbc65960d8e0a53ef/python_calamine-0.7.0-cp312-cp312-musllinux_1_1_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "8362e991f60d768f54bd6170a0cacae44b10436bfc3791ff76db0403741038ed",
+        "md5": "f6498680e9259477a2c83bb8e449c0dd",
+        "sha256": "f184402af4e53a67471dcd928d843de4f29c1e9987c0c730d8ac3da7b11c28a5"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-musllinux_1_1_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "f6498680e9259477a2c83bb8e449c0dd",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 1186588,
+      "upload_time": "2026-06-17T07:55:53",
+      "upload_time_iso_8601": "2026-06-17T07:55:53.662188Z",
+      "url": "https://files.pythonhosted.org/packages/83/62/e991f60d768f54bd6170a0cacae44b10436bfc3791ff76db0403741038ed/python_calamine-0.7.0-cp312-cp312-musllinux_1_1_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "82a527e50519589e2421abfa7b65bcaec354a74c9226aff8562d628a70685a64",
+        "md5": "3c320f3d8753910449f43c931cd9da8c",
+        "sha256": "60e921dc08cb92956ce63d81a2efcedce68f7a9e1f5842a05c9293a6f36785a0"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-musllinux_1_1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "3c320f3d8753910449f43c931cd9da8c",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 1163848,
+      "upload_time": "2026-06-17T07:55:55",
+      "upload_time_iso_8601": "2026-06-17T07:55:55.380951Z",
+      "url": "https://files.pythonhosted.org/packages/82/a5/27e50519589e2421abfa7b65bcaec354a74c9226aff8562d628a70685a64/python_calamine-0.7.0-cp312-cp312-musllinux_1_1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "cc31ac8bb30f6b3b4c1541b81e12cc469757b249d01d4ce43b0b0cf50e59a7f5",
+        "md5": "699a579bfbf905b9f6aad188341a0b94",
+        "sha256": "a489da3116f90cc4b5c590aa5fe1f5f305f86899ddaddb37f62cd3dfaa20dc32"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-win32.whl",
+      "has_sig": false,
+      "md5_digest": "699a579bfbf905b9f6aad188341a0b94",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 732098,
+      "upload_time": "2026-06-17T07:55:56",
+      "upload_time_iso_8601": "2026-06-17T07:55:56.999436Z",
+      "url": "https://files.pythonhosted.org/packages/cc/31/ac8bb30f6b3b4c1541b81e12cc469757b249d01d4ce43b0b0cf50e59a7f5/python_calamine-0.7.0-cp312-cp312-win32.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "5bc427c191f8d0b332a435af7b88caf653a7962da2df6cd64acb7e00ea66f1af",
+        "md5": "33f762dfa879b34a7a0417be056ce606",
+        "sha256": "49f11033d30155b8913c41c324a2199e3eb7a258e9df6713886fd59a7b91fe91"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "33f762dfa879b34a7a0417be056ce606",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 769111,
+      "upload_time": "2026-06-17T07:55:58",
+      "upload_time_iso_8601": "2026-06-17T07:55:58.841631Z",
+      "url": "https://files.pythonhosted.org/packages/5b/c4/27c191f8d0b332a435af7b88caf653a7962da2df6cd64acb7e00ea66f1af/python_calamine-0.7.0-cp312-cp312-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "389a706b90e5ad8a91da6ff168294027e4efe05c39a4c73d37ee961cbb8661a1",
+        "md5": "b2fef5eacff76e71992b4fdfa1678939",
+        "sha256": "a12bd449f261941744346aa4517ea3eb39801d412a13be0424694a4134425899"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp312-cp312-win_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "b2fef5eacff76e71992b4fdfa1678939",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": ">=3.10",
+      "size": 751353,
+      "upload_time": "2026-06-17T07:56:00",
+      "upload_time_iso_8601": "2026-06-17T07:56:00.539064Z",
+      "url": "https://files.pythonhosted.org/packages/38/9a/706b90e5ad8a91da6ff168294027e4efe05c39a4c73d37ee961cbb8661a1/python_calamine-0.7.0-cp312-cp312-win_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "5c372c0afbe1b8fa27027594b099e70bd71dfadefce052ad9f395e20268c4285",
+        "md5": "bfd4c6712362c1e618d51c8fe2d1eb78",
+        "sha256": "a69bf13b357f78f68e5e3b696d8e3ea4ee7209eb9a6cac7a311438c278b03637"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-macosx_10_12_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "bfd4c6712362c1e618d51c8fe2d1eb78",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 873134,
+      "upload_time": "2026-06-17T07:56:02",
+      "upload_time_iso_8601": "2026-06-17T07:56:02.288122Z",
+      "url": "https://files.pythonhosted.org/packages/5c/37/2c0afbe1b8fa27027594b099e70bd71dfadefce052ad9f395e20268c4285/python_calamine-0.7.0-cp313-cp313-macosx_10_12_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "06619b302e3c918a46570e506d46893eac172575787ac9dd17b6e3e377d33530",
+        "md5": "4b0eae362b3ccefa6a9452908d58771b",
+        "sha256": "7f5bd85010c737a3ccb61d62902f349d30cdfaffc182270d19fa90bbba4e307c"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "4b0eae362b3ccefa6a9452908d58771b",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 861538,
+      "upload_time": "2026-06-17T07:56:03",
+      "upload_time_iso_8601": "2026-06-17T07:56:03.688064Z",
+      "url": "https://files.pythonhosted.org/packages/06/61/9b302e3c918a46570e506d46893eac172575787ac9dd17b6e3e377d33530/python_calamine-0.7.0-cp313-cp313-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "f75684d4ff4782a25cbae9c1b6c1bd3b36010792461e3b6d15c490f09062acd1",
+        "md5": "bce81bbe399ee954bc98a74986667920",
+        "sha256": "93ba2f37f3ac6075f97fbff514797223e881f4d7b7904a905bc7d142286e0ccf"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "bce81bbe399ee954bc98a74986667920",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 929208,
+      "upload_time": "2026-06-17T07:56:05",
+      "upload_time_iso_8601": "2026-06-17T07:56:05.357099Z",
+      "url": "https://files.pythonhosted.org/packages/f7/56/84d4ff4782a25cbae9c1b6c1bd3b36010792461e3b6d15c490f09062acd1/python_calamine-0.7.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "4d02eba7aeb5f1d8500c5ec425c0ea2e354c25221ec4cbef97f878559cda31f7",
+        "md5": "2806b317749aab0e9b3574271fa65557",
+        "sha256": "c60605276a9b83d4728f6436cc7200235f82d292f0a90715020462d0eaca6ed6"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "2806b317749aab0e9b3574271fa65557",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 912432,
+      "upload_time": "2026-06-17T07:56:06",
+      "upload_time_iso_8601": "2026-06-17T07:56:06.989276Z",
+      "url": "https://files.pythonhosted.org/packages/4d/02/eba7aeb5f1d8500c5ec425c0ea2e354c25221ec4cbef97f878559cda31f7/python_calamine-0.7.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "4a82a2c169d174ddbaba2efc5b2601b2eca5b29b1b9650a51b1ce73be1f01ec9",
+        "md5": "0d47b34f654b97ed942cdfb2cdcb1f22",
+        "sha256": "10bdc6a7bed7181ce84e4c5b47334970817149bbcc59355f2655223418b226cb"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "has_sig": false,
+      "md5_digest": "0d47b34f654b97ed942cdfb2cdcb1f22",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 1083872,
+      "upload_time": "2026-06-17T07:56:08",
+      "upload_time_iso_8601": "2026-06-17T07:56:08.712990Z",
+      "url": "https://files.pythonhosted.org/packages/4a/82/a2c169d174ddbaba2efc5b2601b2eca5b29b1b9650a51b1ce73be1f01ec9/python_calamine-0.7.0-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "0f81ebe6946c2cab5f124b19241a6f3b6841dceebac46c0c0209c442536308cc",
+        "md5": "dcb6e4cc53d1659f75a0ca85d6bbbac9",
+        "sha256": "56a18ff0d8831f21e7cb511f8646ecf8ad9d68f787ef394140acef0e8465b5dc"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "has_sig": false,
+      "md5_digest": "dcb6e4cc53d1659f75a0ca85d6bbbac9",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 975152,
+      "upload_time": "2026-06-17T07:56:10",
+      "upload_time_iso_8601": "2026-06-17T07:56:10.303511Z",
+      "url": "https://files.pythonhosted.org/packages/0f/81/ebe6946c2cab5f124b19241a6f3b6841dceebac46c0c0209c442536308cc/python_calamine-0.7.0-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "3330acac11a106b5a6d3478bb037a8cab1a96d233bc6046f205ae95aefde350a",
+        "md5": "98ec3f41b4ee6cdbab55cd198a507eae",
+        "sha256": "f82b9ba365f16229c1cb5d3a5cac7f9686147b8368dc8234b5c9e177f858b97e"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "98ec3f41b4ee6cdbab55cd198a507eae",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 951851,
+      "upload_time": "2026-06-17T07:56:12",
+      "upload_time_iso_8601": "2026-06-17T07:56:12.423030Z",
+      "url": "https://files.pythonhosted.org/packages/33/30/acac11a106b5a6d3478bb037a8cab1a96d233bc6046f205ae95aefde350a/python_calamine-0.7.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "666a7f19eca7eaaf9570772425ff0c1e2b80fb81cca43f70fee92e73c3092516",
+        "md5": "8443cd64fc3bbe60e9e479df06ff36ca",
+        "sha256": "4a1ddeb05f4027f74f66571956fac70ecf233b34f060365399f6f6d442e67716"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.whl",
+      "has_sig": false,
+      "md5_digest": "8443cd64fc3bbe60e9e479df06ff36ca",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 997224,
+      "upload_time": "2026-06-17T07:56:14",
+      "upload_time_iso_8601": "2026-06-17T07:56:14.252744Z",
+      "url": "https://files.pythonhosted.org/packages/66/6a/7f19eca7eaaf9570772425ff0c1e2b80fb81cca43f70fee92e73c3092516/python_calamine-0.7.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "297fe07b40b77d730e3d5e8374a815e391a1f06f00057a915ff5ceed3ae1cb66",
+        "md5": "3565ffae0352161ec24a1cd19e0ca3b1",
+        "sha256": "2f7dae23c6f3b520fb5aa1614c41f949ff7a50e7a809c10afbe6487b0c61e2c5"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-musllinux_1_1_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "3565ffae0352161ec24a1cd19e0ca3b1",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 1105034,
+      "upload_time": "2026-06-17T07:56:16",
+      "upload_time_iso_8601": "2026-06-17T07:56:16.196979Z",
+      "url": "https://files.pythonhosted.org/packages/29/7f/e07b40b77d730e3d5e8374a815e391a1f06f00057a915ff5ceed3ae1cb66/python_calamine-0.7.0-cp313-cp313-musllinux_1_1_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "b7071ef0c29ff25fa664b54d383bd3bd3f1ddc4e08ae45685c5c13fbcee9a056",
+        "md5": "e1a5092933110b06fed9c37b85d7fe23",
+        "sha256": "787477d6083d16639d7fb5e8a1f6d482f0a2b774a01ef12d6453781db8fe260c"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-musllinux_1_1_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "e1a5092933110b06fed9c37b85d7fe23",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 1185876,
+      "upload_time": "2026-06-17T07:56:17",
+      "upload_time_iso_8601": "2026-06-17T07:56:17.919761Z",
+      "url": "https://files.pythonhosted.org/packages/b7/07/1ef0c29ff25fa664b54d383bd3bd3f1ddc4e08ae45685c5c13fbcee9a056/python_calamine-0.7.0-cp313-cp313-musllinux_1_1_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "105dac9e60085b6be34048c6eb907085dda3d5ef7e7e93a475ceb102d5584e1f",
+        "md5": "fac2ccb7c90c87d4dccf32724a74993f",
+        "sha256": "f06bf321068544486f17d76a52cd204bc22b78efa705072b6df9daa5275e9e34"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-musllinux_1_1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "fac2ccb7c90c87d4dccf32724a74993f",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 1163074,
+      "upload_time": "2026-06-17T07:56:19",
+      "upload_time_iso_8601": "2026-06-17T07:56:19.636489Z",
+      "url": "https://files.pythonhosted.org/packages/10/5d/ac9e60085b6be34048c6eb907085dda3d5ef7e7e93a475ceb102d5584e1f/python_calamine-0.7.0-cp313-cp313-musllinux_1_1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "7adcf7f2f0d54bf399c3f53ea4528079eb713e5a25de4a8c3ba36342ce433670",
+        "md5": "91399f4db172379a34c0e9381f8dff74",
+        "sha256": "a2392b5527ea957974fba68a2c2a82fc7fb43352fb89c937268724d032fbf81b"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-win32.whl",
+      "has_sig": false,
+      "md5_digest": "91399f4db172379a34c0e9381f8dff74",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 731927,
+      "upload_time": "2026-06-17T07:56:21",
+      "upload_time_iso_8601": "2026-06-17T07:56:21.321623Z",
+      "url": "https://files.pythonhosted.org/packages/7a/dc/f7f2f0d54bf399c3f53ea4528079eb713e5a25de4a8c3ba36342ce433670/python_calamine-0.7.0-cp313-cp313-win32.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "a8205acd97f68026c9b87fbf0dc08e55b198fc12b87ce8db45c74b753c6394a1",
+        "md5": "92e5a21979125d562714037b734016eb",
+        "sha256": "ea5a213d525ce491d96c3c4ec2ff640b87ebbc1d0900c5aaefaea21a905925bf"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "92e5a21979125d562714037b734016eb",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 769123,
+      "upload_time": "2026-06-17T07:56:22",
+      "upload_time_iso_8601": "2026-06-17T07:56:22.937472Z",
+      "url": "https://files.pythonhosted.org/packages/a8/20/5acd97f68026c9b87fbf0dc08e55b198fc12b87ce8db45c74b753c6394a1/python_calamine-0.7.0-cp313-cp313-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "98617ec51e2cc68b4aaad79f7990a82848a8566473d26cdb34faa969f4854271",
+        "md5": "5d4924ecc6dc5124be00832798562f81",
+        "sha256": "0781d538803bfadd67ca8904d00ec310f4f3018e07c23a15d36bd2f98c60d6e9"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp313-cp313-win_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "5d4924ecc6dc5124be00832798562f81",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": ">=3.10",
+      "size": 751147,
+      "upload_time": "2026-06-17T07:56:24",
+      "upload_time_iso_8601": "2026-06-17T07:56:24.370073Z",
+      "url": "https://files.pythonhosted.org/packages/98/61/7ec51e2cc68b4aaad79f7990a82848a8566473d26cdb34faa969f4854271/python_calamine-0.7.0-cp313-cp313-win_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "6a2333e122924b2393e5cbe303be49fa8986057e2a53de28305c6103b035429e",
+        "md5": "1c8af77c9db7d14f2b58469bc329cb55",
+        "sha256": "4061912f08ee82fc380969ff661108a00517bb3e42d7f2d876eca8f737183526"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-macosx_10_12_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "1c8af77c9db7d14f2b58469bc329cb55",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 874726,
+      "upload_time": "2026-06-17T07:56:25",
+      "upload_time_iso_8601": "2026-06-17T07:56:25.851443Z",
+      "url": "https://files.pythonhosted.org/packages/6a/23/33e122924b2393e5cbe303be49fa8986057e2a53de28305c6103b035429e/python_calamine-0.7.0-cp314-cp314-macosx_10_12_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "37e11199f6ff2c8f2d09013fa4669c40759ad3992295cd53ed9fcbbdf91f5e24",
+        "md5": "8b7bd07d7fe58eb1b8cdb58be16e8040",
+        "sha256": "734373a08c5adeb3fe20dd855e44eb441613bfe9d38e284c637232ebbc03d40d"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "8b7bd07d7fe58eb1b8cdb58be16e8040",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 861998,
+      "upload_time": "2026-06-17T07:56:27",
+      "upload_time_iso_8601": "2026-06-17T07:56:27.565266Z",
+      "url": "https://files.pythonhosted.org/packages/37/e1/1199f6ff2c8f2d09013fa4669c40759ad3992295cd53ed9fcbbdf91f5e24/python_calamine-0.7.0-cp314-cp314-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "61242088bd4d4934a85c83fdcb744bb2a4b10d5e3fec50b30733bcab4e034f0b",
+        "md5": "d0de90f92e5b46723e39be4c2f0fbead",
+        "sha256": "da645a52bab8cc7ff9845cbb210f7067aa3aceed87209d74a178d675aeefb490"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "d0de90f92e5b46723e39be4c2f0fbead",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 932850,
+      "upload_time": "2026-06-17T07:56:29",
+      "upload_time_iso_8601": "2026-06-17T07:56:29.131717Z",
+      "url": "https://files.pythonhosted.org/packages/61/24/2088bd4d4934a85c83fdcb744bb2a4b10d5e3fec50b30733bcab4e034f0b/python_calamine-0.7.0-cp314-cp314-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "58de0338973f6964b5395f2a2909aae9cba5d5199285eed45cfc95da57122a58",
+        "md5": "2f9772ae3f44ca8e915af68d2aab6d72",
+        "sha256": "6e970ea30bd6f559062ae1c6e3ba5da1f84c06c998f9fda576ae5edd361eff5e"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "2f9772ae3f44ca8e915af68d2aab6d72",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 913304,
+      "upload_time": "2026-06-17T07:56:30",
+      "upload_time_iso_8601": "2026-06-17T07:56:30.917835Z",
+      "url": "https://files.pythonhosted.org/packages/58/de/0338973f6964b5395f2a2909aae9cba5d5199285eed45cfc95da57122a58/python_calamine-0.7.0-cp314-cp314-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "9a0f67e6878b85deac656fcfc4558fa3d89dd8a6829d972740d93e91b397a939",
+        "md5": "3f8ea187352c09e841920ba0af7a419a",
+        "sha256": "bff4b303c370396d3faae00c5ec7ce3a85cb6630b7c22c07808d7df86395fb71"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "has_sig": false,
+      "md5_digest": "3f8ea187352c09e841920ba0af7a419a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1084456,
+      "upload_time": "2026-06-17T07:56:32",
+      "upload_time_iso_8601": "2026-06-17T07:56:32.801661Z",
+      "url": "https://files.pythonhosted.org/packages/9a/0f/67e6878b85deac656fcfc4558fa3d89dd8a6829d972740d93e91b397a939/python_calamine-0.7.0-cp314-cp314-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "44e894de2c7d10b7303d359cbae2f62d624a50ab7971913a49a78c922d1db0e8",
+        "md5": "10515ec84c5609e487f4664fad9b5b90",
+        "sha256": "0989b7df34e75b95556180459a8ed5ef22a602897d6a0fe7aa5313e1d01a4585"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "has_sig": false,
+      "md5_digest": "10515ec84c5609e487f4664fad9b5b90",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 974767,
+      "upload_time": "2026-06-17T07:56:34",
+      "upload_time_iso_8601": "2026-06-17T07:56:34.419353Z",
+      "url": "https://files.pythonhosted.org/packages/44/e8/94de2c7d10b7303d359cbae2f62d624a50ab7971913a49a78c922d1db0e8/python_calamine-0.7.0-cp314-cp314-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "dfdda4ab9ec12ecaf57fe78852b1baa3d6e8f612a74cac32d129e5f96e6e59b1",
+        "md5": "9fa92d719d7c5de59933ba90186be5be",
+        "sha256": "c51425f832f3d7cf86e63abbe74acfd3f761a75703af97569acbeb7459cc3627"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "9fa92d719d7c5de59933ba90186be5be",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 951954,
+      "upload_time": "2026-06-17T07:56:36",
+      "upload_time_iso_8601": "2026-06-17T07:56:36.189437Z",
+      "url": "https://files.pythonhosted.org/packages/df/dd/a4ab9ec12ecaf57fe78852b1baa3d6e8f612a74cac32d129e5f96e6e59b1/python_calamine-0.7.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "d8d25e79a701d0571ddca7c54fb6d2da85ef109e6fa9063270fb60b79e45de4f",
+        "md5": "0806f89726ca587fa702c83e0b0d7bfa",
+        "sha256": "65db9d875e42945d3ac64fdfd80987b853b9c366531ee4b8a5933800b922628c"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-manylinux_2_5_i686.manylinux1_i686.whl",
+      "has_sig": false,
+      "md5_digest": "0806f89726ca587fa702c83e0b0d7bfa",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 999603,
+      "upload_time": "2026-06-17T07:56:37",
+      "upload_time_iso_8601": "2026-06-17T07:56:37.887805Z",
+      "url": "https://files.pythonhosted.org/packages/d8/d2/5e79a701d0571ddca7c54fb6d2da85ef109e6fa9063270fb60b79e45de4f/python_calamine-0.7.0-cp314-cp314-manylinux_2_5_i686.manylinux1_i686.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "f244e1a4f4a8877e4c20c301a2176914919d8a6278e6b40644e6bc6e0be0dcd6",
+        "md5": "191dea379f024af95a3a441c511723fd",
+        "sha256": "a0767e550aa2105693e2952cae2bc6ac17fe2173e4fe516eeef9ce85a833148d"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-musllinux_1_1_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "191dea379f024af95a3a441c511723fd",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1108203,
+      "upload_time": "2026-06-17T07:56:39",
+      "upload_time_iso_8601": "2026-06-17T07:56:39.485218Z",
+      "url": "https://files.pythonhosted.org/packages/f2/44/e1a4f4a8877e4c20c301a2176914919d8a6278e6b40644e6bc6e0be0dcd6/python_calamine-0.7.0-cp314-cp314-musllinux_1_1_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "ab2459b6bf11920371fcce310f3205806c20a23fc32ff273aad9e4f982299a61",
+        "md5": "7494fd6c712ffa1263ad2d49ce0cbfa4",
+        "sha256": "c67bba764b27df79840ca0517c50cde4897a22f6b84581f85d1087cd583991a0"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-musllinux_1_1_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "7494fd6c712ffa1263ad2d49ce0cbfa4",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1187103,
+      "upload_time": "2026-06-17T07:56:41",
+      "upload_time_iso_8601": "2026-06-17T07:56:41.142222Z",
+      "url": "https://files.pythonhosted.org/packages/ab/24/59b6bf11920371fcce310f3205806c20a23fc32ff273aad9e4f982299a61/python_calamine-0.7.0-cp314-cp314-musllinux_1_1_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "5c01deb1c9cad4b35600cffd2af71eaba49c7e1362bc044bfc27fe992921bc9f",
+        "md5": "9ce9d9a1cb6c1c75a92575a608279d9f",
+        "sha256": "654640f5ceb59c82380ea6ea464c5a6a135af557ff90da2a10a64ac62a91a4b2"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-musllinux_1_1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "9ce9d9a1cb6c1c75a92575a608279d9f",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1162619,
+      "upload_time": "2026-06-17T07:56:43",
+      "upload_time_iso_8601": "2026-06-17T07:56:43.436968Z",
+      "url": "https://files.pythonhosted.org/packages/5c/01/deb1c9cad4b35600cffd2af71eaba49c7e1362bc044bfc27fe992921bc9f/python_calamine-0.7.0-cp314-cp314-musllinux_1_1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "fbefb249fa35ed3358b1ba6eb9ec783b1d6f05f07e56daadc1b171a0e040179f",
+        "md5": "811c6898e85a7d598877309de54b676c",
+        "sha256": "fa6042ad523118f033fcdbfd572c38ef00c235f727fbd3d9ae453d328044bb27"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-macosx_10_12_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "811c6898e85a7d598877309de54b676c",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 874464,
+      "upload_time": "2026-06-17T07:56:50",
+      "upload_time_iso_8601": "2026-06-17T07:56:50.061730Z",
+      "url": "https://files.pythonhosted.org/packages/fb/ef/b249fa35ed3358b1ba6eb9ec783b1d6f05f07e56daadc1b171a0e040179f/python_calamine-0.7.0-cp314-cp314t-macosx_10_12_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "987de63ac31f5fc50d90ded95be0e0b94f087ac820f7a4d0a1d75d7367679705",
+        "md5": "7bb0bc4bf32f18e4ed24608a39b39222",
+        "sha256": "1197202d9713c279ee79ac85e93d50f740a9f21704b269414a7b3a0e7be5637b"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "7bb0bc4bf32f18e4ed24608a39b39222",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 859533,
+      "upload_time": "2026-06-17T07:56:51",
+      "upload_time_iso_8601": "2026-06-17T07:56:51.660435Z",
+      "url": "https://files.pythonhosted.org/packages/98/7d/e63ac31f5fc50d90ded95be0e0b94f087ac820f7a4d0a1d75d7367679705/python_calamine-0.7.0-cp314-cp314t-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "0dddd8251893f69c6cbd1bded451f5e0ed6a00227f20173521a8edeb0c7cdb9b",
+        "md5": "0662ba9d47ff7326fd1f03ddf576ca29",
+        "sha256": "d0577d7021d54ba578b695b9516e45623f2f4a806286a4f89471da71975366d3"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "0662ba9d47ff7326fd1f03ddf576ca29",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 929335,
+      "upload_time": "2026-06-17T07:56:53",
+      "upload_time_iso_8601": "2026-06-17T07:56:53.269603Z",
+      "url": "https://files.pythonhosted.org/packages/0d/dd/d8251893f69c6cbd1bded451f5e0ed6a00227f20173521a8edeb0c7cdb9b/python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "3f3033c35058bb249cc17dfd7f2f8d4f2237e5de3ccf7e3393483f93c2c191ae",
+        "md5": "401930033818e2d0a336009e09dd2a7a",
+        "sha256": "5e74cab8566a91e3ff994f64c90cc239100c89e60a310d95e775eacbf39f1387"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "401930033818e2d0a336009e09dd2a7a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 915210,
+      "upload_time": "2026-06-17T07:56:55",
+      "upload_time_iso_8601": "2026-06-17T07:56:55.280742Z",
+      "url": "https://files.pythonhosted.org/packages/3f/30/33c35058bb249cc17dfd7f2f8d4f2237e5de3ccf7e3393483f93c2c191ae/python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_armv7l.manylinux2014_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "0610b0097896bb7f0d628c98e91098bebfdc7814b0c37166298ff1746a2328ea",
+        "md5": "9e1793e4d1b7daf0de89a1bba24306a7",
+        "sha256": "b9d4ff2695b0b36ec34c019b221335f21cc951172f6c1e3b5b068c993af09df2"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "has_sig": false,
+      "md5_digest": "9e1793e4d1b7daf0de89a1bba24306a7",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1082099,
+      "upload_time": "2026-06-17T07:56:56",
+      "upload_time_iso_8601": "2026-06-17T07:56:56.995468Z",
+      "url": "https://files.pythonhosted.org/packages/06/10/b0097896bb7f0d628c98e91098bebfdc7814b0c37166298ff1746a2328ea/python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "9ea3b19b67b3b4340645f59547a87decb494d79618000e7021951214797b8f64",
+        "md5": "a9c0db1d4c95fb568120bc1cf8d8d097",
+        "sha256": "5a9699688b554d8d4ca28a41c0132f2d2b8cddb1a41f64aed5fe3aac410420f0"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "has_sig": false,
+      "md5_digest": "a9c0db1d4c95fb568120bc1cf8d8d097",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 974138,
+      "upload_time": "2026-06-17T07:56:58",
+      "upload_time_iso_8601": "2026-06-17T07:56:58.871195Z",
+      "url": "https://files.pythonhosted.org/packages/9e/a3/b19b67b3b4340645f59547a87decb494d79618000e7021951214797b8f64/python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_s390x.manylinux2014_s390x.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "4607bfef244c49d94a03e0d1039efd49acc59fd5d8f28f1e8219e3abb755062a",
+        "md5": "26639f1d11749c0b962ce40019e4232a",
+        "sha256": "4e8d68592b6f085b940573872738a2b8c5b2d284c2705dfd996f4cf54e8c1305"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "26639f1d11749c0b962ce40019e4232a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 952227,
+      "upload_time": "2026-06-17T07:57:00",
+      "upload_time_iso_8601": "2026-06-17T07:57:00.476111Z",
+      "url": "https://files.pythonhosted.org/packages/46/07/bfef244c49d94a03e0d1039efd49acc59fd5d8f28f1e8219e3abb755062a/python_calamine-0.7.0-cp314-cp314t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "6736a8c38cbe317571f3504f0436b18439008d994c2c52b6af432e96054c030c",
+        "md5": "4b712da072e72cc404ec4ce25bf22db9",
+        "sha256": "2fb0b12533d51c5aaaf41e12cadb69bc2c0c11ac3980cc9e2dbf53f4ae9d1fc4"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-manylinux_2_5_i686.manylinux1_i686.whl",
+      "has_sig": false,
+      "md5_digest": "4b712da072e72cc404ec4ce25bf22db9",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 999381,
+      "upload_time": "2026-06-17T07:57:02",
+      "upload_time_iso_8601": "2026-06-17T07:57:02.147951Z",
+      "url": "https://files.pythonhosted.org/packages/67/36/a8c38cbe317571f3504f0436b18439008d994c2c52b6af432e96054c030c/python_calamine-0.7.0-cp314-cp314t-manylinux_2_5_i686.manylinux1_i686.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "73c07400fcb038149ad4235e3619afde169079286134b17f71f58eb48b05796e",
+        "md5": "d011fb1ac3a0aeeb121249739abb4b00",
+        "sha256": "964bd1d97aa31756ec828667770eb1c6743e71d842cd8df55c00936d5adb44e3"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-musllinux_1_1_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "d011fb1ac3a0aeeb121249739abb4b00",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1106171,
+      "upload_time": "2026-06-17T07:57:03",
+      "upload_time_iso_8601": "2026-06-17T07:57:03.874273Z",
+      "url": "https://files.pythonhosted.org/packages/73/c0/7400fcb038149ad4235e3619afde169079286134b17f71f58eb48b05796e/python_calamine-0.7.0-cp314-cp314t-musllinux_1_1_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "984aaad7e2e4fc91b5cea93436974691f8a0915ac298f706e8639e9f1ce85bc4",
+        "md5": "79d47acb7bc80fba9409c42b3174a665",
+        "sha256": "3b4e1eb11f1a55e115ec128a112ed559386bc6a35870e1e239689184b19b9aad"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-musllinux_1_1_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "79d47acb7bc80fba9409c42b3174a665",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1189692,
+      "upload_time": "2026-06-17T07:57:05",
+      "upload_time_iso_8601": "2026-06-17T07:57:05.690436Z",
+      "url": "https://files.pythonhosted.org/packages/98/4a/aad7e2e4fc91b5cea93436974691f8a0915ac298f706e8639e9f1ce85bc4/python_calamine-0.7.0-cp314-cp314t-musllinux_1_1_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "3ee89ddef4984dc5cc011d06a4e949a25559ee725a5eb83e0e639a61d8533945",
+        "md5": "da6eef780eaf38704ef5b0b41552e4f7",
+        "sha256": "b4ed89541b715ba22d853e7ab79b4947dd894bdad1de2baa4d0ed0d8a960c0a5"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-musllinux_1_1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "da6eef780eaf38704ef5b0b41552e4f7",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 1163571,
+      "upload_time": "2026-06-17T07:57:07",
+      "upload_time_iso_8601": "2026-06-17T07:57:07.510387Z",
+      "url": "https://files.pythonhosted.org/packages/3e/e8/9ddef4984dc5cc011d06a4e949a25559ee725a5eb83e0e639a61d8533945/python_calamine-0.7.0-cp314-cp314t-musllinux_1_1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "0b5535cfd1b76905de5926ee172ca62984ca729229c2617befd3745b36928367",
+        "md5": "a6439f7cd766693b9a30acfd1b753181",
+        "sha256": "fd1a5c751351a6c70a3274dcf980858e6064a919fe2b213d534538c1b593db54"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "a6439f7cd766693b9a30acfd1b753181",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 783958,
+      "upload_time": "2026-06-17T07:57:09",
+      "upload_time_iso_8601": "2026-06-17T07:57:09.132892Z",
+      "url": "https://files.pythonhosted.org/packages/0b/55/35cfd1b76905de5926ee172ca62984ca729229c2617befd3745b36928367/python_calamine-0.7.0-cp314-cp314t-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "a04b30fd385a172c194954c16d5975d0a32b3071142e16356fa13c79a56381f9",
+        "md5": "2a21e27dc4dce51d0e11bc019db31d8a",
+        "sha256": "963c24437b6c2508d493d1c4f9e7084394a58dfd764e3a56acfed34a3c1bab38"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314t-win_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "2a21e27dc4dce51d0e11bc019db31d8a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 750748,
+      "upload_time": "2026-06-17T07:57:10",
+      "upload_time_iso_8601": "2026-06-17T07:57:10.906219Z",
+      "url": "https://files.pythonhosted.org/packages/a0/4b/30fd385a172c194954c16d5975d0a32b3071142e16356fa13c79a56381f9/python_calamine-0.7.0-cp314-cp314t-win_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "8052e8079813dbdb4e463c046409614268461330f35deac79a8dc30b79647f25",
+        "md5": "35e57f46fcaf61fedf217a0c48ea3b24",
+        "sha256": "0bdc3014368624983f882c7b00499fc99dfa30f101da1fbdd626ab72a7e309b3"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-win32.whl",
+      "has_sig": false,
+      "md5_digest": "35e57f46fcaf61fedf217a0c48ea3b24",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 718984,
+      "upload_time": "2026-06-17T07:56:45",
+      "upload_time_iso_8601": "2026-06-17T07:56:45.099705Z",
+      "url": "https://files.pythonhosted.org/packages/80/52/e8079813dbdb4e463c046409614268461330f35deac79a8dc30b79647f25/python_calamine-0.7.0-cp314-cp314-win32.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "1dd0bf756dc64af321a1974c963eace78c46e8321b313a55c04eaf3e9496bad7",
+        "md5": "8693e1797836b9275658923519d69e22",
+        "sha256": "666f37db1793d124308f88d72c24050d30ca23f3a32bb1aee6e3de31055311f7"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "8693e1797836b9275658923519d69e22",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 768366,
+      "upload_time": "2026-06-17T07:56:46",
+      "upload_time_iso_8601": "2026-06-17T07:56:46.662970Z",
+      "url": "https://files.pythonhosted.org/packages/1d/d0/bf756dc64af321a1974c963eace78c46e8321b313a55c04eaf3e9496bad7/python_calamine-0.7.0-cp314-cp314-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "2dc9f31bf6c1ba9d66abb93eaead3dcb82526d3c0df975d4532a0aa59144f1cc"
+      },
+      "digests": {
+        "blake2b_256": "e5744659f2add47ff25f537db72b67b9f7d5706c422b642ec35239a1501ffb94",
+        "md5": "e801eba829bef0d1c189af4b55d2460d",
+        "sha256": "38d2bed213e6709b1bec388a535e8eb336bc300a6fc2a2081dadb2591f412b93"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-cp314-cp314-win_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "e801eba829bef0d1c189af4b55d2460d",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": ">=3.10",
+      "size": 752638,
+      "upload_time": "2026-06-17T07:56:48",
+      "upload_time_iso_8601": "2026-06-17T07:56:48.231477Z",
+      "url": "https://files.pythonhosted.org/packages/e5/74/4659f2add47ff25f537db72b67b9f7d5706c422b642ec35239a1501ffb94/python_calamine-0.7.0-cp314-cp314-win_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "fb429e37adf2ee48055c64c37ab1d04049a0d26e2cf9ecfdb736476939c1c2d6",
+        "md5": "b8556fd507be3b2322287fee3a0c955a",
+        "sha256": "aeed620fc236594ae0f8bb746842e1e7415358f675c82755f208603e81c69d3f"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-macosx_10_12_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "b8556fd507be3b2322287fee3a0c955a",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 874683,
+      "upload_time": "2026-06-17T07:57:12",
+      "upload_time_iso_8601": "2026-06-17T07:57:12.686088Z",
+      "url": "https://files.pythonhosted.org/packages/fb/42/9e37adf2ee48055c64c37ab1d04049a0d26e2cf9ecfdb736476939c1c2d6/python_calamine-0.7.0-pp311-pypy311_pp73-macosx_10_12_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "b3e9d76daf2c2a3119761e5417b0806fca142520525b7b15df9fa1f9c516ac9d",
+        "md5": "ffef4305029cc6b8170c7401a285cfcb",
+        "sha256": "56088429588f7d2279e547dc92a24c334e4852edabd39411228147448c71a11b"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "ffef4305029cc6b8170c7401a285cfcb",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 871627,
+      "upload_time": "2026-06-17T07:57:14",
+      "upload_time_iso_8601": "2026-06-17T07:57:14.641600Z",
+      "url": "https://files.pythonhosted.org/packages/b3/e9/d76daf2c2a3119761e5417b0806fca142520525b7b15df9fa1f9c516ac9d/python_calamine-0.7.0-pp311-pypy311_pp73-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "ba1f18b4f004394a48f4db3761a3d31520c9658773a5170b93ee2b4c59b9dfdc",
+        "md5": "135f699d799e0b9cfaf5d58027a3f645",
+        "sha256": "d61f499c885b49ebdcafed432964aecac3a514b453a1d667204d16cf24a723f3"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "135f699d799e0b9cfaf5d58027a3f645",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 942225,
+      "upload_time": "2026-06-17T07:57:16",
+      "upload_time_iso_8601": "2026-06-17T07:57:16.287757Z",
+      "url": "https://files.pythonhosted.org/packages/ba/1f/18b4f004394a48f4db3761a3d31520c9658773a5170b93ee2b4c59b9dfdc/python_calamine-0.7.0-pp311-pypy311_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "f96f9e72a09aee853712bd68c71c6fef9d292685e62eec5e822b6b1efbb31ba6",
+        "md5": "7c9b2d5d1206ba92f2aa51dc3d51bedc",
+        "sha256": "89e632c18db8ffa4e2bc99ef7edf9bb77c582faa537f90bb3f90dbf7a7e5dfc7"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "7c9b2d5d1206ba92f2aa51dc3d51bedc",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 957343,
+      "upload_time": "2026-06-17T07:57:18",
+      "upload_time_iso_8601": "2026-06-17T07:57:18.247519Z",
+      "url": "https://files.pythonhosted.org/packages/f9/6f/9e72a09aee853712bd68c71c6fef9d292685e62eec5e822b6b1efbb31ba6/python_calamine-0.7.0-pp311-pypy311_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "50a9a02357cb8fdd2216326a0adc9b30eb796f25cb1ec1055930cb784f66ab57",
+        "md5": "1561a1f0957e166aefa6e7e4f5d9b7c6",
+        "sha256": "762278feae6f1e2a34d0f13f0a0c6cb13438cb9cefddb60cedaa1bbcbe8109cb"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-manylinux_2_5_i686.manylinux1_i686.whl",
+      "has_sig": false,
+      "md5_digest": "1561a1f0957e166aefa6e7e4f5d9b7c6",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 1009366,
+      "upload_time": "2026-06-17T07:57:19",
+      "upload_time_iso_8601": "2026-06-17T07:57:19.951373Z",
+      "url": "https://files.pythonhosted.org/packages/50/a9/a02357cb8fdd2216326a0adc9b30eb796f25cb1ec1055930cb784f66ab57/python_calamine-0.7.0-pp311-pypy311_pp73-manylinux_2_5_i686.manylinux1_i686.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "a85c6a70f78d5525c8647e0a1719aea9b5cb3a766e62d9e5a34ff478ad6e32f2",
+        "md5": "8a270740823680f93c433c88ac280396",
+        "sha256": "b238e2967965dfd3570db18d3729d999eca6627c6e3e709bca6f3799550f073b"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-musllinux_1_1_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "8a270740823680f93c433c88ac280396",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 1117760,
+      "upload_time": "2026-06-17T07:57:21",
+      "upload_time_iso_8601": "2026-06-17T07:57:21.594301Z",
+      "url": "https://files.pythonhosted.org/packages/a8/5c/6a70f78d5525c8647e0a1719aea9b5cb3a766e62d9e5a34ff478ad6e32f2/python_calamine-0.7.0-pp311-pypy311_pp73-musllinux_1_1_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "5e0f50bf86a0c95d04058206b1215075160111fcfdb97e8adda6c1732c6ab8d3",
+        "md5": "3e14e79131902f4e99e27ac95a18a537",
+        "sha256": "88686ddf303ea335306682e238a0338db9b62ee5092041058b51fc163c3a4672"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-musllinux_1_1_armv7l.whl",
+      "has_sig": false,
+      "md5_digest": "3e14e79131902f4e99e27ac95a18a537",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 1196275,
+      "upload_time": "2026-06-17T07:57:23",
+      "upload_time_iso_8601": "2026-06-17T07:57:23.252540Z",
+      "url": "https://files.pythonhosted.org/packages/5e/0f/50bf86a0c95d04058206b1215075160111fcfdb97e8adda6c1732c6ab8d3/python_calamine-0.7.0-pp311-pypy311_pp73-musllinux_1_1_armv7l.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "adc6d1e8fffd471dc8c15b05f6f15497a755481ac7f4f5529819efba2291b040"
+      },
+      "digests": {
+        "blake2b_256": "928dc011d02261e533a3aaa0ca86cfe6b7c09c93edac5d23d94f0edb6342a38a",
+        "md5": "ceef42713f897ced7f5e8fa6ceacb465",
+        "sha256": "ec389593a47eff9da0f2e2928d6d2bfce9eb87c0102a1d9569e9ba20f55738fc"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0-pp311-pypy311_pp73-musllinux_1_1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "ceef42713f897ced7f5e8fa6ceacb465",
+      "packagetype": "bdist_wheel",
+      "python_version": "pp311",
+      "requires_python": ">=3.10",
+      "size": 1169727,
+      "upload_time": "2026-06-17T07:57:24",
+      "upload_time_iso_8601": "2026-06-17T07:57:24.728808Z",
+      "url": "https://files.pythonhosted.org/packages/92/8d/c011d02261e533a3aaa0ca86cfe6b7c09c93edac5d23d94f0edb6342a38a/python_calamine-0.7.0-pp311-pypy311_pp73-musllinux_1_1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "ab0b81a04d6b50c6761906e5bbb3c23341540dfd072d1826de53f02a2b4e4fe0",
+        "md5": "45c0fb59820e74489879cc60546e0b84",
+        "sha256": "761fc39ddc22736b261c46888d83649f1ab4207a4e2090f0066f0d09e1a0d691"
+      },
+      "downloads": -1,
+      "filename": "python_calamine-0.7.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "45c0fb59820e74489879cc60546e0b84",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.10",
+      "size": 136922,
+      "upload_time": "2026-06-17T07:57:26",
+      "upload_time_iso_8601": "2026-06-17T07:57:26.300704Z",
+      "url": "https://files.pythonhosted.org/packages/ab/0b/81a04d6b50c6761906e5bbb3c23341540dfd072d1826de53f02a2b4e4fe0/python_calamine-0.7.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "vulnerabilities": []
+}

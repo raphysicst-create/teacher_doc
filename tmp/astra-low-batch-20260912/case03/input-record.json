@@ -1,0 +1,14 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "authorization": "이 실험 astra-light 수준으로 5건 정도 랜덤 배치로 돌려서 기존 ouput 폴더의 최종 산출물들처럼 나오는지 확인해줘",
+  "scope": "같은 입력의 독립 재작성 시험; 별도 문안 승인 발언 또는 검토 점수 없음",
+  "request_sha256": "18338b57ba7a724a84a7a27d6cac8698f8aaa0c4ae2c0e85897548246ced67d7",
+  "draft_sha256": "32e30b804b4b2b7bd3cfd1648649168c58b08f8d527c1ff237b88d427e34ca26",
+  "instruction_hashes": {
+    "CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    ".claude\\skills\\hwpx\\SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961"
+  },
+  "guide": "find_tasks 120초 timeout; 나머지 조회 미실행",
+  "related": "related_lookup --search 2026학년도 2학기 1회고사 exit1"
+}

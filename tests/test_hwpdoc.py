@@ -49,6 +49,44 @@ class RunnerTests(unittest.TestCase):
         self.m['draft_approval']['confirmed'] = False
         self.assertTrue(any('확인 기록' in x for x in h.prerequisite_errors(self.m)))
 
+    def test_reviewed_unknown_origin_requires_real_render_and_preserves_origin(self):
+        for render_exit in (0, 1):
+            with self.subTest(render_exit=render_exit):
+                self.m['job_id'] = 'unknown-' + str(render_exit)
+                self.m['base_provenance'] = 'unconfirmed'
+                self.m['template'] = {'id': 'reviewed-fixture', 'version': '1', 'sha256': h.sha(self.source)}
+                self.approve()
+                with patch.object(h, 'template_file', return_value=self.source), \
+                     patch('hwpdoc_templates.registration_dependencies', return_value=[self.source]):
+                    r = self.report()
+                    def run(argv, **kwargs):
+                        return (render_exit, 'render fixture') if 'render_check.py' in str(argv[0]) else (0, 'PASS')
+                    with patch.object(h, 'run', side_effect=run) as calls:
+                        h.validate_document(r)
+                    self.assertTrue(any('render_check.py' in str(c.args[0][0]) for c in calls.call_args_list))
+                    self.assertEqual(r['stages']['render']['status'], 'pass' if render_exit == 0 else 'fail')
+                    self.assertEqual(h.read_json(self.manifest)['base_provenance'], 'unconfirmed')
+
+    def test_unknown_origin_without_reviewed_registration_stays_unconfirmed(self):
+        self.m['base_provenance'] = 'unconfirmed'; self.approve()
+        r = self.report()
+        with patch.object(h, 'run', return_value=(0, 'PASS')):
+            h.validate_document(r)
+        self.assertEqual(r['stages']['render']['status'], 'unconfirmed')
+
+    def test_consumed_paragraph_observation_artifacts_invalidate_status_when_changed(self):
+        for name in ('proof.pdf', 'proof.png'):
+            (self.root / name).write_bytes(b'SYNTHETIC OBSERVATION FIXTURE')
+        receipt = self.root / 'paragraph-review.json'
+        h.write_json(receipt, {'pdf': {'path': 'proof.pdf'}, 'images': [{'path': 'proof.png'}]})
+        self.m['paragraph_visual_record'] = 'paragraph-review.json'; self.approve()
+        r = self.report()
+        # Successful external validation is simulated; this verifies receipt freshness tracking.
+        with patch.object(h, 'run', return_value=(0, 'PASS')):
+            h.validate_document(r)
+        (self.root / 'proof.png').write_bytes(b'CHANGED')
+        self.assertIn(str((self.root / 'proof.png').resolve()), h.freshness(r))
+
     def test_changed_approved_value_rejected(self):
         self.m['shared_values']['date'] = 'invented'
         self.assertTrue(any('input_sha256' in x for x in h.prerequisite_errors(self.m)))

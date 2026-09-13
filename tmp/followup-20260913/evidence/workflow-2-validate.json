@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"job_id\": \"eval-01-2-1\",\n  \"status\": \"pass\",\n  \"report\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\workflow\\\\.hwpdoc\\\\jobs\\\\eval-01-2-1\\\\report.json\",\n  \"changed_files\": [],\n  \"copy\": null,\n  \"next_action\": \"사람 최종 검토; 발송 전 한글로 열어 확인해주세요\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hwpdoc.py",
+    "--workspace",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\workflow",
+    "validate",
+    "--job",
+    "eval-01-2-1"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 33.12412667274475,
+  "recorded_at": "2026-09-13T02:15:08.144699+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

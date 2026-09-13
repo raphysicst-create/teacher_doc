@@ -1,0 +1,17 @@
+{
+  "unique_rows": 176,
+  "current_count_sum": 176,
+  "active_followup_rows": 57,
+  "initial_verdicts_unchanged": true,
+  "old_integration_json_unchanged": true,
+  "all_evidence_hashes_match": true,
+  "historical_evidence_hash_drift": [],
+  "source_documents_unchanged": true,
+  "previous_report_preserved": true,
+  "new_app_tests_run": false,
+  "release_gate_rechecked": true,
+  "report_sha256": "2c7c27bafc6fa65fbfc0d369618af6ba7e5351960b83e9596ff7144ac4c0f331",
+  "all_report_links_exist": true,
+  "links_checked": 185,
+  "source_files_checked": 263
+}

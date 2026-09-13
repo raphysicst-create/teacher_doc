@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "archives": [
+    {
+      "id": "PyMuPDF==1.28.0",
+      "destination": "sources/pymupdf-1.28.0.tar.gz",
+      "sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d",
+      "bytes": 87637751,
+      "url": "https://files.pythonhosted.org/packages/8e/e9/6d6c5d6c0a3551bffd47681a6240caf941727f195b45593cf20ab36f018f/pymupdf-1.28.0.tar.gz",
+      "modified": false
+    },
+    {
+      "id": "MuPDF==1.28.0",
+      "destination": "sources/mupdf-1.28.0-source.tar.gz",
+      "sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2",
+      "bytes": 68923736,
+      "url": "https://mupdf.com/downloads/archive/mupdf-1.28.0-source.tar.gz",
+      "modified": false
+    }
+  ],
+  "source_bundle_issues": [],
+  "cpp_rebuild": "not_run",
+  "release_status": "blocked"
+}

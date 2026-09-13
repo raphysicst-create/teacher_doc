@@ -1,0 +1,166 @@
+{
+  "at": "2026-09-12T13:37:47.126425+09:00",
+  "baseline": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_1회고사_가정통신문.hwpx",
+  "candidate": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\fresh-notice-reproduction-20260912\\2026학년도_2학기_1회고사_안내_검토초안.hwpx",
+  "candidate_sha256": "db16e864a49f6541f4d89f8e04490fadd8380e7fadf8d7a9f912fed41f904f20",
+  "source_changes": [],
+  "table_counts": [
+    3,
+    3
+  ],
+  "titles": [
+    [
+      {
+        "text": "2026학년도 2학기 1회고사 실시 안내",
+        "height": "1500"
+      }
+    ],
+    [
+      {
+        "text": "2026학년도 2학기 1회고사 실시 안내",
+        "height": "1500"
+      }
+    ]
+  ],
+  "cell_differences": [
+    {
+      "table": 0,
+      "address": "{\"colAddr\": \"2\", \"rowAddr\": \"0\"}",
+      "before": {
+        "cellAddr": {
+          "colAddr": "2",
+          "rowAddr": "0"
+        },
+        "cellSpan": {
+          "colSpan": "1",
+          "rowSpan": "2"
+        },
+        "cellSz": {
+          "width": "13765",
+          "height": "7555"
+        },
+        "cellMargin": {
+          "left": "140",
+          "right": "140",
+          "top": "140",
+          "bottom": "140"
+        },
+        "text": "화동중 제2026-○호 ☎ 교무실 562-2032 ☎ 행정실 562-2031 http://k-hwadong.gwe.ms.kr 우)26116    강원도 정선군 화암면 그림바위길50"
+      },
+      "after": {
+        "cellAddr": {
+          "colAddr": "2",
+          "rowAddr": "0"
+        },
+        "cellSpan": {
+          "colSpan": "1",
+          "rowSpan": "2"
+        },
+        "cellSz": {
+          "width": "13765",
+          "height": "7555"
+        },
+        "cellMargin": {
+          "left": "140",
+          "right": "140",
+          "top": "140",
+          "bottom": "140"
+        },
+        "text": "통신문번호: 미부여 ☎ 교무실 562-2032 ☎ 행정실 562-2031 http://k-hwadong.gwe.ms.kr 우)26116    강원도 정선군 화암면 그림바위길50"
+      }
+    },
+    {
+      "table": 1,
+      "address": "{\"colAddr\": \"2\", \"rowAddr\": \"5\"}",
+      "before": {
+        "cellAddr": {
+          "colAddr": "2",
+          "rowAddr": "5"
+        },
+        "cellSpan": {
+          "colSpan": "2",
+          "rowSpan": "1"
+        },
+        "cellSz": {
+          "width": "27380",
+          "height": "1180"
+        },
+        "cellMargin": {
+          "left": "510",
+          "right": "510",
+          "top": "140",
+          "bottom": "140"
+        },
+        "text": "중식 후 하교"
+      },
+      "after": {
+        "cellAddr": {
+          "colAddr": "2",
+          "rowAddr": "5"
+        },
+        "cellSpan": {
+          "colSpan": "2",
+          "rowSpan": "1"
+        },
+        "cellSz": {
+          "width": "27380",
+          "height": "1180"
+        },
+        "cellMargin": {
+          "left": "510",
+          "right": "510",
+          "top": "140",
+          "bottom": "140"
+        },
+        "text": "2학년 중식 후 하교"
+      }
+    },
+    {
+      "table": 2,
+      "address": "{\"colAddr\": \"4\", \"rowAddr\": \"3\"}",
+      "before": {
+        "cellAddr": {
+          "colAddr": "4",
+          "rowAddr": "3"
+        },
+        "cellSpan": {
+          "colSpan": "1",
+          "rowSpan": "1"
+        },
+        "cellSz": {
+          "width": "6975",
+          "height": "2885"
+        },
+        "cellMargin": {
+          "left": "510",
+          "right": "510",
+          "top": "140",
+          "bottom": "140"
+        },
+        "text": "미응시"
+      },
+      "after": {
+        "cellAddr": {
+          "colAddr": "4",
+          "rowAddr": "3"
+        },
+        "cellSpan": {
+          "colSpan": "1",
+          "rowSpan": "1"
+        },
+        "cellSz": {
+          "width": "6975",
+          "height": "2885"
+        },
+        "cellMargin": {
+          "left": "510",
+          "right": "510",
+          "top": "140",
+          "bottom": "140"
+        },
+        "text": "미응시 "
+      }
+    }
+  ],
+  "interpretation": "Text/geometry differences require reviewer interpretation; this is not an automatic quality score."
+}

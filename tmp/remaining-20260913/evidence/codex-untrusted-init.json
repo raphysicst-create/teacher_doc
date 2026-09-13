@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"initialized\",\n  \"workspace\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-untrusted\",\n  \"instructions\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\remaining-20260913\\\\codex-untrusted\\\\AGENTS.md\",\n  \"mode\": \"created\",\n  \"hooks\": \"unregistered\",\n  \"actual_skill_loaded\": \"unverified\",\n  \"next_action\": \"doctor 실행; 앱 스킬 본문 실제 로딩 및 훅 등록·신뢰·차단을 별도 확인하세요\"\n}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\code\\scripts\\hwpdoc.py",
+    "init",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\remaining-20260913\\codex-untrusted",
+    "--app",
+    "codex",
+    "--skill-name",
+    "hwpx"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc",
+  "seconds": 1.6651151180267334,
+  "at": "2026-09-13T04:17:24.860939+00:00"
+}

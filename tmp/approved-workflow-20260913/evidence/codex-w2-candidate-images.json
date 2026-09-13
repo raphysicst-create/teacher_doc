@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"pdf\": {\"path\": \"inputs/approved-workflow/w2-candidate.pdf\", \"sha256\": \"cd88355eaab98b15dcc180ac33b0f2c4de9d345edd097e329865a2420ea457a6\"}, \"images\": [{\"path\": \"inputs/approved-workflow/w2-candidate-preview/page-001.png\", \"sha256\": \"2ab3256508c935be9d0edcf6943d3d478e505fcdaa6293a359ea0720e0fab5a3\", \"page\": 1}], \"visual_review\": \"unconfirmed\"}\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\scripts\\hwpdoc_preview.py",
+    "--pdf",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked\\inputs\\approved-workflow\\w2-candidate.pdf",
+    "--output-dir",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\remaining-20260913\\codex-marked\\inputs\\approved-workflow\\w2-candidate-preview"
+  ],
+  "at": "2026-09-13T07:11:44.694858+00:00",
+  "seconds": 0.7580022811889648,
+  "app": "codex"
+}

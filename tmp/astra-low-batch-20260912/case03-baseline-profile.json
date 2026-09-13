@@ -1,0 +1,84 @@
+{
+  "path": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_1회고사_가통배부_기안문.hwpx",
+  "sha256": "f609c44f6e1d6d3978c86533199a1ade8cbfca69a95fbcce09f4740fe75041f5",
+  "paragraphs": [
+    {
+      "runs": [
+        {
+          "text": "화동중학교",
+          "height": "2200",
+          "bold": true,
+          "hangul_font": "굴림"
+        }
+      ],
+      "text": "화동중학교"
+    },
+    {
+      "runs": [
+        {
+          "text": "수신  내부결재",
+          "height": "1200",
+          "bold": false,
+          "hangul_font": "굴림"
+        }
+      ],
+      "text": "수신  내부결재"
+    },
+    {
+      "runs": [
+        {
+          "text": "(경유)",
+          "height": "1200",
+          "bold": false,
+          "hangul_font": "굴림"
+        }
+      ],
+      "text": "(경유)"
+    },
+    {
+      "runs": [
+        {
+          "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부",
+          "height": "1200",
+          "bold": true,
+          "hangul_font": "굴림"
+        }
+      ],
+      "text": "제목 2026학년도 2학기 1회고사 가정통신문 배부"
+    },
+    {
+      "runs": [
+        {
+          "text": "1. 관련: 화동중학교-○○○○(확인 후 기재)",
+          "height": "1200",
+          "bold": false,
+          "hangul_font": "굴림"
+        }
+      ],
+      "text": "1. 관련: 화동중학교-○○○○(확인 후 기재)"
+    },
+    {
+      "runs": [
+        {
+          "text": "2. 화동중학교 2026학년도 2학기 1회고사 가정통신문을 배부하고자 합니다.",
+          "height": "1200",
+          "bold": false,
+          "hangul_font": "굴림"
+        }
+      ],
+      "text": "2. 화동중학교 2026학년도 2학기 1회고사 가정통신문을 배부하고자 합니다."
+    },
+    {
+      "runs": [
+        {
+          "text": "붙임  2026학년도 2학기 1회고사 관련 가정통신문 1부.  끝.",
+          "height": "1200",
+          "bold": false,
+          "hangul_font": "굴림"
+        }
+      ],
+      "text": "붙임  2026학년도 2학기 1회고사 관련 가정통신문 1부.  끝."
+    }
+  ],
+  "tables": []
+}

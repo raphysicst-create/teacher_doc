@@ -1,0 +1,9 @@
+{
+  "status": "blocked",
+  "issue_counts": {
+    "dependency_license_unconfirmed": 8,
+    "privacy_unconfirmed": 70,
+    "rights_unconfirmed": 70
+  },
+  "release_ready": false
+}

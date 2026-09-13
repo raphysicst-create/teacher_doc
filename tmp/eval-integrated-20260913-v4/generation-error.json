@@ -1,0 +1,6 @@
+{
+  "at": "2026-09-13T12:11:07.247810+00:00",
+  "error": "Validation self-link was checked before validation.json was written",
+  "effect": "Rows/report written correctly; final validation/audit completion not yet written",
+  "recovery": "Preserve previous-report and rows; correct derived counters, then create and verify validation receipt."
+}

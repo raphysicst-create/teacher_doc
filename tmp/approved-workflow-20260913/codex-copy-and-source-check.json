@@ -1,0 +1,24 @@
+{
+  "protected_files": 460,
+  "changed": [],
+  "copies": [
+    {
+      "app": "Codex Desktop",
+      "workflow": "w1",
+      "files": {
+        "검증완료_검토대기.hwpx": true,
+        "검토보고서.json": true,
+        "검토보고서.md": true
+      }
+    },
+    {
+      "app": "Codex Desktop",
+      "workflow": "w2",
+      "files": {
+        "검증완료_검토대기.hwpx": true,
+        "검토보고서.json": true,
+        "검토보고서.md": true
+      }
+    }
+  ]
+}

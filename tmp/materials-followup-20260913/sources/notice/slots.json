@@ -1,0 +1,373 @@
+{
+  "source": "knowledge\\examples\\(화동중학교-2348 (첨부)) 가정통신문(기출문제 공개 안내).hwpx",
+  "version": 1,
+  "usage": "Fill with scripts/edit_hwpx.py template.hwpx -o out.hwpx --slot-json values.json",
+  "slots": [
+    {
+      "key": "p:2",
+      "kind": "paragraph",
+      "index": 2,
+      "max_chars": 5,
+      "text_len": 6,
+      "text_len_nospace": 5,
+      "preview": "가정통신문"
+    },
+    {
+      "key": "p:3",
+      "kind": "paragraph",
+      "index": 3,
+      "max_chars": 12,
+      "text_len": 13,
+      "text_len_nospace": 12,
+      "preview": "화동중 제2025-17호"
+    },
+    {
+      "key": "p:4",
+      "kind": "paragraph",
+      "index": 4,
+      "max_chars": 12,
+      "text_len": 14,
+      "text_len_nospace": 12,
+      "preview": "☎ 교무실 562-2032"
+    },
+    {
+      "key": "p:5",
+      "kind": "paragraph",
+      "index": 5,
+      "max_chars": 12,
+      "text_len": 14,
+      "text_len_nospace": 12,
+      "preview": "☎ 행정실 562-2031"
+    },
+    {
+      "key": "p:6",
+      "kind": "paragraph",
+      "index": 6,
+      "max_chars": 26,
+      "text_len": 26,
+      "text_len_nospace": 26,
+      "preview": "http://k-hwadong.gwe.ms.kr"
+    },
+    {
+      "key": "p:7",
+      "kind": "paragraph",
+      "index": 7,
+      "max_chars": 7,
+      "text_len": 9,
+      "text_len_nospace": 7,
+      "preview": "우)26116"
+    },
+    {
+      "key": "p:8",
+      "kind": "paragraph",
+      "index": 8,
+      "max_chars": 16,
+      "text_len": 19,
+      "text_len_nospace": 16,
+      "preview": "강원도 정선군 화암면 그림바위길50"
+    },
+    {
+      "key": "p:9",
+      "kind": "paragraph",
+      "index": 9,
+      "max_chars": 2,
+      "text_len": 5,
+      "text_len_nospace": 2,
+      "preview": "교 훈"
+    },
+    {
+      "key": "p:10",
+      "kind": "paragraph",
+      "index": 10,
+      "max_chars": 8,
+      "text_len": 8,
+      "text_len_nospace": 8,
+      "preview": "성실.근면.개척"
+    },
+    {
+      "key": "p:11",
+      "kind": "paragraph",
+      "index": 11,
+      "max_chars": 17,
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "preview": "실력과 인성을 겸비한 사람을 기르는 학교"
+    },
+    {
+      "key": "p:13",
+      "kind": "paragraph",
+      "index": 13,
+      "max_chars": 8,
+      "text_len": 10,
+      "text_len_nospace": 8,
+      "preview": "기출문제 공개 안내"
+    },
+    {
+      "key": "p:14",
+      "kind": "paragraph",
+      "index": 14,
+      "max_chars": 34,
+      "text_len": 44,
+      "text_len_nospace": 34,
+      "preview": "학부모님, 안녕하십니까? 항상 가정에 건강과 행복이 가득하시길 기원합니다."
+    },
+    {
+      "key": "p:15",
+      "kind": "paragraph",
+      "index": 15,
+      "max_chars": 90,
+      "text_len": 116,
+      "text_len_nospace": 90,
+      "preview": "본교에서는 공교육 경쟁력 향상을 위한 사교육비 경감 대책의 일환으로 기출문제를 공개하여 학생들의 학습 능력을 신장하는데 도움을 주고자 합니다. ..."
+    },
+    {
+      "key": "p:16",
+      "kind": "paragraph",
+      "index": 16,
+      "max_chars": 6,
+      "text_len": 6,
+      "text_len_nospace": 6,
+      "preview": "감사합니다."
+    },
+    {
+      "key": "p:19",
+      "kind": "paragraph",
+      "index": 19,
+      "max_chars": 15,
+      "text_len": 19,
+      "text_len_nospace": 15,
+      "preview": "2025학년도 기출문제 공개 안내"
+    },
+    {
+      "key": "p:21",
+      "kind": "paragraph",
+      "index": 21,
+      "max_chars": 6,
+      "text_len": 9,
+      "text_len_nospace": 6,
+      "preview": "1. 공개 원칙"
+    },
+    {
+      "key": "p:22",
+      "kind": "paragraph",
+      "index": 22,
+      "max_chars": 43,
+      "text_len": 54,
+      "text_len_nospace": 43,
+      "preview": "1) 공개 해당 고사: 2022~2024학년도 1,3학년 기출문제(직전 3개년 기출문제 해당)"
+    },
+    {
+      "key": "p:23",
+      "kind": "paragraph",
+      "index": 23,
+      "max_chars": 10,
+      "text_len": 15,
+      "text_len_nospace": 10,
+      "preview": "2) 장소: 본교 교무실"
+    },
+    {
+      "key": "p:24",
+      "kind": "paragraph",
+      "index": 24,
+      "max_chars": 13,
+      "text_len": 20,
+      "text_len_nospace": 13,
+      "preview": "3) 내용: 출제 원안지 및 정답"
+    },
+    {
+      "key": "p:25",
+      "kind": "paragraph",
+      "index": 25,
+      "max_chars": 27,
+      "text_len": 36,
+      "text_len_nospace": 27,
+      "preview": "4) 공개기간: 해당 고사 3일 전부터 3일간 진행(주말제외)"
+    },
+    {
+      "key": "p:26",
+      "kind": "paragraph",
+      "index": 26,
+      "max_chars": 21,
+      "text_len": 30,
+      "text_len_nospace": 21,
+      "preview": "5) 공개대상: 본교 재학생 중 신청자 본인만 가능"
+    },
+    {
+      "key": "p:27",
+      "kind": "paragraph",
+      "index": 27,
+      "max_chars": 32,
+      "text_len": 44,
+      "text_len_nospace": 32,
+      "preview": "6) 제공방법: 열람만 가능, 촬영 및 복사는 금지, 복사물 제공하지 않음."
+    },
+    {
+      "key": "p:29",
+      "kind": "paragraph",
+      "index": 29,
+      "max_chars": 6,
+      "text_len": 8,
+      "text_len_nospace": 6,
+      "preview": "2. 주의사항"
+    },
+    {
+      "key": "p:30",
+      "kind": "paragraph",
+      "index": 30,
+      "max_chars": 56,
+      "text_len": 75,
+      "text_len_nospace": 56,
+      "preview": "기출 문제는 저작권법에 의하여 보호되는 저작물로 저작권자의 동의 없이 사적으로 활용 또는제 3자에게 양도·판매하는 것은 불법임."
+    },
+    {
+      "key": "p:31",
+      "kind": "paragraph",
+      "index": 31,
+      "max_chars": 24,
+      "text_len": 37,
+      "text_len_nospace": 24,
+      "preview": "- 학교 기출문제를 학원, 인터넷 업체 등에 판매하는 행위"
+    },
+    {
+      "key": "p:32",
+      "kind": "paragraph",
+      "index": 32,
+      "max_chars": 25,
+      "text_len": 38,
+      "text_len_nospace": 25,
+      "preview": "- 학원, 인터넷 업체 등에서 학교 기출문제를 판매하는 행위"
+    },
+    {
+      "key": "p:34",
+      "kind": "paragraph",
+      "index": 34,
+      "max_chars": 6,
+      "text_len": 9,
+      "text_len_nospace": 6,
+      "preview": "3. 기대 효과"
+    },
+    {
+      "key": "p:35",
+      "kind": "paragraph",
+      "index": 35,
+      "max_chars": 34,
+      "text_len": 45,
+      "text_len_nospace": 34,
+      "preview": "1) 재학생 대상으로 기출문제를 제공함으로써 사교육비 경감에 기여할 수 있음."
+    },
+    {
+      "key": "p:36",
+      "kind": "paragraph",
+      "index": 36,
+      "max_chars": 41,
+      "text_len": 54,
+      "text_len_nospace": 41,
+      "preview": "2) 학생 및 학부모의 알권리를 충족시키고 불법적인 방법으로 기출문제를 취득하는 것을 방지함."
+    },
+    {
+      "key": "p:37",
+      "kind": "paragraph",
+      "index": 37,
+      "max_chars": 38,
+      "text_len": 50,
+      "text_len_nospace": 38,
+      "preview": "3) 기출문제를 공개하여 학생들의 성적 불평등을 해소하고 균형적인 학력 향상을 기대함."
+    },
+    {
+      "key": "p:40",
+      "kind": "paragraph",
+      "index": 40,
+      "max_chars": 10,
+      "text_len": 12,
+      "text_len_nospace": 10,
+      "preview": "2025. 3. 25."
+    },
+    {
+      "key": "p:42",
+      "kind": "paragraph",
+      "index": 42,
+      "max_chars": 12,
+      "text_len": 12,
+      "text_len_nospace": 12,
+      "preview": "화동중학교장[직인생략]"
+    },
+    {
+      "key": "cell:0:0:0",
+      "kind": "cell",
+      "table": 0,
+      "row": 0,
+      "col": 0,
+      "occurrence": 0,
+      "max_chars": 0,
+      "text_len": 0,
+      "text_len_nospace": 0,
+      "empty": true,
+      "preview": ""
+    },
+    {
+      "key": "cell:0:0:1",
+      "kind": "cell",
+      "table": 0,
+      "row": 0,
+      "col": 1,
+      "occurrence": 0,
+      "max_chars": 5,
+      "text_len": 6,
+      "text_len_nospace": 5,
+      "empty": false,
+      "preview": "가정통신문"
+    },
+    {
+      "key": "cell:0:0:2",
+      "kind": "cell",
+      "table": 0,
+      "row": 0,
+      "col": 2,
+      "occurrence": 0,
+      "max_chars": 85,
+      "text_len": 95,
+      "text_len_nospace": 85,
+      "empty": false,
+      "preview": "화동중 제2025-17호☎ 교무실 562-2032☎ 행정실 562-2031http://k-hwadong.gwe.ms.kr우)26116 강원도 정..."
+    },
+    {
+      "key": "cell:0:1:0",
+      "kind": "cell",
+      "table": 0,
+      "row": 1,
+      "col": 0,
+      "occurrence": 0,
+      "max_chars": 10,
+      "text_len": 13,
+      "text_len_nospace": 10,
+      "empty": false,
+      "preview": "교 훈성실.근면.개척"
+    },
+    {
+      "key": "cell:0:1:1",
+      "kind": "cell",
+      "table": 0,
+      "row": 1,
+      "col": 1,
+      "occurrence": 0,
+      "max_chars": 17,
+      "text_len": 22,
+      "text_len_nospace": 17,
+      "empty": false,
+      "preview": "실력과 인성을 겸비한 사람을 기르는 학교"
+    },
+    {
+      "key": "cell:1:0:0",
+      "kind": "cell",
+      "table": 1,
+      "row": 0,
+      "col": 0,
+      "occurrence": 0,
+      "max_chars": 397,
+      "text_len": 548,
+      "text_len_nospace": 397,
+      "empty": false,
+      "preview": "2025학년도 기출문제 공개 안내 1. 공개 원칙 1) 공개 해당 고사: 2022~2024학년도 1,3학년 기출문제(직전 3개년 기출문제 해당)..."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "returncode": 0,
+  "stdout": "VALID: C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\materials-followup-20260913\\sources\\conversion-native.hwpx\n  All structural checks passed.\n",
+  "stderr": "",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\scripts\\validate.py",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\materials-followup-20260913\\sources\\conversion-native.hwpx"
+  ]
+}

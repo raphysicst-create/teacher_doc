@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "steps": [
+    "find_tasks",
+    "get_task_guide",
+    "search_task_evidence",
+    "read_evidence"
+  ],
+  "conditions": [],
+  "exceptions": [],
+  "pending_items": [],
+  "reviewed_at": "2026-09-10T01:00:00+00:00",
+  "freshness": "verified",
+  "fixture_only": true,
+  "record": "SYNTHETIC_TEST_NOT_USER; fictitious source, not actual legal verification"
+}

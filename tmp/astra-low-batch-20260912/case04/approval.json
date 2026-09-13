@@ -1,0 +1,12 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning": "low",
+  "authorization": "이 실험 astra-light 수준으로 5건 정도 랜덤 배치로 돌려서 기존 ouput 폴더의 최종 산출물들처럼 나오는지 확인해줘",
+  "interpretation": "부모가 전달한 실제 요청에 근거한 동일 입력 재작성 승인; 새 발언·평가 생성 없음",
+  "request_sha256": "b30a32642334eac04760c3b450ae8672192d38aeb5ba3a90275459f3ceebb245",
+  "draft_sha256": "0f9e24793c85965028d3f2962e842c88fb19a98a2dc78e2ebd38941c4b9fbcf7",
+  "instructions": {
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\.claude\\skills\\hwpx\\SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961"
+  }
+}

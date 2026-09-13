@@ -1,0 +1,10 @@
+{
+  "status": "clean_candidate_checked",
+  "allowlisted_files": 103,
+  "generated_inventory": 1,
+  "text_files_scanned": 87,
+  "findings": [],
+  "single_image": "skills/hwpx/templates/base/Preview/PrvImage.png",
+  "image_observation": "Viewed with view_image: blank white preview; no school name, personal text, logo or sentinel visible",
+  "scope": "Actual release ZIP inventory/CRC/hash verification plus packaged textual assets and sole image. No five-location fault-injection sentinel trial performed. Upstream source archives preserved at independently verified vendor hashes."
+}

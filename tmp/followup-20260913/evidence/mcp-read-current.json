@@ -1,0 +1,87 @@
+{
+  "context": "Current Codex Desktop implementation session; actual exposed MCP calls; not isolated plugin acceptance",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "[포맷: HWPX | 페이지: 1]\n\n**화동중학교**\n\n수신 내부결재\n\n(경유)\n\n**제목  2026학년도 1학기 농어촌유학 거주비 지원금 성립전 예산 요구**\n\n1. 관련: 정책기획과-3100(2025. 3. 19.)\n\n2. 2026학년도 1학기 농어촌유학 거주비 지원금 교부와 관련하여 붙임과 같이 성립전 예산을 편성하여 운영하고자 합니다.\n\n붙임 성립전 예산 요구 신청서(농어촌 유학 거주비 지원금) 1부. 끝."
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "업무 후보 1개를 찾았습니다."
+          }
+        ],
+        "structuredContent": {
+          "schema_version": 1,
+          "status": "ok",
+          "summary": "업무 후보 1개를 찾았습니다.",
+          "effective_context": {
+            "task_facts": {},
+            "profile_id": "default",
+            "region": "gangwon",
+            "school_level": "middle",
+            "establishment_type": null,
+            "timezone": "Asia/Seoul",
+            "as_of": "2026-09-13",
+            "school_year": null,
+            "fiscal_year": null
+          },
+          "assumed_fields": [
+            {
+              "field": "region",
+              "source": "profile",
+              "reason": "저장된 프로필 적용"
+            },
+            {
+              "field": "school_level",
+              "source": "profile",
+              "reason": "저장된 프로필 적용"
+            },
+            {
+              "field": "as_of",
+              "source": "default",
+              "reason": "프로필 시간대의 오늘 날짜"
+            }
+          ],
+          "coverage": {
+            "scope": "registered_sources",
+            "support_level": "evidence_search",
+            "source_version_ids": [],
+            "core_items": [],
+            "issues": []
+          },
+          "data": {
+            "candidates": [
+              {
+                "task_id": "budget.request",
+                "name": "예산 요구",
+                "support_level": "detailed",
+                "additional_inputs": [],
+                "match_reason": "업무명·동의어 일치: 예산"
+              }
+            ],
+            "suggested_search_queries": [],
+            "total_candidates": 1,
+            "truncated": false
+          },
+          "missing_context": [],
+          "conflicts": [],
+          "warnings": [],
+          "index_version": "idx-3b083f2b7c784adcae8aede34f91aa7b",
+          "next_cursor": null
+        },
+        "isError": false
+      }
+    }
+  ]
+}

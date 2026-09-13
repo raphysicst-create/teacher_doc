@@ -1,0 +1,7 @@
+{"stage": "environment", "seconds": 0.781, "user": "22", "desktop": "Default"}
+
+{"stage": "module", "seconds": 0.781, "path": "C:\\Users\\22\\AppData\\Local\\HwpAutomation\\FilePathCheckerModule.dll", "exists": true}
+
+{"stage": "dispatch-start", "seconds": 0.781}
+
+{"stage": "worker-exit", "seconds": 25.187, "code": 124}

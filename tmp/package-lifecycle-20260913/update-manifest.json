@@ -1,0 +1,429 @@
+{
+  "version": 1,
+  "plugin_version": "0.1.0+codex.20260913131114",
+  "files": [
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/teacher_doc.py",
+      "destination": "scripts/teacher_doc.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/teacher_doc.ps1",
+      "destination": "scripts/teacher_doc.ps1"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc.py",
+      "destination": "scripts/hwpdoc.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc.ps1",
+      "destination": "scripts/hwpdoc.ps1"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc_config.py",
+      "destination": "scripts/hwpdoc_config.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc_runtime.py",
+      "destination": "scripts/hwpdoc_runtime.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc_templates.py",
+      "destination": "scripts/hwpdoc_templates.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc_workspace.py",
+      "destination": "scripts/hwpdoc_workspace.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc_setup.py",
+      "destination": "scripts/hwpdoc_setup.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc_preview.py",
+      "destination": "scripts/hwpdoc_preview.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/runtime.ps1",
+      "destination": "scripts/runtime.ps1"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hook.ps1",
+      "destination": "scripts/hook.ps1"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/install-dependencies.ps1",
+      "destination": "scripts/install-dependencies.ps1"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/hwpdoc_com_probe.py",
+      "destination": "scripts/hwpdoc_com_probe.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/render_check.py",
+      "destination": "scripts/render_check.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/fusion_timetable.py",
+      "destination": "scripts/fusion_timetable.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/budget_name_check.py",
+      "destination": "scripts/budget_name_check.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/related_lookup.py",
+      "destination": "scripts/related_lookup.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/refresh_reference.py",
+      "destination": "scripts/refresh_reference.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/validate_pipeline.py",
+      "destination": "scripts/validate_pipeline.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/scripts/log_review.py",
+      "destination": "scripts/log_review.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/validate.py",
+      "destination": "skills/hwpx/scripts/validate.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/text_extract.py",
+      "destination": "skills/hwpx/scripts/text_extract.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/page_guard.py",
+      "destination": "skills/hwpx/scripts/page_guard.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/edit_hwpx.py",
+      "destination": "skills/hwpx/scripts/edit_hwpx.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/content_guard.py",
+      "destination": "skills/hwpx/scripts/content_guard.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/build_hwpx.py",
+      "destination": "skills/hwpx/scripts/build_hwpx.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/create_document.py",
+      "destination": "skills/hwpx/scripts/create_document.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/analyze_template.py",
+      "destination": "skills/hwpx/scripts/analyze_template.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/fix_namespaces.py",
+      "destination": "skills/hwpx/scripts/fix_namespaces.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/finalize_hwpx.py",
+      "destination": "skills/hwpx/scripts/finalize_hwpx.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/hancom_com.py",
+      "destination": "skills/hwpx/scripts/hancom_com.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/gonmun_lint.py",
+      "destination": "skills/hwpx/scripts/gonmun_lint.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/hwpx_slots.py",
+      "destination": "skills/hwpx/scripts/hwpx_slots.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/office/pack.py",
+      "destination": "skills/hwpx/scripts/office/pack.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/scripts/office/unpack.py",
+      "destination": "skills/hwpx/scripts/office/unpack.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/.claude/hooks/protect_files.py",
+      "destination": ".claude/hooks/protect_files.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/.claude/hooks/event_adapter.py",
+      "destination": ".claude/hooks/event_adapter.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/.claude/hooks/audit_log.py",
+      "destination": ".claude/hooks/audit_log.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/.claude/hooks/stop_validator.py",
+      "destination": ".claude/hooks/stop_validator.py"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/SKILL.md",
+      "destination": "skills/hwpx/SKILL.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/references/workflow.md",
+      "destination": "skills/hwpx/references/workflow.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/references/editing-details.md",
+      "destination": "skills/hwpx/references/editing-details.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/references/xml-authoring.md",
+      "destination": "skills/hwpx/references/xml-authoring.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/references/hwpx-format.md",
+      "destination": "skills/hwpx/references/hwpx-format.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/references/jkf87-hwpx-skill-comparison.md",
+      "destination": "skills/hwpx/references/jkf87-hwpx-skill-comparison.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/distribution/requirements-base.txt",
+      "destination": "distribution/requirements-base.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/distribution/requirements-windows.txt",
+      "destination": "distribution/requirements-windows.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/distribution/requirements-school-data.txt",
+      "destination": "distribution/requirements-school-data.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/distribution/requirements-visual.txt",
+      "destination": "distribution/requirements-visual.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/distribution/README.md",
+      "destination": "distribution/README.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/distribution/CHANGELOG.md",
+      "destination": "distribution/CHANGELOG.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/report/header.xml",
+      "destination": "skills/hwpx/templates/report/header.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/report/section0.xml",
+      "destination": "skills/hwpx/templates/report/section0.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/proposal/header.xml",
+      "destination": "skills/hwpx/templates/proposal/header.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/proposal/section0.xml",
+      "destination": "skills/hwpx/templates/proposal/section0.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/gonmun/header.xml",
+      "destination": "skills/hwpx/templates/gonmun/header.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/gonmun/section0.xml",
+      "destination": "skills/hwpx/templates/gonmun/section0.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/minutes/header.xml",
+      "destination": "skills/hwpx/templates/minutes/header.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/minutes/section0.xml",
+      "destination": "skills/hwpx/templates/minutes/section0.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/version.xml",
+      "destination": "skills/hwpx/templates/base/version.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/settings.xml",
+      "destination": "skills/hwpx/templates/base/settings.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/META-INF/manifest.xml",
+      "destination": "skills/hwpx/templates/base/META-INF/manifest.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/META-INF/container.xml",
+      "destination": "skills/hwpx/templates/base/META-INF/container.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/META-INF/container.rdf",
+      "destination": "skills/hwpx/templates/base/META-INF/container.rdf"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/mimetype",
+      "destination": "skills/hwpx/templates/base/mimetype"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/Contents/section0.xml",
+      "destination": "skills/hwpx/templates/base/Contents/section0.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/Contents/header.xml",
+      "destination": "skills/hwpx/templates/base/Contents/header.xml"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/Contents/content.hpf",
+      "destination": "skills/hwpx/templates/base/Contents/content.hpf"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/Preview/PrvText.txt",
+      "destination": "skills/hwpx/templates/base/Preview/PrvText.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/skills/hwpx/templates/base/Preview/PrvImage.png",
+      "destination": "skills/hwpx/templates/base/Preview/PrvImage.png"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/.codex-plugin/plugin.json",
+      "destination": ".codex-plugin/plugin.json"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/.claude-plugin/plugin.json",
+      "destination": ".claude-plugin/plugin.json"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/LICENSE",
+      "destination": "LICENSE"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/Canine89-MIT.txt",
+      "destination": "licenses/Canine89-MIT.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/CHANGES.md",
+      "destination": "CHANGES.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/et-xmlfile/LICENCE.python",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.python"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/et-xmlfile/LICENCE.rst",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.rst"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/lxml/licenses/LICENSE.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSE.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/lxml/licenses/LICENSES.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSES.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/openpyxl/LICENCE.rst",
+      "destination": "licenses/dependencies/openpyxl/LICENCE.rst"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/PyMuPDF/COPYING",
+      "destination": "licenses/dependencies/PyMuPDF/COPYING"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pypdf/licenses/LICENSE",
+      "destination": "licenses/dependencies/pypdf/licenses/LICENSE"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/python-hwpx/licenses/LICENSE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/LICENSE"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/python-hwpx/licenses/NOTICE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/NOTICE"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/adodbapi/license.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/adodbapi/license.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/com/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/com/License.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+      "destination": "licenses/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/isapi/README.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/isapi/README.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/pythonwin/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/License.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/pywin32/licenses/win32/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/win32/License.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/xlrd/LICENSE",
+      "destination": "licenses/dependencies/xlrd/LICENSE"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/GPL-3.0-only.txt",
+      "destination": "licenses/GPL-3.0-only.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/MuPDF-README.txt",
+      "destination": "licenses/MuPDF-README.txt"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/NOTICE.md",
+      "destination": "NOTICE.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/SOURCE.md",
+      "destination": "SOURCE.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/sources/pymupdf-1.28.0.tar.gz",
+      "destination": "sources/pymupdf-1.28.0.tar.gz"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/sources/mupdf-1.28.0-source.tar.gz",
+      "destination": "sources/mupdf-1.28.0-source.tar.gz"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/SOURCE-BUNDLE.json",
+      "destination": "SOURCE-BUNDLE.json"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/python-calamine/calamine-LICENSE-MIT.md",
+      "destination": "licenses/dependencies/python-calamine/calamine-LICENSE-MIT.md"
+    },
+    {
+      "source": "distribution/lifecycle-test-source/teacher_doc/licenses/dependencies/python-calamine/LICENSE",
+      "destination": "licenses/dependencies/python-calamine/LICENSE"
+    }
+  ],
+  "dependency_reviews": [
+    "lxml==5.4.0",
+    "python-hwpx==2.23.0",
+    "pypdf==6.14.2",
+    "pywin32==312",
+    "openpyxl==3.1.5",
+    "et-xmlfile==2.0.0",
+    "python-calamine==0.7.0",
+    "PyMuPDF==1.28.0"
+  ],
+  "source_bundle": "distribution/lifecycle-test-source/teacher_doc/SOURCE-BUNDLE.json"
+}

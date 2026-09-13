@@ -1,0 +1,40 @@
+{
+  "scope": "Full-page pixel comparison of original HWP vs COM-saved HWPX PDFs at 72 dpi; no render-check override",
+  "pages": [
+    {
+      "page": 1,
+      "dimensions_equal": true,
+      "render_pixels_equal": true
+    },
+    {
+      "page": 2,
+      "dimensions_equal": true,
+      "render_pixels_equal": true
+    },
+    {
+      "page": 3,
+      "dimensions_equal": true,
+      "render_pixels_equal": true
+    },
+    {
+      "page": 4,
+      "dimensions_equal": true,
+      "render_pixels_equal": true
+    },
+    {
+      "page": 5,
+      "dimensions_equal": true,
+      "render_pixels_equal": true
+    },
+    {
+      "page": 6,
+      "dimensions_equal": true,
+      "render_pixels_equal": true
+    },
+    {
+      "page": 7,
+      "dimensions_equal": true,
+      "render_pixels_equal": true
+    }
+  ]
+}

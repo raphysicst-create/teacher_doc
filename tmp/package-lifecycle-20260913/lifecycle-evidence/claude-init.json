@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"initialized\",\n  \"workspace\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-claude\",\n  \"instructions\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-claude\\\\CLAUDE.md\",\n  \"mode\": \"created\",\n  \"hooks\": \"unregistered\",\n  \"actual_skill_loaded\": \"unverified\",\n  \"next_action\": \"doctor 실행; 앱 스킬 본문 실제 로딩 및 훅 등록·신뢰·차단을 별도 확인하세요\"\n}\n",
+  "stderr": "",
+  "at": "2026-09-13T13:10:59.803798+00:00",
+  "seconds": 0.8280000000013388,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\claude-config\\plugins\\cache\\teacher-doc-lifecycle-20260913\\teacher_doc\\0.1.0\\scripts\\teacher_doc.py",
+    "init",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-claude",
+    "--app",
+    "claude",
+    "--skill-name",
+    "hwpx"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

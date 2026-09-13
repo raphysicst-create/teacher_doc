@@ -1,0 +1,17 @@
+WARNING: 예산 초과를 렌더 확인 후 묵인했습니다 (11건) — 보고에 반드시 명시하십시오:
+  - 셀 입력값 글자 수 초과: table=2, row=2, col=4, max=3, input=4, text='100%'
+  - 셀 입력값 글자 수 초과: table=2, row=4, col=4, max=3, input=4, text='100%'
+  - 셀 입력값 글자 수 초과: table=2, row=8, col=4, max=3, input=4, text='100%'
+  - 셀 입력값 글자 수 초과: table=2, row=10, col=4, max=3, input=4, text='100%'
+  - 셀 입력값 글자 수 초과: table=2, row=12, col=5, max=26, input=27, text='피아노 코드 반주·몸타 리듬 창작 각 35%, 극음악 감상 30%'
+  - 셀 입력값 글자 수 초과: table=2, row=13, col=5, max=26, input=28, text='피아노 연주(음계·코드 25%, 악곡 40%), 랩 창작 35%'
+  - 셀 입력값 글자 수 초과: table=2, row=18, col=4, max=3, input=4, text='100%'
+  - 셀 입력값 글자 수 초과: table=2, row=18, col=5, max=26, input=27, text='옷차림 분석·소비자 문제 해결방안 각 30%, 도면 표현 40%'
+  - 셀 입력값 글자 수 초과: table=2, row=20, col=4, max=3, input=4, text='100%'
+  - 셀 입력값 글자 수 초과: table=2, row=20, col=5, max=34, input=37, text='가상공간 성찰일기 30%, 다문화사회 포스터·생명보호 기념일 홍보/연설 각 35%'
+  - 문단 입력값 글자 수 초과: index=14, max=149, input=150, text='본교의 교육 활동에 관심을 보내주시는 가정에 감사드립니다. 2026학년도 2학기 과목별 평가계획을 안내하오니 학생들의 자기주도적 학습에 많은 관심 부탁드립니다. 1학년은 자유학기로 지필고사 없이 과정중심평가(표의 과정형)를 실시하며, 성취도 대신 학습 과정과 성장을 기록합니다. 1학년 평가 비율은 계획에 명시된 경우만 표시하였습니다.'
+EDITED: C:\Users\22\Desktop\maintain\Hwp_doc\output\2026_2학기_평가계획_가정통신문.hwpx
+  text replacements applied: 0
+  cells updated: 89
+  paragraphs updated: 8
+  original package entries, header.xml, content.hpf, and BinData were preserved

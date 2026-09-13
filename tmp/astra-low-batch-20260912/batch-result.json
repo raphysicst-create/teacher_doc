@@ -1,0 +1,108 @@
+{
+  "finished_at": "2026-09-12T21:42:20.952867+09:00",
+  "configured_model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "generated": 5,
+  "rendered_one_page": 5,
+  "core_fact_checks": 68,
+  "core_fact_failures": 0,
+  "visual_findings": {
+    "case01": [
+      "출제연수 기안문",
+      "내용 재현 / 서식 차이",
+      "제목 굵기 빠짐. 문서 전체가 기존보다 약 19.2pt(6.8mm) 위로 이동. 날짜·시각·대상·장소·관련번호 일치, 요일 표시는 생략.",
+      "PDF/MD 참고 → 신규 XML",
+      "기준 HWPX 없어 page_guard 미실행"
+    ],
+    "case02": [
+      "평가계획 수립 기안문",
+      "내용 재현 / 작은 서식 보정 필요",
+      "제목 굵기·기관명·본문 서체 유지. 붙임 둘째 항 들여쓰기가 첫 항과 맞지 않음. 붙임 2건의 명칭·학년·수량은 일치.",
+      "기존 HWPX 슬롯 편집",
+      "page_guard 문단 예산 2건 FAIL"
+    ],
+    "case03": [
+      "1회고사 가통 배부 기안문",
+      "내용 재현 / 서식 차이",
+      "제목 굵기 빠짐, 기관명 아래 간격과 본문 줄바꿈 변화. 관련번호·시행일은 미확인 표시로 유지.",
+      "PDF/MD 참고 → 신규 XML",
+      "자기비교 page_guard는 독립 근거에서 제외"
+    ],
+    "case04": [
+      "2회고사 협의회 기안문",
+      "내용 재현 / 서식 차이",
+      "제목 굵기 빠짐, 수신·경유·제목 간격 변화. 계획 결재 후 번호·시행일 기재 상태 보존.",
+      "PDF/MD 참고 → 신규 XML",
+      "기준 HWPX 없어 page_guard 미실행"
+    ],
+    "case05": [
+      "2회고사 가정통신문",
+      "내용·양식 대체로 재현",
+      "제목 15pt·굵기, 표 3개의 행·열·병합·셀 크기·여백 동일. 8교시 과목과 5과목 범위·비율·문항 수 일치. 도입문 축약으로 표의 세로 위치는 달라짐.",
+      "고사안내 HWPX 슬롯 편집",
+      "page_guard 날짜 예산 11/10자 FAIL"
+    ]
+  },
+  "source_changes": [],
+  "baseline_changes": [],
+  "copies": [
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\Astra_low_무작위5건_비교결과.md",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\Astra_low_무작위5건_비교결과.md",
+      "sha256": "f64fd0d43809b20a081f84a99dd23967c4a6cafe414826a039adb77c32da89b2"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case01\\2026_2학기_1회고사_출제연수_기안문.hwpx",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case01\\2026_2학기_1회고사_출제연수_기안문.hwpx",
+      "sha256": "2f03ebc0c9e4a78e92c23ef7f7453b6506ea74abbdf220f79bddcbbcfcbee78b"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case01\\검증보고.md",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case01\\검증보고.md",
+      "sha256": "e3bd3385981790b855cc5eda6b04fa20a21bf63102ca9f7d32b59269eaa424c2"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case02\\2026_2학기_교과별평가계획수립_기안문_검토초안.hwpx",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case02\\2026_2학기_교과별평가계획수립_기안문_검토초안.hwpx",
+      "sha256": "ff3b8c278aaf8383a9e820d2646ef919f8771920917ae0d254b4fd630fe68b70"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case02\\검증보고서.md",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case02\\검증보고서.md",
+      "sha256": "41afbac6d2d29330e47c7df9eb66c9f0f7032e25d4588c1177bba554966aa404"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case03\\case03_2026학년도_2학기_1회고사_가정통신문_배부_검토초안.hwpx",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case03\\case03_2026학년도_2학기_1회고사_가정통신문_배부_검토초안.hwpx",
+      "sha256": "f5ae7c2fab1958ff97b4bdf86f62c8b9423a83163f0926e885450f8b92a2abd3"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case03\\case03_검증보고.md",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case03\\case03_검증보고.md",
+      "sha256": "81d0c4397f621db1f8e4c3061c52043052099c48368e8b1c75ac7fe85e8fc1d4"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case04\\2026학년도 2학기 2회고사 교과협의회 회의록_기안문.hwpx",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case04\\2026학년도 2학기 2회고사 교과협의회 회의록_기안문.hwpx",
+      "sha256": "44f37cb6b8231bc2514d06d5be0bea055c6fcdf39b318726866c3aeff71bb93a"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case04\\검증보고서.md",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case04\\검증보고서.md",
+      "sha256": "e482930f92e744bcb3aa0af4c9d2ffcd0f4c3ed272a9a3c046ac3441cbadace2"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case05\\2026학년도_2학기_2회고사_안내_검토초안.hwpx",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case05\\2026학년도_2학기_2회고사_안내_검토초안.hwpx",
+      "sha256": "a142e7ed072521757372fe29f9c75613e1fae801642304182d839c7f1459a3cc"
+    },
+    {
+      "source": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\case05\\검증보고.md",
+      "destination": "C:\\Users\\22\\OneDrive - 화동중학교\\작업 보고용\\astra-low-batch-20260912\\case05\\검증보고.md",
+      "sha256": "96416787bb6f98238a0fc041fa4d705a3c22ff5110466a4a12067c0006c96c57"
+    }
+  ],
+  "report": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\astra-low-batch-20260912\\Astra_low_무작위5건_비교결과.md",
+  "parent_generation_quality_corrections": 0,
+  "mid_batch_tool_or_skill_changes": 0
+}

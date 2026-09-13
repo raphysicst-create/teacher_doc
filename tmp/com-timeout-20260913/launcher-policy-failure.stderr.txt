@@ -1,0 +1,7 @@
+codex : File C:\Users\22\AppData\Roaming\npm\codex.ps1 cannot be loaded because running scripts is disabled on this sys
+tem. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ codex -a never exec --json -C C:/Users/22/Desktop/maintain/teacher_do ...
++ ~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess

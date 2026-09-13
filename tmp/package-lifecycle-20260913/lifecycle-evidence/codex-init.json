@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"initialized\",\n  \"workspace\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-codex\",\n  \"instructions\": \"C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\teacher_doc\\\\tmp\\\\package-lifecycle-20260913\\\\ws-codex\\\\AGENTS.md\",\n  \"mode\": \"created\",\n  \"hooks\": \"unregistered\",\n  \"actual_skill_loaded\": \"unverified\",\n  \"next_action\": \"doctor 실행; 앱 스킬 본문 실제 로딩 및 훅 등록·신뢰·차단을 별도 확인하세요\"\n}\n",
+  "stderr": "",
+  "at": "2026-09-13T13:06:53.552985+00:00",
+  "seconds": 0.9530000000013388,
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\codex-config\\plugins\\cache\\teacher-doc-lifecycle-20260913\\teacher_doc\\0.1.0\\scripts\\teacher_doc.py",
+    "init",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\ws-codex",
+    "--app",
+    "codex",
+    "--skill-name",
+    "hwpx"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

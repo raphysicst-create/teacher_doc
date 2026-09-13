@@ -1,0 +1,1870 @@
+{
+  "at": "2026-09-12T13:23:59.221834+09:00",
+  "files": {
+    "output\\2026_2학기_1회고사_가정통신문.hwpx": "1c4562ecc965366dea8344317cc91ed2fe760aeb91d59118a2f25d48c6bcdf98",
+    "CLAUDE.md": "3c6b850b05e8241d95a97f549692d6213f0b77443cfdfe46e7560169c5332a31",
+    ".claude\\skills\\hwpx\\SKILL.md": "ff6f001880b8ca11ae247bcff6db59e9997383d62fa5abc650d0e81d69f94961",
+    ".claude\\skills\\hwpx\\references\\editing-details.md": "74530af631b48bde49c94fcd10591bb7be090d93683cf3fd482f82996dae5808",
+    "knowledge\\templates\\가정통신문-고사안내\\budget.json": "bad8d3043aa81cbcbd2eb5ee8576489f874acd78e2b58220082495aacc0bd6be",
+    "knowledge\\templates\\가정통신문-고사안내\\README.md": "2d5603e15542199d80cda627911bc2d3ef61e173f05f00005879f6112dccde53",
+    "knowledge\\templates\\가정통신문-고사안내\\slots.json": "99ed4f81edaca95a66e7b7273c8999e33b58d67687f1e970dcc4ce7bbd9de922",
+    "knowledge\\templates\\가정통신문-고사안내\\structure.json": "8ef0295db10192bfeaa2183f12b34cbbebe34c9d4a358d286803d8f5f25f4975",
+    "knowledge\\templates\\가정통신문-고사안내\\양식.hwpx": "c3586a7b0364cc711951b0697837c70369462397ad58f2d25a7c066d7855dae1",
+    ".claude\\skills\\hwpx\\scripts\\analyze_template.py": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d",
+    ".claude\\skills\\hwpx\\scripts\\build_hwpx.py": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c",
+    ".claude\\skills\\hwpx\\scripts\\content_guard.py": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97",
+    ".claude\\skills\\hwpx\\scripts\\create_document.py": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9",
+    ".claude\\skills\\hwpx\\scripts\\edit_hwpx.py": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584",
+    ".claude\\skills\\hwpx\\scripts\\finalize_hwpx.py": "1832768cc6c0e3167bb4771d3582bba68982f9cff8c12dfa1fe1de52e216a0db",
+    ".claude\\skills\\hwpx\\scripts\\fix_namespaces.py": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a",
+    ".claude\\skills\\hwpx\\scripts\\gonmun_lint.py": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b",
+    ".claude\\skills\\hwpx\\scripts\\hwpx_slots.py": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d",
+    ".claude\\skills\\hwpx\\scripts\\page_guard.py": "12039b1a5306575b44728fa61910d9e0e27ec88ae545eb1dd2734ca53ee2010e",
+    ".claude\\skills\\hwpx\\scripts\\text_extract.py": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568",
+    ".claude\\skills\\hwpx\\scripts\\validate.py": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32",
+    ".claude\\skills\\hwpx\\scripts\\office\\pack.py": "07f20d46723bf7451d8088bf680daab67c02cffa2d0e6c5b8a5c79dca25580cf",
+    ".claude\\skills\\hwpx\\scripts\\office\\unpack.py": "13888a894d52ce2b8fdc72432bce1e3e8d78efeb214cbd5f4b87719ed40ef4e7"
+  },
+  "baseline": {
+    "path": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\output\\2026_2학기_1회고사_가정통신문.hwpx",
+    "sha256": "1c4562ecc965366dea8344317cc91ed2fe760aeb91d59118a2f25d48c6bcdf98",
+    "titles": [
+      {
+        "text": "2026학년도 2학기 1회고사 실시 안내",
+        "height": "1500"
+      }
+    ],
+    "tables": [
+      {
+        "index": 0,
+        "rows": "2",
+        "cols": "3",
+        "cells": [
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "11865",
+              "height": "3860"
+            },
+            "cellMargin": {
+              "left": "140",
+              "right": "140",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": ""
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "21805",
+              "height": "3860"
+            },
+            "cellMargin": {
+              "left": "140",
+              "right": "140",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": " 가정통신문"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "2"
+            },
+            "cellSz": {
+              "width": "13765",
+              "height": "7555"
+            },
+            "cellMargin": {
+              "left": "140",
+              "right": "140",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "화동중 제2026-○호 ☎ 교무실 562-2032 ☎ 행정실 562-2031 http://k-hwadong.gwe.ms.kr 우)26116    강원도 정선군 화암면 그림바위길50"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "11865",
+              "height": "3695"
+            },
+            "cellMargin": {
+              "left": "140",
+              "right": "140",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "교   훈 성실.근면.개척"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "21805",
+              "height": "3695"
+            },
+            "cellMargin": {
+              "left": "140",
+              "right": "140",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "실력과 인성을 겸비한 사람을 기르는 학교"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "rows": "11",
+        "cols": "4",
+        "cells": [
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "2",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "20130",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "학년 일자"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "2315"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "1학년"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "2315"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "2학년"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "5"
+            },
+            "cellSz": {
+              "width": "11355",
+              "height": "3080"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "10/27(화)"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "1교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "자습"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "2교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "국어"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "3교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "자습"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "4교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "수학"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": ""
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "2",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "27380",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "중식 후 하교"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "5"
+            },
+            "cellSz": {
+              "width": "11355",
+              "height": "3080"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "10/28(수)"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "1교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "자습"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "7"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "2교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "7"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "7"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "영어"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "8"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "3교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "8"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "8"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1185"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "과학"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "9"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "4교시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "9"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "정상수업"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "9"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "13690",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "역사"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "10"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "8775",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": ""
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "10"
+            },
+            "cellSpan": {
+              "colSpan": "2",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "27380",
+              "height": "1180"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "중식 후 정상수업"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "rows": "7",
+        "cols": "8",
+        "cells": [
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3465",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": ""
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3790",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": ""
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6330",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "국어"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "영어"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "4",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "수학"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "5",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6980",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "역사"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "6",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6010",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "사회"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "7",
+              "rowAddr": "0"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6645",
+              "height": "1380"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "과학"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "3"
+            },
+            "cellSz": {
+              "width": "3465",
+              "height": "8650"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "1학년"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3790",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "출 제 범 위"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6330",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "4",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "5",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "3"
+            },
+            "cellSz": {
+              "width": "6980",
+              "height": "8650"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": ""
+          },
+          {
+            "cellAddr": {
+              "colAddr": "6",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6010",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "7",
+              "rowAddr": "1"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6645",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3790",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "출 제 유 형"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6330",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "4",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "6",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6010",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "7",
+              "rowAddr": "2"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6645",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3790",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "출 제 문항수"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6330",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "4",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "6",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6010",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "7",
+              "rowAddr": "3"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6645",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "미응시"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "0",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "3"
+            },
+            "cellSz": {
+              "width": "3465",
+              "height": "8645"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "2학년"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3790",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "출 제 범 위"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6330",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "4-5단원"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "5-6과"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "4",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "3-4(1)단원"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "5",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6980",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "4-5단원"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "6",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "3"
+            },
+            "cellSz": {
+              "width": "6010",
+              "height": "8645"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": ""
+          },
+          {
+            "cellAddr": {
+              "colAddr": "7",
+              "rowAddr": "4"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6645",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "3-4단원"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3790",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "출 제 유 형"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6330",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 70%, 서·논술형 30%"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 85%, 서·논술형 15%"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "4",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 75%, 서·논술형 25%"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "5",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6980",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 85%, 서·논술형 15%"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "7",
+              "rowAddr": "5"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6645",
+              "height": "2880"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 80%, 서·논술형 20%"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "1",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "3790",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "출 제 문항수"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "2",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6330",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 16, 서·논술형 4"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "3",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 17, 서·논술형 3"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "4",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6975",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 15, 서·논술형 5"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "5",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6980",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 18, 서·논술형 2"
+          },
+          {
+            "cellAddr": {
+              "colAddr": "7",
+              "rowAddr": "6"
+            },
+            "cellSpan": {
+              "colSpan": "1",
+              "rowSpan": "1"
+            },
+            "cellSz": {
+              "width": "6645",
+              "height": "2885"
+            },
+            "cellMargin": {
+              "left": "510",
+              "right": "510",
+              "top": "140",
+              "bottom": "140"
+            },
+            "text": "선택형 17, 서·논술형 3"
+          }
+        ]
+      }
+    ]
+  },
+  "test_kind": "fresh_context_reproduction",
+  "prior_result_visible_to_writer": false,
+  "user_review_score": null
+}

@@ -1,0 +1,11 @@
+{
+  "knowledge/fill.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+  "knowledge/patch.hwpx": "f8356a49ebd5db6cac7a597d418e84ffa0bf2874752b4d14e8738a0dc6db6feb",
+  "knowledge/probe.txt": "f9588a6f1b233556f306fdde4cd8f86c65b2b33b518e17e9d83117fbbcc802a0",
+  "docs/probe.txt": "f9588a6f1b233556f306fdde4cd8f86c65b2b33b518e17e9d83117fbbcc802a0",
+  "output/mcp-copy.hwpx": "ad787935884aea19dff495892477554fbeca72c55d61ca91282ba76734037ec6",
+  "output/stop-limit.hwpx": "2dd4318d9da0f3b72c6e1ccb312765ece9d7649ddfafc001cdcfe9a380d7d707",
+  "logs/.stop_attempts": "d05199e38648f8ea1ba5fc1106c036de1528fa5a41709cbb0f0ad4a90ae96f6c",
+  "logs/.validate_state.json": "13cfc1387402780881a640495ef47f8bb3406e0800c60737eaf3b9708ebda0c5",
+  "logs/audit.jsonl": "d8e488b2b245fbda400cc2b22d3b407ccdb255b6e914bf5d2da34127bf447f07"
+}

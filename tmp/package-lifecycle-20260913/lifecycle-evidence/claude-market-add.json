@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "stdout": "Adding marketplace…√ Successfully added marketplace: teacher-doc-lifecycle-20260913 (declared in user settings)\n",
+  "stderr": "",
+  "at": "2026-09-13T13:04:27.667016+00:00",
+  "seconds": 1.9369999999980791,
+  "argv": [
+    "C:\\Users\\22\\.local\\bin\\claude.exe",
+    "plugin",
+    "marketplace",
+    "add",
+    "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\package-lifecycle-20260913\\market"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc",
+  "configuration_scope": "disposable child-process config only"
+}

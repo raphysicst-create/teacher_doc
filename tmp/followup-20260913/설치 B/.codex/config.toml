@@ -1,0 +1,17 @@
+# 부모+프로젝트 지침이 32 KiB를 넘으므로 잘림 방지. fallback/루트 마커는 사용자 설정 상속.
+project_doc_max_bytes = 65536
+
+[mcp_servers.school_task_guide]
+command = "C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe"
+args = ["-I", "-S", "-B", "-X", "utf8", "C:/Users/22/Desktop/develop/school task guide/mcp/school_task_guide/bootstrap.py", "serve"]
+cwd = "C:/Users/22/Desktop/develop/school task guide/mcp/school_task_guide"
+enabled_tools = ["find_tasks", "get_task_guide", "search_task_evidence", "read_evidence"]
+startup_timeout_sec = 120
+tool_timeout_sec = 120
+
+# .mcp.json의 같은 호스트 kordoc 설정 재사용. 별도 서버/설치는 만들지 않는다.
+[mcp_servers.kordoc]
+command = "npx"
+args = ["-y", "kordoc", "mcp"]
+startup_timeout_sec = 120
+tool_timeout_sec = 120

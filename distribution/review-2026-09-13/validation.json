@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-13T11:19:39.135626+00:00",
+  "files_reviewed": 101,
+  "rights_unconfirmed": 0,
+  "privacy_unconfirmed": 0,
+  "dependency_conditions_checked": 7,
+  "dependency_conditions_blocked": 1,
+  "gate_status": "blocked",
+  "gate_issues": [
+    {
+      "dependency": "xlrd==2.0.2",
+      "reason": "dependency_license_unconfirmed"
+    }
+  ],
+  "source_archives_unchanged": true,
+  "all_current_file_hashes_match": true,
+  "package_created": false,
+  "new_app_tests_run": false,
+  "report_sha256": "95101e83f03a1f077d07dea660d587643d5e2e7eab8b808741dff53e994bf252",
+  "rights_input_sha256": "2609cec017e6519f3588ef87291f55ec3aa413326221d908cc3ee2aac2c2bd98",
+  "source_bundle_sha256": "e795e430add628b0d3b5e11b49a2407ccd89cf025e2f5a11227b994f940c13e8",
+  "regression_tests": 48,
+  "regression_result": "PASS",
+  "regression_elapsed_seconds": 54.642,
+  "actual_cli_gate_exit_code": 2
+}

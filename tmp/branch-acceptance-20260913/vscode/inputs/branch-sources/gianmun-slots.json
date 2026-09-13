@@ -1,0 +1,70 @@
+{
+  "source": "C:\\Users\\22\\Desktop\\maintain\\teacher_doc\\tmp\\branch-acceptance-20260913\\sources\\gianmun.hwpx",
+  "version": 1,
+  "usage": "Fill with scripts/edit_hwpx.py template.hwpx -o out.hwpx --slot-json values.json",
+  "slots": [
+    {
+      "key": "p:1",
+      "kind": "paragraph",
+      "index": 1,
+      "max_chars": 5,
+      "text_len": 5,
+      "text_len_nospace": 5,
+      "preview": "화동중학교"
+    },
+    {
+      "key": "p:3",
+      "kind": "paragraph",
+      "index": 3,
+      "max_chars": 6,
+      "text_len": 8,
+      "text_len_nospace": 6,
+      "preview": "수신 내부결재"
+    },
+    {
+      "key": "p:4",
+      "kind": "paragraph",
+      "index": 4,
+      "max_chars": 4,
+      "text_len": 4,
+      "text_len_nospace": 4,
+      "preview": "(경유)"
+    },
+    {
+      "key": "p:5",
+      "kind": "paragraph",
+      "index": 5,
+      "max_chars": 30,
+      "text_len": 39,
+      "text_len_nospace": 30,
+      "preview": "제목 2026학년도 1학기 농어촌유학 거주비 지원금 성립전 예산 요구"
+    },
+    {
+      "key": "p:7",
+      "kind": "paragraph",
+      "index": 7,
+      "max_chars": 27,
+      "text_len": 31,
+      "text_len_nospace": 27,
+      "preview": "1. 관련: 정책기획과-3100(2025. 3. 19.)"
+    },
+    {
+      "key": "p:9",
+      "kind": "paragraph",
+      "index": 9,
+      "max_chars": 54,
+      "text_len": 68,
+      "text_len_nospace": 54,
+      "preview": "2. 2026학년도 1학기 농어촌유학 거주비 지원금 교부와 관련하여 붙임과 같이 성립전 예산을 편성하여 운영하고자 합니다."
+    },
+    {
+      "key": "p:11",
+      "kind": "paragraph",
+      "index": 11,
+      "max_chars": 30,
+      "text_len": 41,
+      "text_len_nospace": 30,
+      "preview": "붙임 성립전 예산 요구 신청서(농어촌 유학 거주비 지원금) 1부. 끝."
+    }
+  ]
+}

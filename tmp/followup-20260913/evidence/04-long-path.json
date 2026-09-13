@@ -1,0 +1,22 @@
+{
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"status\": \"unconfirmed\", \"error\": \"작업 경로가 Windows 지원 범위를 초과합니다: 289자, 초기화 대상은 248자 미만이어야 합니다. 더 짧은 상위 경로/폴더명을 선택하세요. 파일 생성 전 중단했습니다: C:\\\\Users\\\\22\\\\Desktop\\\\maintain\\\\Hwp_doc\\\\tmp\\\\followup-20260913\\\\long\\\\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\\\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\\\\cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\\\\.hwpdoc\\\\jobs\"}\n",
+  "argv": [
+    "C:\\Users\\22\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code\\scripts\\hwpdoc.py",
+    "init",
+    "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\long\\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\\cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "--app",
+    "codex",
+    "--skill-name",
+    "hwpx"
+  ],
+  "cwd": "C:\\Users\\22\\Desktop\\maintain\\Hwp_doc\\tmp\\followup-20260913\\code",
+  "seconds": 0.7664787769317627,
+  "recorded_at": "2026-09-13T02:12:08.309826+00:00",
+  "scope": "developer follow-up; synthetic CLI unless explicitly actual host"
+}

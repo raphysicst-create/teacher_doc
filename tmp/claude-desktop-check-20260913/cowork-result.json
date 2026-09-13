@@ -1,0 +1,32 @@
+{
+  "at": "2026-09-13T10:07:29.368Z",
+  "app": "Claude Desktop",
+  "mode": "Cowork",
+  "task_title": "Claude 데스크톱 실행 환경 점검",
+  "device_tool_result": {
+    "platform": "win32",
+    "arch": "x64",
+    "appVersion": "1.52386.3",
+    "connectedFolders": [],
+    "localMcpServers": [],
+    "timestamp": "2026-09-13T10:02:08.898Z"
+  },
+  "cloud_runtime": {
+    "source": "Claude app diagnostic response; raw command output not independently expanded",
+    "os": "Ubuntu 24.04.4 LTS",
+    "win32com": "ModuleNotFoundError"
+  },
+  "device_bash": {
+    "source": "Claude app diagnostic response",
+    "status": "not_run",
+    "reason": "No folders are connected to this device for the current session."
+  },
+  "com_test": "not_run_no_host_com_tool",
+  "w1_w2_acceptance": "not_run",
+  "limitations": [
+    "Current Cowork configuration only; other Desktop modes not tested.",
+    "Claude task showed two automatic memory updates despite the read-only request.",
+    "Desktop window disappeared during further raw-log inspection."
+  ],
+  "settings_changed_by_codex": false
+}

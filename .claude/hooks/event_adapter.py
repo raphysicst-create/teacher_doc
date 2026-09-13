@@ -10,6 +10,8 @@ import os
 from pathlib import Path
 import re
 import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
+from hwpdoc_config import owned_workspace
 
 
 def normalize_path(raw: str, cwd: str) -> str:
@@ -107,6 +109,13 @@ def literal_copy_targets(command: str, cwd: str):
     Resolved containment also rejects junction escapes. Other syntax keeps the
     existing conservative shell policy.
     """
+    wrapper = re.fullmatch(r'(?:powershell|pwsh)(?:\.exe)?\s+-NoProfile\s+-Command\s+"([^"\r\n]+)"', command, re.I)
+    if wrapper:
+        # Claude's Bash tool invokes PowerShell through a double-quoted command.
+        # Reject outer-shell expansion before considering the single literal copy.
+        if '$' in wrapper[1] or '`' in wrapper[1] or '\\' in wrapper[1]:
+            return None
+        command = wrapper[1]
     match = re.fullmatch(
         r"Copy-Item[ \t]+-LiteralPath[ \t]+'([^'\r\n]+)'[ \t]+-Destination[ \t]+'([^'\r\n]+)'[ \t]*",
         command, re.I)
@@ -137,16 +146,19 @@ def evaluate(data: dict) -> dict:
             reason = protected_reason(path)
             if reason:
                 return {'decision': 'deny', 'reason': reason, 'targets': targets}
-        if tool in ('Bash', 'exec_command', 'shell', 'shell_command'):
+        if tool in ('Bash', 'PowerShell', 'exec_command', 'shell', 'shell_command'):
             inp = data['tool_input']
             command = inp.get('command', inp.get('cmd', ''))
             if not isinstance(command, str):
                 raise ValueError('셸 command 해석 불가')
+            workspace = owned_workspace(cwd)
+            if workspace is None:
+                return {'decision': 'allow', 'reason': '공문 작업 폴더 밖; 이 훅의 셸 보호 대상 아님', 'targets': [], 'coverage': 'out_of_scope'}
             for pattern in DANGEROUS_PATTERNS:
                 if re.search(pattern, command, re.I):
                     return {'decision': 'deny', 'reason': '위험 명령 패턴: ' + pattern, 'targets': []}
             # Codex's Windows host reports exec_command as Bash to registered hooks.
-            if tool in ('Bash', 'exec_command', 'shell', 'shell_command') and os.name == 'nt':
+            if tool in ('Bash', 'PowerShell', 'exec_command', 'shell', 'shell_command') and os.name == 'nt':
                 shell = inp.get('shell', '')
                 if not shell or ntpath.basename(shell).lower() in ('powershell', 'powershell.exe', 'pwsh', 'pwsh.exe'):
                     copy_targets = literal_copy_targets(command, cwd)
@@ -157,6 +169,12 @@ def evaluate(data: dict) -> dict:
             # aliases and child processes remain unsupported, documented separately.
             mutation = r'(?i)(set-content|add-content|out-file|remove-item|move-item|copy-item|write_(text|bytes)|open\s*\(|unlink\s*\(|rename\s*\(|shutil\.|\s>{1,2})'
             if re.search(mutation, command) and re.search(r'(?i)(knowledge|docs)[/\\]', command):
+                # Absolute literal paths to another workspace are not protected
+                # merely because a directory there is also named docs/knowledge.
+                literals = re.findall(r"'([^'\r\n]+)'|\"([^\"\r\n]+)\"", command)
+                absolute = [a or b for a, b in literals if ntpath.isabs(a or b)]
+                if absolute and all(owned_workspace(p) is None for p in absolute) and not re.search(r"(?i)(?<![\w/\\])(knowledge|docs)[/\\]", re.sub(r"'[^']*'|\"[^\"]*\"", '', command)):
+                    return {'decision': 'allow', 'reason': '공문 작업 폴더 밖 절대 경로', 'targets': [], 'coverage': 'partial'}
                 return {'decision': 'deny', 'reason': '보호 폴더 직접 쓰기: 정적 명령으로 안전한 대상 구분 불가', 'targets': []}
             return {'decision': 'allow', 'reason': '위험 패턴 검사만 수행; 동적 셸 쓰기 보호 미지원', 'targets': [], 'coverage': 'partial'}
         return {'decision': 'allow', 'reason': '보호 대상 기존 파일 없음', 'targets': targets}

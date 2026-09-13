@@ -1,0 +1,37 @@
+{
+  "fixture_only": true,
+  "source": "evidence_source.md",
+  "conditions": [
+    "참가 인원이 15명 이상일 때 차량 이용 조건 검토",
+    "동의서 제출 전 외부기관 명단 전송 금지"
+  ],
+  "exceptions": [
+    "우천 시 실내 프로그램으로 변경하되 일시 변경은 별도 안내"
+  ],
+  "variants": {
+    "ok": {
+      "status": "ok",
+      "freshness": "verified",
+      "pending_items": [],
+      "note": "시험 원문 버전 내 조건 확인이라는 뜻; 실제 업무지침 서버 조회 성공 아님"
+    },
+    "partial": {
+      "status": "partial",
+      "freshness": "unconfirmed",
+      "pending_items": [
+        "다음 학년도 적용 여부"
+      ],
+      "note": "검토 대기를 확정 의무로 바꾸지 말 것"
+    },
+    "connection_error": {
+      "status": "connection_error",
+      "freshness": "unconfirmed",
+      "fallback_sources": [
+        "evidence_source.md"
+      ],
+      "pending_items": [
+        "업무지침 서버 원문 최신판 확인"
+      ]
+    }
+  }
+}

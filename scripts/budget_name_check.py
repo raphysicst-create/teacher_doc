@@ -20,8 +20,10 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_DATA = ROOT / "knowledge" / "reference" / "예산과목-2026.json"
+from hwpdoc_config import current_context
+CONTEXT = current_context()
+ROOT = CONTEXT.workspace
+DEFAULT_DATA = CONTEXT.optional_reference('budget')
 
 
 def norm(s):
@@ -46,9 +48,11 @@ def main():
     ap.add_argument("--check", action="append", default=[], help="실존 여부를 검증할 이름 (반복 가능)")
     ap.add_argument("--search", help="키워드로 예산과목 검색")
     ap.add_argument("--list", action="store_true", help="전체 산출내역 목록 출력")
-    ap.add_argument("--data", default=str(DEFAULT_DATA), help="예산과목 JSON 경로")
+    ap.add_argument("--data", default=str(DEFAULT_DATA) if DEFAULT_DATA else None, help="예산과목 JSON 경로")
     args = ap.parse_args()
 
+    if not args.data or not Path(args.data).is_file():
+        ap.error('예산 자료 없음: 작업 설정 references.budget 또는 --data로 원문 파생 자료를 지정하세요')
     data, entries = load_catalog(args.data)
     print(f"[데이터] {data['source']} (스냅샷 {data['snapshot']})\n")
 

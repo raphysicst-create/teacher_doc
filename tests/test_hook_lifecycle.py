@@ -19,6 +19,9 @@ class HookLifecycleTests(unittest.TestCase):
         for name in ('audit_log.py', 'event_adapter.py', 'protect_files.py', 'stop_validator.py'):
             shutil.copy2(ROOT / '.claude/hooks' / name, dest / name)
         (self.root / 'scripts').mkdir()
+        shutil.copy2(ROOT / 'scripts/hwpdoc_config.py', self.root / 'scripts/hwpdoc_config.py')
+        (self.root / '.hwpdoc').mkdir()
+        (self.root / '.hwpdoc/workspace.json').write_text(json.dumps({'kind': 'hwpdoc-workspace', 'version': 1}), encoding='utf-8')
 
     def call(self, hook, data):
         return subprocess.run([sys.executable, '-X', 'utf8', str(self.root / '.claude/hooks' / hook)],

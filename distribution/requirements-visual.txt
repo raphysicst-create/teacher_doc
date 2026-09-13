@@ -1,0 +1,3 @@
+# Install only after reviewing AGPL-3.0/commercial license conditions.
+# Required for PDF->PNG visual workflow, not for ordinary XML editing.
+PyMuPDF==1.28.0

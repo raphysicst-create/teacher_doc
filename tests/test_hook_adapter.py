@@ -18,6 +18,8 @@ class AdapterTests(unittest.TestCase):
         scratch = ROOT / '.claude/scratchpad/tests'; scratch.mkdir(parents=True, exist_ok=True)
         self.tmp = tempfile.TemporaryDirectory(dir=scratch); self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
+        (self.root / '.hwpdoc').mkdir()
+        (self.root / '.hwpdoc/workspace.json').write_text(json.dumps({'kind': 'hwpdoc-workspace', 'version': 1}), encoding='utf-8')
         self.original = self.root / 'knowledge/original.txt'; self.original.parent.mkdir(); self.original.write_text('UNCHANGED', encoding='utf-8')
         self.before = hashlib.sha256(self.original.read_bytes()).hexdigest()
 
@@ -105,6 +107,17 @@ class AdapterTests(unittest.TestCase):
         e = self.copy_event(self.original.parent, self.root / 'tmp/newdir')
         self.assertEqual(evaluate(e)['decision'], 'deny')
         self.assertEqual(existing.read_text(), 'keep')
+
+    def test_claude_powershell_wrapper_copy_and_expansion_rejection(self):
+        (self.root / 'output').mkdir()
+        event = {'cwd': str(self.root), 'tool_name': 'Bash', 'tool_input': {
+            'command': 'powershell.exe -NoProfile -Command "Copy-Item -LiteralPath \'knowledge/original.txt\' -Destination \'output/copy.txt\'"'}}
+        self.assertEqual(evaluate(event)['decision'], 'allow')
+        for replacement in ("output/$(echo BAD).txt", 'output/`echo BAD`.txt'):
+            changed = json.loads(json.dumps(event))
+            changed['tool_input']['command'] = changed['tool_input']['command'].replace('output/copy.txt', replacement)
+            self.assertEqual(evaluate(changed)['decision'], 'deny')
+        self.assertEqual(hashlib.sha256(self.original.read_bytes()).hexdigest(), self.before)
 
     def test_literal_copy_rejects_resolved_destination_escape(self):
         (self.root / 'tmp').mkdir()

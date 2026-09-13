@@ -1,0 +1,821 @@
+{
+  "schema_version": 1,
+  "id": "hwpdoc-plugin-distribution-v1",
+  "baseline_commit": "9f3baca",
+  "plan": "../../docs/플러그인-보급-개선계획.md",
+  "author_thread": "01a094c1-d1d6-7251-8eef-39a5652871c4",
+  "implementation_thread": "01a09645-dd81-72c0-8065-fe87ee1807ee",
+  "scope": "Windows + 한글; Claude Code 또는 Codex 각각. 동시 실행·공유 COM 잠금 확장 제외.",
+  "stages": {
+    "1": "기준 검수·회귀",
+    "2": "경로·설정·학교자료",
+    "3": "양식 이관·등록·prepare",
+    "4": "지침·메모리",
+    "5": "실제 앱 훅",
+    "6": "배포·의존성·업데이트",
+    "7": "전체 업무·시범 사용·성능"
+  },
+  "cases": [
+    {
+      "id": "01",
+      "stage": 1,
+      "title": "기존 5종 반복 생성과 서식 보존",
+      "variants": [
+        "일반가통",
+        "회신형",
+        "고사안내",
+        "성립전예산요구",
+        "교과협의회"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "legacy_five"
+      ],
+      "prompt": "cases/01.md",
+      "rubric": "rubrics/01.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "02",
+      "stage": 1,
+      "title": "기준 변경 검수와 배포 전 기록 분리",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "baseline_commit"
+      ],
+      "prompt": "cases/02.md",
+      "rubric": "rubrics/02.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "03",
+      "stage": 2,
+      "title": "작업 폴더 초기화와 기존 지침 보존",
+      "variants": [
+        "claude_empty",
+        "codex_empty",
+        "claude_existing",
+        "codex_existing",
+        "reinitialize"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "workspace_empty"
+      ],
+      "prompt": "cases/03.md",
+      "rubric": "rubrics/03.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "04",
+      "stage": 2,
+      "title": "코드·작업 위치 분리와 폴더 이동",
+      "variants": [
+        "separate_roots",
+        "workspace_relocation",
+        "unicode_space",
+        "long_path"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "workspace_seed"
+      ],
+      "prompt": "cases/04.md",
+      "rubric": "rubrics/04.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "05",
+      "stage": 2,
+      "title": "Python 진단과 외부 복사 선택 설정",
+      "variants": [
+        "valid_python",
+        "missing_python",
+        "wrong_python",
+        "copy_disabled",
+        "copy_configured"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "isolated_pc"
+      ],
+      "prompt": "cases/05.md",
+      "rubric": "rubrics/05.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "06",
+      "stage": 2,
+      "title": "학교별 시간표·예산·관련번호 조회",
+      "variants": [
+        "timetable",
+        "budget",
+        "related",
+        "missing_sources"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "school_alpha",
+        "school_beta"
+      ],
+      "prompt": "cases/06.md",
+      "rubric": "rubrics/06.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "07",
+      "stage": 2,
+      "title": "기존 작업 기록과 승인 해시 호환",
+      "variants": [
+        "legacy_absolute",
+        "portable_record",
+        "changed_source",
+        "changed_manifest"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "job_seed"
+      ],
+      "prompt": "cases/07.md",
+      "rubric": "rubrics/07.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "08",
+      "stage": 3,
+      "title": "기존 5종 등록 이관과 선택 연속성",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "legacy_five"
+      ],
+      "prompt": "cases/08.md",
+      "rubric": "rubrics/08.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "09",
+      "stage": 3,
+      "title": "새 네이티브 양식 등록",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "native_notice"
+      ],
+      "prompt": "cases/09.md",
+      "rubric": "rubrics/09.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "10",
+      "stage": 3,
+      "title": "등록 오류와 변경 감지",
+      "variants": [
+        "unknown_slot",
+        "duplicate_slot",
+        "missing_file",
+        "changed_hash",
+        "missing_review",
+        "changed_review",
+        "changed_mapping",
+        "changed_profile",
+        "path_escape",
+        "junction_escape"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "registration_seed"
+      ],
+      "prompt": "cases/10.md",
+      "rubric": "rubrics/10.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "11",
+      "stage": 3,
+      "title": "양식 복수 용도와 기안문 계보",
+      "variants": [
+        "internal_approval",
+        "notice_dispatch"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "native_gianmun",
+        "lineage_eight"
+      ],
+      "prompt": "cases/11.md",
+      "rubric": "rubrics/11.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "12",
+      "stage": 3,
+      "title": "prepare의 기계 기록과 미확인 유지",
+      "variants": [
+        "complete_values",
+        "missing_values",
+        "w2_missing_method"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "prepare_seed"
+      ],
+      "prompt": "cases/12.md",
+      "rubric": "rubrics/12.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "13",
+      "stage": 4,
+      "title": "새 세션의 업무 지침 실제 로딩",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "installed_plugin",
+        "workspace_seed"
+      ],
+      "prompt": "cases/13.md",
+      "rubric": "rubrics/13.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "14",
+      "stage": 4,
+      "title": "메모리 없이 학교 정책·공통 규칙 유지",
+      "variants": [
+        "precedent",
+        "empty_cells",
+        "grade_absent",
+        "metadata"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "policy_fixture",
+        "native_notice"
+      ],
+      "prompt": "cases/14.md",
+      "rubric": "rubrics/14.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "15",
+      "stage": 5,
+      "title": "실제 도구의 원본 수정 차단",
+      "variants": [
+        "edit",
+        "delete",
+        "move",
+        "mixed",
+        "powershell_write",
+        "mcp_patch",
+        "mcp_fill",
+        "junction_escape"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "hook_lab"
+      ],
+      "prompt": "cases/15.md",
+      "rubric": "rubrics/15.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "16",
+      "stage": 5,
+      "title": "정상 작업과 다른 프로젝트 오차단 방지",
+      "variants": [
+        "read",
+        "copy_new",
+        "new_output",
+        "outside_docs",
+        "no_marker"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "hook_lab"
+      ],
+      "prompt": "cases/16.md",
+      "rubric": "rubrics/16.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "17",
+      "stage": 5,
+      "title": "훅 신뢰·실행 실패·한글 인코딩",
+      "variants": [
+        "untrusted",
+        "python_missing",
+        "hook_error",
+        "utf8_path"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "hook_lab"
+      ],
+      "prompt": "cases/17.md",
+      "rubric": "rubrics/17.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "18",
+      "stage": 5,
+      "title": "Stop 빠른 검사와 재시도 제한",
+      "variants": [
+        "unchanged",
+        "invalid_output",
+        "twice_failed"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "hook_lab"
+      ],
+      "prompt": "cases/18.md",
+      "rubric": "rubrics/18.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "19",
+      "stage": 6,
+      "title": "배포 허용 목록과 식별정보 검사",
+      "variants": [
+        "clean",
+        "sentinel_leak"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "release_candidate",
+        "privacy_sentinel"
+      ],
+      "prompt": "cases/19.md",
+      "rubric": "rubrics/19.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "20",
+      "stage": 6,
+      "title": "라이선스·출처·버전 고정",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "release_candidate"
+      ],
+      "prompt": "cases/20.md",
+      "rubric": "rubrics/20.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "21",
+      "stage": 6,
+      "title": "신규 환경 설치와 선택 의존성",
+      "variants": [
+        "base_only",
+        "kordoc_enabled",
+        "no_hancom",
+        "security_module_missing"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "fresh_environment",
+        "release_candidate"
+      ],
+      "prompt": "cases/21.md",
+      "rubric": "rubrics/21.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "22",
+      "stage": 6,
+      "title": "설치 업데이트·제거의 자료 보존",
+      "variants": [
+        "update",
+        "uninstall"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "release_pair",
+        "job_seed"
+      ],
+      "prompt": "cases/22.md",
+      "rubric": "rubrics/22.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "23",
+      "stage": 7,
+      "title": "W1 일반 가정통신문 전체 과정",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "native_notice",
+        "school_alpha",
+        "task_evidence"
+      ],
+      "prompt": "cases/23.md",
+      "rubric": "rubrics/23.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "24",
+      "stage": 7,
+      "title": "참가 회신형 가통 전체 과정",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "native_reply",
+        "school_alpha",
+        "task_evidence"
+      ],
+      "prompt": "cases/24.md",
+      "rubric": "rubrics/24.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "25",
+      "stage": 7,
+      "title": "활동 행 부족과 구조 변경 범위",
+      "variants": [
+        "no_structure_approval",
+        "approved_structure"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "native_reply",
+        "capacity_six"
+      ],
+      "prompt": "cases/25.md",
+      "rubric": "rubrics/25.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "26",
+      "stage": 7,
+      "title": "셀 글자 예산 초과와 판독 증거",
+      "variants": [
+        "no_visual",
+        "stale_visual",
+        "current_visual"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "native_reply",
+        "long_text"
+      ],
+      "prompt": "cases/26.md",
+      "rubric": "rubrics/26.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "27",
+      "stage": 7,
+      "title": "W2 제출 방법 네 분기",
+      "variants": [
+        "official_reply",
+        "system",
+        "email",
+        "unknown"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "w2_sources",
+        "school_alpha",
+        "task_evidence"
+      ],
+      "prompt": "cases/27.md",
+      "rubric": "rubrics/27.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "28",
+      "stage": 7,
+      "title": "내용·검증 실패와 성공 오보고 방지",
+      "variants": [
+        "date_weekday",
+        "old_residue",
+        "invalid_budget",
+        "missing_related",
+        "attachment_mismatch",
+        "package_missing",
+        "com_unavailable",
+        "render_unavailable",
+        "stage_twice_failed",
+        "evidence_partial",
+        "evidence_connection_error",
+        "exit0_internal_fail",
+        "invalid_report_state",
+        "approved_source_changed",
+        "approved_attachment_changed",
+        "approved_mapping_changed"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "fault_seed"
+      ],
+      "prompt": "cases/28.md",
+      "rubric": "rubrics/28.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "29",
+      "stage": 7,
+      "title": "검토본 전달·재시도·사람 확인",
+      "variants": [
+        "copy_off",
+        "copy_success",
+        "copy_partial",
+        "copy_collision",
+        "copy_twice_failed",
+        "draft_only",
+        "human_reject"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "delivery_seed"
+      ],
+      "prompt": "cases/29.md",
+      "rubric": "rubrics/29.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "30",
+      "stage": 7,
+      "title": "동료 교사 PC의 첫 사용",
+      "variants": [
+        "default"
+      ],
+      "targets": [
+        "teacher_selected"
+      ],
+      "fixtures": [
+        "fresh_environment",
+        "native_teacher_form",
+        "release_pair"
+      ],
+      "prompt": "cases/30.md",
+      "rubric": "rubrics/30.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "31",
+      "stage": 7,
+      "title": "성능 실측과 검증 캐시 정합",
+      "variants": [
+        "timing",
+        "unrelated_change",
+        "artifact_change",
+        "validator_change"
+      ],
+      "targets": [
+        "cli"
+      ],
+      "fixtures": [
+        "job_seed"
+      ],
+      "prompt": "cases/31.md",
+      "rubric": "rubrics/31.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "32",
+      "stage": 7,
+      "title": "HWP 변환·재패키징·폴백 경로",
+      "variants": [
+        "hwp_input",
+        "repackaged",
+        "fallback_absent"
+      ],
+      "targets": [
+        "claude",
+        "codex"
+      ],
+      "fixtures": [
+        "converted_fixture"
+      ],
+      "prompt": "cases/32.md",
+      "rubric": "rubrics/32.md",
+      "required": true,
+      "check_ids": [
+        "C1",
+        "C2"
+      ]
+    }
+  ]
+}

@@ -375,6 +375,13 @@ def _sha256(data: bytes) -> str:
 
 
 def _xml_structure_node(el: etree._Element, inside_hp_text: bool = False) -> dict[str, Any]:
+    # Comments and processing instructions are legal XML children, but QName
+    # accepts only element tags. Preserve them in the fingerprint as well.
+    if isinstance(el, etree._Comment):
+        return {"tag": "#comment", "text": el.text or "", "tail": el.tail or ""}
+    if isinstance(el, etree._ProcessingInstruction):
+        return {"tag": "#processing-instruction", "target": el.target,
+                "text": el.text or "", "tail": el.tail or ""}
     qname = etree.QName(el)
     is_hp_text = qname.localname == "t" and qname.namespace == NS["hp"]
     ignore_text = inside_hp_text or is_hp_text
@@ -386,7 +393,7 @@ def _xml_structure_node(el: etree._Element, inside_hp_text: bool = False) -> dic
         "children": [
             _xml_structure_node(child, inside_hp_text=inside_hp_text or is_hp_text)
             for child in el
-            if not (
+            if not isinstance(child.tag, str) or (not (
                 etree.QName(child).namespace == NS["hp"]
                 and etree.QName(child).localname == "linesegarray"
             )
@@ -394,7 +401,7 @@ def _xml_structure_node(el: etree._Element, inside_hp_text: bool = False) -> dic
                 etree.QName(child).namespace == NS["hp"]
                 and etree.QName(child).localname == "t"
                 and len(child) == 0
-            )
+            ))
         ],
     }
 

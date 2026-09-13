@@ -5,8 +5,8 @@ description: "HWPX 문서 읽기·슬롯/셀 편집·양식 보존·구조 및 �
 
 # HWPX — 슬롯 편집과 원본 양식 보존
 
-정본은 `<프로젝트>/.claude/skills/hwpx/SKILL.md`다. 발견 경로가 링크이면 실제 대상을 확인한다.
-학교 업무 분기·근거 조회·문안 규정·초안 확인·검토/발송 정책은 프로젝트 `CLAUDE.md`가 담당한다. 이 스킬은 편집 방법과 문서 보존을 담당한다.
+개발 정본은 `<프로젝트>/.claude/skills/hwpx/SKILL.md`이고 배포본은 패키지의 `skills/hwpx/SKILL.md`다. 발견 경로가 링크이면 실제 대상을 확인한다.
+공문 작업을 시작하면 [업무 절차](references/workflow.md)를 실제로 읽는다. 학교별 설정은 작업 폴더의 `.hwpdoc/workspace.json`에 있고, 기존 운영 프로젝트의 `CLAUDE.md`에 명시된 사용자 결정은 유지한다. W1·W2 별도 스킬은 사용하지 않는다.
 
 ## 경로 선택
 
@@ -18,11 +18,13 @@ description: "HWPX 문서 읽기·슬롯/셀 편집·양식 보존·구조 및 �
 
 ## 기본 편집
 
-시스템 Python312의 절대 경로를 사용한다. 이 PC의 PATH `python`·`py`는 다른 프로젝트 venv이므로 COM 의존성이 없다.
+설치 폴더와 교사의 작업 폴더를 구분한다. 개발 저장소에서는 `.claude/skills/hwpx/`, 배포본에서는 `skills/hwpx/`가 스킬 폴더다. 실제 로드한 스킬 폴더에서 위로 탐색하여 `scripts/runtime.ps1`이 있는 코드 루트를 확인한다. 작업 파일은 작업 폴더에만 저장한다. Python은 코드 루트의 `scripts/runtime.ps1`이 PC 설정과 설치 위치에서 찾는다. PATH의 임의 python으로 대체하지 않는다.
 
 ```powershell
-$taskPython = 'C:\Users\22\AppData\Local\Programs\Python\Python312\python.exe'
-$taskSkill = '.claude/skills/hwpx'
+# taskPlugin은 이 스킬이 속한 코드 루트, taskWorkspace는 교사의 작업 폴더다.
+. "$taskPlugin/scripts/runtime.ps1"
+$taskPython = Get-HwpdocPython
+# taskSkill은 실제 로드한 SKILL.md의 상위 폴더다.
 & $taskPython -X utf8 "$taskSkill/scripts/hwpx_slots.py" reference.hwpx -o slots.json
 & $taskPython -X utf8 "$taskSkill/scripts/edit_hwpx.py" reference.hwpx -o result.hwpx --slot-json values.json
 ```
@@ -45,7 +47,7 @@ $taskSkill = '.claude/skills/hwpx'
 
 ## 검증 도구
 
-전체 순서와 조건은 프로젝트 `CLAUDE.md`의 Validator 절을 따른다. 순서는 구조 검사 → 네임스페이스 보정 → finalize → layout → page_guard → COM·조건부 렌더 → 내용·공문 규칙 → 신구대조다. 프로젝트 실행기를 사용할 수 있으면 실행기가 이 순서를 호출한다.
+전체 순서와 조건은 [업무 절차](references/workflow.md)의 검증 절과 기존 운영 프로젝트 지침을 따른다. 순서는 구조 검사 → 네임스페이스 보정 → finalize → layout → page_guard → COM·조건부 렌더 → 내용·공문 규칙 → 신구대조다. 실행기의 build/validate/deliver/status를 우선 사용한다.
 
 - `validate.py`: ZIP/11개 최소 패키지/XML 검사. 스키마 통과가 한글 실열림을 뜻하지 않는다.
 - `fix_namespaces.py`: 프리픽스·header itemCnt 보정.
@@ -55,7 +57,7 @@ $taskSkill = '.claude/skills/hwpx'
 - 프로젝트 `scripts/render_check.py`: COM 쪽수·PDF 텍스트 순서/역순·개체 잔재 검사. 예산 초과 셀의 육안 판독은 별도다.
 - `text_extract.py --format markdown`: Reader 연결 불가 시 텍스트 추출. 원본이 있으면 신구대조를 남긴다.
 
-실패를 고치거나 방어선의 근거가 필요할 때만 [실패 이력](references/failure-history.md)을 읽는다. 실패/미실행을 통과로 바꾸지 않는다. 재시도 한도와 폴백 재생성 후 검증은 프로젝트 지침을 따른다.
+실패를 고치거나 방어선의 근거가 필요하면 운영 프로젝트에 보관된 실패 이력을 확인한다. 실패/미실행을 통과로 바꾸지 않는다. 재시도 한도와 폴백 재생성 후 검증은 업무 절차와 프로젝트 지침을 따른다.
 
 ## XML 작업 시 최소 불변 조건
 

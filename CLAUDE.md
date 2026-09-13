@@ -130,6 +130,10 @@ W1은 유사 공문·양식 선택 후, W2는 수신 공문 분석 후 **초안 
 
 
 ## 공통 실행기 (슬롯 자동 생성 + 전체 검증)
+플러그인 보급 구현의 공통 절차는 `.claude/skills/hwpx/references/workflow.md`, 설치·입력 안내는 `distribution/README.md`를 함께 읽는다. 개발 정본과 `.agents` 링크는 유지한다.
+`init/add-template/list-templates/migrate-templates/prepare/setup-hooks/setup-runtime`가 추가됐다. 새 작업 폴더에는 `.hwpdoc/workspace.json`, 현재 학교 호환 설정에는 `config/legacy-workspace.json`을 사용한다. 현재 학교의 Python312·OneDrive·기존 5종 정책은 유지한다. 이관 조사 기록은 사람 등록 확인을 대체하지 않는다.
+개발 회귀시험, 실제 앱 인수, 동료 교사 시범 사용을 구분한다. 배포는 `distribution/release-files.json` 허용 목록과 현재 해시의 권리·자산 검토가 통과한 뒤에만 생성한다. 현재 앱별 실동작과 배포 권리 확인은 미완료다.
+
 고정 Python312 진입점: `scripts/hwpdoc.ps1 doctor|build|validate|deliver|status`.
 입력 계약·명령 예시는 `docs/GPT-공통실행기.md`를 따른다. 초안 확인 기록과 승인 입력 해시 없이 build하지 않는다.
 검증 완료는 작업 보고서의 전체 필수 단계와 현재 파일 해시로 판단한다. Stop 훅의 빠른 검사를 전체 검증 대신 쓰지 않는다.

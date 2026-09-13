@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "agreed",
+  "date": "2026-09-13",
+  "author_thread": "01a094c1-d1d6-7251-8eef-39a5652871c4",
+  "implementation_thread": "01a09645-dd81-72c0-8065-fe87ee1807ee",
+  "implementation_title": "플러그인 보급 개선계획 구현",
+  "agreement_scope": "32 cases; independent variant/app records; evidence-only scorer; third-session evaluation; no simultaneous apps; no implementation restart",
+  "evidence": "Two actual send_message_to_thread replies; summarized with excerpts in AGREEMENT.md",
+  "product_evaluated": false
+}

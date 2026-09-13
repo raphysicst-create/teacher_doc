@@ -8,10 +8,14 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from event_adapter import targets_for_event, normalize_path
+from hwpdoc_config import owned_workspace
 
 def main():
     data = json.load(sys.stdin)
-    project_dir = str(Path(__file__).resolve().parents[2])
+    root = owned_workspace(data.get('cwd', ''))
+    if root is None:
+        print('{}'); return
+    project_dir = str(root)
     log_dir = os.path.join(project_dir, "logs")
     os.makedirs(log_dir, exist_ok=True)
 

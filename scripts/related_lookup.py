@@ -19,8 +19,11 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-MD_DIR = ROOT / "knowledge" / "examples" / "md"
+from hwpdoc_config import current_context
+CONTEXT = current_context()
+ROOT = CONTEXT.workspace
+MD_DIR = CONTEXT.optional_reference('related') or ROOT / 'knowledge/examples/md'
+PREFIX = CONTEXT.settings.get('school', {}).get('document_prefix') or ''
 
 FIELD_RE = {
     "문서번호": re.compile(r"^문서번호:\s*(.+)$", re.M),
@@ -40,9 +43,9 @@ def load_docs():
         text = f.read_text(encoding="utf-8")
         fm = text.split("---")[1] if text.startswith("---") else ""
         num = FIELD_RE["문서번호"].search(fm)
-        num = num.group(1).strip().replace("화동중학교-", "") if num else f.stem
+        num = num.group(1).strip().removeprefix(PREFIX) if num else f.stem
         title = FIELD_RE["제목"].search(fm)
-        date = FIELD_RE["결재일"].search(fm) or FIELD_RE["시행일"].search(fm)
+        date = FIELD_RE["시행일"].search(fm) or FIELD_RE["결재일"].search(fm)
         rel_m = REL_RE.search(fm)
         rel_raw = rel_m.group(1).strip() if rel_m else ""
         rel = [r.strip() for r in REL_ITEM_RE.findall(rel_raw)] if rel_raw else []
@@ -61,7 +64,7 @@ def find_citers(docs, num):
     out = []
     for d in docs.values():
         for r in d["관련"]:
-            if f"화동중학교-{num}" in r or re.search(rf"(?<!\d){num}(?!\d)", r):
+            if PREFIX and re.search(re.escape(PREFIX + num) + r'(?!\d)', r):
                 out.append(d)
                 break
     return out
@@ -101,7 +104,7 @@ def main():
         return
 
     if args.doc:
-        num = args.doc.replace("화동중학교-", "")
+        num = args.doc.removeprefix(PREFIX)
         if num not in docs:
             print(f"[오류] 문서번호 '{num}' 을 examples/md에서 찾지 못함 — 임의 관련번호 기입 금지, 원본 확인 필요", file=sys.stderr)
             sys.exit(1)
@@ -123,7 +126,7 @@ def main():
         return
 
     if args.chain:
-        num = args.chain.replace("화동중학교-", "")
+        num = args.chain.removeprefix(PREFIX)
         if num not in docs:
             print(f"[오류] 문서번호 '{num}' 을 찾지 못함", file=sys.stderr)
             sys.exit(1)
@@ -135,7 +138,7 @@ def main():
             seen.add(n)
             print_doc(docs[n], indent="  " * depth)
             for r in docs[n]["관련"]:
-                m = re.search(r"화동중학교-(\d+)", r)
+                m = re.search(re.escape(PREFIX) + r'(\d+)', r) if PREFIX else None
                 if m:
                     walk_up(m.group(1), depth + 1)
 

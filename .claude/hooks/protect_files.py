@@ -26,7 +26,11 @@ DANGEROUS_PATTERNS = [
 def protected_reason(path):
     """Normalized absolute path; segment matching avoids the old /output bypass."""
     from pathlib import Path
-    parts = path.replace('\\', '/').lower().split('/')
+    from hwpdoc_config import owned_workspace
+    root = owned_workspace(path)
+    if root is None:
+        return None
+    parts = Path(path).resolve().relative_to(root).as_posix().lower().split('/')
     derived = path.lower().endswith('.md') and any(
         parts[i:i+3] == ['knowledge', 'examples', 'index.md'] and i+3 == len(parts)
         or parts[i:i+3] == ['knowledge', 'examples', 'md']

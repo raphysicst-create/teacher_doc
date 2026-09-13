@@ -1,4 +1,6 @@
-# Hwpdoc 배포 준비 및 설치
+# teacher_doc 배포 준비 및 설치
+
+프로젝트·플러그인·배포 폴더 이름은 `teacher_doc`, 기본 명령은 `scripts/teacher_doc.ps1`이다. 기존 `scripts/hwpdoc.ps1`/`.py`, `.hwpdoc` 기록과 PC 데이터 경로, `HWPDOC_*` 환경변수는 호환용으로 유지한다.
 
 현재 버전은 0.1.0 구현 후보다. **라이선스·포함 자산 검토와 앱별 독립 인수·교사 시범 사용이 완료되기 전에는 보급 완료로 표시하지 않는다.** 이 폴더는 배포 정의이며 설치 가능한 공개 릴리스가 아니다.
 
@@ -8,9 +10,9 @@
 
 ```powershell
 # 설치된 플러그인 루트에서 실행. 작업 폴더는 설치 폴더 밖에 둔다.
-./scripts/hwpdoc.ps1 init 'C:/교사 작업/공문' --app codex --skill-name '앱에서 확인한 이름'
-./scripts/hwpdoc.ps1 --workspace 'C:/교사 작업/공문' doctor
-./scripts/hwpdoc.ps1 --workspace 'C:/교사 작업/공문' setup-hooks --app codex
+./scripts/teacher_doc.ps1 init 'C:/교사 작업/공문' --app codex --skill-name '앱에서 확인한 이름'
+./scripts/teacher_doc.ps1 --workspace 'C:/교사 작업/공문' doctor
+./scripts/teacher_doc.ps1 --workspace 'C:/교사 작업/공문' setup-hooks --app codex
 ```
 
 setup-hooks는 먼저 등록 제안을 만든다. 실제 이벤트/도구 이름을 확인한 후 `--tool`로 matcher를 지정할 수 있다. `--apply`는 기존 등록을 보존하여 병합하며 신뢰를 자동 승인하지 않는다. Codex의 해당 환경에서 프로젝트 훅 등록과 신뢰를 확인하고 새 작업에서 실제 차단을 시험한다. 목록 노출·등록 성공·신뢰·실제 차단은 서로 다른 증거다. 동적 셸/자식 프로세스 쓰기는 정적 훅의 완전 보호 범위가 아니다. 선택하지 않은 앱 설정을 함께 만들 필요가 없다.
@@ -60,12 +62,12 @@ prepare는 교사가 복잡한 입력 JSON을 직접 작성하라는 기능이 �
 `release-files.json`은 허용 파일 목록이다. 권리 검토 기록은 source 경로별 sha256/license/source/permission_record/reviewed_by/reviewed_at/privacy_review/privacy_sha256을 요구한다. 개인정보 점검은 본문뿐 아니라 XML·Preview·메타데이터·이미지까지 포함한다. dependency_reviews도 라이선스와 적용 조건 확인 기록이 필요하다. 파일 변경 시 이전 검토 해시는 사용할 수 없다.
 
 ```powershell
-./scripts/hwpdoc.ps1 --workspace 'C:/교사 작업/공문' status --job 작업이름
+./scripts/teacher_doc.ps1 --workspace 'C:/교사 작업/공문' status --job 작업이름
 # 아래 Python은 runtime.ps1에서 확인한 실행 파일이다.
 & $taskPython -X utf8 ./scripts/build_distribution.py --rights ./distribution/rights.pending.json
 ```
 
-현재 rights.pending.json으로는 차단되는 것이 정상이다. 확인된 권리 기록을 제공한 뒤에만 `--output <프로젝트 안 새 경로>/hwpdoc`으로 패키지를 만든다. 패키지 생성 성공도 별도 앱/교사 인수 완료를 뜻하지 않는다.
+현재 rights.pending.json으로는 차단되는 것이 정상이다. 확인된 권리 기록을 제공한 뒤에만 `--output <프로젝트 안 새 경로>/teacher_doc`으로 패키지를 만든다. 패키지 생성 성공도 별도 앱/교사 인수 완료를 뜻하지 않는다.
 
 `prepare_distribution_assets.py`는 기본 content.hpf의 작성자·날짜와 proposal 예제의 과거 사업 내용을 제거한 배포 후보 사본을 distribution/assets에 준비한다. 운영 원본은 수정하지 않는다. preparation.json은 변환 전후 해시이며 권리 허가나 개인정보 검토 승인이 아니다. 허용 목록은 이 사본을 사용하며, 본문·미리보기·이미지의 파일별 검토는 여전히 필요하다. 패키지는 임시 폴더에서 모든 복사 해시를 확인한 뒤 완성 경로로 옮기므로 복사 실패를 설치 가능한 패키지로 남기지 않는다.
 

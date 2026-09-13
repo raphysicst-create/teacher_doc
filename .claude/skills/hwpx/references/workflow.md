@@ -4,7 +4,7 @@
 
 ## 작업 공간과 시작
 
-- 코드 루트의 `scripts/hwpdoc.ps1 --workspace <교사 작업 폴더> <명령>`을 사용한다. 설치 폴더에는 작업 자료를 쓰지 않는다.
+- 코드 루트의 `scripts/teacher_doc.ps1 --workspace <교사 작업 폴더> <명령>`을 사용한다. 기존 hwpdoc.ps1도 호환된다. 설치 폴더에는 작업 자료를 쓰지 않는다.
 - 첫 사용은 `init <새 작업 폴더> --app claude|codex --skill-name <앱에서 확인한 스킬 이름>`이다. 기존 지침은 덮어쓰지 않는다. init은 스킬 실제 로딩이나 훅 신뢰·차단을 보증하지 않는다.
 - `doctor`는 Python/의존성/한글/작업 폴더/학교 자료를 진단한다. 등록·신뢰·실제 호출 성공을 구분한다. PC 설정은 `%LOCALAPPDATA%/hwpdoc/runtime.json`, 학교 설정은 `.hwpdoc/workspace.json`이다.
 - 학교 이름·문서번호 접두어·학년도·시간표 매핑·선호를 작업 설정에서 확인한다. 비어 있으면 필요한 업무 시점에 묻는다. 다른 학교의 값을 복사하지 않는다.

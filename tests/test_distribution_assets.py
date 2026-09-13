@@ -36,7 +36,7 @@ class AssetTests(unittest.TestCase):
             manifest = {'version': 1, 'files': [{'source': 'code.py', 'destination': 'scripts/code.py'}]}
             grant = {k: 'SYNTHETIC TEST RECORD' for k in ('license', 'source', 'permission_record', 'reviewed_by', 'reviewed_at', 'privacy_review')}
             grant.update(sha256=packaging.digest(root / 'code.py'), privacy_sha256=packaging.digest(root / 'code.py'))
-            output = root / 'release/hwpdoc'
+            output = root / 'release/teacher_doc'
             with patch.object(packaging, 'ROOT', root), patch.object(packaging.shutil, 'copy2', side_effect=OSError('synthetic copy failure')):
                 with self.assertRaises(OSError): packaging.build(manifest, {'files': {'code.py': grant}}, output)
             self.assertFalse(output.exists())

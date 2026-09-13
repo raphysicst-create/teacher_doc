@@ -3,6 +3,14 @@
   "plugin_version": "0.1.0",
   "files": [
     {
+      "source": "scripts/teacher_doc.py",
+      "destination": "scripts/teacher_doc.py"
+    },
+    {
+      "source": "scripts/teacher_doc.ps1",
+      "destination": "scripts/teacher_doc.ps1"
+    },
+    {
       "source": "scripts/hwpdoc.py",
       "destination": "scripts/hwpdoc.py"
     },

@@ -72,10 +72,10 @@ def build(manifest, rights, output=None):
     if output is None or result['issues']:
         return result
     output = Path(output).resolve()
-    if output.name != 'hwpdoc' or output.exists() or not output.is_relative_to(ROOT):
-        raise ValueError('배포 출력은 프로젝트 안의 존재하지 않는 hwpdoc 폴더여야 합니다')
+    if output.name != 'teacher_doc' or output.exists() or not output.is_relative_to(ROOT):
+        raise ValueError('배포 출력은 프로젝트 안의 존재하지 않는 teacher_doc 폴더여야 합니다')
     output.parent.mkdir(parents=True, exist_ok=True)
-    staging = Path(tempfile.mkdtemp(prefix='.hwpdoc-building-', dir=output.parent))
+    staging = Path(tempfile.mkdtemp(prefix='.teacher_doc-building-', dir=output.parent))
     for entry in result['files']:
         destination = staging / entry['destination']
         destination.parent.mkdir(parents=True, exist_ok=True)

@@ -1,4 +1,6 @@
-# CLAUDE.md — 공문 자동 작성 에이전트
+# teacher_doc — 공문 자동 작성 에이전트
+
+프로젝트·플러그인 이름은 `teacher_doc`이다. 기본 진입점은 `scripts/teacher_doc.ps1`이며 기존 `hwpdoc` 실행기·`.hwpdoc` 기록·`HWPDOC_*` 설정은 호환용으로 유지한다. 폴더 이전 절차와 완료 상태는 `docs/teacher_doc-이름변경.md`를 확인한다.
 
 ## 프로젝트 목적
 공문 초안 작성 → HWPX 생성 → 검증까지 자동화한다. 전자결재(온나라) 등록은 사람이 한다.

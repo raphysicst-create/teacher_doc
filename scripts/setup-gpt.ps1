@@ -27,12 +27,12 @@ foreach ($taskEvent in @('PreToolUse','PostToolUse','Stop')) {
     if ($taskEvent -ne 'Stop') { $taskGroup.matcher = 'Bash|apply_patch|Edit|Write|mcp__kordoc__.*' }
     $taskHooks[$taskEvent] = @($taskGroup)
 }
-$taskConfig = @{description='Hwp_doc adapters. Host trust and integration verification required.'; hooks=$taskHooks} | ConvertTo-Json -Depth 10
+$taskConfig = @{description='teacher_doc adapters. Host trust and integration verification required.'; hooks=$taskHooks} | ConvertTo-Json -Depth 10
 $taskHookPath = Join-Path $taskRoot '.codex/hooks.json'
 if (Test-Path -LiteralPath $taskHookPath) {
     # Do not overwrite a foreign or hand-edited hook registration.
     $taskCurrent = Get-Content -LiteralPath $taskHookPath -Raw -Encoding UTF8 | ConvertFrom-Json
-    if ($taskCurrent.description -ne 'Hwp_doc adapters. Host trust and integration verification required.') {
+    if ($taskCurrent.description -notin @('teacher_doc adapters. Host trust and integration verification required.', 'Hwp_doc adapters. Host trust and integration verification required.')) {
         throw "Existing hooks preserved; merge explicitly: $taskHookPath"
     }
     $taskCurrentNormalized = $taskCurrent | ConvertTo-Json -Depth 10 -Compress

@@ -320,7 +320,7 @@ def resolved_values(m):
 def tool_dependencies():
     paths = list(SKILL.glob('*.py'))
     paths += [CODE_ROOT / 'scripts' / name for name in (
-        'hwpdoc.py', 'hwpdoc_config.py', 'hwpdoc_templates.py', 'render_check.py',
+        'teacher_doc.py', 'teacher_doc.ps1', 'hwpdoc.py', 'hwpdoc_config.py', 'hwpdoc_templates.py', 'render_check.py',
         'budget_name_check.py', 'related_lookup.py', 'fusion_timetable.py', 'hwpdoc_runtime.py')]
     paths += [SKILL.parent / 'SKILL.md', SKILL.parent / 'references/workflow.md']
     paths += list((CODE_ROOT / 'distribution').glob('requirements-*.txt'))

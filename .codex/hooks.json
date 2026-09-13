@@ -1,11 +1,11 @@
 {
-  "description": "Hwp_doc adapters. Host trust and integration verification required.",
+  "description": "teacher_doc adapters. Host trust and integration verification required.",
   "hooks": {
     "PreToolUse": [
       {
         "hooks": [
           {
-            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/Hwp_doc/.claude/hooks/protect_files.py'; exit $LASTEXITCODE\"",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/teacher_doc/.claude/hooks/protect_files.py'; exit $LASTEXITCODE\"",
             "timeout": 10,
             "type": "command"
           }
@@ -17,7 +17,7 @@
       {
         "hooks": [
           {
-            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/Hwp_doc/.claude/hooks/stop_validator.py'; exit $LASTEXITCODE\"",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/teacher_doc/.claude/hooks/stop_validator.py'; exit $LASTEXITCODE\"",
             "timeout": 120,
             "type": "command"
           }
@@ -28,7 +28,7 @@
       {
         "hooks": [
           {
-            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/Hwp_doc/.claude/hooks/audit_log.py'; exit $LASTEXITCODE\"",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/teacher_doc/.claude/hooks/audit_log.py'; exit $LASTEXITCODE\"",
             "timeout": 10,
             "type": "command"
           }

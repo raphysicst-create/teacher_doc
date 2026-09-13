@@ -1,6 +1,6 @@
 # hwpxskill
 
-> **Hwp_doc 실행 안내**: 이 README는 업스트림 배포 문서다. 이 PC에서는 프로젝트 `scripts/hwpdoc.ps1` 또는 시스템 Python312 절대 경로를 사용한다. 기존 양식은 [`SKILL.md`](SKILL.md)의 슬롯 편집을 우선하며, 학교 업무·검증 순서는 프로젝트 `CLAUDE.md`를 따른다.
+> **teacher_doc 실행 안내**: 이 README는 업스트림 배포 문서다. 이 PC에서는 프로젝트 `scripts/teacher_doc.ps1` 또는 시스템 Python312 절대 경로를 사용한다. 기존 양식은 [`SKILL.md`](SKILL.md)의 슬롯 편집을 우선하며, 학교 업무·검증 순서는 프로젝트 `CLAUDE.md`를 따른다.
 
 한컴오피스 HWPX 문서를 AI 코딩 에이전트에서 다룰 수 있게 해주는 스킬입니다.
 

@@ -200,7 +200,7 @@ class DistributionTests(unittest.TestCase):
         source = self.root / 'code.py'; source.write_text('print(1)')
         manifest = {'version': 1, 'files': [{'source': 'code.py', 'destination': 'scripts/code.py'}]}
         with patch.object(packaging, 'ROOT', self.root):
-            output = self.root / 'release/hwpdoc'
+            output = self.root / 'release/teacher_doc'
             result = packaging.build(manifest, {}, output)
             self.assertEqual(result['status'], 'blocked'); self.assertFalse(output.exists())
             # Synthetic grants are local fixtures only, never actual release evidence.

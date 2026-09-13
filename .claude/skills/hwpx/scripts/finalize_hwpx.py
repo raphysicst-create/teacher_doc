@@ -213,27 +213,13 @@ def hancom_open_check(hwpx_path: str | Path, *, visible: bool = False) -> tuple[
     except ImportError:
         return False, "pywin32 is not installed; install pywin32 to use --hancom."
 
-    hwp = None
     try:
-        hwp = win32com.client.Dispatch("HWPFrame.HwpObject")
-        try:
-            hwp.XHwpWindows.Item(0).Visible = visible
-        except Exception:
-            pass
-        try:
-            hwp.RegisterModule("FilePathCheckDLL", "FilePathCheckerModule")
-        except Exception:
-            pass
-        ok = bool(hwp.Open(str(Path(hwpx_path).resolve()), "", ""))
+        from hancom_com import session
+        with session(visible=visible) as (hwp, _):
+            ok = bool(hwp.Open(str(Path(hwpx_path).resolve()), "", ""))
         return ok, "Hancom Open returned True." if ok else "Hancom Open returned False."
     except Exception as exc:  # pragma: no cover - requires Hancom/COM
         return False, f"Hancom COM open failed: {exc}"
-    finally:
-        if hwp is not None:
-            try:
-                hwp.Quit()
-            except Exception:
-                pass
 
 
 def main() -> int:

@@ -1,0 +1,523 @@
+{
+  "status": "packaged",
+  "issues": [],
+  "files": [
+    {
+      "source": "scripts/teacher_doc.py",
+      "destination": "scripts/teacher_doc.py",
+      "sha256": "c9abc4918f4c16d0838d6fad5a3c26bbdedc419d133d620677b02ed9bacd3851"
+    },
+    {
+      "source": "scripts/teacher_doc.ps1",
+      "destination": "scripts/teacher_doc.ps1",
+      "sha256": "dec1f464b041a39536dc5d5e79516b78308e05164daeb77953e30dc6b03879c8"
+    },
+    {
+      "source": "scripts/hwpdoc.py",
+      "destination": "scripts/hwpdoc.py",
+      "sha256": "baa743ec67051732853a29448e720867805bef293daf2f03b5f76db69082318b"
+    },
+    {
+      "source": "scripts/hwpdoc.ps1",
+      "destination": "scripts/hwpdoc.ps1",
+      "sha256": "ec3d52109e00eded29c3bf1f2d63ece6343af2e8d031e5238813bc05299fe261"
+    },
+    {
+      "source": "scripts/hwpdoc_config.py",
+      "destination": "scripts/hwpdoc_config.py",
+      "sha256": "6c91f91a7d27e594734b2c2bdebea867e70dde92ad4f0711734db924244d32ce"
+    },
+    {
+      "source": "scripts/hwpdoc_runtime.py",
+      "destination": "scripts/hwpdoc_runtime.py",
+      "sha256": "57bb6a0cc63399b7cdd416781d89c60e98a5e46450b73b82d564e3a4f4e1e9d2"
+    },
+    {
+      "source": "scripts/hwpdoc_templates.py",
+      "destination": "scripts/hwpdoc_templates.py",
+      "sha256": "e19db83de8b7ab48bd1d6212abaa206899b5f0ccc939aff0f2bdc56d7126c971"
+    },
+    {
+      "source": "scripts/hwpdoc_workspace.py",
+      "destination": "scripts/hwpdoc_workspace.py",
+      "sha256": "7b55b202291e57f90f502fce53580feed03354cede365e93977a9d5f6f6c1d1f"
+    },
+    {
+      "source": "scripts/hwpdoc_setup.py",
+      "destination": "scripts/hwpdoc_setup.py",
+      "sha256": "d36120aed7a8058965d46eba092445ed45c602d8abcbb3aec8c032e696e84781"
+    },
+    {
+      "source": "scripts/hwpdoc_preview.py",
+      "destination": "scripts/hwpdoc_preview.py",
+      "sha256": "8cc24ab6e62e50a6e26960b136daafdc6172fffa27381357aaa8e52020989a23"
+    },
+    {
+      "source": "scripts/runtime.ps1",
+      "destination": "scripts/runtime.ps1",
+      "sha256": "36b663489591d351256be425e9e5adbe0c1cb01e68b60bc7c8fa210605361201"
+    },
+    {
+      "source": "scripts/hook.ps1",
+      "destination": "scripts/hook.ps1",
+      "sha256": "4e9317e60d17ba01219b2f10edc16887689f77f2d1a60b299262e3bd7f6f73fb"
+    },
+    {
+      "source": "scripts/install-dependencies.ps1",
+      "destination": "scripts/install-dependencies.ps1",
+      "sha256": "8e79c8742c1095b1bf25fc05af000c4ee7c401ae8e7e5423335b96a6004bdd0f"
+    },
+    {
+      "source": "scripts/hwpdoc_com_probe.py",
+      "destination": "scripts/hwpdoc_com_probe.py",
+      "sha256": "e7214a1754931feadf956ad405bfb2bc3ae4601510c0a9d020a6c780031aba9d"
+    },
+    {
+      "source": "scripts/render_check.py",
+      "destination": "scripts/render_check.py",
+      "sha256": "5086c73d4f56a5f696d75c65ce55fde4fb78331742068c3339bca85eb5214274"
+    },
+    {
+      "source": "scripts/fusion_timetable.py",
+      "destination": "scripts/fusion_timetable.py",
+      "sha256": "1f75d991057b57fbf95cc26c04e580e8a1c9e1df1a22325c8c670e1186412781"
+    },
+    {
+      "source": "scripts/budget_name_check.py",
+      "destination": "scripts/budget_name_check.py",
+      "sha256": "930fe1b63d56757eea79644d6535dd10ecc7db9b95eda7c9b4c85dd3382c97af"
+    },
+    {
+      "source": "scripts/related_lookup.py",
+      "destination": "scripts/related_lookup.py",
+      "sha256": "9147eb1dd4d2a7be0ccd3b92631a11763a0df1e379779307932527739a3e1472"
+    },
+    {
+      "source": "scripts/refresh_reference.py",
+      "destination": "scripts/refresh_reference.py",
+      "sha256": "60cc50c16439cf5d717af5e5d79a2c38acd4ce5de73c3b087ed16a0de85da673"
+    },
+    {
+      "source": "scripts/validate_pipeline.py",
+      "destination": "scripts/validate_pipeline.py",
+      "sha256": "0a02086680ab5540528e75e038bea88b59fed92e75940ca659773de40e1e980d"
+    },
+    {
+      "source": "scripts/log_review.py",
+      "destination": "scripts/log_review.py",
+      "sha256": "d21209b42229fd661f05660d2f09783451cf3d6e9bd202c9c0df7e1787270f02"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/validate.py",
+      "destination": "skills/hwpx/scripts/validate.py",
+      "sha256": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/text_extract.py",
+      "destination": "skills/hwpx/scripts/text_extract.py",
+      "sha256": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/page_guard.py",
+      "destination": "skills/hwpx/scripts/page_guard.py",
+      "sha256": "e5e6141dafd5fed454ff909a92bcc4e05f037df9a822a0eaeef7169d59711474"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/edit_hwpx.py",
+      "destination": "skills/hwpx/scripts/edit_hwpx.py",
+      "sha256": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/content_guard.py",
+      "destination": "skills/hwpx/scripts/content_guard.py",
+      "sha256": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/build_hwpx.py",
+      "destination": "skills/hwpx/scripts/build_hwpx.py",
+      "sha256": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/create_document.py",
+      "destination": "skills/hwpx/scripts/create_document.py",
+      "sha256": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/analyze_template.py",
+      "destination": "skills/hwpx/scripts/analyze_template.py",
+      "sha256": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/fix_namespaces.py",
+      "destination": "skills/hwpx/scripts/fix_namespaces.py",
+      "sha256": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/finalize_hwpx.py",
+      "destination": "skills/hwpx/scripts/finalize_hwpx.py",
+      "sha256": "c21dce23bc11918951ce55e8e11e02d938cbc37c5829357b5dd8c7439b9ed8dc"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/hancom_com.py",
+      "destination": "skills/hwpx/scripts/hancom_com.py",
+      "sha256": "6298aaad66e2ae94ec0ff22254699e66e3faac3b4d307face06498b23a38aa9a"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/gonmun_lint.py",
+      "destination": "skills/hwpx/scripts/gonmun_lint.py",
+      "sha256": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/hwpx_slots.py",
+      "destination": "skills/hwpx/scripts/hwpx_slots.py",
+      "sha256": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/office/pack.py",
+      "destination": "skills/hwpx/scripts/office/pack.py",
+      "sha256": "07f20d46723bf7451d8088bf680daab67c02cffa2d0e6c5b8a5c79dca25580cf"
+    },
+    {
+      "source": ".claude/skills/hwpx/scripts/office/unpack.py",
+      "destination": "skills/hwpx/scripts/office/unpack.py",
+      "sha256": "13888a894d52ce2b8fdc72432bce1e3e8d78efeb214cbd5f4b87719ed40ef4e7"
+    },
+    {
+      "source": ".claude/hooks/protect_files.py",
+      "destination": ".claude/hooks/protect_files.py",
+      "sha256": "34def077dc67ea6f88fdab5d191e183bae4d2da7c1cc366b212087c57368632c"
+    },
+    {
+      "source": ".claude/hooks/event_adapter.py",
+      "destination": ".claude/hooks/event_adapter.py",
+      "sha256": "805a1c0e714c0897aee0ca73640a48c096f5d334a7789269013414c0bdce2980"
+    },
+    {
+      "source": ".claude/hooks/audit_log.py",
+      "destination": ".claude/hooks/audit_log.py",
+      "sha256": "64b176a7e86511af111865becf815d4565260211c39987f9600367ad0fef269a"
+    },
+    {
+      "source": ".claude/hooks/stop_validator.py",
+      "destination": ".claude/hooks/stop_validator.py",
+      "sha256": "28d76cde710c3b2dc43bb4e44d707291419db11150ec3200f3c205ed69cf73fa"
+    },
+    {
+      "source": ".claude/skills/hwpx/SKILL.md",
+      "destination": "skills/hwpx/SKILL.md",
+      "sha256": "7a58ee571b3ac81fcb4b9d4d33821a197b663375ce2c8fb9e5f1c5366d4cc656"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/workflow.md",
+      "destination": "skills/hwpx/references/workflow.md",
+      "sha256": "a6a7bed8c411b81d80ba5549f35b5b03752903bc1704a0bdfde96dd272abf359"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/editing-details.md",
+      "destination": "skills/hwpx/references/editing-details.md",
+      "sha256": "74530af631b48bde49c94fcd10591bb7be090d93683cf3fd482f82996dae5808"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/xml-authoring.md",
+      "destination": "skills/hwpx/references/xml-authoring.md",
+      "sha256": "e854be907e5c3ff1cd6b000107e4fb597e94f9e58a8dcd7d58366dbd89380a5e"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/hwpx-format.md",
+      "destination": "skills/hwpx/references/hwpx-format.md",
+      "sha256": "b0b16ca23ace219bb371b170546dfcfa435ce3714a909e7932ba62e5fa30dcf9"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/jkf87-hwpx-skill-comparison.md",
+      "destination": "skills/hwpx/references/jkf87-hwpx-skill-comparison.md",
+      "sha256": "3fb06fb7cfc74a1ba5b515af776b475aa93c58c1b67e32fb9416089ccfeb4da5"
+    },
+    {
+      "source": "distribution/requirements-base.txt",
+      "destination": "distribution/requirements-base.txt",
+      "sha256": "7f5da33ac3970bb285f212352cba8b68c6277054d35b887b09ec4f6ed145d80c"
+    },
+    {
+      "source": "distribution/requirements-windows.txt",
+      "destination": "distribution/requirements-windows.txt",
+      "sha256": "db57dac3ec46d6427bd3cb53f03487aef1a0f94b165e5c719f48c16f852a651e"
+    },
+    {
+      "source": "distribution/requirements-school-data.txt",
+      "destination": "distribution/requirements-school-data.txt",
+      "sha256": "a23b7b1a69becce3c315f87b5c77f12362aab8751dd36ce44426a3a7aa7be1ee"
+    },
+    {
+      "source": "distribution/requirements-visual.txt",
+      "destination": "distribution/requirements-visual.txt",
+      "sha256": "0f4923868042f1e21413935641e67953270cdc4631123f1728ca9ee99126283d"
+    },
+    {
+      "source": "distribution/README.md",
+      "destination": "distribution/README.md",
+      "sha256": "303bf5c78580982f2298f1e18c0c068d192e833b86306c25ff02f82c3a5effb6"
+    },
+    {
+      "source": "distribution/CHANGELOG.md",
+      "destination": "distribution/CHANGELOG.md",
+      "sha256": "d0e8aa1a082a2e7fa948c1a93fd5465dd70d802af34c5d57694bcb790ea044a2"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/report/header.xml",
+      "destination": "skills/hwpx/templates/report/header.xml",
+      "sha256": "8a69a1a16ea758b0f9d2392f64ce53d4bb986326fb8b80d4ef597d0282222e59"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/report/section0.xml",
+      "destination": "skills/hwpx/templates/report/section0.xml",
+      "sha256": "84398f74aad8b5e8a244b906f73a5865fc8414c3c3dbfcd527b623bf0bd4d791"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/proposal/header.xml",
+      "destination": "skills/hwpx/templates/proposal/header.xml",
+      "sha256": "df9697fedc90023f72cdd4ae0422f32689d113bb3aff120a8dfd8e51e4d40280"
+    },
+    {
+      "source": "distribution/assets/templates/proposal/section0.xml",
+      "destination": "skills/hwpx/templates/proposal/section0.xml",
+      "sha256": "6f0106960eed89d31f41c2ea69943e53e6cfb71600bc4a64c98b38fa65e85d41"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/gonmun/header.xml",
+      "destination": "skills/hwpx/templates/gonmun/header.xml",
+      "sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/gonmun/section0.xml",
+      "destination": "skills/hwpx/templates/gonmun/section0.xml",
+      "sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/minutes/header.xml",
+      "destination": "skills/hwpx/templates/minutes/header.xml",
+      "sha256": "792ebf5d6c15a2f0b77f59f7e93dd38e137fa5540d374e1d08948edab22a6ebe"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/minutes/section0.xml",
+      "destination": "skills/hwpx/templates/minutes/section0.xml",
+      "sha256": "8551285931f934c0651fcd2ea9248cb70fd73f604116f6682a188c9184ae9fd6"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/version.xml",
+      "destination": "skills/hwpx/templates/base/version.xml",
+      "sha256": "4b65fc55a5bd8689fb70181ffe48d81823d49111148a49eb920e04c41317927f"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/settings.xml",
+      "destination": "skills/hwpx/templates/base/settings.xml",
+      "sha256": "f90d391be2730e1c1dbb4f6e439fbeb72ac4e8d47d8fb482ce82e2d152948adc"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/META-INF/manifest.xml",
+      "destination": "skills/hwpx/templates/base/META-INF/manifest.xml",
+      "sha256": "2b4b155c1bb6a9ccc212fef113c4831d2f558e67cf1260eb314ce54f26fd32ea"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/META-INF/container.xml",
+      "destination": "skills/hwpx/templates/base/META-INF/container.xml",
+      "sha256": "5109d3a9249ec1058177fedab574c5d9616058aa92ebefcd33249ebb36a20f61"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/META-INF/container.rdf",
+      "destination": "skills/hwpx/templates/base/META-INF/container.rdf",
+      "sha256": "0cfd814c20595c841e48e62fbf7591829f13c177fa92af634c8199f85ecf3a89"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/mimetype",
+      "destination": "skills/hwpx/templates/base/mimetype",
+      "sha256": "5ab5230b5af04f78947736bf8dd1a269aa684e234f7f4a392efb85289d1655c2"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Contents/section0.xml",
+      "destination": "skills/hwpx/templates/base/Contents/section0.xml",
+      "sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Contents/header.xml",
+      "destination": "skills/hwpx/templates/base/Contents/header.xml",
+      "sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919"
+    },
+    {
+      "source": "distribution/assets/templates/base/Contents/content.hpf",
+      "destination": "skills/hwpx/templates/base/Contents/content.hpf",
+      "sha256": "cfa774ab3c0f6701d13b7fcf3f4f44a903e4c57afc5a12165ee3dfff8a4f1665"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Preview/PrvText.txt",
+      "destination": "skills/hwpx/templates/base/Preview/PrvText.txt",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "source": ".claude/skills/hwpx/templates/base/Preview/PrvImage.png",
+      "destination": "skills/hwpx/templates/base/Preview/PrvImage.png",
+      "sha256": "199421054da7920d8bf8974afad536a799efdb85bc64b33aaaaed35223b90efd"
+    },
+    {
+      "source": "distribution/codex-plugin.json",
+      "destination": ".codex-plugin/plugin.json",
+      "sha256": "f4db0eb34044a2ae877cbe442faaa7ca91d837293e19410f09bb691b972aed43"
+    },
+    {
+      "source": "distribution/claude-plugin.json",
+      "destination": ".claude-plugin/plugin.json",
+      "sha256": "c389828ebe8c40d4f1e10edfd754199dbc06502b006c9c033ee8b0ce087906f6"
+    },
+    {
+      "source": "distribution/legal/AGPL-3.0.txt",
+      "destination": "LICENSE",
+      "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6"
+    },
+    {
+      "source": "distribution/legal/Canine89-MIT.txt",
+      "destination": "licenses/Canine89-MIT.txt",
+      "sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484"
+    },
+    {
+      "source": "distribution/legal/CHANGES.md",
+      "destination": "CHANGES.md",
+      "sha256": "420e0a8c3f3d63b3595e1f1f5582496a47272f829eb8efcb6824e84740cc757b"
+    },
+    {
+      "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.python",
+      "sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2"
+    },
+    {
+      "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.rst",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.rst",
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    {
+      "source": "distribution/legal/dependencies/lxml/licenses/LICENSE.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSE.txt",
+      "sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c"
+    },
+    {
+      "source": "distribution/legal/dependencies/lxml/licenses/LICENSES.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSES.txt",
+      "sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9"
+    },
+    {
+      "source": "distribution/legal/dependencies/openpyxl/LICENCE.rst",
+      "destination": "licenses/dependencies/openpyxl/LICENCE.rst",
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    {
+      "source": "distribution/legal/dependencies/PyMuPDF/COPYING",
+      "destination": "licenses/dependencies/PyMuPDF/COPYING",
+      "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b"
+    },
+    {
+      "source": "distribution/legal/dependencies/pypdf/licenses/LICENSE",
+      "destination": "licenses/dependencies/pypdf/licenses/LICENSE",
+      "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-hwpx/licenses/LICENSE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/LICENSE",
+      "sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-hwpx/licenses/NOTICE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/NOTICE",
+      "sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/adodbapi/license.txt",
+      "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/com/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/com/License.txt",
+      "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+      "destination": "licenses/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+      "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/isapi/README.txt",
+      "sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/License.txt",
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+      "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/win32/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/win32/License.txt",
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    {
+      "source": "distribution/legal/dependencies/xlrd/LICENSE",
+      "destination": "licenses/dependencies/xlrd/LICENSE",
+      "sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815"
+    },
+    {
+      "source": "distribution/legal/GPL-3.0-only.txt",
+      "destination": "licenses/GPL-3.0-only.txt",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    },
+    {
+      "source": "distribution/legal/MuPDF-README.txt",
+      "destination": "licenses/MuPDF-README.txt",
+      "sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5"
+    },
+    {
+      "source": "distribution/legal/NOTICE.md",
+      "destination": "NOTICE.md",
+      "sha256": "dc41817f62ac64f49740c47c25acf5f0161340d7e87e53a244b240a60b6c99de"
+    },
+    {
+      "source": "distribution/legal/SOURCE.md",
+      "destination": "SOURCE.md",
+      "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424"
+    },
+    {
+      "source": "distribution/sources/pymupdf-1.28.0.tar.gz",
+      "destination": "sources/pymupdf-1.28.0.tar.gz",
+      "sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d"
+    },
+    {
+      "source": "distribution/sources/mupdf-1.28.0-source.tar.gz",
+      "destination": "sources/mupdf-1.28.0-source.tar.gz",
+      "sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2"
+    },
+    {
+      "source": "distribution/source-bundle.json",
+      "destination": "SOURCE-BUNDLE.json",
+      "sha256": "318f62cbdf7ef1268a8d008740eacef7308d7cc5ff3ce8bea6e8d8b5fbc313c7"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-calamine/calamine-LICENSE-MIT.md",
+      "destination": "licenses/dependencies/python-calamine/calamine-LICENSE-MIT.md",
+      "sha256": "f0cf9b1c62bbe3bd3a69f5f79c7158f513f612b4940a0a812d1db39d605318bc"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-calamine/LICENSE",
+      "destination": "licenses/dependencies/python-calamine/LICENSE",
+      "sha256": "6ced4640162333a7c880d45d346ae88409746709fafece61303768bc87d80bf0"
+    }
+  ],
+  "release_ready": false,
+  "note": "포장 가능 여부만 검사합니다. 앱 인수·동료 교사 시범 사용은 별도 평가입니다."
+}

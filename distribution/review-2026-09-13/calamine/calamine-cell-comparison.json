@@ -1,0 +1,13 @@
+{
+  "source_sha256": "26b44562b171568bb43595a30563b4c3d9b35ea4f5c058913ba5ae2808d3e70b",
+  "copy_sha256": "26b44562b171568bb43595a30563b4c3d9b35ea4f5c058913ba5ae2808d3e70b",
+  "source_unchanged": true,
+  "rows": 106,
+  "compared_columns": 3,
+  "compared_cells": 318,
+  "value_differences": [],
+  "type_pairs": {
+    "str -> str": 216,
+    "float -> float": 102
+  }
+}

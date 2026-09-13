@@ -1,0 +1,1154 @@
+{
+  "version": 1,
+  "files": {
+    "distribution/legal/AGPL-3.0.txt": {
+      "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6",
+      "license": "AGPL-3.0 license text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6"
+    },
+    "distribution/legal/Canine89-MIT.txt": {
+      "sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484",
+      "license": "MIT",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484"
+    },
+    "distribution/legal/CHANGES.md": {
+      "sha256": "23c7a5df8845483d5e231a6b4650a2c0d3134ec0825f7f1d3615a84ddc89969a",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "23c7a5df8845483d5e231a6b4650a2c0d3134ec0825f7f1d3615a84ddc89969a"
+    },
+    "distribution/legal/dependencies/et-xmlfile/LICENCE.python": {
+      "sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2"
+    },
+    "distribution/legal/dependencies/et-xmlfile/LICENCE.rst": {
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    "distribution/legal/dependencies/lxml/licenses/LICENSE.txt": {
+      "sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c"
+    },
+    "distribution/legal/dependencies/lxml/licenses/LICENSES.txt": {
+      "sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9"
+    },
+    "distribution/legal/dependencies/openpyxl/LICENCE.rst": {
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    "distribution/legal/dependencies/PyMuPDF/COPYING": {
+      "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b"
+    },
+    "distribution/legal/dependencies/pypdf/licenses/LICENSE": {
+      "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+    },
+    "distribution/legal/dependencies/python-hwpx/licenses/LICENSE": {
+      "sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875"
+    },
+    "distribution/legal/dependencies/python-hwpx/licenses/NOTICE": {
+      "sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt": {
+      "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/com/License.txt": {
+      "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE": {
+      "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt": {
+      "sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt": {
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt": {
+      "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt": {
+      "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/win32/License.txt": {
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    "distribution/legal/dependencies/xlrd/LICENSE": {
+      "sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815"
+    },
+    "distribution/legal/GPL-3.0-only.txt": {
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+      "license": "GPL-3.0-only license text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    },
+    "distribution/legal/MuPDF-README.txt": {
+      "sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5"
+    },
+    "distribution/legal/NOTICE.md": {
+      "sha256": "80c0cbce9e442807ff211f499936fc69c04584aa1c9015a738a3edc581202359",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "80c0cbce9e442807ff211f499936fc69c04584aa1c9015a738a3edc581202359"
+    },
+    "distribution/legal/SOURCE.md": {
+      "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Verbatim public license/attribution or publisher notice; public author/contact emails preserved, not local school/student data.",
+      "privacy_sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424"
+    },
+    "distribution/sources/pymupdf-1.28.0.tar.gz": {
+      "sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d",
+      "license": "AGPL-3.0 distribution; original per-file licenses retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Hash equals previously verified unmodified public upstream archive; no local material added; not a new manual review of every upstream test asset.",
+      "privacy_sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d"
+    },
+    "distribution/sources/mupdf-1.28.0-source.tar.gz": {
+      "sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2",
+      "license": "AGPL-3.0-or-later; original thirdparty licenses retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Hash equals previously verified unmodified public upstream archive; no local material added; not a new manual review of every upstream test asset.",
+      "privacy_sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2"
+    },
+    "distribution/source-bundle.json": {
+      "sha256": "e795e430add628b0d3b5e11b49a2407ccd89cf025e2f5a11227b994f940c13e8",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "e795e430add628b0d3b5e11b49a2407ccd89cf025e2f5a11227b994f940c13e8"
+    },
+    "scripts/teacher_doc.py": {
+      "sha256": "c9abc4918f4c16d0838d6fad5a3c26bbdedc419d133d620677b02ed9bacd3851",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "c9abc4918f4c16d0838d6fad5a3c26bbdedc419d133d620677b02ed9bacd3851"
+    },
+    "scripts/teacher_doc.ps1": {
+      "sha256": "dec1f464b041a39536dc5d5e79516b78308e05164daeb77953e30dc6b03879c8",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "dec1f464b041a39536dc5d5e79516b78308e05164daeb77953e30dc6b03879c8"
+    },
+    "scripts/hwpdoc.py": {
+      "sha256": "baa743ec67051732853a29448e720867805bef293daf2f03b5f76db69082318b",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "baa743ec67051732853a29448e720867805bef293daf2f03b5f76db69082318b"
+    },
+    "scripts/hwpdoc.ps1": {
+      "sha256": "ec3d52109e00eded29c3bf1f2d63ece6343af2e8d031e5238813bc05299fe261",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "ec3d52109e00eded29c3bf1f2d63ece6343af2e8d031e5238813bc05299fe261"
+    },
+    "scripts/hwpdoc_config.py": {
+      "sha256": "6c91f91a7d27e594734b2c2bdebea867e70dde92ad4f0711734db924244d32ce",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "6c91f91a7d27e594734b2c2bdebea867e70dde92ad4f0711734db924244d32ce"
+    },
+    "scripts/hwpdoc_runtime.py": {
+      "sha256": "7041649d9d0f78509df7cd8e330e1769acc38fa7efcc2e2094ed32baf2793cb7",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "7041649d9d0f78509df7cd8e330e1769acc38fa7efcc2e2094ed32baf2793cb7"
+    },
+    "scripts/hwpdoc_templates.py": {
+      "sha256": "e19db83de8b7ab48bd1d6212abaa206899b5f0ccc939aff0f2bdc56d7126c971",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "e19db83de8b7ab48bd1d6212abaa206899b5f0ccc939aff0f2bdc56d7126c971"
+    },
+    "scripts/hwpdoc_workspace.py": {
+      "sha256": "7b55b202291e57f90f502fce53580feed03354cede365e93977a9d5f6f6c1d1f",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "7b55b202291e57f90f502fce53580feed03354cede365e93977a9d5f6f6c1d1f"
+    },
+    "scripts/hwpdoc_setup.py": {
+      "sha256": "d36120aed7a8058965d46eba092445ed45c602d8abcbb3aec8c032e696e84781",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "d36120aed7a8058965d46eba092445ed45c602d8abcbb3aec8c032e696e84781"
+    },
+    "scripts/hwpdoc_preview.py": {
+      "sha256": "8cc24ab6e62e50a6e26960b136daafdc6172fffa27381357aaa8e52020989a23",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "8cc24ab6e62e50a6e26960b136daafdc6172fffa27381357aaa8e52020989a23"
+    },
+    "scripts/runtime.ps1": {
+      "sha256": "36b663489591d351256be425e9e5adbe0c1cb01e68b60bc7c8fa210605361201",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "36b663489591d351256be425e9e5adbe0c1cb01e68b60bc7c8fa210605361201"
+    },
+    "scripts/hook.ps1": {
+      "sha256": "4e9317e60d17ba01219b2f10edc16887689f77f2d1a60b299262e3bd7f6f73fb",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "4e9317e60d17ba01219b2f10edc16887689f77f2d1a60b299262e3bd7f6f73fb"
+    },
+    "scripts/install-dependencies.ps1": {
+      "sha256": "8e79c8742c1095b1bf25fc05af000c4ee7c401ae8e7e5423335b96a6004bdd0f",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "8e79c8742c1095b1bf25fc05af000c4ee7c401ae8e7e5423335b96a6004bdd0f"
+    },
+    "scripts/hwpdoc_com_probe.py": {
+      "sha256": "e7214a1754931feadf956ad405bfb2bc3ae4601510c0a9d020a6c780031aba9d",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "e7214a1754931feadf956ad405bfb2bc3ae4601510c0a9d020a6c780031aba9d"
+    },
+    "scripts/render_check.py": {
+      "sha256": "5086c73d4f56a5f696d75c65ce55fde4fb78331742068c3339bca85eb5214274",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "5086c73d4f56a5f696d75c65ce55fde4fb78331742068c3339bca85eb5214274"
+    },
+    "scripts/fusion_timetable.py": {
+      "sha256": "1f75d991057b57fbf95cc26c04e580e8a1c9e1df1a22325c8c670e1186412781",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "1f75d991057b57fbf95cc26c04e580e8a1c9e1df1a22325c8c670e1186412781"
+    },
+    "scripts/budget_name_check.py": {
+      "sha256": "930fe1b63d56757eea79644d6535dd10ecc7db9b95eda7c9b4c85dd3382c97af",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "930fe1b63d56757eea79644d6535dd10ecc7db9b95eda7c9b4c85dd3382c97af"
+    },
+    "scripts/related_lookup.py": {
+      "sha256": "9147eb1dd4d2a7be0ccd3b92631a11763a0df1e379779307932527739a3e1472",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "9147eb1dd4d2a7be0ccd3b92631a11763a0df1e379779307932527739a3e1472"
+    },
+    "scripts/refresh_reference.py": {
+      "sha256": "13ebe31c7fa19ea5d856e4e402f4cfe4c3b420b168b4c19c8e9bb87f9add9727",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "13ebe31c7fa19ea5d856e4e402f4cfe4c3b420b168b4c19c8e9bb87f9add9727"
+    },
+    "scripts/validate_pipeline.py": {
+      "sha256": "0a02086680ab5540528e75e038bea88b59fed92e75940ca659773de40e1e980d",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "0a02086680ab5540528e75e038bea88b59fed92e75940ca659773de40e1e980d"
+    },
+    "scripts/log_review.py": {
+      "sha256": "d21209b42229fd661f05660d2f09783451cf3d6e9bd202c9c0df7e1787270f02",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "d21209b42229fd661f05660d2f09783451cf3d6e9bd202c9c0df7e1787270f02"
+    },
+    ".claude/skills/hwpx/scripts/validate.py": {
+      "sha256": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/validate.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "2e74451070596575f86b98939a3a3a01a0908530956885eed434de8b965b2f32"
+    },
+    ".claude/skills/hwpx/scripts/text_extract.py": {
+      "sha256": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/text_extract.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "aaefe42a01b0fd94169b14b11d776109726706fad37583439f58a10b5af5b568"
+    },
+    ".claude/skills/hwpx/scripts/page_guard.py": {
+      "sha256": "e5e6141dafd5fed454ff909a92bcc4e05f037df9a822a0eaeef7169d59711474",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/page_guard.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "e5e6141dafd5fed454ff909a92bcc4e05f037df9a822a0eaeef7169d59711474"
+    },
+    ".claude/skills/hwpx/scripts/edit_hwpx.py": {
+      "sha256": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/edit_hwpx.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584"
+    },
+    ".claude/skills/hwpx/scripts/content_guard.py": {
+      "sha256": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/content_guard.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "d31d9724e52984d1a16f928463a48c8e267fae5cefbf5cb7eb3f62d125e34b97"
+    },
+    ".claude/skills/hwpx/scripts/build_hwpx.py": {
+      "sha256": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/build_hwpx.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "937e1382748c0b3ebfc88efa577a889021324a05ab6f2ec58bcccac344f4879c"
+    },
+    ".claude/skills/hwpx/scripts/create_document.py": {
+      "sha256": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/create_document.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "f8c20f281befd5b5a2b8ab2cfdb16eb079c7517c6bdbca10de96d447b0dae9d9"
+    },
+    ".claude/skills/hwpx/scripts/analyze_template.py": {
+      "sha256": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/analyze_template.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "902b2e832678704a5c93bb422d648ec6878ab46d05c73aa26beb2d4924cc008d"
+    },
+    ".claude/skills/hwpx/scripts/fix_namespaces.py": {
+      "sha256": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/fix_namespaces.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "52a85e270b155dec829313f567d55b457111261a215d26f9550047e3ca04725a"
+    },
+    ".claude/skills/hwpx/scripts/finalize_hwpx.py": {
+      "sha256": "c21dce23bc11918951ce55e8e11e02d938cbc37c5829357b5dd8c7439b9ed8dc",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/finalize_hwpx.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "c21dce23bc11918951ce55e8e11e02d938cbc37c5829357b5dd8c7439b9ed8dc"
+    },
+    ".claude/skills/hwpx/scripts/hancom_com.py": {
+      "sha256": "6298aaad66e2ae94ec0ff22254699e66e3faac3b4d307face06498b23a38aa9a",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "6298aaad66e2ae94ec0ff22254699e66e3faac3b4d307face06498b23a38aa9a"
+    },
+    ".claude/skills/hwpx/scripts/gonmun_lint.py": {
+      "sha256": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/gonmun_lint.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "e337328cf35f7caa346b238c035656810501b7d5a15fa3eaff90a16525956b8b"
+    },
+    ".claude/skills/hwpx/scripts/hwpx_slots.py": {
+      "sha256": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/hwpx_slots.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d"
+    },
+    ".claude/skills/hwpx/scripts/office/pack.py": {
+      "sha256": "07f20d46723bf7451d8088bf680daab67c02cffa2d0e6c5b8a5c79dca25580cf",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/office/pack.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "07f20d46723bf7451d8088bf680daab67c02cffa2d0e6c5b8a5c79dca25580cf"
+    },
+    ".claude/skills/hwpx/scripts/office/unpack.py": {
+      "sha256": "13888a894d52ce2b8fdc72432bce1e3e8d78efeb214cbd5f4b87719ed40ef4e7",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/scripts/office/unpack.py",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "13888a894d52ce2b8fdc72432bce1e3e8d78efeb214cbd5f4b87719ed40ef4e7"
+    },
+    ".claude/hooks/protect_files.py": {
+      "sha256": "34def077dc67ea6f88fdab5d191e183bae4d2da7c1cc366b212087c57368632c",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "34def077dc67ea6f88fdab5d191e183bae4d2da7c1cc366b212087c57368632c"
+    },
+    ".claude/hooks/event_adapter.py": {
+      "sha256": "805a1c0e714c0897aee0ca73640a48c096f5d334a7789269013414c0bdce2980",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "805a1c0e714c0897aee0ca73640a48c096f5d334a7789269013414c0bdce2980"
+    },
+    ".claude/hooks/audit_log.py": {
+      "sha256": "64b176a7e86511af111865becf815d4565260211c39987f9600367ad0fef269a",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "64b176a7e86511af111865becf815d4565260211c39987f9600367ad0fef269a"
+    },
+    ".claude/hooks/stop_validator.py": {
+      "sha256": "28d76cde710c3b2dc43bb4e44d707291419db11150ec3200f3c205ed69cf73fa",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "28d76cde710c3b2dc43bb4e44d707291419db11150ec3200f3c205ed69cf73fa"
+    },
+    ".claude/skills/hwpx/SKILL.md": {
+      "sha256": "7a58ee571b3ac81fcb4b9d4d33821a197b663375ce2c8fb9e5f1c5366d4cc656",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/SKILL.md",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "7a58ee571b3ac81fcb4b9d4d33821a197b663375ce2c8fb9e5f1c5366d4cc656"
+    },
+    ".claude/skills/hwpx/references/workflow.md": {
+      "sha256": "a6a7bed8c411b81d80ba5549f35b5b03752903bc1704a0bdfde96dd272abf359",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "a6a7bed8c411b81d80ba5549f35b5b03752903bc1704a0bdfde96dd272abf359"
+    },
+    ".claude/skills/hwpx/references/editing-details.md": {
+      "sha256": "74530af631b48bde49c94fcd10591bb7be090d93683cf3fd482f82996dae5808",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "Canine89 SKILL.md reorganized with project-authored changes; local Git introduction recorded",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "74530af631b48bde49c94fcd10591bb7be090d93683cf3fd482f82996dae5808"
+    },
+    ".claude/skills/hwpx/references/xml-authoring.md": {
+      "sha256": "e854be907e5c3ff1cd6b000107e4fb597e94f9e58a8dcd7d58366dbd89380a5e",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "Canine89 SKILL.md reorganized with project-authored changes; local Git introduction recorded",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "e854be907e5c3ff1cd6b000107e4fb597e94f9e58a8dcd7d58366dbd89380a5e"
+    },
+    ".claude/skills/hwpx/references/hwpx-format.md": {
+      "sha256": "b0b16ca23ace219bb371b170546dfcfa435ce3714a909e7932ba62e5fa30dcf9",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/references/hwpx-format.md",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "b0b16ca23ace219bb371b170546dfcfa435ce3714a909e7932ba62e5fa30dcf9"
+    },
+    ".claude/skills/hwpx/references/jkf87-hwpx-skill-comparison.md": {
+      "sha256": "3fb06fb7cfc74a1ba5b515af776b475aa93c58c1b67e32fb9416089ccfeb4da5",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/references/jkf87-hwpx-skill-comparison.md",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "3fb06fb7cfc74a1ba5b515af776b475aa93c58c1b67e32fb9416089ccfeb4da5"
+    },
+    "distribution/requirements-base.txt": {
+      "sha256": "7f5da33ac3970bb285f212352cba8b68c6277054d35b887b09ec4f6ed145d80c",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "7f5da33ac3970bb285f212352cba8b68c6277054d35b887b09ec4f6ed145d80c"
+    },
+    "distribution/requirements-windows.txt": {
+      "sha256": "db57dac3ec46d6427bd3cb53f03487aef1a0f94b165e5c719f48c16f852a651e",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "db57dac3ec46d6427bd3cb53f03487aef1a0f94b165e5c719f48c16f852a651e"
+    },
+    "distribution/requirements-school-data.txt": {
+      "sha256": "79cbedd0af55d9ebdef87c8869e9d98e6302257a53b6ed2498843cb09beb67d9",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "79cbedd0af55d9ebdef87c8869e9d98e6302257a53b6ed2498843cb09beb67d9"
+    },
+    "distribution/requirements-visual.txt": {
+      "sha256": "0f4923868042f1e21413935641e67953270cdc4631123f1728ca9ee99126283d",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "0f4923868042f1e21413935641e67953270cdc4631123f1728ca9ee99126283d"
+    },
+    "distribution/README.md": {
+      "sha256": "649395fec7d08365102772b4fc5452a6d6cb6f0ebf1f5f12d2efa2427bda00ba",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "649395fec7d08365102772b4fc5452a6d6cb6f0ebf1f5f12d2efa2427bda00ba"
+    },
+    "distribution/CHANGELOG.md": {
+      "sha256": "d0e8aa1a082a2e7fa948c1a93fd5465dd70d802af34c5d57694bcb790ea044a2",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "d0e8aa1a082a2e7fa948c1a93fd5465dd70d802af34c5d57694bcb790ea044a2"
+    },
+    ".claude/skills/hwpx/templates/report/header.xml": {
+      "sha256": "8a69a1a16ea758b0f9d2392f64ce53d4bb986326fb8b80d4ef597d0282222e59",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/report/header.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "8a69a1a16ea758b0f9d2392f64ce53d4bb986326fb8b80d4ef597d0282222e59"
+    },
+    ".claude/skills/hwpx/templates/report/section0.xml": {
+      "sha256": "84398f74aad8b5e8a244b906f73a5865fc8414c3c3dbfcd527b623bf0bd4d791",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/report/section0.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "84398f74aad8b5e8a244b906f73a5865fc8414c3c3dbfcd527b623bf0bd4d791"
+    },
+    ".claude/skills/hwpx/templates/proposal/header.xml": {
+      "sha256": "df9697fedc90023f72cdd4ae0422f32689d113bb3aff120a8dfd8e51e4d40280",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/proposal/header.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "df9697fedc90023f72cdd4ae0422f32689d113bb3aff120a8dfd8e51e4d40280"
+    },
+    "distribution/assets/templates/proposal/section0.xml": {
+      "sha256": "6f0106960eed89d31f41c2ea69943e53e6cfb71600bc4a64c98b38fa65e85d41",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/proposal/section0.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "6f0106960eed89d31f41c2ea69943e53e6cfb71600bc4a64c98b38fa65e85d41"
+    },
+    ".claude/skills/hwpx/templates/gonmun/header.xml": {
+      "sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/gonmun/header.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919"
+    },
+    ".claude/skills/hwpx/templates/gonmun/section0.xml": {
+      "sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/gonmun/section0.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c"
+    },
+    ".claude/skills/hwpx/templates/minutes/header.xml": {
+      "sha256": "792ebf5d6c15a2f0b77f59f7e93dd38e137fa5540d374e1d08948edab22a6ebe",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/minutes/header.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "792ebf5d6c15a2f0b77f59f7e93dd38e137fa5540d374e1d08948edab22a6ebe"
+    },
+    ".claude/skills/hwpx/templates/minutes/section0.xml": {
+      "sha256": "8551285931f934c0651fcd2ea9248cb70fd73f604116f6682a188c9184ae9fd6",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/minutes/section0.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "8551285931f934c0651fcd2ea9248cb70fd73f604116f6682a188c9184ae9fd6"
+    },
+    ".claude/skills/hwpx/templates/base/version.xml": {
+      "sha256": "4b65fc55a5bd8689fb70181ffe48d81823d49111148a49eb920e04c41317927f",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/version.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "4b65fc55a5bd8689fb70181ffe48d81823d49111148a49eb920e04c41317927f"
+    },
+    ".claude/skills/hwpx/templates/base/settings.xml": {
+      "sha256": "f90d391be2730e1c1dbb4f6e439fbeb72ac4e8d47d8fb482ce82e2d152948adc",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/settings.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "f90d391be2730e1c1dbb4f6e439fbeb72ac4e8d47d8fb482ce82e2d152948adc"
+    },
+    ".claude/skills/hwpx/templates/base/META-INF/manifest.xml": {
+      "sha256": "2b4b155c1bb6a9ccc212fef113c4831d2f558e67cf1260eb314ce54f26fd32ea",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/META-INF/manifest.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "2b4b155c1bb6a9ccc212fef113c4831d2f558e67cf1260eb314ce54f26fd32ea"
+    },
+    ".claude/skills/hwpx/templates/base/META-INF/container.xml": {
+      "sha256": "5109d3a9249ec1058177fedab574c5d9616058aa92ebefcd33249ebb36a20f61",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/META-INF/container.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "5109d3a9249ec1058177fedab574c5d9616058aa92ebefcd33249ebb36a20f61"
+    },
+    ".claude/skills/hwpx/templates/base/META-INF/container.rdf": {
+      "sha256": "0cfd814c20595c841e48e62fbf7591829f13c177fa92af634c8199f85ecf3a89",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/META-INF/container.rdf",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "0cfd814c20595c841e48e62fbf7591829f13c177fa92af634c8199f85ecf3a89"
+    },
+    ".claude/skills/hwpx/templates/base/mimetype": {
+      "sha256": "5ab5230b5af04f78947736bf8dd1a269aa684e234f7f4a392efb85289d1655c2",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/mimetype",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "5ab5230b5af04f78947736bf8dd1a269aa684e234f7f4a392efb85289d1655c2"
+    },
+    ".claude/skills/hwpx/templates/base/Contents/section0.xml": {
+      "sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/Contents/section0.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "7b3e15979bc9e3df84285e517a41eda6fe25e3f02b52c5037fed8ef15249af7c"
+    },
+    ".claude/skills/hwpx/templates/base/Contents/header.xml": {
+      "sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/Contents/header.xml",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "c1e66a9871583dc1dd095344fc21beb0293bdac12e1ae82aae18eaa6dfbec919"
+    },
+    "distribution/assets/templates/base/Contents/content.hpf": {
+      "sha256": "cfa774ab3c0f6701d13b7fcf3f4f44a903e4c57afc5a12165ee3dfff8a4f1665",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/Contents/content.hpf",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Parsed all text nodes and attributes; inspected placeholders/style labels; no local identity or embedded fonts/assets.",
+      "privacy_sha256": "cfa774ab3c0f6701d13b7fcf3f4f44a903e4c57afc5a12165ee3dfff8a4f1665"
+    },
+    ".claude/skills/hwpx/templates/base/Preview/PrvText.txt": {
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/Preview/PrvText.txt",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    ".claude/skills/hwpx/templates/base/Preview/PrvImage.png": {
+      "sha256": "199421054da7920d8bf8974afad536a799efdb85bc64b33aaaaed35223b90efd",
+      "license": "MIT original component; AGPL-3.0-only combined distribution and project changes",
+      "source": "https://github.com/Canine89/hwpxskill/tree/cb5f25b6557b47b0339398d3b5d45a57bdcb4b28/templates/base/Preview/PrvImage.png",
+      "permission_record": "distribution/canine89-mit-permission-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Full image opened by Codex: blank white page; PNG text/EXIF chunks absent; no local school identity.",
+      "privacy_sha256": "199421054da7920d8bf8974afad536a799efdb85bc64b33aaaaed35223b90efd"
+    },
+    "distribution/codex-plugin.json": {
+      "sha256": "f4db0eb34044a2ae877cbe442faaa7ca91d837293e19410f09bb691b972aed43",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "f4db0eb34044a2ae877cbe442faaa7ca91d837293e19410f09bb691b972aed43"
+    },
+    "distribution/claude-plugin.json": {
+      "sha256": "c389828ebe8c40d4f1e10edfd754199dbc06502b006c9c033ee8b0ce087906f6",
+      "license": "AGPL-3.0-only",
+      "source": "teacher_doc project-authored source/configuration; Git and current implementation history in distribution/release-review-2026-09-13.md",
+      "permission_record": "distribution/pymupdf-agpl-decision-2026-09-13.json; distribution/release-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/release-review-2026-09-13.md — Complete text pattern scan plus source/metadata and flagged-content review; no local school/account identifiers, phone, personal-number or credential matches.",
+      "privacy_sha256": "c389828ebe8c40d4f1e10edfd754199dbc06502b006c9c033ee8b0ce087906f6"
+    }
+  },
+  "dependencies": {
+    "PyMuPDF==1.28.0": {
+      "license": "AGPL-3.0",
+      "source": "https://pypi.org/project/PyMuPDF/1.28.0/",
+      "selection_status": "confirmed_by_user",
+      "selection_record": "distribution/pymupdf-agpl-decision-2026-09-13.json",
+      "conditions_review": "distribution/release-review-2026-09-13.md#의존성별-적용-조건",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "source_bundle_sha256": "e795e430add628b0d3b5e11b49a2407ccd89cf025e2f5a11227b994f940c13e8",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "conditions_checked_current_scope",
+      "scope": "Existing user-selected AGPL source/notice preparation rechecked with current bundle hash; complete unmodified PyMuPDF/MuPDF source archives preserved. Does not resolve xlrd compatibility.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/PyMuPDF/COPYING": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b"
+      }
+    },
+    "lxml==5.4.0": {
+      "license": "BSD-3-Clause; component exceptions retained",
+      "source": "https://pypi.org/project/lxml/5.4.0/",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "conditions_checked_current_scope",
+      "scope": "Uses etree, not isoschematron; no lxml binaries/source resources bundled. LICENSE and exception list retained. No approval for separately vendoring unlicensed XSL resources.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/lxml/licenses/LICENSE.txt": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c",
+        "distribution/legal/dependencies/lxml/licenses/LICENSES.txt": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9"
+      },
+      "conditions_review": "distribution/release-review-2026-09-13.md#의존성별-적용-조건"
+    },
+    "python-hwpx==2.23.0": {
+      "license": "Apache-2.0",
+      "source": "https://pypi.org/project/python-hwpx/2.23.0/",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "conditions_checked_current_scope",
+      "scope": "Unmodified external install; Apache license and NOTICE attribution retained. Mandatory lxml dependency pinned. No source edits or vendored sample corpus.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/python-hwpx/licenses/LICENSE": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875",
+        "distribution/legal/dependencies/python-hwpx/licenses/NOTICE": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8"
+      },
+      "conditions_review": "distribution/release-review-2026-09-13.md#의존성별-적용-조건"
+    },
+    "pypdf==6.14.2": {
+      "license": "BSD-3-Clause",
+      "source": "https://pypi.org/project/pypdf/6.14.2/",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "conditions_checked_current_scope",
+      "scope": "Unmodified external install; copyright, terms and disclaimer retained; no endorsement claims.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/pypdf/licenses/LICENSE": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+      },
+      "conditions_review": "distribution/release-review-2026-09-13.md#의존성별-적용-조건"
+    },
+    "pywin32==312": {
+      "license": "BSD-style Windows API/COM components; mixed component notices retained",
+      "source": "https://pypi.org/project/pywin32/312/",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "conditions_checked_current_scope",
+      "scope": "Windows API/COM imports; original component notices retained. No binary/source redistribution of pywin32, adodbapi, MAPI or Scintilla.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+        "distribution/legal/dependencies/pywin32/licenses/com/License.txt": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+        "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+        "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303",
+        "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+        "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+        "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+        "distribution/legal/dependencies/pywin32/licenses/win32/License.txt": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+      },
+      "conditions_review": "distribution/release-review-2026-09-13.md#의존성별-적용-조건"
+    },
+    "openpyxl==3.1.5": {
+      "license": "MIT",
+      "source": "https://pypi.org/project/openpyxl/3.1.5/",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "conditions_checked_current_scope",
+      "scope": "Unmodified external install; MIT copyright and permission retained; et-xmlfile pinned.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/openpyxl/LICENCE.rst": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+      },
+      "conditions_review": "distribution/release-review-2026-09-13.md#의존성별-적용-조건"
+    },
+    "et-xmlfile==2.0.0": {
+      "license": "MIT AND Python-derived-code notices",
+      "source": "https://pypi.org/project/et-xmlfile/2.0.0/",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "conditions_checked_current_scope",
+      "scope": "MIT and Python-derived code notices both retained; no source edits.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/et-xmlfile/LICENCE.python": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2",
+        "distribution/legal/dependencies/et-xmlfile/LICENCE.rst": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+      },
+      "conditions_review": "distribution/release-review-2026-09-13.md#의존성별-적용-조건"
+    },
+    "xlrd==2.0.2": {
+      "license": "BSD-style main code AND legacy advertising-clause license",
+      "source": "https://pypi.org/project/xlrd/2.0.2/",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "review_report": "distribution/release-review-2026-09-13.md",
+      "review_status": "blocked_agpl_combination",
+      "scope": "Unresolved AGPL compatibility of legacy advertising condition. Direct imports in refresh_reference and doctor; external pip install is not treated as an exemption.",
+      "notice_hashes": {
+        "distribution/legal/dependencies/xlrd/LICENSE": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815"
+      },
+      "blocking_reason": "legacy_advertising_clause_agpl_compatibility_unresolved"
+    }
+  },
+  "status": "file_reviews_complete_dependency_combination_blocked",
+  "source_review": {
+    "checked_date": "2026-09-13",
+    "report": "docs/배포-라이선스-원문확인-2026-09-13.md",
+    "evidence": "distribution/license-evidence-2026-09-13/index.json",
+    "upstream_license_request": "https://github.com/Canine89/hwpxskill/issues/4",
+    "upstream_issue_comments_observed": 0,
+    "upstream_permission_record": "distribution/canine89-mit-permission-2026-09-13.json",
+    "release_approval": false,
+    "latest_review": "distribution/release-review-2026-09-13.md",
+    "latest_file_inventory": "distribution/review-2026-09-13/files.json",
+    "latest_dependency_review": "distribution/review-2026-09-13/dependencies.json"
+  },
+  "notes": [
+    "User-confirmed Canine89 MIT permission and free AGPL choice are settled; no new license exception or third-party grant invented.",
+    "101 allowlisted files reviewed at current SHA256 for origin/rights/privacy. Prior review input preserved in distribution/review-2026-09-13/rights-before.json.",
+    "Seven dependency conditions checked for the current source-only, external-install scope. xlrd 2.0.2 legacy advertising-clause compatibility with AGPL remains blocked.",
+    "The xlrd conditions_review completion field is intentionally absent; a reviewed issue is not a satisfied condition.",
+    "No release package/publication or new app acceptance is asserted. Any file/dependency/scope change requires re-review."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "recorded_date": "2026-09-13",
+  "component": "Canine89/hwpxskill",
+  "license": "MIT",
+  "status": "permission_received_reported_by_user",
+  "source": "user_message",
+  "user_statement": "Canine89/hwpxskill -> MIT 라이센스로 개인 허락 연락해서 받음",
+  "notes": [
+    "사용자가 저작자에게 직접 연락해 MIT 허락을 받았다고 확인했다. 공개 저장소에 LICENSE가 없다는 이전 관측만으로 허락 미취득 상태를 유지하지 않는다.",
+    "허락 원문, 수신 일자, 대상 버전은 이 메시지에 포함되지 않았으며 임의로 기입하지 않는다.",
+    "이 기록은 Canine89/hwpxskill의 허락에 관한 것이며 PyMuPDF 등 별도 의존성의 라이선스 선택이나 teacher_doc 전체의 배포 라이선스를 대신하지 않는다."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sdist_sha256": "761fc39ddc22736b261c46888d83649f1ab4207a4e2090f0066f0d09e1a0d691",
+  "url": "https://files.pythonhosted.org/packages/ab/0b/81a04d6b50c6761906e5bbb3c23341540dfd072d1826de53f02a2b4e4fe0/python_calamine-0.7.0.tar.gz",
+  "entries": [
+    "python_calamine-0.7.0/Cargo.lock",
+    "python_calamine-0.7.0/Cargo.toml",
+    "python_calamine-0.7.0/LICENSE",
+    "python_calamine-0.7.0/pyproject.toml"
+  ],
+  "license_expression": "MIT",
+  "requires_dist": null
+}

@@ -1,0 +1,4 @@
+# Preserve reviewed upstream bytes and the hashes recorded for license documents.
+legal/** -text
+sources/** -text
+source-bundle.json -text

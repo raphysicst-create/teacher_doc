@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "files": {
+    "distribution/legal/AGPL-3.0.txt": {
+      "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6",
+      "license": "AGPL-3.0 license text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6"
+    },
+    "distribution/legal/Canine89-MIT.txt": {
+      "sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484",
+      "license": "MIT",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484"
+    },
+    "distribution/legal/CHANGES.md": {
+      "sha256": "23c7a5df8845483d5e231a6b4650a2c0d3134ec0825f7f1d3615a84ddc89969a",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "23c7a5df8845483d5e231a6b4650a2c0d3134ec0825f7f1d3615a84ddc89969a"
+    },
+    "distribution/legal/dependencies/et-xmlfile/LICENCE.python": {
+      "sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2"
+    },
+    "distribution/legal/dependencies/et-xmlfile/LICENCE.rst": {
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    "distribution/legal/dependencies/lxml/licenses/LICENSE.txt": {
+      "sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c"
+    },
+    "distribution/legal/dependencies/lxml/licenses/LICENSES.txt": {
+      "sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9"
+    },
+    "distribution/legal/dependencies/openpyxl/LICENCE.rst": {
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    "distribution/legal/dependencies/PyMuPDF/COPYING": {
+      "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b"
+    },
+    "distribution/legal/dependencies/pypdf/licenses/LICENSE": {
+      "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+    },
+    "distribution/legal/dependencies/python-hwpx/licenses/LICENSE": {
+      "sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875"
+    },
+    "distribution/legal/dependencies/python-hwpx/licenses/NOTICE": {
+      "sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt": {
+      "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/com/License.txt": {
+      "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE": {
+      "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt": {
+      "sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt": {
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt": {
+      "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt": {
+      "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f"
+    },
+    "distribution/legal/dependencies/pywin32/licenses/win32/License.txt": {
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    "distribution/legal/dependencies/xlrd/LICENSE": {
+      "sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815",
+      "license": "Original component license/NOTICE text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815"
+    },
+    "distribution/legal/GPL-3.0-only.txt": {
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+      "license": "GPL-3.0-only license text; verbatim reproduction",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    },
+    "distribution/legal/MuPDF-README.txt": {
+      "sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5"
+    },
+    "distribution/legal/NOTICE.md": {
+      "sha256": "36d6797a8edb0d34544c6b1971f6cfb78c18a04ecc7c2f2caa8299e126677b49",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "36d6797a8edb0d34544c6b1971f6cfb78c18a04ecc7c2f2caa8299e126677b49"
+    },
+    "distribution/legal/SOURCE.md": {
+      "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424"
+    },
+    "distribution/sources/pymupdf-1.28.0.tar.gz": {
+      "sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d",
+      "license": "AGPL-3.0 distribution; original per-file licenses retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d"
+    },
+    "distribution/sources/mupdf-1.28.0-source.tar.gz": {
+      "sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2",
+      "license": "AGPL-3.0-or-later; original thirdparty licenses retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2"
+    },
+    "distribution/source-bundle.json": {
+      "sha256": "dc678a661ce5656f7f0a24694fe6fafdae4a5f274ffd3f4ec1e245ee7e995d94",
+      "license": "AGPL-3.0-only (distribution notices); original component notices retained",
+      "source": "distribution/source-bundle.json",
+      "permission_record": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "privacy_review": "distribution/agpl-review-2026-09-13.md — new notices contain no local operating data; upstream sources/notices are unmodified public copies",
+      "privacy_sha256": "dc678a661ce5656f7f0a24694fe6fafdae4a5f274ffd3f4ec1e245ee7e995d94"
+    }
+  },
+  "dependencies": {
+    "PyMuPDF==1.28.0": {
+      "license": "AGPL-3.0",
+      "source": "https://pymupdf.readthedocs.io/en/latest/about.html#license-and-copyright",
+      "selection_status": "confirmed_by_user",
+      "selection_record": "distribution/pymupdf-agpl-decision-2026-09-13.json",
+      "conditions_review": "distribution/agpl-review-2026-09-13.md",
+      "reviewed_by": "Codex",
+      "reviewed_at": "2026-09-13",
+      "source_bundle_sha256": "dc678a661ce5656f7f0a24694fe6fafdae4a5f274ffd3f4ec1e245ee7e995d94"
+    }
+  },
+  "status": "pending",
+  "source_review": {
+    "checked_date": "2026-09-13",
+    "report": "docs/배포-라이선스-원문확인-2026-09-13.md",
+    "evidence": "distribution/license-evidence-2026-09-13/index.json",
+    "upstream_license_request": "https://github.com/Canine89/hwpxskill/issues/4",
+    "upstream_issue_comments_observed": 0,
+    "upstream_permission_record": "distribution/canine89-mit-permission-2026-09-13.json",
+    "release_approval": false
+  },
+  "notes": [
+    "2026-09-13 public repository inspection found no LICENSE; subsequently the user confirmed receiving MIT permission directly from Canine89. See upstream_permission_record. The earlier public-source observation is historical, not evidence of permission still being absent.",
+    "Project-authored additions need an explicit publisher license and current-file review.",
+    "2026-09-13 free AGPL-3.0 selected. Source archives, notices, build/source instructions and current-hash packaging checks are prepared; see distribution/agpl-review-2026-09-13.md.",
+    "Native school templates and operational logs are excluded. Do not populate this record with invented permissions.",
+    "All included XML, preview, metadata and images require a current hash-bound privacy review."
+  ]
+}

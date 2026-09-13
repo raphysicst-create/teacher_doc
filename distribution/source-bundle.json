@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "plugin_version": "0.1.0",
+  "program_license": "AGPL-3.0-only",
+  "source_format": "teacher_doc source files plus unmodified upstream source archives",
+  "documents": [
+    {
+      "destination": "LICENSE",
+      "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6"
+    },
+    {
+      "destination": "licenses/Canine89-MIT.txt",
+      "sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484"
+    },
+    {
+      "destination": "CHANGES.md",
+      "sha256": "420e0a8c3f3d63b3595e1f1f5582496a47272f829eb8efcb6824e84740cc757b"
+    },
+    {
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.python",
+      "sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2"
+    },
+    {
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.rst",
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    {
+      "destination": "licenses/dependencies/lxml/licenses/LICENSE.txt",
+      "sha256": "b62adc76b5e086960da8adaafada9e04e32aaf35e1ccb14cef5742405aaed27c"
+    },
+    {
+      "destination": "licenses/dependencies/lxml/licenses/LICENSES.txt",
+      "sha256": "ce53f508d0cb88bdb4621e236ca34881a3fa1805f97dfccf38960128a4e2ead9"
+    },
+    {
+      "destination": "licenses/dependencies/openpyxl/LICENCE.rst",
+      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+    },
+    {
+      "destination": "licenses/dependencies/PyMuPDF/COPYING",
+      "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b"
+    },
+    {
+      "destination": "licenses/dependencies/pypdf/licenses/LICENSE",
+      "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+    },
+    {
+      "destination": "licenses/dependencies/python-hwpx/licenses/LICENSE",
+      "sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875"
+    },
+    {
+      "destination": "licenses/dependencies/python-hwpx/licenses/NOTICE",
+      "sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/adodbapi/license.txt",
+      "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/com/License.txt",
+      "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+      "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/isapi/README.txt",
+      "sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/License.txt",
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+      "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f"
+    },
+    {
+      "destination": "licenses/dependencies/pywin32/licenses/win32/License.txt",
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924"
+    },
+    {
+      "destination": "licenses/dependencies/xlrd/LICENSE",
+      "sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815"
+    },
+    {
+      "destination": "licenses/GPL-3.0-only.txt",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    },
+    {
+      "destination": "licenses/MuPDF-README.txt",
+      "sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5"
+    },
+    {
+      "destination": "NOTICE.md",
+      "sha256": "dc41817f62ac64f49740c47c25acf5f0161340d7e87e53a244b240a60b6c99de"
+    },
+    {
+      "destination": "SOURCE.md",
+      "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424"
+    },
+    {
+      "destination": "licenses/dependencies/python-calamine/calamine-LICENSE-MIT.md",
+      "sha256": "f0cf9b1c62bbe3bd3a69f5f79c7158f513f612b4940a0a812d1db39d605318bc"
+    },
+    {
+      "destination": "licenses/dependencies/python-calamine/LICENSE",
+      "sha256": "6ced4640162333a7c880d45d346ae88409746709fafece61303768bc87d80bf0"
+    }
+  ],
+  "archives": [
+    {
+      "id": "PyMuPDF==1.28.0",
+      "destination": "sources/pymupdf-1.28.0.tar.gz",
+      "sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d",
+      "bytes": 87637751,
+      "url": "https://files.pythonhosted.org/packages/8e/e9/6d6c5d6c0a3551bffd47681a6240caf941727f195b45593cf20ab36f018f/pymupdf-1.28.0.tar.gz",
+      "modified": false
+    },
+    {
+      "id": "MuPDF==1.28.0",
+      "destination": "sources/mupdf-1.28.0-source.tar.gz",
+      "sha256": "21c7f064903154f1c3a7458bee81f130fc36f9b5147ea13328f9980e02d2dea2",
+      "bytes": 68923736,
+      "url": "https://mupdf.com/downloads/archive/mupdf-1.28.0-source.tar.gz",
+      "modified": false
+    }
+  ],
+  "dependency_sources": {
+    "PyMuPDF==1.28.0": [
+      "PyMuPDF==1.28.0",
+      "MuPDF==1.28.0"
+    ]
+  },
+  "license_text_provenance": {
+    "LICENSE": "mupdf-1.28.0-source.tar.gz: mupdf-1.28.0-source/COPYING",
+    "licenses/GPL-3.0-only.txt": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt",
+    "licenses/Canine89-MIT.txt": "Standard MIT text with author attribution; publisher applied following user-confirmed direct MIT permission."
+  }
+}

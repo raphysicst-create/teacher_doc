@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-09-13T11:31:54.052928+00:00",
+  "user_statement": "read me 적어 광고할때 무조건 의무 표시할게, 무료 프로그램이라 내가 광고 페이지 같은거 만들일도 없어",
+  "action": "README 원저작자 표시 추가 및 향후 관련 광고 자료의 표시 의무 이행 확인",
+  "acknowledgment": "This product includes software developed by David Giffin <david@giffin.org>.",
+  "readme": "distribution/README.md",
+  "readme_sha256": "100ca637832fc26c52bf1b13762b11bad33f05670941d950e506bc7ae87c8ad2",
+  "notice_obligation": "publisher_commitment_recorded",
+  "agpl_compatibility": "unchanged; acknowledgment is not a new license exception or third-party permission"
+}

@@ -85,18 +85,16 @@ def pick_anchors(lines: list[str]) -> list[str]:
 
 def hancom_pages_and_pdf(src: Path, pdf_out: Path) -> int:
     """한글 COM으로 파일을 열어 쪽수를 얻고 PDF로 내보낸다."""
-    import win32com.client as win32
+    from hwpdoc_config import CODE_ROOT
+    skill = CODE_ROOT / '.claude/skills/hwpx/scripts'
+    sys.path.insert(0, str(skill if skill.is_dir() else CODE_ROOT / 'skills/hwpx/scripts'))
+    from hancom_com import session
     # COM의 한글 프로세스는 작업 디렉토리가 다르므로 반드시 절대 경로로 전달
     src = src.resolve()
     if pdf_out is not None:
         pdf_out = pdf_out.resolve()
     fmt = "HWP" if src.suffix.lower() == ".hwp" else "HWPX"
-    hwp = win32.Dispatch("HWPFrame.HwpObject")
-    try:
-        hwp.RegisterModule("FilePathCheckDLL", "FilePathCheckerModule")
-    except Exception:
-        pass
-    try:
+    with session() as (hwp, _):
         if not hwp.Open(str(src), fmt, "forceopen:true"):
             raise RuntimeError(f"한글이 파일을 열지 못함: {src}")
         pages = int(hwp.PageCount)
@@ -104,8 +102,6 @@ def hancom_pages_and_pdf(src: Path, pdf_out: Path) -> int:
             if not hwp.SaveAs(str(pdf_out), "PDF", ""):
                 raise RuntimeError(f"PDF 내보내기 실패: {src}")
         return pages
-    finally:
-        hwp.Quit()
 
 
 def extract_pdf_text(pdf_path: Path) -> str:

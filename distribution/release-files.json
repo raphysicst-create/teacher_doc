@@ -127,6 +127,10 @@
       "destination": "skills/hwpx/scripts/finalize_hwpx.py"
     },
     {
+      "source": ".claude/skills/hwpx/scripts/hancom_com.py",
+      "destination": "skills/hwpx/scripts/hancom_com.py"
+    },
+    {
       "source": ".claude/skills/hwpx/scripts/gonmun_lint.py",
       "destination": "skills/hwpx/scripts/gonmun_lint.py"
     },
@@ -289,6 +293,126 @@
     {
       "source": "distribution/claude-plugin.json",
       "destination": ".claude-plugin/plugin.json"
+    },
+    {
+      "source": "distribution/legal/AGPL-3.0.txt",
+      "destination": "LICENSE"
+    },
+    {
+      "source": "distribution/legal/Canine89-MIT.txt",
+      "destination": "licenses/Canine89-MIT.txt"
+    },
+    {
+      "source": "distribution/legal/CHANGES.md",
+      "destination": "CHANGES.md"
+    },
+    {
+      "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.python"
+    },
+    {
+      "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.rst",
+      "destination": "licenses/dependencies/et-xmlfile/LICENCE.rst"
+    },
+    {
+      "source": "distribution/legal/dependencies/lxml/licenses/LICENSE.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSE.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/lxml/licenses/LICENSES.txt",
+      "destination": "licenses/dependencies/lxml/licenses/LICENSES.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/openpyxl/LICENCE.rst",
+      "destination": "licenses/dependencies/openpyxl/LICENCE.rst"
+    },
+    {
+      "source": "distribution/legal/dependencies/PyMuPDF/COPYING",
+      "destination": "licenses/dependencies/PyMuPDF/COPYING"
+    },
+    {
+      "source": "distribution/legal/dependencies/pypdf/licenses/LICENSE",
+      "destination": "licenses/dependencies/pypdf/licenses/LICENSE"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-hwpx/licenses/LICENSE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/LICENSE"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-hwpx/licenses/NOTICE",
+      "destination": "licenses/dependencies/python-hwpx/licenses/NOTICE"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/adodbapi/license.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/adodbapi/license.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/com/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/com/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+      "destination": "licenses/dependencies/pywin32/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/isapi/README.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/isapi/README.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/pywin/idle/LICENSE.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/pythonwin/Scintilla/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/pywin32/licenses/win32/License.txt",
+      "destination": "licenses/dependencies/pywin32/licenses/win32/License.txt"
+    },
+    {
+      "source": "distribution/legal/dependencies/xlrd/LICENSE",
+      "destination": "licenses/dependencies/xlrd/LICENSE"
+    },
+    {
+      "source": "distribution/legal/GPL-3.0-only.txt",
+      "destination": "licenses/GPL-3.0-only.txt"
+    },
+    {
+      "source": "distribution/legal/MuPDF-README.txt",
+      "destination": "licenses/MuPDF-README.txt"
+    },
+    {
+      "source": "distribution/legal/NOTICE.md",
+      "destination": "NOTICE.md"
+    },
+    {
+      "source": "distribution/legal/SOURCE.md",
+      "destination": "SOURCE.md"
+    },
+    {
+      "source": "distribution/sources/pymupdf-1.28.0.tar.gz",
+      "destination": "sources/pymupdf-1.28.0.tar.gz"
+    },
+    {
+      "source": "distribution/sources/mupdf-1.28.0-source.tar.gz",
+      "destination": "sources/mupdf-1.28.0-source.tar.gz"
+    },
+    {
+      "source": "distribution/source-bundle.json",
+      "destination": "SOURCE-BUNDLE.json"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-calamine/calamine-LICENSE-MIT.md",
+      "destination": "licenses/dependencies/python-calamine/calamine-LICENSE-MIT.md"
+    },
+    {
+      "source": "distribution/legal/dependencies/python-calamine/LICENSE",
+      "destination": "licenses/dependencies/python-calamine/LICENSE"
     }
   ],
   "dependency_reviews": [
@@ -298,7 +422,8 @@
     "pywin32==312",
     "openpyxl==3.1.5",
     "et-xmlfile==2.0.0",
-    "xlrd==2.0.2",
+    "python-calamine==0.7.0",
     "PyMuPDF==1.28.0"
-  ]
+  ],
+  "source_bundle": "distribution/source-bundle.json"
 }

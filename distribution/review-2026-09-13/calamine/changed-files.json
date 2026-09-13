@@ -1,0 +1,49 @@
+[
+  {
+    "path": "scripts/hwpdoc_runtime.py",
+    "previous_sha256": "7041649d9d0f78509df7cd8e330e1769acc38fa7efcc2e2094ed32baf2793cb7",
+    "sha256": "57bb6a0cc63399b7cdd416781d89c60e98a5e46450b73b82d564e3a4f4e1e9d2"
+  },
+  {
+    "path": "scripts/refresh_reference.py",
+    "previous_sha256": "13ebe31c7fa19ea5d856e4e402f4cfe4c3b420b168b4c19c8e9bb87f9add9727",
+    "sha256": "60cc50c16439cf5d717af5e5d79a2c38acd4ce5de73c3b087ed16a0de85da673"
+  },
+  {
+    "path": "distribution/requirements-school-data.txt",
+    "previous_sha256": "79cbedd0af55d9ebdef87c8869e9d98e6302257a53b6ed2498843cb09beb67d9",
+    "sha256": "a23b7b1a69becce3c315f87b5c77f12362aab8751dd36ce44426a3a7aa7be1ee"
+  },
+  {
+    "path": "distribution/README.md",
+    "previous_sha256": "100ca637832fc26c52bf1b13762b11bad33f05670941d950e506bc7ae87c8ad2",
+    "sha256": "303bf5c78580982f2298f1e18c0c068d192e833b86306c25ff02f82c3a5effb6",
+    "initial_migration_sha256": "bf42edf07ca89ee77d52f0a0a5a1af6fae20223e158c7ae9e56ae15e6a1b5395",
+    "note": "Preserved unconditional future advertising acknowledgement exactly as user requested"
+  },
+  {
+    "path": "distribution/legal/CHANGES.md",
+    "previous_sha256": "23c7a5df8845483d5e231a6b4650a2c0d3134ec0825f7f1d3615a84ddc89969a",
+    "sha256": "420e0a8c3f3d63b3595e1f1f5582496a47272f829eb8efcb6824e84740cc757b"
+  },
+  {
+    "path": "distribution/legal/NOTICE.md",
+    "previous_sha256": "80c0cbce9e442807ff211f499936fc69c04584aa1c9015a738a3edc581202359",
+    "sha256": "dc41817f62ac64f49740c47c25acf5f0161340d7e87e53a244b240a60b6c99de"
+  },
+  {
+    "path": "distribution/source-bundle.json",
+    "previous_sha256": "e795e430add628b0d3b5e11b49a2407ccd89cf025e2f5a11227b994f940c13e8",
+    "sha256": "318f62cbdf7ef1268a8d008740eacef7308d7cc5ff3ce8bea6e8d8b5fbc313c7"
+  },
+  {
+    "path": "distribution/legal/dependencies/python-calamine/calamine-LICENSE-MIT.md",
+    "previous_sha256": null,
+    "sha256": "f0cf9b1c62bbe3bd3a69f5f79c7158f513f612b4940a0a812d1db39d605318bc"
+  },
+  {
+    "path": "distribution/legal/dependencies/python-calamine/LICENSE",
+    "previous_sha256": null,
+    "sha256": "6ced4640162333a7c880d45d346ae88409746709fafece61303768bc87d80bf0"
+  }
+]

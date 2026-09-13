@@ -1,0 +1,25 @@
+# XLS 읽기 의존성 교체 검토 — 2026. 9. 13.
+
+실제 배포 패키지 시험 요청에 따라, 기존 xlrd 광고 조항의 허락을 새로 만들어 승인하는 대신 XLS 읽기 의존성을 python-calamine 0.7.0으로 교체했다. 기존 README의 저작자 표시와 배포자 약속, xlrd LICENSE·과거 검토 기록은 보존한다. 현재 후보는 xlrd를 import하거나 설치하지 않는다.
+
+## 기능 보존
+
+기존 사업관리카드 사본의 106행 × 3열(318개 사용 셀)을 xlrd와 calamine으로 읽어 값과 타입이 모두 일치했다. 두 구현의 파생 JSON은 바이트 단위로 동일하며 세부사업 12개·산출내역 67개다. 행 위치를 보존하는 `skip_empty_area=False`와 들여쓰기·숫자·상위 항목 누락·원본 경로 보호 회귀시험 6개가 통과했다. 원본이나 운영 파생 데이터를 다시 저장하지 않았다. 고정 Python312에 새 라이브러리를 추가했으며 기존 xlrd 및 다른 패키지는 제거하지 않았다.
+
+## 라이선스와 제공 범위
+
+[python-calamine 0.7.0](https://pypi.org/project/python-calamine/0.7.0/)의 고정 소스 압축본 SHA256을 PyPI와 대조하고 실제 MIT 전문을 읽었다. [calamine 0.35.0 MIT 전문](https://raw.githubusercontent.com/tafia/calamine/v0.35.0/LICENSE-MIT.md)도 보존했다. 추가 광고 조항은 두 MIT 전문에 없다.
+
+Cargo.lock의 70개 구성요소는 registry 체크섬 또는 고정 Git 리비전 및 배포자 라이선스 선언과 대조했다. MIT/Apache-2.0 계열, LLVM 예외, BSD-3-Clause, Unicode-3.0, Zlib 및 이들의 허용적 선택 조건이다. 호환성 판단의 일반 근거는 [GNU 목록](https://www.gnu.org/licenses/license-list.html)과 [Apache의 GPLv3 호환성 설명](https://www.apache.org/licenses/GPL-compatibility.html)이다. 이번 후보에서 기존 xlrd 결합 차단 사유를 제거할 수 있다고 판단한다. 이는 상류 코드 전수 감사나 법적 보증이 아니다.
+
+패키지에는 새로운 wheel·DLL·PYD를 넣지 않는다. 설치기가 고정 PyPI 배포를 설치하며 원래 wheel의 고지를 유지한다. 두 MIT 전문은 소스 패키지에도 포함한다. 기존 PyMuPDF/MuPDF 소스 압축본·AGPL 전문·고지는 그대로 제공한다. Rust/C++ 전체 재빌드는 수행하지 않았다.
+
+## 추적
+
+- [사용 셀 비교](review-2026-09-13/calamine/calamine-cell-comparison.json)
+- [파생 JSON 비교](review-2026-09-13/calamine/budget-json-comparison.json)
+- [고정 소스 검토](review-2026-09-13/calamine/calamine-source-inspection.json)
+- [전이 구성요소 선언·체크섬](review-2026-09-13/calamine/calamine-dependency-license-review.json)
+- [변경 파일의 새 검토 해시](review-2026-09-13/calamine/changed-files.json)
+
+기존 배포 검토 보고서는 당시의 xlrd 차단 결과로 보존한다. 이 후속 기록과 새 패키지 게이트를 함께 확인한다. 파일 포장 가능과 실제 앱 인수·공개 배포 판단은 별개다.

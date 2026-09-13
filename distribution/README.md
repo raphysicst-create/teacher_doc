@@ -19,7 +19,7 @@ setup-hooks는 먼저 등록 제안을 만든다. 실제 이벤트/도구 이름
 
 Windows 훅 명령은 앱별 셸 차이에 맞춰 생성한다. 훅 실행기 업데이트 후에는 해당 앱의 `setup-hooks --apply`를 다시 실행한다. Codex에서는 `/hooks`로 변경된 정의를 검토·신뢰해야 한다. 로컬 스크립트 실행 정책은 훅 프로세스에만 적용하며 시스템·사용자 레지스트리 정책을 바꾸지 않는다. 관리자가 강제한 실행 정책이나 훅 시간 초과를 보호 성공으로 간주하지 않는다.
 
-Python 3.12는 PC별 runtime.json 또는 해당 PC 설치 경로/레지스트리에서 찾는다. 의존성을 별도 환경에 설치하려면 `scripts/install-dependencies.ps1`을 사용한다. PC 데이터는 기본 `%LOCALAPPDATA%/hwpdoc`이며 `-DataDir`로 격리 시험 위치를 지정할 수 있다. 기본 XML/생성/PDF 읽기, Windows COM, 학교 자료(xlsx/xls), 시각 렌더 의존성을 나눴다. `-SchoolData`, `-Visual`은 해당 기능이 필요할 때 선택한다. PyMuPDF의 AGPL/상용 조건을 확인한 뒤 시각 의존성을 선택한다. 버전은 개발 환경 관측값을 고정했으며 깨끗한 PC에서 설치 성공을 별도 확인해야 한다.
+Python 3.12는 PC별 runtime.json 또는 해당 PC 설치 경로/레지스트리에서 찾는다. 의존성을 별도 환경에 설치하려면 `scripts/install-dependencies.ps1`을 사용한다. PC 데이터는 기본 `%LOCALAPPDATA%/hwpdoc`이며 `-DataDir`로 격리 시험 위치를 지정할 수 있다. 기본 XML/생성/PDF 읽기, Windows COM, 학교 자료(xlsx/xls), 시각 렌더 의존성을 나눴다. `-SchoolData`, `-Visual`은 해당 기능이 필요할 때 선택한다. PyMuPDF는 무료 AGPL-3.0으로 사용한다(2026. 9. 13. 사용자 확정). 배포본에는 AGPL 전문·저작권 고지와 AGPL 적용 대상 프로그램의 해당 버전 대응 소스 및 필요한 설치·빌드 자료를 제공한다. 라이선스 선택은 완료됐으며, 소스 제공·고지의 실제 이행은 배포 준비에서 검증한다. 버전은 개발 환경 관측값을 고정했으며 깨끗한 PC에서 설치 성공을 별도 확인해야 한다.
 
 한글 프로그램과 FilePathCheckerModule 보안모듈은 Python 패키지와 별개다. doctor에서 미등록/실행 불가로 나오면 설치된 한글의 자동화 환경을 확인한다. Node.js/kordoc 및 school_task_guide는 선택 연결이다. 없으면 스킬에 적힌 추출/편집/신구대조 및 원문 확인 경로로 진행하고 미사용·미확인 사실을 보존한다.
 
@@ -45,6 +45,14 @@ prepare는 교사가 복잡한 입력 JSON을 직접 작성하라는 기능이 �
 
 ## 업데이트와 제거
 
+### Codex CLI의 한글 COM 검사
+
+`doctor`와 `validate`는 실행 중인 Windows 사용자·제한 토큰·데스크톱과 보안 모듈을 확인한다. `HANCOM_RESTRICTED_CONTEXT`이면 COM 객체를 만들기 전에 미확인으로 반환한다. 현재 PC에서 Codex의 `workspace-write` 제한 환경은 한글 COM 생성이 멈추므로, 이 환경의 전체 검증은 완료로 처리하지 않는다. 한글과 보안 모듈이 설치된 사용자 세션에서 실제 검증을 실행해야 한다. 실행기가 Codex·Windows 권한을 바꾸지는 않는다.
+
+Codex CLI의 셸 도구는 전체 검증에 충분한 `timeout_ms`(300000)를 명시한다. 비동기 실행 도구가 세션 ID를 반환하면 같은 세션의 완료를 기다린다. 외부 셸의 기본 10초 종료와 실행기의 단계별 시간 초과를 구분하고, 이전 결과를 보존한 기존 작업으로 재개한다. 독립 CLI의 기본 설정 통과와 `workspace-write` 통과는 별도 시험이다.
+
+### 기존 설치 유지
+
 플러그인은 코드만 교체한다. 작업 폴더와 PC 데이터는 설치 폴더 밖에 유지한다. 새 설치 경로의 `setup-hooks --app <앱>`으로 제안을 확인하고 `--apply`로 적용한다. `.hwpdoc/hooks-<앱>-owned.json`의 소유 기록과 정확히 일치하는 이전 hwpdoc 항목만 교체한다. 다른 훅과 사용자 설정은 보존하며 수정된 관리 항목은 자동 교체하지 않는다. 변경 전 설정과 소유 기록은 `.hwpdoc/hooks-history/`에 남긴다. 소유 기록이 없는 과거 수동 등록은 자동 제거하지 않으므로 따로 확인한다.
 
 코드·Python·패키지 버전이 바뀌면 status는 이전 검증을 미확인으로 표시한다. `validate --job <기존 작업>`은 입력·원문이 그대로인지 확인하고 전체 검증을 다시 수행한다. 기존 초안 승인과 manifest 해시는 유지하며 코드 해시 변경은 보고서 tool_updates, 실행 환경 변경은 runtime_updates에 기록한다. 과거 보고서에 실행 환경 기록이 없어도 재검증이 필요하다. 승인 입력이나 원문이 바뀐 경우에는 이 경로를 사용할 수 없다. doctor는 패키지의 실제 import와 고정 버전 일치 여부를 확인하며, 설치 흔적만으로 정상이라고 판단하지 않는다.
@@ -67,8 +75,22 @@ prepare는 교사가 복잡한 입력 JSON을 직접 작성하라는 기능이 �
 & $taskPython -X utf8 ./scripts/build_distribution.py --rights ./distribution/rights.pending.json
 ```
 
-현재 rights.pending.json으로는 차단되는 것이 정상이다. 확인된 권리 기록을 제공한 뒤에만 `--output <프로젝트 안 새 경로>/teacher_doc`으로 패키지를 만든다. 패키지 생성 성공도 별도 앱/교사 인수 완료를 뜻하지 않는다.
+현재 `rights.pending.json`에는 파일별 권리·개인정보 검토가 기록돼 있다. 남은 배포 차단은 `xlrd==2.0.2` 과거 코드의 광고 조항과 AGPL 결합 조건이다. 고지 동봉이나 별도 pip 설치만으로 이 조건을 해소한 것으로 처리하지 않는다. 해당 조건을 해결한 뒤 현재 파일 해시로 게이트를 다시 통과해야 `--output <프로젝트 안 새 경로>/teacher_doc`으로 패키지를 만든다. 패키지 생성 성공도 별도 앱/교사 인수 완료를 뜻하지 않는다.
 
 `prepare_distribution_assets.py`는 기본 content.hpf의 작성자·날짜와 proposal 예제의 과거 사업 내용을 제거한 배포 후보 사본을 distribution/assets에 준비한다. 운영 원본은 수정하지 않는다. preparation.json은 변환 전후 해시이며 권리 허가나 개인정보 검토 승인이 아니다. 허용 목록은 이 사본을 사용하며, 본문·미리보기·이미지의 파일별 검토는 여전히 필요하다. 패키지는 임시 폴더에서 모든 복사 해시를 확인한 뒤 완성 경로로 옮기므로 복사 실패를 설치 가능한 패키지로 남기지 않는다.
 
 운영 프로젝트에 설치된 hwpx-fallback은 유지한다. 배포 후보에는 포함하지 않으므로 구조 검사 2회 실패 시 한글에서 새 HWPX 사본으로 저장하거나 지원 양식으로 재생성한 후 전체 검증하는 복구 경로를 안내한다. 원본 덮어쓰기와 검사 생략은 허용하지 않는다.
+
+## xlrd 원저작자 표시
+
+과거 시험 버전에서 사용한 xlrd의 원저작자 표시와 배포자 약속을 기록으로 유지합니다. 현재 배포 후보의 구형 Excel(`.xls`) 읽기는 MIT 라이선스의 `python-calamine==0.7.0`을 사용합니다. 기존 사업관리카드의 사용 셀 318개와 파생 예산 JSON이 이전 결과와 동일함을 확인했습니다.
+
+> This product includes software developed by David Giffin <david@giffin.org>.
+
+배포자는 향후 이 프로그램의 기능이나 사용을 소개하는 광고 자료를 제작하는 경우에도 위 표시를 반드시 포함합니다. 현재 별도 광고 페이지를 제작할 계획은 없습니다. xlrd의 기존 고지는 `licenses/dependencies/xlrd/LICENSE`에 기록으로 보존하며, 현재 XLS 읽기 의존성과 설치 목록에는 xlrd를 포함하지 않습니다. python-calamine과 기반 calamine의 MIT 고지는 `licenses/dependencies/python-calamine/`에 제공합니다.
+
+## 무료 AGPL 소스·고지 제공
+
+PyMuPDF의 무료 AGPL 선택과 소스·고지 준비를 완료했다. 배포 허용 목록에는 루트 LICENSE, NOTICE.md, CHANGES.md, SOURCE.md, SOURCE-BUNDLE.json과 licenses/의 구성요소별 고지를 포함한다. teacher_doc은 편집 가능한 소스로 제공하며 sources/에 PyMuPDF 1.28.0 및 MuPDF 1.28.0의 수정하지 않은 소스 압축본(합계 약 157MB)을 함께 넣는다. 학교 운영 자료는 이 소스 제공 대상에 포함하지 않는다.
+
+패키지 생성기는 필수 고지·소스 누락, 해시·버전 불일치 및 오래된 소스 검토 해시를 차단한다. 소스 압축본을 임의로 제외하거나 의존성 바이너리를 추가하지 않는다. 압축본에 포함된 소스·빌드 파일과 버전을 확인했으며 C++ 전체 재빌드는 수행하지 않았다. 검토 근거는 개발 저장소의 distribution/agpl-review-2026-09-13.md와 distribution/release-review-2026-09-13.md, XLS 읽기 교체 후속 기록에 있다. 파일별 검토 이후 변경한 파일은 다시 검토하며 실제 패키지 생성 성공과 앱 인수·공개 배포 판단은 구분한다.

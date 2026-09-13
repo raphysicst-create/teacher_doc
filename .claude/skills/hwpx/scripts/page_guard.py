@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 import zipfile
 from dataclasses import dataclass, asdict, field
@@ -327,6 +328,7 @@ def compare_text_budget_profile(
     budget_profile: dict[str, Any],
     output_profile: dict[str, Any],
     strict_paragraphs: bool = True,
+    reviewed_paragraphs: tuple[str, ...] = (),
 ) -> list[str]:
     errors: list[str] = []
     ref_slots = _slots_by_key(budget_profile)
@@ -362,12 +364,38 @@ def compare_text_budget_profile(
                 f"text={out.get('text_preview', '')!r}"
             )
         elif out_len > max_chars:
+            if kind == 'paragraph' and key in reviewed_paragraphs:
+                print(f'WARNING: {key} 문단 예산 초과를 현재 렌더 판독으로 확인: max={max_chars}, out={out_len}')
+                continue
             errors.append(
                 f"{key} 글자 예산 초과: max={max_chars}, out={out_len}, "
                 f"text={out.get('text_preview', '')!r}"
             )
 
     return errors
+
+
+def paragraph_render_keys(review_path: Path, reference: Path, output: Path) -> tuple[str, ...]:
+    """Read a current-file observation receipt; it never relaxes cell/structure checks."""
+    review = json.loads(review_path.read_text(encoding='utf-8-sig'))
+    if not (review.get('confirmed') is True and review.get('observer') and review.get('at') and review.get('record')):
+        raise ValueError('문단 렌더 판독 기록 누락')
+    for key, path in [('document_sha256', output), ('reference_sha256', reference)]:
+        if review.get(key) != _sha256(path.read_bytes()):
+            raise ValueError('문단 렌더 판독 문서/원본 해시 불일치')
+    keys = review.get('paragraphs')
+    if not isinstance(keys, list) or not keys or not all(isinstance(k, str) and re.fullmatch(r'p:\d+', k) for k in keys):
+        raise ValueError('문단 렌더 판독은 추출된 일반 문단 키만 허용')
+    profiles = _slots_by_key(collect_text_budget_profile(output))
+    if any(k not in profiles or profiles[k].get('kind') != 'paragraph' or profiles[k].get('meta', {}).get('inside_cell') for k in keys):
+        raise ValueError('셀/없는 문단에는 일반 문단 판독을 적용할 수 없음')
+    if not isinstance(review.get('images'), list) or not review['images'] or not isinstance(review.get('pdf'), dict):
+        raise ValueError('문단 판독 PDF/이미지 누락')
+    for artifact in [review['pdf'], *review['images']]:
+        path = (review_path.parent / artifact['path']).resolve()
+        if not path.is_relative_to(review_path.parent.resolve()) or artifact.get('sha256') != _sha256(path.read_bytes()):
+            raise ValueError('문단 판독 자료 경로/해시 불일치')
+    return tuple(keys)
 
 
 def _sha256(data: bytes) -> str:
@@ -606,6 +634,7 @@ def main() -> int:
         type=Path,
         help="저장된 글자 예산 프로파일로 결과 HWPX를 검사",
     )
+    parser.add_argument('--paragraph-render-review', type=Path, help='동일 문서·원본·PDF·이미지 해시의 실제 일반 문단 판독 기록')
     parser.add_argument(
         "--write-structure",
         type=Path,
@@ -718,6 +747,15 @@ def main() -> int:
             max_empty_fill_chars=args.max_empty_fill_chars,
         )
 
+    reviewed_paragraphs = ()
+    if args.paragraph_render_review:
+        try:
+            if not args.budget_profile or not args.structure_profile:
+                raise ValueError('문단 판독 적용에도 예산·구조 프로파일 필수')
+            reviewed_paragraphs = paragraph_render_keys(args.paragraph_render_review, ref_path, out_path)
+        except (ValueError, OSError, KeyError, TypeError) as exc:
+            print(f'FAIL: paragraph render review: {exc}')
+            return 1
     if args.budget_profile:
         if not args.budget_profile.is_file():
             print(f"Error: budget profile not found: {args.budget_profile}", file=sys.stderr)
@@ -729,6 +767,7 @@ def main() -> int:
                 budget_profile,
                 output_profile,
                 strict_paragraphs=not args.no_strict_paragraph_budget,
+                reviewed_paragraphs=reviewed_paragraphs,
             )
         )
 

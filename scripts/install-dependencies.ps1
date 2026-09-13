@@ -11,7 +11,7 @@ if ($Visual) { $taskFlavor += '-visual' }
 $taskVenv = Join-Path $DataDir ('runtimes/0.1.0-' + $taskFlavor)
 if (Test-Path -LiteralPath $taskVenv) { throw 'Environment already exists; inspect it before selecting or replacing it.' }
 if ($Visual) {
-    Write-Host 'Visual dependency: PyMuPDF is AGPL-3.0 or commercially licensed. Confirm applicable conditions before invoking -Visual.'
+    Write-Host 'Visual dependency: PyMuPDF uses free AGPL-3.0. See LICENSE, NOTICE.md and SOURCE.md in the release.'
 }
 & $Python -X utf8 -c 'import sys; raise SystemExit(0 if sys.version_info[:2] == (3,12) else 2)'
 if ($LASTEXITCODE -ne 0) { throw 'Python 3.12 required' }

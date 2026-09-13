@@ -23,38 +23,34 @@ DANGEROUS_PATTERNS = [
     r"\btaskkill\b",
 ]
 
+def protected_reason(path):
+    """Normalized absolute path; segment matching avoids the old /output bypass."""
+    from pathlib import Path
+    from hwpdoc_config import owned_workspace
+    root = owned_workspace(path)
+    if root is None:
+        return None
+    parts = Path(path).resolve().relative_to(root).as_posix().lower().split('/')
+    derived = path.lower().endswith('.md') and any(
+        parts[i:i+3] == ['knowledge', 'examples', 'index.md'] and i+3 == len(parts)
+        or parts[i:i+3] == ['knowledge', 'examples', 'md']
+        for i in range(len(parts))
+    )
+    if any(p in ('knowledge', 'docs') for p in parts) and not derived and Path(path).exists():
+        return '기존 원본 보호: ' + path + ' — 수정본은 새 파일로 저장하세요.'
+    return None
+
 def main():
-    # 한국어 Windows 콘솔(cp949)에서 차단 메시지 한글 깨짐 방지
-    sys.stderr.reconfigure(encoding="utf-8")
-    data = json.load(sys.stdin)
-    tool = data.get("tool_name", "")
-    tool_input = data.get("tool_input", {})
-
-    if tool in ("Write", "Edit"):
-        raw_path = tool_input.get("file_path") or ""
-        path = raw_path.replace("\\", "/")
-        derived = path.endswith(".md") and any(w in path for w in DERIVED_WHITELIST)
-        for d in PROTECTED_DIRS:
-            d_norm = d.replace("\\", "/")
-            if f"/{d_norm}" in f"/{path}" and "/output" not in path and not derived:
-                # 신규 파일 생성은 허용, 기존 파일(원본 포함) 수정·덮어쓰기만 차단
-                if not os.path.exists(raw_path):
-                    break
-                print(
-                    f"차단: '{path}' 는 보호 폴더의 기존 파일입니다. "
-                    "원본은 수정 금지 — 수정본은 output/ 에 새 파일로 저장하세요.",
-                    file=sys.stderr,
-                )
-                sys.exit(2)
-
-    if tool == "Bash":
-        cmd = tool_input.get("command", "")
-        for pat in DANGEROUS_PATTERNS:
-            if re.search(pat, cmd, re.IGNORECASE):
-                print(f"차단: 위험한 명령 패턴 감지 ({pat}). 사용자 확인이 필요합니다.", file=sys.stderr)
-                sys.exit(2)
-
-    sys.exit(0)
+    from event_adapter import emit_pre
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+    try:
+        data = json.load(sys.stdin)
+        # Claude also supplies cwd; absence must not use an unrelated process cwd.
+        return emit_pre(data)
+    except (ValueError, TypeError) as exc:
+        print('차단: 훅 입력 해석 실패: ' + str(exc), file=sys.stderr)
+        return 2
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

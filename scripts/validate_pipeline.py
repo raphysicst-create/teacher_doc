@@ -9,7 +9,8 @@ subprocess timeout 90초 안에 끝나야 하므로 빠른 검사만 수행한�
 COM 실열림·render_check 등 느린 검사는 여기서 하지 않는다 (대화 중 파이프라인 담당).
 
 동작 원칙:
-- 최초 실행: 기존 output/*.hwpx는 이미 사람 검토를 거쳤으므로 검사 없이 기준선만 기록.
+- 기존 운영 저장소의 최초 실행만 기존 output/*.hwpx의 미검사 기준선을 기록.
+- 새 작업 폴더는 최초 실행부터 검사한다. 기준선도 전체 검증 완료를 뜻하지 않는다.
 - 이후 실행: 기준선 이후 새로 생기거나 변경된 파일만 검사한다.
 - 이번 실행에서 검사한 파일의 실패만 exit 1로 보고한다. 이미 보고된 실패 파일이
   변경 없이 남아 있으면 다시 막지 않는다 (매 턴 재차단 방지 — 2회 초과 시
@@ -26,10 +27,12 @@ import sys
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+from hwpdoc_config import current_context
+CONTEXT = current_context()
+ROOT = CONTEXT.workspace
 OUTPUT_DIR = Path(os.environ.get("HWPDOC_OUTPUT_DIR", ROOT / "output"))
 STATE_FILE = Path(os.environ.get("HWPDOC_STATE_FILE", ROOT / "logs" / ".validate_state.json"))
-SCRIPTS = ROOT / ".claude" / "skills" / "hwpx" / "scripts"
+SCRIPTS = CONTEXT.skill
 TIME_BUDGET = 70.0
 PER_CHECK_TIMEOUT = 25
 
@@ -87,11 +90,11 @@ def main() -> int:
     state = load_state()
     first_run = not STATE_FILE.exists()
 
-    if first_run:
+    if first_run and ROOT == CONTEXT.code and (CONTEXT.code / 'config/legacy-workspace.json').is_file():
         for f in files:
-            state[str(f.relative_to(OUTPUT_DIR))] = {**file_sig(f), "ok": True, "baseline": True}
+            state[str(f.relative_to(OUTPUT_DIR))] = {**file_sig(f), "ok": None, "baseline": True, "status": "unconfirmed"}
         save_state(state)
-        print(f"[기준선] 기존 산출물 {len(files)}건 기록 (기검토분, 검사 생략) — 이후 변경분부터 검사")
+        print(f"[미검사 기준선] 기존 산출물 {len(files)}건 기록 — 이후 변경분부터 검사; 검증 완료 근거 아님")
         return 0
 
     started = time.monotonic()
@@ -125,7 +128,7 @@ def main() -> int:
             print(f"- output/{rel}\n  {reason}")
         return 1
     if skipped_budget:
-        print(f"[통과] 검사 {checked}건 (시간 예산으로 {skipped_budget}건 이월)")
+        print(f"[미확인 잔여] 검사 {checked}건 통과, 시간 예산으로 {skipped_budget}건 이월")
     elif checked:
         print(f"[통과] 변경 산출물 {checked}건 검사 통과")
     return 0

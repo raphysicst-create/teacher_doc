@@ -26,6 +26,7 @@ import re
 import sys
 import tempfile
 import zipfile
+from collections import Counter
 from pathlib import Path
 from xml.etree import ElementTree
 
@@ -84,18 +85,16 @@ def pick_anchors(lines: list[str]) -> list[str]:
 
 def hancom_pages_and_pdf(src: Path, pdf_out: Path) -> int:
     """한글 COM으로 파일을 열어 쪽수를 얻고 PDF로 내보낸다."""
-    import win32com.client as win32
+    from hwpdoc_config import CODE_ROOT
+    skill = CODE_ROOT / '.claude/skills/hwpx/scripts'
+    sys.path.insert(0, str(skill if skill.is_dir() else CODE_ROOT / 'skills/hwpx/scripts'))
+    from hancom_com import session
     # COM의 한글 프로세스는 작업 디렉토리가 다르므로 반드시 절대 경로로 전달
     src = src.resolve()
     if pdf_out is not None:
         pdf_out = pdf_out.resolve()
     fmt = "HWP" if src.suffix.lower() == ".hwp" else "HWPX"
-    hwp = win32.Dispatch("HWPFrame.HwpObject")
-    try:
-        hwp.RegisterModule("FilePathCheckDLL", "FilePathCheckerModule")
-    except Exception:
-        pass
-    try:
+    with session() as (hwp, _):
         if not hwp.Open(str(src), fmt, "forceopen:true"):
             raise RuntimeError(f"한글이 파일을 열지 못함: {src}")
         pages = int(hwp.PageCount)
@@ -103,8 +102,6 @@ def hancom_pages_and_pdf(src: Path, pdf_out: Path) -> int:
             if not hwp.SaveAs(str(pdf_out), "PDF", ""):
                 raise RuntimeError(f"PDF 내보내기 실패: {src}")
         return pages
-    finally:
-        hwp.Quit()
 
 
 def extract_pdf_text(pdf_path: Path) -> str:
@@ -125,10 +122,30 @@ def longest_increasing_len(seq: list[int]) -> int:
     return len(tails)
 
 
+def check_object_residue(logical_text: str, pdf_text: str,
+                         reference_pdf_text: str | None = None) -> dict:
+    """원본에 이미 렌더된 표시는 경고로 보존한다. 증가/신규 표시는 실패한다.
+
+    개수 비교는 위치나 의미의 보존을 보증하지 않으므로 원본 기인도 경고를 남긴다.
+    레퍼런스가 없으면 기존의 보수적인 실패 판정을 유지한다.
+    """
+    rendered = Counter(pdf_text)
+    baseline = Counter(reference_pdf_text or '')
+    candidates = sorted((set(pdf_text) & SUSPICIOUS_CHARS) - set(logical_text))
+    inherited, unexpected = {}, {}
+    for char in candidates:
+        counts = {'output': rendered[char], 'reference': baseline[char]}
+        if reference_pdf_text is not None and 0 < rendered[char] <= baseline[char]:
+            inherited[char] = counts
+        else:
+            unexpected[char] = counts
+    return {'inherited': inherited, 'unexpected': unexpected}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="HWPX 렌더링 검증 (쪽수·순서·역순·개체 잔재)")
     ap.add_argument("output", help="검사할 결과물 .hwpx")
-    ap.add_argument("--reference", help="쪽수 대조 기준 파일 (.hwpx 또는 .hwp)")
+    ap.add_argument("--reference", help="쪽수·원문자 렌더 대조 기준 파일 (.hwpx 또는 .hwp)")
     ap.add_argument("--json", action="store_true", help="JSON으로 출력")
     ap.add_argument("--keep-pdf", help="내보낸 검증 PDF를 이 경로에 보존")
     args = ap.parse_args()
@@ -146,13 +163,24 @@ def main() -> int:
     report: dict = {"output": str(out_path), "checks": {}, "fails": [], "warnings": []}
 
     # 1) COM: 쪽수 + PDF 내보내기
-    tmpdir = tempfile.mkdtemp(prefix="render_check_")
-    pdf_path = Path(args.keep_pdf) if args.keep_pdf else Path(tmpdir) / "render_check.pdf"
+    if args.keep_pdf:
+        pdf_path = Path(args.keep_pdf)
+    else:
+        from hwpdoc_config import current_context
+        scratch = current_context().local('tmp')
+        scratch.mkdir(parents=True, exist_ok=True)
+        pdf_path = Path(tempfile.mkdtemp(prefix="render_check_", dir=scratch)) / "render_check.pdf"
     try:
         out_pages = hancom_pages_and_pdf(out_path, pdf_path)
         report["checks"]["pages_output"] = out_pages
         if args.reference:
-            ref_pages = hancom_pages_and_pdf(Path(args.reference), None)
+            # 출력 PDF와 원본을 덮어쓰지 않는 별도 검사 파일.
+            with tempfile.TemporaryDirectory(prefix="reference_render_", dir=pdf_path.parent) as ref_dir:
+                reference_pdf_path = Path(ref_dir) / "reference.pdf"
+                ref_pages = hancom_pages_and_pdf(Path(args.reference), reference_pdf_path)
+                reference_pdf_text = extract_pdf_text(reference_pdf_path)
+            if len(norm(reference_pdf_text)) < PDF_TEXT_MIN_CHARS:
+                raise RuntimeError("레퍼런스 PDF 추출 텍스트가 너무 짧음 — 원본 대조 불가")
             report["checks"]["pages_reference"] = ref_pages
             if out_pages != ref_pages:
                 report["fails"].append(f"쪽수 불일치: 결과 {out_pages}쪽 ≠ 레퍼런스 {ref_pages}쪽")
@@ -211,10 +239,17 @@ def main() -> int:
 
     # 4) 개체 잔재 (원문자류가 PDF에만 존재)
     logical_all = norm("".join(logical_lines))
-    leftover = sorted(set(pdf_norm) & SUSPICIOUS_CHARS - set(logical_all))
-    if leftover:
+    residue = check_object_residue(logical_all, pdf_norm,
+                                   norm(reference_pdf_text) if args.reference else None)
+    report["checks"]["object_residue"] = residue
+    if residue['unexpected']:
         report["fails"].append(
-            "개체 잔재 의심(논리 텍스트에 없는 원문자가 렌더링됨): " + " ".join(leftover))
+            "개체 잔재 의심(논리 텍스트에 없고 원본 대조 미확인 또는 원본보다 증가): "
+            + json.dumps(residue['unexpected'], ensure_ascii=False))
+    if residue['inherited']:
+        report["warnings"].append(
+            "원본에도 렌더된 원문자(개수 증가 없음, 위치·의미는 육안 확인): "
+            + json.dumps(residue['inherited'], ensure_ascii=False))
 
     ok = not report["fails"]
     report["result"] = "PASS" if ok else "FAIL"

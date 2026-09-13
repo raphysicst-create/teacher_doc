@@ -20,8 +20,10 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_DATA = ROOT / "knowledge" / "reference" / "기초시간표-2026-2학기.json"
+from hwpdoc_config import current_context
+CONTEXT = current_context()
+ROOT = CONTEXT.workspace
+DEFAULT_DATA = CONTEXT.optional_reference('timetable')
 WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"]
 
 
@@ -32,7 +34,7 @@ def parse_date(s):
     return datetime.date(int(nums[0]), int(nums[1]), int(nums[2]))
 
 
-def parse_periods(s):
+def parse_periods(s, max_period=8):
     out = []
     for part in s.split(","):
         part = part.strip()
@@ -41,9 +43,11 @@ def parse_periods(s):
             out.extend(range(int(a), int(b) + 1))
         else:
             out.append(int(part))
-    bad = [p for p in out if not 1 <= p <= 8]
+    bad = [p for p in out if not 1 <= p <= max_period]
     if bad:
-        raise ValueError(f"교시는 1~8 범위여야 함: {bad}")
+        raise ValueError(f"교시는 1~{max_period} 범위여야 함: {bad}")
+    if not out:
+        raise ValueError('교시 범위가 비었습니다')
     return sorted(set(out))
 
 
@@ -55,20 +59,23 @@ def main():
     ap = argparse.ArgumentParser(description="융합교과 산출기 (기계 계산, LLM 미개입)")
     ap.add_argument("dates", nargs="+", help="활동 날짜 (2026-09-16 / 2026. 9. 16. 등)")
     ap.add_argument("--periods", required=True, help="교시: 1-4 또는 1,3,5")
-    ap.add_argument("--grades", default="1,2", help="학년: 1,2 (기본 전체)")
-    ap.add_argument("--data", default=str(DEFAULT_DATA), help="시간표 JSON 경로")
+    ap.add_argument("--grades", help="학년/반 식별자 (기본: 자료의 전체 그룹)")
+    ap.add_argument("--data", default=str(DEFAULT_DATA) if DEFAULT_DATA else None, help="시간표 JSON 경로")
     ap.add_argument("--json", action="store_true", help="구조화 JSON으로 출력")
     args = ap.parse_args()
 
+    if not args.data or not Path(args.data).is_file():
+        ap.error('시간표 없음: 작업 설정 references.timetable 또는 --data로 지정하세요')
     data = json.loads(Path(args.data).read_text(encoding="utf-8"))
     table, full, non_subject = data["시간표"], data["subject_full"], set(data["non_subject"])
 
     errors = []
     try:
-        periods = parse_periods(args.periods)
+        max_period = min(len(periods) for groups in table.values() for periods in groups.values())
+        periods = parse_periods(args.periods, max_period)
     except ValueError as e:
         sys.exit(f"[오류] {e}")
-    grades = [g.strip() for g in args.grades.split(",")]
+    grades = [g.strip() for g in args.grades.split(",")] if args.grades else list(data['grades'])
     for g in grades:
         if g not in data["grades"]:
             sys.exit(f"[오류] 학년 '{g}' 은 시간표에 없음 (가능: {list(data['grades'])})")

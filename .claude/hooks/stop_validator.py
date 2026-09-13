@@ -2,7 +2,7 @@
 """Stop 훅: Claude가 턴을 끝내기 전에 Validator 파이프라인을 실행한다.
 - 검증 실패 → 차단(block)하여 Claude가 스스로 고치게 함 (Self-Correction 루프)
 - 같은 세션에서 2회 차단했으면 → 더 이상 막지 않고 사용자 보고로 전환 (CLAUDE.md 원칙)
-- scripts/validate_pipeline.py 가 아직 없으면 조용히 통과 (Phase 1 안전장치)
+- 검증기 부재/시간 초과/미검사 상태는 미확인으로 보고한다.
 
 validate_pipeline.py 계약: output/ 최신 HWPX를 검사하고
   exit 0 = 통과 / exit 1 = 실패(사유를 stdout에 출력)
@@ -11,6 +11,9 @@ import json
 import os
 import subprocess
 import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
+from hwpdoc_config import owned_workspace, load_context
 
 MAX_BLOCKS = 2
 
@@ -20,12 +23,17 @@ def main():
     # 무한 루프 방지 1차: 이미 Stop 훅 때문에 계속된 턴이면 재차 강하게 막지 않는다
     stop_hook_active = data.get("stop_hook_active", False)
 
-    project_dir = os.environ.get("CLAUDE_PROJECT_DIR", data.get("cwd", "."))
-    validator = os.path.join(project_dir, "scripts", "validate_pipeline.py")
+    root = owned_workspace(data.get('cwd', ''))
+    if root is None:
+        print('{}'); return
+    context = load_context(root)
+    project_dir = str(root)
+    validator = str(context.code / 'scripts/validate_pipeline.py')
     counter_file = os.path.join(project_dir, "logs", ".stop_attempts")
 
-    # Phase 1: 검증 스크립트가 없으면 훅은 투명하게 통과
+    # 검증기 부재를 보호 성공으로 표시하지 않는다.
     if not os.path.exists(validator):
+        print(json.dumps({'systemMessage': '빠른 종료 검증기 없음 — 전체 검증 미확인'}))
         sys.exit(0)
 
     # 시도 횟수 확인 (세션별)
@@ -40,16 +48,24 @@ def main():
     count = attempts.get(session, 0)
 
     # 검증 실행
-    result = subprocess.run(
-        [sys.executable, validator],
-        capture_output=True, text=True, encoding="utf-8", errors="replace",
-        timeout=90, cwd=project_dir,
-    )
+    try:
+        result = subprocess.run(
+            [str(context.python), '-X', 'utf8', validator],
+            capture_output=True, text=True, encoding="utf-8", errors="replace",
+            timeout=90, cwd=project_dir, env=dict(os.environ, HWPDOC_WORKSPACE=project_dir, PYTHONUTF8='1', PYTHONDONTWRITEBYTECODE='1'),
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        result = subprocess.CompletedProcess([], 1, stdout='종료 검증 미확인: ' + str(exc), stderr='')
 
     if result.returncode == 0:
         # 통과 → 카운터 초기화 후 정상 종료 허용
         attempts[session] = 0
         _save(counter_file, attempts)
+        output = (result.stdout or '').strip()
+        if any(marker in output for marker in ('[경고]', '[미확인', '[미검사')):
+            print(json.dumps({'systemMessage': output[:1500]}, ensure_ascii=False))
+        else:
+            print('{}')
         sys.exit(0)
 
     reason = (result.stdout or result.stderr or "검증 실패").strip()[:1500]

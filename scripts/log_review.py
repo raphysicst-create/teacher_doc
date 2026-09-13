@@ -18,7 +18,8 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+from hwpdoc_config import current_context
+ROOT = current_context().workspace
 LOG = ROOT / "logs" / "review_log.jsonl"
 
 

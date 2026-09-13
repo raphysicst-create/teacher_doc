@@ -1,0 +1,4 @@
+# PyMuPDF uses free AGPL-3.0 (publisher decision: 2026-09-13).
+# Releases must provide applicable license notices and corresponding source.
+# Required for PDF->PNG visual workflow, not for ordinary XML editing.
+PyMuPDF==1.28.0

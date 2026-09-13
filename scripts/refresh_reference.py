@@ -10,7 +10,7 @@ knowledge/reference/의 원본 파일을 교체한 뒤 이 스크립트만 다�
   - 예산과목-<연도>.json           (세부사업 > 세부항목 > 비목·산출내역 이름 목록)
 
 사용: python scripts/refresh_reference.py
-의존: openpyxl(xlsx), xlrd(구형 xls)
+의존: openpyxl(xlsx), python-calamine(구형 xls)
 """
 import datetime
 import json
@@ -18,27 +18,15 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+from hwpdoc_config import current_context
+CONTEXT = current_context()
+ROOT = CONTEXT.workspace
 REF = ROOT / "knowledge" / "reference"
 
-TIMETABLE_XLSX = REF / "기초시간표-2026-2학기.xlsx"
-TIMETABLE_STEM = "기초시간표-2026-2학기"
-BUDGET_XLS = REF / "사업관리카드-예산-2026.xls"
-BUDGET_JSON = REF / "예산과목-2026.json"
-
-DAYS = ["월", "화", "수", "목", "금"]
-# 요일별 (1학년 열, 2학년 열) — openpyxl 1-based column index
-DAY_COLS = {"월": (2, 3), "화": (4, 5), "수": (6, 7), "목": (8, 9), "금": (10, 11)}
-PERIOD_ROWS = {p: 4 + p for p in range(1, 9)}  # 교시 1~8 = 행 5~12
-MARKER_RE = re.compile(r"\((주|원)\)|㈜")  # 주제선택 표기 — 무시(2026. 7. 15. 사용자 확인)
-
-SUBJECT_FULL = {
-    "국": "국어", "수": "수학", "사": "사회", "역": "역사", "과": "과학",
-    "영": "영어", "체": "체육", "미": "미술", "음": "음악",
-    "기가": "기술·가정", "진": "진로", "도덕": "도덕", "정보": "정보",
-}
-NON_SUBJECT = ["동아리", "스포츠클럽", "교과방과후", "피아노, 스포츠, 기초", "밴드, 기초"]
-
+TIMETABLE_XLSX = CONTEXT.optional_reference('timetable_source')
+TIMETABLE_JSON = CONTEXT.optional_reference('timetable')
+BUDGET_XLS = CONTEXT.optional_reference('budget_source')
+BUDGET_JSON = CONTEXT.optional_reference('budget')
 
 def _merged_value(ws, row, col):
     """병합 셀이면 병합 범위 좌상단 값을 반환."""
@@ -50,25 +38,41 @@ def _merged_value(ws, row, col):
 
 def build_timetable():
     import openpyxl
+    if not TIMETABLE_XLSX or not TIMETABLE_JSON:
+        raise ValueError('시간표 source/파생 경로 설정이 필요합니다')
+    if TIMETABLE_JSON.suffix.lower() != '.json' or TIMETABLE_JSON.resolve() == TIMETABLE_XLSX.resolve():
+        raise ValueError('시간표 원본과 파생 JSON은 서로 다른 파일이어야 합니다')
+    mapping = CONTEXT.settings.get('timetable_mapping', {})
+    if mapping.get('format') != 'grade-columns-v1':
+        raise ValueError('지원 시간표 형식은 grade-columns-v1입니다. 다른 형식을 추정하지 않습니다')
+    days = mapping['day_columns']
+    grades = mapping['grades']
+    rows = mapping['period_rows']
+    subject_full, non_subject = mapping['subject_full'], mapping['non_subject']
+    if not grades or not rows or any(len(cols) != len(grades) for cols in days.values()):
+        raise ValueError('요일별 열/학년·반/교시 행 매핑 불일치')
+    if any(type(n) is not int or n < 1 for n in [*rows, *[c for cols in days.values() for c in cols]]):
+        raise ValueError('엑셀 행·열은 1 이상의 정수여야 합니다')
+    marker = re.compile(mapping['strip_pattern']) if mapping.get('strip_pattern') else None
     wb = openpyxl.load_workbook(TIMETABLE_XLSX)
-    ws = wb.active
+    ws = wb[mapping['sheet']] if mapping.get('sheet') else wb.active
     title = str(ws.cell(1, 1).value).strip()
     table = {}
-    for day in DAYS:
-        c1, c2 = DAY_COLS[day]
-        table[day] = {"1": [], "2": []}
-        for p in range(1, 9):
-            r = PERIOD_ROWS[p]
-            for grade, col in (("1", c1), ("2", c2)):
+    for day, columns in days.items():
+        table[day] = {g: [] for g in grades}
+        for r in rows:
+            for grade, col in zip(grades, columns):
                 v = _merged_value(ws, r, col)
-                v = "" if v is None else MARKER_RE.sub("", str(v).strip()).strip()
+                v = '' if v is None else str(v).strip()
+                v = marker.sub('', v).strip() if marker else v
                 table[day][grade].append(v)
+    wb.close()
     # 검증: 모든 칸이 알려진 과목 약어이거나 비교과 항목이어야 함
     unknown = set()
-    for day in DAYS:
-        for grade in ("1", "2"):
+    for day in days:
+        for grade in grades:
             for v in table[day][grade]:
-                if v and v not in SUBJECT_FULL and v not in NON_SUBJECT:
+                if v and v not in subject_full and v not in non_subject:
                     unknown.add(v)
     if unknown:
         raise SystemExit(f"[refresh] 알 수 없는 시간표 항목: {sorted(unknown)} — SUBJECT_FULL/NON_SUBJECT 갱신 필요")
@@ -76,59 +80,69 @@ def build_timetable():
         "title": title,
         "source": TIMETABLE_XLSX.name,
         "generated": datetime.date.today().isoformat(),
-        "grades": {"1": "1학년", "2": "2학년"},
-        "subject_full": SUBJECT_FULL,
-        "non_subject": NON_SUBJECT,
-        "note": "주제선택 표기((주)·㈜·(원))는 원본에 있으나 무시하기로 확정(2026. 7. 15.)하여 제거됨",
+        "grades": grades,
+        "subject_full": subject_full,
+        "non_subject": non_subject,
+        "note": '학교 설정의 명시적 시간표 매핑 적용. 특별시간표 미반영.',
         "시간표": table,
     }
-    (REF / f"{TIMETABLE_STEM}.json").write_text(
+    TIMETABLE_JSON.parent.mkdir(parents=True, exist_ok=True)
+    TIMETABLE_JSON.write_text(
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # 사람용 MD 재생성
     lines = [
         f"# {title}",
         "",
-        f"- 원본: `{TIMETABLE_XLSX.name}` (사용자 제공, 2026. 7. 15.) — **이 파일은 `scripts/refresh_reference.py`가 재생성하는 파생 문서. 직접 수정 금지.**",
-        "- 각 요일 아래 `1`/`2` 열 = **1학년 / 2학년** (2026. 7. 15. 사용자 확인).",
-        "- 원본의 주제선택 표기 `(주)`·`㈜`·`(원)`은 무시하기로 확정되어 제거됨.",
+        f"- 원본: `{TIMETABLE_XLSX.name}` — refresh_reference.py 재생성 자료. 직접 수정 금지.",
+        '- 학년/반: ' + ', '.join(f'{k}={v}' for k, v in grades.items()),
+        '- 제거 패턴: ' + str(mapping.get('strip_pattern') or '없음'),
         "- 융합교과 산출은 이 md가 아니라 `scripts/fusion_timetable.py`(기계 계산)를 사용한다. 요일 LLM 암산 금지.",
         "- 한계: 단축수업·고사기간·학사행사 등 특별시간표 미반영 → 활동일이 걸릴 가능성 있으면 사용자 확인.",
         "",
-        "| 교시 | " + " | ".join(f"{d}·{g}" for d in DAYS for g in ("1", "2")) + " |",
-        "|---|" + "---|" * 10,
+        "| 교시 | " + " | ".join(f"{d}·{g}" for d in days for g in grades) + " |",
+        "|---|" + "---|" * (len(days) * len(grades)),
     ]
-    for p in range(1, 9):
-        cells = [table[d][g][p - 1] for d in DAYS for g in ("1", "2")]
+    for p in range(1, len(rows) + 1):
+        cells = [table[d][g][p - 1] for d in days for g in grades]
         lines.append(f"| {p} | " + " | ".join(cells) + " |")
     lines += [
         "",
         "## 구조 메모",
-        "- 월요일만 7~8교시가 정규 교과. 화~금 7~8교시는 방과후 프로그램.",
-        "- 금요일 2교시(동아리)·3교시(스포츠클럽)는 1·2학년 공통.",
-        "- 과목 약어: " + ", ".join(f"{k}={v}" for k, v in SUBJECT_FULL.items()) + ".",
+        "- 과목 약어: " + ", ".join(f"{k}={v}" for k, v in subject_full.items()) + ".",
         "",
     ]
-    (REF / f"{TIMETABLE_STEM}.md").write_text("\n".join(lines), encoding="utf-8")
+    TIMETABLE_JSON.with_suffix('.md').write_text("\n".join(lines), encoding="utf-8")
     return data
 
 
+def read_budget_rows(path):
+    from python_calamine import CalamineWorkbook
+    with CalamineWorkbook.from_path(str(path)) as book:
+        # Header detection below uses original Excel row positions.
+        return book.get_sheet_by_index(0).to_python(skip_empty_area=False)
+
+
 def build_budget():
-    import xlrd
-    book = xlrd.open_workbook(str(BUDGET_XLS))
-    sheet = book.sheets()[0]
+    if not BUDGET_XLS or not BUDGET_JSON:
+        raise ValueError('사업관리카드 source/파생 경로 설정이 필요합니다')
+    if BUDGET_JSON.suffix.lower() != '.json' or BUDGET_JSON.resolve() == BUDGET_XLS.resolve():
+        raise ValueError('사업관리카드 원본과 파생 JSON은 서로 다른 파일이어야 합니다')
+    rows = read_budget_rows(BUDGET_XLS)
     snapshot = datetime.date.fromtimestamp(BUDGET_XLS.stat().st_mtime).isoformat()
     programs = []
     cur_prog = cur_item = None
-    for r in range(sheet.nrows):
-        raw = sheet.cell_value(r, 0)
+    for r, row in enumerate(rows):
+        raw = row[0] if row else ""
         if not isinstance(raw, str) or not raw.strip():
             continue
         name = raw.strip()
         indent = len(raw) - len(raw.lstrip())
-        detail = str(sheet.cell_value(r, 1)).strip() if sheet.ncols > 1 else ""
-        amount = sheet.cell_value(r, 2) if sheet.ncols > 2 else ""
-        amount = int(amount) if isinstance(amount, float) else None
+        detail = row[1] if len(row) > 1 else ""
+        # xlrd exposed numeric cells as floats; retain its string representation.
+        detail = str(float(detail) if type(detail) is int else int(detail) if type(detail) is bool else detail).strip()
+        amount = row[2] if len(row) > 2 else ""
+        amount = int(amount) if type(amount) in (int, float) else None
         if name in ("사업관리카드(예산)",) or "합 계" in name:
             continue
         if r <= 3:  # 헤더 행
@@ -155,16 +169,22 @@ def build_budget():
         "note": "예산과목 '이름' 대조가 목적(2026. 7. 15. 사용자 확인). 금액은 스냅샷 참고치일 뿐 검증 대상 아님.",
         "사업": programs,
     }
+    BUDGET_JSON.parent.mkdir(parents=True, exist_ok=True)
     BUDGET_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     return len(programs), n_names
 
 
 def main():
-    tt = build_timetable()
-    n_days = len(tt["시간표"])
-    n_prog, n_names = build_budget()
-    print(f"[refresh] 시간표 JSON/MD 재생성 완료: {n_days}개 요일 x 2학년 x 8교시")
-    print(f"[refresh] 예산과목 JSON 재생성 완료: 세부사업 {n_prog}개, 산출내역 {n_names}개")
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--only', choices=['timetable', 'budget'])
+    args = ap.parse_args()
+    if args.only in (None, 'timetable'):
+        tt = build_timetable()
+        print(f"[refresh] 시간표 JSON/MD 재생성 완료: {len(tt['시간표'])}개 요일 x {len(tt['grades'])}개 그룹")
+    if args.only in (None, 'budget'):
+        n_prog, n_names = build_budget()
+        print(f"[refresh] 예산과목 JSON 재생성 완료: 세부사업 {n_prog}개, 산출내역 {n_names}개")
 
 
 if __name__ == "__main__":

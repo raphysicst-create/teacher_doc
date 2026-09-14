@@ -1,0 +1,5 @@
+Publish reviewed teacher_doc 0.1.0 distribution package
+
+Replace the previous development tree with 103 reviewed package files and the generated release inventory. Keep license notices and the corresponding PyMuPDF/MuPDF source archives.
+
+Verified installed-code workflows and CLI install, update, uninstall, and user-data preservation on the current Windows PC. Fresh app-context acceptance remains pending.

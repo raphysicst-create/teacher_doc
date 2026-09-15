@@ -2,7 +2,7 @@
 # This does not trust hooks or claim either app loaded them.
 $ErrorActionPreference = 'Stop'
 $taskRoot = Split-Path -Parent $PSScriptRoot
-$taskPython = 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe'
+$taskPython = 'C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe'
 $taskCanonical = Join-Path $taskRoot '.claude/skills/hwpx'
 $taskLink = Join-Path $taskRoot '.agents/skills/hwpx'
 New-Item -ItemType Directory -Force (Split-Path -Parent $taskLink) | Out-Null

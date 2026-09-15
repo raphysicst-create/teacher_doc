@@ -5,7 +5,7 @@
       {
         "hooks": [
           {
-            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/teacher_doc/.claude/hooks/protect_files.py'; exit $LASTEXITCODE\"",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/USER/Desktop/maintain/teacher_doc/.claude/hooks/protect_files.py'; exit $LASTEXITCODE\"",
             "timeout": 10,
             "type": "command"
           }
@@ -17,7 +17,7 @@
       {
         "hooks": [
           {
-            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/teacher_doc/.claude/hooks/stop_validator.py'; exit $LASTEXITCODE\"",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/USER/Desktop/maintain/teacher_doc/.claude/hooks/stop_validator.py'; exit $LASTEXITCODE\"",
             "timeout": 120,
             "type": "command"
           }
@@ -28,7 +28,7 @@
       {
         "hooks": [
           {
-            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/22/Desktop/maintain/teacher_doc/.claude/hooks/audit_log.py'; exit $LASTEXITCODE\"",
+            "command": "powershell.exe -NoProfile -NonInteractive -Command \"& 'C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe' -X utf8 'C:/Users/USER/Desktop/maintain/teacher_doc/.claude/hooks/audit_log.py'; exit $LASTEXITCODE\"",
             "timeout": 10,
             "type": "command"
           }

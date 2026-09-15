@@ -40,7 +40,7 @@
 ## 절대 금지 규칙
 1. **마크다운 표만 보고 "n번째 행/열"로 위치를 추정해 기입하지 않는다.** 반드시 ① 플레이스홀더(`[[필드명]]`) 치환 또는 ② Reader가 산출한 블록 인덱스 + (row, col) 셀 주소만 사용.
 2. Human Approval 생략 금지. 어떤 문서도 "발송 완료"로 처리하지 않는다 — 산출물은 항상 `output/` + 검토 요청으로 끝난다.
-   **동시 산출(2026. 7. 13. 원칙)**: 최종 산출물(hwpx 등 검토 대상 파일)은 `output/` 저장과 **동시에** OneDrive `C:\Users\22\OneDrive - 화동중학교\작업 보고용\`에도 복사한다 (외부/모바일 확인용. budget·structure 프로파일 등 작업 부산물은 제외).
+   **동시 산출(2026. 7. 13. 원칙)**: 최종 산출물(hwpx 등 검토 대상 파일)은 `output/` 저장과 **동시에** OneDrive `C:\Users\USER\OneDrive - 화동중학교\작업 보고용\`에도 복사한다 (외부/모바일 확인용. budget·structure 프로파일 등 작업 부산물은 제외).
 3. 암호화·DRM·배포용 문서는 우회 시도 없이 즉시 보고.
 4. 원본 파일을 직접 덮어쓰지 않는다. 수정본은 항상 새 파일로 저장.
 5. 개인정보(주민번호 등)가 보이면 사용자에게 알리고 처리 방침을 확인받는다.
@@ -106,7 +106,7 @@ W1은 유사 공문·양식 선택 후, W2는 수신 공문 분석 후 **초안 
 ## 실패 처리
 - 동일 단계 **2회 실패 시 자동 시도 중단**, 시도 이력과 함께 사용자에게 보고.
 - kordoc 파싱 실패 → 포맷 변환 후 재시도 → jkf87 변환기 경유
-- **인터프리터 고정**: 스킬·프로젝트 스크립트는 맨 `python`이 아니라 `C:\Users\22\AppData\Local\Programs\Python\Python312\python.exe`로 실행한다. PATH의 `python`·`python3`·`py`는 전부 `textbook_wiki/.venv`이고 **pywin32·python-hwpx가 없어** `--hancom`·`render_check.py`·`create_document.py`가 조용히 실패한다 (근거: 8. 20.). 다른 인터프리터로 돌렸다면 보고에 명시
+- **인터프리터 고정**: 스킬·프로젝트 스크립트는 맨 `python`이 아니라 `C:\Users\USER\AppData\Local\Programs\Python\Python312\python.exe`로 실행한다. PATH의 `python`·`python3`·`py`는 전부 `textbook_wiki/.venv`이고 **pywin32·python-hwpx가 없어** `--hancom`·`render_check.py`·`create_document.py`가 조용히 실패한다 (근거: 8. 20.). 다른 인터프리터로 돌렸다면 보고에 명시
 - kordoc MCP 도구가 목록에 없거나 호출이 연결 오류로 실패하면: ① HWPX 읽기는 `.claude/skills/hwpx/scripts/text_extract.py --format markdown`으로 대체, ② PDF는 Read 도구로 직접 판독, ③ 셀 패치는 hwpx 스킬 `edit_hwpx.py --cell/--slot-json`으로 대체, ④ diff는 두 파일의 text_extract 결과 비교로 대체하고 보고에 'kordoc 미사용' 명시
 - 스캔 PDF → OCR → 실패 시 이미지로 직접 판독
 - kordoc skipped[] 발생 → 해당 항목만 Canine89 재시도 → 전체 재생성
@@ -123,7 +123,7 @@ W1은 유사 공문·양식 선택 후, W2는 수신 공문 분석 후 **초안 
 - **PreToolUse** `protect_files.py`: knowledge/·docs/ **기존 파일 덮어쓰기** 차단(신규 파일 생성은 허용 — 환류 저장용, 금지 규칙 4), 위험 셸 명령 차단
 - **PostToolUse** `audit_log.py`: 파일 생성·수정을 audit.jsonl에 자동 기록
 - **Stop** `stop_validator.py` (2026. 7. 24. 활성): 턴 종료 전 `validate_pipeline.py`가 `output/` **변경분만** 구조 validate + gonmun_lint. 실패 시 차단 → Self-Correction, **2회 초과 시 차단 해제 + 사용자 보고**. 상태는 `logs/.validate_state.json`. COM 실열림·render_check 등 느린 검사는 대화 중 파이프라인 담당
-- **전역 훅(2026. 7. 11.)**: `C:\Users\22\.claude\hooks\hwp_doc_guard.py`가 user settings.json에 등록됨 — 프로젝트 밖 세션(텔레그램 경유 홈 세션 등)에서도 보호 폴더 차단(pre)과 audit.jsonl 자동 기록(post)을 경로 감지로 강제. 프로젝트 안 세션에서는 이중 기록을 피하려고 post가 스스로 건너뜀
+- **전역 훅(2026. 7. 11.)**: `C:\Users\USER\.claude\hooks\hwp_doc_guard.py`가 user settings.json에 등록됨 — 프로젝트 밖 세션(텔레그램 경유 홈 세션 등)에서도 보호 폴더 차단(pre)과 audit.jsonl 자동 기록(post)을 경로 감지로 강제. 프로젝트 안 세션에서는 이중 기록을 피하려고 post가 스스로 건너뜀
 - Stop 훅 수정 시 무한 루프 방지 로직(stop_hook_active, 시도 카운터)을 제거하지 않는다
 
 ## 응답 스타일

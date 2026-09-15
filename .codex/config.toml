@@ -2,9 +2,9 @@
 project_doc_max_bytes = 65536
 
 [mcp_servers.school_task_guide]
-command = "C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe"
-args = ["-I", "-S", "-B", "-X", "utf8", "C:/Users/22/Desktop/develop/school task guide/mcp/school_task_guide/bootstrap.py", "serve"]
-cwd = "C:/Users/22/Desktop/develop/school task guide/mcp/school_task_guide"
+command = "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe"
+args = ["-I", "-S", "-B", "-X", "utf8", "C:/Users/USER/Desktop/develop/school task guide/mcp/school_task_guide/bootstrap.py", "serve"]
+cwd = "C:/Users/USER/Desktop/develop/school task guide/mcp/school_task_guide"
 enabled_tools = ["find_tasks", "get_task_guide", "search_task_evidence", "read_evidence"]
 startup_timeout_sec = 120
 tool_timeout_sec = 120

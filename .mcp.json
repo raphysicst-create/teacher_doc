@@ -9,14 +9,14 @@
       ]
     },
     "school_task_guide": {
-      "command": "C:/Users/22/AppData/Local/Programs/Python/Python312/python.exe",
+      "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe",
       "args": [
         "-I",
         "-S",
         "-B",
         "-X",
         "utf8",
-        "C:/Users/22/Desktop/develop/school task guide/mcp/school_task_guide/bootstrap.py",
+        "C:/Users/USER/Desktop/develop/school task guide/mcp/school_task_guide/bootstrap.py",
         "serve"
       ]
     }

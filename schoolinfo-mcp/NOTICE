@@ -1,0 +1,31 @@
+teacher_doc용 schoolinfo-mcp
+
+상류: https://github.com/chrisryugj/schoolinfo-mcp
+기준 커밋: 180019e
+Copyright (c) 2026 chrisryugj
+
+상류 TypeScript 코드를 학사일정·교육과정·평가계획·자유학기 운영계획서
+조회 4개 도구로 줄였다. 학교 식별은 자료 조회 내부에서 처리한다.
+로컬 stdio와 자체 HTTP MCP 진입점을 유지하고 학교정보·학생통계, 웹앱,
+입시 데이터, 급식, 시간표, 비교, 성취도, 예산 및 범용 공시 기능을 제거했다.
+코드의 원래 MIT 고지는 LICENSE에 보존한다. MIT 라이선스는 아래 외부
+데이터의 이용 조건을 대체하지 않는다.
+
+학교 공시정보
+출처: 학교알리미(https://www.schoolinfo.go.kr) 공개 검색 및 첨부문서
+상류 고지 조건: 공공누리 제1유형(출처표시)
+학교가 첨부한 문서의 개별 권리와 이용 조건도 확인한다.
+
+학사일정
+출처: NEIS 교육정보 개방포털(https://open.neis.go.kr)
+상류 고지 조건: 포털 이용약관. 인증키는 발급받은 회원 본인만 사용할 수 있다.
+
+전공 연계 권장과목 데이터(src/admission.json)는 이 축소본에서 제거했다.
+따라서 원본 NOTICE의 해당 데이터 고지 항목도 이 파일에서 제외했다.
+
+kordoc
+https://github.com/chrisryugj/kordoc
+MIT License — 학교 공개 첨부문서 변환에 사용한다.
+의존성의 개별 고지는 설치된 패키지에 유지된다.
+
+이 도구는 비공식 프로젝트이며 위 기관과 제휴·후원 관계가 없다.

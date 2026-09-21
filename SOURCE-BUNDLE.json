@@ -2,11 +2,11 @@
   "version": 1,
   "plugin_version": "0.1.0",
   "program_license": "AGPL-3.0-only",
-  "source_format": "teacher_doc source files plus unmodified upstream source archives",
+  "source_format": "teacher_doc source files, modified schoolinfo-mcp TypeScript source, and unmodified upstream source archives",
   "documents": [
     {
       "destination": "LICENSE",
-      "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6"
+      "sha256": "282751b8c98ee9e445346eb57a992c9ecbe25ed8dd554df046777313e19b10f9"
     },
     {
       "destination": "licenses/Canine89-MIT.txt",
@@ -14,15 +14,15 @@
     },
     {
       "destination": "CHANGES.md",
-      "sha256": "420e0a8c3f3d63b3595e1f1f5582496a47272f829eb8efcb6824e84740cc757b"
+      "sha256": "f4dd78efded9cea2bde107314fe576708dfc6df0c1f111b69c68a6760a323c9a"
     },
     {
       "destination": "licenses/dependencies/et-xmlfile/LICENCE.python",
-      "sha256": "4ccdaaebc0f44b83720ec0399bb7ab329adce067dd62f73c5535a2dc05628ab2"
+      "sha256": "22543d30760a5ebecf0e37fe7e95efab53ff6fb2cce32e496358a8be3e40a674"
     },
     {
       "destination": "licenses/dependencies/et-xmlfile/LICENCE.rst",
-      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+      "sha256": "82201a19afd9f2ff481d9b739c9cccf98cbef25d40dc548489c52ac0601e1135"
     },
     {
       "destination": "licenses/dependencies/lxml/licenses/LICENSE.txt",
@@ -34,7 +34,7 @@
     },
     {
       "destination": "licenses/dependencies/openpyxl/LICENCE.rst",
-      "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+      "sha256": "82201a19afd9f2ff481d9b739c9cccf98cbef25d40dc548489c52ac0601e1135"
     },
     {
       "destination": "licenses/dependencies/PyMuPDF/COPYING",
@@ -42,15 +42,15 @@
     },
     {
       "destination": "licenses/dependencies/pypdf/licenses/LICENSE",
-      "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+      "sha256": "9975270e8a2102d9ac408a96b35067e901de1f904256e2c2c9846697b317908e"
     },
     {
       "destination": "licenses/dependencies/python-hwpx/licenses/LICENSE",
-      "sha256": "fee6f3e30bfe064913de5de0bbe42e1fb2467958ee458199a192bde5e36c0875"
+      "sha256": "dbb647a89efdf22ffe597c141ddfce5dd3748b39d10091b120b4009b1be86335"
     },
     {
       "destination": "licenses/dependencies/python-hwpx/licenses/NOTICE",
-      "sha256": "938f21e84686404f18d5cd1d4bdb0838e733e18aa46dc226582945ee904e82c8"
+      "sha256": "496a676f30cc23e6ea3e870b853548916e7567c6e934431bf04c8475ee0eabe9"
     },
     {
       "destination": "licenses/dependencies/pywin32/licenses/adodbapi/license.txt",
@@ -86,31 +86,43 @@
     },
     {
       "destination": "licenses/dependencies/xlrd/LICENSE",
-      "sha256": "b5a5dbce60265e305a815a6cb83ed07f24519d8ba644f2a307994488bced8815"
+      "sha256": "019ea257d4ae70c2352f938c2fe6f5374318e77b52fd95ffefe546f89c4c6b70"
     },
     {
       "destination": "licenses/GPL-3.0-only.txt",
-      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+      "sha256": "cde3a5c4c116f8cde7ba83ee7a4a885bc591164195b6123bfcbcdc3a52f9a88c"
     },
     {
       "destination": "licenses/MuPDF-README.txt",
-      "sha256": "f90e04c2dece024ca0b2acb3e3c8a8d48c2e9b281cf01520922e15e3684869d5"
+      "sha256": "917f427ed4e857f868ec8213d7c2715a86ce2faf77e859226932730450040825"
     },
     {
       "destination": "NOTICE.md",
-      "sha256": "dc41817f62ac64f49740c47c25acf5f0161340d7e87e53a244b240a60b6c99de"
+      "sha256": "454ae844ac0cec540ec3368d699c7afe0b8068f01272e07c982574cf6a4baebe"
     },
     {
       "destination": "SOURCE.md",
-      "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424"
+      "sha256": "e36e099d4b040cf252521e9ef10d975aaf773b73346c41048d7d569d9b929572"
     },
     {
       "destination": "licenses/dependencies/python-calamine/calamine-LICENSE-MIT.md",
-      "sha256": "f0cf9b1c62bbe3bd3a69f5f79c7158f513f612b4940a0a812d1db39d605318bc"
+      "sha256": "5b2c207dcf571267ebe0bbdd5bf321f561ddc22ff597e7b363e96f4539507a29"
     },
     {
       "destination": "licenses/dependencies/python-calamine/LICENSE",
-      "sha256": "6ced4640162333a7c880d45d346ae88409746709fafece61303768bc87d80bf0"
+      "sha256": "7185115e04a78c24ce4f68d0fcc7131a7f80843c9c46acc96b5d50cd1dfc4a7e"
+    },
+    {
+      "destination": "schoolinfo-mcp/LICENSE",
+      "sha256": "fd42f81ca6024947fe7fe5bd0bed0e44f70aa77f519d3d4c88995b9bd497a44f"
+    },
+    {
+      "destination": "schoolinfo-mcp/NOTICE",
+      "sha256": "c7e47ffbc57f81ad22dbede87f02766cc3f6fbd02e31b1630e791d9238d86d94"
+    },
+    {
+      "destination": "schoolinfo-mcp/UPSTREAM.json",
+      "sha256": "d0f6de43403b16c9feebf4bbb33782acfc4ea61eaf13c172d0b71a332396633f"
     }
   ],
   "archives": [

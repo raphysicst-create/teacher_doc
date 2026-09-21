@@ -2,5 +2,11 @@
   "name": "teacher_doc",
   "version": "0.1.0",
   "description": "Windows와 한글을 사용하는 교사의 양식 보존 공문 작성과 검증",
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "mcpServers": {
+    "schoolinfo": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/schoolinfo-mcp/dist/mcp.js"]
+    }
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "project": "schoolinfo-mcp",
+  "upstream": "https://github.com/chrisryugj/schoolinfo-mcp",
+  "checkout_origin": "https://github.com/raphysicst-create/schoolinfo-mcp.git",
+  "commit": "180019e38cb35cf9b66aae32607a1da2ee41db24",
+  "upstream_version": "0.3.0",
+  "license": "MIT",
+  "modified_for": "teacher_doc",
+  "modified_at": "2026-09-18",
+  "changes": "Local TypeScript MCP reduced to four reference tools: schedule, curriculum, evaluation, and free-semester plans. The AI supplies school names from conversation or existing work context; public search resolves identity internally. School information/statistics tools and the SchoolInfo API key dependency were removed. Shared stdio/HTTP transports; no upstream remote proxy."
+}

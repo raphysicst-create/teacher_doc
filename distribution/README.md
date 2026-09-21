@@ -35,6 +35,8 @@ Python 3.12는 PC별 runtime.json 또는 해당 PC 설치 경로/레지스트리
 
 원문 갱신 후 `HWPDOC_WORKSPACE`를 지정하여 `refresh_reference.py --only timetable|budget`를 실행한다. 파생 JSON/MD를 수동 편집하지 않는다. 원문과 파생 경로를 같게 지정하지 않는다.
 
+학교 공개자료는 원본 TypeScript 서버를 줄인 `schoolinfo-mcp/`로 보충할 수 있다. 학사일정·교육과정/창체·교수학습 평가계획·자유학기 운영계획서 4개 도구를 제공한다. Node.js 22 이상에서 `scripts/setup-schoolinfo.ps1`로 의존성 설치·빌드를 수행한다. 학교 식별과 계획서 조회에는 API 키가 필요 없고 학사일정은 `NEIS_API_KEY`를 사용한다. [.env.example](../schoolinfo-mcp/.env.example)은 안내용이며 `.env` 파일을 자동 로드하지 않는다. 두 앱의 플러그인 매니페스트는 `node`로 로컬 `schoolinfo-mcp/dist/mcp.js`를 직접 실행하며, 실제 앱 로딩·호출은 설치 환경에서 확인한다. AI가 대화·기존 작업 설정에서 학교명을 알아서 전달하고 동명이교일 때만 선택 인수로 지역·학교급을 보완한다. 별도 학교 설정이나 반복 입력은 요구하지 않는다. 연도와 평가계획의 학기를 명시하고 여러 첨부는 `file_seq`로 선택한다. 자유학기 계획은 같은 연도에서 첨부가 있는 가장 최근 공시 회차를 조회한다. 응답에 질의·조회 시각·출처와 계획 문서의 원본 URL·SHA-256이 포함된다. 이 자료는 `school_task_guide`, 내부 기초시간표, 사업관리카드, 수신 공문 및 관련번호를 대체하지 않는다. 향후 자체 배포용 HTTP 진입점도 남겼으며 이번 변경에서 원격 배포는 수행하지 않았다.
+
 ## 양식 등록·작성
 
 양식 매핑 검증이 끝나면 `add-template --id <이름> --version <버전> --review-draft`로 검토 입력을 준비한다. 변환/재패키징/출처 미확인 양식은 한글 PDF 내보내기·원문 대비 검사와 전체 페이지 PNG 생성을 수행한다. review.draft.json의 confirmed/by/at/record는 승인 없이 채우지 않는다. 검토 준비 자체가 막히면 단계 실패/미확인 이력을 유지한다. 기존 검토 초안은 덮어쓰지 않는다.

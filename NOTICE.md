@@ -9,6 +9,11 @@
 - 배포의 `skills/hwpx/`는 이 프로젝트를 기반으로 한 운영 수정본이다. 비교에 사용한 상류 트리는 `cb5f25b6557b47b0339398d3b5d45a57bdcb4b28`이다. 현재 파일의 식별 해시는 `release-inventory.json`에 있다.
 - 변경과 추가 사항은 `CHANGES.md`를 참고한다. MIT 부분의 고지는 AGPL 결합 배포에서도 유지한다.
 
+## chrisryugj/schoolinfo-mcp
+
+- 상류: https://github.com/chrisryugj/schoolinfo-mcp — Copyright (c) 2026 chrisryugj, MIT. 기준 커밋은 `180019e`이며 원래 허락·저작권 고지는 `schoolinfo-mcp/LICENSE`에 보존한다.
+- teacher_doc의 `schoolinfo-mcp/`는 상류 TypeScript 소스를 학사일정·교육과정·평가계획·자유학기 운영계획서 조회 4개로 줄인 수정본이다. 학교 식별은 자료 조회 내부에서 처리하고 학교정보·학생통계 도구를 제공하지 않는다. 로컬 stdio 및 자체 HTTP MCP 진입점을 유지하고 웹앱·입시 등 범위 밖의 기능을 제거했다. 데이터·변환 도구 고지는 `schoolinfo-mcp/NOTICE`, 변경 범위는 `CHANGES.md`와 해당 폴더의 README에 기록한다.
+
 ## PyMuPDF 1.28.0 / MuPDF 1.28.0
 
 - PyMuPDF: https://github.com/pymupdf/PyMuPDF — Artifex Software, Inc. 및 원래 기여자.

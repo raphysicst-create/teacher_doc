@@ -1,6 +1,6 @@
 # teacher_doc 0.1.0 소스 제공
 
-이 패키지 자체가 teacher_doc의 편집 가능한 소스 배포본이다. `scripts/`의 Python·PowerShell, `.claude/hooks/`, `skills/hwpx/`의 코드·지침·XML, 플러그인 설정, `distribution/requirements-*.txt` 및 설치 안내를 함께 제공한다. 별도 컴파일·난독화된 teacher_doc 실행 파일은 없다. 작업 폴더의 학교 문서·설정·감사 기록은 프로그램 소스가 아니며 이 배포에 넣지 않는다.
+이 패키지 자체가 teacher_doc의 편집 가능한 소스 배포본이다. `scripts/`의 Python·PowerShell, `.claude/hooks/`, `skills/hwpx/`의 코드·지침·XML, `schoolinfo-mcp/`의 TypeScript 소스, 플러그인 설정, `distribution/requirements-*.txt` 및 설치 안내를 함께 제공한다. Python·PowerShell은 직접 실행하며 schoolinfo MCP는 포함된 소스에서 JavaScript로 빌드한다. 작업 폴더의 학교 문서·설정·감사 기록은 프로그램 소스가 아니며 이 배포에 넣지 않는다.
 
 배포 버전과 각 파일의 SHA256은 `release-inventory.json`, 아래 외부 소스의 출처·버전·SHA256은 `SOURCE-BUNDLE.json`에 기록한다. 수령자는 별도 요청이나 유료 계정 없이 패키지에서 이 소스를 얻는다. 배포자가 패키지를 올릴 때 아래 소스를 떼어내지 않는다.
 
@@ -9,6 +9,7 @@
 - `sources/pymupdf-1.28.0.tar.gz`: PyPI가 게시한 1.28.0 소스 배포본. Python/C++ 소스, `setup.py`, `pyproject.toml`, 빌드 지원 스크립트와 시험 자료 포함.
 - `sources/mupdf-1.28.0-source.tar.gz`: MuPDF 공식 1.28.0 소스 배포본. C/C++ 소스, 빌드 파일, Python 바인딩 생성 스크립트와 `thirdparty/` 소스·고지 포함.
 - 두 압축본은 상류 원본 그대로다. 일반 설치는 `distribution/README.md`와 `scripts/install-dependencies.ps1`을 따른다.
+- `schoolinfo-mcp/`: chrisryugj/schoolinfo-mcp를 학사일정·교육과정·평가계획·자유학기 운영계획서 4개 도구로 축소한 TypeScript 소스와 MIT 고지. AI가 전달한 학교명으로 내부 식별하며 학교정보·학생통계 도구는 제공하지 않는다. `package-lock.json`, `tsconfig.json`, `tsup.config.ts`, 테스트와 Dockerfile을 함께 제공한다. Node.js 22 이상에서 `scripts/setup-schoolinfo.ps1` 또는 해당 폴더의 `npm ci`와 `npm run build`로 빌드한다. 의존성은 npm에서 설치하며 `node_modules`와 생성된 `dist`는 소스 목록에 포함하지 않는다.
 
 ## 소스에서 빌드하는 방법
 

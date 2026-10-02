@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import copy
+from datetime import datetime, timedelta, timezone
 import json
 import os
 from pathlib import Path
@@ -235,7 +236,10 @@ class RetrySafety(unittest.TestCase):
         for item in self.patches:
             item.start()
         self.report = {'work_file': str(self.work), 'stages': {}, 'history': [], 'validated_sha256': 'stale'}
-        with patch.object(h, 'run', return_value=(1, '[warn] preserve this warning')) as run:
+        # Windows may return the same wall-clock tick for consecutive calls.
+        # Keep the failed attempt in the past so each test reaches its own guard.
+        stopped_at = (datetime.now(timezone.utc) - timedelta(seconds=10)).isoformat()
+        with patch.object(h, 'now', return_value=stopped_at), patch.object(h, 'run', return_value=(1, '[warn] preserve this warning')) as run:
             h.stage(self.report, 'content', ['fixture.py'])
             h.stage(self.report, 'content', ['fixture.py'])
             h.stage(self.report, 'content', ['fixture.py'])
@@ -289,6 +293,14 @@ class RetrySafety(unittest.TestCase):
             h.resume_stage(self.report, 'content', 'resume.json', self.work, 'changed-approval', self.folder)
         self.evidence.write_text('changed')
         with self.assertRaisesRegex(ValueError, '증거'):
+            h.resume_stage(self.report, 'content', 'resume.json', self.work, 'unchanged-approval', self.folder)
+
+    def test_confirmation_not_after_failure_is_rejected(self):
+        self.work.write_bytes(b'repaired fixture')
+        receipt = self.proof()
+        receipt['at'] = self.report['stages']['content']['at']
+        h.write_json(self.root / 'resume.json', receipt)
+        with self.assertRaisesRegex(ValueError, '시각'):
             h.resume_stage(self.report, 'content', 'resume.json', self.work, 'unchanged-approval', self.folder)
 
     def test_warn_brackets_are_collected(self):

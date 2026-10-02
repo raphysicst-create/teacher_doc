@@ -615,7 +615,7 @@
     {
       "source": "tests/test_beginner_workflow.py",
       "destination": "tests/test_beginner_workflow.py",
-      "sha256": "f9f908848eaa76adb8f4babcf3cffcafe4d3e967ab63d7cc8279683a1b600e4b"
+      "sha256": "b0ea20a65d10e797593a436decc8adb94560608d3c922ddc45aa41ddd7e1c746"
     },
     {
       "source": "tests/test_onboarding.py",

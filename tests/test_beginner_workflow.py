@@ -55,7 +55,7 @@ def package(path, xml):
 class TextSafety(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.xml = section(container(table(paragraph('바깥 제목') + container(table(paragraph('내부 안내'))))))
         self.source = package(self.root / 'source.hwpx', self.xml)
 
@@ -133,7 +133,7 @@ class TextSafety(unittest.TestCase):
 class SessionPaths(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.work = self.root / '교사 작업'
         self.data = self.root / '별도 PC 데이터'
         (self.work / '.hwpdoc').mkdir(parents=True)
@@ -183,7 +183,7 @@ class SessionPaths(unittest.TestCase):
 class EmptyReuseReview(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.patch = patch.object(h, 'ROOT', self.root)
         self.patch.start()
         (self.root / 'draft.txt').write_text('검토용 초안', encoding='utf-8')
@@ -226,7 +226,7 @@ class EmptyReuseReview(unittest.TestCase):
 class RetrySafety(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.work = self.root / 'work.hwpx'
         self.work.write_bytes(b'bad fixture')
         self.folder = self.root / 'job'

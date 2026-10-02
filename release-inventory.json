@@ -615,12 +615,12 @@
     {
       "source": "tests/test_beginner_workflow.py",
       "destination": "tests/test_beginner_workflow.py",
-      "sha256": "3e0009a4c2987b76e457198d2eed5abbc99b0cb7bbe0f3139f72bcb99c25b505"
+      "sha256": "f9f908848eaa76adb8f4babcf3cffcafe4d3e967ab63d7cc8279683a1b600e4b"
     },
     {
       "source": "tests/test_onboarding.py",
       "destination": "tests/test_onboarding.py",
-      "sha256": "00ddb16feba8c426aa6ec14388b3f9d1b39c41f24a915da11b111ef250d6d7af"
+      "sha256": "af84fdff4402192a1657853ba21cb732dd04c4f4b5c0340969835a03a598c661"
     },
     {
       "source": "tests/test_package_integrity.py",

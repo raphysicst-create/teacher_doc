@@ -18,7 +18,7 @@ class Onboarding(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.temp = tempfile.TemporaryDirectory(prefix='teacher-doc-qc-')
-        cls.root = Path(cls.temp.name)
+        cls.root = Path(cls.temp.name).resolve()
         cls.home = cls.root / 'clean home 한글'
         cls.home.mkdir()
         cls.workspace = cls.root / '교사 작업'

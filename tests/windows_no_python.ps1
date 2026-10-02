@@ -54,10 +54,11 @@ try {
             $renamed += @{ original = $path; hidden = $hidden }
         }
     }
-    $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\WindowsPowerShell\v1.0"
+    $env:PATH = "$env:SystemRoot\System32\WindowsPowerShell\v1.0"
     $env:HOME = $cleanHome; $env:USERPROFILE = $cleanHome; $env:LOCALAPPDATA = Join-Path $cleanHome 'AppData/Local'; $env:HWPDOC_PC_DATA = $data
     Remove-Item Env:PYTHONPATH, Env:PYTHONHOME -ErrorAction SilentlyContinue
     $commands = @(Get-Command python, python3, python3.12, py, pymanager -CommandType Application -ErrorAction SilentlyContinue)
+    ConvertTo-Json -InputObject @($commands | Select-Object Name, Source, CommandType) | Set-Content (Join-Path $EvidenceDir 'command-resolution.json') -Encoding UTF8
     Assert ($commands.Count -eq 0) 'Isolation failed: a Python command is still discoverable'
     . (Join-Path $code 'scripts/python-bootstrap.ps1')
     Assert (-not (Find-TeacherPython $data $null)) 'Isolation failed: product discovery found an existing Python'

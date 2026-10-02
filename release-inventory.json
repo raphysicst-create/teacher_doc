@@ -605,7 +605,7 @@
     {
       "source": "tests/test_onboarding.py",
       "destination": "tests/test_onboarding.py",
-      "sha256": "ef75edbc59d703f6f4741b9fd6d51a72913ed55f2b0d2c174dcd4783cdb2d8b1"
+      "sha256": "7c09e774afc592595fac4637bbcbd089efb4e49febaaf7040c84dab3793b5010"
     },
     {
       "source": "tests/test_python_bootstrap.py",
@@ -620,7 +620,7 @@
     {
       "source": "tests/windows_no_python.ps1",
       "destination": "tests/windows_no_python.ps1",
-      "sha256": "b07c49d71e5c2129d15e84d747e6b9fba1df1458451eb87c1c11d52cbf1d59fd"
+      "sha256": "43e2ba169564a9cc52782e643df99c20f2af85033ace8d80463d8264fb4f9d76"
     }
   ],
   "release_ready": false,

@@ -59,7 +59,7 @@ class Onboarding(unittest.TestCase):
         result = self.run_process(args, env)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertFalse(target.exists())
-        self.assertTrue(json.loads(result.stdout)['python'].startswith(str(data)))
+        self.assertTrue(Path(json.loads(result.stdout)['python']).resolve().is_relative_to(data.resolve()))
 
     def test_01_first_document(self):
         self.assertEqual(self.result['status'], 'ready_xml')

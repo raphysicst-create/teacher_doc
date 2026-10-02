@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Install an isolated runtime, initialize a workspace, and make a practice HWPX.
 
-Run only after the user requests installation. This never installs Python/Hancom,
+Run only after the user requests installation. The shell/PowerShell entry points
+can prepare app-local Python after consent. This Python stage never installs Hancom,
 changes security settings, registers hooks, or edits Codex configuration.
 """
 from __future__ import annotations
@@ -83,7 +84,7 @@ def verify_python(python, reqs, env):
 def install(args):
     if sys.version_info[:2] != (3, 12):
         raise ValueError('Python 3.12가 필요합니다. 기존 3.12 실행 파일을 선택하세요. '
-                         '없으면 https://www.python.org/downloads/ 에서 설치 승인을 먼저 받으세요.')
+                         '없으면 scripts/bootstrap.ps1 또는 bootstrap.sh에서 앱 전용 Python 설치 승인을 받아 이어서 진행하세요.')
     for relative in ('skills/hwpx/SKILL.md', 'scripts/teacher_doc.py',
                      '.codex-plugin/plugin.json', 'distribution/requirements-base.txt'):
         if not (ROOT / relative).is_file():
@@ -103,8 +104,13 @@ def install(args):
             raise ValueError('기존 작업 설정이 손상됐거나 다른 형식입니다. 자동 덮어쓰기하지 않습니다')
         if settings.get('app') != args.app:
             raise ValueError('기존 작업 폴더의 앱 설정을 자동 변경하지 않습니다. 별도 폴더를 선택하세요')
-    env = dict(os.environ, HWPDOC_PC_DATA=str(data), PYTHONUTF8='1',
-               PYTHONIOENCODING='utf-8', PYTHONDONTWRITEBYTECODE='1')
+    # Installation must not inherit PIP_TARGET/PREFIX/USER or a config that
+    # redirects packages outside this application's venv. Keep proxy/CA settings.
+    env = {key: value for key, value in os.environ.items()
+           if not key.startswith('PIP_') and key not in ('PYTHONPATH', 'PYTHONHOME')}
+    env.update(HWPDOC_PC_DATA=str(data), PYTHONUTF8='1',
+               PYTHONIOENCODING='utf-8', PYTHONDONTWRITEBYTECODE='1',
+               PYTHONNOUSERSITE='1', PIP_CONFIG_FILE=os.devnull)
     reqs = requirements(args)
     digest = hashlib.sha256(b'python3.12\n' + sys.platform.encode() +
                             b''.join(p.name.encode() + p.read_bytes() for p in reqs)).hexdigest()
@@ -136,7 +142,7 @@ def install(args):
             # Retain this final path: venv launchers are not safely relocatable.
             venv.EnvBuilder(with_pip=True, clear=False).create(folder)
             for req in reqs:
-                run([python, '-X', 'utf8', '-m', 'pip', 'install', '--disable-pip-version-check', '-r', req], env=env)
+                run([python, '-X', 'utf8', '-m', 'pip', 'install', '--require-virtualenv', '--disable-pip-version-check', '-r', req], env=env)
             verify_python(python, reqs, env)
             write(receipt, {'owner': OWNER, 'requirements_sha256': digest, 'status': 'ready'})
         else:
@@ -164,7 +170,8 @@ def install(args):
             full = {'status': 'unconfirmed', 'detail': (result.stdout + result.stderr)[-4000:]}
             exit_code = exit_code or 2
     summary = {'status': 'ready_xml' if exit_code == 0 else 'full_verification_incomplete',
-               'runtime': runtime_state, 'python': str(python), 'pc_data': str(data),
+               'runtime': runtime_state, 'python': str(python), 'source_python': sys.executable,
+               'source_python_version': sys.version.split()[0], 'pc_data': str(data),
                'workspace': str(workspace), 'xml_doctor': xml['status'], 'practice': practice,
                'full_doctor': full, 'plugin_loaded_in_chat': 'unverified',
                'next_action': '새 대화에서 실제 설치 스킬을 읽으세요. 실제 공문은 기존 승인·한글 열기·렌더 검증 절차가 필요합니다.'}

@@ -1,31 +1,38 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
     [Parameter(Mandatory=$true)][string]$Workspace,
     [string]$DataDir,
     [string]$Python,
+    [switch]$AllowPythonInstall,
     [ValidateSet('xml', 'full')][string]$Mode = 'xml',
+    [ValidateSet('codex', 'claude')][string]$App = 'codex',
+    [string]$SkillName = 'hwpx',
     [switch]$SchoolData,
     [switch]$Visual
 )
 $ErrorActionPreference = 'Stop'
 try {
-    if (-not $Python) {
-        if (Get-Command py -ErrorAction SilentlyContinue) {
-            $Python = (& py -3.12 -c 'import sys; print(sys.executable)' 2>$null | Select-Object -Last 1)
-            if ($LASTEXITCODE -ne 0) { $Python = $null }
-        }
-        if (-not $Python) {
-            . (Join-Path $PSScriptRoot 'runtime.ps1')
-            $Python = Get-HwpdocPython
+    . (Join-Path $PSScriptRoot 'python-bootstrap.ps1')
+    $root = Split-Path $PSScriptRoot -Parent
+    $DataDir = Get-TeacherDataDir $DataDir
+    $Workspace = [IO.Path]::GetFullPath($Workspace)
+    Assert-TeacherSeparatePaths $root $DataDir $Workspace
+    $marker = Join-Path $Workspace '.hwpdoc/workspace.json'
+    if (Test-Path -LiteralPath $marker) {
+        $settings = Get-Content -LiteralPath $marker -Raw -Encoding UTF8 | ConvertFrom-Json
+        if ($settings.kind -ne 'hwpdoc-workspace' -or $settings.version -ne 1 -or $settings.app -ne $App) {
+            throw 'Existing workspace settings are invalid or for a different app. Preserved without downloading Python.'
         }
     }
-    $arguments = @('-B', '-X', 'utf8', (Join-Path $PSScriptRoot 'bootstrap.py'), '--workspace', $Workspace, '--mode', $Mode)
-    if ($DataDir) { $arguments += @('--data-dir', $DataDir) }
+    $Python = Find-TeacherPython $DataDir $Python
+    if (-not $Python) { $Python = Install-TeacherPython $root $DataDir -AllowPythonInstall:$AllowPythonInstall }
+    [Console]::Error.WriteLine('Using Python 3.12: ' + $Python)
+    $arguments = @('-B', '-I', '-X', 'utf8', (Join-Path $PSScriptRoot 'bootstrap.py'), '--workspace', $Workspace, '--data-dir', $DataDir, '--mode', $Mode, '--app', $App, '--skill-name', $SkillName)
     if ($SchoolData) { $arguments += '--school-data' }
     if ($Visual) { $arguments += '--visual' }
     & $Python @arguments
     exit $LASTEXITCODE
 } catch {
-    [Console]::Error.WriteLine('teacher_doc setup failed: ' + $_.Exception.Message + '. Use an existing Python 3.12 executable with -Python. No security settings were changed.')
+    [Console]::Error.WriteLine('teacher_doc setup failed: ' + $_.Exception.Message + ' Existing data and security settings were preserved.')
     exit 2
 }

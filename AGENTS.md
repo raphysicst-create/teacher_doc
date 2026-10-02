@@ -12,13 +12,14 @@
 
 ## 런타임과 자료의 경계
 
-1. 기존 Python **3.12**의 실제 경로와 버전을 확인한다. 다른 버전으로 대신 설치하거나 시스템 Python 패키지를 변경하지 않는다
-2. 코드 폴더 밖의 교사 작업 폴더를 정한다. 학교 이름·시간표·예산·실제 공문은 처음 연습에 필요하지 않다
-3. `scripts/bootstrap.py --workspace <외부 작업 폴더>`를 기존 Python 3.12로 실행한다. 기본은 XML 모드이며 전용 가상환경, 고정 의존성, 작업 폴더 초기화, XML doctor, 합성 연습 문서 생성을 수행한다. 옵션·재실행은 설치 스킬을 따른다
-4. 기존 `.hwpdoc/workspace.json`, 작업 지침, PC `runtime.json`과 사용자 자료를 보존한다. 사용자 지정 데이터 경로는 `HWPDOC_PC_DATA`와 실행 인수 사이에 일관되게 사용한다
-5. 설치된 한글의 전체 검사가 필요하면 Windows 사용자 세션에서 `doctor --mode full`을 별도로 수행한다. XML 모드 성공을 COM 성공으로 보고하지 않는다
+1. 코드 폴더 밖의 교사 작업 폴더와 PC 데이터 경로를 선택하고 기존 자료를 보존한다. 학교 이름·시간표·예산·실제 공문은 첫 연습에 필요하지 않다
+2. Windows는 `scripts/bootstrap.ps1 -Workspace <외부 작업 폴더> -DataDir <외부 PC 데이터>`, macOS/Linux는 `bash scripts/bootstrap.sh --workspace <외부 작업 폴더> --data-dir <외부 PC 데이터>` 하나로 진행한다. 기존 Python 3.12 탐색은 진입점이 한다. `py`, `pymanager`, WindowsApps 별칭은 설치를 유발할 수 있으므로 탐색용으로 실행하지 않는다
+3. Python이 없으면 자동 다운로드는 기본 거절된다. 사용자가 **“Python 포함 설치” 또는 이와 같은 앱 전용 Python 설치를 명시적으로 요청했다면** Windows `-AllowPythonInstall`, Unix `--allow-python-install`을 붙여 같은 명령을 실행한다. 이미 받은 승인을 다시 묻지 않는다. 단순 “플러그인 설치” 요청이면 Astral uv와 python-build-standalone의 CPython 3.12를 전용 폴더에 다운로드한다는 점을 한 번 설명하고 승인받는다. 모호한 요청에 동의 플래그를 임의로 붙이지 않는다
+4. 자동 설치는 공식 Astral 릴리스에서 고정 버전과 SHA-256을 검증하며 앱 전용 폴더만 사용한다. 기존 Python이 있으면 재사용하고 전용 venv를 만든다. 고정 의존성 → 작업 폴더 초기화 → XML doctor → 합성 연습 HWPX까지 진입점이 수행한다. 자세한 공급원·라이선스는 [런타임 고지](docs/PYTHON-RUNTIME.md)를 읽는다
+5. 기존 `.hwpdoc/workspace.json`, 작업 지침, PC `runtime.json`과 사용자 자료를 보존한다. 사용자 지정 데이터 경로는 `HWPDOC_PC_DATA`와 실행 인수 사이에 일관되게 사용한다
+6. 설치된 한글의 전체 검사가 필요하면 Windows 사용자 세션에서 `doctor --mode full`을 별도로 수행한다. XML 모드 성공을 COM 성공으로 보고하지 않는다
 
-Python·한글·보안모듈을 자동 구매/다운로드/설치하거나, 훅·레지스트리·실행 정책·Codex 권한을 변경하거나, 신뢰/보안 경고를 우회하지 않는다. 추가 설치·설정이 필요하면 해당 변경에 필요한 승인을 받는다. 훅 설치는 초보자 설정에 포함하지 않는다.
+한글·보안모듈 구매/설치, 훅·레지스트리·실행 정책·전역 PATH·Codex 권한 변경은 이 설치에 포함하지 않는다. 보안 경고, TLS 오류, 조직 정책 차단을 우회하지 않는다. 다운로드/해시/권한 오류는 실패로 보고하고 기존 자료를 보존한 채 원인 해결 후 같은 명령으로 재시도한다. 훅 설치는 초보자 설정에 포함하지 않는다.
 
 ## 문서 작업
 

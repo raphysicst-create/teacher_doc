@@ -1,6 +1,13 @@
-# teacher_doc 0.1.1 변경 고지
+# teacher_doc 0.1.2 변경 고지
 
 배포자 유지·변경 기준일: 2026. 10. 2.
+
+## 0.1.2 Python 없는 첫 설치
+
+- Python 없이 시작할 수 있는 PowerShell/Unix 진입점을 추가했다. 명시적 Python 설치 동의 후 공식 Astral uv와 CPython 3.12.15를 앱 전용 위치에 준비한다.
+- 공급원·버전·SHA-256을 고정하고, py/WindowsApps 실행 없는 탐색, 전역 PATH·registry·보안 정책 비변경, 실패 중단과 기존 자료 보존을 유지한다.
+- README·AGENTS·설치 스킬을 동일한 한 문장 요청/운영체제별 단일 명령으로 연결했다.
+- 기존 Python이 있는 XML 회귀와 별도로 no-Python Windows 첫 설치 CI와 검증 증거 artifact를 추가했다. 한글 COM/렌더·앱 스킬 실로딩은 계속 별도 확인이다.
 
 ## 0.1.1 설치 경로 보완
 

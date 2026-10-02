@@ -18,9 +18,25 @@ python -B -X utf8 -m unittest discover -s tests -v
 - 의존성 누락, 잘못된 Python, 비 Windows full 검사에 대한 비정상 종료코드
 - 수정된 연습 파일, 잘못된 runtime 설정, 손상된 workspace 설정 보존
 - 코드 안의 작업 폴더 차단, 훅 미등록, JSON 객체/필드 형식 오류
+- 외부 PIP_TARGET/PIP_USER/pip 설정을 통한 전용 venv 밖 패키지 설치 차단
 - 전체 패키지 카탈로그와 설치 스킬 존재
 
 GitHub Actions의 `Onboarding XML smoke`는 Ubuntu와 Windows에서 같은 시험을 실행합니다. Windows 러너에 한글을 설치하거나 COM을 활성화하지 않습니다. CI 성공은 XML 경로의 증거입니다.
+
+## Python 없는 첫 설치 (별도 시험)
+
+`No-Python first install`은 일반 XML CI와 분리된 Windows PowerShell 5.1 시험이다. 전용 GitHub-hosted 임시 러너에서만 실행되며 사용자 PC에서는 실행하지 않는다.
+
+- PATH, 사용자 기본 설치 위치, Python registry, runtime 선택을 격리한 뒤 Python이 탐색되지 않는다는 baseline을 기록한다. 기존 toolcache 파일은 디스크에 남을 수 있지만 제품의 모든 기존 Python 탐색 경로에서 접근되지 않는다
+- 제품에 탐색 우회용 시험 플래그를 넣지 않는다. 고정 공식 다운로드에서 새 앱 전용 CPython을 받았고 그 실제 실행 파일로 venv를 만들었다는 증거를 확인한다
+- 동의 없는 실행은 다운로드 전에 중단한다. 동의한 설치는 XML doctor와 첫 HWPX까지 수행하고, 동의 플래그 없는 재실행은 기존 설치를 재사용한다
+- 코드/작업/PC 데이터 모두 한글·공백 경로를 사용한다. 기존 사용자 파일과 설정의 해시, PATH·Python registry·실행 정책의 설치 전후 snapshot을 대조한다
+- `windows-no-python-evidence` artifact에 명령 로그, 공급원/해시 receipt, 첫 설치/재실행 요약, 실제 HWPX/슬롯 JSON, doctor, 독립 runtime 경로/version probe, 파일 해시와 전후 snapshot을 남긴다
+- CI fixture가 잠시 숨긴 runner의 Python registry는 `finally`에서 복구하고 원래 snapshot과 비교한다. 제품 bootstrap은 registry를 변경하지 않는다
+
+Unix의 `tests/test_python_bootstrap.py`는 Python 없는 격리 PATH에서 동의 거절, uv 해시 불일치, 네트워크 실패, 재시도 보존, 기존 설정, 잘못된 Python, 코드 경계, symlink 경계를 시험한다. Windows helper 시험은 `tests/windows_bootstrap_unit.ps1`이다. 실패용 다운로드는 fixture 바이트를 쓰며 실행하지 않는다.
+
+v0.1.2 개발 검증: Linux x86_64의 실제 no-Python 다운로드→첫 HWPX와 재실행, Python 회귀 21개, PowerShell 7 구문/실패 helper 검사를 수행했다. Windows PowerShell 5.1 실실행은 해당 commit의 `No-Python first install` CI 결과로 확인한다. macOS·ARM64는 메타데이터를 제공하지만 이 검증만으로 실실행을 확인했다고 하지 않는다. 한글 COM과 앱 GUI 스킬 로딩은 별도 미확인이다.
 
 ## Codex 플러그인 발견·재설치
 

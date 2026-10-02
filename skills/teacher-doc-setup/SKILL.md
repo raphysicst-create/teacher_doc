@@ -28,38 +28,37 @@ codex plugin list --json
 
 앱/계정별 GitHub 가져오기 기능과 일반 Plugins Directory 검색은 다르다. “검색창에 링크만 넣으면 설치된다”는 보편적 안내를 하지 않는다. 앱을 새로 열어야 하는 경우 사용자에게 그 단계만 안내한다.
 
-## 2. Python·작업 폴더 확인
+## 2. 작업 폴더와 Python 설치 동의
 
-- 기존 **Python 3.12** 실행 파일의 경로와 `--version`을 확인한다. Windows에서는 `py -3.12`가 있으면 위치를 확인하는 데 사용할 수 있다. macOS/Linux에서는 실제 `python3.12`를 확인한다. `python`이라는 이름만 믿지 않는다
-- Python 3.12가 없으면 [Python 공식 다운로드](https://www.python.org/downloads/)를 안내하고 필요한 설치 승인을 요청한다. 임의 배포본 설치, 다른 Python 버전으로 대체, 한글 자동 구매/설치는 하지 않는다
-- 코드 설치 폴더 밖에 교사 작업 폴더를 정한다. 기존 작업 폴더가 있으면 그 경로를 유지한다. 새 경로는 운영체제의 사용자 문서 위치를 실제로 확인해 제안하고, 명시한 사용자 경로를 우선한다
-- 기존 PC 데이터가 있으면 같은 경로를 유지한다. 기본은 `HWPDOC_PC_DATA`, 없으면 `%LOCALAPPDATA%/hwpdoc`, 그것도 없으면 사용자 홈의 `AppData/Local/hwpdoc`다. 마지막 호환 기본값은 macOS/Linux에도 적용된다. 새 설치에서는 위치가 분명한 별도 `--data-dir`을 권장하며 코드 폴더 밖에 둔다. 이후 실행에도 같은 `HWPDOC_PC_DATA`를 적용한다. 민감한 데이터가 필요 없는 연습에서 학교명·학생명·학교 원문을 요구하지 않는다
+- 코드 설치 폴더 밖에 교사 작업 폴더를 정한다. 기존 작업 폴더가 있으면 그 경로를 유지한다. 새 경로는 운영체제의 사용자 문서 위치를 확인하여 정하고 사용자 지정 경로를 우선한다
+- PC 데이터도 코드 밖에 둔다. 기존 경로가 있으면 유지한다. 기본은 `HWPDOC_PC_DATA`, 없으면 `%LOCALAPPDATA%/hwpdoc`, 그것도 없으면 사용자 홈의 `AppData/Local/hwpdoc`이다. 새 설치에서는 명확한 별도 데이터 경로를 지정하고 이후에도 같은 값을 `HWPDOC_PC_DATA`로 쓴다
+- “Python 포함 설치”, “Python이 없으면 전용 폴더에 설치해도 된다”는 명시적인 요청은 아래 동의 플래그를 허용한다. 이미 승인했으면 다시 묻지 않는다
+- 단순 “설치해줘”만 말했을 때는 동의 플래그 없이 실행한다. `PYTHON_INSTALL_CONSENT_REQUIRED`라면 “Python 3.12가 없어요. 공식 Astral uv와 python-build-standalone의 CPython을 teacher_doc 전용 폴더에 다운로드해서 이어서 설치할까요? 전역 PATH·레지스트리는 바꾸지 않아요”라고 한 번 묻는다. 거절/미응답이면 다운로드하지 않는다
+- [공급원과 라이선스](../../docs/PYTHON-RUNTIME.md)를 읽는다. 자동 설치는 Python Software Foundation의 python.org 설치기가 아닌 **Astral의 CPython 빌드**다. uv와 Python 아카이브 모두 고정 SHA-256을 검증한다. 다운로드나 해시 검증 실패를 성공으로 바꾸지 않는다
 
-## 3. bootstrap 한 번으로 준비
+## 3. 운영체제에 맞는 명령 하나로 준비
 
-먼저 `scripts/bootstrap.py --help`를 읽는다. 코드 루트에서 **확인한 Python 3.12 실행 파일**로 다음 명령을 실행한다. 아래 `python`은 그 실행 파일을 뜻하며 사용자가 직접 입력할 명령이 아니다.
+설치 루트에서 아래 명령을 실행한다. 경로는 실제 환경에 맞게 에이전트가 채운다. 사용자가 명령어를 직접 입력하게 하지 않는다. Python이 없어도 이 진입점을 실행할 수 있다.
 
-```sh
-python -X utf8 scripts/bootstrap.py --workspace "/코드/폴더/밖/교사 작업"
-```
-
-Windows PowerShell에서는 실행 파일·인수에 공백이 있을 수 있으므로 호출 연산자와 따옴표를 쓴다.
+Windows PowerShell:
 
 ```powershell
-& $python312 -X utf8 "$pluginRoot/scripts/bootstrap.py" --workspace $teacherWorkspace
+& "$pluginRoot/scripts/bootstrap.ps1" -Workspace $teacherWorkspace -DataDir $pcData -AllowPythonInstall
 ```
 
-기본은 `--mode xml`이다. bootstrap은 전용 가상환경에 고정 버전 의존성을 설치하고, 설정을 보존하면서 작업 폴더 초기화 → `doctor --mode xml` → 첫 연습 문서 생성을 진행한다. 설치 출력 JSON의 `python`(전용 Python 실행 파일), `pc_data`, `workspace`, `xml_doctor`, `practice.report`, `full_doctor`를 읽는다. 같은 요약은 작업 폴더의 `.hwpdoc/onboarding.json`에 있다. 가상환경을 만들었다는 사실만으로 성공이라 하지 않는다.
+macOS/Linux:
 
-선택 사항은 해당 기능이 필요할 때만 붙인다.
+```sh
+bash "$pluginRoot/scripts/bootstrap.sh" --workspace "$teacherWorkspace" --data-dir "$pcData" --allow-python-install
+```
 
-- `--data-dir <경로>`: PC 데이터/전용 환경을 별도로 둘 위치. 이후 같은 값을 `HWPDOC_PC_DATA`로 전달한다
-- `--app codex|claude`, `--skill-name <실제 이름>`: 기본값은 `codex`, `hwpx`다. 새 작업 폴더에서는 앱에서 실제 확인한 스킬 이름을 전달한다. 예를 들어 목록에서 `teacher_doc:hwpx`를 확인했다면 `--skill-name "teacher_doc:hwpx"`를 붙인다. 기본 문자열이 저장됐다고 스킬 로딩을 확인한 것은 아니다
-- `--school-data`: 시간표·예산 원문(xlsx/xls) 관련 의존성
-- `--visual`: PDF→PNG용 시각 검토 의존성. 설치만으로 한글 PDF 내보내기나 실제 육안 판독이 완료되지는 않는다
-- `--mode full`: Windows·설치된 한글의 전체 모드 확인이 필요한 경우. 한글 설치와 COM 실행 가능 여부는 별도 조건이며, macOS/Linux XML 성공을 전체 성공으로 바꾸지 않는다
+**위 동의 플래그는 Python 설치가 승인된 경우에만 붙인다.** 기존 Python 3.12는 진입점이 탐색한다. 명확히 지정해야 할 때 Windows `-Python <실제 절대경로>`, Unix `--python <실제 절대경로>`를 쓴다. `py`, `pymanager`, WindowsApps 별칭을 탐색용으로 실행하지 않는다. Python Install Manager는 탐색 호출만으로 다운로드할 수 있다. PowerShell 실행 정책이 막히면 오류와 필요한 조치를 보고하고 `Set-ExecutionPolicy`, `-ExecutionPolicy Bypass`, `Unblock-File`로 우회하지 않는다.
 
-이미 설정이 있으면 같은 경로로 재실행한다. 기존 workspace 설정과 지침, `runtime.json`을 삭제해서 재설정하지 않는다. 기존 런타임에 선택 의존성이 없으면 bootstrap은 그 환경을 임의 변경하지 않고 새 격리 `--data-dir`을 안내할 수 있다. 충돌/손상/권한 오류는 원인을 보고하고 사용자 자료를 유지한다. pip/네트워크 실패 시 실패 단계와 오류를 확인하고 허용된 범위에서 재시도한다. TLS·조직 정책·보안 제한을 끄지 않는다.
+기본 XML 모드로 전용 venv → 고정 의존성 → 작업 폴더 초기화 → XML doctor → 첫 연습 문서를 연속 수행한다. 성공 JSON의 `python`(전용 venv), `source_python`, `source_python_version`, `pc_data`, `workspace`, `xml_doctor`, `practice.report`, `full_doctor`를 확인한다. 요약은 `.hwpdoc/onboarding.json`에 남는다. Python 자동 다운로드 증거는 PC 데이터 아래 `managed-python/install-receipt.json`에 남는다. 폴더 생성만으로 성공이라고 하지 않는다.
+
+추가 옵션은 필요한 경우에만 붙인다. Windows/Unix 대응은 `-Mode full`/`--mode full`, `-SchoolData`/`--school-data`, `-Visual`/`--visual`, `-App claude`/`--app claude`, `-SkillName <실제 스킬 이름>`/`--skill-name <실제 스킬 이름>`이다. 기본은 `xml`, `codex`, `hwpx`다. 앱에서 `teacher_doc:hwpx`처럼 다른 실제 이름을 확인했다면 그 값을 전달한다. 기본 문자열이 저장됐다고 앱 로딩을 확인한 것은 아니다.
+
+기존 `runtime.json`, 작업 설정·지침과 사용자 자료를 삭제/덮어쓰지 않는다. 선택 의존성 부족이나 손상된 기존 환경은 별도 데이터 경로가 필요할 수 있다. 다운로드/네트워크/권한 오류가 나면 원인을 해결한 뒤 **같은 명령과 같은 경로**로 재실행한다. 앱 전용 설치만 이어서 진행하며 전역 Python 패키지는 바꾸지 않는다. 보안 경고·TLS·조직 정책을 우회하지 않는다. 기존 Python 3.12가 이미 확인된 고급 환경에서는 `scripts/bootstrap.py` 직접 실행도 지원하지만 초보자 설치의 기본 경로는 위 명령이다.
 
 ## 4. 실제 파일과 검사 결과 확인
 

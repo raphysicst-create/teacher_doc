@@ -32,3 +32,7 @@
 설치기는 고정 버전의 의존성을 PyPI에서 별도로 받는다. 이 패키지는 Python, 한글 프로그램, 보안모듈 또는 의존성 바이너리를 포함하지 않는다. 각 제품의 기존 권리는 해당 권리자에게 있다.
 
 이전 시험 버전의 xlrd 고지는 기록으로 보존한다: “This product includes software developed by David Giffin <david@giffin.org>.” 배포자는 해당 버전을 소개하는 광고 자료에도 표시를 유지하기로 했다. 현재 후보는 xlrd를 import하거나 설치하지 않으며 XLS 읽기를 python-calamine으로 교체했다. 과거 고지의 보존을 xlrd와 AGPL의 결합 허락으로 해석하지 않는다. 기존 xlrd LICENSE는 `licenses/dependencies/xlrd/`에 남긴다.
+
+## 선택적 앱 전용 Python 다운로드
+
+Python이 없는 PC에서 사용자 동의 후 Astral uv와 python-build-standalone CPython 배포본을 공식 공급원에서 다운로드할 수 있다. 바이너리는 이 저장소에 포함하지 않으며 각 배포본의 MIT/Apache-2.0, PSF 및 포함 라이브러리 고지를 따른다. 버전·해시·출처·라이선스와 변경 없는 전역 설정 범위는 [docs/PYTHON-RUNTIME.md](docs/PYTHON-RUNTIME.md)를 참조한다.

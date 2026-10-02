@@ -3,7 +3,7 @@
 ## 준비할 것
 
 - 파일을 읽고 명령을 실행할 수 있는 Codex 환경
-- 기존 Python 3.12. 있는지 모르겠으면 에이전트가 확인합니다
+- 인터넷 연결과 프로그램 설치가 허용된 환경. Python 3.12는 없으면 동의 후 전용 폴더에 준비합니다
 - 플러그인 코드와 분리된 문서 작업 폴더
 
 한글 프로그램과 실제 학교 자료는 첫 연습에 필요하지 않습니다. 실제 공문의 한글 열기·인쇄 모양까지 확인하려면 Windows에 설치된 한글과 동작하는 자동화 환경이 필요합니다.
@@ -14,20 +14,20 @@ Codex 대화에 다음을 붙여 넣으세요.
 
 > https://github.com/raphysicst-create/teacher_doc
 >
-> 이 플러그인을 설치해줘. 저장소 전체를 설치하고 기본 XML 모드로 설정해줘. 내 자료와 분리된 작업 폴더에서 첫 연습 문서를 만든 뒤 파일과 점검 결과를 보여줘. 나는 명령어를 직접 입력하지 않을게.
+> 이 플러그인을 Python 포함 설치해줘. Python 3.12가 없으면 공식 Astral uv와 CPython 배포본을 teacher_doc 전용 폴더에 받아도 돼. 저장소 전체를 설치하고 내 자료와 분리된 작업 폴더에서 기본 XML 점검과 첫 연습 문서 생성까지 해줘. 파일과 점검 결과를 보여줘.
 
 특정 컴퓨터나 폴더를 쓰고 싶으면 함께 알려주세요. 예: “내 Windows 컴퓨터의 문서 폴더에 작업 폴더를 만들어줘.” 에이전트가 그 환경에 접근할 수 없으면 연결이나 실행 권한이 필요한 단계에서 안내합니다.
 
 에이전트가 진행할 일은 다음과 같습니다.
 
 1. 전체 저장소를 지속 보관할 설치 위치에 받거나, 지원되는 플러그인 마켓플레이스에서 설치합니다
-2. Python 3.12가 있는지 확인하고 전용 실행 환경을 만듭니다
+2. 기존 Python 3.12가 있으면 재사용하고, 없으면 위 동의에 따라 앱 전용 Python과 가상환경을 만듭니다
 3. 코드 폴더 밖의 작업 폴더를 준비합니다. 기존 설정이 있으면 보존합니다
 4. 기본 XML 환경을 점검합니다
 5. 합성 연습 양식에 내용을 채운 HWPX와 검사 보고서를 생성합니다
 6. 실제 결과 경로와 확인하지 못한 부분을 알려줍니다
 
-Python이 없다면 공식 다운로드와 필요한 설치 승인을 안내합니다. 프로그램 구매, 한글 설치, 보안모듈 등록, 훅이나 보안 설정 변경을 한꺼번에 자동 처리하지 않습니다.
+Python 다운로드는 위 문장처럼 명확히 승인한 경우에만 진행합니다. 단순 설치 요청이라면 한 번 동의를 구하고, 거절하면 멈춥니다. 프로그램 구매, 한글 설치, 보안모듈 등록, 훅이나 보안 설정 변경을 한꺼번에 자동 처리하지 않습니다.
 
 ## 2. 연습 결과 보기
 
@@ -77,9 +77,9 @@ Windows에서 한글을 사용 중이라면 이렇게 요청하세요.
 
 플러그인 파일 설치와 Python 환경 준비는 별도입니다. 다음과 같이 요청하세요.
 
-> teacher_doc의 실제 설치 폴더에서 설치 안내를 읽고 Python 환경 준비부터 이어서 해줘. Python 3.12가 없으면 공식 설치 경로를 알려줘.
+> teacher_doc의 실제 설치 폴더에서 설치 안내를 읽고 Python 포함 설치를 이어서 해줘. Python 3.12가 없으면 공식 Astral 배포본을 전용 폴더에 받아도 돼.
 
-[Python 공식 다운로드](https://www.python.org/downloads/) 외의 임의 설치 파일을 사용할 필요는 없습니다.
+앱 전용 자동 설치는 [공식 Astral 배포본과 고정 해시](PYTHON-RUNTIME.md)를 사용합니다. 임의 다운로드 사이트는 사용하지 않습니다.
 
 ### “hwpx 스킬은 있는데 scripts 파일이 없어요”
 
@@ -111,9 +111,11 @@ codex plugin marketplace add https://github.com/raphysicst-create/teacher_doc.gi
 codex plugin add teacher_doc@teacher-doc-local --json
 codex plugin list --json
 
-# 실제 설치 루트에서, 확인한 Python 3.12로 실행
-python -X utf8 scripts/bootstrap.py --workspace "/코드/밖/작업 폴더" --mode xml
+# macOS/Linux, Python 포함 설치에 동의한 경우
+bash scripts/bootstrap.sh --workspace "/코드/밖/작업 폴더" --data-dir "/코드/밖/PC 데이터" --allow-python-install
 ```
+
+Windows에서는 `& "$pluginRoot/scripts/bootstrap.ps1" -Workspace $teacherWorkspace -DataDir $pcData -AllowPythonInstall`을 사용합니다. 동의가 없으면 동의 플래그를 빼고 실행합니다.
 
 선택 사항은 `--data-dir <경로>`, `--school-data`, `--visual`, `--mode full`입니다. 앱·스킬 지정은 `--app codex|claude`, `--skill-name <앱에서 확인한 이름>`으로 전달할 수 있습니다. 사용자 지정 데이터 경로는 이후에도 `HWPDOC_PC_DATA`에 동일하게 지정하고, 설치 결과의 `python`에 기록된 전용 Python을 사용합니다. 설치 요약은 작업 폴더의 `.hwpdoc/onboarding.json`, 최근 환경 점검은 `.hwpdoc/doctor.json`에 남습니다.
 

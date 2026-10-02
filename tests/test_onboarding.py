@@ -46,6 +46,21 @@ class Onboarding(unittest.TestCase):
         return subprocess.run([str(a) for a in args], env=env or cls.env, cwd=cls.home,
                               capture_output=True, text=True, encoding='utf-8', timeout=600)
 
+    def test_00_pip_target_cannot_escape_venv(self):
+        # Existing user pip configuration must never redirect this installation.
+        target = self.root / 'forbidden external pip target'
+        data = self.root / 'isolated pip data'
+        work = self.root / 'isolated pip workspace'
+        config = self.root / 'user pip.ini'
+        config.write_text('[global]\ntarget = ' + str(target) + '\n', encoding='utf-8')
+        env = dict(self.env, PIP_TARGET=str(target), PIP_CONFIG_FILE=str(config), PIP_USER='1')
+        args = [sys.executable, '-B', '-X', 'utf8', ROOT / 'scripts/bootstrap.py',
+                '--workspace', work, '--data-dir', data]
+        result = self.run_process(args, env)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse(target.exists())
+        self.assertTrue(json.loads(result.stdout)['python'].startswith(str(data)))
+
     def test_01_first_document(self):
         self.assertEqual(self.result['status'], 'ready_xml')
         self.assertEqual(self.result['practice']['status'], 'xml_pass')

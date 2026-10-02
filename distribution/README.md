@@ -1,3 +1,5 @@
+> **최초 설치는 [루트 README](../README.md)와 [초보자 안내](../docs/BEGINNER.md)를 따르세요.** 아래는 0.1.0 당시 배포 준비·운영 검토 기록입니다. 개발 전용 명령/경로, 버전과 검증 상태는 현재 공개 소스와 다를 수 있습니다.
+
 # teacher_doc 배포 준비 및 설치
 
 프로젝트·플러그인·배포 폴더 이름은 `teacher_doc`, 기본 명령은 `scripts/teacher_doc.ps1`이다. 기존 `scripts/hwpdoc.ps1`/`.py`, `.hwpdoc` 기록과 PC 데이터 경로, `HWPDOC_*` 환경변수는 호환용으로 유지한다.

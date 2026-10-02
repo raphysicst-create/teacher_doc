@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "plugin_version": "0.1.0",
+  "plugin_version": "0.1.1",
   "program_license": "AGPL-3.0-only",
   "source_format": "teacher_doc source files plus unmodified upstream source archives",
   "documents": [
@@ -14,7 +14,7 @@
     },
     {
       "destination": "CHANGES.md",
-      "sha256": "420e0a8c3f3d63b3595e1f1f5582496a47272f829eb8efcb6824e84740cc757b"
+      "sha256": "974914dda4ebabc751c5f72e5f1887930d680e65b984feff3cbea152bc70d231"
     },
     {
       "destination": "licenses/dependencies/et-xmlfile/LICENCE.python",
@@ -102,7 +102,7 @@
     },
     {
       "destination": "SOURCE.md",
-      "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424"
+      "sha256": "5fbd4765156dab801efe7048acd02ddd637f0a5ba05c8d45d97ac3668b57a483"
     },
     {
       "destination": "licenses/dependencies/python-calamine/calamine-LICENSE-MIT.md",

@@ -8,6 +8,12 @@ description: "HWPX 문서 읽기·슬롯/셀 편집·양식 보존·구조 및 �
 개발 정본은 `<프로젝트>/.claude/skills/hwpx/SKILL.md`이고 배포본은 패키지의 `skills/hwpx/SKILL.md`다. 발견 경로가 링크이면 실제 대상을 확인한다.
 공문 작업을 시작하면 [업무 절차](references/workflow.md)를 실제로 읽는다. 학교별 설정은 작업 폴더의 `.hwpdoc/workspace.json`에 있고, 기존 운영 프로젝트의 `CLAUDE.md`에 명시된 사용자 결정은 유지한다. W1·W2 별도 스킬은 사용하지 않는다.
 
+## 첫 설치·한글 없는 환경
+
+저장소 링크 설치·첫 실행·환경 오류 요청이면 먼저 [설치 스킬](../teacher-doc-setup/SKILL.md)을 읽고 전체 `teacher_doc` 패키지를 준비한다. `skills/hwpx`만 복사하지 않는다. `scripts/bootstrap.py --workspace <코드 폴더 밖 작업 폴더>`가 기본 XML 환경 점검과 개인정보 없는 연습 문서 생성을 수행한다.
+
+Windows·macOS·Linux의 XML 모드는 구조·슬롯 편집을 연습하는 경로다. 한글 COM, 실제 쪽수·인쇄 모양, 필수 렌더 검증의 통과를 뜻하지 않는다. 실제 학교 문서는 아래 업무 절차와 사람 승인·검토를 유지한다.
+
 ## 경로 선택
 
 1. 기존 슬롯 템플릿 또는 HWPX 양식의 내용 교체: **초안 작성 전에** 텍스트와 구조를 읽고 `hwpx_slots.py`로 편집할 슬롯을 확인한다. 원본 제목 서식·상자·표 순서/병합·명의 위치를 유지한 초안을 `edit_hwpx.py --slot-json`으로 새 파일에 채운다. Markdown 초안을 근거로 원본 본문을 지우고 재조립하지 않는다.
@@ -18,7 +24,7 @@ description: "HWPX 문서 읽기·슬롯/셀 편집·양식 보존·구조 및 �
 
 ## 기본 편집
 
-설치 폴더와 교사의 작업 폴더를 구분한다. 개발 저장소에서는 `.claude/skills/hwpx/`, 배포본에서는 `skills/hwpx/`가 스킬 폴더다. 실제 로드한 스킬 폴더에서 위로 탐색하여 `scripts/runtime.ps1`이 있는 코드 루트를 확인한다. 작업 파일은 작업 폴더에만 저장한다. Python은 코드 루트의 `scripts/runtime.ps1`이 PC 설정과 설치 위치에서 찾는다. PATH의 임의 python으로 대체하지 않는다.
+설치 폴더와 교사의 작업 폴더를 구분한다. 개발 저장소에서는 `.claude/skills/hwpx/`, 배포본에서는 `skills/hwpx/`가 스킬 폴더다. 실제 로드한 스킬 폴더에서 위로 탐색하여 `scripts/runtime.ps1`이 있는 코드 루트를 확인한다. 작업 파일은 작업 폴더에만 저장한다. Windows PowerShell에서는 코드 루트의 `scripts/runtime.ps1`로 PC 설정의 Python을 찾는다. macOS/Linux XML 모드에서는 bootstrap 결과와 같은 PC 데이터 경로의 `runtime.json`에 기록된 전용 Python을 직접 사용한다. `--data-dir`로 설치했다면 같은 `HWPDOC_PC_DATA`를 실행 환경에 지정한다. PATH의 임의 python으로 대체하지 않는다.
 
 ```powershell
 # taskPlugin은 이 스킬이 속한 코드 루트, taskWorkspace는 교사의 작업 폴더다.
@@ -27,6 +33,15 @@ $taskPython = Get-HwpdocPython
 # taskSkill은 실제 로드한 SKILL.md의 상위 폴더다.
 & $taskPython -X utf8 "$taskSkill/scripts/hwpx_slots.py" reference.hwpx -o slots.json
 & $taskPython -X utf8 "$taskSkill/scripts/edit_hwpx.py" reference.hwpx -o result.hwpx --slot-json values.json
+```
+
+macOS/Linux XML 모드의 기본 호출은 다음과 같다. `$taskPython`과 `$taskPlugin`은 위에서 확인한 실제 경로, `$taskSkill`은 실제 로드한 스킬 폴더다. 작업 폴더에서 실행하여 결과를 그 안에 저장한다.
+
+```sh
+cd "$taskWorkspace"
+"$taskPython" -X utf8 "$taskPlugin/scripts/teacher_doc.py" --workspace "$taskWorkspace" doctor --mode xml
+"$taskPython" -X utf8 "$taskSkill/scripts/hwpx_slots.py" reference.hwpx -o slots.json
+"$taskPython" -X utf8 "$taskSkill/scripts/edit_hwpx.py" reference.hwpx -o result.hwpx --slot-json values.json
 ```
 
 `values.json`은 추출된 슬롯 키(`p:12`, `cell:0:2:1`)와 새 문자열의 매핑이다. 기존 슬롯 프로파일은 현재 양식에서 추출한 주소와 해시를 확인한다. 작업 파일은 프로젝트 안의 작업용 디렉터리에만 둔다.

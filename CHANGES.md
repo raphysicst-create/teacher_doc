@@ -1,6 +1,16 @@
-# teacher_doc 0.1.0 변경 고지
+# teacher_doc 0.1.1 변경 고지
 
-배포자 유지·변경 기준일: 2026. 9. 13.
+배포자 유지·변경 기준일: 2026. 10. 2.
+
+## 0.1.1 설치 경로 보완
+
+- 저장소 전체를 찾는 Codex marketplace catalog, 설치 스킬, 루트 README와 초보자 안내를 추가했다.
+- 격리 Python 3.12 환경 준비·재실행·XML doctor·비민감 합성 첫 HWPX 생성을 연결했다. 기존 사용자 설정과 문서는 보존한다.
+- doctor 실패/미확인 종료코드와 Linux/macOS venv 자식 실행 경로를 바로잡았다.
+- Windows/Linux 자동 XML 회귀시험을 추가했다. Windows 한글 COM, PDF/PNG와 앱 GUI 인수는 별도 검증이며 자동 성공으로 표시하지 않는다.
+
+## 0.1.0 기존 변경
+
 
 이 배포는 Canine89/hwpxskill 상류 원본 그대로가 아닌 teacher_doc용 수정·통합본이다. 원래 파일의 저작권 고지는 유지한다.
 

@@ -745,21 +745,32 @@ def delivery(report, *, draft=False, destination='configured'):
     return report
 
 
-def doctor():
-    checks = {'python': {'status': 'pass' if sys.version_info[:2] == (3, 12) and PYTHON.is_file() and PYTHON.resolve() == Path(sys.executable).resolve() else 'fail', 'path': sys.executable, 'selected_path': str(PYTHON), 'version': sys.version.split()[0]}}
-    checks.update(runtime_diagnostics(CODE_ROOT))
+def doctor(mode="full"):
+    checks = {'python': {'status': 'pass' if sys.version_info[:2] == (3, 12) and PYTHON.is_file() and os.path.normcase(os.path.abspath(PYTHON)) == os.path.normcase(os.path.abspath(sys.executable)) else 'fail', 'path': sys.executable, 'selected_path': str(PYTHON), 'version': sys.version.split()[0]}}
+    checks.update(runtime_diagnostics(CODE_ROOT, mode=mode))
     for name, path in [('output', ROOT / 'output'), ('external_copy', ONEDRIVE)]:
         if path is None:
             checks[name] = dict(status='not_applicable', note='선택 설정 없음'); continue
         checks[name] = dict(status='pass' if path.is_dir() and os.access(path, os.W_OK) else 'unconfirmed', path=str(path), note='실제 복사 성공은 deliver에서 별도 확인')
-    with lock(workspace_path('.hwpdoc/hancom.lock')):
-        code, output = run([CODE_ROOT / 'scripts/hwpdoc_com_probe.py'])
-    checks['hancom'] = dict(status='pass' if code == 0 else 'unconfirmed', detail=output)
+    if mode == 'full' and os.name == 'nt':
+        with lock(workspace_path('.hwpdoc/hancom.lock')):
+            code, output = run([CODE_ROOT / 'scripts/hwpdoc_com_probe.py'])
+        checks['hancom'] = dict(status='pass' if code == 0 else 'unconfirmed', detail=output)
+    else:
+        checks['hancom'] = dict(status='not_run' if mode == 'xml' else 'unconfirmed',
+                                detail='한글 COM은 Windows 사용자 세션에서 별도 검증해야 합니다')
     from hwpdoc_templates import list_templates
     checks['references'] = {key: ('available' if CONTEXT.local(value).exists() else 'unconfirmed') for key, value in CONTEXT.settings.get('references', {}).items()}
     checks['connections'] = {'configured': CONTEXT.settings.get('connections', {}), 'actual_calls': 'unverified'}
     checks['hooks'] = {'registration': 'unverified', 'trust': 'unverified', 'actual_blocking': 'unverified'}
-    result = {'at': now(), 'checks': checks, 'templates': list_templates(), 'workspace': str(ROOT), 'pc_data': str(CONTEXT.pc_data), 'note': '자료 없음은 해당 업무에서 요청합니다. 환경 진단은 문서 검증이나 앱 통합 인수가 아닙니다'}
+    required = ['python', 'lxml', 'hwpx', 'pypdf', 'output']
+    if mode == 'full':
+        required.append('hancom')
+        if os.name == 'nt':
+            required.append('win32com')
+    states = [checks[name]['status'] for name in required]
+    state = 'fail' if 'fail' in states else ('pass' if all(s == 'pass' for s in states) else 'unconfirmed')
+    result = {'status': state, 'mode': mode, 'required_checks': required, 'at': now(), 'checks': checks, 'templates': list_templates(), 'workspace': str(ROOT), 'pc_data': str(CONTEXT.pc_data), 'note': '자료 없음은 해당 업무에서 요청합니다. 환경 진단은 문서 검증이나 앱 통합 인수가 아닙니다'}
     write_json(workspace_path('.hwpdoc/doctor.json'), result)
     return result
 
@@ -772,7 +783,10 @@ def main():
     add_commands(commands)
     import hwpdoc_setup
     hwpdoc_setup.add_commands(commands)
-    commands.add_parser('doctor')
+    doctor_parser = commands.add_parser('doctor')
+    doctor_parser.add_argument('--mode', choices=['xml', 'full'], default='full',
+                               help='xml은 COM 없는 연습 경로만, full은 Windows 한글 검사 포함')
+    commands.add_parser('first-doc', help='개인정보 없는 연습 양식과 첫 HWPX 생성; 실제 승인/발송 아님')
     build = commands.add_parser('build'); build.add_argument('--manifest', required=True)
     validate = commands.add_parser('validate')
     group = validate.add_mutually_exclusive_group(required=True)
@@ -786,7 +800,7 @@ def main():
         configure(args.workspace)
         if sys.version_info[:2] != (3, 12):
             raise RuntimeError('검증된 Python 3.12가 필요합니다. scripts/hwpdoc.ps1을 사용하세요')
-        if args.command not in ('doctor', 'setup-runtime') and Path(sys.executable).resolve() != PYTHON.resolve():
+        if args.command not in ('doctor', 'setup-runtime') and os.path.normcase(os.path.abspath(sys.executable)) != os.path.normcase(os.path.abspath(PYTHON)):
             raise RuntimeError('PC 설정에서 선택한 Python이 필요합니다. scripts/hwpdoc.ps1을 사용하세요')
         if args.command in ('add-template', 'list-templates', 'migrate-templates', 'prepare'):
             result = dispatch(args)
@@ -799,7 +813,12 @@ def main():
                     return 2
             return 0
         if args.command == 'doctor':
-            print(json.dumps(doctor(), ensure_ascii=False, indent=2)); return 0
+            result = doctor(args.mode)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return {'pass': 0, 'fail': 1, 'unconfirmed': 2}[result['status']]
+        if args.command == 'first-doc':
+            from hwpdoc_practice import first_doc
+            print(json.dumps(first_doc(), ensure_ascii=False, indent=2)); return 0
         if args.command in ('setup-hooks', 'setup-runtime'):
             result = hwpdoc_setup.setup_hooks(args) if args.command == 'setup-hooks' else hwpdoc_setup.setup_runtime(args)
             print(json.dumps(result, ensure_ascii=False, indent=2)); return 0

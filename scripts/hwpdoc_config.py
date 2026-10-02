@@ -125,7 +125,8 @@ def load_context(workspace=None, *, code_root=None, pc_data=None):
     host = read_json(data / 'runtime.json') if (data / 'runtime.json').is_file() else {}
     if host and (host.get('version') != 1 or not isinstance(host.get('python'), str) or not Path(host['python']).is_absolute()):
         raise ValueError('미지원 PC 설정 버전')
-    python = Path(host.get('python') or sys.executable).expanduser().resolve()
+    # Keep the venv launcher path: resolving its symlink selects base Python.
+    python = Path(os.path.abspath(Path(host.get('python') or sys.executable).expanduser()))
     external = settings.get('delivery', {}).get('external_copy')
     if external is not None and not isinstance(external, str):
         raise ValueError('외부 복사 경로는 문자열 또는 null이어야 합니다')

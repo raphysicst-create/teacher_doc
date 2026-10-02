@@ -15,7 +15,7 @@
     {
       "source": "scripts/hwpdoc.py",
       "destination": "scripts/hwpdoc.py",
-      "sha256": "baa743ec67051732853a29448e720867805bef293daf2f03b5f76db69082318b"
+      "sha256": "facd1c222aaafd78666b1470afd54e76180127c1c7da4ba04e7f2330145afc14"
     },
     {
       "source": "scripts/hwpdoc.ps1",
@@ -25,12 +25,12 @@
     {
       "source": "scripts/hwpdoc_config.py",
       "destination": "scripts/hwpdoc_config.py",
-      "sha256": "6c91f91a7d27e594734b2c2bdebea867e70dde92ad4f0711734db924244d32ce"
+      "sha256": "2de0e8488252bde617a75e807f1ec4d80b894fa7d053ff58e553122fd64775d7"
     },
     {
       "source": "scripts/hwpdoc_runtime.py",
       "destination": "scripts/hwpdoc_runtime.py",
-      "sha256": "57bb6a0cc63399b7cdd416781d89c60e98a5e46450b73b82d564e3a4f4e1e9d2"
+      "sha256": "45e832ffd34817c0efc1dab43b15c8ee438092c4c9d63db5e84dce941443e59b"
     },
     {
       "source": "scripts/hwpdoc_templates.py",
@@ -45,7 +45,7 @@
     {
       "source": "scripts/hwpdoc_setup.py",
       "destination": "scripts/hwpdoc_setup.py",
-      "sha256": "d36120aed7a8058965d46eba092445ed45c602d8abcbb3aec8c032e696e84781"
+      "sha256": "578fea04c98bad5d1ce851372278de2fb2e55862e9605c0d63cd470b8d1746b3"
     },
     {
       "source": "scripts/hwpdoc_preview.py",
@@ -205,7 +205,7 @@
     {
       "source": ".claude/skills/hwpx/SKILL.md",
       "destination": "skills/hwpx/SKILL.md",
-      "sha256": "7a58ee571b3ac81fcb4b9d4d33821a197b663375ce2c8fb9e5f1c5366d4cc656"
+      "sha256": "0d328044b1c935ba0d95a683a126654c28f08ef7db55ce3ffdd1662ff1583091"
     },
     {
       "source": ".claude/skills/hwpx/references/workflow.md",
@@ -255,12 +255,12 @@
     {
       "source": "distribution/README.md",
       "destination": "distribution/README.md",
-      "sha256": "303bf5c78580982f2298f1e18c0c068d192e833b86306c25ff02f82c3a5effb6"
+      "sha256": "25c64005479133728f61e2072008b89f415ee1685cfd1375225185e2adeaf08d"
     },
     {
       "source": "distribution/CHANGELOG.md",
       "destination": "distribution/CHANGELOG.md",
-      "sha256": "d0e8aa1a082a2e7fa948c1a93fd5465dd70d802af34c5d57694bcb790ea044a2"
+      "sha256": "9472ebaa21efe65172225a62a5e6deb6de840356d140a2fdff3834cd25cc316b"
     },
     {
       "source": ".claude/skills/hwpx/templates/report/header.xml",
@@ -360,12 +360,12 @@
     {
       "source": "distribution/codex-plugin.json",
       "destination": ".codex-plugin/plugin.json",
-      "sha256": "f4db0eb34044a2ae877cbe442faaa7ca91d837293e19410f09bb691b972aed43"
+      "sha256": "75f1e2f9763b04b49a33897fc109116a6d0bab33330c990e3a7d72e0009b2fc0"
     },
     {
       "source": "distribution/claude-plugin.json",
       "destination": ".claude-plugin/plugin.json",
-      "sha256": "c389828ebe8c40d4f1e10edfd754199dbc06502b006c9c033ee8b0ce087906f6"
+      "sha256": "ed30a905f33fe5b90ff7f8a232b4db4d317e9546c7e8773741c36a27feeb4b6a"
     },
     {
       "source": "distribution/legal/AGPL-3.0.txt",
@@ -380,7 +380,7 @@
     {
       "source": "distribution/legal/CHANGES.md",
       "destination": "CHANGES.md",
-      "sha256": "420e0a8c3f3d63b3595e1f1f5582496a47272f829eb8efcb6824e84740cc757b"
+      "sha256": "974914dda4ebabc751c5f72e5f1887930d680e65b984feff3cbea152bc70d231"
     },
     {
       "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
@@ -490,7 +490,7 @@
     {
       "source": "distribution/legal/SOURCE.md",
       "destination": "SOURCE.md",
-      "sha256": "ec5b07b3d913f0085cf604e44208b1655bd6e38770184b1a925c3324d1334424"
+      "sha256": "5fbd4765156dab801efe7048acd02ddd637f0a5ba05c8d45d97ac3668b57a483"
     },
     {
       "source": "distribution/sources/pymupdf-1.28.0.tar.gz",
@@ -505,7 +505,7 @@
     {
       "source": "distribution/source-bundle.json",
       "destination": "SOURCE-BUNDLE.json",
-      "sha256": "318f62cbdf7ef1268a8d008740eacef7308d7cc5ff3ce8bea6e8d8b5fbc313c7"
+      "sha256": "3096596f82338a5b887d25f22729f0aaa7cd98e6996ab10cd012ee0b6bb37308"
     },
     {
       "source": "distribution/legal/dependencies/python-calamine/calamine-LICENSE-MIT.md",
@@ -516,8 +516,68 @@
       "source": "distribution/legal/dependencies/python-calamine/LICENSE",
       "destination": "licenses/dependencies/python-calamine/LICENSE",
       "sha256": "6ced4640162333a7c880d45d346ae88409746709fafece61303768bc87d80bf0"
+    },
+    {
+      "source": ".agents/plugins/marketplace.json",
+      "destination": ".agents/plugins/marketplace.json",
+      "sha256": "34e01f7a459c5a13971b403ab3e3d5173d6524c68d1da2b517a53bffa11b683c"
+    },
+    {
+      "source": ".github/workflows/onboarding.yml",
+      "destination": ".github/workflows/onboarding.yml",
+      "sha256": "7094cd0f6146b5005db355f343c54d73fabd26a6d11c00f095dd51ca4402c0b5"
+    },
+    {
+      "source": ".gitignore",
+      "destination": ".gitignore",
+      "sha256": "23a2c3c02b184e6ce4aa5ba65acced7a84a0359c9ccdd18db0e4c81e4a941b91"
+    },
+    {
+      "source": "AGENTS.md",
+      "destination": "AGENTS.md",
+      "sha256": "16a1d7e9f32bc3f3c84c1fa776ff7bee0d6219fdbe7f0a5692bbeb54120345a2"
+    },
+    {
+      "source": "README.md",
+      "destination": "README.md",
+      "sha256": "121bd9bde9440074a37a577dc23477962ed5dd88ec6a1641f1c530036e394a61"
+    },
+    {
+      "source": "docs/BEGINNER.md",
+      "destination": "docs/BEGINNER.md",
+      "sha256": "4c1e88b439bd06f1121a4b599755b3482f77b3996a8716971ad5d4fc186c0ee5"
+    },
+    {
+      "source": "docs/VERIFICATION.md",
+      "destination": "docs/VERIFICATION.md",
+      "sha256": "ac67590717ed2e93a2fe87450abbd7f4a5ac5ef8acae5103f63472f30d5512ee"
+    },
+    {
+      "source": "scripts/bootstrap.ps1",
+      "destination": "scripts/bootstrap.ps1",
+      "sha256": "d2ca6ec5c551e618c7ea8f25881c47a426c75ff82e79d87834b215295ead32a5"
+    },
+    {
+      "source": "scripts/bootstrap.py",
+      "destination": "scripts/bootstrap.py",
+      "sha256": "1a8ecbc5f93eb3207cfd3724b9dbc91e846dc876f8e7598a70bf20dc711918bc"
+    },
+    {
+      "source": "scripts/hwpdoc_practice.py",
+      "destination": "scripts/hwpdoc_practice.py",
+      "sha256": "abc6a57abe36aa70ccd4d69e69d9c716636a4de04030123a39fbb0c09dccaaef"
+    },
+    {
+      "source": "skills/teacher-doc-setup/SKILL.md",
+      "destination": "skills/teacher-doc-setup/SKILL.md",
+      "sha256": "ba588ac394487d4eb72092f19a85d78e9bf18c240e9b27d0069b84bc4f2d77b9"
+    },
+    {
+      "source": "tests/test_onboarding.py",
+      "destination": "tests/test_onboarding.py",
+      "sha256": "0d93dece5e5bbb62003a4c23c7cf2be08e28c617b38dcc105c2448d00fcc7003"
     }
   ],
   "release_ready": false,
-  "note": "포장 가능 여부만 검사합니다. 앱 인수·동료 교사 시범 사용은 별도 평가입니다."
+  "note": "현재 소스 파일 해시 목록입니다. 권리·개인정보 재승인이나 앱 GUI·Windows 한글 COM·동료 교사 인수 통과를 의미하지 않습니다."
 }

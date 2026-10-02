@@ -2,7 +2,7 @@
 
 ## 자동 XML 회귀시험
 
-Python 3.12가 있는 저장소 루트에서 실행합니다.
+Python 3.12와 고정 기본 의존성이 있는 개발/검증 환경의 저장소 루트에서 실행합니다. 실제 사용자 PC에서는 설치 스킬의 전용 환경을 사용합니다.
 
 ```sh
 python -B -X utf8 -m unittest discover -s tests -v
@@ -20,6 +20,12 @@ python -B -X utf8 -m unittest discover -s tests -v
 - 코드 안의 작업 폴더 차단, 훅 미등록, JSON 객체/필드 형식 오류
 - 외부 PIP_TARGET/PIP_USER/pip 설정을 통한 전용 venv 밖 패키지 설치 차단
 - 전체 패키지 카탈로그와 설치 스킬 존재
+- 중첩 표의 바깥 셀 차단, 분할 run 치환의 소유 문단, 안쪽/일반 셀 유지와 원본·비편집 ZIP 엔트리 보존
+- 환경변수 없는 새 세션의 사용자 지정 PC 데이터/전용 Python 복원, 잘못된·이동한 경로 안전 진단
+- Windows PowerShell public wrapper에서 새 세션의 실제 전용 Python/XML doctor 확인
+- 실제 잔재 검토와 빈 이유를 갖춘 빈 forbid 허용, 누락 이유/발견한 이름 누락 차단
+- 수정 없는 2회 실패 재개 차단, 증거·사용자 확인 해시와 승인 입력 보호, 누적 실패 보존/실제 재실행
+- [warn] 경고 수집과 설치 최근 실패/지난 성공 분리
 
 GitHub Actions의 `Onboarding XML smoke`는 Ubuntu와 Windows에서 같은 시험을 실행합니다. Windows 러너에 한글을 설치하거나 COM을 활성화하지 않습니다. CI 성공은 XML 경로의 증거입니다.
 
@@ -69,3 +75,5 @@ codex plugin list --json
 - `first-doc`: XML 연습 생성/동일 파일 재확인 0, 보존해야 할 충돌·설정 오류 2
 
 종료코드 0과 함께 JSON의 `mode`, `checks`, `plugin_loaded_in_chat`, `human_approval`, `sent`를 읽습니다. `ready_xml`은 실사용 공문의 발송 가능 표시가 아닙니다.
+
+이 회귀는 합성 자료·CLI/XML 범위입니다. 실제 교사의 질문 수/사용성, Codex GUI 새 대화 자동 스킬 로딩, Windows 한글 COM·PDF/PNG·인쇄, macOS 실기기 통과를 뜻하지 않습니다.

@@ -34,7 +34,8 @@ def first_doc():
             errors = validate(str(folder / name))
             if errors:
                 raise ValueError('; '.join(errors))
-        return dict(result, reused=True, report=str(receipt))
+        return dict(result, reused=True, report=str(receipt), result_file=str(folder / 'first-document.hwpx'),
+                    text_excerpt=h.document_excerpt(folder / 'first-document.hwpx'), text_is_print_preview=False)
     folder.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.teacher-doc-practice-', dir=folder.parent) as temporary:
         work = Path(temporary)
@@ -97,4 +98,5 @@ def first_doc():
         h.write_json(work / 'practice-report.json', result)
         # No replacing existing output. The temporary directory is cleaned on failures.
         work.rename(folder)
-    return dict(result, reused=False, report=str(receipt))
+    return dict(result, reused=False, report=str(receipt), result_file=str(folder / 'first-document.hwpx'),
+                text_excerpt=h.document_excerpt(folder / 'first-document.hwpx'), text_is_print_preview=False)

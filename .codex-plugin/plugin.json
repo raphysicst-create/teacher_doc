@@ -1,6 +1,6 @@
 {
   "name": "teacher_doc",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "교사의 양식 보존 HWPX 작성·검증과 개인정보 없는 첫 문서 연습",
   "author": {
     "name": "teacher_doc maintainers"

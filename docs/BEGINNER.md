@@ -51,21 +51,29 @@ Windows에서 한글을 사용 중이라면 이렇게 요청하세요.
 
 > 설치된 한글까지 확인해줘. 전체 모드 점검 결과를 보고, 별도 설치나 보안 설정 변경이 필요하면 먼저 설명해줘.
 
-## 4. 실제 학교 양식으로 시작하기
+## 4. 다음 대화에서 이어가기
 
-연습 뒤에는 사용할 원본 양식과 바꿀 내용을 에이전트에게 알려주세요.
+설치가 끝나면 실제 작업 폴더가 들어간 이어쓰기 문장을 받습니다. 다음 대화에 그 문장을 붙여 넣으세요.
+
+> (내 실제 작업 폴더)에서 문서 작업 이어줘
+
+에이전트는 설치 기록에서 이전과 같은 전용 Python·PC 데이터 위치를 되찾고 점검합니다. 경로가 없거나 다른 컴퓨터로 옮겼으면 필요한 복구만 안내합니다. 재설치부터 하거나 학교 설정·수정한 연습본을 덮어쓰지 않습니다.
+
+## 5. 실제 학교 양식으로 시작하기
+
+연습 뒤에는 사용할 원본 양식과 바꿀 내용을 에이전트에게 알려주세요. 가능하면 개인정보 없는 빈 양식과 필요한 부분만 주세요. 원문에 이미 있는 사실은 에이전트가 먼저 읽고 부족한 결정만 묻습니다. 양식이 없어도 일반 검토용 문안 초안부터 시작할 수 있습니다.
 
 > 이 HWPX 양식을 원본 그대로 보존하면서 새 문서를 만들고 싶어. 먼저 양식과 내용을 읽고 필요한 정보를 알려줘. 초안을 보여준 다음 내 확인을 받고 진행해줘.
 
 실제 작업은 기존 업무 절차를 따릅니다.
 
-- 원본 양식을 읽고 보존할 표·상자·제목·명의 위치를 확인합니다
+- 원본 양식을 읽고 보존할 표·상자·제목·명의 위치를 확인합니다. 중첩 표·상자를 통째로 덮어쓰는 위험한 셀 편집은 막고 안전한 문단/내부 셀을 선택합니다
 - 필요한 원문과 학교별 정보를 확인하고 초안을 보여줍니다
 - 사람이 초안을 확인한 뒤 새 HWPX 사본을 만듭니다
 - 구조·내용·한글 열기·필요한 렌더를 검증하고 미확인 사항을 남깁니다
 - 사람이 최종 문서를 검토하고 발송합니다
 
-학교 양식 등록, 초안 승인, 육안 판독 기록은 실제 확인 없이 만들지 않습니다. 발송 전 한글로 열어 확인해주세요.
+결과는 HWPX 파일, 실제 본문 발췌, 주요 변경점, 확인/미확인 범위 순서로 받습니다. 본문 발췌는 인쇄 모양을 보여주는 미리보기가 아닙니다. 같은 검사가 두 번 실패하면 원인을 고치고 재개 확인을 받은 뒤 다시 검사합니다. 학교 양식 등록, 초안 승인, 육안 판독 기록은 실제 확인 없이 만들지 않습니다. 발송 전 한글로 열어 확인해주세요.
 
 ## 설치가 잘 안 될 때
 
@@ -117,15 +125,15 @@ bash scripts/bootstrap.sh --workspace "/코드/밖/작업 폴더" --data-dir "/�
 
 Windows에서는 `& "$pluginRoot/scripts/bootstrap.ps1" -Workspace $teacherWorkspace -DataDir $pcData -AllowPythonInstall`을 사용합니다. 동의가 없으면 동의 플래그를 빼고 실행합니다.
 
-선택 사항은 `--data-dir <경로>`, `--school-data`, `--visual`, `--mode full`입니다. 앱·스킬 지정은 `--app codex|claude`, `--skill-name <앱에서 확인한 이름>`으로 전달할 수 있습니다. 사용자 지정 데이터 경로는 이후에도 `HWPDOC_PC_DATA`에 동일하게 지정하고, 설치 결과의 `python`에 기록된 전용 Python을 사용합니다. 설치 요약은 작업 폴더의 `.hwpdoc/onboarding.json`, 최근 환경 점검은 `.hwpdoc/doctor.json`에 남습니다.
+선택 사항은 `--data-dir <경로>`, `--school-data`, `--visual`, `--mode full`입니다. 앱·스킬 지정은 `--app codex|claude`, `--skill-name <앱에서 확인한 이름>`으로 전달할 수 있습니다. 새 대화는 작업 폴더 `.hwpdoc/onboarding.json`의 `pc_data`·`python`을 읽고 runtime.json의 일치·실행 파일 존재를 확인합니다. 환경변수 없이도 실행기가 PC 데이터를 복원합니다. 마지막 성공 기록은 onboarding.json, 마지막 Python 설치 단계 시도는 `.hwpdoc/onboarding-attempt.json`, 최근 환경 점검은 `.hwpdoc/doctor.json`입니다. 최근 실패를 과거 성공으로 읽지 않습니다. shell/다운로드가 Python 실행 전에 실패한 경우는 그 stderr를 확인합니다.
 
-설치 후 다시 점검하거나 연습하려면 전용 Python으로 실행합니다.
+설치 후 다시 점검하거나 연습하려면 기록에서 확인한 전용 Python 절대경로를 `$taskPython`에 넣어 실행합니다. Windows는 `teacher_doc.ps1 --workspace <실제 작업 폴더>`도 같은 기록을 복원합니다.
 
 ```sh
-python -X utf8 scripts/teacher_doc.py --workspace "/작업 폴더" doctor --mode xml
-python -X utf8 scripts/teacher_doc.py --workspace "/작업 폴더" first-doc
+"$taskPython" -X utf8 "$pluginRoot/scripts/teacher_doc.py" --workspace "$teacherWorkspace" doctor --mode xml
+"$taskPython" -X utf8 "$pluginRoot/scripts/teacher_doc.py" --workspace "$teacherWorkspace" first-doc
 # Windows의 한글 환경은 별도로 확인
-python -X utf8 scripts/teacher_doc.py --workspace "/작업 폴더" doctor --mode full
+"$taskPython" -X utf8 "$pluginRoot/scripts/teacher_doc.py" --workspace "$teacherWorkspace" doctor --mode full
 ```
 
 플러그인 파일 설치, 앱 목록 노출, 실제 스킬 로딩, XML 연습, Windows COM, 문서별 렌더 검토를 각각 보고합니다. [기존 배포 문서](../distribution/README.md)는 과거 개발·배포 검토 기록으로, 공개 패키지에 없는 명령은 최초 설치에 사용하지 않습니다.

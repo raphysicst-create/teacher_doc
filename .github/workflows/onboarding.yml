@@ -17,5 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install pinned packages for offline document regression tests
+        run: python -m pip install -r distribution/requirements-base.txt
       - name: Clean runtime, workspace, first document, retry and failure checks
         run: python -B -X utf8 -m unittest discover -s tests -v

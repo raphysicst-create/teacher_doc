@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "plugin_version": "0.1.2",
+  "plugin_version": "0.1.3",
   "program_license": "AGPL-3.0-only",
   "source_format": "teacher_doc source files plus unmodified upstream source archives",
   "documents": [
@@ -14,7 +14,7 @@
     },
     {
       "destination": "CHANGES.md",
-      "sha256": "a650f7bb25894c89c7fe7c1153296a860a7185718b63550295796b12ddeaad3e"
+      "sha256": "75c31917eee5fa08ef2764c99889e8fae2481c74b0e438c6c0b2c469d3fd7cfd"
     },
     {
       "destination": "licenses/dependencies/et-xmlfile/LICENCE.python",

@@ -31,7 +31,7 @@ codex plugin list --json
 ## 2. 작업 폴더와 Python 설치 동의
 
 - 코드 설치 폴더 밖에 교사 작업 폴더를 정한다. 기존 작업 폴더가 있으면 그 경로를 유지한다. 새 경로는 운영체제의 사용자 문서 위치를 확인하여 정하고 사용자 지정 경로를 우선한다
-- PC 데이터도 코드 밖에 둔다. 기존 경로가 있으면 유지한다. 기본은 `HWPDOC_PC_DATA`, 없으면 `%LOCALAPPDATA%/hwpdoc`, 그것도 없으면 사용자 홈의 `AppData/Local/hwpdoc`이다. 새 설치에서는 명확한 별도 데이터 경로를 지정하고 이후에도 같은 값을 `HWPDOC_PC_DATA`로 쓴다
+- PC 데이터도 코드 밖에 둔다. 기존 경로가 있으면 유지한다. 기본은 `HWPDOC_PC_DATA`, 없으면 `%LOCALAPPDATA%/hwpdoc`, 그것도 없으면 사용자 홈의 `AppData/Local/hwpdoc`이다. 새 설치에서는 명확한 별도 데이터 경로를 지정한다. 이후에는 작업 폴더의 `.hwpdoc/onboarding.json`에서 실제 `pc_data`·`python`을 복원한다. 명시 환경변수는 우선하므로 과거 대화의 변수를 추측하여 넣지 않는다
 - “Python 포함 설치”, “Python이 없으면 전용 폴더에 설치해도 된다”는 명시적인 요청은 아래 동의 플래그를 허용한다. 이미 승인했으면 다시 묻지 않는다
 - 단순 “설치해줘”만 말했을 때는 동의 플래그 없이 실행한다. `PYTHON_INSTALL_CONSENT_REQUIRED`라면 “Python 3.12가 없어요. 공식 Astral uv와 python-build-standalone의 CPython을 teacher_doc 전용 폴더에 다운로드해서 이어서 설치할까요? 전역 PATH·레지스트리는 바꾸지 않아요”라고 한 번 묻는다. 거절/미응답이면 다운로드하지 않는다
 - [공급원과 라이선스](../../docs/PYTHON-RUNTIME.md)를 읽는다. 자동 설치는 Python Software Foundation의 python.org 설치기가 아닌 **Astral의 CPython 빌드**다. uv와 Python 아카이브 모두 고정 SHA-256을 검증한다. 다운로드나 해시 검증 실패를 성공으로 바꾸지 않는다
@@ -54,7 +54,7 @@ bash "$pluginRoot/scripts/bootstrap.sh" --workspace "$teacherWorkspace" --data-d
 
 **위 동의 플래그는 Python 설치가 승인된 경우에만 붙인다.** 기존 Python 3.12는 진입점이 탐색한다. 명확히 지정해야 할 때 Windows `-Python <실제 절대경로>`, Unix `--python <실제 절대경로>`를 쓴다. `py`, `pymanager`, WindowsApps 별칭을 탐색용으로 실행하지 않는다. Python Install Manager는 탐색 호출만으로 다운로드할 수 있다. PowerShell 실행 정책이 막히면 오류와 필요한 조치를 보고하고 `Set-ExecutionPolicy`, `-ExecutionPolicy Bypass`, `Unblock-File`로 우회하지 않는다.
 
-기본 XML 모드로 전용 venv → 고정 의존성 → 작업 폴더 초기화 → XML doctor → 첫 연습 문서를 연속 수행한다. 성공 JSON의 `python`(전용 venv), `source_python`, `source_python_version`, `pc_data`, `workspace`, `xml_doctor`, `practice.report`, `full_doctor`를 확인한다. 요약은 `.hwpdoc/onboarding.json`에 남는다. Python 자동 다운로드 증거는 PC 데이터 아래 `managed-python/install-receipt.json`에 남는다. 폴더 생성만으로 성공이라고 하지 않는다.
+기본 XML 모드로 전용 venv → 고정 의존성 → 작업 폴더 초기화 → XML doctor → 첫 연습 문서를 연속 수행한다. 성공 JSON의 `python`(전용 venv), `source_python`, `source_python_version`, `pc_data`, `workspace`, `xml_doctor`, `practice.report`, `full_doctor`를 확인한다. 마지막 성공 요약은 `.hwpdoc/onboarding.json`, 마지막 Python 설치 단계 시도는 `.hwpdoc/onboarding-attempt.json`에 남는다. 후자가 failed이면 과거 ready_xml을 최근 성공으로 보고하지 않는다. shell/다운로드 단계에서 Python 실행 전 실패하면 stderr가 그 시도의 결과다. 손상된 작업 설정에는 진단 기록을 억지로 쓰지 않는다. Python 자동 다운로드 증거는 PC 데이터 아래 `managed-python/install-receipt.json`에 남는다. 폴더 생성만으로 성공이라고 하지 않는다.
 
 추가 옵션은 필요한 경우에만 붙인다. Windows/Unix 대응은 `-Mode full`/`--mode full`, `-SchoolData`/`--school-data`, `-Visual`/`--visual`, `-App claude`/`--app claude`, `-SkillName <실제 스킬 이름>`/`--skill-name <실제 스킬 이름>`이다. 기본은 `xml`, `codex`, `hwpx`다. 앱에서 `teacher_doc:hwpx`처럼 다른 실제 이름을 확인했다면 그 값을 전달한다. 기본 문자열이 저장됐다고 앱 로딩을 확인한 것은 아니다.
 
@@ -63,18 +63,22 @@ bash "$pluginRoot/scripts/bootstrap.sh" --workspace "$teacherWorkspace" --data-d
 ## 4. 실제 파일과 검사 결과 확인
 
 1. 작업 폴더 `output/teacher-doc-practice/`의 `template.hwpx`, `first-document.hwpx`, `slot-values.json`, `practice-report.json`이 실제 존재하는지 확인한다. 설치 요약은 `.hwpdoc/onboarding.json`, 최근 doctor 결과는 `.hwpdoc/doctor.json`이다
-2. 보고서를 읽고 XML/슬롯 편집 검사 결과, 실패·미확인 항목을 구분한다. 필요하면 bootstrap이 기록한 전용 Python으로 다음 명령을 실행한다
+2. 보고서를 읽고 XML/슬롯 편집 검사 결과, 실패·미확인 항목을 구분한다. 새 대화라면 `.hwpdoc/onboarding.json`의 `pc_data`·`python`을 읽고 runtime.json과 존재·일치를 확인한다. 아래 `$taskPython`은 그 절대경로다. 필요하면 전용 Python으로 다음 명령을 실행한다
 
 ```sh
-python -X utf8 scripts/teacher_doc.py --workspace "/교사/작업/폴더" doctor --mode xml
-python -X utf8 scripts/teacher_doc.py --workspace "/교사/작업/폴더" first-doc
+"$taskPython" -X utf8 "$pluginRoot/scripts/teacher_doc.py" --workspace "$teacherWorkspace" doctor --mode xml
+"$taskPython" -X utf8 "$pluginRoot/scripts/teacher_doc.py" --workspace "$teacherWorkspace" first-doc
 ```
 
 3. 연습 파일은 학교 양식 등록이나 사용자 승인 기록을 만들지 않는다. 실제 승인·등록·렌더 증거를 흉내 내어 추가하지 않는다
 4. Windows 한글 확인을 요청받은 경우 같은 전용 Python으로 `doctor --mode full`을 실행하고 실제 결과를 읽는다. `doctor --mode full`이 한글/COM을 사용할 수 없어 종료 코드 2를 반환하면 전체 검증 미완료로 보고한다. `--mode full` bootstrap에서도 XML 연습 결과와 `full_doctor`를 따로 읽는다. 요약 `status`만으로 전체 문서 검증 통과를 선언하지 않는다. PDF/PNG 육안 판독은 해당 작업의 실제 산출물로 따로 수행한다
 5. 플러그인 목록에 보이는 것과 새 작업에서 스킬 본문을 실제 읽는 것은 별개다. 앱/CLI에서 확인한 범위까지만 보고한다
 
-최종 안내에는 설치 위치·작업 폴더·연습 결과 파일, 성공한 검사, 아직 필요한 확인을 짧게 적는다. 파일 경로를 실제 환경에 맞게 제공하고 사용자가 열 수 있으면 결과물을 전달한다. “설치됨”, “XML 연습 성공”, “앱 로딩 확인”, “Windows 한글/렌더 확인”을 하나의 전체 성공으로 합치지 않는다.
+최종 안내는 실제 HWPX 파일 → `text_excerpt`의 실제 본문 2–4줄 → 바뀐 점 → 검사/미확인 상태 → 다음 행동 하나 순서로 짧게 적는다. 발췌는 읽기용이며 인쇄 미리보기가 아니다. 검사 통과 메시지만 결과로 내놓지 않는다. 첨부 불가 환경에서는 그 컴퓨터의 정확한 경로를 준다. 마지막에 설치 결과 `continue_prompt`처럼 실제 작업 폴더가 채워진 “이 작업 폴더에서 문서 작업 이어줘” 문장을 제공한다. 파일 경로를 실제 환경에 맞게 제공하고 사용자가 열 수 있으면 결과물을 전달한다. “설치됨”, “XML 연습 성공”, “앱 로딩 확인”, “Windows 한글/렌더 확인”을 하나의 전체 성공으로 합치지 않는다.
+
+## 새 대화에서 이어가기
+
+재설치부터 시작하지 않는다. 사용자가 준 작업 폴더의 지침·학교 설정·설치 기록을 읽고 실제 전용 Python을 확인하여 `doctor --mode xml`을 실행한다. Windows `teacher_doc.ps1 --workspace ...`도 같은 기록을 읽는다. macOS/Linux 재설치 진입점은 기록이 있으나 데이터 경로가 생략되면 중단하므로, 필요한 설치 재시도만 실제 `pc_data`를 `--data-dir`로 전달한다. 이동/다른 PC/없는 경로는 원인을 진단하고 사용자가 선택한 새 격리 환경이 필요하면 설명한다. 원본·작업 설정·수정된 연습본·기존 AGENTS.md를 덮어쓰지 않는다. 수정된 연습본은 보존 중단 이유와 “수정본 작업 이어가기 / 별도 연습 폴더에 새 사본”을 설명한다.
 
 ## 설치 뒤 실제 공문
 

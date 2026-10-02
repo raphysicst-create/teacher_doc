@@ -98,6 +98,33 @@ class Context:
         return Path(value)  # Version 1 absolute reports are supported unchanged.
 
 
+def recorded_runtime(workspace):
+    """Read the installation receipt as data, never silently use a different PC.
+
+    A workspace can move on the same PC; its runtime is external. A copied
+    receipt from another PC must be explicitly repaired/overridden, not guessed.
+    """
+    receipt = Path(workspace) / '.hwpdoc/onboarding.json'
+    if not receipt.is_file():
+        return None
+    record = read_json(receipt)
+    for key in ('pc_data', 'python'):
+        value = record.get(key)
+        if not isinstance(value, str) or not value.strip() or not Path(value).is_absolute():
+            raise ValueError('설치 기록의 절대경로 형식 오류: ' + key + ' — 기존 기록을 보존하고 실제 PC 경로를 확인하세요')
+    data = Path(record['pc_data'])
+    config = data / 'runtime.json'
+    if not config.is_file():
+        raise ValueError('설치 기록의 runtime.json을 찾을 수 없습니다: ' + str(config)
+                         + ' — 다른 PC/이동한 경로인지 확인하세요. 재설치나 기본 경로로 자동 전환하지 않습니다')
+    host = read_json(config)
+    if host.get('version') != 1 or host.get('python') != record['python']:
+        raise ValueError('설치 기록과 runtime.json의 Python 경로 불일치 — 실제 경로 확인 후 명시적으로 PC 데이터를 선택하세요')
+    if not Path(record['python']).is_file():
+        raise ValueError('설치 기록의 Python이 없습니다: ' + record['python'] + ' — 기존 파일을 보존하고 실행 환경을 복구하세요')
+    return record
+
+
 def load_context(workspace=None, *, code_root=None, pc_data=None):
     code = Path(code_root or CODE_ROOT).resolve()
     chosen = workspace or os.environ.get('HWPDOC_WORKSPACE')
@@ -120,10 +147,15 @@ def load_context(workspace=None, *, code_root=None, pc_data=None):
             raise ValueError('학교 설정은 JSON 객체여야 합니다: ' + key)
     if any(not isinstance(value, str) or not value for value in settings.get('references', {}).values()):
         raise ValueError('학교 자료 경로는 비어 있지 않은 문자열이어야 합니다')
-    data = Path(pc_data or os.environ.get('HWPDOC_PC_DATA') or
-                (Path(os.environ.get('LOCALAPPDATA', Path.home() / 'AppData/Local')) / 'hwpdoc')).resolve()
+    selected_data = pc_data or os.environ.get('HWPDOC_PC_DATA')
+    receipt = recorded_runtime(root) if not selected_data else None
+    data = Path(selected_data or (receipt['pc_data'] if receipt else None) or
+                (Path(os.environ.get('LOCALAPPDATA', Path.home() / 'AppData/Local')) / 'hwpdoc')).expanduser().resolve()
+    if selected_data and (root / '.hwpdoc/onboarding.json').is_file() and not (data / 'runtime.json').is_file():
+        raise ValueError('명시한 PC 데이터의 runtime.json이 없습니다: ' + str(data) + ' — 기존 설치 경로를 확인하세요')
     host = read_json(data / 'runtime.json') if (data / 'runtime.json').is_file() else {}
-    if host and (host.get('version') != 1 or not isinstance(host.get('python'), str) or not Path(host['python']).is_absolute()):
+    if host and (host.get('version') != 1 or not isinstance(host.get('python'), str) or not Path(host['python']).is_absolute()
+                 or not Path(host['python']).is_file()):
         raise ValueError('미지원 PC 설정 버전')
     # Keep the venv launcher path: resolving its symlink selects base Python.
     python = Path(os.path.abspath(Path(host.get('python') or sys.executable).expanduser()))

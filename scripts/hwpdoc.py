@@ -292,15 +292,17 @@ def prerequisite_errors(m, *, build=False):
                 errors.append('활동 행 부족: ' + str(group.get('location')) + ' — 병합하지 말고 구조 변경 경로로 진행하세요')
     if m.get('reference') or m.get('template'):
         rules = m['content_rules']
-        if not rules.get('forbid') or not m.get('reuse_review', {}).get('record'):
-            errors.append('재사용 문서의 고유 명칭·옛 날짜 forbid와 검토 기록 필요')
+        if not isinstance(rules.get('forbid'), list) or any(not isinstance(x, str) or not x.strip() for x in rules.get('forbid', [])):
+            errors.append('content_rules.forbid는 확인한 문자열 목록이어야 합니다')
+        if not isinstance(m.get('reuse_review', {}).get('record'), str) or not m['reuse_review']['record'].strip():
+            errors.append('재사용 문서의 고유 명칭·옛 날짜 검토 기록 필요')
         review = m.get('reuse_review', {})
         for key in ('names', 'dates'):
             if not isinstance(review.get(key), list):
                 errors.append('복사 잔재 점검 목록 누락: reuse_review.' + key)
-            elif not review[key] and not review.get(key + '_empty_reason'):
+            elif not review[key] and (not isinstance(review.get(key + '_empty_reason'), str) or not review[key + '_empty_reason'].strip()):
                 errors.append('복사 잔재 목록이 빈 이유 필요: ' + key)
-            elif any(x not in rules.get('forbid', []) for x in review[key]):
+            elif any(not isinstance(x, str) or not x.strip() or x not in (rules.get('forbid') or []) for x in review[key]):
                 errors.append('복사 잔재 점검 목록은 모두 content_rules.forbid에 포함해야 합니다: ' + key)
     if m.get('shared_values_file') and not input_path(m['shared_values_file']).is_file():
         errors.append('공유값 단일 소스 파일 없음')
@@ -417,7 +419,23 @@ def result_state(report):
     return 'pass'
 
 
+def stage_challenge(entry):
+    canonical = copy.deepcopy(entry)
+    if canonical.get('command'):
+        canonical['command'] = [path_context().encode(p) if Path(p).is_absolute() else p for p in canonical['command']]
+    return json_hash(canonical)
+
+
+def resume_challenges(report):
+    return {name: {'stage_sha256': stage_challenge(entry),
+                   'document_sha256': sha(report['work_file']) if Path(report['work_file']).is_file() else None,
+                   'input_sha256': report['manifest_sha256']}
+            for name, entry in report.get('stages', {}).items()
+            if entry.get('failures', 0) - entry.get('retry_baseline', 0) >= 2 and name != 'build'}
+
+
 def save_report(report):
+    report['resume_challenges'] = resume_challenges(report)
     report['updated_at'] = now()
     report['status'] = result_state(report)
     report['next_action'] = ('사람 최종 검토; ' + NOTICE if report['status'] == 'pass'
@@ -425,31 +443,125 @@ def save_report(report):
     write_json(job_dir(report['job_id']) / 'report.json', report_record(report))
 
 
+def retry_basis(work):
+    return {'document_sha256': sha(work) if Path(work).is_file() else None,
+            'tools_sha256': json_hash(tool_dependencies()), 'runtime': runtime_snapshot()}
+
+
 def stage(report, name, argv=None, *, status=None, reason='', com=False):
     started = time.monotonic()
     previous = report['stages'].get(name, {})
     failures = previous.get('failures', 0)
+    retry_baseline = previous.get('retry_baseline', 0)
     before = sha(report['work_file']) if Path(report['work_file']).is_file() else None
     if argv is None:
         code, output = None, reason
         state = status or 'unconfirmed'
-    elif failures >= 2:
-        code, output, state = None, '동일 단계 2회 실패: 자동 시도 중단. 사람 확인 필요.', 'fail'
+    elif failures - retry_baseline >= 2:
+        code, output, state = None, '동일 단계 2회 실패: 자동 시도 중단. 원인 해결·실제 사용자 확인 후 resume --job --stage --record 필요.', 'fail'
     else:
         code, output = run(argv, com=com)
         unavailable = code in (124, 125) or (com and re.search('검사 불가|not installed|only available|COM .*failed', output, re.I))
         state = 'pass' if code == 0 else ('unconfirmed' if unavailable else 'fail')
         if code:
             failures += 1
-    entry = dict(status=state, reason=output, failures=failures, exit_code=code,
+    entry = dict(status=state, reason=output, failures=failures, retry_baseline=retry_baseline, exit_code=code,
                  before_sha256=before, after_sha256=sha(report['work_file']) if Path(report['work_file']).is_file() else None,
                  at=now(), elapsed_seconds=round(time.monotonic() - started, 4), command=list(map(str, argv)) if argv else None,
-                 warnings=[line for line in output.splitlines() if re.search('warning|경고', line, re.I)])
+                 warnings=[line for line in output.splitlines() if re.search(r'warning|\[warn\]|경고', line, re.I)])
+    entry['failure_basis'] = retry_basis(report['work_file']) if code else previous.get('failure_basis')
     report['stages'][name] = entry
     report['history'].append(dict(stage=name, **entry))
     save_report(report)
     audit(name, report['work_file'], state, output[:1500])
     return state in ('pass', 'not_applicable')
+
+
+def resume_stage(record, name, proof_file, work, input_sha256, folder):
+    """One explicit retry window, without deleting failures or claiming a pass.
+
+    A human's recorded confirmation and current-hash resolution evidence are
+    required. This checks the evidence linkage, not the truth of their statement.
+    """
+    from datetime import datetime
+    previous = record.get('stages', {}).get(name)
+    if not previous or previous.get('failures', 0) - previous.get('retry_baseline', 0) < 2:
+        raise ValueError('2회 실패로 중단된 해당 단계만 명시적으로 재개할 수 있습니다')
+    proof_path = workspace_path(proof_file)
+    proof = read_json(proof_path)
+    if not isinstance(proof, dict) or proof.get('confirmed') is not True:
+        raise ValueError('재개에는 원인 해결 후 실제 사용자 확인이 필요합니다')
+    if any(not isinstance(proof.get(k), str) or not proof[k].strip()
+           for k in ('by', 'at', 'record', 'cause', 'resolution')):
+        raise ValueError('재개 확인·원인·해결 내용 누락')
+    if (proof.get('stage') != name or proof.get('stage_sha256') != stage_challenge(previous)
+            or proof.get('document_sha256') != sha(work) or proof.get('input_sha256') != input_sha256):
+        raise ValueError('재개 확인 대상 단계/현재 문서/승인 입력 해시 불일치')
+    try:
+        at = datetime.fromisoformat(proof['at'])
+        stopped = datetime.fromisoformat(previous['at'])
+        if at <= stopped or at > datetime.now(timezone.utc):
+            raise ValueError('중단 이후 현재 시점까지의 실제 확인 기록이 필요합니다')
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError('재개 확인 시각이 올바르지 않습니다: ' + str(exc)) from exc
+    evidence = proof.get('evidence')
+    if not isinstance(evidence, list) or not evidence:
+        raise ValueError('원인 해결을 확인한 진단/수정 증거 파일과 SHA256이 필요합니다')
+    sources = []
+    for item in evidence:
+        if not isinstance(item, dict) or not isinstance(item.get('path'), str):
+            raise ValueError('재개 증거 형식 오류')
+        path = workspace_path(item['path'])
+        if not path.is_file() or item.get('sha256') != sha(path):
+            raise ValueError('재개 증거 누락/해시 변경')
+        sources.append(path)
+    # A renamed evidence file or a different explanation cannot reset the same
+    # failed conditions. External repairs require their own explicit human record.
+    if previous.get('failure_basis') == retry_basis(work) or not previous.get('failure_basis'):
+        if name not in ('hancom', 'render', 'review_render'):
+            raise ValueError('실패 조건이 그대로입니다. 이 단계는 실제 문서/도구/runtime 수정이 필요합니다')
+        external = proof.get('external_environment', {})
+        if (not isinstance(external, dict) or external.get('confirmed') is not True
+                or any(not isinstance(external.get(k), str) or not external[k].strip()
+                       for k in ('by', 'at', 'change', 'verification'))):
+            raise ValueError('실패 조건이 그대로입니다. 실제 문서/도구/runtime 수정 또는 외부 환경 복구의 구체적인 사람 확인이 필요합니다')
+        try:
+            verified = datetime.fromisoformat(external['at'])
+            if not stopped < verified <= at:
+                raise ValueError('복구 확인 시각 범위 오류')
+        except (TypeError, ValueError) as exc:
+            raise ValueError('외부 환경 복구 확인 시각 오류') from exc
+    digest = sha(proof_path)
+    if any(entry.get('record_sha256') == digest for entry in record.get('resumes', [])):
+        raise ValueError('이미 사용한 재개 확인 기록은 다시 사용할 수 없습니다')
+    evidence_folder = folder / 'resumes' / digest
+    if evidence_folder.exists():
+        raise ValueError('기존 재개 증거 폴더를 덮어쓰지 않습니다')
+    evidence_folder.mkdir(parents=True)
+    shutil.copy2(proof_path, evidence_folder / 'confirmation.json')
+    for index, source in enumerate(sources):
+        shutil.copy2(source, evidence_folder / (str(index) + '-' + source.name))
+    entry = {'at': now(), 'stage': name, 'record_sha256': digest, 'previous': copy.deepcopy(previous),
+             'document_sha256': sha(work), 'input_sha256': input_sha256,
+             'evidence_directory': path_context().encode(evidence_folder), 'approval_preserved': True}
+    record.setdefault('resumes', []).append(entry)
+    record.setdefault('history', []).append({'stage': name, 'action': 'explicit_resume', **entry})
+    record['stages'][name] = dict(previous, status='unconfirmed', retry_baseline=previous['failures'],
+                                 reason='원인 해결 증거와 실제 사용자 재개 확인 수리; 전체 재검증 대기', at=now())
+    record.pop('validated_sha256', None)
+    audit('resume_' + name, work, 'unconfirmed', {'record_sha256': digest, 'failures_preserved': previous['failures']})
+    return record
+
+
+def resume_document(report, name, proof_file):
+    if name in ('build', 'copy'):
+        raise ValueError('이 재개 명령은 문서 검증 단계용입니다. 생성/외부 복사 상태를 우회하지 않습니다')
+    # Original approval-bearing input files must still match. Work/tool/runtime
+    # repairs are the permitted changes, followed by the normal full validator.
+    refresh_validation_tools(report)
+    resume_stage(report, name, proof_file, Path(report['work_file']), report['manifest_sha256'], job_dir(report['job_id']))
+    save_report(report)
+    return report
 
 
 def initialize(manifest_file, *, build):
@@ -533,7 +645,8 @@ def validate_document(report):
     report.pop('validated_sha256', None)
     for name in STAGES:
         old = report['stages'].get(name, {})
-        report['stages'][name] = {'status': 'unconfirmed', 'reason': '이번 파일 전체 검증 대기', 'failures': old.get('failures', 0)}
+        report['stages'][name] = {'status': 'unconfirmed', 'reason': '이번 파일 전체 검증 대기', 'failures': old.get('failures', 0), 'retry_baseline': old.get('retry_baseline', 0),
+                                  'failure_basis': old.get('failure_basis'), 'at': old.get('at', now())}
     save_report(report)
     if 'build' in report['stages'] and report['stages']['build']['status'] != 'pass':
         raise ValueError('build 미통과: work 사본을 생성 완료본으로 검증할 수 없습니다')
@@ -544,7 +657,7 @@ def validate_document(report):
                 ('layout', [SKILL / 'validate.py', f, '--layout'])]
     for name, argv in sequence:
         if not stage(report, name, argv):
-            if name == 'structure' and report['stages'][name]['failures'] < 2:
+            if name == 'structure' and report['stages'][name]['failures'] - report['stages'][name].get('retry_baseline', 0) < 2:
                 if stage(report, name, argv):
                     continue
             report['fallback_next'] = structure_recovery() if name == 'structure' else '현재 단계 수정 후 재검증'
@@ -668,6 +781,13 @@ def validate_document(report):
     return report
 
 
+def document_excerpt(path, limit=1200):
+    sys.path.insert(0, str(SKILL))
+    from text_extract import extract_plain
+    text = extract_plain(Path(path), include_tables=True).strip()
+    return text[:limit] + ('\n… (나머지는 HWPX 원문 확인)' if len(text) > limit else '')
+
+
 def delivery(report, *, draft=False, destination='configured'):
     if destination == 'configured':
         destination = ONEDRIVE
@@ -691,10 +811,29 @@ def delivery(report, *, draft=False, destination='configured'):
     lines = [f'# {report["job_id"]}: {label}', '', NOTICE, '', '사람 검토 대기 · 발송은 사람이 합니다.', '',
              '업무 근거 해석의 정확성은 실행기가 보증하지 않습니다.', '', f'파일 SHA256: {sha(work)}', '']
     lines += [f'- {name}: {entry["status"]} — {entry.get("reason", "")[:500]}' for name, entry in report['stages'].items()]
+    warnings = [warning for entry in report['stages'].values() for warning in entry.get('warnings', [])]
+    lines += ['', '경고 (전체):', *['- ' + warning for warning in warnings]]
     lines += ['', '미확인: ' + json.dumps(report.get('unresolved', []), ensure_ascii=False)]
     (folder / '검토보고서.md').write_text('\n'.join(lines), encoding='utf-8')
     m = read_json(report['manifest_file'])
-    files = [target, folder / '검토보고서.json', folder / '검토보고서.md']
+    excerpt = document_excerpt(target)
+    excerpt_file = folder / '본문발췌.txt'
+    excerpt_file.write_text('최종 HWPX에서 추출한 읽기용 본문입니다. 인쇄/쪽 배치 미리보기가 아닙니다.\n\n'
+                            + excerpt + '\n', encoding='utf-8')
+    files = [target, folder / '검토보고서.json', folder / '검토보고서.md', excerpt_file]
+    diff = work.parent / 'compare.diff'
+    changes = []
+    if diff.is_file():
+        changes = [line[:240] for line in diff.read_text(encoding='utf-8').splitlines()
+                   if line.startswith(('+', '-')) and not line.startswith(('+++', '---'))][:4]
+        target_diff = folder / 'compare.diff'
+        shutil.copy2(diff, target_diff)
+        files.append(target_diff)
+    report['delivery_summary'] = {'file': str(target), 'text_excerpt': excerpt, 'changes': changes,
+                                  'pending_checks': [name for name, entry in report['stages'].items()
+                                                     if entry['status'] not in ('pass', 'not_applicable')],
+                                  'warnings': warnings, 'next_action': NOTICE,
+                                  'text_is_print_preview': False, 'human_review': 'pending'}
     for attachment in m['attachments']:
         src = input_path(attachment['path']); dest = folder / src.name
         if dest.exists() and sha(dest) != sha(src):
@@ -793,6 +932,8 @@ def main():
     group.add_argument('--job'); group.add_argument('--manifest')
     deliver = commands.add_parser('deliver'); deliver.add_argument('--job', required=True); deliver.add_argument('--draft', action='store_true')
     status = commands.add_parser('status'); status.add_argument('--job', required=True)
+    resume = commands.add_parser('resume', help='실제 원인 해결·사용자 확인 기록으로 중단된 검증 단계만 재개')
+    resume.add_argument('--job', required=True); resume.add_argument('--stage', required=True); resume.add_argument('--record', required=True)
     args = parser.parse_args()
     try:
         if args.command == 'init':
@@ -833,15 +974,18 @@ def main():
                 report_file = job_dir(job) / 'report.json'
                 preflight_file = job_dir(job) / 'preflight.json'
                 if args.command == 'status' and not report_file.exists() and preflight_file.exists():
-                    print(json.dumps(dict(job_id=job, **read_json(preflight_file), next_action='누락/미확인 입력을 사용자에게 확인하세요. 생성하지 않았습니다.'), ensure_ascii=False, indent=2))
+                    print(json.dumps(dict(job_id=job, **read_json(preflight_file), next_action='원문에서 확인 가능한 정보는 먼저 읽고 남은 사용자 결정만 질문하세요. 생성하지 않았습니다.'), ensure_ascii=False, indent=2))
                     return 2
                 report = load_report(report_file)
+                if args.command == 'resume':
+                    report = resume_document(report, args.stage, args.record)
                 if args.command == 'deliver':
                     report = delivery(report, draft=args.draft)
                 else:
                     save_report(report)
             print(json.dumps({'job_id': job, 'status': result_state(report), 'report': str(job_dir(job) / 'report.json'),
-                              'changed_files': freshness(report), 'copy': report.get('copy'), 'next_action': report['next_action']}, ensure_ascii=False, indent=2))
+                              'changed_files': freshness(report), 'copy': report.get('copy'),
+                              'delivery_summary': report.get('delivery_summary'), 'resume_challenges': report.get('resume_challenges'), 'next_action': report['next_action']}, ensure_ascii=False, indent=2))
             if args.command == 'build':
                 return 0 if report['stages'].get('build', {}).get('status') == 'pass' else 2
             if args.command == 'deliver':

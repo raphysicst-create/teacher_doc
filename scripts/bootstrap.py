@@ -16,6 +16,11 @@ import subprocess
 import sys
 import uuid
 import venv
+from datetime import datetime, timezone
+
+# Also works with python -I: do not require global PYTHONPATH.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from hwpdoc_config import recorded_runtime
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = 'teacher-doc-bootstrap-v1'
@@ -90,7 +95,9 @@ def install(args):
         if not (ROOT / relative).is_file():
             raise ValueError('불완전한 설치입니다. hwpx 스킬만 설치하지 말고 저장소 전체를 설치하세요: ' + relative)
     workspace = Path(args.workspace).expanduser().resolve()
-    data = Path(args.data_dir or os.environ.get('HWPDOC_PC_DATA') or
+    selected_data = args.data_dir or os.environ.get('HWPDOC_PC_DATA')
+    receipt = recorded_runtime(workspace) if not selected_data else None
+    data = Path(selected_data or (receipt['pc_data'] if receipt else None) or
                 (Path(os.environ.get('LOCALAPPDATA', Path.home() / 'AppData/Local')) / 'hwpdoc')).expanduser().resolve()
     if workspace.is_relative_to(ROOT) or ROOT.is_relative_to(workspace):
         raise ValueError('설치 코드와 겹치지 않는 별도 작업 폴더를 선택하세요')
@@ -169,14 +176,35 @@ def install(args):
         except json.JSONDecodeError:
             full = {'status': 'unconfirmed', 'detail': (result.stdout + result.stderr)[-4000:]}
             exit_code = exit_code or 2
-    summary = {'status': 'ready_xml' if exit_code == 0 else 'full_verification_incomplete',
+    summary = {'at': datetime.now(timezone.utc).isoformat(), 'status': 'ready_xml' if exit_code == 0 else 'full_verification_incomplete',
                'runtime': runtime_state, 'python': str(python), 'source_python': sys.executable,
                'source_python_version': sys.version.split()[0], 'pc_data': str(data),
                'workspace': str(workspace), 'xml_doctor': xml['status'], 'practice': practice,
                'full_doctor': full, 'plugin_loaded_in_chat': 'unverified',
-               'next_action': '새 대화에서 실제 설치 스킬을 읽으세요. 실제 공문은 기존 승인·한글 열기·렌더 검증 절차가 필요합니다.'}
+               'continue_prompt': f'{workspace} 작업 폴더에서 문서 작업 이어줘',
+               'next_action': '새 대화에서 설치 기록의 Python/PC 경로로 이어가세요. 실제 공문은 기존 승인·한글 열기·렌더 검증 절차가 필요합니다.'}
     write(workspace / '.hwpdoc/onboarding.json', summary)
     return summary, exit_code
+
+
+def record_attempt(args, status, *, code=None, error=None):
+    """Keep the last attempt separate from the last successful installation.
+
+    Never repair a damaged/foreign workspace just to write a failure receipt.
+    """
+    workspace = Path(args.workspace).expanduser().resolve()
+    marker = workspace / '.hwpdoc/workspace.json'
+    try:
+        settings = read(marker)
+        if settings.get('kind') != 'hwpdoc-workspace' or settings.get('version') != 1 or settings.get('app') != args.app:
+            return
+        write(workspace / '.hwpdoc/onboarding-attempt.json', {
+            'at': datetime.now(timezone.utc).isoformat(), 'status': status, 'exit_code': code,
+            'error': error, 'last_success_record': '.hwpdoc/onboarding.json',
+            'note': '지난 설치 성공과 마지막 시도는 별개입니다. 실패 원인 해결 후 같은 경로로 재개하세요.'})
+    except (OSError, ValueError, TypeError):
+        # The original error remains authoritative if even diagnostic storage is unavailable.
+        return
 
 
 def main():
@@ -191,9 +219,11 @@ def main():
     args = parser.parse_args()
     try:
         result, code = install(args)
+        record_attempt(args, result['status'], code=code)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return code
     except (OSError, ValueError, TypeError, RuntimeError, subprocess.SubprocessError) as exc:
+        record_attempt(args, 'failed', error=str(exc))
         print(json.dumps({'status': 'failed', 'error': str(exc), 'next_action':
                           '설치된 파일과 기존 자료는 보존했습니다. 원인을 해결한 뒤 같은 명령으로 재개하세요.'}, ensure_ascii=False), file=sys.stderr)
         return 2

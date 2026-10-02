@@ -79,15 +79,33 @@ def _paragraph_slots(root: etree._Element, preview_len: int) -> list[dict[str, A
     return slots
 
 
+def owned_cells(table: etree._Element) -> list[etree._Element]:
+    """Each cell belongs to its nearest table, never to an enclosing table too."""
+    return [cell for cell in table.xpath(".//hp:tc", namespaces=NS)
+            if cell.xpath("ancestor::hp:tbl[1]", namespaces=NS)[0] is table]
+
+
+def cell_edit_block_reason(cell: etree._Element) -> str | None:
+    # A whole-cell rewrite intentionally clears text in that cell. Never include
+    # a nested table, drawing, field/control, or a second sub-list in that scope.
+    for run in cell.xpath(".//hp:run", namespaces=NS):
+        if any(child.tag != f"{{{NS['hp']}}}t" for child in run):
+            return "중첩 표/그림/상자/제어 요소를 포함한 복합 셀"
+    if any(node.getparent() is not cell for node in cell.xpath(".//hp:subList", namespaces=NS)):
+        return "내부 문단 컨테이너를 포함한 복합 셀"
+    return None
+
+
 def _cell_slots(
     root: etree._Element,
     preview_len: int,
     include_empty: bool,
+    blocked: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
     slots: list[dict[str, Any]] = []
     for table_index, table in enumerate(root.xpath(".//hp:tbl", namespaces=NS)):
         seen: dict[tuple[str, str], int] = {}
-        for cell in table.xpath(".//hp:tc", namespaces=NS):
+        for cell in owned_cells(table):
             addr = cell.find("hp:cellAddr", namespaces=NS)
             if addr is None:
                 continue
@@ -101,6 +119,11 @@ def _cell_slots(
             key = f"cell:{table_index}:{row}:{col}"
             if occurrence:
                 key += f":{occurrence}"
+            reason = cell_edit_block_reason(cell)
+            if reason or occurrence:
+                blocked.append({"key": key, "reason": reason or "중복 좌표 셀은 전체 치환할 수 없음",
+                                "next_action": "바깥 제목의 실제 p: 슬롯 또는 내부 셀을 선택하세요"})
+                continue
             slots.append(
                 {
                     "key": key,
@@ -126,12 +149,21 @@ def collect_slots(
 ) -> dict[str, Any]:
     root = _parse_section(path)
     paragraph_slots = _paragraph_slots(root, preview_len)
-    cell_slots = _cell_slots(root, preview_len, include_empty_cells)
+    blocked: list[dict[str, Any]] = []
+    cell_slots = _cell_slots(root, preview_len, include_empty_cells, blocked)
+    with zipfile.ZipFile(path) as archive:
+        sections = [name for name in archive.namelist()
+                    if name.startswith("Contents/section") and name.endswith(".xml")]
+
     return {
         "source": str(path),
         "version": 1,
         "usage": "Fill with scripts/edit_hwpx.py template.hwpx -o out.hwpx --slot-json values.json",
         "slots": paragraph_slots + cell_slots,
+        "blocked_slots": blocked,
+        "edit_scope": {"section": "Contents/section0.xml", "section_count": len(sections)},
+        "warnings": (["여러 섹션 중 section0만 편집합니다. 다른 섹션은 보존되며 별도 확인이 필요합니다."]
+                     if len(sections) > 1 else []),
     }
 
 

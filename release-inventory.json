@@ -10,7 +10,7 @@
     {
       "source": "distribution/claude-plugin.json",
       "destination": ".claude-plugin/plugin.json",
-      "sha256": "cac468a89322ec9b1ab2d0dc9cc1afc40334dfbf67b05472beacf57a88c85836"
+      "sha256": "f38fe6db4477c1b526051e3179fda8da5cba865c266f90660e30f2960baa1594"
     },
     {
       "source": ".claude/hooks/audit_log.py",
@@ -35,7 +35,12 @@
     {
       "source": "distribution/codex-plugin.json",
       "destination": ".codex-plugin/plugin.json",
-      "sha256": "d8d2b1bb48ec8467acd9b491a94e0f88f2bfe7a2f3e2117eaf1a1361185520df"
+      "sha256": "6eebfe8aca7f89348c4a7d54fca6ff29b10a8182fd07d812e811ad9a9b80ca51"
+    },
+    {
+      "source": ".gitattributes",
+      "destination": ".gitattributes",
+      "sha256": "f7bd8becf0e1d4d2437c959928dd94accaf6b8e9a927b2f24bca628cc97e466f"
     },
     {
       "source": ".github/workflows/no-python.yml",
@@ -45,7 +50,7 @@
     {
       "source": ".github/workflows/onboarding.yml",
       "destination": ".github/workflows/onboarding.yml",
-      "sha256": "7094cd0f6146b5005db355f343c54d73fabd26a6d11c00f095dd51ca4402c0b5"
+      "sha256": "b1eaffec0e7265bb3839601fce85020a0eda6ccb829615c9d410cbc5239a78ea"
     },
     {
       "source": ".gitignore",
@@ -55,12 +60,12 @@
     {
       "source": "AGENTS.md",
       "destination": "AGENTS.md",
-      "sha256": "048f109250e8e3506d296b41843f6a7b7e14f245100862604b89505983a1d25b"
+      "sha256": "d8f15e4ed990bf2861c26d244c2e34a7410dfc4eca60e05d1a1cd33337326716"
     },
     {
       "source": "distribution/legal/CHANGES.md",
       "destination": "CHANGES.md",
-      "sha256": "a650f7bb25894c89c7fe7c1153296a860a7185718b63550295796b12ddeaad3e"
+      "sha256": "75c31917eee5fa08ef2764c99889e8fae2481c74b0e438c6c0b2c469d3fd7cfd"
     },
     {
       "source": "distribution/legal/AGPL-3.0.txt",
@@ -75,12 +80,12 @@
     {
       "source": "README.md",
       "destination": "README.md",
-      "sha256": "3669d3e585bb0ed98db017589271bace064ee96cd584f8925514ff0b2077209e"
+      "sha256": "5d114471216dcb4d3d70de1c4e58350063f6f65599899156c606945e327a6bcb"
     },
     {
       "source": "distribution/source-bundle.json",
       "destination": "SOURCE-BUNDLE.json",
-      "sha256": "70606459d1abc001aa192bf5e0546e6f12bc559f0aa03e584692433dcbe4949c"
+      "sha256": "2e57595919ac2396d88297091de0c70d238181c22017823b7c5ba3d7d567a31a"
     },
     {
       "source": "distribution/legal/SOURCE.md",
@@ -90,7 +95,7 @@
     {
       "source": "distribution/CHANGELOG.md",
       "destination": "distribution/CHANGELOG.md",
-      "sha256": "9472ebaa21efe65172225a62a5e6deb6de840356d140a2fdff3834cd25cc316b"
+      "sha256": "1faa5056b7690f08fa6cc01abbf6b0e8af9962cfce168c2989ef958e6b7e12b9"
     },
     {
       "source": "distribution/README.md",
@@ -130,7 +135,7 @@
     {
       "source": "docs/BEGINNER.md",
       "destination": "docs/BEGINNER.md",
-      "sha256": "abb5b8c1c548b46b0f2cd499d7b08d6467d8233052bcfd28c02b332f1620d582"
+      "sha256": "66def6619e442b71d96cc5c6075d940a16082641cc822dd714d12cd847b9a65a"
     },
     {
       "source": "docs/PYTHON-RUNTIME.md",
@@ -140,7 +145,7 @@
     {
       "source": "docs/VERIFICATION.md",
       "destination": "docs/VERIFICATION.md",
-      "sha256": "24a0c1e4dea4842836818eaebfa42c6622e17f05475692afd2fc84afe7e294b3"
+      "sha256": "683e3ed0555429d97948be082379acc86f2a5593d18c6ec3bda5ed5609c6ca96"
     },
     {
       "source": "distribution/legal/Canine89-MIT.txt",
@@ -260,17 +265,17 @@
     {
       "source": "scripts/bootstrap.ps1",
       "destination": "scripts/bootstrap.ps1",
-      "sha256": "c780e9d4851c71eeda59363df8c4a3d390e71f354f30e1a21b77507ddd59debb"
+      "sha256": "6529b12b1d4f442e063d71a525d1c9680c59e80f51fcf196cb64ca34a22af82f"
     },
     {
       "source": "scripts/bootstrap.py",
       "destination": "scripts/bootstrap.py",
-      "sha256": "6da9fbb6067418730796d9653cdc2ca09df37ff96fe68e51692f23a69310ec32"
+      "sha256": "ae8a7f1bba19d375e7fd352e0e096004f849d689c00b0413dd55b00fdd5da57d"
     },
     {
       "source": "scripts/bootstrap.sh",
       "destination": "scripts/bootstrap.sh",
-      "sha256": "27e7f466d4027472a51e744a1024bc415651ddf2c9a502c6198e4f0b700f9193"
+      "sha256": "e653168cd297f3e179f312f79883bfcb25c0bc87c5a02d608174cc6f59ac6ed2"
     },
     {
       "source": "scripts/budget_name_check.py",
@@ -290,12 +295,12 @@
     {
       "source": "scripts/hwpdoc.ps1",
       "destination": "scripts/hwpdoc.ps1",
-      "sha256": "ec3d52109e00eded29c3bf1f2d63ece6343af2e8d031e5238813bc05299fe261"
+      "sha256": "2562629961061d0d338d1a51952508d237cb4592800a7480c059b3ab860f32e4"
     },
     {
       "source": "scripts/hwpdoc.py",
       "destination": "scripts/hwpdoc.py",
-      "sha256": "facd1c222aaafd78666b1470afd54e76180127c1c7da4ba04e7f2330145afc14"
+      "sha256": "be7f48418cf026f9643125d4310d04e3f41b30e4a1d43bbbc491e488f8f86bce"
     },
     {
       "source": "scripts/hwpdoc_com_probe.py",
@@ -305,12 +310,12 @@
     {
       "source": "scripts/hwpdoc_config.py",
       "destination": "scripts/hwpdoc_config.py",
-      "sha256": "2de0e8488252bde617a75e807f1ec4d80b894fa7d053ff58e553122fd64775d7"
+      "sha256": "939e3bc35d955c7883a47d503d4f68e064083d00aed97b6e03012bfc272229af"
     },
     {
       "source": "scripts/hwpdoc_practice.py",
       "destination": "scripts/hwpdoc_practice.py",
-      "sha256": "abc6a57abe36aa70ccd4d69e69d9c716636a4de04030123a39fbb0c09dccaaef"
+      "sha256": "ecd83cd4338582bc3927c3b71ecaf8b3d0d2b1a1834d4a75e9a6a9e88d8309c7"
     },
     {
       "source": "scripts/hwpdoc_preview.py",
@@ -330,12 +335,12 @@
     {
       "source": "scripts/hwpdoc_templates.py",
       "destination": "scripts/hwpdoc_templates.py",
-      "sha256": "e19db83de8b7ab48bd1d6212abaa206899b5f0ccc939aff0f2bdc56d7126c971"
+      "sha256": "b2115fd008c58af1c639e12d04257c6e32f48f5dedb4eb488fff758e0f64c5c9"
     },
     {
       "source": "scripts/hwpdoc_workspace.py",
       "destination": "scripts/hwpdoc_workspace.py",
-      "sha256": "7b55b202291e57f90f502fce53580feed03354cede365e93977a9d5f6f6c1d1f"
+      "sha256": "0d2ad24da3b689ed901071a2fca5a02d192360053ab0719b75fccaac6b40c74d"
     },
     {
       "source": "scripts/install-dependencies.ps1",
@@ -370,12 +375,12 @@
     {
       "source": "scripts/runtime.ps1",
       "destination": "scripts/runtime.ps1",
-      "sha256": "36b663489591d351256be425e9e5adbe0c1cb01e68b60bc7c8fa210605361201"
+      "sha256": "7e7d1cc8e146d6a6a942a537dc88849f0959ef399712ae42b221a1d61634bdec"
     },
     {
       "source": "scripts/teacher_doc.ps1",
       "destination": "scripts/teacher_doc.ps1",
-      "sha256": "dec1f464b041a39536dc5d5e79516b78308e05164daeb77953e30dc6b03879c8"
+      "sha256": "86c6e6baf0d81b100161f8e7db4531a06349dafc60b354b89facbf93c4f68634"
     },
     {
       "source": "scripts/teacher_doc.py",
@@ -390,7 +395,7 @@
     {
       "source": ".claude/skills/hwpx/SKILL.md",
       "destination": "skills/hwpx/SKILL.md",
-      "sha256": "0d328044b1c935ba0d95a683a126654c28f08ef7db55ce3ffdd1662ff1583091"
+      "sha256": "e731002665d9dde3f1dc4e78689ac72230f2150c4459b4ba4e1761657797b147"
     },
     {
       "source": ".claude/skills/hwpx/references/editing-details.md",
@@ -408,9 +413,14 @@
       "sha256": "3fb06fb7cfc74a1ba5b515af776b475aa93c58c1b67e32fb9416089ccfeb4da5"
     },
     {
+      "source": "skills/hwpx/references/resume.md",
+      "destination": "skills/hwpx/references/resume.md",
+      "sha256": "5d3f6087438b7269aa4755defa3f97d7d93ef8c0370f20adb7dc1f0eba525025"
+    },
+    {
       "source": ".claude/skills/hwpx/references/workflow.md",
       "destination": "skills/hwpx/references/workflow.md",
-      "sha256": "a6a7bed8c411b81d80ba5549f35b5b03752903bc1704a0bdfde96dd272abf359"
+      "sha256": "bb776a76a0ec1736611361734f0672f35d3058ce42f09a612432a05678f295a6"
     },
     {
       "source": ".claude/skills/hwpx/references/xml-authoring.md",
@@ -440,7 +450,7 @@
     {
       "source": ".claude/skills/hwpx/scripts/edit_hwpx.py",
       "destination": "skills/hwpx/scripts/edit_hwpx.py",
-      "sha256": "1ed252c2ee8e9d6430456899199c7e575073d822942305645579e26bc6454584"
+      "sha256": "e3e1c606a5c933302425456c06b741ee2a3adf47f45973d58c806afe068491dc"
     },
     {
       "source": ".claude/skills/hwpx/scripts/finalize_hwpx.py",
@@ -465,7 +475,7 @@
     {
       "source": ".claude/skills/hwpx/scripts/hwpx_slots.py",
       "destination": "skills/hwpx/scripts/hwpx_slots.py",
-      "sha256": "f747b8045f908a2c5c2746fc558fd55a7f49addfca95e9f05ca7afa9bfc7724d"
+      "sha256": "ee5c050dab1b251ec650dfd10e330d53cf7354f68412d62736f40b83f2f2f0a5"
     },
     {
       "source": ".claude/skills/hwpx/scripts/office/pack.py",
@@ -480,7 +490,7 @@
     {
       "source": ".claude/skills/hwpx/scripts/page_guard.py",
       "destination": "skills/hwpx/scripts/page_guard.py",
-      "sha256": "e5e6141dafd5fed454ff909a92bcc4e05f037df9a822a0eaeef7169d59711474"
+      "sha256": "577bf4b722a778fafd0909aa523dbb21eb8c89e9593e7794af95575593a61294"
     },
     {
       "source": ".claude/skills/hwpx/scripts/text_extract.py",
@@ -590,7 +600,7 @@
     {
       "source": "skills/teacher-doc-setup/SKILL.md",
       "destination": "skills/teacher-doc-setup/SKILL.md",
-      "sha256": "c85ed23429480a86443ee4752f1d9e38fa3d8a3ed2d2d8635c61a1d121aacd13"
+      "sha256": "6654b1a9578de301840805bd31ffcba4e08307d977bd6d8ebe95dd59bd2343a6"
     },
     {
       "source": "distribution/sources/mupdf-1.28.0-source.tar.gz",
@@ -603,9 +613,19 @@
       "sha256": "e53f3567403a92da15caa9e7ae0164327fff48817e9f40175367fb9de524258d"
     },
     {
+      "source": "tests/test_beginner_workflow.py",
+      "destination": "tests/test_beginner_workflow.py",
+      "sha256": "3e0009a4c2987b76e457198d2eed5abbc99b0cb7bbe0f3139f72bcb99c25b505"
+    },
+    {
       "source": "tests/test_onboarding.py",
       "destination": "tests/test_onboarding.py",
-      "sha256": "7c09e774afc592595fac4637bbcbd089efb4e49febaaf7040c84dab3793b5010"
+      "sha256": "00ddb16feba8c426aa6ec14388b3f9d1b39c41f24a915da11b111ef250d6d7af"
+    },
+    {
+      "source": "tests/test_package_integrity.py",
+      "destination": "tests/test_package_integrity.py",
+      "sha256": "65d9b8a1d1efcc70dcfa0e315f1753236384e8491c154b88dbfa93e1d14cdd92"
     },
     {
       "source": "tests/test_python_bootstrap.py",

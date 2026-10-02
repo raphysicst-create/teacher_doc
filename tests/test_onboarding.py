@@ -128,6 +128,8 @@ class Onboarding(unittest.TestCase):
             result = self.run_process(self.args)
             self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
             self.assertIn('/missing/python', config.read_text(encoding='utf-8'))
+            self.assertEqual(json.loads((self.workspace / '.hwpdoc/onboarding-attempt.json').read_text())['status'], 'failed')
+            self.assertEqual(json.loads((self.workspace / '.hwpdoc/onboarding.json').read_text())['status'], 'ready_xml')
         finally:
             config.write_bytes(original)
 
@@ -164,6 +166,23 @@ class Onboarding(unittest.TestCase):
                 self.assertEqual(config.read_text(encoding='utf-8'), value)
         finally:
             config.write_bytes(original)
+
+    def test_11_new_session_restores_recorded_runtime(self):
+        env = {k: v for k, v in self.env.items() if k not in ('HWPDOC_PC_DATA', 'HWPDOC_WORKSPACE')}
+        tracked = [self.workspace / '.hwpdoc/workspace.json', self.workspace / 'AGENTS.md',
+                   *list((self.workspace / 'output/teacher-doc-practice').glob('*'))]
+        before = {str(p): p.read_bytes() for p in tracked}
+        result = self.run_process([*self.cli, 'doctor', '--mode', 'xml'], env)
+        self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
+        record = json.loads(result.stdout)
+        self.assertEqual(record['pc_data'], str(self.data))
+        self.assertEqual(record['checks']['python']['selected_path'], self.python)
+        if os.name == 'nt':
+            result = self.run_process(['powershell.exe', '-NoProfile', '-File', ROOT / 'scripts/teacher_doc.ps1',
+                                       '--workspace', self.workspace, 'doctor', '--mode', 'xml'], env)
+            self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
+            self.assertEqual(json.loads(result.stdout)['checks']['python']['path'], self.python)
+        self.assertEqual(before, {str(p): p.read_bytes() for p in tracked})
 
     def test_11_package_layout(self):
         catalog = json.loads((ROOT / '.agents/plugins/marketplace.json').read_text())

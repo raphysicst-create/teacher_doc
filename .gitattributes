@@ -1,0 +1,2 @@
+# Ship exact bytes on every platform: release-inventory.json hashes include line endings.
+* -text

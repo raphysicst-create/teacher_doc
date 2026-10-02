@@ -14,8 +14,9 @@ $ErrorActionPreference = 'Stop'
 try {
     . (Join-Path $PSScriptRoot 'python-bootstrap.ps1')
     $root = Split-Path $PSScriptRoot -Parent
-    $DataDir = Get-TeacherDataDir $DataDir
     $Workspace = [IO.Path]::GetFullPath($Workspace)
+    . (Join-Path $PSScriptRoot 'runtime.ps1')
+    $DataDir = Get-HwpdocData -Workspace $Workspace -DataDir $DataDir
     Assert-TeacherSeparatePaths $root $DataDir $Workspace
     $marker = Join-Path $Workspace '.hwpdoc/workspace.json'
     if (Test-Path -LiteralPath $marker) {

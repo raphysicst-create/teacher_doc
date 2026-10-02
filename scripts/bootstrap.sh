@@ -2,7 +2,7 @@
 # Python-free Unix entry point. Never edits PATH, profiles or global packages.
 set -euo pipefail
 root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
-workspace= data_dir=${HWPDOC_PC_DATA:-${LOCALAPPDATA:-$HOME/AppData/Local}/hwpdoc} python= allow=0
+workspace= data_dir=${HWPDOC_PC_DATA:-${LOCALAPPDATA:-$HOME/AppData/Local}/hwpdoc} python= allow=0 data_explicit=0
 forward=()
 fail() { printf 'teacher_doc setup failed: %s\n' "$*" >&2; exit 2; }
 while (($#)); do
@@ -11,7 +11,7 @@ while (($#)); do
             (($# >= 2)) || fail "Missing value for $1"
             case "$1" in
                 --workspace) workspace=$2 ;;
-                --data-dir) data_dir=$2 ;;
+                --data-dir) data_dir=$2; data_explicit=1 ;;
                 --python) python=$2 ;;
                 *) forward+=("$1" "$2") ;;
             esac; shift 2 ;;
@@ -23,6 +23,10 @@ while (($#)); do
     esac
 done
 [[ -n $workspace ]] || fail '--workspace is required'
+# A Python-free shell must not guess JSON paths or create a second runtime.
+if [[ $data_explicit = 0 && -z ${HWPDOC_PC_DATA:-} && -f $workspace/.hwpdoc/onboarding.json ]]; then
+    fail 'Existing installation receipt: read .hwpdoc/onboarding.json and use its python for document work, or pass its verified pc_data with --data-dir to resume setup. No files changed.'
+fi
 # Resolve existing parents (including symlinks) without creating a directory.
 canonical() {
     local path=$1 suffix= name

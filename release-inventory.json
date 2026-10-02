@@ -350,7 +350,7 @@
     {
       "source": "scripts/python-bootstrap.ps1",
       "destination": "scripts/python-bootstrap.ps1",
-      "sha256": "e1876674f595b70c7ab2e8f34f2c2055bf3ad5f6e3cc40a0facec147d9665eed"
+      "sha256": "db2e446544816c777823c98228377b657314d0d4cf22f5a6bda2d530d7175688"
     },
     {
       "source": "scripts/refresh_reference.py",

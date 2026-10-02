@@ -4,8 +4,8 @@ function Test-TeacherPython312([string]$Candidate) {
     if (-not $Candidate -or -not (Test-Path -LiteralPath $Candidate -PathType Leaf)) { return $false }
     if ($Candidate -match '(?i)[\\/]WindowsApps[\\/]' -or [IO.Path]::GetFileName($Candidate) -match '^(?i)py(w)?\.exe$') { return $false }
     try {
-        $check = & $Candidate -I -S -c 'import sys; print("teacher-python-312" if sys.version_info[:2] == (3,12) else "wrong-version")' 2>$null
-        return ($LASTEXITCODE -eq 0 -and $check -eq 'teacher-python-312')
+        $check = & $Candidate -I -S -c 'import sys; print(sys.version_info.major, sys.version_info.minor)' 2>$null
+        return ($LASTEXITCODE -eq 0 -and $check -eq '3 12')
     } catch { return $false }
 }
 
@@ -139,7 +139,7 @@ function Install-TeacherPython([string]$Root, [string]$DataDir, [switch]$AllowPy
         }
         if ($process.ExitCode -ne 0) { throw 'PYTHON_DOWNLOAD_FAILED: uv could not verify/install CPython. Preserve data and retry the same command after fixing the network or permissions.' }
         $python = Join-Path (Join-Path $installDir $key) 'python.exe'
-        if (-not (Test-TeacherPython312 $python)) { throw 'Managed Python failed its version/executable check.' }
+        if (-not (Test-TeacherPython312 $python)) { throw ('Managed Python failed its version/executable check: ' + $python) }
         $receipt = @{ owner = 'teacher-doc-python-v1'; uv_version = '0.12.22'; uv_sha256 = $actual; python_key = $key; python_sha256 = $entry.sha256; python_url = $entry.url; python = $python; registry_changed = $false; path_changed = $false }
         $receipt | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $managed 'install-receipt.json') -Encoding UTF8
         return $python

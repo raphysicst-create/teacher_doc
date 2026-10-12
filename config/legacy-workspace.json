@@ -2,7 +2,7 @@
   "kind": "hwpdoc-workspace",
   "version": 1,
   "school": {"name": "화동중학교", "document_prefix": "화동중학교-", "academic_year": 2026},
-  "delivery": {"external_copy": "profile:OneDrive - 화동중학교/작업 보고용"},
+  "delivery": {"external_copy": null},
   "references": {
     "timetable": "knowledge/reference/기초시간표-2026-2학기.json",
     "timetable_source": "knowledge/reference/기초시간표-2026-2학기.xlsx",

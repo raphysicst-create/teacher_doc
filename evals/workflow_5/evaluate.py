@@ -89,11 +89,14 @@ def runner_diagnostics(entry, base):
         copy = report.get('copy', {})
         local = Path(delivery.get('local', ''))
         remote = Path(copy.get('directory', '')) / local.name
-        delivered = (verified and copy.get('status') == 'pass' and local.is_file() and remote.is_file()
-                     and digest(local) == report.get('validated_sha256') == digest(remote)
+        copy_ok = ((copy.get('status') == 'not_applicable' and bool(copy.get('reason')))
+                   or (copy.get('status') == 'pass' and remote.is_file() and local.is_file()
+                       and digest(local) == digest(remote)))
+        delivered = (verified and copy_ok and local.is_file()
+                     and digest(local) == report.get('validated_sha256')
                      and delivery.get('sent') is False)
         if verified and not delivered:
-            issues.append({'code': 'DELIVERY', 'status': 'pending', 'reason': 'output·OneDrive 최종본 해시/미발송 확인 필요'})
+            issues.append({'code': 'DELIVERY', 'status': 'pending', 'reason': 'output 최종본 해시/미발송 상태 확인 필요 (외부 복사 설정 시 복사본도 확인)'})
         return verified, delivered, issues
     except (KeyError, TypeError, ValueError, OSError) as exc:
         return False, False, [{'code': 'REPORT_FORMAT', 'status': 'unverified', 'reason': str(exc)}]

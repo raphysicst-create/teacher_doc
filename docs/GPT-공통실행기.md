@@ -67,7 +67,7 @@ timetable 적용 시 `dates`, `periods`, 필요하면 `grades`를 지정한다. 
 
 W2에는 `received` 객체의 `summary`, `requirements`, `deadline`, `submission_method`, `document_number`, `issue_date`, `source_quote`가 필요하다. 제출방법은 official_reply→회신 시행문, system/email→내부결재다. 미확인이라면 질문하고 초안 생성 입력을 확정하지 않는다.
 
-## 검사·기록·복사
+## 검사·기록·저장
 
 구조 → 네임스페이스 → finalize → layout → page_guard → COM → 조건부 렌더·육안 → content/승인값/gonmun/조회 도구/첨부 → 신구대조 순서다. 각 단계는 pass/fail/unconfirmed/not_applicable과 이유·명령·경고·전후 해시·실패 횟수를 기록한다. 빠른 `validate_pipeline.py`를 호출하지 않는다.
 
@@ -75,7 +75,7 @@ W2에는 `received` 객체의 `summary`, `requirements`, `deadline`, `submission
 
 page_guard 프로파일은 원본의 **finalize 완료 사본**에서 생성한다. 결과물을 자기 자신의 기준으로 승인하지 않는다. COM은 프로세스 간 잠금으로 직렬화된다. 시간 초과 시 미확인으로 기록하고 잔존 한글 프로세스를 확인한다. 사용자의 다른 한글 프로세스를 강제 종료하지 않는다.
 
-OneDrive는 기존 `작업 보고용/<ID>/`로 검토본·첨부·보고서만 복사하고 해시를 확인한다. 복사 실패는 `deliver`만 다시 실행한다. 검증은 반복하지 않는다. 복사는 동기적으로 연속 수행하지만 두 파일시스템에 걸친 원자적 트랜잭션은 아니다. 실패한 복사는 성공으로 보고하지 않는다.
+현재 학교 설정은 `delivery.external_copy: null`이며, 검토본·첨부·보고서는 `output/<ID>/`에만 저장한다. OneDrive 자동 복사는 사용하지 않는다 (2026. 10. 12. 사용자 요청). 외부 복사가 비활성화된 작업의 `copy.status`는 정상적으로 `not_applicable`이다.
 
 최종 사람 검토 결과는 기존 `scripts/log_review.py --file ... --type W1|W2 --approved yes/no --score 1-5`와 `--summary`로 즉시 기록한다. 실행기는 사용자 대신 점수·동의를 만들지 않는다.
 

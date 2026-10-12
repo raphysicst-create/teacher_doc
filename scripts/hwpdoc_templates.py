@@ -157,6 +157,14 @@ def prepare_review(folder, r):
     review = dict(confirmed=False, by='', at='', record='', hashes=r['hashes'],
                   purposes=r['purposes'], provenance=r['provenance'], prepared_at=h.now())
     if r['provenance'] != 'native':
+        # Environment preparation is not a failed document rendering attempt.
+        code, output = h.run(['-c', 'import fitz; print(fitz.__doc__)'])
+        if code:
+            r['stages']['review_environment'] = {'status': 'unconfirmed', 'reason': 'PNG 준비에 visual 의존성(PyMuPDF)이 필요합니다. 기존 환경을 보존하여 준비 후 재개하세요',
+                                                'exit_code': code, 'at': h.now(), 'failures': 0}
+            h.write_json(folder / 'registration.json', r)
+            return r
+        r['stages']['review_environment'] = {'status': 'pass', 'reason': 'PyMuPDF import 확인', 'at': h.now(), 'failures': 0}
         pdf = folder / 'review.pdf'
         preview = folder / 'preview'
         sequence = [('review_render', [h.CODE_ROOT / 'scripts/render_check.py', folder / 'template.hwpx',
@@ -164,11 +172,14 @@ def prepare_review(folder, r):
                     ('review_images', [h.CODE_ROOT / 'scripts/hwpdoc_preview.py', '--pdf', pdf, '--output-dir', preview])]
         for name, argv in sequence:
             previous = r['stages'].get(name, {})
-            if previous.get('failures', 0) >= 2:
+            if previous.get('failures', 0) - previous.get('retry_baseline', 0) >= 2:
                 raise ValueError(name + ': 동일 단계 2회 실패. 자동 시도 중단')
             code, output = h.run(argv, com=name == 'review_render')
             r['stages'][name] = dict(status='pass' if code == 0 else ('unconfirmed' if code in (3, 124, 125) else 'fail'),
-                                     exit_code=code, reason=output, at=h.now(), failures=previous.get('failures', 0) + bool(code))
+                                     exit_code=code, reason=output, at=h.now(), failures=previous.get('failures', 0) + bool(code),
+                                     retry_baseline=previous.get('retry_baseline', 0))
+            r['stages'][name]['failure_basis'] = h.retry_basis(folder / 'template.hwpx') if code else previous.get('failure_basis')
+            r.setdefault('history', []).append(dict(stage=name, **r['stages'][name]))
             h.write_json(folder / 'registration.json', r)
             h.audit('template_' + name, folder, r['stages'][name]['status'], output[:1000])
             if code:
@@ -209,6 +220,14 @@ def _add_template(args, folder):
         raise ValueError('등록 완료 양식은 새 version으로 수정하세요')
     if h.sha(folder / 'original.hwpx') != r['source']['sha256']:
         raise ValueError('원본 사본이 변경됐습니다. 새 등록이 필요합니다')
+    if getattr(args, 'resume', False):
+        if not args.stage or not args.resume_record:
+            raise ValueError('--resume에는 --stage와 --resume-record가 필요합니다')
+        h.resume_stage(r, args.stage, args.resume_record, folder / 'template.hwpx',
+                       h.json_hash(file_hashes(folder)), folder)
+        r['next_action'] = ('--review-draft' if args.stage.startswith('review_') else '--mapping <기존 mapping.json>') + '으로 실제 재검증하세요. 등록/승인은 아직 미확인입니다'
+        h.write_json(record, r)
+        return r
     if getattr(args, 'review_draft', False):
         return prepare_review(folder, r)
     if args.mapping:
@@ -233,11 +252,14 @@ def _add_template(args, folder):
                     ('hancom', [h.SKILL / 'finalize_hwpx.py', work, '--hancom'])]
         for name, argv in sequence:
             previous = r['stages'].get(name, {})
-            if previous.get('failures', 0) >= 2:
+            if previous.get('failures', 0) - previous.get('retry_baseline', 0) >= 2:
                 raise ValueError(name + ': 동일 단계 2회 실패. 자동 시도 중단; 사람 확인 필요')
             code, output = h.run(argv, com=name == 'hancom')
             r['stages'][name] = dict(status='pass' if code == 0 else ('unconfirmed' if code in (3, 124, 125) else 'fail'),
-                                     exit_code=code, reason=output, at=h.now(), failures=previous.get('failures', 0) + bool(code))
+                                     exit_code=code, reason=output, at=h.now(), failures=previous.get('failures', 0) + bool(code),
+                                     retry_baseline=previous.get('retry_baseline', 0))
+            r['stages'][name]['failure_basis'] = h.retry_basis(folder / 'template.hwpx') if code else previous.get('failure_basis')
+            r.setdefault('history', []).append(dict(stage=name, **r['stages'][name]))
             h.write_json(record, r)
             h.audit('template_' + name, work, r['stages'][name]['status'], output[:1000])
             if code:

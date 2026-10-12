@@ -461,9 +461,11 @@ class DistributionTests(unittest.TestCase):
                 result = w.prepare(args)
             m = h.read_json(result['manifest'])
             self.assertEqual(m['slots']['values'], {})
-            self.assertTrue(any('값 미입력: p:0' in x for x in m['unresolved']))
+            self.assertTrue(any('원문/설정에서 먼저 찾을 값: p:0' in x for x in m['unresolved']))
             self.assertEqual(result['missing'], m['unresolved'])
-            self.assertIn('값 미입력: p:0', Path(result['manifest']).with_name('확인할사항.md').read_text(encoding='utf-8'))
+            self.assertIn('원문/설정에서 먼저 찾을 값: p:0', Path(result['manifest']).with_name('확인할사항.md').read_text(encoding='utf-8'))
+            self.assertTrue(any('p:0' in x for x in result['missing_by_owner']['agent_review']))
+            self.assertFalse(any('p:0' in x for x in result['missing_by_owner']['user_decisions']))
             self.assertFalse(m['draft_approval']['confirmed'])
             if workflow == 'W2':
                 self.assertIsNone(m['received']['submission_method'])
@@ -471,7 +473,7 @@ class DistributionTests(unittest.TestCase):
         args.job = 'intentional-blank'; args.values = str(self.root / 'blank.json')
         with patch.object(h, 'template_file', return_value=self.source):
             result = w.prepare(args)
-        self.assertFalse(any('값 미입력:' in x for x in result['missing']))
+        self.assertFalse(any('원문/설정에서 먼저 찾을 값:' in x for x in result['missing']))
 
     def test_absent_school_data_only_blocks_its_command(self):
         r = self.cli('list-templates'); self.assertEqual(r.returncode, 0, r.stderr)

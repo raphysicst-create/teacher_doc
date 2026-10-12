@@ -8,6 +8,12 @@ description: "HWPX 문서 읽기·슬롯/셀 편집·양식 보존·구조 및 �
 개발 정본은 `<프로젝트>/.claude/skills/hwpx/SKILL.md`이고 배포본은 패키지의 `skills/hwpx/SKILL.md`다. 발견 경로가 링크이면 실제 대상을 확인한다.
 공문 작업을 시작하면 [업무 절차](references/workflow.md)를 실제로 읽는다. 학교별 설정은 작업 폴더의 `.hwpdoc/workspace.json`에 있고, 기존 운영 프로젝트의 `CLAUDE.md`에 명시된 사용자 결정은 유지한다. W1·W2 별도 스킬은 사용하지 않는다.
 
+## 첫 설치·한글 없는 환경
+
+저장소 링크 설치·첫 실행·환경 오류 요청이면 먼저 [설치 스킬](../teacher-doc-setup/SKILL.md)을 읽고 전체 `teacher_doc` 패키지를 준비한다. `skills/hwpx`만 복사하지 않는다. Windows는 `scripts/bootstrap.ps1`, macOS/Linux는 `scripts/bootstrap.sh`를 설치 스킬의 OS별 명령으로 실행한다. Python 없는 설치·동의·XML 점검·연습 문서 생성은 그 진입점에 맡긴다. `bootstrap.py` 직접 호출은 이미 확인한 Python 3.12가 있는 고급 경로다.
+
+Windows·macOS·Linux의 XML 모드는 구조·슬롯 편집을 연습하는 경로다. 한글 COM, 실제 쪽수·인쇄 모양, 필수 렌더 검증의 통과를 뜻하지 않는다. 실제 학교 문서는 아래 업무 절차와 사람 승인·검토를 유지한다.
+
 ## 경로 선택
 
 1. 기존 슬롯 템플릿 또는 HWPX 양식의 내용 교체: **초안 작성 전에** 텍스트와 구조를 읽고 `hwpx_slots.py`로 편집할 슬롯을 확인한다. 원본 제목 서식·상자·표 순서/병합·명의 위치를 유지한 초안을 `edit_hwpx.py --slot-json`으로 새 파일에 채운다. Markdown 초안을 근거로 원본 본문을 지우고 재조립하지 않는다.
@@ -18,16 +24,27 @@ description: "HWPX 문서 읽기·슬롯/셀 편집·양식 보존·구조 및 �
 
 ## 기본 편집
 
-설치 폴더와 교사의 작업 폴더를 구분한다. 개발 저장소에서는 `.claude/skills/hwpx/`, 배포본에서는 `skills/hwpx/`가 스킬 폴더다. 실제 로드한 스킬 폴더에서 위로 탐색하여 `scripts/runtime.ps1`이 있는 코드 루트를 확인한다. 작업 파일은 작업 폴더에만 저장한다. Python은 코드 루트의 `scripts/runtime.ps1`이 PC 설정과 설치 위치에서 찾는다. PATH의 임의 python으로 대체하지 않는다.
+설치 폴더와 교사의 작업 폴더를 구분한다. 개발 저장소에서는 `.claude/skills/hwpx/`, 배포본에서는 `skills/hwpx/`가 스킬 폴더다. 실제 로드한 스킬 폴더에서 위로 탐색하여 `scripts/runtime.ps1`이 있는 코드 루트를 확인한다. 작업 파일은 작업 폴더에만 저장한다. 새 대화에서는 작업 폴더의 `.hwpdoc/onboarding.json`을 먼저 읽어 실제 `pc_data`·`python`과 해당 `runtime.json`의 일치·파일 존재를 확인한다. Windows는 `Get-HwpdocPython -Workspace $taskWorkspace` 또는 `teacher_doc.ps1 --workspace ...`가 이를 복원한다. macOS/Linux는 기록된 전용 Python의 절대경로를 사용한다. 실행기는 환경변수 없이도 설치 기록의 PC 데이터를 복원한다. 경로가 없거나 다른 PC의 기록이면 보존·진단하고 기본 경로나 PATH의 임의 Python으로 바꾸지 않는다. 명시한 `HWPDOC_PC_DATA`는 우선하므로 실제 의도한 경로인지 확인한다.
 
 ```powershell
 # taskPlugin은 이 스킬이 속한 코드 루트, taskWorkspace는 교사의 작업 폴더다.
 . "$taskPlugin/scripts/runtime.ps1"
-$taskPython = Get-HwpdocPython
+$taskPython = Get-HwpdocPython -Workspace $taskWorkspace
 # taskSkill은 실제 로드한 SKILL.md의 상위 폴더다.
 & $taskPython -X utf8 "$taskSkill/scripts/hwpx_slots.py" reference.hwpx -o slots.json
 & $taskPython -X utf8 "$taskSkill/scripts/edit_hwpx.py" reference.hwpx -o result.hwpx --slot-json values.json
 ```
+
+macOS/Linux XML 모드의 기본 호출은 다음과 같다. `$taskPython`과 `$taskPlugin`은 위에서 확인한 실제 경로, `$taskSkill`은 실제 로드한 스킬 폴더다. 작업 폴더에서 실행하여 결과를 그 안에 저장한다.
+
+```sh
+cd "$taskWorkspace"
+"$taskPython" -X utf8 "$taskPlugin/scripts/teacher_doc.py" --workspace "$taskWorkspace" doctor --mode xml
+"$taskPython" -X utf8 "$taskSkill/scripts/hwpx_slots.py" reference.hwpx -o slots.json
+"$taskPython" -X utf8 "$taskSkill/scripts/edit_hwpx.py" reference.hwpx -o result.hwpx --slot-json values.json
+```
+
+중첩 표·상자·제어 요소를 품은 복합 셀은 `blocked_slots`로 분리되며 전체 치환할 수 없다. 바깥 제목은 실제 `p:` 문단, 내부 표는 그 표 소유의 `cell:` 슬롯을 고른다. 지원되지 않는 컨테이너 분할 문구도 차단한다. 여러 섹션은 section0만 편집하므로 `edit_scope`·`warnings`를 먼저 읽고 다른 섹션의 필요 변경을 알린다. 여러 쪽이라는 이유만으로 미지원은 아니다. 원본과 같은 출력 경로는 사용할 수 없다.
 
 `values.json`은 추출된 슬롯 키(`p:12`, `cell:0:2:1`)와 새 문자열의 매핑이다. 기존 슬롯 프로파일은 현재 양식에서 추출한 주소와 해시를 확인한다. 작업 파일은 프로젝트 안의 작업용 디렉터리에만 둔다.
 
@@ -49,7 +66,7 @@ $taskPython = Get-HwpdocPython
 
 전체 순서와 조건은 [업무 절차](references/workflow.md)의 검증 절과 기존 운영 프로젝트 지침을 따른다. 순서는 구조 검사 → 네임스페이스 보정 → finalize → layout → page_guard → COM·조건부 렌더 → 내용·공문 규칙 → 신구대조다. 실행기의 build/validate/deliver/status를 우선 사용한다.
 
-- `validate.py`: ZIP/11개 최소 패키지/XML 검사. 스키마 통과가 한글 실열림을 뜻하지 않는다.
+- `validate.py`: ZIP/11개 최소 패키지/XML 검사. 기본 구조 검사이며 전체 XSD 스키마 검증이나 한글 실열림을 뜻하지 않는다.
 - `fix_namespaces.py`: 프리픽스·header itemCnt 보정.
 - `finalize_hwpx.py --strip-linesegarray --layout`: 캐시 제거와 밀도 경고. `--hancom`: 실제 COM 열기 검사.
 - `page_guard.py --budget-profile ... --structure-profile ...`: 텍스트 예산과 전체 패키지 구조 비교. 프로파일은 **finalize 완료 후 사본**에서 만든다. 승인되지 않은 출력으로 기준을 재설정하지 않는다.

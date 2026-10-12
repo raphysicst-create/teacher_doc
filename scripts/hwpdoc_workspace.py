@@ -39,8 +39,11 @@ def instruction_text(app, skill):
     return (f'# 공문 작업 폴더 ({app})\n\n'
             f'공문 작업을 시작할 때 이 앱에서 확인한 `{skill}` 스킬의 SKILL.md 본문을 읽고, '
             '연결된 `references/workflow.md` 업무 절차를 읽는다. 목록 노출만으로 읽었다고 하지 않는다.\n\n'
-            '학교 설정은 `.hwpdoc/workspace.json`, PC 설정은 `%LOCALAPPDATA%/hwpdoc/runtime.json`이다. '
-            '스킬에서 안내하는 teacher_doc 실행기에 이 작업 폴더를 `--workspace`로 전달한다.\n\n'
+            '학교 설정은 `.hwpdoc/workspace.json`이다. 새 대화에서는 `.hwpdoc/onboarding.json`의 실제 '
+            '`pc_data`와 `python`을 먼저 읽고, 해당 `runtime.json`과 실행 파일의 존재·일치를 확인한다. '
+            '기록이 없거나 경로가 이동/소실됐으면 진단하고 기본 경로로 바꾸거나 재설치하지 않는다. '
+            '그 Python과 실제 로드된 플러그인의 `scripts/teacher_doc.py`에 이 작업 폴더를 '
+            '`--workspace`로 전달한다. 환경변수 없이도 실행기는 설치 기록을 복원한다.\n\n'
             '원본은 보존하고 새 파일을 만든다. 미확인 값·업무 근거·승인·육안 판독을 만들어 넣지 않는다. '
             '실제 사용자 확인 후 생성하고, 결과와 보고서는 output에 저장한다. 검증 실패를 통과로 바꾸지 않는다. '
             '최종 사람 검토와 사람 발송을 유지한다. 발송 전 한글로 열어 확인해주세요.\n')
@@ -124,17 +127,19 @@ def prepare(args):
                         'origin': str(src), 'imported_at': h.now()})
     if slots:
         h.write_json(folder / 'slots.extracted.json', slots)
-    missing = ['유사/수신 원문과 양식 선택 근거', '초안 전 업무 근거 조건·예외·최신판 확인',
-               '초안 문안과 실제 사용자 확인 기록', '예산명·관련번호·시간표 적용 여부',
+    agent_tasks = ['유사/수신 원문과 양식 선택 근거', '초안 전 업무 근거 조건·예외·최신판 확인',
+               '받은 원문에서 확실한 날짜·장소·업무 사실 추출 및 초안 문안 준비', '예산명·관련번호·시간표 적용 여부(무관하면 이유 기록)',
                '복사 잔재 이름·날짜와 forbid', '붙임 목록·미확인 사항 검토']
     if mapping:
-        missing += ['값 미입력: ' + k for k in mapping if k not in supplied]
+        agent_tasks += ['원문/설정에서 먼저 찾을 값: ' + k for k in mapping if k not in supplied]
     elif slots:
         # Explicit empty strings can mean intentional blanks; only absent keys
         # need a decision. Legacy templates have addresses, not approved meanings.
-        missing += ['값 미입력: ' + s['key'] + ' (의미 확인 필요; 기존 문구: '
+        agent_tasks += ['원문/설정에서 먼저 찾을 값: ' + s['key'] + ' (의미 확인 필요; 기존 문구: '
                     + str(s.get('text', s.get('preview', '')))[:100] + ')'
                     for s in slots['slots'] if s['key'] not in values]
+    user_decisions = ['제시한 초안 문안의 파일 생성 확인', '원문/설정에서 찾지 못하거나 서로 충돌하는 사실·선택만 질문']
+    missing = agent_tasks + user_decisions
     m = dict(version=2, job_id=args.job, workflow=args.workflow, document_type=args.document_type,
              shared_values={}, sources=sources, evidence={'record': ''}, attachments=[],
              draft={'path': '', 'sha256': '', 'created_at': ''}, draft_approval={'confirmed': False},
@@ -151,13 +156,16 @@ def prepare(args):
         m.update(source='', expected_values=[])
     if args.workflow == 'W2':
         m['received'] = {'submission_method': None}
-        m['unresolved'].append('수신 원문의 제출 방법·기한·문서번호·시행일 확인')
+        agent_tasks.append('수신 원문에서 제출 방법·기한·문서번호·시행일을 먼저 추출; 제출 방법이 없을 때만 질문')
+        m['unresolved'] = agent_tasks + user_decisions
     h.write_json(folder / 'manifest.json', m)
-    (folder / '확인할사항.md').write_text('# 작성 전 확인할 사항\n\n' + '\n'.join('- ' + x for x in missing)
+    (folder / '확인할사항.md').write_text('# 에이전트 작업 목록 (교사에게 그대로 질문하지 않음)\n\n' + '\n'.join('- ' + x for x in agent_tasks)
+        + '\n\n## 사용자 결정\n\n' + '\n'.join('- ' + x for x in user_decisions)
         + '\n\n기계적으로 수집한 준비 입력입니다. 승인·업무 근거 해석·육안 판독을 자동 작성하지 않았습니다.\n', encoding='utf-8')
     h.audit('prepare', folder, 'unconfirmed', missing)
-    return {'status': 'unconfirmed', 'manifest': str(folder / 'manifest.json'), 'missing': missing,
-            'next_action': '미확인 항목을 묶어 확인하고 문안 제시 후 실제 사용자 확인을 기록하세요'}
+    return {'status': 'unconfirmed', 'manifest': str(folder / 'manifest.json'), 'missing': m['unresolved'],
+            'missing_by_owner': {'agent_review': agent_tasks, 'user_decisions': user_decisions},
+            'next_action': '원문·설정에서 확인 가능한 사실은 먼저 읽으세요. 남은 결정만 질문하고 문안 제시 후 실제 파일 생성 확인을 기록하세요'}
 
 
 def add_commands(commands):
@@ -169,6 +177,8 @@ def add_commands(commands):
     template.add_argument('--id', required=True); template.add_argument('--version', required=True)
     phase = template.add_mutually_exclusive_group()
     phase.add_argument('--source'); phase.add_argument('--mapping'); phase.add_argument('--review')
+    phase.add_argument('--resume', action='store_true', help='중단된 등록/검토 단계를 증거와 사용자 확인으로 재개')
+    template.add_argument('--stage'); template.add_argument('--resume-record')
     phase.add_argument('--review-draft', action='store_true', help='필요한 PDF/PNG와 미승인 검토 기록 초안 준비')
     template.add_argument('--purpose', action='append')
     template.add_argument('--provenance', choices=['native', 'converted', 'repackaged', 'unconfirmed'], default='unconfirmed')

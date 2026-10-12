@@ -16,6 +16,8 @@ Examples:
 
 from __future__ import annotations
 
+from hwpx_slots import owned_cells, cell_edit_block_reason
+
 import argparse
 import binascii
 import json
@@ -707,6 +709,10 @@ def _put_text_preserving_first_run(
     replacement spans multiple runs.
     """
 
+    if scope.tag == f"{{{NS['hp']}}}tc" and cell_edit_block_reason(scope):
+        raise SystemExit("복합 셀 전체 치환 금지: 내부 실제 문단/셀 슬롯을 선택하세요")
+    if scope.tag == f"{{{NS['hp']}}}p" and not _is_plain_editable_paragraph(scope):
+        raise SystemExit("컨테이너 문단 전체 치환 금지: 내부 실제 문단을 선택하세요")
     nodes = _text_nodes(scope)
     if not nodes:
         runs = scope.xpath(".//hp:run", namespaces=NS)
@@ -840,7 +846,11 @@ def replace_text(
     # are still preserved.
     for old, new in remaining.items():
         for p in root.xpath(".//hp:p", namespaces=NS):
-            text = _scope_text(p)
+            if not _is_plain_editable_paragraph(p):
+                if old in _direct_run_text_of(p):
+                    raise SystemExit("컨테이너 문단의 분할 문구는 안전하게 치환할 수 없습니다. 실제 텍스트 문단/원문 사본을 확인하세요")
+                continue
+            text = _direct_run_text_of(p)
             if old not in text:
                 continue
             replaced = text.replace(old, new)
@@ -859,7 +869,7 @@ def _find_cell(root: etree._Element, target: CellTarget) -> etree._Element:
         )
 
     table = tables[target.table_index]
-    for cell in table.xpath(".//hp:tc", namespaces=NS):
+    for cell in owned_cells(table):
         addr = cell.find("hp:cellAddr", namespaces=NS)
         if addr is None:
             continue
@@ -876,9 +886,14 @@ def _find_cell(root: etree._Element, target: CellTarget) -> etree._Element:
 
 
 def set_cells(root: etree._Element, targets: Iterable[CellTarget]) -> int:
+    # Validate every scope before mutating even one node.
+    selected = [(target, _find_cell(root, target)) for target in targets]
+    for target, cell in selected:
+        if cell_edit_block_reason(cell):
+            raise SystemExit(f"복합 셀 전체 치환 금지: table={target.table_index}, row={target.row}, col={target.col}. "
+                             "바깥 제목의 실제 문단 또는 내부 셀을 선택하세요")
     changed = 0
-    for target in targets:
-        cell = _find_cell(root, target)
+    for target, cell in selected:
         if not _put_text_preserving_first_run(cell, target.text):
             raise SystemExit(
                 f"셀에 hp:t 텍스트 노드가 없습니다: "
@@ -949,7 +964,11 @@ def preflight_text_budget(
             )
 
     cell_budgets = _budget_cells_by_coord(input_path)
+    with ZipFile(input_path, "r") as archive:
+        section_root = _parse_xml(archive.read(SECTION_PATH)).getroot()
     for cell in cells:
+        if cell_edit_block_reason(_find_cell(section_root, cell)):
+            errors.append(f"복합 셀 전체 치환 금지: table={cell.table_index}, row={cell.row}, col={cell.col}")
         errors.extend(
             _quality_errors(
                 f"--cell table={cell.table_index}, row={cell.row}, col={cell.col}",
@@ -1051,6 +1070,9 @@ def _pack_from_original(
     cells: list[CellTarget],
     paragraphs: list[ParagraphTarget],
 ) -> tuple[int, int, int]:
+    if (input_path.resolve() == output_path.resolve()
+            or (output_path.exists() and input_path.samefile(output_path))):
+        raise SystemExit("원본을 덮어쓰지 않습니다. 별도 출력 사본 경로를 선택하세요")
     try:
         source = ZipFile(input_path, "r")
     except BadZipFile:

@@ -1,0 +1,20 @@
+{
+  "name": "teacher-doc-local",
+  "interface": {
+    "displayName": "teacher_doc"
+  },
+  "plugins": [
+    {
+      "name": "teacher_doc",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

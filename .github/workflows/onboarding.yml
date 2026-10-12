@@ -1,0 +1,29 @@
+name: Onboarding XML smoke
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  onboarding:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned packages for offline document regression tests
+        run: python -m pip install -r distribution/requirements-base.txt
+      - name: Document safety and retry checks
+        run: python -B -X utf8 -m unittest discover -s tests -p test_beginner_workflow.py -v
+      - name: Clean runtime, workspace and first document
+        run: python -B -X utf8 -m unittest discover -s tests -p test_onboarding.py -v
+      - name: Python bootstrap checks
+        run: python -B -X utf8 -m unittest discover -s tests -p test_python_bootstrap.py -v
+      - name: Package layout and inventory checks
+        run: python -B -X utf8 -m unittest discover -s tests -p test_package_integrity.py -v

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "plugin_version": "0.1.0",
+  "plugin_version": "0.1.3",
   "files": [
     {
       "source": "scripts/teacher_doc.py",
@@ -413,6 +413,102 @@
     {
       "source": "distribution/legal/dependencies/python-calamine/LICENSE",
       "destination": "licenses/dependencies/python-calamine/LICENSE"
+    },
+    {
+      "source": "distribution/marketplace.json",
+      "destination": ".agents/plugins/marketplace.json"
+    },
+    {
+      "source": "distribution/package.gitattributes",
+      "destination": ".gitattributes"
+    },
+    {
+      "source": ".github/workflows/no-python.yml",
+      "destination": ".github/workflows/no-python.yml"
+    },
+    {
+      "source": ".github/workflows/onboarding.yml",
+      "destination": ".github/workflows/onboarding.yml"
+    },
+    {
+      "source": "distribution/onboarding/AGENTS.md",
+      "destination": "AGENTS.md"
+    },
+    {
+      "source": "distribution/onboarding/README.md",
+      "destination": "README.md"
+    },
+    {
+      "source": "distribution/python-downloads.json",
+      "destination": "distribution/python-downloads.json"
+    },
+    {
+      "source": "distribution/runtime-downloads.tsv",
+      "destination": "distribution/runtime-downloads.tsv"
+    },
+    {
+      "source": "docs/BEGINNER.md",
+      "destination": "docs/BEGINNER.md"
+    },
+    {
+      "source": "docs/PYTHON-RUNTIME.md",
+      "destination": "docs/PYTHON-RUNTIME.md"
+    },
+    {
+      "source": "docs/VERIFICATION.md",
+      "destination": "docs/VERIFICATION.md"
+    },
+    {
+      "source": "scripts/bootstrap.ps1",
+      "destination": "scripts/bootstrap.ps1"
+    },
+    {
+      "source": "scripts/bootstrap.py",
+      "destination": "scripts/bootstrap.py"
+    },
+    {
+      "source": "scripts/bootstrap.sh",
+      "destination": "scripts/bootstrap.sh"
+    },
+    {
+      "source": "scripts/hwpdoc_practice.py",
+      "destination": "scripts/hwpdoc_practice.py"
+    },
+    {
+      "source": "scripts/python-bootstrap.ps1",
+      "destination": "scripts/python-bootstrap.ps1"
+    },
+    {
+      "source": ".claude/skills/hwpx/references/resume.md",
+      "destination": "skills/hwpx/references/resume.md"
+    },
+    {
+      "source": ".claude/skills/teacher-doc-setup/SKILL.md",
+      "destination": "skills/teacher-doc-setup/SKILL.md"
+    },
+    {
+      "source": "tests/test_beginner_workflow.py",
+      "destination": "tests/test_beginner_workflow.py"
+    },
+    {
+      "source": "tests/test_onboarding.py",
+      "destination": "tests/test_onboarding.py"
+    },
+    {
+      "source": "tests/test_package_integrity.py",
+      "destination": "tests/test_package_integrity.py"
+    },
+    {
+      "source": "tests/test_python_bootstrap.py",
+      "destination": "tests/test_python_bootstrap.py"
+    },
+    {
+      "source": "tests/windows_bootstrap_unit.ps1",
+      "destination": "tests/windows_bootstrap_unit.ps1"
+    },
+    {
+      "source": "tests/windows_no_python.ps1",
+      "destination": "tests/windows_no_python.ps1"
     }
   ],
   "dependency_reviews": [

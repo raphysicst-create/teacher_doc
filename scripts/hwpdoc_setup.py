@@ -6,6 +6,7 @@ import sys
 import copy
 import uuid
 import base64
+import os
 
 import hwpdoc as h
 
@@ -115,7 +116,7 @@ def _setup_hooks(args):
 
 def setup_runtime(args):
     """Use a preinstalled environment. Dependency installation is a separate command."""
-    executable = Path(args.python).resolve()
+    executable = Path(os.path.abspath(Path(args.python).expanduser()))
     probe = subprocess.run([str(executable), '-B', '-X', 'utf8', '-c',
                             'import json,sys; print(json.dumps({"version":list(sys.version_info[:2])}))'],
                            capture_output=True, text=True, encoding='utf-8', timeout=15)

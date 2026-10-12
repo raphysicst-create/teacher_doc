@@ -31,6 +31,7 @@ from pathlib import Path
 from typing import Any, List, Tuple
 
 from lxml import etree
+from hwpx_slots import owned_cells
 
 NS = {
     "hp": "http://www.hancom.co.kr/hwpml/2011/paragraph",
@@ -275,7 +276,7 @@ def collect_text_budget_profile(hwpx_path: Path) -> dict[str, Any]:
     tables = root.xpath(".//hp:tbl", namespaces=NS)
     for table_idx, table in enumerate(tables):
         seen_cells: dict[tuple[str, str], int] = {}
-        for cell in table.xpath(".//hp:tc", namespaces=NS):
+        for cell in owned_cells(table):
             addr = cell.find("hp:cellAddr", namespaces=NS)
             if addr is None:
                 continue

@@ -1,0 +1,26 @@
+name: No-Python first install
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-no-python:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail-closed helper checks
+        shell: powershell
+        run: .\tests\windows_bootstrap_unit.ps1
+      - name: Windows PowerShell 5.1 from no-Python discovery to first HWPX
+        shell: powershell
+        run: .\tests\windows_no_python.ps1 -EvidenceDir "$env:RUNNER_TEMP\teacher-python-evidence"
+      - name: Upload first-install evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-no-python-evidence
+          path: ${{ runner.temp }}/teacher-python-evidence
+          retention-days: 14

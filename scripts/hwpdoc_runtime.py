@@ -3,6 +3,7 @@ import importlib
 from importlib import metadata
 from pathlib import Path
 import platform
+import os
 import re
 import sys
 
@@ -22,12 +23,12 @@ def installed_version(name):
 
 
 def snapshot():
-    return {'python': str(Path(sys.executable).resolve()), 'version': platform.python_version(),
+    return {'python': os.path.abspath(sys.executable), 'version': platform.python_version(),
             'implementation': platform.python_implementation(), 'machine': platform.machine(),
             'packages': {distribution: installed_version(distribution) for distribution, _ in PACKAGES.values()}}
 
 
-def diagnostics(code_root):
+def diagnostics(code_root, *, mode="full"):
     expected = {}
     for path in sorted((Path(code_root) / 'distribution').glob('requirements-*.txt')):
         for line in path.read_text(encoding='utf-8-sig').splitlines():
@@ -36,6 +37,7 @@ def diagnostics(code_root):
                 expected[match[1].replace('_', '-').lower()] = match[2]
     results = {}
     for module, (distribution, optional) in PACKAGES.items():
+        optional = optional or (module == 'win32com' and (mode == 'xml' or sys.platform != 'win32'))
         version = installed_version(distribution)
         required = expected.get(distribution.lower())
         error = None
@@ -45,7 +47,7 @@ def diagnostics(code_root):
             except Exception as exc:
                 error = str(exc)
         status = 'pass' if version is not None and version == required and error is None else 'unconfirmed'
-        if not optional and (version is None or error):
+        if not optional and (version is None or version != required or error):
             status = 'fail'
         results[module] = {'status': status, 'distribution': distribution, 'installed_version': version,
                            'expected_version': required, 'optional': optional,

@@ -58,7 +58,10 @@ class RuntimeTests(unittest.TestCase):
         with patch.object(runtime, 'PACKAGES', {'lxml': ('lxml', False)}), \
                 patch.object(runtime, 'installed_version', return_value='6.0.0'), \
                 patch.object(runtime.importlib, 'import_module'):
-            self.assertEqual(runtime.diagnostics(self.root)['lxml']['status'], 'unconfirmed')
+            result = runtime.diagnostics(self.root)['lxml']
+            self.assertEqual(result['status'], 'fail')
+            self.assertEqual(result['installed_version'], '6.0.0')
+            self.assertEqual(result['expected_version'], '5.4.0')
         with patch.object(runtime, 'PACKAGES', {'lxml': ('lxml', False)}), \
                 patch.object(runtime, 'installed_version', return_value='5.4.0'), \
                 patch.object(runtime.importlib, 'import_module', side_effect=ImportError('broken binary')):

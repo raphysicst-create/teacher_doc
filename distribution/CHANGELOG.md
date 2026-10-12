@@ -1,5 +1,20 @@
 # 변경 이력
 
+## 0.1.3 — 2026-10-02
+
+- 복합 셀 내용 보호, 새 대화 설치 경로 복원, 검토한 빈 양식 preflight 예외
+- 실제 HWPX/본문 발췌/diff 전달 및 증거·사용자 확인 기반 실패 재개
+- 집중 안전 회귀와 Windows 새 세션 wrapper 검사. 자세한 범위는 루트 CHANGES.md 참고
+
+## 0.1.1 — 2026-10-02
+
+- GitHub 링크 기반 전체 플러그인 설치 catalog와 초보자 설치 스킬 추가
+- bootstrap 전용 venv/재실행, XML/full doctor 종료코드 분리, 비민감 연습 HWPX 생성
+- venv 심볼릭링크 해석으로 자식 프로세스가 base Python으로 이탈하던 문제 수정
+- 실패·수정 파일·기존 자료 보존 회귀시험 및 Windows/Linux XML CI 추가
+- XML 결과와 Windows 한글 COM·렌더·최종 사람 검토를 명확히 분리
+
+
 ## 0.1.0 구현 중 — 미배포
 
 - 프로젝트·플러그인·배포 폴더 이름을 teacher_doc으로 변경. teacher_doc CLI 추가, 기존 hwpdoc 실행기와 저장 형식 호환 유지.

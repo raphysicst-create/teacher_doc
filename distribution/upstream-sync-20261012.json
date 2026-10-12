@@ -1,0 +1,370 @@
+{
+  "at": "2026-10-12T02:56:09.212337+00:00",
+  "repository": "https://github.com/raphysicst-create/teacher_doc",
+  "upstream_commit": "380a1225832c22eba3f9fe3e617e1c764ebb5e4e",
+  "upstream_version": "0.1.3",
+  "base_release_commit": "1aded5a26548989a6e0225b5b764cb52ac1b3d09",
+  "files": [
+    {
+      "upstream": ".agents/plugins/marketplace.json",
+      "local": "distribution/marketplace.json",
+      "upstream_sha256": "34e01f7a459c5a13971b403ab3e3d5173d6524c68d1da2b517a53bffa11b683c",
+      "local_sha256": "34e01f7a459c5a13971b403ab3e3d5173d6524c68d1da2b517a53bffa11b683c",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": ".claude-plugin/plugin.json",
+      "local": "distribution/claude-plugin.json",
+      "upstream_sha256": "f38fe6db4477c1b526051e3179fda8da5cba865c266f90660e30f2960baa1594",
+      "local_sha256": "f38fe6db4477c1b526051e3179fda8da5cba865c266f90660e30f2960baa1594",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": ".codex-plugin/plugin.json",
+      "local": "distribution/codex-plugin.json",
+      "upstream_sha256": "6eebfe8aca7f89348c4a7d54fca6ff29b10a8182fd07d812e811ad9a9b80ca51",
+      "local_sha256": "6eebfe8aca7f89348c4a7d54fca6ff29b10a8182fd07d812e811ad9a9b80ca51",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": ".gitattributes",
+      "local": "distribution/package.gitattributes",
+      "upstream_sha256": "f7bd8becf0e1d4d2437c959928dd94accaf6b8e9a927b2f24bca628cc97e466f",
+      "local_sha256": "a8137dadc07d8834d1fde4b1781e68511689cc66f6672a740ec1e7b214d896ad",
+      "content_matches_upstream": false
+    },
+    {
+      "upstream": ".github/workflows/no-python.yml",
+      "local": ".github/workflows/no-python.yml",
+      "upstream_sha256": "45b6c8f25f18614234ea526f7d21b03a7f366698a69f6168ead03aa4619c6ae9",
+      "local_sha256": "45b6c8f25f18614234ea526f7d21b03a7f366698a69f6168ead03aa4619c6ae9",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": ".github/workflows/onboarding.yml",
+      "local": ".github/workflows/onboarding.yml",
+      "upstream_sha256": "b1eaffec0e7265bb3839601fce85020a0eda6ccb829615c9d410cbc5239a78ea",
+      "local_sha256": "9e1f8238ad05ea8b99598d88a986733e4c4a23146a2c1fc43c8e3ea2cd8fe772",
+      "content_matches_upstream": false
+    },
+    {
+      "upstream": "AGENTS.md",
+      "local": "distribution/onboarding/AGENTS.md",
+      "upstream_sha256": "d8f15e4ed990bf2861c26d244c2e34a7410dfc4eca60e05d1a1cd33337326716",
+      "local_sha256": "d8f15e4ed990bf2861c26d244c2e34a7410dfc4eca60e05d1a1cd33337326716",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "CHANGES.md",
+      "local": "distribution/legal/CHANGES.md",
+      "upstream_sha256": "75c31917eee5fa08ef2764c99889e8fae2481c74b0e438c6c0b2c469d3fd7cfd",
+      "local_sha256": "75c31917eee5fa08ef2764c99889e8fae2481c74b0e438c6c0b2c469d3fd7cfd",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "NOTICE.md",
+      "local": "distribution/legal/NOTICE.md",
+      "upstream_sha256": "85a197c1c8de95ecd3291ba3aed9dfbe97e19a3c61cbc9ea48f24247ce1d5eed",
+      "local_sha256": "85a197c1c8de95ecd3291ba3aed9dfbe97e19a3c61cbc9ea48f24247ce1d5eed",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "README.md",
+      "local": "distribution/onboarding/README.md",
+      "upstream_sha256": "5d114471216dcb4d3d70de1c4e58350063f6f65599899156c606945e327a6bcb",
+      "local_sha256": "5d114471216dcb4d3d70de1c4e58350063f6f65599899156c606945e327a6bcb",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "SOURCE-BUNDLE.json",
+      "local": "distribution/source-bundle.json",
+      "upstream_sha256": "2e57595919ac2396d88297091de0c70d238181c22017823b7c5ba3d7d567a31a",
+      "local_sha256": "2e57595919ac2396d88297091de0c70d238181c22017823b7c5ba3d7d567a31a",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "SOURCE.md",
+      "local": "distribution/legal/SOURCE.md",
+      "upstream_sha256": "5fbd4765156dab801efe7048acd02ddd637f0a5ba05c8d45d97ac3668b57a483",
+      "local_sha256": "5fbd4765156dab801efe7048acd02ddd637f0a5ba05c8d45d97ac3668b57a483",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "distribution/CHANGELOG.md",
+      "local": "distribution/CHANGELOG.md",
+      "upstream_sha256": "1faa5056b7690f08fa6cc01abbf6b0e8af9962cfce168c2989ef958e6b7e12b9",
+      "local_sha256": "1faa5056b7690f08fa6cc01abbf6b0e8af9962cfce168c2989ef958e6b7e12b9",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "distribution/README.md",
+      "local": "distribution/README.md",
+      "upstream_sha256": "25c64005479133728f61e2072008b89f415ee1685cfd1375225185e2adeaf08d",
+      "local_sha256": "1da2e6982c92a5eb970ae617f2b801a0d37f191d94dce1ba566e8a5d58f6cf4f",
+      "content_matches_upstream": false
+    },
+    {
+      "upstream": "distribution/python-downloads.json",
+      "local": "distribution/python-downloads.json",
+      "upstream_sha256": "b94e89dde1ca52df8f7ac668e30c5d95d25d0fb5418e1e229dad34c39df36901",
+      "local_sha256": "b94e89dde1ca52df8f7ac668e30c5d95d25d0fb5418e1e229dad34c39df36901",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "distribution/runtime-downloads.tsv",
+      "local": "distribution/runtime-downloads.tsv",
+      "upstream_sha256": "c932a19aa57a3fdad4fd407c55f818e8986e46fd6f737cc30086d9dccb302b61",
+      "local_sha256": "c932a19aa57a3fdad4fd407c55f818e8986e46fd6f737cc30086d9dccb302b61",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "docs/BEGINNER.md",
+      "local": "docs/BEGINNER.md",
+      "upstream_sha256": "66def6619e442b71d96cc5c6075d940a16082641cc822dd714d12cd847b9a65a",
+      "local_sha256": "66def6619e442b71d96cc5c6075d940a16082641cc822dd714d12cd847b9a65a",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "docs/PYTHON-RUNTIME.md",
+      "local": "docs/PYTHON-RUNTIME.md",
+      "upstream_sha256": "c84d5d10aac66d8f0f068026ce63262ed7a8b489542fa287bdad44b754b2ae4d",
+      "local_sha256": "c84d5d10aac66d8f0f068026ce63262ed7a8b489542fa287bdad44b754b2ae4d",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "docs/VERIFICATION.md",
+      "local": "docs/VERIFICATION.md",
+      "upstream_sha256": "683e3ed0555429d97948be082379acc86f2a5593d18c6ec3bda5ed5609c6ca96",
+      "local_sha256": "683e3ed0555429d97948be082379acc86f2a5593d18c6ec3bda5ed5609c6ca96",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/bootstrap.ps1",
+      "local": "scripts/bootstrap.ps1",
+      "upstream_sha256": "6529b12b1d4f442e063d71a525d1c9680c59e80f51fcf196cb64ca34a22af82f",
+      "local_sha256": "6529b12b1d4f442e063d71a525d1c9680c59e80f51fcf196cb64ca34a22af82f",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/bootstrap.py",
+      "local": "scripts/bootstrap.py",
+      "upstream_sha256": "ae8a7f1bba19d375e7fd352e0e096004f849d689c00b0413dd55b00fdd5da57d",
+      "local_sha256": "d6807ff9e3464e28f29596060790b64d4a8e2d1ef6bdb5e37a456e370cc7d9fa",
+      "content_matches_upstream": false
+    },
+    {
+      "upstream": "scripts/bootstrap.sh",
+      "local": "scripts/bootstrap.sh",
+      "upstream_sha256": "e653168cd297f3e179f312f79883bfcb25c0bc87c5a02d608174cc6f59ac6ed2",
+      "local_sha256": "e653168cd297f3e179f312f79883bfcb25c0bc87c5a02d608174cc6f59ac6ed2",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc.ps1",
+      "local": "scripts/hwpdoc.ps1",
+      "upstream_sha256": "2562629961061d0d338d1a51952508d237cb4592800a7480c059b3ab860f32e4",
+      "local_sha256": "2562629961061d0d338d1a51952508d237cb4592800a7480c059b3ab860f32e4",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc.py",
+      "local": "scripts/hwpdoc.py",
+      "upstream_sha256": "be7f48418cf026f9643125d4310d04e3f41b30e4a1d43bbbc491e488f8f86bce",
+      "local_sha256": "be7f48418cf026f9643125d4310d04e3f41b30e4a1d43bbbc491e488f8f86bce",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc_config.py",
+      "local": "scripts/hwpdoc_config.py",
+      "upstream_sha256": "939e3bc35d955c7883a47d503d4f68e064083d00aed97b6e03012bfc272229af",
+      "local_sha256": "939e3bc35d955c7883a47d503d4f68e064083d00aed97b6e03012bfc272229af",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc_practice.py",
+      "local": "scripts/hwpdoc_practice.py",
+      "upstream_sha256": "ecd83cd4338582bc3927c3b71ecaf8b3d0d2b1a1834d4a75e9a6a9e88d8309c7",
+      "local_sha256": "ecd83cd4338582bc3927c3b71ecaf8b3d0d2b1a1834d4a75e9a6a9e88d8309c7",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc_runtime.py",
+      "local": "scripts/hwpdoc_runtime.py",
+      "upstream_sha256": "45e832ffd34817c0efc1dab43b15c8ee438092c4c9d63db5e84dce941443e59b",
+      "local_sha256": "45e832ffd34817c0efc1dab43b15c8ee438092c4c9d63db5e84dce941443e59b",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc_setup.py",
+      "local": "scripts/hwpdoc_setup.py",
+      "upstream_sha256": "578fea04c98bad5d1ce851372278de2fb2e55862e9605c0d63cd470b8d1746b3",
+      "local_sha256": "578fea04c98bad5d1ce851372278de2fb2e55862e9605c0d63cd470b8d1746b3",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc_templates.py",
+      "local": "scripts/hwpdoc_templates.py",
+      "upstream_sha256": "b2115fd008c58af1c639e12d04257c6e32f48f5dedb4eb488fff758e0f64c5c9",
+      "local_sha256": "b2115fd008c58af1c639e12d04257c6e32f48f5dedb4eb488fff758e0f64c5c9",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/hwpdoc_workspace.py",
+      "local": "scripts/hwpdoc_workspace.py",
+      "upstream_sha256": "0d2ad24da3b689ed901071a2fca5a02d192360053ab0719b75fccaac6b40c74d",
+      "local_sha256": "0d2ad24da3b689ed901071a2fca5a02d192360053ab0719b75fccaac6b40c74d",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/python-bootstrap.ps1",
+      "local": "scripts/python-bootstrap.ps1",
+      "upstream_sha256": "db2e446544816c777823c98228377b657314d0d4cf22f5a6bda2d530d7175688",
+      "local_sha256": "db2e446544816c777823c98228377b657314d0d4cf22f5a6bda2d530d7175688",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/runtime.ps1",
+      "local": "scripts/runtime.ps1",
+      "upstream_sha256": "7e7d1cc8e146d6a6a942a537dc88849f0959ef399712ae42b221a1d61634bdec",
+      "local_sha256": "7e7d1cc8e146d6a6a942a537dc88849f0959ef399712ae42b221a1d61634bdec",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "scripts/teacher_doc.ps1",
+      "local": "scripts/teacher_doc.ps1",
+      "upstream_sha256": "86c6e6baf0d81b100161f8e7db4531a06349dafc60b354b89facbf93c4f68634",
+      "local_sha256": "86c6e6baf0d81b100161f8e7db4531a06349dafc60b354b89facbf93c4f68634",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "skills/hwpx/SKILL.md",
+      "local": ".claude/skills/hwpx/SKILL.md",
+      "upstream_sha256": "e731002665d9dde3f1dc4e78689ac72230f2150c4459b4ba4e1761657797b147",
+      "local_sha256": "e731002665d9dde3f1dc4e78689ac72230f2150c4459b4ba4e1761657797b147",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "skills/hwpx/references/resume.md",
+      "local": ".claude/skills/hwpx/references/resume.md",
+      "upstream_sha256": "5d3f6087438b7269aa4755defa3f97d7d93ef8c0370f20adb7dc1f0eba525025",
+      "local_sha256": "5d3f6087438b7269aa4755defa3f97d7d93ef8c0370f20adb7dc1f0eba525025",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "skills/hwpx/references/workflow.md",
+      "local": ".claude/skills/hwpx/references/workflow.md",
+      "upstream_sha256": "bb776a76a0ec1736611361734f0672f35d3058ce42f09a612432a05678f295a6",
+      "local_sha256": "bb776a76a0ec1736611361734f0672f35d3058ce42f09a612432a05678f295a6",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "skills/hwpx/scripts/edit_hwpx.py",
+      "local": ".claude/skills/hwpx/scripts/edit_hwpx.py",
+      "upstream_sha256": "e3e1c606a5c933302425456c06b741ee2a3adf47f45973d58c806afe068491dc",
+      "local_sha256": "e3e1c606a5c933302425456c06b741ee2a3adf47f45973d58c806afe068491dc",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "skills/hwpx/scripts/hwpx_slots.py",
+      "local": ".claude/skills/hwpx/scripts/hwpx_slots.py",
+      "upstream_sha256": "ee5c050dab1b251ec650dfd10e330d53cf7354f68412d62736f40b83f2f2f0a5",
+      "local_sha256": "ee5c050dab1b251ec650dfd10e330d53cf7354f68412d62736f40b83f2f2f0a5",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "skills/hwpx/scripts/page_guard.py",
+      "local": ".claude/skills/hwpx/scripts/page_guard.py",
+      "upstream_sha256": "577bf4b722a778fafd0909aa523dbb21eb8c89e9593e7794af95575593a61294",
+      "local_sha256": "577bf4b722a778fafd0909aa523dbb21eb8c89e9593e7794af95575593a61294",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "skills/teacher-doc-setup/SKILL.md",
+      "local": ".claude/skills/teacher-doc-setup/SKILL.md",
+      "upstream_sha256": "6654b1a9578de301840805bd31ffcba4e08307d977bd6d8ebe95dd59bd2343a6",
+      "local_sha256": "6654b1a9578de301840805bd31ffcba4e08307d977bd6d8ebe95dd59bd2343a6",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "tests/test_beginner_workflow.py",
+      "local": "tests/test_beginner_workflow.py",
+      "upstream_sha256": "b0ea20a65d10e797593a436decc8adb94560608d3c922ddc45aa41ddd7e1c746",
+      "local_sha256": "2103fbc79a5c673432f98febe8ad8247e8c3d1f1da8347be6d5a5d677bacb18f",
+      "content_matches_upstream": false
+    },
+    {
+      "upstream": "tests/test_onboarding.py",
+      "local": "tests/test_onboarding.py",
+      "upstream_sha256": "af84fdff4402192a1657853ba21cb732dd04c4f4b5c0340969835a03a598c661",
+      "local_sha256": "e2b69bf347e0fd788118aee127d8309b3d7b2621269ba41b46f73e8cb971e2ec",
+      "content_matches_upstream": false
+    },
+    {
+      "upstream": "tests/test_package_integrity.py",
+      "local": "tests/test_package_integrity.py",
+      "upstream_sha256": "65d9b8a1d1efcc70dcfa0e315f1753236384e8491c154b88dbfa93e1d14cdd92",
+      "local_sha256": "3917e7ffec926fc2998d3ab42d73b57a555501cf0b920267b5fe4e8d0f59e8a1",
+      "content_matches_upstream": false
+    },
+    {
+      "upstream": "tests/test_python_bootstrap.py",
+      "local": "tests/test_python_bootstrap.py",
+      "upstream_sha256": "378b671dc0208a271d43395279d2b84bea894415b6d0df6ec88d0dadd464243a",
+      "local_sha256": "378b671dc0208a271d43395279d2b84bea894415b6d0df6ec88d0dadd464243a",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "tests/windows_bootstrap_unit.ps1",
+      "local": "tests/windows_bootstrap_unit.ps1",
+      "upstream_sha256": "af0c542dec47b24c09df8bec0b58c8b2dd15c60289d3bca6875ec0ddb2dd0702",
+      "local_sha256": "af0c542dec47b24c09df8bec0b58c8b2dd15c60289d3bca6875ec0ddb2dd0702",
+      "content_matches_upstream": true
+    },
+    {
+      "upstream": "tests/windows_no_python.ps1",
+      "local": "tests/windows_no_python.ps1",
+      "upstream_sha256": "43e2ba169564a9cc52782e643df99c20f2af85033ace8d80463d8264fb4f9d76",
+      "local_sha256": "43e2ba169564a9cc52782e643df99c20f2af85033ace8d80463d8264fb4f9d76",
+      "content_matches_upstream": true
+    }
+  ],
+  "preserved": [
+    "knowledge",
+    "output",
+    "config",
+    ".hwpdoc",
+    ".codex",
+    ".agents",
+    "CLAUDE.md"
+  ],
+  "validation": {
+    "status": "pass",
+    "python_tests_passed": 193,
+    "python_tests_skipped": 8,
+    "windows_bootstrap_helpers": "pass",
+    "public_wrapper_current_user": "pass",
+    "hancom_gui_com_render": "not_run",
+    "genuine_no_python_install": "CI_only_not_run_locally",
+    "release_gate": "blocked_stale_rights_privacy_source_review",
+    "report": "docs/GitHub-동기화-20261012.md"
+  },
+  "release_ready": false,
+  "adaptations": [
+    "Keep canonical skills under .claude/skills; no duplicate hwpx skill or root AGENTS.md",
+    "Bootstrap accepts development manifest/skill locations; package layout is unchanged",
+    "Development test imports and package integrity checks use canonical paths and the allowlist",
+    "Store public onboarding README/AGENTS and marketplace under distribution for packaging",
+    "Preserve local README, gitignore, operational config and all school documents",
+    "Keep release rights/privacy review hashes unchanged; updated code requires fresh release review",
+    "CI runs portable upstream tests separately from legacy tests requiring private school fixtures"
+  ],
+  "protected_file_check": {
+    "checked": 650,
+    "changed": []
+  },
+  "git_integration": {
+    "preserve_development_layout": true,
+    "strategy": "code_sync_then_ours_history_merge",
+    "pushed": false
+  }
+}

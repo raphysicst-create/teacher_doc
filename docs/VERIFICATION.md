@@ -44,7 +44,7 @@ Unix의 `tests/test_python_bootstrap.py`는 Python 없는 격리 PATH에서 동�
 
 v0.1.2 개발 검증: Linux x86_64의 실제 no-Python 다운로드→첫 HWPX와 재실행, Python 회귀 21개, PowerShell 7 구문/실패 helper 검사를 수행했다. Windows PowerShell 5.1 실실행은 해당 commit의 `No-Python first install` CI 결과로 확인한다. macOS·ARM64는 메타데이터를 제공하지만 이 검증만으로 실실행을 확인했다고 하지 않는다. 한글 COM과 앱 GUI 스킬 로딩은 별도 미확인이다.
 
-## Codex 플러그인 발견·재설치
+## Codex·클로드 코드 플러그인 발견·재설치
 
 실제 사용자의 HOME을 바꾸지 말고 격리 시험용 HOME과 CODEX_HOME에서 검사합니다. 현재 설치된 CLI 도움말로 명령 지원을 먼저 확인합니다.
 
@@ -53,6 +53,8 @@ codex plugin marketplace add https://github.com/raphysicst-create/teacher_doc.gi
 codex plugin add teacher_doc@teacher-doc-local --json
 codex plugin list --json
 ```
+
+클로드 코드: 대화창에서 `/plugin marketplace add raphysicst-create/teacher_doc` → `/plugin install teacher_doc@teacher-doc-marketplace`. 배포 전 `claude plugin validate <패키지 루트>`로 plugin.json·marketplace.json을 검사한다.
 
 반환된 설치 경로에 `scripts/bootstrap.py`, 두 스킬, 의존성·라이선스·소스가 있는지 확인하고 그 설치본에서 bootstrap을 실행합니다. 새 대화 또는 클라이언트의 실제 스킬 목록에서 `teacher_doc:hwpx`와 `teacher_doc:teacher-doc-setup` 로딩을 별도로 확인합니다. 전체 설치본의 스킬 이름은 클라이언트가 반환한 값을 우선합니다.
 
@@ -76,4 +78,4 @@ codex plugin list --json
 
 종료코드 0과 함께 JSON의 `mode`, `checks`, `plugin_loaded_in_chat`, `human_approval`, `sent`를 읽습니다. `ready_xml`은 실사용 공문의 발송 가능 표시가 아닙니다.
 
-이 회귀는 합성 자료·CLI/XML 범위입니다. 실제 교사의 질문 수/사용성, Codex GUI 새 대화 자동 스킬 로딩, Windows 한글 COM·PDF/PNG·인쇄, macOS 실기기 통과를 뜻하지 않습니다.
+이 회귀는 합성 자료·CLI/XML 범위입니다. 실제 교사의 질문 수/사용성, Codex·클로드 코드 GUI 새 대화 자동 스킬 로딩, Windows 한글 COM·PDF/PNG·인쇄, macOS 실기기 통과를 뜻하지 않습니다.

@@ -215,7 +215,7 @@
     {
       "source": ".claude/skills/hwpx/references/workflow.md",
       "destination": "skills/hwpx/references/workflow.md",
-      "sha256": "e18cac29b0e508f423a415c78da6336335224ee9b807e53b57a82bce072b2e01"
+      "sha256": "a66f5501a31f476b72739538c4d1121e694fb6edc42de7953e95b3041c437933"
     },
     {
       "source": ".claude/skills/hwpx/references/editing-details.md",
@@ -265,7 +265,7 @@
     {
       "source": "distribution/CHANGELOG.md",
       "destination": "distribution/CHANGELOG.md",
-      "sha256": "005b0a6ca98170b2b4052f46bad9274d8684f0375fe7119193a24df9992b499e"
+      "sha256": "5eb74706aa63b0184f79f904d91c2d9b8cb957bb316e583634ed47a71341d0c5"
     },
     {
       "source": ".claude/skills/hwpx/templates/report/header.xml",
@@ -365,12 +365,17 @@
     {
       "source": "distribution/codex-plugin.json",
       "destination": ".codex-plugin/plugin.json",
-      "sha256": "1f9753cec0f630f4b88c8d82cb4e7e881edf855434d4211973669d85f10af5c2"
+      "sha256": "f39d0c5c546fa4ab0e9c91d5f16605162e68aa879d721fb54f37282b5b57d573"
     },
     {
       "source": "distribution/claude-plugin.json",
       "destination": ".claude-plugin/plugin.json",
-      "sha256": "837f7ffb13f8c3d1163c037f433470b35d47c30645b886e406bff01c96e345ea"
+      "sha256": "3cfc7ac02770a0cf3e11f502cb84a5e9a95c1af5d5215ceab8e1050288b6f3a4"
+    },
+    {
+      "source": "distribution/claude-marketplace.json",
+      "destination": ".claude-plugin/marketplace.json",
+      "sha256": "d03d9894c4b5b3ea3f23fdbe3ef6637c7885ef818e5e78e595dc4a1bd826fdbf"
     },
     {
       "source": "distribution/legal/AGPL-3.0.txt",
@@ -383,9 +388,14 @@
       "sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484"
     },
     {
+      "source": "distribution/legal/jkf87-hwpx-skill-MIT.txt",
+      "destination": "licenses/jkf87-hwpx-skill-MIT.txt",
+      "sha256": "432a3fe89a48d60688d7159b6ba8df36b6d9e26493b5aa8e569436cf1a9c8323"
+    },
+    {
       "source": "distribution/legal/CHANGES.md",
       "destination": "CHANGES.md",
-      "sha256": "ca20914509a1771a268dfa7fac87a613639ad82d2c70446e14b80a6f7fc1b427"
+      "sha256": "77e9153f2ff760eb1032a88b86162424b7187a396a78f6b3cf3d52a3d8bb7a94"
     },
     {
       "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
@@ -490,7 +500,7 @@
     {
       "source": "distribution/legal/NOTICE.md",
       "destination": "NOTICE.md",
-      "sha256": "85a197c1c8de95ecd3291ba3aed9dfbe97e19a3c61cbc9ea48f24247ce1d5eed"
+      "sha256": "153e30dc8705cfe7a7f81ed9fb5be27e15a76358ddac13289a787bd8151c6430"
     },
     {
       "source": "distribution/legal/SOURCE.md",
@@ -510,7 +520,7 @@
     {
       "source": "distribution/source-bundle.json",
       "destination": "SOURCE-BUNDLE.json",
-      "sha256": "827841595542a540999ce5375484a60fb5856f1eec453bf0bc1f423f64c1e57c"
+      "sha256": "4cf361472462c1cfeaebdf68dd163e770a3caac842c9dfb36914a8b4ee8eed7a"
     },
     {
       "source": "distribution/legal/dependencies/python-calamine/calamine-LICENSE-MIT.md",
@@ -545,12 +555,12 @@
     {
       "source": "distribution/onboarding/AGENTS.md",
       "destination": "AGENTS.md",
-      "sha256": "c84a63109f716b32187ca02362bcce104fdd3740e58c54e13b237abdf53c5e23"
+      "sha256": "6164824a5c09d7bae5834e7fd97cd3b8f10b775ad9fb213c4a43869027319742"
     },
     {
       "source": "distribution/onboarding/README.md",
       "destination": "README.md",
-      "sha256": "4be867fbe7b395cd92d955dead90efc48a9cc40ebe2757517f6a4d3cfa886448"
+      "sha256": "d4b2afadf403486285d40ab6c4a105fa55bf33f1562e5252cad516035c645e52"
     },
     {
       "source": "distribution/python-downloads.json",
@@ -565,7 +575,7 @@
     {
       "source": "docs/BEGINNER.md",
       "destination": "docs/BEGINNER.md",
-      "sha256": "1aee2b579b1cbaf30ad49a36de86f7c977111ea62b107776da8b0420c0673667"
+      "sha256": "9ef3849904accf0ccb1dbab572a3cedc42ef4638a7c86c5a22f5e39e3e644ba1"
     },
     {
       "source": "docs/PYTHON-RUNTIME.md",
@@ -575,7 +585,7 @@
     {
       "source": "docs/VERIFICATION.md",
       "destination": "docs/VERIFICATION.md",
-      "sha256": "683e3ed0555429d97948be082379acc86f2a5593d18c6ec3bda5ed5609c6ca96"
+      "sha256": "bab8461b93e8c197f5199efc9fa4307d5170916f4e9d5c5ef551c81e68721c32"
     },
     {
       "source": "scripts/bootstrap.ps1",
@@ -610,7 +620,7 @@
     {
       "source": ".claude/skills/teacher-doc-setup/SKILL.md",
       "destination": "skills/teacher-doc-setup/SKILL.md",
-      "sha256": "2cf94664ad0582b7198581c2c48c96458a8387acf9c7f21ddd98cdd6406e66af"
+      "sha256": "cf5d3fd0a85b63515b0d496a8ae4cb231d4d9eabef2dfab15bfd7be67d07907b"
     },
     {
       "source": "tests/test_beginner_workflow.py",

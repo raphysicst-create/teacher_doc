@@ -6,17 +6,17 @@
 
 - 작년에 낸 공문을 올해 다시 내야 하는 교사
 - 한글 양식은 그대로 두고 날짜·회차·학년도·담당만 바꾸고 싶은 분
-- 명령어를 외우기 싫은 분. 모든 일은 Codex 대화에 문장으로 부탁합니다
+- 명령어를 외우기 싫은 분. 모든 일은 Codex나 클로드 코드 대화에 문장으로 부탁합니다
 
 ## 설치 (한 번만)
 
-파일을 다룰 수 있는 Codex 대화에 다음을 붙여 넣으세요.
+파일을 다룰 수 있는 Codex 또는 클로드 코드 대화에 다음을 붙여 넣으세요. 클로드 코드는 아래 "설치 경로에 관해"의 두 명령으로 플러그인을 먼저 설치한 뒤 같은 문장을 붙여 넣습니다.
 
 > https://github.com/raphysicst-create/teacher_doc
 >
 > 이 플러그인을 Python 포함 설치해줘. Python 3.12가 없으면 공식 Astral uv와 CPython 배포본을 teacher_doc 전용 폴더에 받아도 돼. 저장소 전체와 설치 안내를 읽고, 내 문서와 분리된 작업 폴더에서 기본 XML 점검과 첫 연습 문서 생성까지 해줘. 결과 파일과 미확인 항목도 알려줘.
 
-끝나면 작업 폴더에 개인정보 없는 연습 HWPX가 생깁니다. 한글이 없어도 여기까지는 됩니다. Python이 없으면 위 문장의 동의에 따라 전용 폴더에 받으며, 전역 PATH·레지스트리·보안 정책은 바꾸지 않습니다. 학교 정보 서비스(아래)도 이때 등록됩니다. 실제로 쓰려면 Codex에서 작업 폴더를 한 번 신뢰해야 합니다. 자세한 순서와 막혔을 때의 대처는 [처음 시작하기](docs/BEGINNER.md)에 있습니다.
+끝나면 작업 폴더에 개인정보 없는 연습 HWPX가 생깁니다. 한글이 없어도 여기까지는 됩니다. Python이 없으면 위 문장의 동의에 따라 전용 폴더에 받으며, 전역 PATH·레지스트리·보안 정책은 바꾸지 않습니다. 학교 정보 서비스(아래)도 이때 등록됩니다. 실제로 쓰려면 Codex는 작업 폴더를 한 번 신뢰해야 하고, 클로드 코드는 첫 사용 때 뜨는 MCP 서버 승인에 동의해야 합니다. 자세한 순서와 막혔을 때의 대처는 [처음 시작하기](docs/BEGINNER.md)에 있습니다.
 
 ## 실제 공문 만들기 (매번)
 
@@ -46,14 +46,14 @@
 
 ## 필요한 것
 
-- **Codex**: 파일을 읽고 명령을 실행할 수 있는 대화. 학사일정을 쓰려면 앱에서 작업 폴더를 "신뢰"해야 합니다(에이전트가 안내합니다).
+- **Codex 또는 클로드 코드**: 파일을 읽고 명령을 실행할 수 있는 대화. 학사일정을 쓰려면 Codex는 작업 폴더 "신뢰", 클로드 코드는 MCP 서버 승인이 한 번 필요합니다(에이전트가 안내합니다).
 - **Windows + 한글**: 한글 실열림과 PDF 검사까지 끝내고 정상 전달합니다. 한글이 없거나 macOS/Linux면 XML 검사까지만 하고 "검토 초안"으로 전달합니다.
 - **인터넷**: 학사일정은 제작자가 운영하는 원격 학교 정보 서비스(NEIS 공개 자료)에서 가져옵니다. 교사 PC에 따로 설치할 것은 없습니다. 연결이 안 되면 그 칸을 "확인 필요"로 두고 진행합니다.
 
 ## 자주 막히는 곳
 
 - **파일이 `.hwp`예요:** 그대로 주면 됩니다. 한글이 있는 Windows에서는 에이전트가 HWPX 사본으로 바꿉니다. 한글이 없는 PC에서만 한글에서 "다른 이름으로 저장 → HWPX"로 저장해 주세요.
-- **학사일정을 못 가져와요:** Codex에서 작업 폴더를 신뢰했는지 확인합니다. 신뢰 전에는 학교 정보 도구가 목록에 안 보입니다.
+- **학사일정을 못 가져와요:** Codex는 작업 폴더를 신뢰했는지, 클로드 코드는 `/mcp`에서 `teacher_doc_mcp`가 연결됐는지 확인합니다. 신뢰·승인 전에는 학교 정보 도구가 목록에 안 보입니다.
 - **Python 3.12가 없음:** 위 "Python 포함 설치" 문장이면 전용 런타임까지 준비합니다. 단순 설치 요청이면 다운로드 전에 한 번 동의를 구하고, 거절하면 멈춥니다.
 - **한글이 없거나 macOS/Linux:** 설치·연습·초안까지 되고, 한글 실열림·인쇄 모양은 미확인으로 남습니다.
 - **플러그인은 보이는데 실행이 안 됨:** `skills/` 폴더만 복사된 상태일 수 있습니다. 저장소 전체(`scripts/`, 의존성 목록, 라이선스·소스)가 필요합니다.
@@ -62,9 +62,9 @@
 
 ## 설치 경로에 관해
 
-이 저장소는 `.codex-plugin/plugin.json`과 `.agents/plugins/marketplace.json`을 포함합니다. 마켓플레이스 이름은 `teacher-doc-local`, 플러그인 이름은 `teacher_doc`입니다. 저장소 루트 전체가 설치 단위입니다.
+이 저장소는 Codex용 `.codex-plugin/plugin.json`·`.agents/plugins/marketplace.json`(마켓 이름 `teacher-doc-local`)과 클로드 코드용 `.claude-plugin/plugin.json`·`.claude-plugin/marketplace.json`(마켓 이름 `teacher-doc-marketplace`)을 포함합니다. 플러그인 이름은 두 앱 모두 `teacher_doc`입니다. 저장소 루트 전체가 설치 단위입니다.
 
-지원되는 Codex CLI에서는 에이전트가 다음 경로를 쓸 수 있습니다. 먼저 설치된 CLI의 도움말로 지원 여부를 확인합니다.
+**Codex CLI**(지원되는 버전): 먼저 설치된 CLI의 도움말로 지원 여부를 확인합니다.
 
 ```sh
 codex plugin marketplace add https://github.com/raphysicst-create/teacher_doc.git
@@ -72,7 +72,14 @@ codex plugin add teacher_doc@teacher-doc-local --json
 codex plugin list --json
 ```
 
-플러그인 추가만으로 Python 환경이나 작업 폴더가 준비되지는 않으므로, 설치 응답의 실제 경로에서 `skills/teacher-doc-setup/SKILL.md`를 읽고 이어갑니다. 앱의 가져오기 화면이 GitHub 주소를 받는지는 앱·계정·조직 정책에 따라 다릅니다. 지원하지 않으면 전체 저장소를 지속 보관할 폴더에 받아 에이전트 안내로 진행합니다.
+**클로드 코드**: 대화창에 아래 두 줄을 차례로 입력합니다. 설치 뒤 `/`를 치면 `/teacher_doc:hwpx`와 `/teacher_doc:teacher-doc-setup`이 보이고, `/plugin`의 Installed 탭에서 상태를 볼 수 있습니다.
+
+```text
+/plugin marketplace add raphysicst-create/teacher_doc
+/plugin install teacher_doc@teacher-doc-marketplace
+```
+
+플러그인 추가만으로 Python 환경이나 작업 폴더가 준비되지는 않으므로, 설치 뒤 위의 설치 문장을 붙여 넣어 설치 스킬(`skills/teacher-doc-setup/SKILL.md`)이 이어가게 합니다. 앱의 가져오기 화면이 GitHub 주소를 받는지는 앱·계정·조직 정책에 따라 다릅니다. 지원하지 않으면 전체 저장소를 지속 보관할 폴더에 받아 에이전트 안내로 진행합니다.
 
 ## 더 읽을 것
 

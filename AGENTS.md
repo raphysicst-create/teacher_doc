@@ -5,8 +5,8 @@
 사용자가 이 저장소 링크를 붙여 넣고 설치를 부탁했다면 설명만 하고 끝내지 말고, 허용된 실행 환경에서 [설치 스킬](skills/teacher-doc-setup/SKILL.md)을 읽어 설치 → 환경 점검 → 첫 연습 문서 생성을 진행한다. 사용자가 명령어와 JSON을 직접 작성하게 하지 않는다. 작업할 컴퓨터가 명시되었다면 그 환경을 사용하고, 접근할 수 없으면 필요한 연결이나 권한만 요청한다.
 
 - **전체 저장소/플러그인을 설치한다.** `skills/hwpx` 단독 복사, skill-only installer, sparse checkout은 사용하지 않는다. 루트 `scripts/`, `distribution/requirements-*.txt`, 라이선스·소스가 함께 필요하다
-- 플러그인 이름 `teacher_doc`을 바꾸지 않는다. Codex 카탈로그는 `.agents/plugins/marketplace.json`, 마켓플레이스 이름은 `teacher-doc-local`, `source.path`는 마켓플레이스 루트 기준 `./`다
-- 설치된 CLI가 지원하면 `codex plugin marketplace add`와 `codex plugin add teacher_doc@teacher-doc-local --json`을 사용한다. CLI 도움말과 결과에서 실제 지원·성공을 확인한다. GUI 검색창에 GitHub 링크를 넣으면 어디서나 설치된다고 안내하지 않는다
+- 플러그인 이름 `teacher_doc`을 바꾸지 않는다. Codex 카탈로그는 `.agents/plugins/marketplace.json`, 마켓플레이스 이름은 `teacher-doc-local`, `source.path`는 마켓플레이스 루트 기준 `./`다. 클로드 코드 카탈로그는 `.claude-plugin/marketplace.json`, 마켓 이름은 `teacher-doc-marketplace`, `source`는 `./`다. 클로드 코드는 플러그인 안의 이 파일(AGENTS.md)을 컨텍스트로 읽지 않으므로 같은 절차가 설치 스킬에 있다
+- 설치된 CLI가 지원하면 `codex plugin marketplace add`와 `codex plugin add teacher_doc@teacher-doc-local --json`을, 클로드 코드에서는 `/plugin marketplace add raphysicst-create/teacher_doc`와 `/plugin install teacher_doc@teacher-doc-marketplace`를 사용한다. CLI 도움말과 결과에서 실제 지원·성공을 확인한다. GUI 검색창에 GitHub 링크를 넣으면 어디서나 설치된다고 안내하지 않는다
 - 플러그인 캐시는 원본 checkout과 다를 수 있다. 설치 응답의 `installedPath` 또는 실제 로드된 스킬의 경로를 확인하고 그 루트의 안내를 읽는다. 경로를 추측하지 않는다
 - CLI 설치가 지원되지 않으면 전체 저장소를 임시 폴더가 아닌 지속 보관 위치에 clone/복사한다. 기존 폴더는 origin과 상태를 확인하여 재사용하고, 덮어쓰기·삭제·강제 reset을 하지 않는다. 앱 발견과 스킬 로딩은 별도 확인한다
 
@@ -19,7 +19,7 @@
 5. 기존 `.hwpdoc/workspace.json`, 작업 지침, PC `runtime.json`과 사용자 자료를 보존한다. 새 대화는 작업 폴더 `.hwpdoc/onboarding.json`의 실제 `pc_data`·`python`을 복원하고 runtime.json의 일치·존재를 확인한다. 명시 `HWPDOC_PC_DATA`가 있다면 의도한 동일 경로인지 확인한다. 없는/이동한 경로에서 기본 Python으로 바꾸거나 재설치하지 않는다
 6. 설치된 한글의 전체 검사가 필요하면 Windows 사용자 세션에서 `doctor --mode full`을 별도로 수행한다. XML 모드 성공을 COM 성공으로 보고하지 않는다
 
-한글·보안모듈 구매/설치, 훅·레지스트리·실행 정책·전역 PATH·Codex 권한 변경은 이 설치에 포함하지 않는다. 보안 경고, TLS 오류, 조직 정책 차단을 우회하지 않는다. 다운로드/해시/권한 오류는 실패로 보고하고 기존 자료를 보존한 채 원인 해결 후 같은 명령으로 재시도한다. 훅은 이 배포본에 들어 있지 않으며 `setup-hooks`는 개발 저장소 전용이다.
+한글·보안모듈 구매/설치, 훅·레지스트리·실행 정책·전역 PATH·Codex/클로드 코드 권한 변경은 이 설치에 포함하지 않는다. 보안 경고, TLS 오류, 조직 정책 차단을 우회하지 않는다. 다운로드/해시/권한 오류는 실패로 보고하고 기존 자료를 보존한 채 원인 해결 후 같은 명령으로 재시도한다. 훅은 이 배포본에 들어 있지 않으며 `setup-hooks`는 개발 저장소 전용이다.
 
 ## 문서 작업
 

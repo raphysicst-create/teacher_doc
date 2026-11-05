@@ -1,6 +1,14 @@
-# teacher_doc 0.2.0 변경 고지
+# teacher_doc 0.2.1 변경 고지
 
 배포자 유지·변경 기준일: 2026. 11. 5.
+
+## 0.2.1 클로드 코드 설치 지원
+
+- `.claude-plugin/marketplace.json`을 추가했다. 저장소 루트를 플러그인으로 가리키는 항목 하나(`source: "./"`, 마켓 이름 `teacher-doc-marketplace`)이며 플러그인 이름은 Codex와 같은 `teacher_doc`이다. 클로드 코드는 이 파일이 있어야 GitHub 저장소를 마켓으로 추가할 수 있다.
+- 배포 문서와 스킬을 두 앱 공용으로 고쳤다. 설치 명령(Codex CLI·클로드 코드 슬래시 명령), 원격 MCP 사용 조건(Codex 폴더 신뢰·클로드 코드 프로젝트 `.mcp.json` 승인), 도구 이름 접두어 차이, 셸 시간 제한 옵션 이름을 병기했다. 설치 스킬 설명에 저장소 링크 설치 요청 트리거를 넣었다.
+- 작업 폴더 초기화(`init --app claude`)는 이전부터 `CLAUDE.md`와 `type: http` 형식의 `.mcp.json`을 만들었고 이번에 패키지로 실측했다. 코드 변경은 없다.
+- 플러그인 수준 `.mcp.json`은 의도적으로 넣지 않았다(작업 폴더 등록과 중복). 실제 클로드 코드 설치·스킬 노출·MCP 승인·문서 1건 완주는 아직 실측하지 않았다.
+- 고지 보완: `finalize_hwpx.py`·`fix_namespaces.py`·`gonmun_lint.py`와 `validate.py --layout` 블록은 jkf87/hwpx-skill(MIT, 기여자 phdgil)에서 Canine89/hwpxskill로 들어온 부분이라 NOTICE.md에 해당 절을 추가하고 `licenses/jkf87-hwpx-skill-MIT.txt`를 동봉했다. 0.2.0 설치본에는 이 고지가 빠져 있었다.
 
 ## 0.2.0 양식 등록부 폐지
 

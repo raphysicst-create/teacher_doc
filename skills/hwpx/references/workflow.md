@@ -60,7 +60,7 @@ manifest 준비 기록은 `record --job <이름> --file <UTF-8 JSON>`으로 등�
 
 ### 학교 정보 MCP (`teacher_doc_mcp`)
 
-`teacher_doc_mcp`는 학사일정·시간표·교육과정·학교 공시 문서를 주는 원격 MCP다(교사 PC 설치 없음). 설치 때 기본 서버를 앱에 등록하며 다른 주소는 `--mcp-url`/`-McpUrl`, 등록 생략은 `--no-mcp`/`-NoMcp`로 지정한다. 나중에 `setup-mcp [--url <주소>]`로 등록할 수도 있다. `doctor`의 `teacher_doc_mcp` 항목은 설정·학교 등록 여부만 보여 주고 실제 호출은 확인하지 않는다. Codex는 **신뢰한 폴더**에서만 작업 폴더의 `.codex/config.toml`을 읽으므로, 도구 목록에 `mcp__teacher_doc_mcp__…`가 없으면 교사에게 앱에서 작업 폴더를 신뢰하도록 한 번 안내하고 그동안은 MCP 없음으로 처리한다 (근거: 11. 3. 실측 — 신뢰 안 한 폴더에서는 목록에 없었고, 설정이 읽히면 실제 에이전트가 학교 확정·학사일정 조회에 성공).
+`teacher_doc_mcp`는 학사일정·시간표·교육과정·학교 공시 문서를 주는 원격 MCP다(교사 PC 설치 없음). 설치 때 기본 서버를 앱에 등록하며 다른 주소는 `--mcp-url`/`-McpUrl`, 등록 생략은 `--no-mcp`/`-NoMcp`로 지정한다. 나중에 `setup-mcp [--url <주소>]`로 등록할 수도 있다. `doctor`의 `teacher_doc_mcp` 항목은 설정·학교 등록 여부만 보여 주고 실제 호출은 확인하지 않는다. Codex는 **신뢰한 폴더**에서만 작업 폴더의 `.codex/config.toml`을 읽고, 클로드 코드는 작업 폴더 `.mcp.json`의 서버를 첫 사용 때 승인받는다(`/mcp`로 확인). 도구 이름 접두어는 앱마다 다르므로(`mcp__teacher_doc_mcp__…` 등) `resolve_school`·`get_school_calendar`로 끝나는 도구를 찾고, 없으면 교사에게 폴더 신뢰(Codex) 또는 MCP 승인(클로드 코드)을 한 번 안내하고 그동안은 MCP 없음으로 처리한다 (근거: 11. 3. 실측 — 신뢰 안 한 폴더에서는 목록에 없었고, 설정이 읽히면 실제 에이전트가 학교 확정·학사일정 조회에 성공).
 
 - **학교 등록(한 번):** `school --show`에 `school.neis`가 없으면 `resolve_school`(`schoolName`, 가능하면 `region`·`schoolLevel`)로 후보를 찾는다. 후보가 둘 이상이면 교사에게 한 번 고르게 하고 `school --set-neis <candidateId> --level <학교급> --region <지역>`으로 저장한다. 이후에는 `school --show`가 주는 `selection`(`stored_setting`)으로 `resolve_school`을 확정한다. 학사일정 조회에는 서버가 돌려준 `confirmed` 결과를 그대로 넘긴다. 확정 객체를 직접 조립하지 않는다. (근거: 11. 3. — 후보 조회 결과로 확정 객체를 만들어 넘긴 사례)
 - **학사일정:** `get_school_calendar`에 `school`=확정 결과 전체, `neisId`=확정 결과의 `school.identity.primaryId`(`namespace` 포함), `schoolLevel`, `dateRange`(최대 366일)를 넣는다. 결과 `structuredContent`를 그대로 작업 폴더 `sources/calendar-<시작>-<끝>.json`으로 저장해 제안 근거(`kind: calendar`, sha256)와 `checklist --calendar`에 쓴다. `status`가 `partial`이거나 `unresolved`·`errors`가 있으면 교사 요약에 그 사실을 적는다. 과거 연도는 `no_data`일 수 있다.
@@ -98,7 +98,7 @@ manifest 준비 기록은 `record --job <이름> --file <UTF-8 JSON>`으로 등�
 
 `validate`의 전체 순서를 따른다: 구조 → namespaces → finalize(--strip-linesegarray) → layout → page_guard → 한글 COM 실열림 → 조건부 render/육안 판독 → content/values/gonmun → 예산명/관련번호/시간표/붙임 → 신구대조.
 
-- Codex CLI에서 COM을 포함한 명령은 셸 도구의 `timeout_ms`를 명시한다(전체 검증은 300000). 기본 10초 종료를 COM 실패로 혼동하지 않는다. `exec_command`가 세션 ID를 반환하면 같은 세션을 기다리고 명령을 재실행하지 않는다. 실행기 내부의 단계별 시간 제한과 2회 실패 제한은 유지한다.
+- COM을 포함한 명령은 셸 도구의 시간 제한을 명시한다(Codex `timeout_ms`, 클로드 코드 Bash `timeout`; 전체 검증은 300000ms). 기본 10초 종료를 COM 실패로 혼동하지 않는다. `exec_command`가 세션 ID를 반환하면 같은 세션을 기다리고 명령을 재실행하지 않는다. 실행기 내부의 단계별 시간 제한과 2회 실패 제한은 유지한다.
 - `HANCOM_RESTRICTED_CONTEXT`는 Windows 제한 토큰·격리 데스크톱의 COM 미확인이다. 시간만 늘리거나 권한 설정을 자동 변경하지 않는다. 한글·보안 모듈이 설치된 사용자 세션에서 검증하고 실제 환경을 보고한다. 한 환경의 통과를 다른 권한 모드의 통과로 기록하지 않는다.
 
 - 프로파일은 finalize가 끝난 기준 사본에서만 생성한다. 검사 실패를 없애려고 결과물로 기준을 다시 만들지 않는다. 구조 변경 승인이 있을 때만 승인 범위·원본 크기/쪽수·COM/렌더 결과를 대조하고 새 기준을 만든다.

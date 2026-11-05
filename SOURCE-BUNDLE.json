@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "plugin_version": "0.2.0",
+  "plugin_version": "0.2.1",
   "program_license": "AGPL-3.0-only",
   "source_format": "teacher_doc source files plus unmodified upstream source archives",
   "documents": [
@@ -13,8 +13,12 @@
       "sha256": "26137f9b33b38524bfed47bea9d5a07b2c4ddd81ec1948fb6beb5511047cf484"
     },
     {
+      "destination": "licenses/jkf87-hwpx-skill-MIT.txt",
+      "sha256": "432a3fe89a48d60688d7159b6ba8df36b6d9e26493b5aa8e569436cf1a9c8323"
+    },
+    {
       "destination": "CHANGES.md",
-      "sha256": "ca20914509a1771a268dfa7fac87a613639ad82d2c70446e14b80a6f7fc1b427"
+      "sha256": "77e9153f2ff760eb1032a88b86162424b7187a396a78f6b3cf3d52a3d8bb7a94"
     },
     {
       "destination": "licenses/dependencies/et-xmlfile/LICENCE.python",
@@ -98,7 +102,7 @@
     },
     {
       "destination": "NOTICE.md",
-      "sha256": "85a197c1c8de95ecd3291ba3aed9dfbe97e19a3c61cbc9ea48f24247ce1d5eed"
+      "sha256": "153e30dc8705cfe7a7f81ed9fb5be27e15a76358ddac13289a787bd8151c6430"
     },
     {
       "destination": "SOURCE.md",
@@ -140,6 +144,7 @@
   "license_text_provenance": {
     "LICENSE": "mupdf-1.28.0-source.tar.gz: mupdf-1.28.0-source/COPYING",
     "licenses/GPL-3.0-only.txt": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt",
-    "licenses/Canine89-MIT.txt": "Standard MIT text with author attribution; publisher applied following user-confirmed direct MIT permission."
+    "licenses/Canine89-MIT.txt": "Standard MIT text with author attribution; publisher applied following user-confirmed direct MIT permission.",
+    "licenses/jkf87-hwpx-skill-MIT.txt": "Standard MIT text with author attribution; upstream README declares MIT (commit 389dd7b) without a LICENSE file or copyright line for its own code; covers jkf87 and contributor phdgil (PR #1, commit 1d7b5b3)."
   }
 }

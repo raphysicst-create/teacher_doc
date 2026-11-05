@@ -1,5 +1,13 @@
 # 변경 이력
 
+## 0.2.1 — 2026-11-05
+
+- 클로드 코드에서도 설치할 수 있게 `.claude-plugin/marketplace.json`(마켓 이름 `teacher-doc-marketplace`)을 넣었다. `/plugin marketplace add raphysicst-create/teacher_doc` → `/plugin install teacher_doc@teacher-doc-marketplace`.
+- 설치 안내·초보자 안내·설치 스킬·업무 절차·검증 안내를 Codex와 클로드 코드 공용으로 고쳤다: 설치 명령 두 벌, 폴더 신뢰(Codex) ↔ MCP 서버 승인(클로드 코드), 셸 시간 제한(`timeout_ms` ↔ Bash `timeout`), 도구 이름 접두어가 앱마다 다름.
+- 설치 스킬의 설명에 "저장소 링크를 붙여 설치를 부탁받았을 때" 트리거를 넣었다(클로드 코드는 플러그인 안의 AGENTS.md를 읽지 않는다).
+- 플러그인 수준 `.mcp.json`은 넣지 않았다. 작업 폴더 `.mcp.json`(설치 때 자동 등록)과 겹쳐 같은 서버가 두 번 붙기 때문이다. 코드 변경은 없다.
+- NOTICE.md에 jkf87/hwpx-skill(MIT, 기여자 phdgil) 유래 파일의 고지를 추가하고 `licenses/jkf87-hwpx-skill-MIT.txt`를 동봉했다(0.2.0 설치본에는 빠져 있던 고지).
+
 ## 0.2.0 — 2026-11-05
 
 - 양식 등록부를 폐지했다. `add-template`·`list-templates`·`migrate-templates`와 기존 5종 양식 식별자(`TEMPLATES`)를 지웠고, `prepare`는 `--base <작년.hwpx>`(미등록 일회성 베이스)만 받는다. 작년 문서를 그대로 넣으면 바로 쓴다.

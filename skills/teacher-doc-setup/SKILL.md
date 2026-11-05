@@ -1,6 +1,6 @@
 ---
 name: teacher-doc-setup
-description: "teacher_doc 저장소 링크 설치, 첫 실행, Python 환경 점검, 작업 폴더 준비와 개인정보 없는 첫 HWPX 연습 문서 생성. 설치·설정·실행 오류 또는 한글 없는 XML 모드 시작 요청에 사용한다."
+description: "teacher_doc 설치와 첫 실행. 사용자가 저장소 링크(github.com/raphysicst-create/teacher_doc)를 붙이며 '설치해줘'·'Python 포함 설치해줘'라고 하거나, 작업 폴더 준비·Python 환경 점검·개인정보 없는 첫 HWPX 연습 문서 생성·설치/설정/실행 오류·한글 없는 XML 모드 시작을 요청할 때 사용한다. Codex와 클로드 코드 모두 해당."
 ---
 
 # teacher_doc 설치와 첫 실행
@@ -10,7 +10,7 @@ description: "teacher_doc 저장소 링크 설치, 첫 실행, Python 환경 점
 ## 1. 전체 패키지와 실제 루트 확인
 
 - 저장소: `https://github.com/raphysicst-create/teacher_doc`
-- 현재 스킬의 실제 파일 경로에서 상위 폴더를 탐색하여 `.codex-plugin/plugin.json`, `scripts/bootstrap.py`, `scripts/teacher_doc.py`, `distribution/requirements-base.txt`가 함께 있는 코드 루트를 확인한다. 링크를 따라 실제 위치를 확인한다
+- 현재 스킬의 실제 파일 경로에서 상위 폴더를 탐색하여 `.codex-plugin/plugin.json`(또는 `.claude-plugin/plugin.json`), `scripts/bootstrap.py`, `scripts/teacher_doc.py`, `distribution/requirements-base.txt`가 함께 있는 코드 루트를 확인한다. 링크를 따라 실제 위치를 확인한다. 클로드 코드에서는 이 스킬 본문이 로드될 때 `${CLAUDE_PLUGIN_ROOT}`가 플러그인 설치 경로로 치환되므로 그 값을 루트로 쓴다(Codex에는 이 변수가 없다)
 - `skills/hwpx`만 설치하지 않는다. 플러그인 루트 전체와 라이선스·소스 제공 파일이 필요하다. sparse checkout으로 줄이지 않는다
 - 아직 받지 않았다면 사용자가 지정한 컴퓨터의 지속 보관 폴더에 전체 저장소를 clone한다. 기존 checkout은 origin·변경 사항을 확인해 재사용하고 강제 덮어쓰기하지 않는다. 임시 폴더를 영구 설치 경로로 쓰지 않는다
 
@@ -21,6 +21,8 @@ codex plugin marketplace add https://github.com/raphysicst-create/teacher_doc.gi
 codex plugin add teacher_doc@teacher-doc-local --json
 codex plugin list --json
 ```
+
+클로드 코드에서는 사용자가 대화창에 `/plugin marketplace add raphysicst-create/teacher_doc` → `/plugin install teacher_doc@teacher-doc-marketplace`를 입력한다(슬래시 명령이라 에이전트가 대신 실행하지 못하면 사용자에게 안내한다). 설치 뒤 `/teacher_doc:hwpx`·`/teacher_doc:teacher-doc-setup`이 보이면 된다. 작업 폴더 `.mcp.json`에 등록되는 원격 MCP는 첫 사용 때 승인 질문이 뜬다.
 
 이미 전체 checkout이 있고 로컬 원본을 설치하려면 첫 줄의 Git URL 대신 **checkout 루트 절대경로**를 쓴다. 같은 이름으로 다른 마켓플레이스가 등록되어 있으면 자동 교체하지 말고 충돌을 보고한다. 카탈로그의 `source.path: "./"`는 `.agents/plugins` 폴더가 아니라 저장소 루트를 뜻한다.
 

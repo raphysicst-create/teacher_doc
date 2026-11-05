@@ -2,7 +2,7 @@
 
 ## 준비할 것
 
-- 파일을 읽고 명령을 실행할 수 있는 Codex 환경
+- 파일을 읽고 명령을 실행할 수 있는 Codex 또는 클로드 코드 환경
 - 인터넷 연결과 프로그램 설치가 허용된 환경. Python 3.12는 없으면 동의 후 전용 폴더에 준비합니다
 - 플러그인 코드와 분리된 문서 작업 폴더
 
@@ -10,7 +10,7 @@
 
 ## 1. 링크를 붙이고 부탁하기
 
-Codex 대화에 다음을 붙여 넣으세요.
+Codex 대화에 다음을 붙여 넣으세요. 클로드 코드를 쓰면 먼저 대화창에 `/plugin marketplace add raphysicst-create/teacher_doc`와 `/plugin install teacher_doc@teacher-doc-marketplace`를 입력해 플러그인을 설치한 뒤 같은 문장을 붙여 넣습니다.
 
 > https://github.com/raphysicst-create/teacher_doc
 >
@@ -79,7 +79,7 @@ Windows에서 한글을 사용 중이라면 이렇게 요청하세요.
 
 ### “플러그인 검색창에서 주소를 찾을 수 없어요”
 
-일반 대화에 주소를 붙여 설치를 부탁하는 것과 플러그인 검색창의 검색은 다릅니다. 앱·버전·계정·조직 정책마다 GitHub 가져오기 화면이 다를 수 있습니다. 위의 설치 부탁 문장을 일반 Codex 대화에 붙여 주세요. 에이전트가 지원되는 마켓플레이스 추가 또는 전체 저장소 설치 경로를 확인합니다.
+일반 대화에 주소를 붙여 설치를 부탁하는 것과 플러그인 검색창의 검색은 다릅니다. 앱·버전·계정·조직 정책마다 GitHub 가져오기 화면이 다를 수 있습니다. 위의 설치 부탁 문장을 일반 Codex 또는 클로드 코드 대화에 붙여 주세요. 에이전트가 지원되는 마켓플레이스 추가 또는 전체 저장소 설치 경로를 확인합니다.
 
 ### “플러그인을 추가했는데 Python이 없대요”
 
@@ -118,6 +118,10 @@ XML 모드의 설치·연습은 진행할 수 있습니다. 한글 COM·PDF 내�
 codex plugin marketplace add https://github.com/raphysicst-create/teacher_doc.git
 codex plugin add teacher_doc@teacher-doc-local --json
 codex plugin list --json
+
+# 클로드 코드: 대화창에서
+# /plugin marketplace add raphysicst-create/teacher_doc
+# /plugin install teacher_doc@teacher-doc-marketplace
 
 # macOS/Linux, Python 포함 설치에 동의한 경우
 bash scripts/bootstrap.sh --workspace "/코드/밖/작업 폴더" --data-dir "/코드/밖/PC 데이터" --allow-python-install

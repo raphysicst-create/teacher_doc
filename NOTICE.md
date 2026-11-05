@@ -1,4 +1,4 @@
-# teacher_doc 0.1.0 — 라이선스 및 출처
+# teacher_doc 0.2.0 — 라이선스 및 출처
 
 이 배포의 teacher_doc 결합 프로그램은 GNU Affero General Public License version 3 (AGPL-3.0-only)로 제공한다. 전문은 루트 `LICENSE`에 있다. 소프트웨어는 어떠한 보증도 없이 제공된다. 수정·재배포 시 적용되는 소스 제공, 라이선스·저작권·변경 고지 의무를 따른다. 원래 구성요소의 고지와 추가로 허용된 권리는 아래와 같이 보존한다.
 
@@ -8,6 +8,13 @@
 - MIT 허락: 배포자가 저작자에게 직접 연락해 허락을 받았다고 2026. 9. 13. 확인했다. `licenses/Canine89-MIT.txt`는 이 허락에 따라 배포자가 붙인 표준 MIT 고지이며, 개인 허락 원문을 재현한 문서가 아니다.
 - 배포의 `skills/hwpx/`는 이 프로젝트를 기반으로 한 운영 수정본이다. 비교에 사용한 상류 트리는 `cb5f25b6557b47b0339398d3b5d45a57bdcb4b28`이다. 현재 파일의 식별 해시는 `release-inventory.json`에 있다.
 - 변경과 추가 사항은 `CHANGES.md`를 참고한다. MIT 부분의 고지는 AGPL 결합 배포에서도 유지한다.
+
+## jkf87/hwpx-skill
+
+- 저작자: jkf87 및 기여자 phdgil. 출처: https://github.com/jkf87/hwpx-skill
+- 라이선스: MIT. 상류 README의 「라이선스」 절이 MIT를 밝힌다(대조 기준 커밋 `389dd7b`, 2026. 11. 5. 기준 main도 같다). 상류에는 상류 자체 코드에 대한 LICENSE 파일과 저작권 문구가 없다. `licenses/jkf87-hwpx-skill-MIT.txt`는 이 선언에 따라 배포자가 붙인 표준 MIT 고지이며, 상류 원문을 재현한 문서가 아니다. phdgil의 기여는 이 선언이 있는 저장소에 PR #1로 제출·병합됐다(기여 직전 커밋 `8b64fdf`에도 같은 선언이 있다).
+- 이 코드는 위 Canine89/hwpxskill 상류 트리의 `cb5f25b` 커밋("Add HWPX finalization guards")을 거쳐 들어왔다. 그 커밋이 jkf87/hwpx-skill을 참고해 추가·수정한 `skills/hwpx/scripts/finalize_hwpx.py`·`fix_namespaces.py`·`gonmun_lint.py`와 `validate.py`의 레이아웃 경고(`--layout`) 부분에 상류의 같은 이름 스크립트에서 온 코드가 남아 있다. 상류에서 `fix_namespaces.py`·`gonmun_lint.py`는 jkf87이, `finalize_hwpx.py`와 `validate.py`의 레이아웃 경고 부분은 phdgil이 PR #1(커밋 `1d7b5b3`)로 작성했다. `finalize_hwpx.py`는 대부분이 상류 코드다.
+- Canine89에게서 받은 MIT 허락은 jkf87·phdgil 저작 부분을 대신하지 않으므로 두 고지를 함께 둔다. 두 저장소의 비교 메모는 `skills/hwpx/references/jkf87-hwpx-skill-comparison.md`에 있다.
 
 ## PyMuPDF 1.28.0 / MuPDF 1.28.0
 

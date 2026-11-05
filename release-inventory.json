@@ -40,7 +40,7 @@
     {
       "source": "scripts/hwpdoc_workspace.py",
       "destination": "scripts/hwpdoc_workspace.py",
-      "sha256": "8893655b2d45f64c7d7800f4041bbf2acaae2e0499e137eb3ba77612056639d2"
+      "sha256": "e4ccc3cb19d650749b0d47eb0e5b96c34dba4a4f031b9e1d018eed66a702a92c"
     },
     {
       "source": "scripts/hwpdoc_pending.py",
@@ -215,7 +215,7 @@
     {
       "source": ".claude/skills/hwpx/references/workflow.md",
       "destination": "skills/hwpx/references/workflow.md",
-      "sha256": "f6dd8cb807552dd95967e8dc3a6cb133e63035ced55fc701b2210014c0ebc015"
+      "sha256": "e18cac29b0e508f423a415c78da6336335224ee9b807e53b57a82bce072b2e01"
     },
     {
       "source": ".claude/skills/hwpx/references/editing-details.md",
@@ -550,7 +550,7 @@
     {
       "source": "distribution/onboarding/README.md",
       "destination": "README.md",
-      "sha256": "53e03306f0ca3ad81566845ebf168a07c94e21ba01d48360c15a10b4aabc5ae8"
+      "sha256": "4be867fbe7b395cd92d955dead90efc48a9cc40ebe2757517f6a4d3cfa886448"
     },
     {
       "source": "distribution/python-downloads.json",

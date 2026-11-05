@@ -466,7 +466,7 @@ def prepare(args):
         raise ValueError('--base <작년.hwpx>가 필요합니다')
     base_source = h.original_input_path(args.base)
     if base_source.suffix.lower() != '.hwpx' or not base_source.is_file():
-        raise ValueError('베이스는 HWPX만 지원합니다. HWP는 원본 보존 후 한글에서 HWPX 사본으로 저장하세요')
+        raise ValueError('베이스는 HWPX만 받습니다. .hwp는 먼저 한글 COM(Windows + 한글) 또는 kordoc으로 HWPX 사본을 만든 뒤 그 사본을 --base로 주세요. 원본은 보존합니다')
     source_files = [h.original_input_path(s) for s in args.source]
     if any(not p.is_file() for p in source_files):
         raise ValueError('원문 경로를 확인하세요')

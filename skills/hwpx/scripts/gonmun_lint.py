@@ -42,36 +42,69 @@ _WEEKDAYS = "월화수목금토일"
 _DATE_WD_RX = re.compile(
     r"(?:(\d{4})\.\s*)?(\d{1,2})\.\s*(\d{1,2})\.?\s*\(\s*([월화수목금토일])(?:요일)?\s*\)"
 )
+# 시간표식 "10/27(화)" — 연도를 쓰지 않는다
+_SLASH_WD_RX = re.compile(r"(?<![\d/])(\d{1,2})/(\d{1,2})(?![\d/])\s*\(\s*([월화수목금토일])(?:요일)?\s*\)")
+_ACADEMIC_YEAR_RX = re.compile(r"(?<!\d)(\d{4})\s*학년도")
+_EXPLICIT_YEAR_RX = re.compile(r"(?<!\d)(\d{4})\.\s*\d{1,2}\.\s*\d{1,2}")
 
 
-def check_date_weekday(line: str) -> list[dict[str, object]]:
-    """요일이 병기된 날짜의 실제 요일을 계산해 대조한다 (LLM 요일 계산 오류 방어)."""
+def _school_year(academic_year: int, month: int) -> int:
+    """학년도는 3월에 시작한다: 1~2월은 다음 해다."""
+    return academic_year if month >= 3 else academic_year + 1
+
+
+def check_date_weekday(line: str, academic_year: int | None = None,
+                       uncertain: bool = False) -> list[dict[str, object]]:
+    """요일이 병기된 날짜의 실제 요일을 계산해 대조한다 (LLM 요일 계산 오류 방어).
+
+    연도는 같은 줄에서 앞선 날짜의 연도를 쓰고(요일이 없는 날짜 포함), 없으면 학년도로 추정한다.
+    둘 다 없으면 판정하지 않는다. uncertain이면 추정 연도의 불일치는 경고로만 낸다.
+    """
+    markers = [(m.start(), int(m.group(1))) for m in _EXPLICIT_YEAR_RX.finditer(line)]
+    matches = [(m.start(), m.group(1), m.group(2), m.group(3), m.group(4), m.group(0), False)
+               for m in _DATE_WD_RX.finditer(line)]
+    matches += [(m.start(), None, m.group(1), m.group(2), m.group(3), m.group(0), True)
+                for m in _SLASH_WD_RX.finditer(line)]
     findings: list[dict[str, object]] = []
-    last_year: int | None = None
-    for match in _DATE_WD_RX.finditer(line):
-        year_str, month, day, wd = match.groups()
+    for start, year_str, month, day, wd, text, slash in sorted(matches):
+        inferred = False
+        earlier = [y for pos, y in markers if pos <= start]
         if year_str:
-            last_year = int(year_str)
-        elif last_year is None:
-            continue  # 같은 줄에 기준 연도가 없으면 판정 불가 — 건너뜀
+            year = int(year_str)
+        elif earlier:
+            year = earlier[-1]
+        elif academic_year is not None:
+            year, inferred = _school_year(academic_year, int(month)), True
+        else:
+            continue  # 기준 연도가 없으면 판정 불가 — 건너뜀
         try:
-            actual = datetime.date(last_year, int(month), int(day))
+            actual = datetime.date(year, int(month), int(day))
         except ValueError:
             findings.append({
-                "match": match.group(0).strip(),
+                "match": text.strip(),
                 "rule": "DATE_WEEKDAY",
                 "severity": "error",
                 "message": "달력에 존재하지 않는 날짜입니다.",
                 "suggest": None,
             })
             continue
-        if _WEEKDAYS[actual.weekday()] != wd:
+        weekday = _WEEKDAYS[actual.weekday()]
+        if weekday != wd:
+            basis = f"(연도는 {academic_year}학년도 기준 추정)" if inferred else ""
+            if inferred and uncertain:
+                basis += " — 본문에 학년도가 여럿이라 경고로만 표시"
+            if slash:
+                suggest = f"예) {int(month)}/{int(day)}({weekday})"
+            elif year_str:
+                suggest = f"예) {year}. {int(month)}. {int(day)}.({weekday})"
+            else:
+                suggest = f"예) {int(month)}. {int(day)}.({weekday})"
             findings.append({
-                "match": match.group(0).strip(),
+                "match": text.strip(),
                 "rule": "DATE_WEEKDAY",
-                "severity": "error",
-                "message": f"요일이 실제와 다릅니다. {last_year}. {int(month)}. {int(day)}.은 {_WEEKDAYS[actual.weekday()]}요일입니다.",
-                "suggest": f"예) {last_year}. {int(month)}. {int(day)}.({_WEEKDAYS[actual.weekday()]})",
+                "severity": "warning" if inferred and uncertain else "error",
+                "message": f"요일이 실제와 다릅니다. {year}. {int(month)}. {int(day)}.은 {weekday}요일입니다.{basis}",
+                "suggest": suggest,
             })
     return findings
 
@@ -87,8 +120,20 @@ def extract_text(hwpx_path: str | Path) -> str:
         return "\n".join(out)
 
 
-def lint_text(text: str) -> dict[str, object]:
+def lint_text(text: str, academic_year: int | None = None) -> dict[str, object]:
+    """연도 없는 날짜의 학년도: 본문의 'NNNN학년도'가 한 가지면 그것, 아니면 academic_year(작업 설정),
+    둘 다 없으면 본문 첫 학년도를 쓰되 불확실하므로 경고로만 낸다 (인용한 다른 학년도가 기준을 바꾸지 않게)."""
     findings: list[dict[str, object]] = []
+    stated = [int(year) for year in _ACADEMIC_YEAR_RX.findall(text)]
+    uncertain = False
+    if len(set(stated)) == 1:
+        context_year = stated[0]
+    elif academic_year is not None:
+        context_year = academic_year
+    elif stated:
+        context_year, uncertain = stated[0], True
+    else:
+        context_year = None
     for line_no, line in enumerate(text.splitlines(), 1):
         for code, severity, rx, message, suggest in _RULES:
             for match in rx.finditer(line):
@@ -100,7 +145,7 @@ def lint_text(text: str) -> dict[str, object]:
                     "message": message,
                     "suggest": suggest,
                 })
-        for finding in check_date_weekday(line):
+        for finding in check_date_weekday(line, context_year, uncertain):
             finding["line"] = line_no
             findings.append(finding)
 
@@ -124,6 +169,7 @@ def main() -> int:
     parser.add_argument("--hwpx", help=".hwpx 파일에서 본문 추출 후 검수")
     parser.add_argument("--file", help="텍스트 파일 검수")
     parser.add_argument("--format", choices=["json", "text"], default="json")
+    parser.add_argument("--academic-year", type=int, help="본문의 학년도가 없거나 여럿일 때 연도 없는 날짜의 학년도")
     args = parser.parse_args()
 
     if args.hwpx:
@@ -133,7 +179,7 @@ def main() -> int:
     else:
         text = sys.stdin.read()
 
-    result = lint_text(text)
+    result = lint_text(text, args.academic_year)
     if args.format == "text":
         summary = result["summary"]
         assert isinstance(summary, dict)

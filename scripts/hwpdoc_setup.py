@@ -7,8 +7,166 @@ import copy
 import uuid
 import base64
 import os
+import re
+import tomllib
+from urllib.parse import urlsplit
 
 import hwpdoc as h
+
+
+DEFAULT_MCP_URL = 'https://teacher-doc-mcp.vercel.app/api/mcp'
+
+
+def validate_mcp_url(url):
+    """Validate endpoints locally; credentials belong to the remote server."""
+    if not isinstance(url, str) or not url or any(c.isspace() or ord(c) < 32 for c in url) or '\\' in url:
+        raise ValueError('MCP URL은 공백 없는 HTTPS URL이어야 합니다')
+    parsed = urlsplit(url)
+    if (not parsed.hostname or parsed.username is not None or parsed.password is not None or parsed.fragment
+            or parsed.port == 0 or not (parsed.scheme == 'https' or
+                parsed.scheme == 'http' and parsed.hostname in ('127.0.0.1', 'localhost'))):
+        raise ValueError('HTTPS만 허용합니다 (개발용 http://127.0.0.1 및 http://localhost 예외). URL 인증정보는 지원하지 않습니다')
+    return url
+
+
+def _json_add_member(text, key, value):
+    """Insert one member without rewriting existing JSON members/formatting."""
+    end = text.rfind('}')
+    existing = json.loads(text)
+    newline = '\r\n' if '\r\n' in text else '\n'
+    entry = json.dumps(key) + ': ' + json.dumps(value, ensure_ascii=False)
+    return text[:end].rstrip() + (',' if existing else '') + newline + '  ' + entry + newline + text[end:]
+
+
+def _claude_mcp_text(text, url):
+    existing = json.loads(text)
+    if not isinstance(existing, dict):
+        raise ValueError('Claude MCP 설정은 JSON 객체여야 합니다')
+    servers = existing.get('mcpServers', {})
+    if not isinstance(servers, dict):
+        raise ValueError('mcpServers는 JSON 객체여야 합니다')
+    entry = servers.get('teacher_doc_mcp')
+    if 'teacher_doc_mcp' in servers:
+        if not isinstance(entry, dict) or entry.get('url') != url or entry.get('type') != 'http' or 'command' in entry:
+            raise ValueError('teacher_doc_mcp 앱 설정 충돌: 기존 항목을 보존했습니다')
+        return text
+    value = {'type': 'http', 'url': url}
+    if 'mcpServers' not in existing:
+        return _json_add_member(text, 'mcpServers', {'teacher_doc_mcp': value})
+    # Find the actual top-level member, not a string/comment/nested lookalike.
+    decoder, pos = json.JSONDecoder(), text.index('{') + 1
+    while True:
+        pos = len(text) - len(text[pos:].lstrip())
+        key, pos = decoder.raw_decode(text, pos)
+        pos = text.index(':', pos) + 1
+        pos = len(text) - len(text[pos:].lstrip())
+        _, end = decoder.raw_decode(text, pos)
+        if key == 'mcpServers':
+            return text[:pos] + _json_add_member(text[pos:end], 'teacher_doc_mcp', value) + text[end:]
+        pos = text.index(',', end) + 1
+
+
+def _codex_inline_mcp_text(text, url, servers):
+    """Insert into the root inline table, retaining all existing source text.
+
+    Called only when appending a subtable fails: a root inline table is sealed
+    in TOML. Skip strings/comments so nested braces and sample settings in
+    multiline strings cannot be mistaken for the table's closing brace.
+    """
+    basic = r'"(?:\\[\s\S]|[^"\\])*"'
+    literal = r"'[^']*'"
+    tokens = re.compile(
+        r'(?P<assignment>^[ \t]*(?P<key>[A-Za-z0-9_-]+|' + basic + '|' + literal + r')[ \t]*=[ \t]*\{)'
+        r'|"""(?:\\[\s\S]|(?!""")[\s\S])*""""{0,2}'
+        r"|'''[\s\S]*?''''{0,2}"
+        + '|' + basic + '|' + literal + r'|#[^\r\n]*|(?P<brace>[{}])', re.MULTILINE)
+    depth = None
+    for token in tokens.finditer(text):
+        if depth is None:
+            if token.group('assignment') and 'mcp_servers' in tomllib.loads(token.group('key') + ' = {}'):
+                depth = 1
+        elif token.group('brace'):
+            depth += 1 if token.group('brace') == '{' else -1
+            if depth == 0:
+                entry = (', ' if servers else '') + 'teacher_doc_mcp = { url = ' + json.dumps(url, ensure_ascii=False) + ' }'
+                return text[:token.start()] + entry + text[token.start():]
+    return None
+
+
+def _codex_mcp_text(text, url):
+    existing = tomllib.loads(text)
+    servers = existing.get('mcp_servers', {})
+    if not isinstance(servers, dict):
+        raise ValueError('mcp_servers는 TOML 테이블이어야 합니다')
+    entry = servers.get('teacher_doc_mcp')
+    if 'teacher_doc_mcp' in servers:
+        if not isinstance(entry, dict) or entry.get('url') != url or 'command' in entry:
+            raise ValueError('teacher_doc_mcp 앱 설정 충돌: 기존 항목을 보존했습니다')
+        return text
+    newline = '\r\n' if '\r\n' in text else '\n'
+    updated = text + (newline if text and not text.endswith('\n') else '') + newline
+    updated += '[mcp_servers.teacher_doc_mcp]' + newline + 'url = ' + json.dumps(url, ensure_ascii=False) + newline
+    try:
+        tomllib.loads(updated)
+    except tomllib.TOMLDecodeError:
+        updated = _codex_inline_mcp_text(text, url, servers)
+        if updated is None:
+            raise
+        tomllib.loads(updated)  # Validate the insertion before any writes.
+    return updated
+
+
+def setup_mcp(args):
+    from hwpdoc_workspace import workspace_settings
+    url = validate_mcp_url(args.url)
+    if h.ROOT == h.CODE_ROOT:
+        raise ValueError('개발 체크아웃의 MCP 설정은 변경하지 않습니다. 별도 --workspace를 지정하세요')
+    with h.lock(h.workspace_path('.hwpdoc/settings.lock')):
+        marker, settings = workspace_settings()
+        app = args.app or settings.get('app')
+        if app not in ('claude', 'codex'):
+            raise ValueError('--app codex|claude를 지정하세요')
+        connection = settings.get('connections', {}).get('teacher_doc_mcp')
+        if connection is None or connection == 'unconfirmed':
+            connection = {}
+        if not isinstance(connection, dict) or connection.get('url', url) != url:
+            raise ValueError('connections.teacher_doc_mcp URL 충돌: 기존 설정을 보존했습니다')
+        apps = connection.get('registered_apps', [])
+        if not isinstance(apps, list) or any(a not in ('codex', 'claude') for a in apps):
+            raise ValueError('registered_apps는 앱 이름 목록이어야 합니다')
+        path = h.workspace_path('.mcp.json' if app == 'claude' else '.codex/config.toml')
+        raw = path.read_bytes() if path.exists() else b''
+        text = raw.decode('utf-8-sig') if raw else ('{}' if app == 'claude' else '')
+        updated = (_claude_mcp_text if app == 'claude' else _codex_mcp_text)(text, url)
+        encoded = (b'\xef\xbb\xbf' if raw.startswith(b'\xef\xbb\xbf') else b'') + updated.encode('utf-8')
+        value = dict(connection, url=url, registered_apps=apps if app in apps else [*apps, app])
+        changed = encoded != raw or connection != value
+        if encoded != raw:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            temporary = path.with_name(path.name + '.' + uuid.uuid4().hex + '.tmp')
+            try:
+                temporary.write_bytes(encoded)
+                os.replace(temporary, path)
+            finally:
+                temporary.unlink(missing_ok=True)
+        if connection != value:
+            settings.setdefault('connections', {})['teacher_doc_mcp'] = value
+            h.write_json(marker, settings)
+            h.configure(h.ROOT)
+        if changed:
+            h.audit('setup_mcp', path, 'pass', {'url': url, 'app': app, 'actual_calls': 'unverified'})
+    return {'status': 'configured' if changed else 'unchanged', 'path': str(path),
+            **value, 'actual_calls': 'unverified'}
+
+
+def mcp_diagnostics():
+    connection = h.CONTEXT.settings.get('connections', {}).get('teacher_doc_mcp')
+    connection = connection if isinstance(connection, dict) else {}
+    url = connection.get('url')
+    school = h.CONTEXT.settings.get('school', {}).get('neis')
+    return {'configured': bool(url), 'url': url, 'registered_apps': connection.get('registered_apps', []),
+            'school_identification_stored': bool(isinstance(school, dict) and school.get('candidateId')),
+            'actual_calls': 'unverified'}
 
 
 def hook_command(script, mode, app='claude'):
@@ -131,6 +289,9 @@ def setup_runtime(args):
 
 
 def add_commands(commands):
+    p = commands.add_parser('setup-mcp', help='작업 폴더 앱 설정에 원격 teacher_doc_mcp 등록 (네트워크 호출 없음)')
+    p.add_argument('--url', default=DEFAULT_MCP_URL, help='원격 학교 정보 MCP URL (생략하면 기본 서버 사용)')
+    p.add_argument('--app', choices=['claude', 'codex'], help='생략하면 workspace.json의 app 사용')
     p = commands.add_parser('setup-hooks')
     p.add_argument('--app', choices=['claude', 'codex'], required=True)
     p.add_argument('--tool', action='append', help='실제 관측한 도구명의 matcher 정규식')

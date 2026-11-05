@@ -8,7 +8,7 @@ MVP 성공 기준(CLAUDE.md, 2026. 7. 24. 재개정): W1 5건에 대해 사용�
 여부와는 무관 — 발송은 항상 사람이 하고 에이전트는 관여하지 않는다(CLAUDE.md 금지 규칙 2).
 
 사용 예:
-  python scripts/log_review.py --file output/2026_농어촌유학_수리과학체험_기안문.hwpx \
+  python scripts/log_review.py --file output/2026_현장체험학습_기안문.hwpx \
       --type W1 --approved yes --score 4 --note "붙임 표기만 수정"
   python scripts/log_review.py --summary
 """
@@ -18,7 +18,7 @@ import json
 import sys
 from pathlib import Path
 
-from hwpdoc_config import current_context
+from hwpdoc_config import current_context, reject_broken_text
 ROOT = current_context().workspace
 LOG = ROOT / "logs" / "review_log.jsonl"
 
@@ -84,6 +84,12 @@ def main():
     ap.add_argument("--note", default="", help="검토 코멘트 (선택)")
     args = ap.parse_args()
 
+    try:
+        reject_broken_text(args.note, 'log_review --note')
+    except ValueError as exc:
+        print(json.dumps({'status': 'unconfirmed', 'error': str(exc)}, ensure_ascii=False), file=sys.stderr)
+        return 2
+
     if args.summary:
         summarize()
         return
@@ -96,4 +102,4 @@ def main():
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    main()
+    raise SystemExit(main())

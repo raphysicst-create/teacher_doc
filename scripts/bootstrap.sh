@@ -3,25 +3,29 @@
 set -euo pipefail
 root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
 workspace= data_dir=${HWPDOC_PC_DATA:-${LOCALAPPDATA:-$HOME/AppData/Local}/hwpdoc} python= allow=0 data_explicit=0
+no_mcp=0 mcp_explicit=0
 forward=()
 fail() { printf 'teacher_doc setup failed: %s\n' "$*" >&2; exit 2; }
 while (($#)); do
     case "$1" in
-        --workspace|--data-dir|--python|--mode|--app|--skill-name)
+        --workspace|--data-dir|--python|--mode|--app|--skill-name|--mcp-url)
             (($# >= 2)) || fail "Missing value for $1"
             case "$1" in
                 --workspace) workspace=$2 ;;
                 --data-dir) data_dir=$2; data_explicit=1 ;;
                 --python) python=$2 ;;
+                --mcp-url) mcp_explicit=1; forward+=("$1" "$2") ;;
                 *) forward+=("$1" "$2") ;;
             esac; shift 2 ;;
         --allow-python-install) allow=1; shift ;;
+        --no-mcp) no_mcp=1; forward+=("$1"); shift ;;
         --school-data|--visual) forward+=("$1"); shift ;;
         --help|-h)
-            printf '%s\n' 'Usage: bash scripts/bootstrap.sh --workspace PATH [--data-dir PATH] [--python ABSOLUTE_PATH] [--allow-python-install] [--mode xml|full] [--app codex|claude] [--skill-name NAME] [--school-data] [--visual]' 'Only add --allow-python-install after the user approved application-local Astral uv/CPython installation.'; exit 0 ;;
+            printf '%s\n' 'Usage: bash scripts/bootstrap.sh --workspace PATH [--data-dir PATH] [--python ABSOLUTE_PATH] [--allow-python-install] [--mode xml|full] [--app codex|claude] [--skill-name NAME] [--school-data] [--visual] [--mcp-url URL | --no-mcp]' 'Remote school MCP is registered by default; TEACHER_DOC_MCP_URL overrides the default server.' 'Only add --allow-python-install after the user approved application-local Astral uv/CPython installation.'; exit 0 ;;
         *) fail "Unknown option: $1" ;;
     esac
 done
+[[ $no_mcp = 0 || $mcp_explicit = 0 ]] || fail '--no-mcp and --mcp-url cannot be used together'
 [[ -n $workspace ]] || fail '--workspace is required'
 # A Python-free shell must not guess JSON paths or create a second runtime.
 if [[ $data_explicit = 0 && -z ${HWPDOC_PC_DATA:-} && -f $workspace/.hwpdoc/onboarding.json ]]; then

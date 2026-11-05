@@ -13,6 +13,8 @@
   3. 역순 문자열   — PDF에 없는 앵커의 뒤집힌 문자열이 PDF에 있으면 역순 렌더링으로 판정
   4. 개체 잔재     — 논리 텍스트에 없는 원문자(①㉮◯류)가 PDF에 보이면 compose 등
                      비텍스트 개체 잔재로 판정
+  5. 쪽 끝 닿음    — 레퍼런스에 없던 쪽에서 내용이 쪽 아래·오른쪽 끝에 닿으면 잘림으로 판정
+                     (근거: 2026. 11. 1. 표가 쪽 끝에서 잘린 회의록이 1~4를 통과)
 
 사용법:
     python scripts/render_check.py 결과.hwpx --reference 베이스.hwpx [--json] [--keep-pdf 경로]
@@ -36,6 +38,7 @@ ANCHOR_MAX = 80               # 앵커 최대 개수 (문서 전체에 고르게
 FOUND_RATIO_MIN = 0.80        # 앵커 발견율 하한
 ORDER_LIS_RATIO_MIN = 0.90    # 발견 앵커 중 순서 유지(LIS) 비율 하한
 PDF_TEXT_MIN_CHARS = 100      # PDF 추출 텍스트가 이보다 짧으면 추출 실패로 간주
+PAGE_EDGE_RATIO = 0.03        # 쪽 가장자리 이 비율 안쪽까지 내용이 닿으면 잘림 위험
 
 # 개체 잔재 의심 문자 (원문자·괄호문자 계열)
 SUSPICIOUS_CHARS = set(
@@ -142,8 +145,37 @@ def check_object_residue(logical_text: str, pdf_text: str,
     return {'inherited': inherited, 'unexpected': unexpected}
 
 
+def page_edges(pdf_path: Path) -> dict[str, set[int]]:
+    """내용이 쪽 아래·오른쪽 끝에 닿은 쪽 번호. 글자·선·도형을 모두 본다."""
+    import fitz
+    edges: dict[str, set[int]] = {'bottom': set(), 'right': set()}
+    with fitz.open(pdf_path) as doc:
+        for number, page in enumerate(doc, start=1):
+            width, height = page.rect.width, page.rect.height
+            boxes = [fitz.Rect(block[:4]) for block in page.get_text('blocks')]
+            boxes += [item['rect'] for item in page.get_drawings()
+                      if item['rect'].height < height * 0.98 or item['rect'].width < width * 0.98]
+            if not boxes:
+                continue
+            if max(box.y1 for box in boxes) > height * (1 - PAGE_EDGE_RATIO):
+                edges['bottom'].add(number)
+            if max(box.x1 for box in boxes) > width * (1 - PAGE_EDGE_RATIO / 2):
+                edges['right'].add(number)
+    return edges
+
+
+def page_edge_fails(output: dict[str, set[int]], reference: dict[str, set[int]]) -> list[str]:
+    fails = []
+    bottom = sorted(output['bottom'] - reference['bottom'])
+    if bottom:
+        fails.append(f"쪽 아래 끝 닿음(잘림 위험): {bottom}쪽")
+    if output['right'] and not reference['right']:
+        fails.append(f"쪽 오른쪽 끝 닿음(넘침 위험): {sorted(output['right'])}쪽")
+    return fails
+
+
 def main() -> int:
-    ap = argparse.ArgumentParser(description="HWPX 렌더링 검증 (쪽수·순서·역순·개체 잔재)")
+    ap = argparse.ArgumentParser(description="HWPX 렌더링 검증 (쪽수·순서·역순·개체 잔재·쪽 끝 닿음)")
     ap.add_argument("output", help="검사할 결과물 .hwpx")
     ap.add_argument("--reference", help="쪽수·원문자 렌더 대조 기준 파일 (.hwpx 또는 .hwp)")
     ap.add_argument("--json", action="store_true", help="JSON으로 출력")
@@ -179,6 +211,8 @@ def main() -> int:
                 reference_pdf_path = Path(ref_dir) / "reference.pdf"
                 ref_pages = hancom_pages_and_pdf(Path(args.reference), reference_pdf_path)
                 reference_pdf_text = extract_pdf_text(reference_pdf_path)
+                if reference_pdf_path.exists():
+                    report["fails"].extend(page_edge_fails(page_edges(pdf_path), page_edges(reference_pdf_path)))
             if len(norm(reference_pdf_text)) < PDF_TEXT_MIN_CHARS:
                 raise RuntimeError("레퍼런스 PDF 추출 텍스트가 너무 짧음 — 원본 대조 불가")
             report["checks"]["pages_reference"] = ref_pages

@@ -14,6 +14,8 @@ import venv
 ROOT = Path(__file__).resolve().parents[1]
 
 
+@unittest.skipIf(os.environ.get('HWPDOC_TEST_OFFLINE') == '1',
+                 'offline run: fresh-environment installation invokes pip install')
 class Onboarding(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -168,7 +170,9 @@ class Onboarding(unittest.TestCase):
             config.write_bytes(original)
 
     def test_11_new_session_restores_recorded_runtime(self):
-        env = {k: v for k, v in self.env.items() if k not in ('HWPDOC_PC_DATA', 'HWPDOC_WORKSPACE')}
+        # A new session has no recorded paths in its environment, nor a host shell's inherited policy.
+        env = {k: v for k, v in self.env.items() if k not in ('HWPDOC_PC_DATA', 'HWPDOC_WORKSPACE')
+               and k.upper() != 'PSEXECUTIONPOLICYPREFERENCE'}
         tracked = [self.workspace / '.hwpdoc/workspace.json', self.workspace / 'AGENTS.md',
                    *list((self.workspace / 'output/teacher-doc-practice').glob('*'))]
         before = {str(p): p.read_bytes() for p in tracked}
@@ -178,18 +182,21 @@ class Onboarding(unittest.TestCase):
         self.assertEqual(record['pc_data'], str(self.data))
         self.assertEqual(record['checks']['python']['selected_path'], self.python)
         if os.name == 'nt':
-            result = self.run_process(['powershell.exe', '-NoProfile', '-File', ROOT / 'scripts/teacher_doc.ps1',
+            result = self.run_process(['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'RemoteSigned', '-File', ROOT / 'scripts/teacher_doc.ps1',
                                        '--workspace', self.workspace, 'doctor', '--mode', 'xml'], env)
             self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
             self.assertEqual(json.loads(result.stdout)['checks']['python']['path'], self.python)
         self.assertEqual(before, {str(p): p.read_bytes() for p in tracked})
 
     def test_11_package_layout(self):
-        catalog = json.loads((ROOT / '.agents/plugins/marketplace.json').read_text())
+        development = (ROOT / '.claude/skills/hwpx/SKILL.md').is_file()
+        catalog_path = ROOT / ('distribution/marketplace.json' if development else '.agents/plugins/marketplace.json')
+        catalog = json.loads(catalog_path.read_text())
         entry = next(e for e in catalog['plugins'] if e['name'] == 'teacher_doc')
         self.assertEqual(entry['source'], {'source': 'local', 'path': './'})
         self.assertEqual(entry['policy']['installation'], 'AVAILABLE')
-        self.assertTrue((ROOT / 'skills/teacher-doc-setup/SKILL.md').is_file())
+        skill_path = '.claude/skills/teacher-doc-setup/SKILL.md' if development else 'skills/teacher-doc-setup/SKILL.md'
+        self.assertTrue((ROOT / skill_path).is_file())
 
 
 if __name__ == '__main__':

@@ -4,7 +4,7 @@
 
 프로젝트·플러그인·배포 폴더 이름은 `teacher_doc`, 기본 명령은 `scripts/teacher_doc.ps1`이다. 기존 `scripts/hwpdoc.ps1`/`.py`, `.hwpdoc` 기록과 PC 데이터 경로, `HWPDOC_*` 환경변수는 호환용으로 유지한다.
 
-현재 버전은 0.1.0 구현 후보다. **라이선스·포함 자산 검토와 앱별 독립 인수·교사 시범 사용이 완료되기 전에는 보급 완료로 표시하지 않는다.** 이 폴더는 배포 정의이며 설치 가능한 공개 릴리스가 아니다.
+현재 개발 코드는 GitHub `0.1.3`(2026. 10. 2., `380a122`)과 동기화했다. 학교 운영 설정과 기존 개발 경로는 유지한다. 첫 설치는 [초보자 안내](../docs/BEGINNER.md), 개발 정본에서의 반영 범위는 [동기화 기록](../docs/GitHub-동기화-20261012.md)을 따른다. **코드 변경으로 예전 권리·개인정보 검토 해시는 오래된 상태다.** 이 폴더는 배포 정의이며 이번 동기화가 새 패키지의 배포 승인이나 앱별 독립 인수·교사 시범 사용 완료를 뜻하지 않는다.
 
 ## 설치와 작업 폴더
 
@@ -23,7 +23,7 @@ Windows 훅 명령은 앱별 셸 차이에 맞춰 생성한다. 훅 실행기 �
 
 Python 3.12는 PC별 runtime.json 또는 해당 PC 설치 경로/레지스트리에서 찾는다. 의존성을 별도 환경에 설치하려면 `scripts/install-dependencies.ps1`을 사용한다. PC 데이터는 기본 `%LOCALAPPDATA%/hwpdoc`이며 `-DataDir`로 격리 시험 위치를 지정할 수 있다. 기본 XML/생성/PDF 읽기, Windows COM, 학교 자료(xlsx/xls), 시각 렌더 의존성을 나눴다. `-SchoolData`, `-Visual`은 해당 기능이 필요할 때 선택한다. PyMuPDF는 무료 AGPL-3.0으로 사용한다(2026. 9. 13. 사용자 확정). 배포본에는 AGPL 전문·저작권 고지와 AGPL 적용 대상 프로그램의 해당 버전 대응 소스 및 필요한 설치·빌드 자료를 제공한다. 라이선스 선택은 완료됐으며, 소스 제공·고지의 실제 이행은 배포 준비에서 검증한다. 버전은 개발 환경 관측값을 고정했으며 깨끗한 PC에서 설치 성공을 별도 확인해야 한다.
 
-한글 프로그램과 FilePathCheckerModule 보안모듈은 Python 패키지와 별개다. doctor에서 미등록/실행 불가로 나오면 설치된 한글의 자동화 환경을 확인한다. Node.js/kordoc 및 school_task_guide는 선택 연결이다. 없으면 스킬에 적힌 추출/편집/신구대조 및 원문 확인 경로로 진행하고 미사용·미확인 사실을 보존한다.
+한글 프로그램과 FilePathCheckerModule 보안모듈은 Python 패키지와 별개다. doctor에서 미등록/실행 불가로 나오면 설치된 한글의 자동화 환경을 확인한다. Node.js/kordoc은 선택 연결이다. 없으면 스킬에 적힌 추출/편집/신구대조 및 원문 확인 경로로 진행하고 미사용·미확인 사실을 보존한다.
 
 현재 PC의 별도 가상환경과 한글·공백이 있는 격리 작업 폴더에서 설치·doctor·합성 양식 등록 기계 단계·COM/PDF/PNG를 확인했다. init은 생성할 디렉터리가 248자 이상이거나 파일 경로가 260자 이상이면 생성 전에 짧은 경로를 안내한다. Windows 장경로 설정만으로 한글·앱 전체의 지원을 가정하지 않는다. 다른 계정/PC와 정식 패키지의 앱별 전체 인수는 별도 검증 대상이며 Mac과 두 앱 동시 실행도 지원 대상으로 표시하지 않는다.
 
@@ -43,7 +43,7 @@ Python 3.12는 PC별 runtime.json 또는 해당 PC 설치 경로/레지스트리
 
 스킬의 references/workflow.md를 먼저 읽는다. add-template의 source → mapping → review 순서, prepare → 실제 문안 확인 → build → validate → deliver 순서를 따른다. 등록 review에는 confirmed/by/at/record, hashes, purposes, provenance가 필요하다. provenance는 등록 초안의 원본 종류와 일치해야 한다. 실제 확인 기록을 파일과 연결할 뿐, 확인 행위의 진위를 자동 보증하지 않는다. 기존 5종은 운영 프로젝트에서 계속 사용할 수 있다. migrate-templates는 기존 파일·해시·출처를 모아 사람의 등록 확인을 기다린다. 학교가 들어간 기존 양식은 이 공개 후보에 포함하지 않는다.
 
-prepare는 교사가 복잡한 입력 JSON을 직접 작성하라는 기능이 아니다. 에이전트가 수집 가능한 정보를 준비하고 누락된 판단을 묶어 물은 뒤 실제 대화 근거로 입력을 완성한다. version=2 입력에서는 sources/attachments의 sha256, evidence.sha256, source/reference를 쓰는 경우 각각 source_sha256/reference_sha256을 현재 파일에서 수집한다. 초안 승인 input_sha256은 draft_approval를 제외한 전체 입력의 정렬 JSON SHA256이다. 이를 기록하는 것은 실제 승인을 받은 뒤이며, 경로 이동/수정으로 승인을 만들어내지 않는다.
+prepare는 교사가 복잡한 입력 JSON을 직접 작성하라는 기능이 아니다. 에이전트가 수집 가능한 정보를 준비하고 누락된 판단을 묶어 물은 뒤 실제 대화 근거로 입력을 완성한다. version=2 입력에서는 sources/attachments의 sha256, source/reference를 쓰는 경우 각각 source_sha256/reference_sha256을 현재 파일에서 수집한다. 초안 승인 input_sha256은 draft_approval를 제외한 전체 입력의 정렬 JSON SHA256이다. 이를 기록하는 것은 실제 승인을 받은 뒤이며, 경로 이동/수정으로 승인을 만들어내지 않는다.
 
 ## 업데이트와 제거
 

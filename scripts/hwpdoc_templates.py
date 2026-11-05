@@ -196,7 +196,7 @@ def _add_template(args, folder):
     if args.source:
         if record.exists() or (folder / 'original.hwpx').exists():
             raise ValueError('기존 등록을 덮어쓰지 않습니다. 새 version을 사용하세요')
-        source = h.input_path(args.source)
+        source = h.original_input_path(args.source)
         if source.suffix.lower() != '.hwpx' or not source.is_file():
             raise ValueError('양식 등록은 HWPX만 지원합니다. HWP는 원본 보존 후 한글에서 HWPX 사본으로 저장하세요')
         slots = extracted(source)  # Invalid packages leave no orphaned original copy.

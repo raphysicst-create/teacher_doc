@@ -18,7 +18,7 @@ Windows·macOS·Linux의 XML 모드는 구조·슬롯 편집을 연습하는 경
 
 1. 기존 슬롯 템플릿 또는 HWPX 양식의 내용 교체: **초안 작성 전에** 텍스트와 구조를 읽고 `hwpx_slots.py`로 편집할 슬롯을 확인한다. 원본 제목 서식·상자·표 순서/병합·명의 위치를 유지한 초안을 `edit_hwpx.py --slot-json`으로 새 파일에 채운다. Markdown 초안을 근거로 원본 본문을 지우고 재조립하지 않는다.
 2. 특정 문단·셀 수정: 프로젝트의 Reader/패치 도구를 우선하며 연결 불가 시 추출된 슬롯·셀 주소로 `edit_hwpx.py`를 사용한다. 마크다운 표를 보고 행/열 번호를 추정하지 않는다.
-3. 행·열·병합 등 구조 변경: 프로젝트 지침에 따라 변경 전후와 구체적인 사용자 요청·승인 범위를 확인한 뒤 기존 재생성 경로로 처리한다. 문안 생성 승인만으로 구조 변경을 승인된 것으로 기록하지 않는다. 필요한 경우에만 [XML 작성 참고](references/xml-authoring.md)를 읽는다. 자동 슬롯 실행기에 맡기지 않는다.
+3. 행·열·병합 등 구조 변경: 프로젝트 지침에 따라 변경 전후와 구체적인 사용자 요청·승인 범위를 확인한 뒤 기존 재생성 경로로 처리한다. 문안 생성 승인만으로 구조 변경을 승인된 것으로 기록하지 않는다. 필요한 경우에만 [XML 작성 참고](references/xml-authoring.md)를 읽는다. 자동 슬롯 실행기에 맡기지 않는다. 승인된 행 삭제·추가는 XML을 직접 고치지 않고 `table_rows.py`로 한다. 칸 주소·병합·표 높이를 함께 맞춘다. 번호는 슬롯 키의 표·행 번호이고, 행을 바꾼 뒤에는 슬롯을 다시 읽는다. 행·열 삭제를 에이전트가 판단해 진행하지 않는다는 프로젝트 결정은 그대로다.
 4. 양식 없는 신규 문서: [XML 작성 참고](references/xml-authoring.md)의 `build_hwpx.py` 경로를 사용한다. 상세 요소는 [HWPX 형식](references/hwpx-format.md)을 필요한 부분만 읽는다.
 5. `.hwp` 원본 읽기·변환과 `hwpx-fallback` 진입 조건은 프로젝트 지침을 따른다. `.hwp` 결과물을 생성하거나 원본을 덮어쓰지 않는다. 폴백 비교가 필요한 경우에만 [기능 비교](references/jkf87-hwpx-skill-comparison.md)를 읽는다.
 
@@ -28,6 +28,8 @@ Windows·macOS·Linux의 XML 모드는 구조·슬롯 편집을 연습하는 경
 
 ```powershell
 # taskPlugin은 이 스킬이 속한 코드 루트, taskWorkspace는 교사의 작업 폴더다.
+# 스크립트 파일이 막힌 PC에서도 불러오도록 이 프로세스에만 실행 정책을 준다(레지스트리 불변).
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
 . "$taskPlugin/scripts/runtime.ps1"
 $taskPython = Get-HwpdocPython -Workspace $taskWorkspace
 # taskSkill은 실제 로드한 SKILL.md의 상위 폴더다.
@@ -62,6 +64,10 @@ cd "$taskWorkspace"
 
 `--allow-over-budget`은 셀 폭을 넓히지 않는다. `--verified-by-render`는 미검증 사본을 실제 PDF→PNG로 판독한 **뒤에만** 붙인다. 최종 파일이 판독한 사본과 같은 해시인지 확인하고, 다르면 최종 파일을 다시 렌더한다. 원본과 나란히 제목 강조·상자·표 구성·줄바꿈/여백·명의 위치를 확인하며, 1쪽·잘림 없음만으로 양식 보존을 판정하지 않는다. 초과 WARNING은 보고에 남기고 자동 실행기는 이 플래그를 주입하지 않는다.
 
+렌더를 못 하는 세션에서 예산 초과로 막히면 빈손으로 끝내지 않는다. `--draft-over-budget`으로 이름에 `미검증`이 든 사본을 만들고, 초과 칸과 렌더 미확인을 보고한다. 이 사본은 최종본이 아니며 렌더 판독 뒤 `--allow-over-budget --verified-by-render`로 다시 만든다.
+
+명령 출력과 kordoc 파싱 결과는 작업 자료이지 문서 내용이 아니다. 잘리거나 `??`로 깨진 출력을 문서에 옮기지 않는다. `parse_document`의 첫 줄 `[포맷: …]`은 본문이 아니다. PowerShell을 거치면 한글이 깨질 수 있으므로 값은 Python으로 UTF-8 JSON 파일에 쓰고 `--slot-json`으로 넘기며, 파일을 읽을 때는 `-Encoding UTF8`을 쓴다.
+
 ## 검증 도구
 
 전체 순서와 조건은 [업무 절차](references/workflow.md)의 검증 절과 기존 운영 프로젝트 지침을 따른다. 순서는 구조 검사 → 네임스페이스 보정 → finalize → layout → page_guard → COM·조건부 렌더 → 내용·공문 규칙 → 신구대조다. 실행기의 build/validate/deliver/status를 우선 사용한다.
@@ -70,6 +76,7 @@ cd "$taskWorkspace"
 - `fix_namespaces.py`: 프리픽스·header itemCnt 보정.
 - `finalize_hwpx.py --strip-linesegarray --layout`: 캐시 제거와 밀도 경고. `--hancom`: 실제 COM 열기 검사.
 - `page_guard.py --budget-profile ... --structure-profile ...`: 텍스트 예산과 전체 패키지 구조 비교. 프로파일은 **finalize 완료 후 사본**에서 만든다. 승인되지 않은 출력으로 기준을 재설정하지 않는다.
+- `value_guard.py --values 값.json|값.md --reference 베이스.hwpx`: 받은 값이 결과에 실제로 들어갔는지 대조하고, 베이스와 같은 날짜·금액 칸을 슬롯 주소로 나열한다. 교사가 준 값이나 작업에서 정한 값이 있으면 실행한다. `미반영`은 고치거나 보고에 그대로 옮기며, 나열된 칸은 올해 값인지 확인한다. 값을 옮겨 적지 않고 다듬으면 미반영으로 잡힌다.
 - `content_guard.py`: placeholder/원문 잔재/필수 값 검사. `gonmun_lint.py`: 날짜·요일 등 공문 규칙 검사. 주력 사본을 사용한다.
 - 프로젝트 `scripts/render_check.py`: COM 쪽수·PDF 텍스트 순서/역순·개체 잔재 검사. 예산 초과 셀의 육안 판독은 별도다.
 - `text_extract.py --format markdown`: Reader 연결 불가 시 텍스트 추출. 원본이 있으면 신구대조를 남긴다.

@@ -37,6 +37,7 @@ NS = {
     "hp": "http://www.hancom.co.kr/hwpml/2011/paragraph",
     "hs": "http://www.hancom.co.kr/hwpml/2011/section",
 }
+TABLE_WIDTH_TOLERANCE = 0.05  # 2026. 11. 1.: kordoc 대체본이 표 폭을 모두 바꿔 9쪽 문서가 11쪽이 됐다
 
 
 @dataclass
@@ -330,6 +331,7 @@ def compare_text_budget_profile(
     output_profile: dict[str, Any],
     strict_paragraphs: bool = True,
     reviewed_paragraphs: tuple[str, ...] = (),
+    reviewed_slots: tuple[str, ...] = (),
 ) -> list[str]:
     errors: list[str] = []
     ref_slots = _slots_by_key(budget_profile)
@@ -365,8 +367,8 @@ def compare_text_budget_profile(
                 f"text={out.get('text_preview', '')!r}"
             )
         elif out_len > max_chars:
-            if kind == 'paragraph' and key in reviewed_paragraphs:
-                print(f'WARNING: {key} 문단 예산 초과를 현재 렌더 판독으로 확인: max={max_chars}, out={out_len}')
+            if key in reviewed_slots or kind == 'paragraph' and key in reviewed_paragraphs:
+                print(f'WARNING: {key} 예산 초과를 현재 렌더 판독으로 확인: max={max_chars}, out={out_len}')
                 continue
             errors.append(
                 f"{key} 글자 예산 초과: max={max_chars}, out={out_len}, "
@@ -401,6 +403,102 @@ def paragraph_render_keys(review_path: Path, reference: Path, output: Path) -> t
 
 def _sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def visual_render_keys(review_path: Path, reference: Path, output: Path,
+                       declared: list[str], aliases: dict[str, str], *, review=None,
+                       job_id=None, render_record=None, confirmation_record=None) -> tuple[str, ...]:
+    """Accept only a receipt bound to the workflow's explicit confirm command.
+
+    This is local workflow provenance, not proof that a human saw the images,
+    nor a security boundary against an actor who can rewrite report.json too.
+    """
+    if review is None:
+        review = json.loads(review_path.read_text(encoding='utf-8-sig'))
+    keys = visual_render_evidence(review_path, reference, output, declared, aliases,
+                                  review=review, job_id=job_id, render_record=render_record)
+    if (not isinstance(confirmation_record, dict)
+            or confirmation_record.get('record_sha256') != _sha256(review_path.read_bytes())
+            or any(confirmation_record.get(k) != review.get(k) for k in ('by', 'at'))):
+        raise ValueError('렌더 판독 확정 기록/파일 해시 불일치: review --confirm --by --record 필요')
+    return keys
+
+
+def visual_render_evidence(review_path: Path, reference: Path, output: Path,
+                           declared: list[str], aliases: dict[str, str], *, review,
+                           job_id, render_record) -> tuple[str, ...]:
+    """Waive only declared, observed budgets; all structural checks still run.
+
+    Artifact paths are relative to the receipt. Alias ownership is supplied by
+    the workflow's existing checklist_aliases, never guessed from equal text.
+    An observed paragraph cannot excuse an unobserved sibling's overflow.
+    """
+    if not (isinstance(review, dict) and review.get('confirmed') is True and all(isinstance(review.get(k), str) and review[k].strip()
+                                                for k in ('by', 'at', 'record'))):
+        raise ValueError('렌더 판독 미확정: review --confirm --by --record 필요')
+    if not job_id or review.get('job_id') != job_id or review.get('kind') != 'hwpdoc-visual-review':
+        raise ValueError('렌더 판독 job_id/kind 불일치')
+    if (review.get('document_sha256') != _sha256(output.read_bytes())
+            or review.get('reference_sha256') != _sha256(reference.read_bytes())):
+        raise ValueError('렌더 판독 문서/원본 해시 불일치')
+    cells = review.get('cells')
+    if (not isinstance(cells, list) or not isinstance(declared, list) or not declared
+            or any(not isinstance(k, str) for k in cells + declared)
+            or not set(declared).issubset(cells)):
+        raise ValueError('렌더 판독 신고 슬롯 누락')
+    images, pdf = review.get('images'), review.get('pdf')
+    count = review.get('page_count')
+    if (type(count) is not int or count < 1 or not isinstance(images, list) or len(images) != count
+            or not isinstance(pdf, dict) or any(not isinstance(a, dict) for a in images)
+            or [a.get('page') for a in images] != list(range(1, count + 1))):
+        raise ValueError('렌더 판독 PDF/전체 페이지 이미지 누락')
+    for artifact in [pdf, *images]:
+        if not isinstance(artifact.get('path'), str) or not artifact['path'].strip():
+            raise ValueError('렌더 판독 자료 경로 누락')
+        raw = Path(artifact['path'])
+        path = (review_path.parent / raw).resolve()
+        if (raw.is_absolute() or raw.drive or not path.is_relative_to(review_path.parent.resolve())
+                or artifact.get('sha256') != _sha256(path.read_bytes())):
+            raise ValueError('렌더 판독 자료 경로/해시 불일치')
+    if len({a['path'] for a in images}) != count:
+        raise ValueError('렌더 판독 이미지 중복')
+    try:
+        import fitz
+        with fitz.open(review_path.parent / pdf['path']) as document:
+            if not document.is_pdf or document.page_count != count:
+                raise ValueError('렌더 판독 PDF와 전체 페이지 이미지 수 불일치')
+        for artifact in images:
+            data = (review_path.parent / artifact['path']).read_bytes()
+            if not data.startswith(b'\x89PNG\r\n\x1a\n'):
+                raise ValueError('렌더 판독 이미지가 실제 PNG가 아닙니다')
+            pixmap = fitz.Pixmap(data)
+            if pixmap.width < 1 or pixmap.height < 1 or not pixmap.samples:
+                raise ValueError('렌더 판독 PNG 디코딩 실패')
+    except Exception as exc:
+        # PyMuPDF decoding also raises mupdf.FzErrorBase subclasses, which are
+        # not RuntimeError. Normalize decoder failures into an unconfirmed record.
+        raise ValueError('렌더 판독 PDF/PNG 디코딩 확인 불가: ' + str(exc)) from exc
+    if (not isinstance(render_record, dict)
+            or any(render_record.get(k) != review.get(k) for k in
+                   ('job_id', 'kind', 'document_sha256', 'reference_sha256', 'page_count', 'pdf', 'images'))):
+        raise ValueError('렌더 판독 자료가 보고서의 렌더 기록과 다릅니다: review --refresh 후 다시 판독하세요')
+    reference_slots = _slots_by_key(collect_text_budget_profile(reference))
+    profiles = _slots_by_key(collect_text_budget_profile(output))
+    keys = set()
+    for key in declared:
+        owner = aliases.get(key, key)
+        guard_key = owner + ':0' if owner.startswith('cell:') and len(owner.split(':')) == 4 else owner
+        if guard_key not in profiles:
+            raise ValueError('렌더 판독 슬롯 없음: ' + key)
+        if key in aliases:
+            # The cell budget covers the entire cell, so retain failures when
+            # any unobserved sibling paragraph also exceeds its own budget.
+            if any(p not in reference_slots or p not in profiles
+                   or profiles[p]['text_len_nospace'] > reference_slots[p]['max_chars']
+                   for p, cell in aliases.items() if cell == owner and p not in declared):
+                continue
+        keys.add(guard_key)
+    return tuple(sorted(keys))
 
 
 def _xml_structure_node(el: etree._Element, inside_hp_text: bool = False) -> dict[str, Any]:
@@ -575,6 +673,10 @@ def compare_metrics(
         errors.append(f"표 수 불일치: ref={ref.table_count}, out={out.table_count}")
     if ref.table_shapes != out.table_shapes:
         errors.append("표 구조(rowCnt/colCnt/width/height/pageBreak) 불일치")
+    if ref.table_count == out.table_count:
+        for number, (a, b) in enumerate(zip(ref.table_shapes, out.table_shapes)):
+            if a[2] and b[2] and abs(int(b[2]) - int(a[2])) > int(a[2]) * TABLE_WIDTH_TOLERANCE:
+                errors.append(f"표 {number} 폭 변경: ref={a[2]}, out={b[2]}")
 
     td = _ratio_delta(ref.text_char_total_nospace, out.text_char_total_nospace)
     if td > max_text_delta_ratio:
@@ -636,6 +738,8 @@ def main() -> int:
         help="저장된 글자 예산 프로파일로 결과 HWPX를 검사",
     )
     parser.add_argument('--paragraph-render-review', type=Path, help='동일 문서·원본·PDF·이미지 해시의 실제 일반 문단 판독 기록')
+    parser.add_argument('--visual-render-review', type=Path, help='생성 후 표 칸·문단 공통 판독 기록')
+    parser.add_argument('--visual-review-slots', type=Path, help='승인된 declared 목록과 확인표 aliases 객체 JSON')
     parser.add_argument(
         "--write-structure",
         type=Path,
@@ -749,6 +853,19 @@ def main() -> int:
         )
 
     reviewed_paragraphs = ()
+    reviewed_slots = ()
+    if args.visual_render_review:
+        try:
+            if not args.budget_profile or not args.structure_profile or not args.visual_review_slots:
+                raise ValueError('공통 판독에도 예산·구조 프로파일과 신고 슬롯 필수')
+            inputs = json.loads(args.visual_review_slots.read_text(encoding='utf-8'))
+            reviewed_slots = visual_render_keys(args.visual_render_review, ref_path, out_path,
+                                                inputs['declared'], inputs['aliases'],
+                                                job_id=inputs.get('job_id'), render_record=inputs.get('render_record'),
+                                                confirmation_record=inputs.get('confirmation_record'))
+        except (ValueError, OSError, KeyError, TypeError, AttributeError) as exc:
+            print(f'FAIL: visual render review: {exc}')
+            return 1
     if args.paragraph_render_review:
         try:
             if not args.budget_profile or not args.structure_profile:
@@ -769,6 +886,7 @@ def main() -> int:
                 output_profile,
                 strict_paragraphs=not args.no_strict_paragraph_budget,
                 reviewed_paragraphs=reviewed_paragraphs,
+                reviewed_slots=reviewed_slots,
             )
         )
 

@@ -15,7 +15,8 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-sys.path.insert(0, str(ROOT / 'skills/hwpx/scripts'))
+SKILL = ROOT / '.claude/skills/hwpx/scripts'
+sys.path.insert(0, str(SKILL if SKILL.is_dir() else ROOT / 'skills/hwpx/scripts'))
 import hwpdoc as h
 from hwpdoc_config import load_context
 from hwpdoc_workspace import instruction_text

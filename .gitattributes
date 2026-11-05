@@ -1,2 +1,2 @@
-# Ship exact bytes on every platform: release-inventory.json hashes include line endings.
+# Preserve exact reviewed package bytes across Windows checkouts.
 * -text

@@ -3,7 +3,8 @@
 
 Run only after the user requests installation. The shell/PowerShell entry points
 can prepare app-local Python after consent. This Python stage never installs Hancom,
-changes security settings, registers hooks, or edits Codex configuration.
+changes security settings or registers hooks. Registers the remote school MCP
+in the workspace's selected app configuration unless --no-mcp is given.
 """
 from __future__ import annotations
 
@@ -20,7 +21,7 @@ from datetime import datetime, timezone
 
 # Also works with python -I: do not require global PYTHONPATH.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from hwpdoc_config import recorded_runtime
+from hwpdoc_config import recorded_runtime, reject_broken_text
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = 'teacher-doc-bootstrap-v1'
@@ -90,8 +91,21 @@ def install(args):
     if sys.version_info[:2] != (3, 12):
         raise ValueError('Python 3.12가 필요합니다. 기존 3.12 실행 파일을 선택하세요. '
                          '없으면 scripts/bootstrap.ps1 또는 bootstrap.sh에서 앱 전용 Python 설치 승인을 받아 이어서 진행하세요.')
-    for relative in ('skills/hwpx/SKILL.md', 'scripts/teacher_doc.py',
-                     '.codex-plugin/plugin.json', 'distribution/requirements-base.txt'):
+    from hwpdoc_setup import DEFAULT_MCP_URL, validate_mcp_url
+    explicit_url = getattr(args, 'mcp_url', None)
+    no_mcp = getattr(args, 'no_mcp', False)
+    if no_mcp and explicit_url is not None:
+        raise ValueError('--no-mcp와 --mcp-url은 함께 사용할 수 없습니다')
+    mcp_url = None if no_mcp else (explicit_url if explicit_url is not None else
+                                   os.environ.get('TEACHER_DOC_MCP_URL') or DEFAULT_MCP_URL)
+    if mcp_url is not None:
+        validate_mcp_url(mcp_url)
+    # The development checkout keeps canonical skills and package definitions
+    # in their existing directories; a built package uses the public layout.
+    development = (ROOT / '.claude/skills/hwpx/SKILL.md').is_file()
+    skill = '.claude/skills/hwpx/SKILL.md' if development else 'skills/hwpx/SKILL.md'
+    plugin = 'distribution/codex-plugin.json' if development else '.codex-plugin/plugin.json'
+    for relative in (skill, 'scripts/teacher_doc.py', plugin, 'distribution/requirements-base.txt'):
         if not (ROOT / relative).is_file():
             raise ValueError('불완전한 설치입니다. hwpx 스킬만 설치하지 말고 저장소 전체를 설치하세요: ' + relative)
     workspace = Path(args.workspace).expanduser().resolve()
@@ -176,11 +190,15 @@ def install(args):
         except json.JSONDecodeError:
             full = {'status': 'unconfirmed', 'detail': (result.stdout + result.stderr)[-4000:]}
             exit_code = exit_code or 2
+    mcp = 'not_configured'
+    if mcp_url:
+        mcp = json.loads(run([*command, '--workspace', workspace, 'setup-mcp', '--url', mcp_url,
+                              '--app', args.app], env=env))
     summary = {'at': datetime.now(timezone.utc).isoformat(), 'status': 'ready_xml' if exit_code == 0 else 'full_verification_incomplete',
                'runtime': runtime_state, 'python': str(python), 'source_python': sys.executable,
                'source_python_version': sys.version.split()[0], 'pc_data': str(data),
                'workspace': str(workspace), 'xml_doctor': xml['status'], 'practice': practice,
-               'full_doctor': full, 'plugin_loaded_in_chat': 'unverified',
+               'full_doctor': full, 'teacher_doc_mcp': mcp, 'plugin_loaded_in_chat': 'unverified',
                'continue_prompt': f'{workspace} 작업 폴더에서 문서 작업 이어줘',
                'next_action': '새 대화에서 설치 기록의 Python/PC 경로로 이어가세요. 실제 공문은 기존 승인·한글 열기·렌더 검증 절차가 필요합니다.'}
     write(workspace / '.hwpdoc/onboarding.json', summary)
@@ -216,7 +234,16 @@ def main():
     parser.add_argument('--skill-name', default='hwpx')
     parser.add_argument('--school-data', action='store_true')
     parser.add_argument('--visual', action='store_true')
+    mcp = parser.add_mutually_exclusive_group()
+    mcp.add_argument('--mcp-url', help='원격 teacher_doc_mcp URL; 생략 시 TEACHER_DOC_MCP_URL 또는 기본 서버 사용')
+    mcp.add_argument('--no-mcp', action='store_true', help='원격 학교 정보 MCP 등록 생략')
     args = parser.parse_args()
+    # A rejected CLI value must not create even an onboarding-attempt receipt.
+    try:
+        reject_broken_text(args.skill_name, 'bootstrap --skill-name')
+    except ValueError as exc:
+        print(json.dumps({'status': 'unconfirmed', 'error': str(exc)}, ensure_ascii=False), file=sys.stderr)
+        return 2
     try:
         result, code = install(args)
         record_attempt(args, result['status'], code=code)

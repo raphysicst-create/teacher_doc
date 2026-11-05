@@ -7,11 +7,16 @@ param(
     [ValidateSet('xml', 'full')][string]$Mode = 'xml',
     [ValidateSet('codex', 'claude')][string]$App = 'codex',
     [string]$SkillName = 'hwpx',
+    [string]$McpUrl,
+    [switch]$NoMcp,
     [switch]$SchoolData,
     [switch]$Visual
 )
 $ErrorActionPreference = 'Stop'
 try {
+    if ($NoMcp -and $PSBoundParameters.ContainsKey('McpUrl')) {
+        throw '-NoMcp and -McpUrl cannot be used together.'
+    }
     . (Join-Path $PSScriptRoot 'python-bootstrap.ps1')
     $root = Split-Path $PSScriptRoot -Parent
     $Workspace = [IO.Path]::GetFullPath($Workspace)
@@ -31,6 +36,8 @@ try {
     $arguments = @('-B', '-I', '-X', 'utf8', (Join-Path $PSScriptRoot 'bootstrap.py'), '--workspace', $Workspace, '--data-dir', $DataDir, '--mode', $Mode, '--app', $App, '--skill-name', $SkillName)
     if ($SchoolData) { $arguments += '--school-data' }
     if ($Visual) { $arguments += '--visual' }
+    if ($PSBoundParameters.ContainsKey('McpUrl')) { $arguments += @('--mcp-url', $McpUrl) }
+    if ($NoMcp) { $arguments += '--no-mcp' }
     & $Python @arguments
     exit $LASTEXITCODE
 } catch {

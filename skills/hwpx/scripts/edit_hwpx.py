@@ -16,7 +16,7 @@ Examples:
 
 from __future__ import annotations
 
-from hwpx_slots import owned_cells, cell_edit_block_reason
+from hwpx_slots import owned_cells, cell_edit_block_reason, apply_cell_fills, FILL_NOTICE, validate_cell_fills
 
 import argparse
 import binascii
@@ -941,8 +941,12 @@ def preflight_text_budget(
     *,
     allow_over_budget: bool = False,
     render_verified: bool = False,
+    draft_over_budget: bool = False,
 ) -> list[str]:
     """예산·품질 검사. 통과하면 (묵인된) 예산 초과 목록을 돌려준다.
+
+    2026. 11. 1. 추가: --draft-over-budget은 렌더를 못 하는 세션에서 교사가 볼 미검증
+    사본을 남긴다. 예산 초과로 편집이 막혀 값을 모두 받고도 빈손으로 끝난 실행이 3건이다.
 
     2026. 8. 20. 변경: 예전에는 --allow-over-budget이 이 함수 호출 자체를 건너뛰어
     품질 검사(붙여쓴 한글, 편집 불가 문단)까지 함께 꺼졌고, 초과한 셀이 무엇인지
@@ -1029,8 +1033,8 @@ def preflight_text_budget(
             "입력 전 글자수 예산 검사 실패:\n - " + "\n - ".join(errors + budget_errors)
         )
 
-    if not budget_errors:
-        return []
+    if not budget_errors or draft_over_budget:
+        return budget_errors
 
     if not allow_over_budget:
         raise SystemExit(
@@ -1069,6 +1073,7 @@ def _pack_from_original(
     replacements: dict[str, str],
     cells: list[CellTarget],
     paragraphs: list[ParagraphTarget],
+    cell_fills: dict[str, str] | None = None,
 ) -> tuple[int, int, int]:
     if (input_path.resolve() == output_path.resolve()
             or (output_path.exists() and input_path.samefile(output_path))):
@@ -1087,6 +1092,8 @@ def _pack_from_original(
         section_tree = _parse_xml(source_section)
         section_root = section_tree.getroot()
 
+        # Read all donors from the original before applying text or fill edits.
+        apply_cell_fills(section_root, {} if cell_fills is None else cell_fills)
         text_changes = replace_text(section_root, replacements, char_styles)
         cell_changes = set_cells(section_root, cells)
         paragraph_changes = set_paragraphs(section_root, paragraphs, char_styles)
@@ -1151,6 +1158,10 @@ def main() -> int:
         help='슬롯 입력 JSON. 예: {"p:12": "본문", "cell:0:2:1": "값"}',
     )
     parser.add_argument(
+        "--cell-fills", type=Path,
+        help='대상 칸→같은 표 원본 칸 JSON. borderFillIDRef 전체(테두리 등 포함)를 복사합니다',
+    )
+    parser.add_argument(
         "--max-hangul-run",
         type=int,
         default=24,
@@ -1168,6 +1179,12 @@ def main() -> int:
         help="예산 초과 셀을 PDF 렌더 이미지로 직접 확인해 줄바꿈이 없음을 검증했음. "
         "--allow-over-budget과 짝으로만 쓴다",
     )
+    parser.add_argument(
+        "--draft-over-budget",
+        action="store_true",
+        help="렌더를 못 할 때 예산 초과를 넣은 미검증 사본을 만든다. "
+        "출력 파일 이름에 '미검증'이 있어야 하고 최종본이 아니다",
+    )
     args = parser.parse_args()
 
     if not args.input.is_file():
@@ -1175,6 +1192,12 @@ def main() -> int:
         return 2
 
     replacements = _load_replacements(args.replace, args.replace_json)
+    cell_fills = json.loads(args.cell_fills.read_text(encoding='utf-8-sig')) if args.cell_fills else {}
+    try:
+        with ZipFile(args.input) as archive:
+            validate_cell_fills(_parse_xml(archive.read(SECTION_PATH)).getroot(), cell_fills)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
     cells = [_parse_cell_target(item) for item in args.cell]
     paragraphs = _load_paragraph_targets(args.paragraph, args.paragraph_json)
     slot_paragraphs, slot_cells = _targets_from_slots(
@@ -1182,9 +1205,9 @@ def main() -> int:
     )
     paragraphs.extend(slot_paragraphs)
     cells.extend(slot_cells)
-    if not replacements and not cells and not paragraphs:
+    if not replacements and not cells and not paragraphs and not cell_fills:
         print(
-            "Error: --replace, --replace-json, --cell, --paragraph, --paragraph-json, --slot, --slot-json 중 하나가 필요합니다.",
+            "Error: --replace, --replace-json, --cell, --paragraph, --paragraph-json, --slot, --slot-json, --cell-fills 중 하나가 필요합니다.",
             file=sys.stderr,
         )
         return 2
@@ -1192,6 +1215,14 @@ def main() -> int:
     if args.verified_by_render and not args.allow_over_budget:
         print(
             "Error: --verified-by-render는 --allow-over-budget과 함께만 씁니다.",
+            file=sys.stderr,
+        )
+        return 2
+
+    if args.draft_over_budget and (args.allow_over_budget or "미검증" not in args.output.stem):
+        print(
+            "Error: --draft-over-budget은 이름에 '미검증'이 있는 출력에만 쓰고 "
+            "--allow-over-budget과 함께 쓰지 않습니다.",
             file=sys.stderr,
         )
         return 2
@@ -1204,6 +1235,7 @@ def main() -> int:
         args.max_hangul_run,
         allow_over_budget=args.allow_over_budget,
         render_verified=args.verified_by_render,
+        draft_over_budget=args.draft_over_budget,
     )
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -1213,11 +1245,13 @@ def main() -> int:
         replacements,
         cells,
         paragraphs,
+        cell_fills,
     )
 
     if over_budget:
+        state = "렌더 미확인 초안에 남겼습니다" if args.draft_over_budget else "렌더 확인 후 묵인했습니다"
         print(
-            "WARNING: 예산 초과를 렌더 확인 후 묵인했습니다 "
+            f"WARNING: 예산 초과를 {state} "
             f"({len(over_budget)}건) — 보고에 반드시 명시하십시오:"
         )
         for item in over_budget:
@@ -1227,6 +1261,8 @@ def main() -> int:
     print(f"  text replacements applied: {text_changes}")
     print(f"  cells updated: {cell_changes}")
     print(f"  paragraphs updated: {paragraph_changes}")
+    if cell_fills:
+        print(f"  cell fills updated: {len(cell_fills)}; {FILL_NOTICE}")
     print("  original package entries, header.xml, content.hpf, and BinData were preserved")
     return 0
 

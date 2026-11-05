@@ -43,7 +43,7 @@ codex plugin list --json
 Windows PowerShell:
 
 ```powershell
-& "$pluginRoot/scripts/bootstrap.ps1" -Workspace $teacherWorkspace -DataDir $pcData -AllowPythonInstall
+powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File "$pluginRoot/scripts/bootstrap.ps1" -Workspace $teacherWorkspace -DataDir $pcData -AllowPythonInstall
 ```
 
 macOS/Linux:
@@ -52,11 +52,13 @@ macOS/Linux:
 bash "$pluginRoot/scripts/bootstrap.sh" --workspace "$teacherWorkspace" --data-dir "$pcData" --allow-python-install
 ```
 
-**위 동의 플래그는 Python 설치가 승인된 경우에만 붙인다.** 기존 Python 3.12는 진입점이 탐색한다. 명확히 지정해야 할 때 Windows `-Python <실제 절대경로>`, Unix `--python <실제 절대경로>`를 쓴다. `py`, `pymanager`, WindowsApps 별칭을 탐색용으로 실행하지 않는다. Python Install Manager는 탐색 호출만으로 다운로드할 수 있다. PowerShell 실행 정책이 막히면 오류와 필요한 조치를 보고하고 `Set-ExecutionPolicy`, `-ExecutionPolicy Bypass`, `Unblock-File`로 우회하지 않는다.
+**위 동의 플래그는 Python 설치가 승인된 경우에만 붙인다.** 기존 Python 3.12는 진입점이 탐색한다. 명확히 지정해야 할 때 Windows `-Python <실제 절대경로>`, Unix `--python <실제 절대경로>`를 쓴다. `py`, `pymanager`, WindowsApps 별칭을 탐색용으로 실행하지 않는다. Python Install Manager는 탐색 호출만으로 다운로드할 수 있다.
+
+**PowerShell 실행 정책:** Windows 기본값(Restricted)은 모든 스크립트 파일을 막으므로, 위 명령처럼 `-ExecutionPolicy RemoteSigned`를 **이 실행에만** 준다. 레지스트리 정책은 바뀌지 않는다. `teacher_doc.ps1`·`hwpdoc.ps1` 등 이 저장소의 다른 `.ps1` 진입점도 `powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File ...`로 실행하고, 이미 열린 PowerShell에서 `runtime.ps1`을 `.`으로 불러올 때는 같은 명령 안에서 먼저 `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force`를 실행한다. `-Scope CurrentUser`·`LocalMachine` 정책 변경, `-ExecutionPolicy Bypass`, `Unblock-File`은 쓰지 않는다. 학교 그룹 정책으로 정한 실행 정책은 이 옵션보다 우선하므로, 그래도 막히면 오류와 필요한 조치(전산 담당자 문의)를 보고하고 우회하지 않는다. 인터넷에서 zip으로 받은 파일은 RemoteSigned에서도 막히므로 git으로 받은 전체 checkout을 쓴다.
 
 기본 XML 모드로 전용 venv → 고정 의존성 → 작업 폴더 초기화 → XML doctor → 첫 연습 문서를 연속 수행한다. 성공 JSON의 `python`(전용 venv), `source_python`, `source_python_version`, `pc_data`, `workspace`, `xml_doctor`, `practice.report`, `full_doctor`를 확인한다. 마지막 성공 요약은 `.hwpdoc/onboarding.json`, 마지막 Python 설치 단계 시도는 `.hwpdoc/onboarding-attempt.json`에 남는다. 후자가 failed이면 과거 ready_xml을 최근 성공으로 보고하지 않는다. shell/다운로드 단계에서 Python 실행 전 실패하면 stderr가 그 시도의 결과다. 손상된 작업 설정에는 진단 기록을 억지로 쓰지 않는다. Python 자동 다운로드 증거는 PC 데이터 아래 `managed-python/install-receipt.json`에 남는다. 폴더 생성만으로 성공이라고 하지 않는다.
 
-추가 옵션은 필요한 경우에만 붙인다. Windows/Unix 대응은 `-Mode full`/`--mode full`, `-SchoolData`/`--school-data`, `-Visual`/`--visual`, `-App claude`/`--app claude`, `-SkillName <실제 스킬 이름>`/`--skill-name <실제 스킬 이름>`이다. 기본은 `xml`, `codex`, `hwpx`다. 앱에서 `teacher_doc:hwpx`처럼 다른 실제 이름을 확인했다면 그 값을 전달한다. 기본 문자열이 저장됐다고 앱 로딩을 확인한 것은 아니다.
+추가 옵션은 필요한 경우에만 붙인다. Windows/Unix 대응은 `-Mode full`/`--mode full`, `-SchoolData`/`--school-data`, `-Visual`/`--visual`, `-App claude`/`--app claude`, `-SkillName <실제 스킬 이름>`/`--skill-name <실제 스킬 이름>`이다. 기본은 `xml`, `codex`, `hwpx`다. 기본으로 원격 학교 정보 MCP(`teacher_doc_mcp`)가 등록되며, 다른 주소는 `-McpUrl <주소>`/`--mcp-url <주소>`, 끄려면 `-NoMcp`/`--no-mcp`를 쓴다. 주소 우선순위는 명시 옵션 > 환경변수 `TEACHER_DOC_MCP_URL` > 기본 서버다. 연결 생략과 주소 옵션을 함께 지정하면 오류이며, 생략 시 설치 결과에 `teacher_doc_mcp: "not_configured"`가 남는다. Codex는 신뢰한 폴더에서만 작업 폴더의 `.codex/config.toml`(MCP 등록)을 읽으므로, 최종 안내에 "Codex 앱에서 이 작업 폴더를 열 때 신뢰를 선택하세요"를 한 줄 넣는다. 앱에서 `teacher_doc:hwpx`처럼 다른 실제 이름을 확인했다면 그 값을 전달한다. 기본 문자열이 저장됐다고 앱 로딩을 확인한 것은 아니다.
 
 기존 `runtime.json`, 작업 설정·지침과 사용자 자료를 삭제/덮어쓰지 않는다. 선택 의존성 부족이나 손상된 기존 환경은 별도 데이터 경로가 필요할 수 있다. 다운로드/네트워크/권한 오류가 나면 원인을 해결한 뒤 **같은 명령과 같은 경로**로 재실행한다. 앱 전용 설치만 이어서 진행하며 전역 Python 패키지는 바꾸지 않는다. 보안 경고·TLS·조직 정책을 우회하지 않는다. 기존 Python 3.12가 이미 확인된 고급 환경에서는 `scripts/bootstrap.py` 직접 실행도 지원하지만 초보자 설치의 기본 경로는 위 명령이다.
 

@@ -12,6 +12,14 @@ MARKER = Path('.hwpdoc/workspace.json')
 CONFIG_VERSION = 1
 
 
+def reject_broken_text(text, field, *, guidance=(
+        'PowerShell 5.1에서 here-string을 python -로 파이프하면 한글이 ?로 바뀝니다. '
+        '명령 인자로 직접 넘기거나 UTF-8로 저장한 파일을 쓰세요')):
+    """Reject the observed encoding loss; ordinary question marks remain valid."""
+    if text is not None and ('\ufffd' in text or '???' in text):
+        raise ValueError(f'{field}에 깨진 문자(?)가 있습니다. {guidance}')
+
+
 def read_json(path):
     value = json.loads(Path(path).read_text(encoding='utf-8-sig'))
     if not isinstance(value, dict):

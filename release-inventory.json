@@ -550,7 +550,7 @@
     {
       "source": "distribution/onboarding/README.md",
       "destination": "README.md",
-      "sha256": "5d114471216dcb4d3d70de1c4e58350063f6f65599899156c606945e327a6bcb"
+      "sha256": "53e03306f0ca3ad81566845ebf168a07c94e21ba01d48360c15a10b4aabc5ae8"
     },
     {
       "source": "distribution/python-downloads.json",

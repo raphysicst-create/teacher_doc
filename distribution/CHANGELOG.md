@@ -1,5 +1,12 @@
 # 변경 이력
 
+## 0.2.0 — 2026-11-05
+
+- 양식 등록부를 폐지했다. `add-template`·`list-templates`·`migrate-templates`와 기존 5종 양식 식별자(`TEMPLATES`)를 지웠고, `prepare`는 `--base <작년.hwpx>`(미등록 일회성 베이스)만 받는다. 작년 문서를 그대로 넣으면 바로 쓴다.
+- 작업 설정에 `references.budget/related/timetable` 자료가 없으면 `prepare`가 예산명·관련번호·시간표 검사를 `해당 없음`으로, 탐색 기록을 베이스 경로로 자동 채운다. 자료 없는 교사가 `record`로 이 칸을 메울 필요가 없다.
+- 훅 4개(`.claude/hooks/*.py`)와 `scripts/hook.ps1`을 배포본에서 뺐다. 배포본의 `setup-hooks`는 훅 파일이 없다고 거부한다. 개발 저장소의 훅은 그대로다.
+- 업무 절차 문서의 "양식 선택과 등록" 절을 "베이스 선택"으로 바꾸고, 플러그인 설명을 작년 문서 기반 제안표로 고쳤다.
+
 ## 0.1.4 — 2026-11-05
 
 - 작년 문서 하나로 올해 문서를 만드는 초보자 경로를 추가했다. `prepare --base`(양식 등록 없음) → 에이전트의 근거 있는 제안 → `checklist`(확인표: 제안·확인 필요·유지·비움·값만 비움, `--fill`·`--regenerate`·`--normalize-dates`) → `check`(승인 전 내용·표기·예산 검사) → `draft` → `approve` → build → validate → deliver. 준비 기록은 `record`, 수정 반복은 `revise`와 `--carry-forward-from`으로 한다.

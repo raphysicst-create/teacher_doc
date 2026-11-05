@@ -1,6 +1,6 @@
 {
   "name": "teacher_doc",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "교사의 양식 보존 HWPX 작성·검증과 개인정보 없는 첫 문서 연습",
   "author": {
     "name": "teacher_doc maintainers"
@@ -8,15 +8,15 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "teacher_doc",
-    "shortDescription": "학교 양식 등록·내용 교체·검증·사람 검토",
+    "shortDescription": "작년 공문 HWPX로 올해 초안·검증·사람 검토",
     "longDescription": "교사 작업 폴더에서 학교 양식 보존과 HWPX 작성·검증을 진행합니다. Python 3.12 기반 XML 연습은 Windows·macOS·Linux에서 실행할 수 있고, 실제 한글 COM·PDF 검증은 Windows와 설치된 한글이 필요합니다.",
     "developerName": "teacher_doc maintainers",
     "capabilities": [
-      "양식 등록",
+      "작년 문서 기반 제안표",
       "HWPX 작성 및 검증"
     ],
     "category": "Productivity",
-    "defaultPrompt": "내 학교 양식으로 공문 초안을 작성하고 검증해줘."
+    "defaultPrompt": "작년 공문 HWPX로 올해 공문 초안을 만들고 검증해줘."
   },
   "extensions": {
     "com.openai": {

@@ -15,7 +15,7 @@
     {
       "source": "scripts/hwpdoc.py",
       "destination": "scripts/hwpdoc.py",
-      "sha256": "182ea2147410569e9db97bcbb950921374727baa30da5ae49bc392c9ff767bbc"
+      "sha256": "6fb833dba403978f94385e5e86fcfff7deb5f2504adbad66c86fe497ea8be18a"
     },
     {
       "source": "scripts/hwpdoc.ps1",
@@ -35,17 +35,17 @@
     {
       "source": "scripts/hwpdoc_templates.py",
       "destination": "scripts/hwpdoc_templates.py",
-      "sha256": "ad2e744ea42bdbadbc359ee3791e4e9b2f911d6eb79d35baa7c794be666257b9"
+      "sha256": "1dbce397d07240d019e67f52179f47c0a3b364f89001beaa058b9fb178c17c47"
     },
     {
       "source": "scripts/hwpdoc_workspace.py",
       "destination": "scripts/hwpdoc_workspace.py",
-      "sha256": "e7e55fee6cb16b122aecef2dd6f2eac74831f3d8104f815985856baa67208244"
+      "sha256": "8893655b2d45f64c7d7800f4041bbf2acaae2e0499e137eb3ba77612056639d2"
     },
     {
       "source": "scripts/hwpdoc_pending.py",
       "destination": "scripts/hwpdoc_pending.py",
-      "sha256": "fee8188805fdbb12d3fcaf484b9654a3affc938416c5f5cae32e163ae6ffc21f"
+      "sha256": "8b80c4abe394b67664c345210d34d956ebbeb38dab7627dc915a453f10d82adb"
     },
     {
       "source": "scripts/hwpdoc_content_check.py",
@@ -55,7 +55,7 @@
     {
       "source": "scripts/hwpdoc_setup.py",
       "destination": "scripts/hwpdoc_setup.py",
-      "sha256": "c5d28d141e1f35c72ebcb10d0bc4d09fe8c5ed4d0e9620bc9c831008cc07cbae"
+      "sha256": "871c96cb87c6594fa53ec96ebaa818dbd383a8f44e079eb8c73b7c4b76dea467"
     },
     {
       "source": "scripts/hwpdoc_preview.py",
@@ -76,11 +76,6 @@
       "source": "scripts/runtime.ps1",
       "destination": "scripts/runtime.ps1",
       "sha256": "7e7d1cc8e146d6a6a942a537dc88849f0959ef399712ae42b221a1d61634bdec"
-    },
-    {
-      "source": "scripts/hook.ps1",
-      "destination": "scripts/hook.ps1",
-      "sha256": "4e9317e60d17ba01219b2f10edc16887689f77f2d1a60b299262e3bd7f6f73fb"
     },
     {
       "source": "scripts/install-dependencies.ps1",
@@ -213,26 +208,6 @@
       "sha256": "d16c39470fe3c004805f59c8a63708ce459196c8f16dd978bdc0cd477adcc258"
     },
     {
-      "source": ".claude/hooks/protect_files.py",
-      "destination": ".claude/hooks/protect_files.py",
-      "sha256": "12b55c3807e4cbc88d6db2af3d189ae5980db1aaad204d99260e4c0beaf3d01b"
-    },
-    {
-      "source": ".claude/hooks/event_adapter.py",
-      "destination": ".claude/hooks/event_adapter.py",
-      "sha256": "805a1c0e714c0897aee0ca73640a48c096f5d334a7789269013414c0bdce2980"
-    },
-    {
-      "source": ".claude/hooks/audit_log.py",
-      "destination": ".claude/hooks/audit_log.py",
-      "sha256": "64b176a7e86511af111865becf815d4565260211c39987f9600367ad0fef269a"
-    },
-    {
-      "source": ".claude/hooks/stop_validator.py",
-      "destination": ".claude/hooks/stop_validator.py",
-      "sha256": "28d76cde710c3b2dc43bb4e44d707291419db11150ec3200f3c205ed69cf73fa"
-    },
-    {
       "source": ".claude/skills/hwpx/SKILL.md",
       "destination": "skills/hwpx/SKILL.md",
       "sha256": "b3698fde0045eb0bee252a13496a562930eb4171af961bfa3eeea5e035a64c0c"
@@ -240,7 +215,7 @@
     {
       "source": ".claude/skills/hwpx/references/workflow.md",
       "destination": "skills/hwpx/references/workflow.md",
-      "sha256": "b1b4bd7e4614f14c1986df5f1062b70de30d779f2c7ecf389ddea86a5653dfc5"
+      "sha256": "f6dd8cb807552dd95967e8dc3a6cb133e63035ced55fc701b2210014c0ebc015"
     },
     {
       "source": ".claude/skills/hwpx/references/editing-details.md",
@@ -290,7 +265,7 @@
     {
       "source": "distribution/CHANGELOG.md",
       "destination": "distribution/CHANGELOG.md",
-      "sha256": "635523fbde22d3a81bc44eae90a85096e2ebb847a639411260c9c0d6a6a31ea1"
+      "sha256": "005b0a6ca98170b2b4052f46bad9274d8684f0375fe7119193a24df9992b499e"
     },
     {
       "source": ".claude/skills/hwpx/templates/report/header.xml",
@@ -390,12 +365,12 @@
     {
       "source": "distribution/codex-plugin.json",
       "destination": ".codex-plugin/plugin.json",
-      "sha256": "fb93f33d2b117f8be9d2d64f21840824cb719e3d258196bdae2f46ce2bc89f47"
+      "sha256": "1f9753cec0f630f4b88c8d82cb4e7e881edf855434d4211973669d85f10af5c2"
     },
     {
       "source": "distribution/claude-plugin.json",
       "destination": ".claude-plugin/plugin.json",
-      "sha256": "f481026a443e632af246c42a11861d0ee0bf713e8715cb258f234f90aed683e4"
+      "sha256": "837f7ffb13f8c3d1163c037f433470b35d47c30645b886e406bff01c96e345ea"
     },
     {
       "source": "distribution/legal/AGPL-3.0.txt",
@@ -410,7 +385,7 @@
     {
       "source": "distribution/legal/CHANGES.md",
       "destination": "CHANGES.md",
-      "sha256": "248ba574def227e4498d218b976bbb76339772ba4363c44d93e1fe5933adc18e"
+      "sha256": "ca20914509a1771a268dfa7fac87a613639ad82d2c70446e14b80a6f7fc1b427"
     },
     {
       "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
@@ -535,7 +510,7 @@
     {
       "source": "distribution/source-bundle.json",
       "destination": "SOURCE-BUNDLE.json",
-      "sha256": "31d7c082416ddaff437e87331cad70c717eac00e87aa46346d6039de4e934d7a"
+      "sha256": "827841595542a540999ce5375484a60fb5856f1eec453bf0bc1f423f64c1e57c"
     },
     {
       "source": "distribution/legal/dependencies/python-calamine/calamine-LICENSE-MIT.md",
@@ -570,7 +545,7 @@
     {
       "source": "distribution/onboarding/AGENTS.md",
       "destination": "AGENTS.md",
-      "sha256": "d8f15e4ed990bf2861c26d244c2e34a7410dfc4eca60e05d1a1cd33337326716"
+      "sha256": "c84a63109f716b32187ca02362bcce104fdd3740e58c54e13b237abdf53c5e23"
     },
     {
       "source": "distribution/onboarding/README.md",
@@ -590,7 +565,7 @@
     {
       "source": "docs/BEGINNER.md",
       "destination": "docs/BEGINNER.md",
-      "sha256": "66def6619e442b71d96cc5c6075d940a16082641cc822dd714d12cd847b9a65a"
+      "sha256": "1aee2b579b1cbaf30ad49a36de86f7c977111ea62b107776da8b0420c0673667"
     },
     {
       "source": "docs/PYTHON-RUNTIME.md",
@@ -630,12 +605,12 @@
     {
       "source": ".claude/skills/hwpx/references/resume.md",
       "destination": "skills/hwpx/references/resume.md",
-      "sha256": "5d3f6087438b7269aa4755defa3f97d7d93ef8c0370f20adb7dc1f0eba525025"
+      "sha256": "2f7f8f277b88135687c1d01113de00ae847b35a1eb5551e4f86f438cca7dd0c9"
     },
     {
       "source": ".claude/skills/teacher-doc-setup/SKILL.md",
       "destination": "skills/teacher-doc-setup/SKILL.md",
-      "sha256": "e15ff52f404fc630c6a38574b10367f6b41ac3fc1411e780b9c8bd2024083240"
+      "sha256": "2cf94664ad0582b7198581c2c48c96458a8387acf9c7f21ddd98cdd6406e66af"
     },
     {
       "source": "tests/test_beginner_workflow.py",

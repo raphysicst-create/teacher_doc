@@ -30,9 +30,3 @@
 실패 당시 문서·도구·runtime fingerprint와 현재가 같으면 새 설명이나 증거 파일만으로 재개할 수 없다. 외부 Windows 한글 환경이 원인이었던 `hancom`, `render`, `review_render`만 예외가 있다. 실제 사람이 외부 복구와 검증을 확인했을 때 `external_environment`에 `confirmed=true`, `by`, `at`, `change`, `verification`을 추가한다. 외부 확인 시각은 중단 이후·재개 승인 이전이어야 한다. `content` 같은 내용 단계에는 이 예외가 적용되지 않는다. 소프트웨어는 확인 기록의 연결을 검사하며 사람 진술의 진위를 대신 보증하지 않는다.
 
 누적 실패 수와 이전 단계 결과는 삭제하지 않는다. 승인된 재시도 구간에서 다시 2회 실패하면 또 중단하며 원인을 다시 해결해야 한다. 확인 JSON·해시가 일치하는 증거 사본은 해당 작업의 `resumes` 폴더에 남는다. 상세 증거에는 원문이 포함될 수 있으므로 외부로 보내지 않는다.
-
-## 양식 등록 검토
-
-`add-template --id <이름> --version <버전> --resume --stage <단계> --resume-record <상대경로.json>`을 사용한다. 현재 `registration.json.stages[단계]`의 정렬 JSON SHA256이 stage_sha256이다(UTF-8, ensure_ascii=false, sort_keys=true, separators=(',', ':')). document_sha256은 현재 template.hwpx, input_sha256은 현재 등록 파일 해시 사전의 같은 정렬 JSON SHA256이다. 파일 사전에는 존재하는 `original.hwpx`, `template.hwpx`, `slots.json`, `mapping.json`, `budget.json`, `structure.json`만 포함한다.
-
-등록 자체는 완료되지 않는다. 반환된 next_action에 따라 기존 mapping으로 검사를 다시 하거나 `--review-draft`를 재실행한다. 이후 현재 파일·용도·매핑에 연결한 실제 사용자 `--review` 확인이 여전히 필요하다. PyMuPDF 같은 선택 의존성이 없으면 먼저 환경 미준비로 표시하며 문서 검토 실패 횟수를 소모하지 않는다.

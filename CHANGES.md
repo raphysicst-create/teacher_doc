@@ -1,6 +1,14 @@
-# teacher_doc 0.1.4 변경 고지
+# teacher_doc 0.2.0 변경 고지
 
 배포자 유지·변경 기준일: 2026. 11. 5.
+
+## 0.2.0 양식 등록부 폐지
+
+- 양식 등록·매핑·검토 기록(`add-template --source/--mapping/--review/--review-draft/--resume`), `list-templates`, 기존 5종 이관(`migrate-templates`)과 `.hwpdoc/templates/` 등록부, `TEMPLATES` 5종 식별자, `prepare --template/--version`을 삭제했다. 양식이 있는 작업은 전부 `prepare --job <이름> --document-type <유형> --base <작년.hwpx>`로 시작하며, 베이스는 작업 폴더에 사본으로 보존되고 렌더 검사를 항상 요구한다. `hwpdoc_templates.py`는 슬롯 추출(`extracted`)만 남는다.
+- `prepare`는 작업 설정 `.hwpdoc/workspace.json`에 `references.budget`·`related`·`timetable`이 없으면 해당 검사를 `applicable=false`와 이유로 채우고, `exploration.record`를 베이스 경로·해시로 채운다. 설정이 있으면 지금처럼 에이전트가 적용 여부를 정한다. 검증 단계의 필수 검사 자체는 바꾸지 않았다.
+- 배포 허용 목록에서 `.claude/hooks/protect_files.py`·`event_adapter.py`·`audit_log.py`·`stop_validator.py`와 `scripts/hook.ps1`을 뺐다. 배포본의 `setup-hooks`는 훅 파일이 없으면 거부한다. 훅은 개발 저장소에서만 동작한다.
+- 업무 절차(`skills/hwpx/references/workflow.md`)의 양식 등록 절과 재개 안내(`resume.md`)의 양식 등록 검토 절을 지우고, 설치 안내·플러그인 설명에서 양식 등록 문구를 뺐다.
+- 새 검사·교사 질문은 추가하지 않았다.
 
 ## 0.1.4 초보자 제안표 경로와 원격 학교 정보 MCP
 

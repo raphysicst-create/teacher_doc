@@ -39,7 +39,6 @@ PYTHON = CONTEXT.python if CONTEXT else Path(sys.executable)
 SKILL = CONTEXT.skill if CONTEXT else CODE_ROOT / 'skills/hwpx/scripts'
 JOBS = ROOT / '.hwpdoc/jobs'
 ONEDRIVE = CONTEXT.external_copy if CONTEXT else None
-TEMPLATES = ('가정통신문', '가정통신문-회신형', '가정통신문-고사안내', '성립전예산요구', '회의록-교과협의회')
 STAGES = ('structure', 'namespaces', 'finalize', 'layout', 'shading', 'page_guard', 'hancom',
           'render', 'visual_review', 'content', 'values', 'gonmun', 'budget_names', 'related',
           'timetable', 'attachments', 'compare')
@@ -62,28 +61,16 @@ def workspace_path(relative):
 
 
 def template_file(m):
-    template = m.get('template')
-    if m.get('base'):
-        if template:
-            raise ValueError('일회성 베이스와 양식을 함께 사용할 수 없습니다')
-        base = m['base']
-        if base.get('kind') != 'unregistered_one_off':
-            raise ValueError('지원하지 않는 베이스 종류')
-        path = workspace_path(base['path'])
-        if path.suffix.lower() != '.hwpx' or not path.is_file() or base.get('sha256') != sha(path):
-            raise ValueError('일회성 베이스 사본 없음/해시 불일치')
-        return path
-    if isinstance(template, dict):
-        from hwpdoc_templates import resolve_template
-        resolved = resolve_template(template)
-        if m.get('document_type') and m['document_type'] not in resolved['registration']['purposes']:
-            raise ValueError('이 문서 용도로 확인되지 않은 양식입니다: ' + m['document_type'])
-        if m.get('base_provenance') and m['base_provenance'] != resolved['registration']['provenance']:
-            raise ValueError('등록 양식과 입력의 base_provenance가 다릅니다')
-        return resolved['file']
-    if template in TEMPLATES:
-        return ROOT / 'knowledge/templates' / template / '양식.hwpx'
-    raise ValueError('등록 완료 양식 또는 기존 슬롯 양식 식별자가 필요합니다')
+    """편집 베이스는 prepare --base가 보존한 미등록 일회성 사본뿐이다 (양식 등록부는 0.2.0에서 폐지)."""
+    base = m.get('base')
+    if not base:
+        raise ValueError('미등록 일회성 베이스(--base)가 필요합니다')
+    if base.get('kind') != 'unregistered_one_off':
+        raise ValueError('지원하지 않는 베이스 종류')
+    path = workspace_path(base['path'])
+    if path.suffix.lower() != '.hwpx' or not path.is_file() or base.get('sha256') != sha(path):
+        raise ValueError('일회성 베이스 사본 없음/해시 불일치')
+    return path
 
 
 def report_record(report, *, decode=False):
@@ -229,7 +216,7 @@ MANIFEST_GUIDANCE = {
     'version': '입력 계약 버전 정수 2. 경로는 작업 폴더 기준 상대경로로 기록합니다.',
     'job_id': 'prepare에서 지정한 경로 없는 작업 ID 문자열을 유지합니다. 기존 보고서가 있는 작업은 덮어쓰지 않으므로 새 작업ID를 사용합니다.',
     'workflow': '신규는 W1, 회신은 W2 문자열입니다.',
-    'document_type': '요청한 문서 유형 문자열입니다. 등록 양식이면 승인된 purpose와 일치해야 합니다.',
+    'document_type': '요청한 문서 유형 문자열입니다.',
     'shared_values': '본문·붙임에 함께 넣을 의미→문자열 JSON 객체입니다. 없으면 {}입니다.',
     'shared_values_file': '선택 사항: shared_values 대신 읽을 의미→문자열 JSON 파일 상대경로입니다.',
     'sources': '확인한 유사/수신 원문 목록 [{"path":"상대경로","sha256":"그 원문 파일 바이트의 SHA256"}]입니다. 최소 1건입니다.',
@@ -262,11 +249,10 @@ MANIFEST_GUIDANCE = {
     'preparation_tasks': 'prepare가 만든 작업 안내 {kind,text,slot(슬롯 조회일 때)} 배열입니다. 완료 여부는 현재 확인표·승인·입력 검증으로 계산하고 보고서에 근거와 이력을 보존합니다. 안내를 실제 미확인 사항으로 옮기거나 완료 상태를 손으로 쓰지 않습니다.',
     'unresolved': '실제 값·업무 판단 미확인 사항 배열입니다. 모두 해결했으면 []이며 남은 항목은 정상 전달을 막습니다. 렌더·판독 대기는 {"kind":"validation","text":"대기 사유","stages":["render","visual_review"]}로 해당 단계에 연결할 수 있습니다. pass와 현재 파일 해시가 일치해야 해소됩니다.',
     'base': 'prepare --base가 보존한 kind=unregistered_one_off, path·sha256·origin·imported_at 객체입니다. path 사본의 SHA256을 유지합니다. 원본을 덮어쓰지 않습니다.',
-    'template': 'base 대신 사용하는 기존 양식 ID 또는 등록된 {id,version,sha256}입니다. 등록 해시·용도·검토가 유효해야 합니다.',
     'reference': '신구대조 기준 HWPX 상대경로입니다. --base에서는 준비된 base.path를 유지합니다.',
     'reference_sha256': 'reference가 가리키는 기준 HWPX 파일 바이트의 SHA256입니다.',
     'base_provenance': '확인된 유래 native/converted/repackaged 또는 unconfirmed입니다. 미등록 베이스는 unconfirmed를 유지하고 렌더로 대조합니다.',
-    'slots.template_sha256': '실제 base.path 또는 template이 가리키는 편집 베이스 HWPX 파일 바이트의 SHA256입니다.',
+    'slots.template_sha256': '실제 base.path가 가리키는 편집 베이스 HWPX 파일 바이트의 SHA256입니다.',
     'slots.values': '추출 슬롯 키(p:12, cell:0:2:1 등)→문자열 또는 {"shared":"공유값 키"} 객체입니다. 추출 주소·max_chars를 지키며 임의 축약/병합으로 맞추지 않습니다.',
     'kept_slots': '교사가 유지를 확인한 실제 추출 슬롯 키 배열입니다. 편집값과 유지 슬롯 중 하나 이상이 필요합니다.',
     'cell_fills': '선택 사항: {"cell:표:행:열":"cell:같은표:원본행:원본열"}. 베이스 원본 칸의 borderFillIDRef 전체(테두리 등 포함)를 복사합니다. 승인 전에 기록하며 입력 해시에 포함됩니다.',
@@ -422,7 +408,7 @@ def prerequisite_issues(m, *, build=False):
             add('checks.' + key + '.reason', '해당 없음 이유 누락: ' + key)
     if build and m.get('structure_change'):
         add('structure_change', '구조 변경 필요: 기존 승인·재생성·렌더 경로로 진행하세요')
-    if m.get('reference') or m.get('template') or m.get('base'):
+    if m.get('reference') or m.get('base'):
         rules, review = obj('content_rules'), obj('reuse_review')
         forbid = rules.get('forbid')
         if not isinstance(forbid, list) or any(not isinstance(x, str) or not x.strip() for x in forbid):
@@ -618,7 +604,7 @@ def build_inputs(m, *, content_detail=None, inspect=None):
     issues, values = value_inputs(m)
     template, extracted, slots = None, None, None
     aliases, checklist_labels = {}, {}
-    base_field = 'base' if m.get('base') else 'template'
+    base_field = 'base'
     try:
         template = template_file(m)
         if template.suffix.lower() != '.hwpx' or not template.is_file():
@@ -809,7 +795,7 @@ def initialization_inputs(manifest_file, *, build, job=None):
                 raise ValueError('기존 경로에서 생성된 HWPX만 입력할 수 있습니다')
             prepared['source'] = source
         except (ValueError, OSError, KeyError, TypeError) as exc:
-            issues.append(preflight_issue('base' if m.get('base') else 'template' if build else 'source', str(exc)))
+            issues.append(preflight_issue('base' if build else 'source', str(exc)))
     if not blocking_issues(issues):
         try:
             er, notes = legacy_evidence(m)
@@ -936,12 +922,6 @@ def dependencies(m):
     paths += [input_path(x['path']) for x in m['sources'] + m['attachments']]
     if m.get('base'):
         paths.append(template_file(m))
-    if m.get('template'):
-        if isinstance(m['template'], dict):
-            from hwpdoc_templates import registration_dependencies
-            paths += registration_dependencies(m['template'])
-        else:
-            paths += list(template_file(m).parent.glob('*'))
     for key in ('source', 'reference'):
         if m.get(key):
             paths.append(input_path(m[key]))
@@ -1293,9 +1273,9 @@ def validate_document(report):
             report['fallback_next'] = structure_recovery() if name == 'structure' else '현재 단계 수정 후 재검증'
             save_report(report)
             return report
-    reference = input_path(m['reference']) if m.get('reference') else (template_file(m) if m.get('template') or m.get('base') else None)
+    reference = input_path(m['reference']) if m.get('reference') else (template_file(m) if m.get('base') else None)
     visual_status, visual_reason = 'unconfirmed', '예산 초과 PDF·전 페이지 PNG 판독 필요: review --job ' + m['job_id']
-    if m.get('template') or m.get('base'):
+    if m.get('base'):
         shade_issues, shade_result = shading_inputs(m, template_file(m), resolved_values(m) if m.get('slots') else {}, output=f)
         report['shading'] = shade_result
         accepted = [item['key'] + ': ' + item['problem'] for item in (shade_result or {}).get('issues', []) if item['acknowledged']]
@@ -1367,16 +1347,9 @@ def validate_document(report):
         stage(report, 'page_guard', reason='기준 문서/승인된 구조 프로파일 없음: 기존 경로로 기준 확인 필요')
     stage(report, 'hancom', [SKILL / 'finalize_hwpx.py', f, '--hancom'], com=True)
     provenance = m.get('base_provenance')
-    reviewed_unknown_base = False
-    if provenance == 'unconfirmed' and isinstance(m.get('template'), dict):
-        # Registration permits unknown origin only after current-hash review.
-        # Keep that origin unknown, and verify this output against that same base.
-        registered_base = template_file(m)
-        reviewed_unknown_base = reference is not None and reference.resolve() == registered_base.resolve()
-        report['base_provenance_notice'] = '원본 유래 미확인 유지; 현재 해시로 검토·등록된 동일 양식과 결과물 렌더 대조'
     if m.get('base'):
         report['base_provenance_notice'] = '미등록 일회성 베이스; 원본 유래 미확인 유지, 베이스 사본과 결과물 렌더 대조 필요'
-    if provenance in ('converted', 'repackaged') or m.get('over_budget_cells') or reviewed_unknown_base or m.get('base'):
+    if provenance in ('converted', 'repackaged') or m.get('over_budget_cells') or m.get('base'):
         if not reference:
             stage(report, 'render', reason='조건부 렌더 기준 파일 누락')
         else:
@@ -1678,7 +1651,6 @@ def doctor(mode="full"):
         if path is None:
             checks[name] = dict(status='not_applicable', note='선택 설정 없음'); continue
         checks[name] = dict(status='pass' if path.is_dir() and os.access(path, os.W_OK) else 'unconfirmed', path=str(path), note='실제 복사 성공은 deliver에서 별도 확인')
-    from hwpdoc_templates import list_templates
     checks['references'] = {key: ('available' if CONTEXT.local(value).exists() else 'unconfirmed') for key, value in CONTEXT.settings.get('references', {}).items()}
     checks['connections'] = {'configured': {key: value for key, value in CONTEXT.settings.get('connections', {}).items()
                                              if key != 'school_task_guide'}, 'actual_calls': 'unverified'}
@@ -1692,7 +1664,7 @@ def doctor(mode="full"):
             required.append('win32com')
     states = [checks[name]['status'] for name in required]
     state = 'fail' if 'fail' in states else ('pass' if all(s == 'pass' for s in states) else 'unconfirmed')
-    result = {'status': state, 'mode': mode, 'required_checks': required, 'at': now(), 'checks': checks, 'templates': list_templates(), 'workspace': str(ROOT), 'pc_data': str(CONTEXT.pc_data), 'note': '자료 없음은 해당 업무에서 요청합니다. 환경 진단은 문서 검증이나 앱 통합 인수가 아닙니다'}
+    result = {'status': state, 'mode': mode, 'required_checks': required, 'at': now(), 'checks': checks, 'workspace': str(ROOT), 'pc_data': str(CONTEXT.pc_data), 'note': '자료 없음은 해당 업무에서 요청합니다. 환경 진단은 문서 검증이나 앱 통합 인수가 아닙니다'}
     write_json(workspace_path('.hwpdoc/doctor.json'), result)
     return result
 
@@ -1925,7 +1897,7 @@ def main():
             raise RuntimeError('검증된 Python 3.12가 필요합니다. scripts/hwpdoc.ps1을 사용하세요')
         if args.command not in ('doctor', 'setup-runtime') and os.path.normcase(os.path.abspath(sys.executable)) != os.path.normcase(os.path.abspath(PYTHON)):
             raise RuntimeError('PC 설정에서 선택한 Python이 필요합니다. scripts/hwpdoc.ps1을 사용하세요')
-        if args.command in ('school', 'add-template', 'list-templates', 'migrate-templates', 'prepare', 'record', 'draft', 'checklist'):
+        if args.command in ('school', 'prepare', 'record', 'draft', 'checklist'):
             result = dispatch(args)
             displayed = (cli_result(args.command, result, job=args.job, details=getattr(args, 'details', False))
                          if args.command in ('prepare', 'record', 'draft', 'checklist') else result)

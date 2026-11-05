@@ -65,12 +65,10 @@ def pending_view(m, evidence=None, report=None):
     table_error = None
     if m.get('slots'):
         try:
-            from hwpdoc_templates import extracted, resolve_template
+            from hwpdoc_templates import extracted
             from hwpdoc_workspace import checklist_aliases, applied_checklist_values, checklist_fixed_scope
             extracted_slots = extracted(h.template_file(m))
             slots = {s['key']: s for s in extracted_slots['slots']}
-            if isinstance(m.get('template'), dict):
-                meanings = resolve_template(m['template'])['mapping']
             aliases = checklist_aliases(m, extracted_slots)
             record = m.get('checklist', {})
             if record and record.get('applied') is not False and fields_ok(('checklist',)):

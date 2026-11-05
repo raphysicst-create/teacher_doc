@@ -35,7 +35,6 @@ def validate_cli_text(args):
         'init': ('school', 'prefix', 'skill_name'),
         'school': ('region',),
         'prepare': ('document_type',),
-        'add-template': ('purpose', 'resume_record'),
         'resume': ('record',),
     }
     for field in fields.get(args.command, ()):
@@ -167,7 +166,7 @@ RECORD_FORBIDDEN = {
     'kept_slots': 'checklist --job <이름> --apply',
     'checklist': 'checklist --job <이름> --apply',
     'preparation_tasks': 'prepare가 생성하고 check가 완료 근거를 계산합니다',
-    'base': 'prepare --base', 'template': 'prepare --template',
+    'base': 'prepare --base',
     'job_id': 'prepare --job 또는 revise --job … --new-job …',
     'version': 'prepare',
     'unresolved': '추가는 unresolved_add, 기존 항목은 원문/교사 답을 확인한 뒤 revise로 검토하세요',
@@ -458,57 +457,35 @@ def draft(args):
 
 def prepare(args):
     from hwpdoc_pending import preparation_task
-    from hwpdoc_templates import extracted, folder_for, resolve_template
+    from hwpdoc_templates import extracted
     h.job_dir(args.job)  # identifier validation, no file creation
     folder = h.workspace_path(Path('.hwpdoc/prepared') / args.job)
     if folder.exists():
         raise ValueError('기존 준비 입력을 덮어쓰지 않습니다. 새 job 식별자를 사용하세요')
-    template = args.template
-    base_source = None
-    if getattr(args, 'base', None):
-        if template:
-            raise ValueError('일회성 베이스와 양식을 함께 사용할 수 없습니다')
-        if args.version:
-            raise ValueError('--version은 --template과 함께만 사용할 수 있습니다')
-        base_source = h.original_input_path(args.base)
-        if base_source.suffix.lower() != '.hwpx' or not base_source.is_file():
-            raise ValueError('양식 등록은 HWPX만 지원합니다. HWP는 원본 보존 후 한글에서 HWPX 사본으로 저장하세요')
-    mapping = None
-    if args.version:
-        p = folder_for(template, args.version) / 'template.hwpx'
-        template = {'id': template, 'version': args.version, 'sha256': h.sha(p)}
-        resolved = resolve_template(template)
-        mapping = resolved['mapping']
-    base = h.template_file({'template': template, 'document_type': args.document_type}) if template else None
+    if not getattr(args, 'base', None):
+        raise ValueError('--base <작년.hwpx>가 필요합니다')
+    base_source = h.original_input_path(args.base)
+    if base_source.suffix.lower() != '.hwpx' or not base_source.is_file():
+        raise ValueError('베이스는 HWPX만 지원합니다. HWP는 원본 보존 후 한글에서 HWPX 사본으로 저장하세요')
     source_files = [h.original_input_path(s) for s in args.source]
     if any(not p.is_file() for p in source_files):
         raise ValueError('원문 경로를 확인하세요')
     supplied = h.read_json(h.input_path(args.values)) if args.values else {}
     if not isinstance(supplied, dict) or any(not isinstance(v, str) for v in supplied.values()):
         raise ValueError('--values는 의미/슬롯→문자열 JSON이어야 합니다')
-    if mapping:
-        unknown = set(supplied) - set(mapping)
-        if unknown:
-            raise ValueError('등록 의미에 없는 값: ' + ', '.join(sorted(unknown)))
-        values = {mapping[k]: v for k, v in supplied.items()}
-    else:
-        values = supplied
-    base_record = None
-    if base_source:
-        folder.mkdir(parents=True)
-        base = folder / 'base.hwpx'
-        digest = h.sha(base_source)
-        shutil.copy2(base_source, base)
-        if h.sha(base) != digest:
-            raise ValueError('원본 사본 해시 불일치')
-        base_record = dict(path=base.relative_to(h.ROOT).as_posix(), sha256=digest,
-                           origin=str(base_source), imported_at=h.now())
-    slots = extracted(base) if base else None
-    if slots and set(values) - {s['key'] for s in slots['slots']}:
+    values = supplied
+    folder.mkdir(parents=True)
+    base = folder / 'base.hwpx'
+    digest = h.sha(base_source)
+    shutil.copy2(base_source, base)
+    if h.sha(base) != digest:
+        raise ValueError('원본 사본 해시 불일치')
+    base_record = dict(path=base.relative_to(h.ROOT).as_posix(), sha256=digest,
+                       origin=str(base_source), imported_at=h.now())
+    slots = extracted(base)
+    if set(values) - {s['key'] for s in slots['slots']}:
         raise ValueError('추출되지 않은 슬롯 주소')
-    if not base_record:
-        folder.mkdir(parents=True)
-    sources = [base_record] if base_record else []
+    sources = [base_record]
     for src in source_files:
         digest = h.sha(src)
         dest = folder / 'sources' / (digest[:12] + '-' + src.name)
@@ -518,16 +495,23 @@ def prepare(args):
             raise ValueError('원문 가져오기 해시 불일치')
         sources.append({'path': dest.relative_to(h.ROOT).as_posix(), 'sha256': digest,
                         'origin': str(src), 'imported_at': h.now()})
+    h.write_json(folder / 'slots.extracted.json', slots)
+    # 레퍼런스 자료(예산·관련번호·시간표)가 작업 설정에 없으면 해당 조회는 적용 불가로 미리 채운다.
+    references = h.CONTEXT.settings.get('references', {}) or {}
+    checks = {}
+    for key, reference in (('budget_names', 'budget'), ('related', 'related'), ('timetable', 'timetable')):
+        if references.get(reference):
+            checks[key] = {'applicable': None, 'reason': '', 'reference_setting': 'references.' + reference}
+        else:
+            checks[key] = {'applicable': False, 'reason': f'작업 설정에 references.{reference} 자료 없음',
+                           'reference_setting': 'references.' + reference}
+    agent_tasks = ['받은 원문에서 확실한 날짜·장소·업무 사실 추출 및 초안 문안 준비']
+    if any(check['applicable'] is None for check in checks.values()):
+        agent_tasks.append('예산명·관련번호·시간표 적용 여부(무관하면 이유 기록)')
+    agent_tasks += ['복사 잔재 이름·날짜와 forbid', '붙임 목록·미확인 사항 검토']
     if slots:
-        h.write_json(folder / 'slots.extracted.json', slots)
-    agent_tasks = ['유사/수신 원문과 양식 선택 근거',
-               '받은 원문에서 확실한 날짜·장소·업무 사실 추출 및 초안 문안 준비', '예산명·관련번호·시간표 적용 여부(무관하면 이유 기록)',
-               '복사 잔재 이름·날짜와 forbid', '붙임 목록·미확인 사항 검토']
-    if mapping:
-        agent_tasks += ['원문/설정에서 먼저 찾을 값: ' + k for k in mapping if k not in supplied]
-    elif slots:
         # Explicit empty strings can mean intentional blanks; only absent keys
-        # need a decision. Legacy templates have addresses, not approved meanings.
+        # need a decision. Base slots have addresses, not approved meanings.
         agent_tasks += ['원문/설정에서 먼저 찾을 값: ' + s['key'] + ' (의미 확인 필요; 기존 문구: '
                     + str(s.get('text', s.get('preview', '')))[:100] + ')'
                     for s in slots['slots'] if s['key'] not in values]
@@ -540,23 +524,15 @@ def prepare(args):
              draft_approval={'confirmed': False, 'by': '', 'at': '', 'record': '', 'input_sha256': ''},
              content_rules={'forbid': []},
              reuse_review={'record': '', 'names': None, 'dates': None, 'names_empty_reason': '', 'dates_empty_reason': ''},
-             checks={k: {'applicable': None, 'reason': '', 'reference_setting': 'references.' + reference}
-                     for k, reference in (('budget_names', 'budget'), ('related', 'related'), ('timetable', 'timetable'))},
+             checks=checks,
              environment={'app': h.CONTEXT.settings.get('app', 'unconfirmed'), 'python': sys.version.split()[0],
                           'kordoc': 'unconfirmed'},
-             unresolved=[], base_provenance='unconfirmed', exploration={'record': ''})
-    if template or base_record:
-        m['slots'] = {'template_sha256': h.sha(base), 'values': values}
-        m['kept_slots'] = []
-        if base_record:
-            m.update(base=dict(base_record, kind='unregistered_one_off'),
-                     reference=base_record['path'], reference_sha256=base_record['sha256'])
-        else:
-            m['template'] = template
-        if mapping:
-            m['base_provenance'] = resolved['registration']['provenance']
-    else:
-        m.update(source='', source_sha256='', expected_values=[])
+             unresolved=[], base_provenance='unconfirmed',
+             exploration={'record': f'미등록 일회성 베이스 {base_source} (sha256 {base_record["sha256"][:12]})'})
+    m['slots'] = {'template_sha256': h.sha(base), 'values': values}
+    m['kept_slots'] = []
+    m.update(base=dict(base_record, kind='unregistered_one_off'),
+             reference=base_record['path'], reference_sha256=base_record['sha256'])
     if args.workflow == 'W2':
         m['received'] = dict(submission_method=None, summary='', requirements='', deadline='',
                              document_number='', issue_date='', source_quote='')
@@ -565,14 +541,11 @@ def prepare(args):
     for text in agent_tasks + user_decisions:
         slot = None
         if text.startswith('원문/설정에서 먼저 찾을 값: '):
-            key = text[len('원문/설정에서 먼저 찾을 값: '):]
-            if not mapping:
-                key = key.split(' ', 1)[0]
-            slot = mapping.get(key) if mapping else key
+            slot = text[len('원문/설정에서 먼저 찾을 값: '):].split(' ', 1)[0]
         m['preparation_tasks'].append(preparation_task(text, slot))
     h.write_json(folder / 'manifest.json', m)
-    base_notice = '미등록 일회성 베이스입니다. 재사용 양식 등록·사람 양식 검토를 수행한 기록이 아닙니다.' if base_record else ''
-    (folder / '확인할사항.md').write_text((base_notice + '\n\n' if base_notice else '')
+    base_notice = '미등록 일회성 베이스입니다. 재사용 양식 등록·사람 양식 검토를 수행한 기록이 아닙니다.'
+    (folder / '확인할사항.md').write_text(base_notice + '\n\n'
         + '# 에이전트 작업 목록 (교사에게 그대로 질문하지 않음)\n\n' + '\n'.join('- ' + x for x in agent_tasks)
         + '\n\n## 사용자 결정\n\n' + '\n'.join('- ' + x for x in user_decisions)
         + '\n\n## build 입력 계약 (manifest 경로·의미·형식·해시 대상)\n\n'
@@ -586,8 +559,7 @@ def prepare(args):
     result = {'status': 'unconfirmed', 'manifest': str(folder / 'manifest.json'), 'missing': agent_tasks + user_decisions,
             'missing_by_owner': {'agent_review': agent_tasks, 'user_decisions': user_decisions},
             'next_action': f'다음: check --job {args.job}로 남은 항목 확인. 원문·설정에서 확인 가능한 사실은 먼저 읽으세요. 남은 결정만 질문하고 문안 제시 후 실제 파일 생성 확인을 기록하세요'}
-    if base_record:
-        result.update(base=m['base'], base_notice=base_notice)
+    result.update(base=m['base'], base_notice=base_notice)
     result['details_path'] = str(folder / 'prepare-details.json')
     h.write_json(result['details_path'], result)
     return result
@@ -723,7 +695,7 @@ def proposal_date_review(item, text, events=(), *, calendar_valid=False):
 def checklist_aliases(m, extracted):
     """Resolve paragraph aliases from actual cell ownership, never equal text."""
     cells = {s['key'] for s in extracted['slots'] if s['key'].startswith('cell:')}
-    if not cells or not (m.get('template') or m.get('base')):
+    if not cells or not m.get('base'):
         return {}
     sys.path.insert(0, str(h.SKILL))
     from hwpx_slots import NS, _parse_section, owned_cells
@@ -1549,20 +1521,9 @@ def add_commands(commands):
     init.add_argument('path'); init.add_argument('--app', choices=['claude', 'codex'], required=True)
     init.add_argument('--skill-name', required=True, help='선택한 앱에서 실제 노출을 확인한 스킬 이름')
     init.add_argument('--school'); init.add_argument('--prefix'); init.add_argument('--year', type=int); init.add_argument('--copy-to')
-    template = commands.add_parser('add-template')
-    template.add_argument('--id', required=True); template.add_argument('--version', required=True)
-    phase = template.add_mutually_exclusive_group()
-    phase.add_argument('--source'); phase.add_argument('--mapping'); phase.add_argument('--review')
-    phase.add_argument('--resume', action='store_true', help='중단된 등록/검토 단계를 증거와 사용자 확인으로 재개')
-    template.add_argument('--stage'); template.add_argument('--resume-record')
-    phase.add_argument('--review-draft', action='store_true', help='필요한 PDF/PNG와 미승인 검토 기록 초안 준비')
-    template.add_argument('--purpose', action='append')
-    template.add_argument('--provenance', choices=['native', 'converted', 'repackaged', 'unconfirmed'], default='unconfirmed')
-    commands.add_parser('list-templates'); commands.add_parser('migrate-templates')
     p = commands.add_parser('prepare')
-    p.add_argument('--job', required=True); p.add_argument('--version')
-    base = p.add_mutually_exclusive_group()
-    base.add_argument('--template'); base.add_argument('--base', help='미등록 일회성 HWPX 베이스; 원본 보존 후 사본 편집')
+    p.add_argument('--job', required=True)
+    p.add_argument('--base', required=True, help='작년 문서 HWPX(미등록 일회성 베이스); 원본 보존 후 사본 편집')
     p.add_argument('--source', action='append', default=[]); p.add_argument('--values')
     p.add_argument('--workflow', choices=['W1', 'W2'], default='W1'); p.add_argument('--document-type', required=True)
     p.add_argument('--details', action='store_true', help='중복 목록을 포함한 기존 전체 준비 출력')
@@ -1584,6 +1545,5 @@ def add_commands(commands):
 
 
 def dispatch(args):
-    from hwpdoc_templates import add_template, list_templates, migrate_legacy
-    return {'init': init_workspace, 'school': school, 'add-template': add_template, 'prepare': prepare, 'record': record, 'draft': draft, 'checklist': checklist,
-            'list-templates': lambda _: list_templates(), 'migrate-templates': lambda _: migrate_legacy()}[args.command](args)
+    return {'init': init_workspace, 'school': school, 'prepare': prepare, 'record': record, 'draft': draft,
+            'checklist': checklist}[args.command](args)

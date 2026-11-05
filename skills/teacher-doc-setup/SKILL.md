@@ -72,7 +72,7 @@ bash "$pluginRoot/scripts/bootstrap.sh" --workspace "$teacherWorkspace" --data-d
 "$taskPython" -X utf8 "$pluginRoot/scripts/teacher_doc.py" --workspace "$teacherWorkspace" first-doc
 ```
 
-3. 연습 파일은 학교 양식 등록이나 사용자 승인 기록을 만들지 않는다. 실제 승인·등록·렌더 증거를 흉내 내어 추가하지 않는다
+3. 연습 파일은 사용자 승인 기록을 만들지 않는다. 실제 승인·렌더 증거를 흉내 내어 추가하지 않는다
 4. Windows 한글 확인을 요청받은 경우 같은 전용 Python으로 `doctor --mode full`을 실행하고 실제 결과를 읽는다. `doctor --mode full`이 한글/COM을 사용할 수 없어 종료 코드 2를 반환하면 전체 검증 미완료로 보고한다. `--mode full` bootstrap에서도 XML 연습 결과와 `full_doctor`를 따로 읽는다. 요약 `status`만으로 전체 문서 검증 통과를 선언하지 않는다. PDF/PNG 육안 판독은 해당 작업의 실제 산출물로 따로 수행한다
 5. 플러그인 목록에 보이는 것과 새 작업에서 스킬 본문을 실제 읽는 것은 별개다. 앱/CLI에서 확인한 범위까지만 보고한다
 

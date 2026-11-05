@@ -188,6 +188,8 @@ def hook_command(script, mode, app='claude'):
 
 
 def setup_hooks(args):
+    if not (h.CODE_ROOT / 'scripts/hook.ps1').is_file():
+        raise ValueError('이 배포본에는 훅이 포함되지 않습니다. 훅은 개발 저장소에서만 지원합니다')
     with h.lock(h.workspace_path('.hwpdoc/setup-hooks.lock')):
         return _setup_hooks(args)
 

@@ -1,5 +1,10 @@
 # 변경 이력
 
+## 0.2.2 — 2026-11-06
+
+- 클로드 코드의 MCP 확인 안내를 고쳤다. 데스크톱 앱의 `/mcp`는 계정 커넥터 설정 화면이라 작업 폴더의 `teacher_doc_mcp`가 안 보인다. 세션에 "MCP 서버 상태 보여줘"라고 물어 확인한다(CLI는 `/mcp`). `pending`은 첫 호출 전 정상 상태다.
+- 실측: 클로드 코드 새 세션에서 플러그인 스킬 노출, 프로젝트 `.mcp.json` 서버 연결, `resolve_school` 실호출(후보 1건)까지 확인했다(2026. 11. 6.). 코드 변경은 없다.
+
 ## 0.2.1 — 2026-11-05
 
 - 클로드 코드에서도 설치할 수 있게 `.claude-plugin/marketplace.json`(마켓 이름 `teacher-doc-marketplace`)을 넣었다. `/plugin marketplace add raphysicst-create/teacher_doc` → `/plugin install teacher_doc@teacher-doc-marketplace`.

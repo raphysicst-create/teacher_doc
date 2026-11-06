@@ -215,7 +215,7 @@
     {
       "source": ".claude/skills/hwpx/references/workflow.md",
       "destination": "skills/hwpx/references/workflow.md",
-      "sha256": "a66f5501a31f476b72739538c4d1121e694fb6edc42de7953e95b3041c437933"
+      "sha256": "f94eb64bd0b5fb106566a81b259b5217f3d96c0b0b36f960ccfa1981e5a5178f"
     },
     {
       "source": ".claude/skills/hwpx/references/editing-details.md",
@@ -265,7 +265,7 @@
     {
       "source": "distribution/CHANGELOG.md",
       "destination": "distribution/CHANGELOG.md",
-      "sha256": "5eb74706aa63b0184f79f904d91c2d9b8cb957bb316e583634ed47a71341d0c5"
+      "sha256": "082541129e8ae85fe683145aa026540746f5a683f0011e7fef7a02623e30ec86"
     },
     {
       "source": ".claude/skills/hwpx/templates/report/header.xml",
@@ -365,12 +365,12 @@
     {
       "source": "distribution/codex-plugin.json",
       "destination": ".codex-plugin/plugin.json",
-      "sha256": "f39d0c5c546fa4ab0e9c91d5f16605162e68aa879d721fb54f37282b5b57d573"
+      "sha256": "7836f6bbe4d34b2eeaed0983d4ff8d4844e5a6617e68ac979949213cbb2d5a1f"
     },
     {
       "source": "distribution/claude-plugin.json",
       "destination": ".claude-plugin/plugin.json",
-      "sha256": "3cfc7ac02770a0cf3e11f502cb84a5e9a95c1af5d5215ceab8e1050288b6f3a4"
+      "sha256": "2cd2c71cad1256d542e07f5542e065f0acc23d326631f3b5457c1ca00d258072"
     },
     {
       "source": "distribution/claude-marketplace.json",
@@ -395,7 +395,7 @@
     {
       "source": "distribution/legal/CHANGES.md",
       "destination": "CHANGES.md",
-      "sha256": "77e9153f2ff760eb1032a88b86162424b7187a396a78f6b3cf3d52a3d8bb7a94"
+      "sha256": "741e10680e2d5e9ce529786334c23eeb701d78d5e03b2230892a7964c5081506"
     },
     {
       "source": "distribution/legal/dependencies/et-xmlfile/LICENCE.python",
@@ -520,7 +520,7 @@
     {
       "source": "distribution/source-bundle.json",
       "destination": "SOURCE-BUNDLE.json",
-      "sha256": "4cf361472462c1cfeaebdf68dd163e770a3caac842c9dfb36914a8b4ee8eed7a"
+      "sha256": "13a17bca572edb7027096bcb4d2cd65ef9b21c4bb1821aa3ea667b44bd7b4d82"
     },
     {
       "source": "distribution/legal/dependencies/python-calamine/calamine-LICENSE-MIT.md",
@@ -560,7 +560,7 @@
     {
       "source": "distribution/onboarding/README.md",
       "destination": "README.md",
-      "sha256": "d4b2afadf403486285d40ab6c4a105fa55bf33f1562e5252cad516035c645e52"
+      "sha256": "f31fc05243813f6f31bd7c9bf2bd4b359d1e31684dbc66a093bad550eca703df"
     },
     {
       "source": "distribution/python-downloads.json",
